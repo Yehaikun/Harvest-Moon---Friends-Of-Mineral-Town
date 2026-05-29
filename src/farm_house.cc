@@ -86,6 +86,16 @@ RecordPlayer const * FarmHouse::GetRecordPlayer() const {
     return !has_record_player ? nullptr : &record_player;
 }
 
+Fridge * FarmHouse::GetFridge() {
+    return !has_fridge ? nullptr : &fridge;
+}
+Shelf * FarmHouse::GetShelf() {
+    return !has_shelf ? nullptr : &shelf;
+}
+RecordPlayer * FarmHouse::GetRecordPlayer() {
+    return !has_record_player ? nullptr : &record_player;
+}
+
 // ═══════════════════════════════════════════════════════════════════════════════
 //  升级和相关操作
 // ═══════════════════════════════════════════════════════════════════════════════

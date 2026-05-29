@@ -35,6 +35,15 @@ struct Unk_080E93F8
 };
 extern Unk_080E93F8 const gUnk_080E93F8[];
 
+// 外部引用的图形数据
+extern u8 SHOULD_BE(const) gUnk_086D6518[];
+extern u8 SHOULD_BE(const) gUnk_086D6520[];
+extern u8 SHOULD_BE(const) gUnk_086D6528[];
+
+// 外部引用的颜色/状态数据
+extern Unk_Something SHOULD_BE(const) gUnk_086D6458;
+extern Unk_Something SHOULD_BE(const) gUnk_086D6608;
+
 // 作物的生长天数表 [作物ID][生长阶段] = 需要天数
 extern u32 const gUnk_080E8D14[][21];
 

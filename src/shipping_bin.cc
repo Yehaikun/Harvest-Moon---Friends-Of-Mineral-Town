@@ -150,6 +150,12 @@ bool ShippingBin::HasShippedOneOfEachMineral() const {
 
 // ── 出货动作 ────────────────────────────────────────────────────────────
 // 每天出货箱结算时调用，将物品卖出并累加金额
+
+// 内联辅助（用于编译匹配）
+static inline u32 GetValueShippedInl(ShippingBin const & self) {
+    return self.value_shipped;
+}
+
 void ShippingBin::Ship(Product const & slot) {
     u32 price = slot.GetPrice();   // ★ 价格从 product.def 读取
 

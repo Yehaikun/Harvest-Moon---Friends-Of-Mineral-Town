@@ -185,7 +185,7 @@ SECTIONS
     .pad : ALIGN(4)
     {
         LONG(0);
-        . = 0x08800000 - 0x0875c22c;
+        . = 0x08800000 - 0x0875C240;
     } > ROM = 0xFF
 
     /* DWARF 2 sections */

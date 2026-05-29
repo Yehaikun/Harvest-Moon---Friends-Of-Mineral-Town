@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1284 EventScript_1284
+{
+    const MESSAGE_0 = "Yaaawn!...I'll sure\r\nsleep well tonight!\x05"
+    const MESSAGE_1 = "I heard you won.\r\nThat's great!\x05"
+    const MESSAGE_2 = "Don't sweat it, \r\n\xFF!. \x05"
+    if Func086(7) == 0
+    {
+        Proc083(7)
+    }
+    SetEntityFacing(7, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(431) == 0
+    {
+        TalkOpen()
+        Proc030(163)
+        Proc02D(7)
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(433) == 1
+    {
+        TalkOpen()
+        Proc030(161)
+        Proc02D(7)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(160)
+        Proc02D(7)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(7) == 0
+    {
+        Proc080(7, 5)
+    }
+    Proc083(7)
+    SetEntityFacing(7, 1)
+}

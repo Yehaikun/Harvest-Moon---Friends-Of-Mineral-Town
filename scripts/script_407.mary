@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 407 EventScript_407
+{
+    const MESSAGE_0 = "Pestle and mortar\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

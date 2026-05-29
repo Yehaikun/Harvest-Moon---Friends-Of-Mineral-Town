@@ -1,0 +1,6 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 835 EventScript_835
+{
+    exit
+}

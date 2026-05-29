@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 981 EventScript_981
+{
+    Proc034(2, 1)
+    Proc132(0, 29, 0, 0)
+    Proc068()
+    Proc038(980)
+}

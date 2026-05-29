@@ -1,0 +1,150 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 710 EventScript_710
+{
+    const MESSAGE_0 = "It's me. How are you?\x05"
+    const MESSAGE_1 = "You're not ready to \r\ncome back yet...?\x05\x0C...I see.\x05\x0CI'll call again. Take care.\x05"
+    const MESSAGE_2 = "Was that Joanna? \x05"
+    const MESSAGE_3 = "..Yes...\x05\x0CMay waits everyday for her\r\nto come home, \x05\r\nbut she won't...!\x05"
+    const MESSAGE_4 = "I bet she has her reasons.\x05"
+    const MESSAGE_5 = "Could there be anything\r\nmore important than her own\r\ndaughter?!\x05\x0CPoor May...\x05"
+    const MESSAGE_6 = "I remember...\r\nShe was away for a long \r\ntime, and when she finally \x05\r\ndid come back home she left\r\nMay with you and then \r\ntook off again!\x05"
+    const MESSAGE_7 = "Joanna's always been that \r\nway. \x05\x0CShe tries to solve all her \r\nproblems by herself. \x05"
+    const MESSAGE_8 = "I can't forgive her this \r\ntime, though!\x05\x0CLeaving May with me and \r\ngoing off to the city...\r\nall without telling me why!\x05\x0CMay tries to act brave, \r\nbut she misses her mother. \x05\x0CIt makes me so mad...!!\x05"
+    const MESSAGE_9 = "She's still at that age \r\nwhere she needs her mom, \r\nisn't she...?\x05"
+    const MESSAGE_10 = "Joanna keeps insisting she \r\nhas more business to take\r\ncare of...\x05\x0CWhat could it be!?\x05"
+    const MESSAGE_11 = "I'll make May's\r\nfavorite today. Bye now. \x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    SetEntityPosition(24, 316, 80, 0)
+    SetEntityAnim(24, 1970)
+    Proc035(2, 1)
+    Proc00A(0, 248, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(4, 184, 336, 1)
+    SetEntityAnim(4, 2547)
+    Proc00A(4, 272, 1)
+    Proc00C(4)
+    SetEntityFacing(0, 0)
+    SetEntityFacing(4, 3)
+    Proc008(4, 208, 1)
+    Proc00C(4)
+    SetEntityFacing(4, 1)
+    SetEntityFacing(0, 3)
+    Proc00A(4, 196, 1)
+    Proc00C(4)
+    SetEntityFacing(4, 3)
+    Proc008(4, 336, 1)
+    Proc00C(4)
+    Proc017(336, 120, 2)
+    SetEntityFacing(4, 1)
+    Proc00A(4, 120, 1)
+    Proc00C(4)
+    SetEntityAnim(4, 2543)
+    Proc037(60)
+    TalkOpen()
+    Proc030(183)
+    Proc02D(4)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc011(4, 6, 0)
+    Proc037(120)
+    Proc011(4, 3, 0)
+    Proc037(120)
+    Proc011(4, 0, 0)
+    Proc037(120)
+    Proc034(2, 2)
+    Proc037(60)
+    Proc035(2, 2)
+    Proc011(4, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(183)
+    Proc02D(4)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityFacing(4, 2)
+    SetEntityAnim(4, 2547)
+    Proc008(4, 316, 1)
+    Proc00C(4)
+    SetEntityAnim(4, 2543)
+    TalkOpen()
+    Proc030(83)
+    Proc02D(24)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    SetEntityFacing(4, 1)
+    TalkOpen()
+    Proc030(183)
+    Proc02D(4)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(83)
+    Proc02D(24)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(183)
+    Proc02D(4)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    TalkOpen()
+    Proc030(83)
+    Proc02D(24)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    Proc030(180)
+    Proc02D(4)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    Proc011(4, 0, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(182)
+    Proc02D(4)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    Proc011(24, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(86)
+    Proc02D(24)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    Proc030(183)
+    Proc02D(4)
+    TalkMessage(MESSAGE_10)
+    Proc030(180)
+    TalkMessage(MESSAGE_11)
+    TalkClose()
+    SetEntityFacing(4, 2)
+    SetEntityAnim(4, 2547)
+    Proc008(4, 240, 1)
+    Proc00C(4)
+    SetEntityFacing(4, 0)
+    Proc00A(4, 224, 1)
+    Proc00C(4)
+    Proc00F(4)
+    Proc037(100)
+    Proc017(184, 248, 2)
+    Proc018()
+    Proc03F(235, 2)
+    exit
+}

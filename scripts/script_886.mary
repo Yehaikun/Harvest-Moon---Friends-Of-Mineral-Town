@@ -1,0 +1,86 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 886 EventScript_886
+{
+    const MESSAGE_0 = "That was great!\x05\x0CYou sure have a lot of food\r\nI've never seen before. \x05"
+    const MESSAGE_1 = "Why do you know so much \r\nabout other towns?\x05"
+    const MESSAGE_2 = "I really hate the cold, so I\r\nalways spend winters in \r\nthe south. \x05\x0CSo, I've eaten foods from \r\nall over the world! \x05"
+    const MESSAGE_3 = "Really...\x05"
+    const MESSAGE_4 = "I wonder if my mom would get\r\nbetter if she ate your \r\ncooking...?\x05"
+    const MESSAGE_5 = "Should I go make some \r\nfor her?\x05"
+    const MESSAGE_6 = "Would you really?\x05"
+    const MESSAGE_7 = "Just leave it to me!\x05"
+    const MESSAGE_8 = "Thank you, Kai!\x05"
+    Proc016(1, 160, 120)
+    PlayBGM(1, 16)
+    SetEntityPosition(0, 24, 280, 3)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(3, 152, 120, 3)
+    SetEntityAnim(3, 559)
+    SetEntityPosition(26, 168, 120, 2)
+    SetEntityAnim(26, 2306)
+    Proc035(2, 1)
+    Proc011(3, 5, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(8)
+    Proc02D(3)
+    TalkMessage(MESSAGE_0)
+    Proc030(7)
+    Proc02D(3)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    Proc011(3, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(8)
+    Proc02D(3)
+    TalkMessage(MESSAGE_3)
+    Proc030(7)
+    Proc02D(3)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc011(26, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(3, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(8)
+    Proc02D(3)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    Proc030(154)
+    Proc02D(26)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    Proc030(8)
+    Proc02D(3)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    Proc017(24, 280, 2)
+    Proc018()
+    Proc0F2()
+    Proc08C(3, 887)
+    Proc08C(26, 888)
+    Proc03F(122, 1)
+    exit
+}

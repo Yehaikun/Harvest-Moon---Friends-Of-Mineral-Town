@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 778 EventScript_778
+{
+    const MESSAGE_0 = "So you want to hear about\r\nthat matter...?\x05\x0CIt's a secret! Heh heh...\x05"
+    if Func03E(288) == 1
+    {
+        SetEntityFacing(22, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(149)
+        Proc02D(22)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(22)
+        SetEntityFacing(22, 0)
+    }
+}

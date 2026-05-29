@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 959 EventScript_959
+{
+    const MESSAGE_0 = "Elli, you are such a \r\nbeautiful bride...!\x05\x0CYou've only thought about \r\nme and Stu, but now you \r\nhave to concentrate on your\x05\r\nnew family. \x05"
+    const MESSAGE_1 = "Watching Elli get married\r\nhas made me determined to\r\nlive to see Stu married! \x05"
+    if Func086(15) == 0
+    {
+        Proc083(15)
+    }
+    if Func085(15) == 0
+    {
+        SetEntityFacing(15, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(63)
+        Proc02D(15)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(15, 0)
+        Proc083(15)
+    }
+    else
+    {
+        SetEntityFacing(15, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(64)
+        Proc02D(15)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(15, 0)
+        Proc083(15)
+    }
+}

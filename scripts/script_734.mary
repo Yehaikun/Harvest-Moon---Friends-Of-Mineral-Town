@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 734 EventScript_734
+{
+    const MESSAGE_0 = "I'm touched he cares about\r\nme like that. \x05\x0CI promise not to make \r\nhim worry any more. \x05\x0CI'm so glad I married him!\x05"
+    SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(104)
+    Proc02D(12)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(12)
+    SetEntityFacing(12, 3)
+    exit
+}

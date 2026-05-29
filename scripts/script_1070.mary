@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1070 EventScript_1070
+{
+    const MESSAGE_0 = "So you came, too, \r\n\xFF!?\x05\x0CI never miss a chance to \r\neat Rice Cakes! \x05\x0CThe ones at New Year's\r\nalways seem to taste \r\nbetter, too! \x05"
+    if Func086(13) == 0
+    {
+        Proc083(13)
+    }
+    SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(118)
+    Proc02D(13)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(13) == 0
+    {
+        Proc080(13, 5)
+    }
+    Proc083(13)
+    SetEntityFacing(13, 0)
+}

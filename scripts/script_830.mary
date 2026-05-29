@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 830 EventScript_830
+{
+    const MESSAGE_0 = "Ta-daaaa!\x05\x0CYou have shipped 1,000,000\r\n\xFF%.\x05\x0CCongratulations.\x05\x0CThat's all.\r\nYou get nothing.\r\nBye.\x05"
+    Proc03F(353, 1)
+    Proc077(1)
+    Proc148(0, Func149())
+    Proc036(1, 0)
+    Proc036(1, 0)
+    Proc034(1, 1)
+    PlaySong(0, 190)
+    TalkOpen()
+    Proc02D(31)
+    Proc030(57)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(31)
+    Proc08A(31, 3000)
+    Proc03F(353, 2)
+    Proc035(1, 1)
+    Proc077(0)
+}

@@ -1,0 +1,87 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1309 EventScript_1309
+{
+    const MESSAGE_0 = "Alright, let's eat!\x05"
+    const MESSAGE_1 = "It looks like there's some \r\nextra Buckwheat Flour. \x05\x0CWhy don't you take some \r\nhome, \xFF!?\r\nWe can't waste it!\x05"
+    const MESSAGE_2 = "Looks like your Rucksack\r\nis full, \xFF!. \r\nToo bad...\x05"
+    const MESSAGE_3 = "That was good!\r\nToo bad I couldn't take\r\nany home with me...\x05"
+    const MESSAGE_4 = "That was good!\r\nI even got to take some\r\nhome with me!\x05"
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        PlaySong(0, 106)
+        Proc048(135)
+        TalkOpen()
+        Proc030(117)
+        Proc02D(13)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc047()
+        SetEntityAnim(0, 78)
+        Proc037(30)
+        SetEntityAnim(0, 402)
+        PlaySong(0, 101)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(117)
+        Proc02D(13)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+    Proc034(2, 1)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(117)
+    Proc02D(13)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    if Func040() == 0 && Func057() == -1
+    {
+        SetEntityAnim(0, 294)
+        Proc037(60)
+        SetEntityAnim(0, 402)
+        TalkOpen()
+        Proc030(117)
+        Proc02D(13)
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        Proc037(20)
+        Proc034(2, 1)
+        TalkOpen()
+        TalkMessage(MESSAGE_3)
+        TalkClose()
+    }
+    else
+    {
+        SetEntityAnim(0, 510)
+        Proc037(20)
+        PlaySong(0, 106)
+        Proc048(74)
+        Func059(74, 8)
+        Proc037(20)
+        Proc034(2, 1)
+        TalkOpen()
+        TalkMessage(MESSAGE_4)
+        TalkClose()
+    }
+    Proc08D(13)
+    Proc08D(27)
+    Proc08D(22)
+    Proc08D(8)
+    Proc08D(9)
+    Proc08D(17)
+    Proc08D(18)
+    Proc08D(25)
+    Proc13E(0)
+    Proc13E(1)
+    Proc13E(2)
+    Proc13E(3)
+    Proc13E(4)
+    Proc13E(5)
+    Proc0F3()
+    Proc03F(464, 2)
+    Proc038(988)
+}

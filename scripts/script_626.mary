@@ -1,0 +1,24 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 626 EventScript_626
+{
+    const MESSAGE_0 = "Goo-goo.\x05"
+    if Func03E(200) == 2
+    {
+        if Func03E(46) >= 60
+        {
+            SetEntityFacing(35, GetOppositeFacing(GetEntityFacing(0)))
+            TalkOpen()
+            Proc02D(35)
+            Proc030(18)
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            Proc083(35)
+            SetEntityFacing(35, 0)
+        }
+        else
+        {
+            exit
+        }
+    }
+}

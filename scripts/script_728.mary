@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 728 EventScript_728
+{
+    const MESSAGE_0 = "I'm so proud of you, Dad.\r\nNow I have to do even \r\nbetter on my novel!\x05"
+    SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(12)
+    SetEntityFacing(12, 1)
+    exit
+}

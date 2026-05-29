@@ -1,0 +1,19 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 48 EventScript_48
+{
+    const MESSAGE_0 = "Come again!\x05"
+    if Func03E(87) == 1
+    {
+
+    }
+    SetEntityFacing(25, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(87)
+    Proc02D(25)
+    Proc032(25)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(25, 3)
+    Proc083(25)
+}

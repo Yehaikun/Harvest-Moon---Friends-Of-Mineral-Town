@@ -1,0 +1,58 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 425 EventScript_425
+{
+    const MESSAGE_0 = "Turn in for the day?"
+    const MESSAGE_1 = "Yes"
+    const MESSAGE_2 = "No"
+    const MESSAGE_3 = "Bed\r\nInvestigate from the \r\nleft side to sleep.\x05"
+    var var_0
+    if GetEntityFacing(0) == 3
+    {
+        TalkOpen()
+        var_0 = Func025(MESSAGE_0, MESSAGE_1, MESSAGE_2)
+        TalkClose()
+        switch var_0
+        {
+            case 1
+            {
+                Proc06B()
+                if GetEntityY(0) != 76
+                {
+                    SetEntityAnim(0, 454)
+                    SetEntityFacing(0, 1)
+                    Proc00A(0, 76, 1)
+                    Proc00C(0)
+                    SetEntityAnim(0, 402)
+                    SetEntityFacing(0, 3)
+                }
+                if GetEntityX(0) != 193
+                {
+                    SetEntityAnim(0, 454)
+                    Proc008(0, 193, 1)
+                    Proc00C(0)
+                    SetEntityAnim(0, 402)
+                }
+                SetEntityAnim(0, 270)
+                Proc037(12)
+                Proc009(0, GetEntityX(0) + 16, 32768)
+                Proc037(32)
+                SetEntityPosition(0, 200, -46, 0)
+                SetEntityAnim(0, 398)
+                Proc037(30)
+                Proc034(2, 1)
+                Proc05C(50, -5)
+                Proc038(988)
+            }
+            case 2
+            {
+            }
+        }
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_3)
+        TalkClose()
+    }
+}

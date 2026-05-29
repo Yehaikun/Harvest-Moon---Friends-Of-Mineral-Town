@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1159 EventScript_1159
+{
+    const MESSAGE_0 = "I wonder what happened\r\nto that chicken?\x05"
+    const MESSAGE_1 = "Even that Chicken's face\r\nlooks fierce!\x05"
+    const MESSAGE_2 = "That was a good effort. \x05"
+    if Func086(6) == 0
+    {
+        Proc083(6)
+    }
+    SetEntityFacing(6, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(407) == 0
+    {
+        TalkOpen()
+        Proc030(168)
+        Proc02D(6)
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(409) == 1
+    {
+        TalkOpen()
+        Proc030(169)
+        Proc02D(6)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(168)
+        Proc02D(6)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(6) == 0
+    {
+        Proc080(6, 5)
+    }
+    Proc083(6)
+    SetEntityFacing(6, 0)
+}

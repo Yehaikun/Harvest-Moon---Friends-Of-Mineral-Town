@@ -1,0 +1,159 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 691 EventScript_691
+{
+    const MESSAGE_0 = "New Year's Festival is today\r\nhere from 6 PM on. \x05\x0CRight now I'm getting ready\r\nfor it.\x05\x0CYou should come, too. \x05"
+    const MESSAGE_1 = "Spring Horse Races are today\r\nhere from 10 AM on. \x05\x0CRight now I'm getting ready\r\nfor it.\x05\x0CYou should come, too. \x05"
+    const MESSAGE_2 = "Announcement of the \r\nCooking Contest theme is \r\nhere at 10 AM. \x05\x0CRight now I'm getting ready\r\nfor it.\x05\x0CYou should come, too. \x05"
+    const MESSAGE_3 = "The Chicken Festival is\r\ntoday here from 10 AM on.\x05\x0CRight now I'm getting ready\r\nfor it.\x05\x0CYou should come, too. \x05"
+    const MESSAGE_4 = "The Cow Festival is today\r\nhere from 10 AM on. \x05\x0CRight now I'm getting ready\r\nfor it.\x05\x0CYou should come, too. \x05"
+    const MESSAGE_5 = "The Harvest Festival is \r\ntoday here from 10 AM on. \x05\x0CRight now I'm getting ready\r\nfor it.\x05\x0CYou should come, too. \x05"
+    const MESSAGE_6 = "Fall Horse Races are today\r\nhere from 10 AM on. \x05\x0CRight now I'm getting ready\r\nfor it.\x05\x0CYou should come, too. \x05"
+    const MESSAGE_7 = "The Sheep Festival is today\r\nhere from 10 AM on. \x05\x0CRight now I'm getting ready\r\nfor it.\x05\x0CYou should come, too. \x05"
+    const MESSAGE_8 = "The Year End Festival is \r\nhere today from 6 PM on.  \x05\x0CRight now I'm getting ready\r\nfor it.\x05\x0CYou should come, too. \x05"
+    var var_0, var_1, var_2
+    Proc016(6, 456, 128)
+    PlayBGM(1, 13)
+    SetEntityPosition(0, 456, 128, 2)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(13, 432, 128, 3)
+    SetEntityAnim(13, 2143)
+    Proc035(2, 1)
+    var_0 = Func03E(1)
+    var_1 = Func03E(2)
+    var_2 = Func03E(3)
+    Proc03F(226, 1)
+    if Func03E(384) == 0 && var_0 == 0 && var_1 == 1
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(117)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc03F(226, 2)
+        Proc034(2, 1)
+        Proc016(1, 24, 280)
+        SetEntityPosition(0, 24, 280, 3)
+        Proc035(2, 1)
+        exit
+    }
+    else if Func03E(393) == 0 && var_0 == 0 && var_1 == 18
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(117)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc03F(226, 2)
+        Proc034(2, 1)
+        Proc016(1, 24, 280)
+        SetEntityPosition(0, 24, 280, 3)
+        Proc035(2, 1)
+        exit
+    }
+    else if Func03E(396) == 0 && var_0 == 0 && var_1 == 22
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(117)
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        Proc03F(226, 2)
+        Proc034(2, 1)
+        Proc016(1, 24, 280)
+        SetEntityPosition(0, 24, 280, 3)
+        Proc035(2, 1)
+        exit
+    }
+    else if Func03E(408) == 0 && var_0 == 1 && var_1 == 7
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(117)
+        TalkMessage(MESSAGE_3)
+        TalkClose()
+        Proc03F(226, 2)
+        Proc034(2, 1)
+        Proc016(1, 24, 280)
+        SetEntityPosition(0, 24, 280, 3)
+        Proc035(2, 1)
+        exit
+    }
+    else if Func03E(412) == 0 && var_0 == 1 && var_1 == 20
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(117)
+        TalkMessage(MESSAGE_4)
+        TalkClose()
+        Proc03F(226, 2)
+        Proc034(2, 1)
+        Proc016(1, 24, 280)
+        SetEntityPosition(0, 24, 280, 3)
+        Proc035(2, 1)
+        exit
+    }
+    else if Func03E(420) == 0 && var_0 == 2 && var_1 == 9
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(117)
+        TalkMessage(MESSAGE_5)
+        TalkClose()
+        Proc03F(226, 2)
+        Proc034(2, 1)
+        Proc016(1, 24, 280)
+        SetEntityPosition(0, 24, 280, 3)
+        Proc035(2, 1)
+        exit
+    }
+    else if Func03E(428) == 0 && var_0 == 2 && var_1 == 18
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(117)
+        TalkMessage(MESSAGE_6)
+        TalkClose()
+        Proc03F(226, 2)
+        Proc034(2, 1)
+        Proc016(1, 24, 280)
+        SetEntityPosition(0, 24, 280, 3)
+        Proc035(2, 1)
+        exit
+    }
+    else if Func03E(432) == 0 && var_0 == 2 && var_1 == 21
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(117)
+        TalkMessage(MESSAGE_7)
+        TalkClose()
+        Proc03F(226, 2)
+        Proc034(2, 1)
+        Proc016(1, 24, 280)
+        SetEntityPosition(0, 24, 280, 3)
+        Proc035(2, 1)
+        exit
+    }
+    else if Func03E(464) == 0 && var_0 == 3 && var_1 == 30
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(117)
+        TalkMessage(MESSAGE_8)
+        TalkClose()
+        Proc03F(226, 2)
+        Proc034(2, 1)
+        Proc016(1, 24, 280)
+        SetEntityPosition(0, 24, 280, 3)
+        Proc035(2, 1)
+        exit
+    }
+}

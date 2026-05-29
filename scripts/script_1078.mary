@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1078 EventScript_1078
+{
+    const MESSAGE_0 = "Yippee! Rice Cakes! \x05"
+    if Func086(5) == 0
+    {
+        Proc083(5)
+    }
+    SetEntityFacing(5, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(177)
+    Proc02D(5)
+    TalkMessage(MESSAGE_0)
+    Proc031()
+    TalkClose()
+    if Func084(5) == 0
+    {
+        Proc080(5, 5)
+    }
+    Proc083(5)
+    SetEntityFacing(5, 0)
+}

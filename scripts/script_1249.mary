@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1249 EventScript_1249
+{
+    const MESSAGE_0 = "These races never fail to\r\nget me excited!\x05"
+    const MESSAGE_1 = "Good luck. \r\nI'll be rooting for you!\x05"
+    if Func086(2) == 0
+    {
+        Proc083(2)
+    }
+    SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(427) == 0
+    {
+        TalkOpen()
+        Proc030(1)
+        Proc02D(2)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(0)
+        Proc02D(2)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(2) == 0
+    {
+        Proc080(2, 5)
+    }
+    Proc083(2)
+    SetEntityFacing(2, 2)
+}

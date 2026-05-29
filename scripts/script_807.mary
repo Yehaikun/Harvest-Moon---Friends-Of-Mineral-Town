@@ -1,0 +1,21 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 807 EventScript_807
+{
+    const MESSAGE_0 = "You'll be able to catch lots\r\nof fish with that!\x05"
+    if Func086(28) == 0
+    {
+        Proc083(28)
+    }
+    if Func03E(309) == 1
+    {
+        SetEntityFacing(28, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(32)
+        Proc02D(28)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(28, 2)
+        Proc083(28)
+    }
+}

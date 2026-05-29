@@ -1,0 +1,32 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1136 EventScript_1136
+{
+    const MESSAGE_0 = "I was wondering what all the\r\nfuss was about!\r\nI forgot today was the \x05\r\nFrisbee Tournament. \x05"
+    const MESSAGE_1 = "You're competing too? \r\nI'll be watching you and \r\n\xFF#. \x05"
+    if Func086(26) == 0
+    {
+        Proc083(26)
+    }
+    SetEntityFacing(26, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    if Func03E(403) == 0
+    {
+        Proc030(153)
+        Proc02D(26)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(153)
+        Proc02D(26)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(26) == 0
+    {
+        Proc080(26, 5)
+    }
+    Proc083(26)
+    SetEntityFacing(26, 3)
+}

@@ -1,0 +1,32 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1133 EventScript_1133
+{
+    const MESSAGE_0 = "Dogs are so clever!\r\nMaybe I should keep one \r\nas a guard dog...\x05"
+    const MESSAGE_1 = "You're going to compete?\r\nI'll be rooting for you! \x05"
+    if Func086(17) == 0
+    {
+        Proc083(17)
+    }
+    SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    if Func03E(403) == 0
+    {
+        Proc030(67)
+        Proc02D(17)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(68)
+        Proc02D(17)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(17) == 0
+    {
+        Proc080(17, 5)
+    }
+    Proc083(17)
+    SetEntityFacing(17, 3)
+}

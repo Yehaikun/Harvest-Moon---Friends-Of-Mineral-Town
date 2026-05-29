@@ -1,0 +1,82 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 716 EventScript_716
+{
+    const MESSAGE_0 = "Hi, \xFF!. \r\nTomorrow we're harvesting \r\nWine Grapes. \x05\r\nDo you want to help out?\x05"
+    const MESSAGE_1 = "Sure!"
+    const MESSAGE_2 = "I'm too busy."
+    const MESSAGE_3 = "Great! In that case, come by\r\naround 10AM. \x05\x0CWe'll pay you, of course. \x05"
+    const MESSAGE_4 = "Oh yeah. We need one more\r\nperson, so invite someone \r\nif you think of it. \x05"
+    const MESSAGE_5 = "That's understandable. \r\nYou do have your own farm \r\nto run! \x05\x0CWill you ask someone for me,\r\nthen? You can still come \r\ntoo, of course!\x05"
+    var var_0
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(8, 228, 145, 1)
+    SetEntityAnim(8, 2240)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(134)
+    Proc02D(8)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_1, MESSAGE_2)
+    switch var_0
+    {
+        case 1
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(134)
+            Proc02D(8)
+            TalkMessage(MESSAGE_3)
+            TalkClose()
+            SetEntityFacing(8, 3)
+            SetEntityAnim(8, 2244)
+            Proc008(8, 319, 1)
+            Proc00C(8)
+            SetEntityAnim(8, 2240)
+            Proc037(30)
+            SetEntityFacing(8, 2)
+            SetEntityFacing(0, 3)
+            TalkOpen()
+            Proc030(133)
+            Proc02D(8)
+            TalkMessage(MESSAGE_4)
+            TalkClose()
+            SetEntityAnim(8, 2244)
+            SetEntityFacing(8, 1)
+            Proc00A(8, 0, 1)
+            Proc00C(8)
+            Proc00F(8)
+            Proc080(8, 20)
+        }
+        case 2
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(133)
+            Proc02D(8)
+            TalkMessage(MESSAGE_5)
+            TalkClose()
+            SetEntityFacing(8, 3)
+            SetEntityAnim(8, 2244)
+            Proc008(8, 319, 1)
+            Proc00C(8)
+            SetEntityFacing(8, 1)
+            Proc00A(8, 0, 1)
+            Proc00C(8)
+            Proc00F(8)
+            Proc080(8, -10)
+        }
+    }
+    Proc03F(243, 2)
+    Proc083(8)
+    SetEntityFacing(0, 0)
+}

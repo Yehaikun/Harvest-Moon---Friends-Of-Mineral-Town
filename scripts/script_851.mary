@@ -1,0 +1,55 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 851 EventScript_851
+{
+    const MESSAGE_0 = "Yes.\x05"
+    const MESSAGE_1 = "I want to give you a present,\r\nso put away what you're \r\nholding. \x05"
+    SetEntityFacing(31, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(31)
+    if Func040()
+    {
+        Proc030(57)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityAnim(31, 1649)
+        Proc037(60)
+        SetEntityAnim(31, 1641)
+        PlaySong(0, 106)
+        SetEntityAnim(0, 326)
+        Proc04B(Func126())
+        SetEntityAnim(0, 338)
+        Proc037(60)
+        PlaySong(0, 190)
+        SetEntityPosition(70, GetEntityX(31), GetEntityY(31) + 2, 0)
+        Proc010(70, 3)
+        SetEntityAnim(70, 1068)
+        Proc036(1, 0)
+        Proc036(1, 0)
+        Proc034(1, 1)
+        Proc00F(70)
+        Proc00F(31)
+        Proc037(30)
+        Proc035(1, 1)
+        Proc037(60)
+        Proc03F(372, 2)
+        Proc0F3()
+        Proc08D(31)
+        if Func03E(378) == 2
+        {
+            Proc08D(35)
+        }
+        Proc034(2, 1)
+        Proc016(29, 327, 112)
+        SetEntityPosition(0, 327, 112, 2)
+        Proc035(2, 1)
+    }
+    else
+    {
+        Proc030(56)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+    }
+    Proc083(31)
+    SetEntityFacing(31, 0)
+}

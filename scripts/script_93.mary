@@ -1,0 +1,83 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 93 EventScript_93
+{
+    var var_0, var_1, var_2, var_3, var_4, var_5
+    if GetEntityFacing(0) == 1
+    {
+        Proc034(2, 1)
+        if Func03E(284) == 1
+        {
+            Proc0F3()
+            Proc08D(20)
+            Proc080(20, 20)
+            Proc03F(284, 2)
+        }
+        Proc016(8, 236, 464)
+        SetEntityPosition(0, 236, 464, 1)
+        var_0 = Func03E(1)
+        var_1 = Func03E(2)
+        var_3 = Func03E(3)
+        var_2 = Func03E(5)
+        var_4 = Func03E(6)
+        var_5 = Func03E(0)
+        if Func03E(424) == 0 && var_0 == 2 && var_1 == 13
+        {
+            if var_3 >= 18
+            {
+                if !(Func03E(76) == 0 && Func03E(85) == 0 && Func03E(95) == 0 && Func03E(103) == 0 && Func03E(111) == 0 && Func03E(371) == 0 && ((Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2) && (Func03E(126) == 2 || Func03E(127) == 2) && (Func03E(134) == 2 || Func03E(135) == 2) && (Func03E(142) == 2 || Func03E(143) == 2) && (Func03E(150) == 2 || Func03E(151) == 2)))
+                {
+                    if Func03E(117) == 0 && Func03E(118) == 0 && Func03E(119) == 0 && Func089(19) >= 30000 || Func03E(76) == 2 || (Func03E(126) == 0 && Func03E(127) == 0 && Func089(3) >= 30000 || Func03E(85) == 2) || (Func03E(134) == 0 && Func03E(135) == 0 && Func089(25) >= 30000 || Func03E(95) == 2) || (Func03E(142) == 0 && Func03E(143) == 0 && Func089(12) >= 30000 || Func03E(103) == 2) || (Func03E(150) == 0 && Func03E(151) == 0 && Func089(21) >= 30000 || Func03E(111) == 2)
+                    {
+                        Proc03F(424, 1)
+                        Proc038(1242)
+                    }
+                }
+            }
+        }
+        else if Func03E(465) == 0 && var_0 == 0 && var_1 == 1
+        {
+            if var_3 >= 0 && var_3 < 6
+            {
+                Proc03F(465, 1)
+                Proc038(1318)
+            }
+        }
+        else if Func03E(98) == 2 && Func03E(100) == 0 && !(var_0 == 0 && var_1 == 1 || var_0 == 0 && var_1 == 18 || var_0 == 0 && var_1 == 22 || var_0 == 1 && var_1 == 1 || var_0 == 1 && var_1 == 7 || var_0 == 1 && var_1 == 24 || var_0 == 1 && var_1 == 20 || var_0 == 2 && var_1 == 3 || var_0 == 2 && var_1 == 9 || var_0 == 2 && var_1 == 13 || var_0 == 2 && var_1 == 18 || var_0 == 2 && var_1 == 21 || var_0 == 3 && var_1 == 24 || var_0 == 3 && var_1 == 30) && var_2 == 1 && var_4 == 0 && (var_3 >= 12 && var_3 < 17) && Func03E(76) == 0 && Func03E(85) == 0 && Func03E(95) == 0 && Func03E(103) == 0 && Func03E(111) == 0 && Func03E(371) == 0 && Func03E(142) == 0 && Func03E(143) == 0 && Func03E(75) == 0 && Func03E(84) == 0 && Func03E(94) == 0 && Func03E(102) == 0 && Func03E(110) == 0 && Func03E(370) == 0 && Func03E(141) == 0 && GetEntityLocation(24) != 8 && Func089(12) >= 20000 && Func040() == 1 && (Func03E(44) == 2 || Func03E(22) == 1)
+        {
+            Proc03F(100, 1)
+            Proc038(61)
+        }
+        else if Func03E(139) == 2 && Func03E(140) == 0 && !(var_0 == 0 && var_1 == 1 || var_0 == 0 && var_1 == 18 || var_0 == 0 && var_1 == 22 || var_0 == 1 && var_1 == 1 || var_0 == 1 && var_1 == 7 || var_0 == 1 && var_1 == 24 || var_0 == 1 && var_1 == 20 || var_0 == 2 && var_1 == 3 || var_0 == 2 && var_1 == 9 || var_0 == 2 && var_1 == 13 || var_0 == 2 && var_1 == 18 || var_0 == 2 && var_1 == 21 || var_0 == 3 && var_1 == 24 || var_0 == 3 && var_1 == 30) && (var_2 == 0 || var_2 == 2 || var_2 == 5) && var_5 >= 2 && var_4 == 0 && (var_3 >= 7 && var_3 < 10) && Func03E(103) == 0 && Func03E(142) == 0 && Func03E(143) == 0 && Func03E(102) == 0 && Func089(12) < 40000 && GetEntityLocation(24) != 8
+        {
+            Proc03F(140, 1)
+            Proc038(932)
+        }
+        else if Func03E(295) == 0 && (var_0 == 2 && var_1 == 5) && (var_3 >= 6 && var_3 < 17) && Func03E(95) == 0 && Func086(24) == 1
+        {
+            Proc03F(295, 1)
+            Proc038(784)
+        }
+        else if Func03E(260) == 0 && !(var_0 == 0 && var_1 == 1 || var_0 == 0 && var_1 == 18 || var_0 == 0 && var_1 == 22 || var_0 == 1 && var_1 == 1 || var_0 == 1 && var_1 == 7 || var_0 == 1 && var_1 == 24 || var_0 == 1 && var_1 == 20 || var_0 == 2 && var_1 == 3 || var_0 == 2 && var_1 == 9 || var_0 == 2 && var_1 == 13 || var_0 == 2 && var_1 == 18 || var_0 == 2 && var_1 == 21 || var_0 == 3 && var_1 == 24 || var_0 == 3 && var_1 == 30) && var_2 == 4 && var_4 == 0 && (var_3 >= 13 && var_3 < 16) && (Func03E(142) == 2 || Func03E(143) == 2) && GetEntityLocation(12) == 8 && GetEntityLocation(7) == 8 && GetEntityLocation(24) != 8
+        {
+            Proc03F(260, 1)
+            Proc038(733)
+        }
+        else if Func03E(271) == 2 && Func03E(272) == 0 && !(var_0 == 0 && var_1 == 1 || var_0 == 0 && var_1 == 18 || var_0 == 0 && var_1 == 22 || var_0 == 1 && var_1 == 1 || var_0 == 1 && var_1 == 7 || var_0 == 1 && var_1 == 24 || var_0 == 1 && var_1 == 20 || var_0 == 2 && var_1 == 3 || var_0 == 2 && var_1 == 9 || var_0 == 2 && var_1 == 13 || var_0 == 2 && var_1 == 18 || var_0 == 2 && var_1 == 21 || var_0 == 3 && var_1 == 24 || var_0 == 3 && var_1 == 30) && var_0 == 1 && var_4 == 0 && (var_3 >= 21 && var_3 <= 23)
+        {
+            Proc03F(272, 1)
+            Proc038(744)
+        }
+        else if var_5 >= 5 && var_4 == 0 && (var_0 == 2 && var_1 == 10 && (var_3 >= 18 && var_3 <= 23) || var_0 == 2 && var_1 == 11 && (var_3 >= 0 && var_3 < 6))
+        {
+            switch Func03E(0) % 5
+            {
+                case 0
+                {
+                    Proc038(821)
+                }
+            }
+        }
+        Proc035(2, 1)
+    }
+}

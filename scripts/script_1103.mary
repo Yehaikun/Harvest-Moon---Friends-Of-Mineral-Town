@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1103 EventScript_1103
+{
+    const MESSAGE_0 = "Are you going to compete \r\nthis year, \xFF!?\x05\x0CYour dish better be\r\nextra delicious, because\r\nthe Gourmet is going to be\x05\r\njudging. He's tough!\x05"
+    if Func086(28) == 0
+    {
+        Proc083(28)
+    }
+    SetEntityFacing(28, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(31)
+    Proc02D(28)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(28) == 0
+    {
+        Proc080(28, 5)
+    }
+    SetEntityFacing(28, 3)
+    Proc083(28)
+}

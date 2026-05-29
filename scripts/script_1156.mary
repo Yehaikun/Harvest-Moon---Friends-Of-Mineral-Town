@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1156 EventScript_1156
+{
+    const MESSAGE_0 = "I knew who would win from\r\nthe start. \x05"
+    const MESSAGE_1 = "I knew your Chicken was \r\nthe strongest from the \r\nEggs it lays! \x05"
+    const MESSAGE_2 = "Is your Chicken having an \r\noff day? Is he really the \r\nstrongest on your farm? \x05"
+    if Func086(24) == 0
+    {
+        Proc083(24)
+    }
+    SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(407) == 0
+    {
+        TalkOpen()
+        Proc030(83)
+        Proc02D(24)
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(409) == 1
+    {
+        TalkOpen()
+        Proc030(84)
+        Proc02D(24)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(86)
+        Proc02D(24)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(24) == 0
+    {
+        Proc080(24, 5)
+    }
+    Proc083(24)
+    SetEntityFacing(24, 2)
+}

@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 392 EventScript_392
+{
+    const MESSAGE_0 = "Bed\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

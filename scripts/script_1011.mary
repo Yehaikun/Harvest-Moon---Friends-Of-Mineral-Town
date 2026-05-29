@@ -1,0 +1,1740 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1011 EventScript_1011
+{
+    const MESSAGE_0 = "Sorry, do I know you?\r\nAh, you're the new guy at\r\nthe farm, huh?\x05\x0CAnd I thought you were \r\na guest!\x05\x0CYour name is \xFF!?\r\nI'm Ann.\x05"
+    const MESSAGE_1 = "A birthday present?\r\nfor me? What a surprise!\x05"
+    const MESSAGE_2 = "You mean this is a present?\r\nFor me! Awesome!\x05"
+    const MESSAGE_3 = "...\xFF)...\r\nThank you so much...!\r\nI'm so happy!\x05"
+    const MESSAGE_4 = "For me? What a surprise!\r\nWhat a great birthday gift!\x05"
+    const MESSAGE_5 = "...Thank you!\x05\x0CThis is the best \r\nbirthday ever!...\x05"
+    const MESSAGE_6 = "You really are a great guy,\r\n\xFF). I love you!\x05"
+    const MESSAGE_7 = "Yeah! Can I really take\r\nsomething so nice...?\x05"
+    const MESSAGE_8 = "Thanks!\r\nI love getting presents \r\nfrom you!\x05"
+    const MESSAGE_9 = "Is this really for me?\r\nThanks so much!\x05"
+    const MESSAGE_10 = "Thanks, \xFF)!\r\nI love presents!\x05"
+    const MESSAGE_11 = "Thanks! This is great!\x05"
+    const MESSAGE_12 = "Thanks!\x05"
+    const MESSAGE_13 = "Thanks.\x05"
+    const MESSAGE_14 = "I know I shouldn't refuse\r\na present, but...\x05"
+    const MESSAGE_15 = "You mean this is for me?\r\nHmmm...Thanks.\x05"
+    const MESSAGE_16 = "Don't bring that \r\nclose to me!\x05"
+    const MESSAGE_17 = "What are you doing?!\r\nGet that out of here!\x05"
+    const MESSAGE_18 = "Aww...It's so cute!\x05"
+    const MESSAGE_19 = "Eeeek! \r\nHow can you be so mean?\x05"
+    const MESSAGE_20 = "Stop playing scaring\r\nme like that! And I thought\r\nyou were so nice...\x05"
+    const MESSAGE_21 = "Wow, it's so pretty...\r\nYou mean it's for me? \r\nTruly?...Thanks!\x05"
+    const MESSAGE_22 = "You mean something so nice\r\nis really for me...?\x05\x0CThank you so much!...\r\nYou're sure, now...?\x05"
+    const MESSAGE_23 = "You really want to give me\r\nsomething so precious?\x05\x0CThanks! I mean it.\x05"
+    const MESSAGE_24 = "This makes me so happy, \r\n\xFF). Thanks!\x05"
+    const MESSAGE_25 = "This is the nicest present\r\never! Thank you!\x05"
+    const MESSAGE_26 = "This...This is for me?\r\nThank you.\x05"
+    const MESSAGE_27 = "Perfume? What a lovely \r\nscent! It smells like...\r\nHappiness!\x05"
+    const MESSAGE_28 = "This is for me? \r\nThanks.\x05"
+    const MESSAGE_29 = "I really don't have any \r\nuse for Perfume...\x05"
+    const MESSAGE_30 = "But you really want to \r\ngive it to me? In that \r\ncase...Thanks!\x05"
+    const MESSAGE_31 = "Cookies? For the \r\nThanksgiving Festival? \r\nHow thoughtful of you!\x05"
+    const MESSAGE_32 = "These look great!\r\nI just love the Spring \r\nThanksgiving Festival!\x05\x0CThey look even better \r\nthan I can make!\x05"
+    const MESSAGE_33 = "Wow, Cookies!\x05\x0CAre these for the Spring\r\nThanksgiving Festival?\x05\x0CAnd I didn't give you \r\nanything last Winter! I \r\nfeel horrible!\x05"
+    const MESSAGE_34 = "Thanks...! \r\nI didn't expect you to \r\nactually give some back in\x05\r\nreturn...I'm so happy!\x05"
+    const MESSAGE_35 = "You mean...?\x05\x0CUmm...Why don't we just\r\ngo to your house first...?\x05"
+    const MESSAGE_36 = "Does that mean what I think\r\nit means? Congratulations!\x05\x0CI'm sure she's waiting\r\nfor you!\x05"
+    const MESSAGE_37 = "Ha ha ha! \r\nWhat a funny joke!\x05\x0CNow...Who do you really\r\nmean that for?\x05"
+    const MESSAGE_38 = "Come over to my house \r\ntomorrow for the Starry Night \r\nFestival, OK?\x05"
+    const MESSAGE_39 = "I can't wait!"
+    const MESSAGE_40 = "Sorry..."
+    const MESSAGE_41 = "Really? Great!\r\nWe'll be waiting.\x05"
+    const MESSAGE_42 = "Well, \r\nif you're already busy,\r\nI understand...I guess...\x05"
+    const MESSAGE_43 = "We'll make you such a feast\r\nyou won't regret it!\r\nCome around noon, OK?\x05"
+    const MESSAGE_44 = "Now I'm getting \r\nembarrassed...\x05"
+    const MESSAGE_45 = "When I told Elli I thought I\r\nwas eating too much, she\r\njust laughed at me!\x05"
+    const MESSAGE_46 = "Good morning!\r\nI feel much better today!\x05"
+    const MESSAGE_47 = "I'm fine, I'm fine...\x05\x0C"
+    const MESSAGE_48 = "Ugghh...\x05"
+    const MESSAGE_49 = "Look how big my \r\ntummy's gotten!\x05"
+    const MESSAGE_50 = "I'm not nervous, but it's \r\nfun to watch how my body \r\nchanges over time...\x05"
+    const MESSAGE_51 = "Today at the Clinic, they \r\nsaid the baby would be \r\nborn tomorrow!\x05"
+    const MESSAGE_52 = "So, the Doctor and Elli are\r\nboth coming tomorrow. You \r\nstick around too, OK?\x05"
+    const MESSAGE_53 = "Aaargghh!...\r\nI can't believe how busy\r\nI am!\x05"
+    const MESSAGE_54 = "And I thought all babies\r\ndid was sleep!\x05"
+    const MESSAGE_55 = "His face is becoming more \r\nand more like yours!\x05"
+    const MESSAGE_56 = "My dad thinks he looks like\r\nhim when he was young, but\r\nI think he takes after you.\x05"
+    const MESSAGE_57 = "I think \xFF*\r\nlikes \xFF#!\x05"
+    const MESSAGE_58 = "Don't worry, he still\r\nlikes you the best!\x05"
+    const MESSAGE_59 = "I can't wait until we can \r\ngo on a family picnic!\x05"
+    const MESSAGE_60 = "I want to take him to the\r\nmountain and show him all\r\nkinds of animals!\x05"
+    const MESSAGE_61 = "Good morning.\x05\x0C\xFF* can talk a\r\nlittle bit these days.\x05"
+    const MESSAGE_62 = "Maybe it's because we\r\nlive on a farm, but he \r\nkeeps saying \"moo-moo\"!\x05"
+    const MESSAGE_63 = "Hah...\r\nI feel so depressed.\x05"
+    const MESSAGE_64 = "...Just leave me alone!\x05"
+    const MESSAGE_65 = "I've got to get all the \r\nhousework done before the\r\nbaby wakes!\x05"
+    const MESSAGE_66 = "What's wrong?\r\nWhy don't you go work?\x05"
+    const MESSAGE_67 = "I always get in a bad\r\nmood when I get hungry!\x05"
+    const MESSAGE_68 = "You don't care what I \r\nmake for dinner, do you?\r\nI barely have the time...\x05"
+    const MESSAGE_69 = "Good morning!\r\nLooks like a great day!\x05"
+    const MESSAGE_70 = "Alright, to work!\x05"
+    const MESSAGE_71 = "Work up a good \r\nappetite, now!\x05"
+    const MESSAGE_72 = "Just work a little longer!\x05"
+    const MESSAGE_73 = "Good morning!ret>Feel like putting in a \r\ngood day's work?\x05"
+    const MESSAGE_74 = "Eat, sleep, work!\r\nAh, the farm life is good!\x05"
+    const MESSAGE_75 = "What do you want for supper?\r\nI still have to learn some\r\nmore dishes from my dad!\x05"
+    const MESSAGE_76 = "You can't keep healthy \r\nwithout three good meals\r\na day!\x05"
+    const MESSAGE_77 = "............\x05\x0C"
+    const MESSAGE_78 = "Good morning, \xFF)!\x05"
+    const MESSAGE_79 = "I've got no complaints...!\x05"
+    const MESSAGE_80 = "Do you feel like making \r\ndinner today, dear?\x05"
+    const MESSAGE_81 = "I can't decide what\r\nto make today...\x05"
+    const MESSAGE_82 = "Hi, \xFF).\r\nWhat's up?\x05"
+    const MESSAGE_83 = "Whenever I start working,\r\nmy dad gets mad at me and\r\ntells me to rest instead!\x05"
+    const MESSAGE_84 = "Welcome, \xFF).\x05"
+    const MESSAGE_85 = "My dad wants us all to live\r\nat the Inn. I keep telling\r\nhim it's impossible. Right?\x05"
+    const MESSAGE_86 = "............\x05"
+    const MESSAGE_87 = "Will you just get\r\nout of my way?!\x05"
+    const MESSAGE_88 = "Need anything, \xFF)?\x05"
+    const MESSAGE_89 = "That's dangerous there!\x05"
+    const MESSAGE_90 = "I like working after all!\x05"
+    const MESSAGE_91 = "Just a little bit\r\nmore work!\x05"
+    const MESSAGE_92 = "Did you come to eat,\r\n\xFF)?\x05"
+    const MESSAGE_93 = "I'm learning how to cook \r\nfrom my father. Just wait\r\n'til you try my latest\x05\r\ndish!\x05"
+    const MESSAGE_94 = "I'm so happy with you, \r\n\xFF).\x05"
+    const MESSAGE_95 = "Hmm? Embarrassed? \r\nOf course not! After all,\r\nit's the truth!\x05"
+    const MESSAGE_96 = "Welcome, \xFF!.\x05\x0CWe close at 5, so I'll\r\nsee you then.\x05"
+    const MESSAGE_97 = "Today is my mother's...\r\nMy dad always takes\r\ntoday off, you see.\x05"
+    const MESSAGE_98 = "Welcome, \xFF!.\r\nTake your time.\x05"
+    const MESSAGE_99 = "My father's been in a \r\ngood mood lately. It's \r\nall because of Cliff.\x05"
+    const MESSAGE_100 = "Hi, \xFF!.\r\nWelcome.\x05"
+    const MESSAGE_101 = "Cliff is doing a good\r\njob working, I hear.\x05"
+    const MESSAGE_102 = "How are you coming on the\r\nfarm, \xFF!?\x05"
+    const MESSAGE_103 = "Cliff says he thinks of me\r\nas a younger sister.\r\n...That makes me sad.\x05"
+    const MESSAGE_104 = "Welcome, \xFF!.\x05"
+    const MESSAGE_105 = "Listen to this! I got into\r\na fight with Cliff!\x05\x0CHe told me to act more like\r\na girl! Can you believe it?\x05"
+    const MESSAGE_106 = "Cliff hates it when I talk\r\nto you like this.\x05\x0CI think he's jealous!\x05"
+    const MESSAGE_107 = "My dad and Cliff get along\r\nso well together I \r\nfeel left out!\x05"
+    const MESSAGE_108 = "Welcome, \xFF!.\r\nHare are you?\x05"
+    const MESSAGE_109 = "Hey, \xFF!, do \r\nyou think Cliff is really\r\nhappy right now?\x05\x0CI think maybe he's doesn't\r\nlike being tied down...\x05"
+    const MESSAGE_110 = "It's hard to take care of\r\nthings when my dad isn't \r\nhere. \x05"
+    const MESSAGE_111 = "This is the day my \r\nmother died. \x05\x0CI don't remember her at \r\nall, but my dad gets so sad\r\nat times like this...\x05"
+    const MESSAGE_112 = "Have you adjusted to married\r\nlife, \xFF!?\x05"
+    const MESSAGE_113 = "Don't you look forward to \r\ngoing home, with you wife\r\nwaiting there for you?\x05"
+    const MESSAGE_114 = "Hi there, \xFF!.\r\nHow's your wife?\x05"
+    const MESSAGE_115 = "Tell her hi for me!\x05"
+    const MESSAGE_116 = "Hello, \xFF!.\r\nYou look like you're doing\r\na good job on the farm.\x05"
+    const MESSAGE_117 = "Having a wife makes working\r\nhard worth it, doesn't it?\x05"
+    const MESSAGE_118 = "Just the idea of marriage\r\nmakes me blush!...\x05"
+    const MESSAGE_119 = "My father told me not to\r\nget embarrassed on the job!\r\nHe's so strict with me!\x05"
+    const MESSAGE_120 = "Welcome!\x05"
+    const MESSAGE_121 = "If you want to order \r\nsomething, talk to my dad.\x05"
+    const MESSAGE_122 = "Take your time.\x05"
+    const MESSAGE_123 = "My dad is always complaining\r\nthat I'm not \"feminine\"\r\nenough!\x05"
+    const MESSAGE_124 = "I like myself just how I am!\r\nBesides, I don't need a \r\nboyfriend, anyway...\x05"
+    const MESSAGE_125 = "Welcome!\r\nHow goes things on the\r\nfarm?\x05"
+    const MESSAGE_126 = "I like eating food from\r\nfarms. It tastes so good\r\nand fresh!\x05"
+    const MESSAGE_127 = "Welcome, \xFF!!\r\nTake your time, now.\x05"
+    const MESSAGE_128 = "Can I ask you a question?\r\nDo you think girls should\r\ndress \"cute\"?\x05"
+    const MESSAGE_129 = "Welcome.\x05"
+    const MESSAGE_130 = "These days, I think a lot.\r\nThat's good...but I end up\r\nbreaking lots of dishes!\x05"
+    const MESSAGE_131 = "...Oh, sorry!\r\nWhat was it you wanted?\x05"
+    const MESSAGE_132 = "Sometimes we don't have any\r\nguests staying here at all!\r\nBusiness can get real slow.\x05"
+    const MESSAGE_133 = "When I was a kid, I used to \r\nlike sleeping in empty \r\nguest rooms. \x05\x0CThings were more fun, \r\nback then...\x05"
+    const MESSAGE_134 = "Good morning! \r\nOff to work so early?\x05"
+    const MESSAGE_135 = "I should take a lesson \r\nfrom you and get up \r\nearlier myself!...\x05"
+    const MESSAGE_136 = "Welcome.\r\nWe close at 5, remember.\x05"
+    const MESSAGE_137 = "Today is my mom's...\r\nAnyway, my dad is taking \r\nthe day off, today.\x05"
+    const MESSAGE_138 = "I've got to clean Cliff's \r\nroom before he gets back!\x05"
+    const MESSAGE_139 = "Yes, Cliff is still\r\nstaying here at the Inn.\x05"
+    const MESSAGE_140 = "I can barely cope without\r\nmy dad here!\r\nWe close at 5 sharp!\x05"
+    const MESSAGE_141 = "Today is the anniversary\r\nof my mother's death. \x05\x0CI don't remember her at all\r\nbut my dad gets so sad.\x05"
+    const MESSAGE_142 = "I really don't mind \r\ncleaning, you know. I love\r\ngetting dirty and then\x05\r\ntaking a long, hot bath!\x05"
+    const MESSAGE_143 = "We have more guests these\r\ndays. That makes it much \r\nmore fun around here!\x05"
+    const MESSAGE_144 = "What's up?\r\nThis is an unusual time to\r\ncome around here!\x05"
+    const MESSAGE_145 = "We've got a room...\r\nBut you don't want to \r\nstay, do you?\x05"
+    const MESSAGE_146 = "The Harvest Goddess Spring\r\nis really good for your\r\nhealth, you know. \x05\x0CAnd the waterfall is \r\na blast!\x05"
+    const MESSAGE_147 = "Another day, another \r\ncustomer to take care of!\r\nI hope we get busy...\x05"
+    const MESSAGE_148 = "Ahh...I sure like it around\r\nhere!...\x05"
+    const MESSAGE_149 = "I think Cliff's still \r\nin his room.\x05"
+    const MESSAGE_150 = "So you're here too, \r\n\xFF!?\x05"
+    const MESSAGE_151 = "The air feels so good here\r\nin the morning!\x05"
+    var var_0, var_1, var_2, var_3, unused_4, var_5, var_6
+    if Func03E(201) == 2 && (Func03E(46) >= 0 && Func03E(46) < 60) && GetEntityLocation(35) != 29 && GetEntityLocation(25) == 29
+    {
+        SetEntityAnim(25, 1994)
+        var_6 = 0
+    }
+    else
+    {
+        SetEntityAnim(25, 1982)
+        var_6 = 1
+    }
+    var_5 = GetEntityFacing(25)
+    SetEntityFacing(25, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(1) == 3 && Func03E(2) == 14
+    {
+        switch GetEntityLocation(25)
+        {
+            case 2
+            {
+                Proc038(1295)
+            }
+        }
+    }
+    TalkOpen()
+    Proc02D(25)
+    if Func086(25) == 0
+    {
+        Proc030(87)
+        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+        {
+            Proc032(25)
+        }
+        TalkMessage(MESSAGE_0)
+        Proc083(25)
+    }
+    else
+    {
+        if Func040() || (Func03E(87) == 1 || Func03E(92) == 1 || Func03E(132) == 1 || Func03E(296) == 1)
+        {
+            var_0 = 6
+        }
+        else
+        {
+            switch Func041()
+            {
+                case 0
+                {
+                    switch Func043()
+                    {
+                        case 114, 120, 143, 167
+                        {
+                            var_0 = 0
+                        }
+                        case 21, 69, 76, 77, 78, 80, 81, 82, 83, 90, 101, 105, 108, 109, 113, 115, 118, 119, 121, 126, 133, 134, 135, 136, 142, 144, 148, 151, 152
+                        {
+                            var_0 = 1
+                        }
+                        case 3, 5, 9, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 43, 62, 63, 64, 68, 71, 72, 73, 74, 79, 84, 85, 86, 88, 89, 91, 92, 93, 94, 95, 97, 98, 100, 103, 104, 106, 107, 110, 117, 122, 123, 124, 127, 129, 130, 131, 132, 137, 138, 141, 145, 146, 147, 149, 162, 163, 164, 165, 166, 169
+                        {
+                            var_0 = 2
+                        }
+                        case 0, 1, 2, 4, 6, 7, 8, 10, 11, 12, 13, 14, 41, 42, 44, 46, 61, 65, 66, 67, 70, 75, 87, 96, 99, 102, 111, 112, 116, 125, 128, 150, 153, 160, 161, 168, 170
+                        {
+                            var_0 = 3
+                        }
+                        case 47, 48, 51, 52, 53, 54, 55, 57, 58, 59, 60, 154, 155, 156, 157, 158, 159
+                        {
+                            var_0 = 4
+                        }
+                        case 45, 49, 50
+                        {
+                            var_0 = 5
+                        }
+                        case 139, 140
+                        {
+                            if Func03E(1) == 0 && Func03E(2) == 14 && Func03E(390) == 0
+                            {
+                                var_0 = 14
+                            }
+                            else
+                            {
+                                var_0 = 2
+                            }
+                        }
+                    }
+                }
+                case 1
+                {
+                    switch Func044()
+                    {
+                        case 26, 29
+                        {
+                            var_0 = 1
+                        }
+                        case 30, 31, 32, 36, 51, 52
+                        {
+                            var_0 = 2
+                        }
+                        case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 33, 40, 41, 42, 43, 53
+                        {
+                            var_0 = 3
+                        }
+                        case 17, 18, 19, 20, 21, 22, 23, 24, 25, 27, 28, 34, 35, 48, 49, 50, 54, 55, 56, 57, 58, 89, 90, 91, 92
+                        {
+                            var_0 = 5
+                        }
+                        case 37, 38, 39, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 80, 82, 84, 93, 94
+                        {
+                            var_0 = 6
+                        }
+                        case 44, 45, 46, 47
+                        {
+                            var_0 = 9
+                        }
+                        case 85, 86, 87, 88
+                        {
+                            var_0 = 10
+                        }
+                        case 81
+                        {
+                            var_0 = 11
+                        }
+                    }
+                }
+                case 4
+                {
+                    var_0 = 6
+                }
+                case 2
+                {
+                    var_0 = 7
+                }
+                case 3
+                {
+                    var_0 = 7
+                }
+            }
+        }
+        if var_0 != 6
+        {
+            if (var_0 == 0 || var_0 == 1 || var_0 == 2 || var_0 == 3) && Func07E(25)
+            {
+                if Func03E(95) == 2
+                {
+                    Proc030(92)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_1)
+                }
+                else
+                {
+                    Proc030(88)
+                    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                    {
+                        Proc032(25)
+                    }
+                    TalkMessage(MESSAGE_2)
+                }
+            }
+            else if (var_0 == 9 || var_0 == 10) && Func07E(25)
+            {
+                if Func03E(95) == 2
+                {
+                    Proc030(92)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_3)
+                }
+                else if Func03E(134) == 2 || Func03E(135) == 2
+                {
+                    Proc030(87)
+                    TalkMessage(MESSAGE_4)
+                }
+                else
+                {
+                    Proc030(92)
+                    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                    {
+                        Proc032(25)
+                    }
+                    TalkMessage(MESSAGE_5)
+                }
+            }
+            else
+            {
+                switch var_0
+                {
+                    case 0
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_6)
+                        }
+                        else
+                        {
+                            Proc030(88)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_7)
+                        }
+                    }
+                    case 1
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_8)
+                        }
+                        else
+                        {
+                            Proc030(88)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_9)
+                        }
+                    }
+                    case 2
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_10)
+                        }
+                        else
+                        {
+                            Proc030(88)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_11)
+                        }
+                    }
+                    case 3
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(87)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_12)
+                        }
+                        else
+                        {
+                            Proc030(87)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_13)
+                        }
+                    }
+                    case 4
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(91)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_14)
+                        }
+                        else
+                        {
+                            Proc030(91)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_15)
+                        }
+                    }
+                    case 5
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(89)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_16)
+                        }
+                        else
+                        {
+                            Proc030(89)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_17)
+                        }
+                    }
+                    case 7
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_18)
+                        }
+                        else
+                        {
+                            Proc030(88)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_18)
+                        }
+                    }
+                    case 8
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(89)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_19)
+                        }
+                        else
+                        {
+                            Proc030(89)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_20)
+                        }
+                    }
+                    case 9
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(91)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_21)
+                        }
+                        else if Func03E(134) == 2 || Func03E(135) == 2
+                        {
+                            Proc030(91)
+                            TalkMessage(MESSAGE_22)
+                        }
+                        else
+                        {
+                            Proc030(89)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_23)
+                        }
+                    }
+                    case 10
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_24)
+                        }
+                        else if Func03E(134) == 2 || Func03E(135) == 2
+                        {
+                            Proc030(91)
+                            TalkMessage(MESSAGE_25)
+                        }
+                        else
+                        {
+                            Proc030(89)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_26)
+                        }
+                    }
+                    case 11
+                    {
+                        if Func03E(95) == 2
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_27)
+                        }
+                        else if Func03E(134) == 2 || Func03E(135) == 2
+                        {
+                            Proc030(87)
+                            TalkMessage(MESSAGE_28)
+                        }
+                        else
+                        {
+                            Proc030(91)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_29)
+                            Proc030(92)
+                            TalkMessage(MESSAGE_30)
+                        }
+                    }
+                    case 14
+                    {
+                        if Func03E(134) == 2 || Func03E(135) == 2
+                        {
+                            Proc030(91)
+                            TalkMessage(MESSAGE_31)
+                            Proc03F(390, 1)
+                        }
+                        else if Func03E(95) == 2
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_32)
+                            Proc03F(390, 1)
+                        }
+                        else if Func03E(441) == 0
+                        {
+                            Proc030(91)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_33)
+                            Proc03F(390, 1)
+                        }
+                        else if Func03E(441) == 1
+                        {
+                            Proc030(92)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_34)
+                            Proc03F(441, 0)
+                            Proc03F(390, 1)
+                        }
+                    }
+                }
+            }
+            if Func088(25) == 0
+            {
+                switch var_0
+                {
+                    case 0
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = 800
+                        }
+                        var_1 = 9
+                    }
+                    case 1
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = 500
+                        }
+                        var_1 = 9
+                    }
+                    case 2
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = 300
+                        }
+                        var_1 = 3
+                    }
+                    case 3
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = 100
+                        }
+                        var_1 = 1
+                    }
+                    case 4
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = -500
+                        }
+                        var_1 = -3
+                    }
+                    case 5
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = -800
+                        }
+                        var_1 = -9
+                    }
+                    case 7
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = 100
+                        }
+                        var_1 = 1
+                    }
+                    case 8
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = -500
+                        }
+                        var_1 = -3
+                    }
+                    case 9
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = 300
+                        }
+                        var_1 = 3
+                    }
+                    case 10
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = 300
+                        }
+                        var_1 = 3
+                    }
+                    case 11
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = 500
+                        }
+                        var_1 = 9
+                    }
+                    case 14
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = 1000
+                        }
+                        var_1 = 20
+                    }
+                }
+            }
+            else
+            {
+                switch var_0
+                {
+                    case 0
+                    {
+                        var_1 = 3
+                    }
+                    case 1
+                    {
+                        var_1 = 3
+                    }
+                    case 2
+                    {
+                        var_1 = 1
+                    }
+                    case 3
+                    {
+                        var_1 = 0
+                    }
+                    case 4
+                    {
+                        var_1 = -3
+                    }
+                    case 5
+                    {
+                        var_1 = -9
+                    }
+                    case 7
+                    {
+                        var_1 = 0
+                    }
+                    case 8
+                    {
+                        var_1 = -3
+                    }
+                    case 9
+                    {
+                        var_1 = 1
+                    }
+                    case 10
+                    {
+                        var_1 = 1
+                    }
+                    case 11
+                    {
+                        var_1 = 3
+                    }
+                    case 14
+                    {
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            var_2 = 1000
+                        }
+                        var_1 = 20
+                    }
+                }
+            }
+            if Func07E(25)
+            {
+                if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                {
+                    var_2 *= 5
+                }
+                var_1 *= 5
+            }
+            if Func042()
+            {
+                if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                {
+                    var_2 = var_2 + var_2 / 4
+                }
+                var_1 = var_1 + var_1 / 4
+            }
+            Proc080(25, var_1)
+            Proc08A(25, var_2)
+            TalkClose()
+            if var_0 == 0 || var_0 == 1 || var_0 == 2 || var_0 == 3 || var_0 == 4 || var_0 == 5 || var_0 == 9 || var_0 == 10 || var_0 == 11 || var_0 == 14
+            {
+                Proc046()
+            }
+            Proc087(25)
+        }
+        else if Func05D()
+        {
+            switch Func04F()
+            {
+                case 75
+                {
+                    if Func03E(92) == 2 && Func03E(94) == 0 && Func03E(76) == 0 && Func03E(85) == 0 && Func03E(95) == 0 && Func03E(103) == 0 && Func03E(111) == 0 && Func03E(371) == 0 && Func03E(134) == 0 && Func03E(135) == 0 && Func03E(75) == 0 && Func03E(84) == 0 && Func03E(94) == 0 && Func03E(102) == 0 && Func03E(110) == 0 && Func03E(370) == 0 && Func03E(133) == 0 && (Func03E(25) == 1 && Func089(25) >= 60000)
+                    {
+                        Proc030(92)
+                        Proc032(25)
+                        TalkMessage(MESSAGE_35)
+                        TalkClose()
+                        Proc034(2, 1)
+                        Proc03F(94, 1)
+                        Proc038(54)
+                    }
+                    else if Func03E(134) == 2 || Func03E(135) == 2
+                    {
+                        Proc030(88)
+                        TalkMessage(MESSAGE_36)
+                    }
+                    else
+                    {
+                        Proc030(91)
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                        {
+                            Proc032(25)
+                        }
+                        TalkMessage(MESSAGE_37)
+                    }
+                }
+            }
+        }
+        else if Func03E(1) == 3 && Func03E(2) == 23 && (Func03E(76) == 0 && Func03E(85) == 0 && Func03E(95) == 0 && Func03E(103) == 0 && Func03E(111) == 0 && Func03E(371) == 0 && (Func03E(134) == 0 && Func03E(135) == 0)) && Func089(25) >= 30000 && Func03E(452) == 0 && Func03E(450) == 0
+        {
+            Proc030(87)
+            Proc032(25)
+            TalkMessage(MESSAGE_38)
+            var_3 = TalkChoice2(MESSAGE_39, MESSAGE_40)
+            switch var_3
+            {
+                case 1
+                {
+                    Proc030(88)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_41)
+                    Proc03F(450, 2)
+                    Proc03F(452, 1)
+                }
+                case 2
+                {
+                    Proc030(91)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_42)
+                    Proc03F(452, 1)
+                }
+            }
+        }
+        else
+        {
+            switch GetEntityLocation(25)
+            {
+                case 29
+                {
+                    if Func03E(1) == 3 && Func03E(2) == 23
+                    {
+                        Proc030(88)
+                        Proc032(25)
+                        TalkMessage(MESSAGE_43)
+                    }
+                    else if Func03E(196) == 2 && Func03E(201) == 0 && (Func03E(3) >= 6 && Func03E(3) < 12)
+                    {
+                        if Func03E(50) >= 0 && Func03E(50) < 9
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(92)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_44)
+                            }
+                            else
+                            {
+                                Proc030(92)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_45)
+                            }
+                        }
+                        else if Func03E(50) >= 9 && Func03E(50) < 40
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_46)
+                            }
+                            else
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_47)
+                                Proc030(90)
+                                TalkMessage(MESSAGE_48)
+                            }
+                        }
+                        else if Func03E(50) >= 40 && Func03E(50) < 59
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_49)
+                            }
+                            else
+                            {
+                                Proc030(91)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_50)
+                            }
+                        }
+                        else if Func03E(50) >= 59
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_51)
+                            }
+                            else
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_52)
+                            }
+                        }
+                    }
+                    else if Func03E(201) == 2 && (Func03E(3) >= 6 && Func03E(3) < 12)
+                    {
+                        if Func03E(46) >= 0 && Func03E(46) < 60
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(89)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_53)
+                            }
+                            else
+                            {
+                                Proc030(89)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_54)
+                            }
+                        }
+                        else if Func03E(46) >= 60 && Func03E(46) < 110
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_55)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_56)
+                            }
+                        }
+                        else if Func03E(46) >= 110 && Func03E(46) < 120 || Func03E(47) == 0
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_57)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_58)
+                            }
+                        }
+                        else if Func03E(46) >= 120 && Func03E(46) < 230 && Func03E(47) == 1
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_59)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_60)
+                            }
+                        }
+                        else if Func03E(46) >= 230 && Func03E(47) == 1
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_61)
+                            }
+                            else
+                            {
+                                Proc030(89)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_62)
+                            }
+                        }
+                    }
+                    else if Func089(25) < 30000
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(90)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_63)
+                        }
+                        else
+                        {
+                            Proc030(90)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_64)
+                        }
+                    }
+                    else if Func089(25) >= 30000 && Func089(25) < 40000
+                    {
+                        if Func03E(3) >= 6 && Func03E(3) < 12
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_65)
+                            }
+                            else
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_66)
+                            }
+                        }
+                        else if Func03E(3) >= 12 && Func03E(3) < 20
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(89)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_67)
+                            }
+                            else
+                            {
+                                Proc030(90)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_68)
+                            }
+                        }
+                    }
+                    else if Func089(25) >= 40000 && Func089(25) < 50000
+                    {
+                        if Func03E(3) >= 6 && Func03E(3) < 12
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_69)
+                            }
+                            else
+                            {
+                                Proc030(89)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_70)
+                            }
+                        }
+                        else if Func03E(3) >= 12 && Func03E(3) < 20
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_71)
+                            }
+                            else
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_72)
+                            }
+                        }
+                    }
+                    else if Func089(25) >= 50000 && Func089(25) < 60000
+                    {
+                        if Func03E(3) >= 6 && Func03E(3) < 12
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_73)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_74)
+                            }
+                        }
+                        else if Func03E(3) >= 12 && Func03E(3) < 20
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_75)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_76)
+                            }
+                        }
+                    }
+                    else if Func089(25) >= 60000
+                    {
+                        if Func03E(3) >= 6 && Func03E(3) < 12
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(92)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_77)
+                                Proc030(91)
+                                TalkMessage(MESSAGE_78)
+                            }
+                            else
+                            {
+                                Proc030(92)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_79)
+                            }
+                        }
+                        else if Func03E(3) >= 12 && Func03E(3) < 20
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_80)
+                            }
+                            else
+                            {
+                                Proc030(91)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_81)
+                            }
+                        }
+                    }
+                }
+                case 21
+                {
+                    if Func03E(95) == 2
+                    {
+                        if Func03E(196) == 2 && Func03E(201) == 0
+                        {
+                            if Func03E(50) >= 0 && Func03E(50) < 61
+                            {
+                                if Func085(25) == 0
+                                {
+                                    Proc030(87)
+                                    Proc032(25)
+                                    TalkMessage(MESSAGE_82)
+                                }
+                                else
+                                {
+                                    Proc030(87)
+                                    Proc032(25)
+                                    TalkMessage(MESSAGE_83)
+                                }
+                            }
+                        }
+                        else if Func03E(201) == 2
+                        {
+                            if Func03E(46) > 0
+                            {
+                                if Func085(25) == 0
+                                {
+                                    Proc030(87)
+                                    Proc032(25)
+                                    TalkMessage(MESSAGE_84)
+                                }
+                                else
+                                {
+                                    Proc030(89)
+                                    Proc032(25)
+                                    TalkMessage(MESSAGE_85)
+                                }
+                            }
+                        }
+                        else if Func089(25) < 30000
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(90)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_86)
+                            }
+                            else
+                            {
+                                Proc030(89)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_87)
+                            }
+                        }
+                        else if Func089(25) >= 30000 && Func089(25) < 40000
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(91)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_88)
+                            }
+                            else
+                            {
+                                Proc030(89)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_89)
+                            }
+                        }
+                        else if Func089(25) >= 40000 && Func089(25) < 50000
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_90)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_91)
+                            }
+                        }
+                        else if Func089(25) >= 50000 && Func089(25) < 60000
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_92)
+                            }
+                            else
+                            {
+                                Proc030(87)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_93)
+                            }
+                        }
+                        else if Func089(25) >= 60000
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_94)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                Proc032(25)
+                                TalkMessage(MESSAGE_95)
+                            }
+                        }
+                    }
+                    else if Func03E(134) == 2 || Func03E(135) == 2
+                    {
+                        if Func03E(1) == 2 && Func03E(2) == 5
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(91)
+                                TalkMessage(MESSAGE_96)
+                            }
+                            else
+                            {
+                                Proc030(87)
+                                TalkMessage(MESSAGE_97)
+                            }
+                        }
+                        else if Func07F(25) >= 0 && Func07F(25) < 25
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(87)
+                                TalkMessage(MESSAGE_98)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_99)
+                            }
+                        }
+                        else if Func07F(25) >= 25 && Func07F(25) < 50
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(87)
+                                TalkMessage(MESSAGE_100)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_101)
+                            }
+                        }
+                        else if Func07F(25) >= 50 && Func07F(25) < 75
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_102)
+                            }
+                            else
+                            {
+                                Proc030(90)
+                                TalkMessage(MESSAGE_103)
+                            }
+                        }
+                        else if Func07F(25) >= 75 && Func07F(25) < 100
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_104)
+                            }
+                            else
+                            {
+                                Proc030(89)
+                                TalkMessage(MESSAGE_105)
+                            }
+                        }
+                        else if Func07F(25) >= 100 && Func07F(25) < 150
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_104)
+                            }
+                            else
+                            {
+                                Proc030(92)
+                                TalkMessage(MESSAGE_106)
+                            }
+                        }
+                        else if Func07F(25) >= 150 && Func07F(25) < 200
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_104)
+                            }
+                            else
+                            {
+                                Proc030(89)
+                                TalkMessage(MESSAGE_107)
+                            }
+                        }
+                        else if Func07F(25) >= 200
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_108)
+                            }
+                            else
+                            {
+                                Proc030(87)
+                                TalkMessage(MESSAGE_109)
+                            }
+                        }
+                    }
+                    else if Func03E(1) == 2 && Func03E(2) == 5
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(89)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_110)
+                        }
+                        else
+                        {
+                            Proc030(87)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_111)
+                        }
+                    }
+                    else if Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2
+                    {
+                        if Func07F(25) >= 0 && Func07F(25) < 100
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(87)
+                                TalkMessage(MESSAGE_112)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_113)
+                            }
+                        }
+                        else if Func07F(25) >= 100 && Func07F(25) < 200
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_114)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_115)
+                            }
+                        }
+                        else if Func07F(25) >= 200
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_116)
+                            }
+                            else
+                            {
+                                Proc030(88)
+                                TalkMessage(MESSAGE_117)
+                            }
+                        }
+                    }
+                    else if Func03E(94) == 2 && Func03E(95) == 0
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(92)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_118)
+                        }
+                        else
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_119)
+                        }
+                    }
+                    else if Func089(25) >= 0 && Func089(25) < 10000
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(87)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_120)
+                        }
+                        else
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_121)
+                        }
+                    }
+                    else if Func089(25) >= 10000 && Func089(25) < 20000
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(87)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_120)
+                        }
+                        else
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_122)
+                        }
+                    }
+                    else if Func089(25) >= 20000 && Func089(25) < 30000
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(91)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_123)
+                        }
+                        else
+                        {
+                            Proc030(87)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_124)
+                        }
+                    }
+                    else if Func089(25) >= 30000 && Func089(25) < 40000
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_125)
+                        }
+                        else
+                        {
+                            Proc030(87)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_126)
+                        }
+                    }
+                    else if Func089(25) >= 40000 && Func089(25) < 50000
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(88)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_127)
+                        }
+                        else
+                        {
+                            Proc030(87)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_128)
+                        }
+                    }
+                    else if Func089(25) >= 50000 && Func089(25) < 60000
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(91)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_129)
+                        }
+                        else
+                        {
+                            Proc030(91)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_130)
+                        }
+                    }
+                    else if Func089(25) >= 60000
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(92)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_86)
+                        }
+                        else
+                        {
+                            Proc030(91)
+                            Proc032(25)
+                            TalkMessage(MESSAGE_131)
+                        }
+                    }
+                }
+                case 22
+                {
+                    if Func03E(134) == 2 || Func03E(135) == 2
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(88)
+                            TalkMessage(MESSAGE_132)
+                        }
+                        else
+                        {
+                            Proc030(91)
+                            TalkMessage(MESSAGE_133)
+                        }
+                    }
+                    else if Func085(25) == 0
+                    {
+                        Proc030(87)
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                        {
+                            Proc032(25)
+                        }
+                        TalkMessage(MESSAGE_134)
+                    }
+                    else
+                    {
+                        Proc030(87)
+                        Proc032(25)
+                        TalkMessage(MESSAGE_135)
+                    }
+                }
+                case 23
+                {
+                    if Func03E(134) == 2 || Func03E(135) == 2
+                    {
+                        if Func03E(1) == 2 && Func03E(2) == 5
+                        {
+                            if Func085(25) == 0
+                            {
+                                Proc030(91)
+                                TalkMessage(MESSAGE_136)
+                            }
+                            else
+                            {
+                                Proc030(87)
+                                TalkMessage(MESSAGE_137)
+                            }
+                        }
+                        else if Func085(25) == 0
+                        {
+                            Proc030(88)
+                            TalkMessage(MESSAGE_138)
+                        }
+                        else
+                        {
+                            Proc030(91)
+                            TalkMessage(MESSAGE_139)
+                        }
+                    }
+                    else if Func03E(1) == 2 && Func03E(2) == 5
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(89)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_140)
+                        }
+                        else
+                        {
+                            Proc030(87)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_141)
+                        }
+                    }
+                    else if Func03E(3) >= 10 && Func03E(3) < 13
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(87)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_142)
+                        }
+                        else
+                        {
+                            Proc030(87)
+                            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                            {
+                                Proc032(25)
+                            }
+                            TalkMessage(MESSAGE_143)
+                        }
+                    }
+                    else if Func085(25) == 0
+                    {
+                        Proc030(87)
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                        {
+                            Proc032(25)
+                        }
+                        TalkMessage(MESSAGE_144)
+                    }
+                    else
+                    {
+                        Proc030(88)
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                        {
+                            Proc032(25)
+                        }
+                        TalkMessage(MESSAGE_145)
+                    }
+                }
+                case 5
+                {
+                    if Func03E(3) >= 7 && Func03E(3) < 10
+                    {
+                        Proc030(88)
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            Proc032(25)
+                        }
+                        TalkMessage(MESSAGE_146)
+                    }
+                    else
+                    {
+                        Proc030(88)
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            Proc032(25)
+                        }
+                        TalkMessage(MESSAGE_147)
+                    }
+                }
+                case 0
+                {
+                    if Func03E(134) == 2 || Func03E(135) == 2
+                    {
+                        if Func085(25) == 0
+                        {
+                            Proc030(88)
+                            TalkMessage(MESSAGE_148)
+                        }
+                        else
+                        {
+                            Proc030(87)
+                            TalkMessage(MESSAGE_149)
+                        }
+                    }
+                    else if Func085(25) == 0
+                    {
+                        Proc030(87)
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            Proc032(25)
+                        }
+                        TalkMessage(MESSAGE_150)
+                    }
+                    else
+                    {
+                        Proc030(88)
+                        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+                        {
+                            Proc032(25)
+                        }
+                        TalkMessage(MESSAGE_151)
+                    }
+                }
+            }
+            if var_6 == 0
+            {
+                Proc083(25)
+                Proc083(35)
+            }
+            else
+            {
+                Proc083(25)
+            }
+        }
+    }
+    TalkClose()
+    SetEntityFacing(25, var_5)
+}

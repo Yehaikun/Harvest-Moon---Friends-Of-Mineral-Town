@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1235 EventScript_1235
+{
+    const MESSAGE_0 = "Tonight I can use the \r\nleftovers for dinner, so I\r\nwon't have to fix anything!\x05"
+    if Func086(11) == 0
+    {
+        Proc083(11)
+    }
+    SetEntityFacing(11, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(111)
+    Proc02D(11)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(11) == 0
+    {
+        Proc080(11, 5)
+    }
+    SetEntityFacing(11, 0)
+    Proc083(11)
+}

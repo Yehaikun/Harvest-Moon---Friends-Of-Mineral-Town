@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1300 EventScript_1300
+{
+    Proc016(15, 145, 275)
+    PlayBGM(1, 17)
+    SetEntityPosition(0, 145, 274, 1)
+    SetEntityAnim(0, 402)
+    SetEntityPosition(19, 145, 227, 0)
+    SetEntityAnim(19, 1681)
+    SetEntityPosition(18, 175, 115, 0)
+    SetEntityAnim(18, 1733)
+    SetEntityPosition(17, 226, 115, 0)
+    SetEntityAnim(17, 1673)
+}

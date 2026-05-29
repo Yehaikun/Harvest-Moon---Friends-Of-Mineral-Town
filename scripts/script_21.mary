@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 21 EventScript_21
+{
+    const MESSAGE_0 = "Thank goodness our quarrel\r\nis finally over...\x05\x0CThank you, \xFF!. \x05"
+    const MESSAGE_1 = "I'm glad our quarrel ended,\r\nbut Karen can hold a grudge\r\nfor a long time...\x05"
+    if Func03E(71) == 1
+    {
+
+    }
+    if Func03E(72) == 0
+    {
+        SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(67)
+        Proc02D(17)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(17, 0)
+        Proc083(17)
+    }
+    else
+    {
+        SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(70)
+        Proc02D(17)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(17, 0)
+        Proc083(17)
+    }
+}

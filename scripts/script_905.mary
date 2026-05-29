@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 905 EventScript_905
+{
+    const MESSAGE_0 = "Sorry for not inviting you\r\ntoday. I didn't want to \r\nmake the wedding such a big\x05\x0Cdeal. Thanks, though.\r\nLet's celebrate, tonight! \x05"
+    const MESSAGE_1 = "Rick... ah...\r\nmy future brother-in-law has\x05\x0Capproved of me and Popuri.\r\nWe'll be happy.\x05"
+    if Func086(26) == 0
+    {
+        Proc083(26)
+    }
+    if Func085(26) == 0
+    {
+        SetEntityFacing(26, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(159)
+        Proc02D(26)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(26, 0)
+        Proc083(26)
+    }
+    else
+    {
+        SetEntityFacing(26, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(159)
+        Proc02D(26)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(26, 0)
+        Proc083(26)
+    }
+}

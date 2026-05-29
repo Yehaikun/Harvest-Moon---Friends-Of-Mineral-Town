@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 805 EventScript_805
+{
+    const MESSAGE_0 = "Zack seemed kind of sad\r\nto be leaving...\r\nI wonder why? \x05"
+    const MESSAGE_1 = "Zack always seems kind of \r\nnervous around me. \r\nI wonder why...\x05"
+    SetEntityFacing(1, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(1)
+    Proc030(14)
+    if Func085(1) == 0
+    {
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    SetEntityFacing(1, 2)
+    exit
+}

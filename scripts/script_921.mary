@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 921 EventScript_921
+{
+    const MESSAGE_0 = "I kept pressuring Ann to get\r\nmarried...\x05\x0CBut now that she did, \r\nI'm kind of sad! \x05"
+    const MESSAGE_1 = "Still, it's not like she's \r\ngoing far away or anything! \x05\x0CI'm glad to have her stay \r\naround. \x05"
+    if Func086(24) == 0
+    {
+        Proc083(24)
+    }
+    if Func085(24) == 0
+    {
+        SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(86)
+        Proc02D(24)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(24, 2)
+        Proc083(24)
+    }
+    else
+    {
+        SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(84)
+        Proc02D(24)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(24, 2)
+        Proc083(24)
+    }
+}

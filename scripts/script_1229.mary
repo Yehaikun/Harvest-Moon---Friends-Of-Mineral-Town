@@ -1,0 +1,32 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1229 EventScript_1229
+{
+    const MESSAGE_0 = "It doesn't matter what it \r\ntastes like! \x05\x0CNot eating it would be a \r\nwaste. \x05\x0CHave you finished yours, \r\n\xFF!? \x05"
+    const MESSAGE_1 = "Now that I'm stuffed, I've \r\ngot to get back to work. \x05"
+    if Func086(27) == 0
+    {
+        Proc083(27)
+    }
+    SetEntityFacing(27, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(27) == 0
+    {
+        Proc080(27, 5)
+    }
+    TalkOpen()
+    Proc02D(27)
+    if Func03E(421) == 1
+    {
+        Proc030(172)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+    else
+    {
+        Proc030(172)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+    }
+    Proc083(27)
+    SetEntityFacing(27, 2)
+}

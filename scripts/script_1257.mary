@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1257 EventScript_1257
+{
+    const MESSAGE_0 = "Have you placed your bet \r\nwith the Mayor yet? \x05"
+    const MESSAGE_1 = "I'll be betting on you, \r\nso don't let me down!\x05"
+    if Func086(8) == 0
+    {
+        Proc083(8)
+    }
+    SetEntityFacing(8, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(427) == 0
+    {
+        TalkOpen()
+        Proc030(133)
+        Proc02D(8)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(135)
+        Proc02D(8)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(8) == 0
+    {
+        Proc080(8, 5)
+    }
+    Proc083(8)
+    SetEntityFacing(8, 2)
+}

@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1102 EventScript_1102
+{
+    const MESSAGE_0 = "What should I make \r\nthis year...?\x05"
+    if Func086(1) == 0
+    {
+        Proc083(1)
+    }
+    SetEntityFacing(1, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(17)
+    Proc02D(1)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(1) == 0
+    {
+        Proc080(1, 5)
+    }
+    SetEntityFacing(1, 2)
+    Proc083(1)
+}

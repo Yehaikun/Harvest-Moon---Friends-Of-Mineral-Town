@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 434 EventScript_434
+{
+    const MESSAGE_0 = "Menu\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

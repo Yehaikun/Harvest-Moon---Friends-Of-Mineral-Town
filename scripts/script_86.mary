@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 86 EventScript_86
+{
+    Proc066()
+    Proc017(856, 536, 2)
+    SetEntityFacing(0, 2)
+    PlaySong(0, 109)
+    SetEntityAnim(0, 298)
+    Proc008(0, 856, 2)
+    Proc00C(0)
+    Proc037(30)
+    PlaySong(0, 156)
+    Proc0CA(13)
+    SetEntityFacing(0, 0)
+    SetEntityAnim(0, 454)
+    Proc00A(0, 536, 1)
+    Proc00C(0)
+    Proc018()
+    PlaySong(0, 205)
+    Proc0CB(13)
+}

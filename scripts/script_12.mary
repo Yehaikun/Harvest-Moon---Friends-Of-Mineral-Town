@@ -1,0 +1,10 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 12 EventScript_12
+{
+    const MESSAGE_0 = "Now play nicely with\r\n\xFF#, Hannah.\r\n\x05"
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    PlaySong(0, 169)
+}

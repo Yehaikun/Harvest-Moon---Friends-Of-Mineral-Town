@@ -1,0 +1,82 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 799 EventScript_799
+{
+    const MESSAGE_0 = "Aaahh...I just don't feel \r\nlike working any more...\x05"
+    const MESSAGE_1 = "Oh, \xFF!, \r\nsorry I didn't notice you. \x05"
+    const MESSAGE_2 = "Did you come to ask about an\r\nexpansion? Sorry, but I \r\ncan't do it right now. \x05"
+    const MESSAGE_3 = "I just can't get excited \r\nabout it now. I'm in a \r\nslump, I guess. \x05"
+    const MESSAGE_4 = "I'll snap out of it  \r\neventually, but not now. \x05\x0CSorry. \x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(27, 120, 80, 1)
+    SetEntityAnim(27, 2515)
+    Proc035(2, 1)
+    Proc017(120, 100, 2)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 96, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(174)
+    Proc02D(27)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc00A(0, 100, 1)
+    Proc011(0, 2, 0)
+    Proc037(60)
+    SetEntityFacing(27, 0)
+    TalkOpen()
+    Proc030(175)
+    Proc02D(27)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityAnim(0, 294)
+    Proc037(60)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(172)
+    Proc02D(27)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(175)
+    Proc02D(27)
+    TalkMessage(MESSAGE_3)
+    Proc030(172)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc083(27)
+    Proc03F(304, 2)
+    Proc03F(305, 1)
+    exit
+}

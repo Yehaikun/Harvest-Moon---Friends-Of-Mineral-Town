@@ -1,0 +1,97 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 796 EventScript_796
+{
+    const MESSAGE_0 = "It's Kai!\x05"
+    const MESSAGE_1 = "Welcome back, Kai. \r\nWhen Kai comes, we know \r\nsummer has officially \x05\r\nstarted!\x05"
+    const MESSAGE_2 = "The Beach House will be\r\nopen from the day after\r\ntomorrow, so come on by.\x05"
+    const MESSAGE_3 = "Great!\x05"
+    const MESSAGE_4 = "See you. \x05"
+    const MESSAGE_5 = "I don't think you were here\r\nlast summer. \x05\x0CThe name's Kai. \x05\x0CKnow that tiny cottage on \r\nthe beach? I run it during\r\nthe summer. \x05\x0CCome by for a visit some-\r\ntime. \x05\x0CBye now. \x05"
+    Proc016(7, 104, 194)
+    SetEntityPosition(0, 104, 316, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(26, 104, 163, 3)
+    SetEntityAnim(26, 2306)
+    SetEntityPosition(3, 135, 171, 2)
+    SetEntityAnim(3, 559)
+    SetEntityPosition(5, 135, 145, 2)
+    SetEntityAnim(5, 2535)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(177)
+    Proc02D(5)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(8)
+    Proc02D(3)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(177)
+    Proc02D(5)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(8)
+    Proc02D(3)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc037(30)
+    SetEntityFacing(3, 3)
+    SetEntityFacing(5, 3)
+    SetEntityAnim(3, 563)
+    SetEntityAnim(5, 2539)
+    Proc008(3, 299, 1)
+    Proc008(5, 299, 1)
+    Proc00C(3)
+    Proc00C(5)
+    Proc00F(3)
+    Proc00F(5)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 194, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityFacing(26, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    SetEntityFacing(26, 3)
+    SetEntityAnim(26, 2310)
+    Proc008(26, 299, 1)
+    Proc00C(26)
+    Proc00F(26)
+    Proc083(26)
+    Proc080(26, 20)
+    Proc03F(301, 2)
+}

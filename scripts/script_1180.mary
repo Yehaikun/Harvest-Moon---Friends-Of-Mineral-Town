@@ -1,0 +1,44 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1180 EventScript_1180
+{
+    const MESSAGE_0 = "If a Cow ever steps on your\r\nfoot, don't try to pull \r\nit out. That'll only make \x05\r\nit worse. \x05"
+    const MESSAGE_1 = "\xFF% looks \r\nlike she gives great Milk. \r\nCan I drink some later? \x05"
+    const MESSAGE_2 = "I thought \xFF% \r\nwould win for sure. \r\nTry again next year. \x05"
+    var var_0
+    var_0 = Func11D(1)
+    GetAnimalName(0, 1, var_0)
+    if Func086(20) == 0
+    {
+        Proc083(20)
+    }
+    SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(411) == 0
+    {
+        TalkOpen()
+        Proc030(35)
+        Proc02D(20)
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(413) == 1
+    {
+        TalkOpen()
+        Proc030(36)
+        Proc02D(20)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(35)
+        Proc02D(20)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(20) == 0
+    {
+        Proc080(20, 5)
+    }
+    Proc083(20)
+    SetEntityFacing(20, 0)
+}

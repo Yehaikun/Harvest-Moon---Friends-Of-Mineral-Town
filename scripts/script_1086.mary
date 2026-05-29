@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1086 EventScript_1086
+{
+    const MESSAGE_0 = "I can't believe you all \r\naren't scared to \r\ngallop at that speed! \x05"
+    const MESSAGE_1 = "Please...Just don't \r\nget hurt! \x05"
+    if Func086(17) == 0
+    {
+        Proc083(17)
+    }
+    SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(392) == 0
+    {
+        TalkOpen()
+        Proc030(67)
+        Proc02D(17)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(67)
+        Proc02D(17)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(17) == 0
+    {
+        Proc080(17, 5)
+    }
+    Proc083(17)
+    SetEntityFacing(17, 0)
+}

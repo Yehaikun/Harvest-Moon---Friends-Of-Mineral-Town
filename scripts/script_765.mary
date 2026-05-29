@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 765 EventScript_765
+{
+    const MESSAGE_0 = "Too bad...\x05"
+    if Func03E(283) == 1
+    {
+        SetEntityFacing(28, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(34)
+        Proc02D(28)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(28)
+        SetEntityFacing(28, 0)
+    }
+}

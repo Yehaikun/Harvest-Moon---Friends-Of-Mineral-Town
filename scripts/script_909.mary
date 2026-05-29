@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 909 EventScript_909
+{
+    const MESSAGE_0 = "What is Carter talking about\r\nall the sudden?\x05"
+    SetEntityFacing(23, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(27)
+    Proc02D(23)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(23, 0)
+    Proc083(23)
+}

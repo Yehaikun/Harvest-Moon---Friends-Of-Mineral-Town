@@ -67,6 +67,7 @@ SECTIONS
         src/pure_virtual.o(.text);
         asm/sram_proxy_2.o(.text);
         src/scene.o(.text);
+        src/scene_transition.o(.text);
         asm/scene.o(.text);
         asm/intro_scene.o(.text);
         asm/new_game.o(.text);
@@ -185,7 +186,7 @@ SECTIONS
     .pad : ALIGN(4)
     {
         LONG(0);
-        . = 0x08800000 - 0x0875C240;
+        . = 0x08800000 - 0x0875C01C;
     } > ROM = 0xFF
 
     /* DWARF 2 sections */

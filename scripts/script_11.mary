@@ -1,0 +1,10 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 11 EventScript_11
+{
+    const MESSAGE_0 = "The cows at this farm\r\nare always doing well.\x05"
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    PlaySong(0, 161)
+}

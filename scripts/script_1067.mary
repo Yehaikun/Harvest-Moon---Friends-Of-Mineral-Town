@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1067 EventScript_1067
+{
+    const MESSAGE_0 = "It would be a shame to\r\nmiss this! It only happens \r\nonce a year, after all! \x05"
+    if Func086(28) == 0
+    {
+        Proc083(28)
+    }
+    SetEntityFacing(28, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(32)
+    Proc02D(28)
+    TalkMessage(MESSAGE_0)
+    Proc031()
+    TalkClose()
+    if Func084(28) == 0
+    {
+        Proc080(28, 5)
+    }
+    Proc083(28)
+    SetEntityFacing(28, 2)
+}

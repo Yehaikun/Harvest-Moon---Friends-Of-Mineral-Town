@@ -1,0 +1,682 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1049 EventScript_1049
+{
+    const MESSAGE_0 = "1st day of Spring\r\nToday from evening at Rose\r\nSquare: \r\nNew Year Festival\x05"
+    const MESSAGE_1 = "2nd day of Spring\r\nEvents This Season\r\n18th: Spring \r\n22nd: Cooking Festival\x05"
+    const MESSAGE_2 = "3rd day of Spring\r\nEvents This Season\r\n18th: Spring Horse Races\r\n22nd: Cooking Festival\x05"
+    const MESSAGE_3 = "4th day of Spring\r\nEvents This Season\r\n18th: Spring Horse Races\r\n22nd: Cooking Festival\x05"
+    const MESSAGE_4 = "5th day of Spring\r\nEvents This Season\r\n18th: Spring Horse Races\r\n22nd: Cooking Festival\x05"
+    const MESSAGE_5 = "6th day of Spring\r\nEvents This Season\r\n18th: Spring Horse Races\r\n22nd: Cooking Festival\x05"
+    const MESSAGE_6 = "7th day of Spring\r\nEvents This Season\r\n18th: Spring Horse Races\r\n22nd: Cooking Festival\x05"
+    const MESSAGE_7 = "8th day of Spring\r\nEvents This Season\r\n18th: Spring Horse Races\r\n22nd: Cooking Festival\x05"
+    const MESSAGE_8 = "9th day of Spring\r\nEvents This Season\r\n18th: Spring Horse Races\r\n22nd: Cooking Festival\x05"
+    const MESSAGE_9 = "10th day of Spring\r\nEvents This Season\r\n18th: Spring Horse Races\r\n22nd: Cooking Festival\x05"
+    const MESSAGE_10 = "11th day of Spring\r\nEvents This Season\r\n18th: Spring Horse Races\r\n22nd: Cooking Festival\x05"
+    const MESSAGE_11 = "12th day of Spring\r\nEvents This Season\r\n18th: Spring Horse Races\r\n22nd: Cooking Festival\x05"
+    const MESSAGE_12 = "Today is Friday the 13th\r\nTomorrow is the Spring \r\nThanksgiving Festival.\r\nDo you have Cookies to \r\ngive to someone special?\x05"
+    const MESSAGE_13 = "13th day of Spring\r\nTomorrow is the Spring \r\nThanksgiving Festival.\r\nDo you have Cookies to \r\ngive to someone special?\x05"
+    const MESSAGE_14 = "14th day of Spring\r\nToday is the Spring \r\nThanksgiving Festival. \r\nNow is your chance to \r\nfavor a special girl with\r\nCookies. \x05"
+    const MESSAGE_15 = "15th day of Spring\r\nThe Spring Horse Races \r\nare coming up. If you have\r\na Horse, try entering it.\r\nIf not, just betting on the\r\nraces is fun, too!\x05"
+    const MESSAGE_16 = "16th day of Spring\r\nThe Spring Horse Races \r\nare coming up. If you have\r\na Horse, try entering it.\r\nIf not, just betting on the\r\nraces is fun, too!\x05"
+    const MESSAGE_17 = "17th day of Spring\r\nTomorrow is the Spring\r\nHorse Race Festival. \r\nIf you are entering a \r\nHorse, let the Mayor know\r\nwhen he drops by.\x05"
+    const MESSAGE_18 = "18th day of Spring\r\nThe Horse Races start in \r\nthe morning in Rose Square.\r\nGather for the fun!\x05"
+    const MESSAGE_19 = "19th day of Spring\r\nThe Cooking Festival is on \r\nthe 22nd. If you think you \r\ncan win, give it a try.\r\nIf not, gather to watch!\x05"
+    const MESSAGE_20 = "20th day of Spring\r\nThe Cooking Festival is on \r\nthe 22nd. If you think you \r\ncan win, give it a try.\r\nIf not, gather to watch!\x05"
+    const MESSAGE_21 = "21st day of Spring\r\nThe Cooking Festival is \r\ntomorrow. If you think you \r\ncan win, give it a try.\r\nIf not, gather to watch!\x05"
+    const MESSAGE_22 = "22nd of day of Spring\r\nToday the Cooking Festival \r\nis held in Rose Square.\r\nThe food to make is \r\nannounced in the morning, \r\nand the judging is held in\r\nthe afternoon.\x05"
+    const MESSAGE_23 = "23rd day of Spring\r\nSpring is almost over. \r\nCan you harvest your crops\r\nbefore Summer comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_24 = "24th day of Spring\r\nSpring is almost over. \r\nCan you harvest your crops\r\nbefore Summer comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_25 = "25th day of Spring\r\nSpring is almost over. \r\nCan you harvest your crops\r\nbefore Summer comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_26 = "26th day of Spring\r\nSpring is almost over. \r\nCan you harvest your crops\r\nbefore Summer comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_27 = "27th day of Spring\r\nSpring is almost over. \r\nCan you harvest your crops\r\nbefore Summer comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_28 = "28th day of Spring\r\nSpring is almost over. \r\nCan you harvest your crops\r\nbefore Summer comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_29 = "29th day of Spring\r\nSummer is almost upon us!\r\nGet ready for Beach Day and\r\nthe Frisbee Tournament on \r\nthe 1st day of Summer.\x05"
+    const MESSAGE_30 = "30th day of Spring\r\nBeach Day is tomorrow \r\nmorning at the Beach. Good\r\nluck if you're competing in\r\nthe Frisbee Tournament!\x05"
+    const MESSAGE_31 = "1st day of Summer\r\nBeach Day is this \r\nmorning at the Beach. Good\r\nluck if you're competing in\r\nthe Frisbee Tournament!\x05"
+    const MESSAGE_32 = "2nd day of Summer\r\nEvents This Season\r\n7th: Chicken Festival\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_33 = "3rd day of Summer\r\nEvents This Season\r\n7th: Chicken Festival\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_34 = "4th day of Summer\r\nEvents This Season\r\n7th: Chicken Festival\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_35 = "5th day of Summer\r\nEvents This Season\r\n7th: Chicken Festival\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_36 = "6th day of Summer\r\nTomorrow is the Chicken\r\nFestival at Rose Square.\r\nIf you're going to compete,\r\nregister your Chicken.\x05"
+    const MESSAGE_37 = "7th day of Summer\r\nThe Chicken Festival is \r\nthis morning at Rose Square.\r\nIf you're going to compete,\r\ndon't be late.\x05"
+    const MESSAGE_38 = "8th day of Summer\r\nEvents This Season\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_39 = "9th day of Summer\r\nEvents This Season\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_40 = "10th day of Summer\r\nEvents This Season\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_41 = "11th day of Summer\r\nEvents This Season\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_42 = "12th day of Summer\r\nEvents This Season\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_43 = "Today is Friday the 13th\r\nEvents This Season\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_44 = "13th day of Summer\r\nEvents This Season\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_45 = "14th day of Summer\r\nEvents This Season\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_46 = "15th day of Summer\r\nEvents This Season\r\n20th: Cow Festival\r\n24th: Fireworks Festival\x05"
+    const MESSAGE_47 = "16th day of Summer\r\nThe Cow Festival is on the\r\n20th. If you've got a Cow,\r\nconsider entering it in the\r\ncompetition. It has to be\r\nan unpregnant adult, though.\x05"
+    const MESSAGE_48 = "17th day of Summer\r\nThe Cow Festival is on the\r\n20th. If you've got a Cow,\r\nconsider entering it in the\r\ncompetition. It has to be\r\nan unpregnant adult, though.\x05"
+    const MESSAGE_49 = "18th day of Summer\r\nThe Cow Festival is on the\r\n20th. If you've got a Cow,\r\nconsider entering it in the\r\ncompetition. It has to be\r\nan unpregnant adult, though.\x05"
+    const MESSAGE_50 = "19th day of Summer\r\nThe Cow Festival is tomorrow\r\nmorning in Rose Square.\r\nIf you're going to compete,\r\nregister your Cow.\x05"
+    const MESSAGE_51 = "20th day of Summer\r\nThe Cow Festival is \r\nthis morning at Rose Square.\r\nIf you're going to compete,\r\ndon't be late.\x05"
+    const MESSAGE_52 = "21st day of Summer\r\nThe best part of Summer, the\r\nFireworks Festival, is \r\non the 24th.\x05"
+    const MESSAGE_53 = "22nd day of Summer\r\nThe best part of Summer, the\r\nFireworks Festival, is \r\non the 24th.\x05"
+    const MESSAGE_54 = "23rd day of Summer\r\nThe Fireworks Festival is \r\ntomorrow at the Beach.\r\nIt starts in the evening.\x05"
+    const MESSAGE_55 = "24th day of Summer\r\nThe Fireworks Festival is \r\nthis evening at the Beach.\x05"
+    const MESSAGE_56 = "25th day of Summer\r\nSummer is almost over. \r\nCan you harvest your crops\r\nbefore Fall comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_57 = "26th day of Summer\r\nSummer is almost over. \r\nCan you harvest your crops\r\nbefore Fall comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_58 = "27th day of Summer\r\nSummer is almost over. \r\nCan you harvest your crops\r\nbefore Fall comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_59 = "28th day of Summer\r\nSummer is almost over. \r\nCan you harvest your crops\r\nbefore Fall comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_60 = "29th day of Summer\r\nSummer is almost over. \r\nCan you harvest your crops\r\nbefore Fall comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_61 = "30th day of Summer\r\nSummer is almost over. \r\nCan you harvest your crops\r\nbefore Fall comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_62 = "1st day of Fall\r\nEvents This Season\r\n3rd: Music Festival\r\n9th: Harvest Festival\r\n18th: Fall Horse Races\r\n21st: Cow Festival\x05"
+    const MESSAGE_63 = "2nd day of Fall\r\nThe Music Festival is \r\ntomorrow evening at the \r\nChurch. Come to hear some\r\nbeautiful music!\x05"
+    const MESSAGE_64 = "3rd day of Fall\r\nThe Music Festival is \r\nthis evening at the \r\nChurch. Come to hear some\r\nbeautiful music!\x05"
+    const MESSAGE_65 = "4th day of Fall\r\nEvents This Season\r\n9th: Harvest Festival\r\n18th: Fall Horse Races\r\n21st: Cow Festival\x05"
+    const MESSAGE_66 = "5th day of Fall\r\nEvents This Season\r\n9th: Harvest Festival\r\n18th: Fall Horse Races\r\n21st: Cow Festival\x05"
+    const MESSAGE_67 = "6th day of Fall\r\nEvents This Season\r\n9th: Harvest Festival\r\n18th: Fall Horse Races\r\n21st: Cow Festival\x05"
+    const MESSAGE_68 = "7th day of Fall\r\nEvents This Season\r\n9th: Harvest Festival\r\n18th: Fall Horse Races\r\n21st: Cow Festival\x05"
+    const MESSAGE_69 = "8th day of Fall\r\nThe Harvest Festival starts\r\ntomorrow morning at Rose\r\nSquare. Everybody bring \r\nsomething for the big pot!\x05"
+    const MESSAGE_70 = "9th day of Fall\r\nThe Harvest Festival starts\r\nthis morning at Rose\r\nSquare. Everybody bring \r\nsomething for the big pot!\x05"
+    const MESSAGE_71 = "10th day of Fall\r\nThe Moon Festival is on \r\nthe 13th. Invite your \r\nfavorite girl to this\r\nromantic event!\x05"
+    const MESSAGE_72 = "11th day of Fall\r\nThe Moon Festival is on \r\nthe 13th. Invite your \r\nfavorite girl to this\r\nromantic event!\x05"
+    const MESSAGE_73 = "12th day of Fall\r\nThe Moon Festival is  \r\ntomorrow night. Invite your \r\nfavorite girl to this\r\nromantic event!\x05"
+    const MESSAGE_74 = "Today is Friday the 13th\r\nIt's clear today, so if you \r\ngo up to the peak of \r\nMother's Hill, you can see \r\na truly beautiful moon.\x05"
+    const MESSAGE_75 = "13th of day of Fall\r\nIt's clear today, so if you \r\ngo up to the peak of \r\nMother's Hill, you can see \r\na truly beautiful moon.\x05"
+    const MESSAGE_76 = "14th day of Fall\r\nEvents This Season\r\n18th: Fall Horse Races\r\n21st: Cow Festival\x05"
+    const MESSAGE_77 = "15th day of Fall\r\nEvents This Season\r\n18th: Fall Horse Races\r\n21st: Cow Festival\x05"
+    const MESSAGE_78 = "16th day of Fall\r\nThe Fall Horse Races \r\nare coming up. If you have\r\na Horse, try entering it.\r\nIf not, just betting on the\r\nraces is fun, too!\x05"
+    const MESSAGE_79 = "17th day of Fall\r\nTomorrow is the Fall\r\nHorse Race Festival. \r\nIf you are entering a \r\nHorse, let the Mayor know\r\nwhen he drops by.\x05"
+    const MESSAGE_80 = "18th day of Fall\r\nThe Horse Races start in \r\nthe morning in Rose Square.\r\nGather for the fun!\x05"
+    const MESSAGE_81 = "19th day of Fall\r\nThe Sheep Festival is on the\r\n21st. If you've got a Sheep,\r\nconsider entering it in the \r\ncompetition. It has to be an\r\nunpregnant adult with \r\na full coat, though.\x05"
+    const MESSAGE_82 = "20th day of Fall\r\nThe Sheep Festival is tomorrow\r\nmorning in Rose Square.\r\nIf you're going to compete,\r\nregister your Sheep.\x05"
+    const MESSAGE_83 = "21st day of Fall\r\nThe Sheep Festival is \r\nthis morning at Rose Square.\r\nIf you're going to compete,\r\ndon't be late.\x05"
+    const MESSAGE_84 = "22nd day of Fall\r\nFall is almost over. \r\nCan you harvest your crops\r\nbefore Winter comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_85 = "23rd day of Fall\r\nFall is almost over. \r\nCan you harvest your crops\r\nbefore Winter comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_86 = "24th day of Fall\r\nFall is almost over. \r\nCan you harvest your crops\r\nbefore Winter comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_87 = "25th day of Fall\r\nFall is almost over. \r\nCan you harvest your crops\r\nbefore Winter comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_88 = "26th day of Fall\r\nFall is almost over. \r\nCan you harvest your crops\r\nbefore Winter comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_89 = "27th day of Fall\r\nFall is almost over. \r\nCan you harvest your crops\r\nbefore Winter comes?\r\nDon't let your crops wither\r\non the vine!\x05"
+    const MESSAGE_90 = "28th day of Fall\r\nWinter is almost upon us!\r\nNothing grows in Winter, so\r\nharvest everything now.\x05"
+    const MESSAGE_91 = "29th day of Fall\r\nWinter is almost upon us!\r\nNothing grows in Winter, so\r\nharvest everything now.\x05"
+    const MESSAGE_92 = "30th day of Fall\r\nToday is the Pumpkin \r\nFestival. \r\nGive treats to the kids \r\nwho come. \x05"
+    const MESSAGE_93 = "1st day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_94 = "2nd day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_95 = "3rd day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_96 = "4th day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_97 = "5th day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_98 = "6th day of Winter\r\nWhen Winter freezes the Lake\r\nice, you may be able to get\r\nto new places.\x05"
+    const MESSAGE_99 = "7th day of Winter\r\nWhen Winter freezes the Lake\r\nice, you may be able to get\r\nto new places.\x05"
+    const MESSAGE_100 = "8th day of Winter\r\nWhen Winter freezes the Lake\r\nice, you may be able to get\r\nto new places.\x05"
+    const MESSAGE_101 = "9th day of Winter\r\nWhen Winter freezes the Lake\r\nice, you may be able to get\r\nto new places.\x05"
+    const MESSAGE_102 = "10th day of Winter\r\nWhen Winter freezes the Lake\r\nice, you may be able to get\r\nto new places.\x05"
+    const MESSAGE_103 = "11th day of Winter\r\nWhen Winter freezes the Lake\r\nice, you may be able to get\r\nto new places.\x05"
+    const MESSAGE_104 = "12th day of Winter\r\nWhen Winter freezes the Lake\r\nice, you may be able to get\r\nto new places.\x05"
+    const MESSAGE_105 = "Today is Friday the 13th\r\nTomorrow is the Winter\r\nThanksgiving Festival, where\r\ngirls give boys they like\r\nChocolate.\x05"
+    const MESSAGE_106 = "13th day of Winter\r\nTomorrow is the Winter\r\nThanksgiving Festival, where\r\ngirls give boys they like\r\nChocolate.\x05"
+    const MESSAGE_107 = "14th day of Winter\r\nToday is the Winter \r\nThanksgiving Festival. \r\nWill you be lucky enough to\r\nget a gift of Chocolate?\x05"
+    const MESSAGE_108 = "15th day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_109 = "16th day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_110 = "17th day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_111 = "18th day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_112 = "19th day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_113 = "20th day of Winter\r\nEvents This Season\r\n24th: Starry Night Festival\r\n30th: Year End Festival\x05"
+    const MESSAGE_114 = "21st day of Winter\r\nWhen Winter freezes the Lake\r\nice, you may be able to get\r\nto new places.\x05"
+    const MESSAGE_115 = "22nd day of Winter\r\nWhen Winter freezes the Lake\r\nice, you may be able to get\r\nto new places.\x05"
+    const MESSAGE_116 = "23rd day of Winter\r\nTomorrow is the Starry Night\r\nFestival. Hopefully you can \r\nspend it with a nice girl.\x05"
+    const MESSAGE_117 = "24th day of Winter\r\nToday is the Starry Night\r\nFestival. Hopefully you can \r\nspend it with a nice girl.\x05"
+    const MESSAGE_118 = "25th day of Winter\r\nIf you hang up your socks\r\ntonight, you may receive a\r\nStarry Night gift.\x05"
+    const MESSAGE_119 = "26th day of Winter\r\nSpring is coming. \r\nWhen it comes, you'll be\r\nable to grow crops again.\r\nNow's your chance to\r\nmake up for lost time!\x05"
+    const MESSAGE_120 = "27th day of Winter\r\nSpring is coming. \r\nWhen it comes, you'll be\r\nable to grow crops again.\r\nNow's your chance to\r\nmake up for lost time!\x05"
+    const MESSAGE_121 = "28th day of Winter\r\nSpring is coming. \r\nWhen it comes, you'll be\r\nable to grow crops again.\r\nNow's your chance to\r\nmake up for lost time!\x05"
+    const MESSAGE_122 = "29th day of Winter\r\nSpring is coming. \r\nWhen it comes, you'll be\r\nable to grow crops again.\r\nNow's your chance to\r\nmake up for lost time!\x05"
+    const MESSAGE_123 = "30th day of Winter, \r\nthe last day of the year\r\nGather at Rose Square at \r\nnight or at the peak of \r\nMother's Hill to watch the \r\nfirst sunrise of the year.\x05"
+    var var_0
+    switch Func03E(1)
+    {
+        case 0
+        {
+            switch Func03E(2)
+            {
+                case 1
+                {
+                    var_0 = Func0FE(MESSAGE_0)
+                }
+                case 2
+                {
+                    var_0 = Func0FE(MESSAGE_1)
+                }
+                case 3
+                {
+                    var_0 = Func0FE(MESSAGE_2)
+                }
+                case 4
+                {
+                    var_0 = Func0FE(MESSAGE_3)
+                }
+                case 5
+                {
+                    var_0 = Func0FE(MESSAGE_4)
+                }
+                case 6
+                {
+                    var_0 = Func0FE(MESSAGE_5)
+                }
+                case 7
+                {
+                    var_0 = Func0FE(MESSAGE_6)
+                }
+                case 8
+                {
+                    var_0 = Func0FE(MESSAGE_7)
+                }
+                case 9
+                {
+                    var_0 = Func0FE(MESSAGE_8)
+                }
+                case 10
+                {
+                    var_0 = Func0FE(MESSAGE_9)
+                }
+                case 11
+                {
+                    var_0 = Func0FE(MESSAGE_10)
+                }
+                case 12
+                {
+                    var_0 = Func0FE(MESSAGE_11)
+                }
+                case 13
+                {
+                    if Func03E(5) == 5
+                    {
+                        Proc0FF(16)
+                        var_0 = Func0FE(MESSAGE_12)
+                    }
+                    else
+                    {
+                        var_0 = Func0FE(MESSAGE_13)
+                    }
+                }
+                case 14
+                {
+                    var_0 = Func0FE(MESSAGE_14)
+                }
+                case 15
+                {
+                    var_0 = Func0FE(MESSAGE_15)
+                }
+                case 16
+                {
+                    var_0 = Func0FE(MESSAGE_16)
+                }
+                case 17
+                {
+                    var_0 = Func0FE(MESSAGE_17)
+                }
+                case 18
+                {
+                    var_0 = Func0FE(MESSAGE_18)
+                }
+                case 19
+                {
+                    var_0 = Func0FE(MESSAGE_19)
+                }
+                case 20
+                {
+                    var_0 = Func0FE(MESSAGE_20)
+                }
+                case 21
+                {
+                    var_0 = Func0FE(MESSAGE_21)
+                }
+                case 22
+                {
+                    var_0 = Func0FE(MESSAGE_22)
+                }
+                case 23
+                {
+                    var_0 = Func0FE(MESSAGE_23)
+                }
+                case 24
+                {
+                    var_0 = Func0FE(MESSAGE_24)
+                }
+                case 25
+                {
+                    var_0 = Func0FE(MESSAGE_25)
+                }
+                case 26
+                {
+                    var_0 = Func0FE(MESSAGE_26)
+                }
+                case 27
+                {
+                    var_0 = Func0FE(MESSAGE_27)
+                }
+                case 28
+                {
+                    var_0 = Func0FE(MESSAGE_28)
+                }
+                case 29
+                {
+                    var_0 = Func0FE(MESSAGE_29)
+                }
+                case 30
+                {
+                    var_0 = Func0FE(MESSAGE_30)
+                }
+            }
+        }
+        case 1
+        {
+            switch Func03E(2)
+            {
+                case 1
+                {
+                    var_0 = Func0FE(MESSAGE_31)
+                }
+                case 2
+                {
+                    var_0 = Func0FE(MESSAGE_32)
+                }
+                case 3
+                {
+                    var_0 = Func0FE(MESSAGE_33)
+                }
+                case 4
+                {
+                    var_0 = Func0FE(MESSAGE_34)
+                }
+                case 5
+                {
+                    var_0 = Func0FE(MESSAGE_35)
+                }
+                case 6
+                {
+                    var_0 = Func0FE(MESSAGE_36)
+                }
+                case 7
+                {
+                    var_0 = Func0FE(MESSAGE_37)
+                }
+                case 8
+                {
+                    var_0 = Func0FE(MESSAGE_38)
+                }
+                case 9
+                {
+                    var_0 = Func0FE(MESSAGE_39)
+                }
+                case 10
+                {
+                    var_0 = Func0FE(MESSAGE_40)
+                }
+                case 11
+                {
+                    var_0 = Func0FE(MESSAGE_41)
+                }
+                case 12
+                {
+                    var_0 = Func0FE(MESSAGE_42)
+                }
+                case 13
+                {
+                    if Func03E(5) == 5
+                    {
+                        Proc0FF(16)
+                        var_0 = Func0FE(MESSAGE_43)
+                    }
+                    else
+                    {
+                        var_0 = Func0FE(MESSAGE_44)
+                    }
+                }
+                case 14
+                {
+                    var_0 = Func0FE(MESSAGE_45)
+                }
+                case 15
+                {
+                    var_0 = Func0FE(MESSAGE_46)
+                }
+                case 16
+                {
+                    var_0 = Func0FE(MESSAGE_47)
+                }
+                case 17
+                {
+                    var_0 = Func0FE(MESSAGE_48)
+                }
+                case 18
+                {
+                    var_0 = Func0FE(MESSAGE_49)
+                }
+                case 19
+                {
+                    var_0 = Func0FE(MESSAGE_50)
+                }
+                case 20
+                {
+                    var_0 = Func0FE(MESSAGE_51)
+                }
+                case 21
+                {
+                    var_0 = Func0FE(MESSAGE_52)
+                }
+                case 22
+                {
+                    var_0 = Func0FE(MESSAGE_53)
+                }
+                case 23
+                {
+                    var_0 = Func0FE(MESSAGE_54)
+                }
+                case 24
+                {
+                    var_0 = Func0FE(MESSAGE_55)
+                }
+                case 25
+                {
+                    var_0 = Func0FE(MESSAGE_56)
+                }
+                case 26
+                {
+                    var_0 = Func0FE(MESSAGE_57)
+                }
+                case 27
+                {
+                    var_0 = Func0FE(MESSAGE_58)
+                }
+                case 28
+                {
+                    var_0 = Func0FE(MESSAGE_59)
+                }
+                case 29
+                {
+                    var_0 = Func0FE(MESSAGE_60)
+                }
+                case 30
+                {
+                    var_0 = Func0FE(MESSAGE_61)
+                }
+            }
+        }
+        case 2
+        {
+            switch Func03E(2)
+            {
+                case 1
+                {
+                    var_0 = Func0FE(MESSAGE_62)
+                }
+                case 2
+                {
+                    var_0 = Func0FE(MESSAGE_63)
+                }
+                case 3
+                {
+                    var_0 = Func0FE(MESSAGE_64)
+                }
+                case 4
+                {
+                    var_0 = Func0FE(MESSAGE_65)
+                }
+                case 5
+                {
+                    var_0 = Func0FE(MESSAGE_66)
+                }
+                case 6
+                {
+                    var_0 = Func0FE(MESSAGE_67)
+                }
+                case 7
+                {
+                    var_0 = Func0FE(MESSAGE_68)
+                }
+                case 8
+                {
+                    var_0 = Func0FE(MESSAGE_69)
+                }
+                case 9
+                {
+                    var_0 = Func0FE(MESSAGE_70)
+                }
+                case 10
+                {
+                    var_0 = Func0FE(MESSAGE_71)
+                }
+                case 11
+                {
+                    var_0 = Func0FE(MESSAGE_72)
+                }
+                case 12
+                {
+                    var_0 = Func0FE(MESSAGE_73)
+                }
+                case 13
+                {
+                    if Func03E(5) == 5
+                    {
+                        Proc0FF(16)
+                        var_0 = Func0FE(MESSAGE_74)
+                    }
+                    else
+                    {
+                        var_0 = Func0FE(MESSAGE_75)
+                    }
+                }
+                case 14
+                {
+                    var_0 = Func0FE(MESSAGE_76)
+                }
+                case 15
+                {
+                    var_0 = Func0FE(MESSAGE_77)
+                }
+                case 16
+                {
+                    var_0 = Func0FE(MESSAGE_78)
+                }
+                case 17
+                {
+                    var_0 = Func0FE(MESSAGE_79)
+                }
+                case 18
+                {
+                    var_0 = Func0FE(MESSAGE_80)
+                }
+                case 19
+                {
+                    var_0 = Func0FE(MESSAGE_81)
+                }
+                case 20
+                {
+                    var_0 = Func0FE(MESSAGE_82)
+                }
+                case 21
+                {
+                    var_0 = Func0FE(MESSAGE_83)
+                }
+                case 22
+                {
+                    var_0 = Func0FE(MESSAGE_84)
+                }
+                case 23
+                {
+                    var_0 = Func0FE(MESSAGE_85)
+                }
+                case 24
+                {
+                    var_0 = Func0FE(MESSAGE_86)
+                }
+                case 25
+                {
+                    var_0 = Func0FE(MESSAGE_87)
+                }
+                case 26
+                {
+                    var_0 = Func0FE(MESSAGE_88)
+                }
+                case 27
+                {
+                    var_0 = Func0FE(MESSAGE_89)
+                }
+                case 28
+                {
+                    var_0 = Func0FE(MESSAGE_90)
+                }
+                case 29
+                {
+                    var_0 = Func0FE(MESSAGE_91)
+                }
+                case 30
+                {
+                    var_0 = Func0FE(MESSAGE_92)
+                }
+            }
+        }
+        case 3
+        {
+            switch Func03E(2)
+            {
+                case 1
+                {
+                    var_0 = Func0FE(MESSAGE_93)
+                }
+                case 2
+                {
+                    var_0 = Func0FE(MESSAGE_94)
+                }
+                case 3
+                {
+                    var_0 = Func0FE(MESSAGE_95)
+                }
+                case 4
+                {
+                    var_0 = Func0FE(MESSAGE_96)
+                }
+                case 5
+                {
+                    var_0 = Func0FE(MESSAGE_97)
+                }
+                case 6
+                {
+                    var_0 = Func0FE(MESSAGE_98)
+                }
+                case 7
+                {
+                    var_0 = Func0FE(MESSAGE_99)
+                }
+                case 8
+                {
+                    var_0 = Func0FE(MESSAGE_100)
+                }
+                case 9
+                {
+                    var_0 = Func0FE(MESSAGE_101)
+                }
+                case 10
+                {
+                    var_0 = Func0FE(MESSAGE_102)
+                }
+                case 11
+                {
+                    var_0 = Func0FE(MESSAGE_103)
+                }
+                case 12
+                {
+                    var_0 = Func0FE(MESSAGE_104)
+                }
+                case 13
+                {
+                    if Func03E(5) == 5
+                    {
+                        Proc0FF(16)
+                        var_0 = Func0FE(MESSAGE_105)
+                    }
+                    else
+                    {
+                        var_0 = Func0FE(MESSAGE_106)
+                    }
+                }
+                case 14
+                {
+                    var_0 = Func0FE(MESSAGE_107)
+                }
+                case 15
+                {
+                    var_0 = Func0FE(MESSAGE_108)
+                }
+                case 16
+                {
+                    var_0 = Func0FE(MESSAGE_109)
+                }
+                case 17
+                {
+                    var_0 = Func0FE(MESSAGE_110)
+                }
+                case 18
+                {
+                    var_0 = Func0FE(MESSAGE_111)
+                }
+                case 19
+                {
+                    var_0 = Func0FE(MESSAGE_112)
+                }
+                case 20
+                {
+                    var_0 = Func0FE(MESSAGE_113)
+                }
+                case 21
+                {
+                    var_0 = Func0FE(MESSAGE_114)
+                }
+                case 22
+                {
+                    var_0 = Func0FE(MESSAGE_115)
+                }
+                case 23
+                {
+                    var_0 = Func0FE(MESSAGE_116)
+                }
+                case 24
+                {
+                    var_0 = Func0FE(MESSAGE_117)
+                }
+                case 25
+                {
+                    var_0 = Func0FE(MESSAGE_118)
+                }
+                case 26
+                {
+                    var_0 = Func0FE(MESSAGE_119)
+                }
+                case 27
+                {
+                    var_0 = Func0FE(MESSAGE_120)
+                }
+                case 28
+                {
+                    var_0 = Func0FE(MESSAGE_121)
+                }
+                case 29
+                {
+                    var_0 = Func0FE(MESSAGE_122)
+                }
+                case 30
+                {
+                    var_0 = Func0FE(MESSAGE_123)
+                }
+            }
+        }
+    }
+    Proc100()
+    TalkClose()
+    switch var_0
+    {
+        case 0, 1, 2, 3
+        {
+            Proc03F(580, var_0)
+            Proc038(356)
+        }
+        case 4, 5
+        {
+        }
+    }
+}

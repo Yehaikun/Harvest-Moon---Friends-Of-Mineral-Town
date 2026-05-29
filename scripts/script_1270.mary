@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1270 EventScript_1270
+{
+    const MESSAGE_0 = "I love Sheep. They're\r\nsuch gentle creatures. \x05"
+    const MESSAGE_1 = "Your sheep are going to \r\ncompete, too? \r\nI hope you win!\x05"
+    if Func086(11) == 0
+    {
+        Proc083(11)
+    }
+    SetEntityFacing(11, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(431) == 0
+    {
+        TalkOpen()
+        Proc030(111)
+        Proc02D(11)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(111)
+        Proc02D(11)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(11) == 0
+    {
+        Proc080(11, 5)
+    }
+    Proc083(11)
+    SetEntityFacing(11, 1)
+}

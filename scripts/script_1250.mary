@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1250 EventScript_1250
+{
+    const MESSAGE_0 = "It's a perfect day \r\nfor Horse racing!\x05"
+    const MESSAGE_1 = "Are you racing? \r\nI hope you win! \x05"
+    if Func086(1) == 0
+    {
+        Proc083(1)
+    }
+    SetEntityFacing(1, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(427) == 0
+    {
+        TalkOpen()
+        Proc030(15)
+        Proc02D(1)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(14)
+        Proc02D(1)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(1) == 0
+    {
+        Proc080(1, 5)
+    }
+    Proc083(1)
+    SetEntityFacing(1, 2)
+}

@@ -1,0 +1,97 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 986 EventScript_986
+{
+    const MESSAGE_0 = "You overslept...\x05"
+    const MESSAGE_1 = "The curse has been lifted\r\nfrom the Hammer!\x05"
+    const MESSAGE_2 = "The Sickle's curse\r\nhas been removed!\x05"
+    var var_0, var_1
+    if Func069() != 564
+    {
+        var_1 = Func03E(12)
+        if var_1 < 50
+        {
+            var_0 = 0
+        }
+        else
+        {
+            var_0 = 1
+            if var_1 < 70
+            {
+                Proc0F7(8, 0)
+                Proc05C(14, -4)
+            }
+            else if var_1 < 80
+            {
+                Proc0F7(10, 0)
+                Proc05C(28, -6)
+            }
+            else
+            {
+                Proc0F7(12, 0)
+                Proc05C(42, -12)
+            }
+        }
+    }
+    switch Func069()
+    {
+        case 39
+        {
+            Proc016(39, 103, 83)
+            SetEntityPosition(0, 103, 83, 0)
+        }
+        case 18
+        {
+            Proc016(18, 143, 112)
+            SetEntityPosition(0, 143, 112, 2)
+        }
+        case 35
+        {
+            Proc016(35, 143, 112)
+            SetEntityPosition(0, 143, 112, 2)
+        }
+        default
+        {
+            Proc12A()
+        }
+    }
+    PlaySong(0, 175)
+    Proc06B()
+    Proc035(2, 1)
+    if var_0
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+    if Func13A(29) && Func04F() == 29
+    {
+        if 1 == Func13B(29)
+        {
+            Proc052()
+            Proc051(30, 1)
+            Proc05B(30)
+            PlaySong(0, 182)
+            Proc037(50)
+            TalkOpen()
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+        }
+    }
+    if Func13A(5) && Func04F() == 5
+    {
+        if 1 == Func13B(5)
+        {
+            Proc052()
+            Proc051(6, 1)
+            Proc05B(6)
+            PlaySong(0, 182)
+            Proc037(50)
+            TalkOpen()
+            TalkMessage(MESSAGE_2)
+            TalkClose()
+        }
+    }
+    Proc06A()
+    Proc06C()
+}

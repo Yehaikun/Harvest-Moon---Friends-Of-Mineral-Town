@@ -1,0 +1,253 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 776 EventScript_776
+{
+    const MESSAGE_0 = "Let's go have the Doctor\r\nlook at you, Stu. \x05"
+    const MESSAGE_1 = "I think we'd better...\x05"
+    const MESSAGE_2 = "But I feel fine!\x05"
+    const MESSAGE_3 = "You have a fever!\x05"
+    const MESSAGE_4 = "You worry about me too much,\r\nSis!\x05"
+    const MESSAGE_5 = "Please come with me \r\nto the Clinic?...\x05"
+    const MESSAGE_6 = "Well, since you \r\nbeg like that...OK. \x05"
+    const MESSAGE_7 = "Ah, \xFF!. \r\nGood timing. \x05"
+    const MESSAGE_8 = "all of a sudden. \x05\x0CWill you do me a favor and\r\ntake him to the Clinic? \x05\x0CI'll go find the Doctor. \r\nIt's his day off, but he'll\r\nhelp us out, I'm sure. \x05"
+    const MESSAGE_9 = "Thanks a lot. \r\nI owe you one!\x05"
+    const MESSAGE_10 = "It's just a cold.\r\nGive him rest and plenty of\r\nfluids, and he'll be fine.\x05"
+    const MESSAGE_11 = "Really? I'm so relieved!\x05"
+    const MESSAGE_12 = "See? I told you so!\x05"
+    const MESSAGE_13 = "Is that what I get \r\nfor worrying about you? \x05"
+    const MESSAGE_14 = "Sorry, Sis...\x05"
+    const MESSAGE_15 = "Don't forget to thank\r\n\xFF!. \x05"
+    const MESSAGE_16 = "Thank you, \xFF!. \x05"
+    const MESSAGE_17 = "Will you take Stu back to \r\nhis house now, please? \x05"
+    Proc016(14, 152, 120)
+    SetEntityPosition(15, 127, 97, 0)
+    SetEntityAnim(15, 1669)
+    SetEntityPosition(21, 154, 97, 0)
+    SetEntityAnim(21, 2180)
+    SetEntityPosition(16, 157, 127, 2)
+    SetEntityAnim(16, 2232)
+    SetEntityPosition(0, 121, 260, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(124)
+    Proc02D(21)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(66)
+    Proc02D(15)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(128)
+    Proc02D(16)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(123)
+    Proc02D(21)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(128)
+    Proc02D(16)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc037(30)
+    TalkOpen()
+    Proc030(124)
+    Proc02D(21)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(16, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(128)
+    Proc02D(16)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    Proc037(30)
+    PlaySong(0, 156)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 127, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(30)
+    TalkOpen()
+    Proc030(125)
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(125)
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    SetEntityAnim(21, 2184)
+    SetEntityFacing(21, 3)
+    Proc008(21, 177, 1)
+    Proc00C(21)
+    SetEntityFacing(21, 0)
+    Proc00A(21, 150, 1)
+    Proc00C(21)
+    SetEntityFacing(21, 2)
+    Proc008(21, 121, 1)
+    Proc00C(21)
+    SetEntityFacing(21, 0)
+    Proc00A(21, 220, 1)
+    Proc00C(21)
+    Proc00F(21)
+    PlaySong(0, 205)
+    Proc034(2, 1)
+    Proc016(19, 211, 85)
+    SetEntityPosition(20, 237, 85, 2)
+    SetEntityAnim(20, 800)
+    SetEntityPosition(21, 195, 85, 3)
+    SetEntityAnim(21, 2180)
+    SetEntityPosition(16, 216, 85, 3)
+    SetEntityAnim(16, 2232)
+    SetEntityPosition(0, 200, 106, 3)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    TalkOpen()
+    Proc030(122)
+    Proc02D(21)
+    TalkMessage(MESSAGE_11)
+    TalkClose()
+    SetEntityFacing(16, 2)
+    Proc037(30)
+    TalkOpen()
+    Proc030(129)
+    Proc02D(16)
+    TalkMessage(MESSAGE_12)
+    TalkClose()
+    TalkOpen()
+    Proc030(123)
+    Proc02D(21)
+    TalkMessage(MESSAGE_13)
+    TalkClose()
+    TalkOpen()
+    Proc030(128)
+    Proc02D(16)
+    TalkMessage(MESSAGE_14)
+    TalkClose()
+    SetEntityFacing(21, 0)
+    SetEntityFacing(16, 0)
+    Proc037(30)
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    TalkMessage(MESSAGE_15)
+    TalkClose()
+    SetEntityFacing(0, 1)
+    Proc037(30)
+    TalkOpen()
+    Proc030(129)
+    Proc02D(16)
+    TalkMessage(MESSAGE_16)
+    TalkClose()
+    Proc037(30)
+    SetEntityFacing(20, 0)
+    Proc037(30)
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_17)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(30)
+    Proc034(2, 1)
+    Proc016(5, 400, 168)
+    SetEntityPosition(0, 400, 168, 0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc08A(21, 3000)
+    Proc080(16, 20)
+    Proc080(15, 20)
+    Proc080(20, 20)
+    Proc083(21)
+    Proc083(16)
+    Proc083(20)
+    Proc0F7(15, 0)
+    Proc03F(287, 2)
+    Proc035(2, 1)
+}

@@ -1,0 +1,151 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 738 EventScript_738
+{
+    const MESSAGE_0 = "\xFF!, I hope \r\nyou can help me out.\x05"
+    const MESSAGE_1 = "You see...\r\nI got into a boasting match\r\nwith the Mayor of the next \x05\r\ntown over, and...\x05"
+    const MESSAGE_2 = "I have to bring a Diamond\r\nto him today.  \x05"
+    const MESSAGE_3 = "I have to bring a Bracelet\r\nto him today.  \x05"
+    const MESSAGE_4 = "I have to bring a Green\r\nPepper to him today.  \x05"
+    const MESSAGE_5 = "I have to bring a Golden\r\nEgg to him today.  \x05"
+    const MESSAGE_6 = "I have to bring Black Grass\r\nto him today.  \x05"
+    const MESSAGE_7 = "I have to bring White\r\nGrass to him today.  \x05"
+    const MESSAGE_8 = "I have to bring a Truffle\r\nto him today.  \x05"
+    const MESSAGE_9 = "I have to bring a Moon\r\nStone to him today.  \x05"
+    const MESSAGE_10 = "I have to bring an AEPFE\r\nApple to him today.  \x05"
+    const MESSAGE_11 = "I have to bring a Rice\r\nCake to him today.  \x05"
+    const MESSAGE_12 = "I'm sorry to ask this of you\r\nall the sudden, but you're\r\nthe only person I can \x05\r\nturn to!\x05\x0CI'm counting on you!\r\nI don't want to lose face!\x05"
+    const MESSAGE_13 = "Can I count on you\r\nfor this? \x05"
+    const MESSAGE_14 = "Sure!"
+    const MESSAGE_15 = "Sorry..."
+    const MESSAGE_16 = "I knew you were the kind of \r\nman I could depend on! \x05\x0CI'll come by around 7PM to \r\npick it up, OK? \r\nI'm very grateful!\x05"
+    const MESSAGE_17 = "Really...? \r\nI overestimated you, it \r\nseems...\x05\x0CI'll have to do it myself, \r\nI guess...\x05"
+    var var_0, var_1
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(13, 228, 145, 1)
+    SetEntityAnim(13, 2143)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(120)
+    Proc02D(13)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(120)
+    Proc02D(13)
+    TalkMessage(MESSAGE_1)
+    var_1 = Func03D(0, 9)
+    switch var_1
+    {
+        case 0
+        {
+            TalkMessage(MESSAGE_2)
+            Proc03F(264, 0)
+        }
+        case 1
+        {
+            TalkMessage(MESSAGE_3)
+            Proc03F(264, 1)
+        }
+        case 2
+        {
+            TalkMessage(MESSAGE_4)
+            Proc03F(264, 2)
+        }
+        case 3
+        {
+            TalkMessage(MESSAGE_5)
+            Proc03F(264, 3)
+        }
+        case 4
+        {
+            TalkMessage(MESSAGE_6)
+            Proc03F(264, 4)
+        }
+        case 5
+        {
+            TalkMessage(MESSAGE_7)
+            Proc03F(264, 5)
+        }
+        case 6
+        {
+            TalkMessage(MESSAGE_8)
+            Proc03F(264, 6)
+        }
+        case 7
+        {
+            TalkMessage(MESSAGE_9)
+            Proc03F(264, 7)
+        }
+        case 8
+        {
+            TalkMessage(MESSAGE_10)
+            Proc03F(264, 8)
+        }
+        case 9
+        {
+            TalkMessage(MESSAGE_11)
+            Proc03F(264, 9)
+        }
+    }
+    TalkMessage(MESSAGE_12)
+    Proc030(117)
+    TalkMessage(MESSAGE_13)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_14, MESSAGE_15)
+    switch var_0
+    {
+        case 1
+        {
+            TalkOpen()
+            Proc030(118)
+            Proc02D(13)
+            TalkMessage(MESSAGE_16)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(30)
+            if Func040() == 1
+            {
+                SetEntityAnim(0, 402)
+            }
+            else
+            {
+                SetEntityAnim(0, 338)
+            }
+            Proc080(13, -10)
+            Proc03F(265, 0)
+        }
+        case 2
+        {
+            TalkOpen()
+            Proc030(120)
+            Proc02D(13)
+            TalkMessage(MESSAGE_17)
+            TalkClose()
+            Proc080(13, -10)
+            Proc03F(265, 1)
+        }
+    }
+    SetEntityFacing(13, 3)
+    SetEntityAnim(13, 2147)
+    Proc008(13, 319, 1)
+    Proc00C(13)
+    SetEntityFacing(13, 1)
+    Proc00A(13, 0, 1)
+    Proc00C(13)
+    Proc00F(13)
+    Proc083(13)
+    Proc03F(263, 2)
+    Proc101()
+    exit
+}

@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 502 EventScript_502
+{
+    const MESSAGE_0 = "Mary's Library\r\nOpen: 10AM\r\nClosed: 4PM  Closed Thursdays\x05"
+    const MESSAGE_1 = "Mary's Library\r\nOpen: 10AM\r\nClosed: 4PM  Closed Mondays\x05"
+    TalkOpen()
+    if Func03E(142) == 2 || Func03E(143) == 2
+    {
+        Proc024(MESSAGE_0)
+    }
+    else
+    {
+        Proc024(MESSAGE_1)
+    }
+    TalkClose()
+}

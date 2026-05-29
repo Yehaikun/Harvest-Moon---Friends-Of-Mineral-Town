@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 321 EventScript_321
+{
+    const MESSAGE_0 = "Bookshelf\r\n\x05"
+    if GetEntityFacing(0) == 1
+    {
+        Proc034(3, 1)
+        Proc09B(13)
+        Proc035(3, 1)
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+}

@@ -1,0 +1,165 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 379 EventScript_379
+{
+    var var_0, var_1, var_2, var_3
+    if GetEntityFacing(0) == 0
+    {
+        Proc034(2, 1)
+        Proc016(6, 220, 24)
+        SetEntityPosition(0, 220, 24, 0)
+        var_0 = Func03E(1)
+        var_1 = Func03E(2)
+        var_2 = Func03E(3)
+        if Func03E(384) == 0 && var_0 == 0 && var_1 == 1
+        {
+            if var_2 >= 6 && var_2 < 18
+            {
+                Proc038(689)
+            }
+            else if var_2 >= 18
+            {
+                Proc03F(384, 1)
+                Proc038(1065)
+            }
+        }
+        else if Func03E(393) == 0 && var_0 == 0 && var_1 == 18
+        {
+            if var_2 >= 6 && var_2 < 10
+            {
+                Proc038(689)
+            }
+            else if var_2 >= 10 && var_2 < 18
+            {
+                Proc03F(393, 1)
+                Proc038(1080)
+            }
+        }
+        else if var_0 == 0 && var_1 == 22
+        {
+            if Func03E(396) == 0
+            {
+                if var_2 >= 6 && var_2 < 10
+                {
+                    Proc038(689)
+                }
+                else if var_2 >= 10 && var_2 < 12
+                {
+                    Proc03F(396, 1)
+                    Proc038(1100)
+                }
+            }
+            if Func03E(398) == 0
+            {
+                if var_2 >= 12 && var_2 < 18
+                {
+                    if Func03E(396) != 2
+                    {
+                        if Func03E(0) <= 5
+                        {
+                            var_3 = Func03E(0)
+                        }
+                        switch var_3
+                        {
+                            case 1
+                            {
+                                Proc03F(397, 0)
+                            }
+                            case 2
+                            {
+                                Proc03F(397, 1)
+                            }
+                            case 3
+                            {
+                                Proc03F(397, 2)
+                            }
+                            case 4
+                            {
+                                Proc03F(397, 3)
+                            }
+                            case 5
+                            {
+                                Proc03F(397, 4)
+                            }
+                        }
+                    }
+                    Proc03F(398, 1)
+                    Proc038(1114)
+                }
+            }
+        }
+        else if Func03E(408) == 0 && var_0 == 1 && var_1 == 7
+        {
+            if var_2 >= 6 && var_2 < 10
+            {
+                Proc038(689)
+            }
+            else if var_2 >= 10 && var_2 < 18
+            {
+                Proc03F(408, 1)
+                Proc038(1161)
+            }
+        }
+        else if Func03E(412) == 0 && var_0 == 1 && var_1 == 20
+        {
+            if var_2 >= 6 && var_2 < 10
+            {
+                Proc038(689)
+            }
+            else if var_2 >= 10 && var_2 < 18
+            {
+                Proc03F(412, 1)
+                Proc038(1165)
+            }
+        }
+        else if Func03E(420) == 0 && var_0 == 2 && var_1 == 9
+        {
+            if var_2 >= 6 && var_2 < 10
+            {
+                Proc038(689)
+            }
+            else if var_2 >= 10 && var_2 < 18
+            {
+                Proc03F(420, 1)
+                Proc038(1217)
+            }
+        }
+        else if Func03E(428) == 0 && var_0 == 2 && var_1 == 18
+        {
+            if var_2 >= 6 && var_2 < 10
+            {
+                Proc038(689)
+            }
+            else if var_2 >= 10 && var_2 < 18
+            {
+                Proc03F(428, 1)
+                Proc038(1246)
+            }
+        }
+        else if Func03E(432) == 0 && var_0 == 2 && var_1 == 21
+        {
+            if var_2 >= 6 && var_2 < 10
+            {
+                Proc038(689)
+            }
+            else if var_2 >= 10 && var_2 < 18
+            {
+                Proc03F(432, 1)
+                Proc038(1266)
+            }
+        }
+        else if Func03E(464) == 0 && var_0 == 3 && var_1 == 30
+        {
+            if var_2 >= 6 && var_2 < 18
+            {
+                Proc038(689)
+            }
+            else if var_2 >= 18
+            {
+                Proc03F(464, 1)
+                Proc038(1308)
+            }
+        }
+        Proc035(2, 1)
+    }
+}

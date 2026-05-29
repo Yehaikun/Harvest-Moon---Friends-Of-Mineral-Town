@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 774 EventScript_774
+{
+    const MESSAGE_0 = "I'm sure she can do it.\x05"
+    if Func03E(286) == 1
+    {
+        SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(35)
+        Proc02D(20)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(20)
+        SetEntityFacing(20, 2)
+    }
+}

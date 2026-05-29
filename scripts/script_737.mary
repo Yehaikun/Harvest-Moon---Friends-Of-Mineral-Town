@@ -1,0 +1,202 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 737 EventScript_737
+{
+    const MESSAGE_0 = "Good morning, \r\n\xFF!. \x05\x0CI hear you're new to \r\nfarm life, so let me \r\nexplain some basics. \x05\x0CUse the A Button to lift up \r\nItems in front of you, \r\nthrow Items, or talk to \x05\r\npeople. \x05\x0CYou can buy things if you \r\ntalk to people behind a \r\ncounter in a store. \x05\x0CNo one will sell you any-\r\nthing if the store isn't \r\nopen, though, so \x05\r\ndon't bother trying. \x05\x0CUse the B Button to use an \r\nItem or Tool. \x05\x0CYou can't use anything if\r\nyou're not holding it. \x05"
+    const MESSAGE_1 = "Do you want to here \r\neven more instruction? \x05"
+    const MESSAGE_2 = "Yes"
+    const MESSAGE_3 = "No"
+    const MESSAGE_4 = "OK, here goes. \x05"
+    const MESSAGE_5 = "Crops"
+    const MESSAGE_6 = "Animals"
+    const MESSAGE_7 = "Useful tips"
+    const MESSAGE_8 = "Quit"
+    const MESSAGE_9 = "Are you sure? You don't \r\nhave to hold back on my \r\naccount. \x05\x0CWell, if want to hear more \r\nlater, you can just press \r\nSTART at any time. Got it? \x05"
+    const MESSAGE_10 = "It's your farm, and you can \r\ndo whatever you like. \x05\x0CBut, your first goal should\r\nbe to make some money to\r\nlive on. \x05\x0CFor example, you can \r\ngather various things on \r\nthe mountain to sell. \x05"
+    const MESSAGE_11 = "After you get a hang of \r\nthe farm, try exploring \r\nthe town. \x05\x0CJust turn right on the \r\nstreet outside your farm, \r\nand you'll see Yodel Farm\x05\r\nand the Poultry Farm.\x05\x0CTry asking there. \x05"
+    const MESSAGE_12 = "Oh yes, I left you my old \r\nPedometer in the Tool Box \r\nat your farm. \x05\x0CIt's always useful to know\r\nhow far you've walked, \r\ndon't you think? \x05"
+    const MESSAGE_13 = "See you later!\x05"
+    const MESSAGE_14 = "The name is Zack. I'm in \r\ncharge of shipping for \r\nMineral Town. \x05\x0CLet me show you how you\r\nship things to be sold.\x05"
+    const MESSAGE_15 = "This is your Shipment Box. \x05\r\nPut things here you want to\r\nsell, and I'll come pick \r\nthem up by 5PM everyday. \x05\x0CI'll pay you money when \r\nI do. \x05"
+    const MESSAGE_16 = "I don't work on \r\nholidays, though! \x05\x0CRemember, I need a break \r\nonce in a while, too!\x05"
+    const MESSAGE_17 = "OK...\x05"
+    const MESSAGE_18 = "You also have the Chicken\r\nCoop for your Chickens and\r\nBarn for Cows and Sheep. \x05"
+    const MESSAGE_19 = "You can ship anything you \r\ngrow or find on the\r\nmountain. \x05\x0COr, of course, Eggs, Wool\r\nor Milk from livestock. \x05"
+    const MESSAGE_20 = "Work hard, but not too hard!\x05\x0CIf your face turns blue, \r\nthat means you're about to\r\ncollapse. \x05\x0CIf that happens, you get \r\nsent to the Clinic, and \r\nyou'll be out of commission\x05\r\nfor a while!\x05"
+    const MESSAGE_21 = "Bye now. And remember:\r\n5PM everyday!\x05"
+    var var_0
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(13, 228, 145, 1)
+    SetEntityAnim(13, 2143)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(118)
+    Proc02D(13)
+    TalkMessage(MESSAGE_0)
+    Proc030(117)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_2, MESSAGE_3)
+    switch var_0
+    {
+        case 1
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(118)
+            Proc02D(13)
+            TalkMessage(MESSAGE_4)
+            TalkClose()
+            do
+            {
+                TalkOpen()
+                var_0 = TalkChoice4(MESSAGE_5, MESSAGE_6, MESSAGE_7, MESSAGE_8)
+                TalkClose()
+                switch var_0
+                {
+                    case 1
+                    {
+                        Proc034(3, 1)
+                        Proc0AC(0)
+                        Proc035(3, 1)
+                    }
+                    case 2
+                    {
+                        Proc034(3, 1)
+                        Proc0AC(1)
+                        Proc035(3, 1)
+                    }
+                    case 3
+                    {
+                        Proc034(3, 1)
+                        Proc09B(136)
+                        Proc035(3, 1)
+                    }
+                }
+            } while var_0 != 4
+            TalkOpen()
+        }
+        case 2
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(120)
+            Proc02D(13)
+            TalkMessage(MESSAGE_9)
+        }
+    }
+    Proc030(117)
+    Proc02D(13)
+    TalkMessage(MESSAGE_10)
+    Proc030(118)
+    TalkMessage(MESSAGE_11)
+    Proc030(117)
+    TalkMessage(MESSAGE_12)
+    Proc030(118)
+    TalkMessage(MESSAGE_13)
+    TalkClose()
+    SetEntityFacing(13, 3)
+    SetEntityFacing(0, 3)
+    SetEntityAnim(13, 2147)
+    Proc008(13, 319, 1)
+    Proc00C(13)
+    SetEntityFacing(13, 1)
+    Proc00A(13, 0, 1)
+    Proc00C(13)
+    Proc00F(13)
+    SetEntityPosition(28, 319, 0, 0)
+    SetEntityAnim(28, 792)
+    SetEntityAnim(28, 796)
+    Proc00A(28, 145, 1)
+    Proc00C(28)
+    SetEntityFacing(28, 2)
+    Proc008(28, 228, 1)
+    Proc00C(28)
+    SetEntityFacing(28, 1)
+    SetEntityAnim(28, 792)
+    SetEntityFacing(0, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(31)
+    Proc02D(28)
+    TalkMessage(MESSAGE_14)
+    TalkClose()
+    Proc017(228, 201, 2)
+    SetEntityFacing(28, 0)
+    SetEntityAnim(28, 796)
+    Proc00A(28, 171, 1)
+    Proc00C(28)
+    SetEntityFacing(28, 3)
+    Proc008(28, 257, 1)
+    Proc00C(28)
+    SetEntityFacing(28, 0)
+    SetEntityAnim(28, 792)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 171, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc018()
+    Proc037(30)
+    TalkOpen()
+    Proc030(31)
+    Proc02D(28)
+    TalkMessage(MESSAGE_15)
+    TalkClose()
+    SetEntityFacing(28, 2)
+    SetEntityFacing(0, 3)
+    TalkOpen()
+    Proc030(32)
+    Proc02D(28)
+    TalkMessage(MESSAGE_16)
+    Proc030(31)
+    TalkMessage(MESSAGE_17)
+    Proc030(32)
+    TalkMessage(MESSAGE_18)
+    Proc030(31)
+    TalkMessage(MESSAGE_19)
+    Proc030(33)
+    TalkMessage(MESSAGE_20)
+    Proc030(31)
+    TalkMessage(MESSAGE_21)
+    TalkClose()
+    SetEntityFacing(28, 1)
+    SetEntityFacing(0, 1)
+    SetEntityAnim(28, 796)
+    Proc00A(28, 145, 1)
+    Proc00C(28)
+    SetEntityFacing(28, 3)
+    Proc008(28, 319, 1)
+    Proc00C(28)
+    SetEntityFacing(28, 1)
+    Proc00A(28, 0, 1)
+    Proc00C(28)
+    Proc00F(28)
+    SetEntityFacing(0, 0)
+    Proc017(228, 171, 1)
+    Proc018()
+    Proc083(13)
+    Proc083(28)
+    Proc03F(262, 2)
+}

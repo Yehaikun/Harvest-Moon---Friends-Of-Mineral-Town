@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 509 EventScript_509
+{
+    const MESSAGE_0 = "\xFF!'s Cottage\r\n\x05"
+    const MESSAGE_1 = "Empty Lot\r\n\x05"
+    TalkOpen()
+    if Func03E(18) == 1
+    {
+        Proc024(MESSAGE_0)
+    }
+    else
+    {
+        Proc024(MESSAGE_1)
+    }
+    TalkClose()
+}

@@ -1,0 +1,74 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 104 EventScript_104
+{
+    const MESSAGE_0 = "Are you ready for the\r\nFrisbee Tournament?\x05"
+    const MESSAGE_1 = "I'm ready."
+    const MESSAGE_2 = "Wait one second."
+    const MESSAGE_3 = "Alright, let's go!\x05"
+    const MESSAGE_4 = "Just tell me when you want\r\nto start the Frisbee\r\nTournament.\x05"
+    const MESSAGE_5 = "Counter\x05"
+    var var_0, var_1, var_2
+    var_1 = Func03E(3)
+    var_2 = Func03E(4)
+    if Func03E(404) == 1 && !(var_1 == 18 && var_2 == 1)
+    {
+        if GetEntityFacing(0) == 1
+        {
+            Proc083(28)
+            SetEntityFacing(28, 0)
+            TalkOpen()
+            Proc030(31)
+            Proc02D(28)
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            TalkOpen()
+            var_0 = TalkChoice2(MESSAGE_1, MESSAGE_2)
+            switch var_0
+            {
+                case 1
+                {
+                    TalkClose()
+                    TalkOpen()
+                    Proc030(31)
+                    Proc02D(28)
+                    TalkMessage(MESSAGE_3)
+                    TalkClose()
+                    SetEntityFacing(28, 0)
+                    Proc034(3, 1)
+                    if Func03E(403) == 1
+                    {
+                        Proc03F(405, Func0DD(1))
+                        if Func03E(405) == 1
+                        {
+                            Proc038(1145)
+                        }
+                    }
+                    Proc038(1138)
+                }
+                case 2
+                {
+                    TalkClose()
+                    TalkOpen()
+                    Proc030(31)
+                    Proc02D(28)
+                    TalkMessage(MESSAGE_4)
+                    TalkClose()
+                    SetEntityFacing(28, 0)
+                }
+            }
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_5)
+            TalkClose()
+        }
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_5)
+        TalkClose()
+    }
+}

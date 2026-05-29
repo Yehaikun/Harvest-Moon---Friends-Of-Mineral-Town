@@ -1,0 +1,124 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 536 EventScript_536
+{
+    const MESSAGE_0 = "Spring"
+    const MESSAGE_1 = "Summer"
+    const MESSAGE_2 = "Fall"
+    const MESSAGE_3 = "Winter"
+    const MESSAGE_4 = "Sunday"
+    const MESSAGE_5 = "Monday"
+    const MESSAGE_6 = "Tuesday"
+    const MESSAGE_7 = "Wednesday"
+    const MESSAGE_8 = "Thursday"
+    const MESSAGE_9 = "Friday"
+    const MESSAGE_10 = "Saturday"
+    const MESSAGE_11 = "Year \xFF%\r\n\xFF&\x81@Day \xFF' (\xFF()\x05"
+    const MESSAGE_12 = "\xFF%:0\xFF& AM\x05"
+    const MESSAGE_13 = "\xFF%:\xFF& AM\x05"
+    const MESSAGE_14 = "\xFF%:0\xFF& PM\x05"
+    const MESSAGE_15 = "\xFF%:\xFF& PM\x05"
+    TalkOpen()
+    Proc039(0, Func03E(0))
+    switch Func03E(1)
+    {
+        case 0
+        {
+            Proc03B(1, MESSAGE_0)
+        }
+        case 1
+        {
+            Proc03B(1, MESSAGE_1)
+        }
+        case 2
+        {
+            Proc03B(1, MESSAGE_2)
+        }
+        case 3
+        {
+            Proc03B(1, MESSAGE_3)
+        }
+    }
+    Proc039(2, Func03E(2))
+    switch Func03E(5)
+    {
+        case 0
+        {
+            Proc03B(3, MESSAGE_4)
+        }
+        case 1
+        {
+            Proc03B(3, MESSAGE_5)
+        }
+        case 2
+        {
+            Proc03B(3, MESSAGE_6)
+        }
+        case 3
+        {
+            Proc03B(3, MESSAGE_7)
+        }
+        case 4
+        {
+            Proc03B(3, MESSAGE_8)
+        }
+        case 5
+        {
+            Proc03B(3, MESSAGE_9)
+        }
+        case 6
+        {
+            Proc03B(3, MESSAGE_10)
+        }
+    }
+    Proc024(MESSAGE_11)
+    if Func03E(3) < 12
+    {
+        Proc039(0, Func03E(3))
+        Proc039(1, Func03E(4))
+        if Func03E(3) < 10
+        {
+            if Func03E(4) < 10
+            {
+                Proc024(MESSAGE_12)
+            }
+            else
+            {
+                Proc024(MESSAGE_13)
+            }
+        }
+        else if Func03E(4) < 10
+        {
+            Proc024(MESSAGE_12)
+        }
+        else
+        {
+            Proc024(MESSAGE_13)
+        }
+    }
+    else
+    {
+        Proc039(0, Func03E(3) - 12)
+        Proc039(1, Func03E(4))
+        if Func03E(3) < 22
+        {
+            if Func03E(4) < 10
+            {
+                Proc024(MESSAGE_14)
+            }
+            else
+            {
+                Proc024(MESSAGE_15)
+            }
+        }
+        else if Func03E(4) < 10
+        {
+            Proc024(MESSAGE_14)
+        }
+        else
+        {
+            Proc024(MESSAGE_15)
+        }
+    }
+    TalkClose()
+}

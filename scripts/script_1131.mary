@@ -1,0 +1,43 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1131 EventScript_1131
+{
+    PlayBGM(1, 7)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(13, 245, 178, 3)
+    SetEntityAnim(13, 2143)
+    SetEntityPosition(17, 128, 301, 3)
+    SetEntityAnim(17, 1673)
+    SetEntityPosition(18, 128, 260, 3)
+    SetEntityAnim(18, 1733)
+    SetEntityPosition(26, 211, 318, 3)
+    SetEntityAnim(26, 2306)
+    SetEntityPosition(3, 231, 349, 3)
+    SetEntityAnim(3, 559)
+    SetEntityPosition(28, 205, 131, 0)
+    SetEntityAnim(28, 792)
+    if GetEntityLocation(74) == 1
+    {
+        SetEntityPosition(74, 119, 405, 0)
+    }
+    if GetEntityLocation(75) == 1
+    {
+        SetEntityPosition(75, 119 + 16, 405, 0)
+    }
+    Proc0F2()
+    Proc035(2, 1)
+    Proc03F(404, 1)
+    Proc08C(13, 1135)
+    Proc08C(17, 1133)
+    Proc08C(18, 1134)
+    Proc08C(26, 1136)
+    Proc08C(3, 1132)
+    Proc08C(28, 1137)
+}

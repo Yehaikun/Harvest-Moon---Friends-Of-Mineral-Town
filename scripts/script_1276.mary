@@ -1,0 +1,70 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1276 EventScript_1276
+{
+    const MESSAGE_0 = "It's time for the judging \r\nto begin! \r\nAre you ready?\x05"
+    const MESSAGE_1 = "I'm ready."
+    const MESSAGE_2 = "Wait a minute."
+    const MESSAGE_3 = "Let's start, then. \x05"
+    const MESSAGE_4 = "Just let me know \r\nwhen you're ready. \x05"
+    var unused_0, var_1, var_2
+    var_2 = Func11D(2)
+    if Func086(4) == 0
+    {
+        Proc083(4)
+    }
+    SetEntityFacing(4, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(180)
+    Proc02D(4)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    var_1 = TalkChoice2(MESSAGE_1, MESSAGE_2)
+    switch var_1
+    {
+        case 1
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(180)
+            Proc02D(4)
+            TalkMessage(MESSAGE_3)
+            TalkClose()
+            Proc034(2, 1)
+            if Func084(4) == 0
+            {
+                Proc080(4, 5)
+            }
+            Proc083(4)
+            SetEntityFacing(4, 0)
+            if Func10F(2, var_2) >= 200
+            {
+                Proc03F(433, 1)
+            }
+            if Func03E(433) == 1
+            {
+                Proc038(1289)
+            }
+            else
+            {
+                Proc038(1277)
+            }
+        }
+        case 2
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(180)
+            Proc02D(4)
+            TalkMessage(MESSAGE_4)
+            TalkClose()
+            if Func084(4) == 0
+            {
+                Proc080(4, 5)
+            }
+            Proc083(4)
+            SetEntityFacing(4, 0)
+        }
+    }
+}

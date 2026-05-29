@@ -1,0 +1,670 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1041 EventScript_1041
+{
+    const MESSAGE_0 = "That's it for today.\r\nBye now.\x05"
+    const MESSAGE_1 = "This is a New Year's \r\ngame show. \r\nFirst I'll show you a \r\nnumber, then you guess \r\nwhether the next number \r\nwill be higher or lower.\r\nGot it?\x05"
+    const MESSAGE_2 = "\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\r\n\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\r\n\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\xFF&\x05"
+    const MESSAGE_3 = "Compared to \xFF&, it's"
+    const MESSAGE_4 = "Larger"
+    const MESSAGE_5 = "Smaller"
+    const MESSAGE_6 = "\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\r\n\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\r\n\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\xFF%\x05"
+    const MESSAGE_7 = "The first number was \xFF&,\r\nand the second was \xFF%.\r\nYou chose \"Larger,\" so...\x05"
+    const MESSAGE_8 = "The first number was \xFF&,\r\nand the second was \xFF%.\r\nYou chose \"Smaller,\" so...\x05"
+    const MESSAGE_9 = "Correct! \x05\x0COnce more, now.\x05"
+    const MESSAGE_10 = "Same number! \x05\x0COnce more, now. \x05"
+    const MESSAGE_11 = "Incorrect! \x05\x0CSorry, game over... \x05"
+    const MESSAGE_12 = "Bye now.\r\n\x05"
+    const MESSAGE_13 = "You only won once.\r\nBye now. \x05"
+    const MESSAGE_14 = "Wow!\r\nI can't believe you've \r\nwon over 100\x05\r\ntimes in a row!\x05"
+    const MESSAGE_15 = "I'm impressed!\r\nYou've won \xFF%\r\ntimes in a row!\x05"
+    const MESSAGE_16 = "I'll give you this \r\nas a reward. \x05"
+    const MESSAGE_17 = "I was going to give you \r\nsomething as a reward, but \r\nyour hands are full. \x05\x0CToo bad, but you'll have to \r\nwait until next time....\x05\x0C"
+    var var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7
+    var_6 = 0
+    var_2 = 0
+    var_3 = 0
+    TalkOpen()
+    Proc02D(31)
+    if Func03E(494) >= 5
+    {
+        Proc030(56)
+        var_7 = Func0FE(MESSAGE_0)
+        Proc100()
+        TalkClose()
+        switch var_7
+        {
+            case 0, 1, 2, 3
+            {
+                Proc03F(580, var_7)
+                Proc038(356)
+            }
+            case 5
+            {
+            }
+            case 
+            {
+            }
+        }
+    }
+    else
+    {
+        Proc030(57)
+        var_7 = Func0FE(MESSAGE_1)
+        TalkClose()
+        switch var_7
+        {
+            case 0, 1, 2, 3
+            {
+                Proc03F(580, var_7)
+                Proc038(356)
+            }
+            case 5
+            {
+            }
+            case 
+            {
+            }
+        }
+        do
+        {
+            if var_6 == 0
+            {
+                TalkOpen()
+                var_4 = Func03D(0, 9)
+                Proc039(1, var_4)
+                Proc024(MESSAGE_2)
+                var_0 = Func025(MESSAGE_3, MESSAGE_4, MESSAGE_5)
+                var_6 = 1
+            }
+            else
+            {
+                TalkOpen()
+                Proc02D(31)
+                Proc030(57)
+                var_4 = var_1
+                Proc039(1, var_4)
+                var_0 = Func025(MESSAGE_3, MESSAGE_4, MESSAGE_5)
+            }
+            switch var_0
+            {
+                case 1
+                {
+                    var_5 = 1
+                }
+                case 2
+                {
+                    var_5 = 0
+                }
+            }
+            TalkOpen()
+            var_1 = Func03D(0, 9)
+            Proc039(0, var_1)
+            Proc039(1, var_4)
+            Proc024(MESSAGE_6)
+            if var_5 == 1
+            {
+                TalkOpen()
+                Proc02D(31)
+                Proc030(57)
+                TalkMessage(MESSAGE_7)
+                switch var_1
+                {
+                    case 0
+                    {
+                        switch var_4
+                        {
+                            case 0
+                            {
+                                var_2 = 1
+                            }
+                            case 1, 2, 3, 4, 5, 6, 7, 8, 9
+                            {
+                                var_2 = 2
+                            }
+                        }
+                    }
+                    case 1
+                    {
+                        switch var_4
+                        {
+                            case 0
+                            {
+                                var_2 = 0
+                            }
+                            case 1
+                            {
+                                var_2 = 1
+                            }
+                            case 2, 3, 4, 5, 6, 7, 8, 9
+                            {
+                                var_2 = 2
+                            }
+                        }
+                    }
+                    case 2
+                    {
+                        switch var_4
+                        {
+                            case 0, 1
+                            {
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                var_2 = 1
+                            }
+                            case 3, 4, 5, 6, 7, 8, 9
+                            {
+                                var_2 = 2
+                            }
+                        }
+                    }
+                    case 3
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2
+                            {
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                var_2 = 1
+                            }
+                            case 4, 5, 6, 7, 8, 9
+                            {
+                                var_2 = 2
+                            }
+                        }
+                    }
+                    case 4
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3
+                            {
+                                var_2 = 0
+                            }
+                            case 4
+                            {
+                                var_2 = 1
+                            }
+                            case 5, 6, 7, 8, 9
+                            {
+                                var_2 = 2
+                            }
+                        }
+                    }
+                    case 5
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3, 4
+                            {
+                                var_2 = 0
+                            }
+                            case 5
+                            {
+                                var_2 = 1
+                            }
+                            case 6, 7, 8, 9
+                            {
+                                var_2 = 2
+                            }
+                        }
+                    }
+                    case 6
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3, 4, 5
+                            {
+                                var_2 = 0
+                            }
+                            case 6
+                            {
+                                var_2 = 1
+                            }
+                            case 7, 8, 9
+                            {
+                                var_2 = 2
+                            }
+                        }
+                    }
+                    case 7
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3, 4, 5, 6
+                            {
+                                var_2 = 0
+                            }
+                            case 7
+                            {
+                                var_2 = 1
+                            }
+                            case 8, 9
+                            {
+                                var_2 = 2
+                            }
+                        }
+                    }
+                    case 8
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3, 4, 5, 6, 7
+                            {
+                                var_2 = 0
+                            }
+                            case 8
+                            {
+                                var_2 = 1
+                            }
+                            case 9
+                            {
+                                var_2 = 2
+                            }
+                        }
+                    }
+                    case 9
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3, 4, 5, 6, 7, 8
+                            {
+                                var_2 = 0
+                            }
+                            case 9
+                            {
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                TalkOpen()
+                Proc02D(31)
+                Proc030(57)
+                TalkMessage(MESSAGE_8)
+                switch var_1
+                {
+                    case 0
+                    {
+                        switch var_4
+                        {
+                            case 0
+                            {
+                                var_2 = 1
+                            }
+                            case 1, 2, 3, 4, 5, 6, 7, 8, 9
+                            {
+                                var_2 = 0
+                            }
+                        }
+                    }
+                    case 1
+                    {
+                        switch var_4
+                        {
+                            case 0
+                            {
+                                var_2 = 2
+                            }
+                            case 1
+                            {
+                                var_2 = 1
+                            }
+                            case 2, 3, 4, 5, 6, 7, 8, 9
+                            {
+                                var_2 = 0
+                            }
+                        }
+                    }
+                    case 2
+                    {
+                        switch var_4
+                        {
+                            case 0, 1
+                            {
+                                var_2 = 2
+                            }
+                            case 2
+                            {
+                                var_2 = 1
+                            }
+                            case 3, 4, 5, 6, 7, 8, 9
+                            {
+                                var_2 = 0
+                            }
+                        }
+                    }
+                    case 3
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2
+                            {
+                                var_2 = 2
+                            }
+                            case 3
+                            {
+                                var_2 = 1
+                            }
+                            case 4, 5, 6, 7, 8, 9
+                            {
+                                var_2 = 0
+                            }
+                        }
+                    }
+                    case 4
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3
+                            {
+                                var_2 = 2
+                            }
+                            case 4
+                            {
+                                var_2 = 1
+                            }
+                            case 5, 6, 7, 8, 9
+                            {
+                                var_2 = 0
+                            }
+                        }
+                    }
+                    case 5
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3, 4
+                            {
+                                var_2 = 2
+                            }
+                            case 5
+                            {
+                                var_2 = 1
+                            }
+                            case 6, 7, 8, 9
+                            {
+                                var_2 = 0
+                            }
+                        }
+                    }
+                    case 6
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3, 4, 5
+                            {
+                                var_2 = 2
+                            }
+                            case 6
+                            {
+                                var_2 = 1
+                            }
+                            case 7, 8, 9
+                            {
+                                var_2 = 0
+                            }
+                        }
+                    }
+                    case 7
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3, 4, 5, 6
+                            {
+                                var_2 = 2
+                            }
+                            case 7
+                            {
+                                var_2 = 1
+                            }
+                            case 8, 9
+                            {
+                                var_2 = 0
+                            }
+                        }
+                    }
+                    case 8
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3, 4, 5, 6, 7
+                            {
+                                var_2 = 2
+                            }
+                            case 8
+                            {
+                                var_2 = 1
+                            }
+                            case 9
+                            {
+                                var_2 = 0
+                            }
+                        }
+                    }
+                    case 9
+                    {
+                        switch var_4
+                        {
+                            case 0, 1, 2, 3, 4, 5, 6, 7, 8
+                            {
+                                var_2 = 2
+                            }
+                            case 9
+                            {
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+            }
+            switch var_2
+            {
+                case 0
+                {
+                    PlaySong(0, 184)
+                    Proc030(57)
+                    TalkMessage(MESSAGE_9)
+                    if var_3 != 100
+                    {
+                        var_3 = var_3 + 1
+                    }
+                }
+                case 1
+                {
+                    Proc030(56)
+                    TalkMessage(MESSAGE_10)
+                }
+                case 2
+                {
+                    PlaySong(0, 199)
+                    Proc030(58)
+                    TalkMessage(MESSAGE_11)
+                }
+            }
+        } while var_2 == 0 || var_2 == 1
+        if var_3 == 0
+        {
+            TalkMessage(MESSAGE_12)
+        }
+        else if var_3 == 1
+        {
+            Proc030(56)
+            TalkMessage(MESSAGE_13)
+        }
+        else
+        {
+            if var_3 == 100
+            {
+                Proc030(57)
+                TalkMessage(MESSAGE_14)
+            }
+            else
+            {
+                Proc030(57)
+                Proc039(0, var_3)
+                TalkMessage(MESSAGE_15)
+            }
+            if Func040() == 1
+            {
+                Proc030(57)
+                TalkMessage(MESSAGE_16)
+                TalkClose()
+                if var_3 == 100
+                {
+                    PlaySong(0, 179)
+                    Proc049(80)
+                    Proc037(330)
+                }
+                else if var_3 >= 90
+                {
+                    PlaySong(0, 176)
+                    Proc049(51)
+                    Proc037(240)
+                }
+                else if var_3 >= 80
+                {
+                    PlaySong(0, 176)
+                    Proc049(52)
+                    Proc037(240)
+                }
+                else if var_3 >= 70
+                {
+                    PlaySong(0, 182)
+                    Proc049(54)
+                    Proc037(120)
+                }
+                else if var_3 >= 60
+                {
+                    PlaySong(0, 182)
+                    Proc049(55)
+                    Proc037(120)
+                }
+                else if var_3 >= 50
+                {
+                    PlaySong(0, 182)
+                    Proc049(90)
+                    Proc037(120)
+                }
+                else if var_3 >= 40
+                {
+                    PlaySong(0, 182)
+                    Proc049(85)
+                    Proc037(120)
+                }
+                else if var_3 >= 30
+                {
+                    PlaySong(0, 182)
+                    Proc049(81)
+                    Proc037(120)
+                }
+                else if var_3 >= 25
+                {
+                    PlaySong(0, 182)
+                    Proc049(86)
+                    Proc037(120)
+                }
+                else if var_3 >= 20
+                {
+                    PlaySong(0, 182)
+                    Proc049(87)
+                    Proc037(120)
+                }
+                else if var_3 >= 15
+                {
+                    PlaySong(0, 182)
+                    Proc049(88)
+                    Proc037(120)
+                }
+                else if var_3 >= 10
+                {
+                    PlaySong(0, 182)
+                    Proc048(70)
+                    Proc037(120)
+                }
+                else if var_3 >= 3
+                {
+                    PlaySong(0, 188)
+                    var_1 = Func03D(0, 1)
+                    switch var_1
+                    {
+                        case 0
+                        {
+                            Proc048(151)
+                        }
+                        case 1
+                        {
+                            Proc048(74)
+                        }
+                    }
+                    Proc037(60)
+                }
+                else
+                {
+                    PlaySong(0, 188)
+                    var_1 = Func03D(0, 8)
+                    switch var_1
+                    {
+                        case 0
+                        {
+                            Proc048(47)
+                        }
+                        case 1
+                        {
+                            Proc048(48)
+                        }
+                        case 2
+                        {
+                            Proc048(49)
+                        }
+                        case 3
+                        {
+                            Proc048(50)
+                        }
+                        case 4
+                        {
+                            Proc048(51)
+                        }
+                        case 5
+                        {
+                            Proc048(52)
+                        }
+                        case 6
+                        {
+                            Proc048(53)
+                        }
+                        case 7
+                        {
+                            Proc048(54)
+                        }
+                        case 8
+                        {
+                            Proc048(55)
+                        }
+                    }
+                    Proc037(60)
+                }
+            }
+            else
+            {
+                Proc030(56)
+                TalkMessage(MESSAGE_17)
+            }
+            TalkOpen()
+            Proc02D(31)
+            Proc030(57)
+            TalkMessage(MESSAGE_12)
+        }
+        Proc03F(494, Func03E(494) + 1)
+    }
+    Proc100()
+    TalkClose()
+}

@@ -1,0 +1,130 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 744 EventScript_744
+{
+    const MESSAGE_0 = "Is this the White Flower\r\nthat Ellen was talking \r\nabout?\x05\x0CYou should bring it to her.\x05"
+    const MESSAGE_1 = "That's...\x05"
+    const MESSAGE_2 = "It's beautiful...\x05"
+    const MESSAGE_3 = "You really found it...?\x05"
+    const MESSAGE_4 = "It's wonderful! \r\nThis is the famous \r\nWhite Flower...\x05"
+    const MESSAGE_5 = "Where did you find this, \r\n\xFF!?\x05\x0COn the mountaintop?\r\nSo that's where it blooms!\x05"
+    const MESSAGE_6 = "Thanks, \xFF!. \r\nI'll treasure it. \x05"
+    const MESSAGE_7 = "You made Ellen very \r\nhappy. \x05"
+    Proc016(8, 236, 291)
+    Proc13D(0, 236, 255, 2, Func13F(56))
+    SetEntityPosition(0, 236, 443, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 332, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(30)
+    Proc011(0, 2, 0)
+    Proc037(60)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 350)
+    }
+    else
+    {
+        SetEntityAnim(0, 334)
+    }
+    Proc00A(0, 283, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(60 * 2)
+    Proc034(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc13E(0)
+    Proc016(14, 143, 114)
+    SetEntityPosition(15, 128, 96, 0)
+    SetEntityAnim(15, 1669)
+    SetEntityPosition(10, 154, 96, 0)
+    SetEntityAnim(10, 2059)
+    SetEntityPosition(16, 183, 102, 2)
+    SetEntityAnim(16, 2232)
+    SetEntityPosition(0, 128, 118, 1)
+    Proc06B()
+    SetEntityAnim(0, 338)
+    Proc13D(0, 128, 118 - 21, 1, Func13F(56))
+    Proc035(2, 1)
+    Proc037(30)
+    TalkOpen()
+    Proc030(101)
+    Proc02D(10)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(129)
+    Proc02D(16)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(63)
+    Proc02D(15)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    Proc037(60)
+    Proc13E(0)
+    SetEntityAnim(0, 414)
+    Proc037(60)
+    SetEntityAnim(0, 402)
+    TalkOpen()
+    Proc030(64)
+    Proc02D(15)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(99)
+    Proc02D(10)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    TalkOpen()
+    Proc030(63)
+    Proc02D(15)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    Proc037(60)
+    Proc034(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    Proc083(15)
+    Proc083(10)
+    Proc080(15, 20)
+    Proc080(10, 20)
+    Proc080(16, 20)
+    Proc03F(272, 2)
+    Proc038(988)
+}

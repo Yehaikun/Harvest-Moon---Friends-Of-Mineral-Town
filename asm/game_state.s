@@ -13069,265 +13069,265 @@ func_08016834: @ 0x08016834
     pop {r0}
     bx r0
 
-    thumb_func_start func_080168D4
-func_080168D4: @ 0x080168D4
-    push {r4, r5, r6, r7, lr}
-    mov r7, r8
-    push {r7}
-    sub sp, #8
-    ldr r6, [r0, #4]
-    cmp r1, #4
-    bls .L080168E4
-    b .L08016AF0
-.L080168E4:
-    lsls r0, r1, #2
-    ldr r1, .L080168F0 @ =.L080168F4
-    adds r0, r0, r1
-    ldr r0, [r0]
-    mov pc, r0
-    .align 2, 0
-.L080168F0: .4byte .L080168F4
-.L080168F4: @ jump table
-    .4byte .L08016908 @ case 0
-    .4byte .L0801696C @ case 1
-    .4byte .L0801696C @ case 2
-    .4byte .L08016A02 @ case 3
-    .4byte .L08016A92 @ case 4
-.L08016908:
-    adds r4, r6, #0
-    adds r4, #0xa8
-    ldr r0, [r4]
-    ldr r1, [r0]
-    ldr r2, [r1, #0x40]
-    movs r1, #0x2c
-    bl _call_via_r2
-    cmp r0, #0
-    beq .L0801691E
-    b .L08016AF0
-.L0801691E:
-    ldr r0, [r4]
-    ldr r1, [r0]
-    ldr r2, [r1, #0x38]
-    movs r1, #0x2c
-    bl _call_via_r2
-    ldr r0, [r4]
-    ldr r1, [r0]
-    ldr r2, [r1, #0x40]
-    movs r1, #0x2c
-    bl _call_via_r2
-    adds r4, r0, #0
-    cmp r4, #0
-    beq .L08016956
-    ldr r0, [r4, #0x14]
-    ldr r1, [r0, #0x28]
-    adds r0, r4, #0
-    bl _call_via_r1
-    lsls r0, r0, #0x18
-    cmp r0, #0
-    bne .L08016956
-    ldr r0, [r4, #0x14]
-    ldr r1, [r0, #0x20]
-    adds r0, r4, #0
-    bl _call_via_r1
-.L08016956:
-    cmp r4, #0
-    bne .L0801695C
-    b .L08016AF0
-.L0801695C:
-    adds r0, r4, #0
-    movs r1, #2
-    movs r2, #0xbc
-    lsls r2, r2, #2
-    movs r3, #0x84
-    bl SetLocation__7AEntityUiii
-    b .L08016AF0
-.L0801696C:
-    adds r4, r6, #0
-    adds r4, #0x8c
-    ldr r0, [r4]
-    movs r1, #0xbe
-    lsls r1, r1, #3
-    adds r0, r0, r1
-    bl method_0800D058__C4Barn
-    adds r7, r0, #0
-    movs r0, #1
-    rsbs r0, r0, #0
-    mov r8, r4
-    cmp r7, r0
-    bne .L0801698A
-    b .L08016AF0
-.L0801698A:
-    ldr r0, [r4]
-    movs r1, #0xbe
-    lsls r1, r1, #3
-    adds r0, r0, r1
-    bl method_0800D858__4Barn
-    adds r5, r7, #0
-    adds r5, #0x36
-    adds r4, #0x1c
-    ldr r0, [r4]
-    ldr r1, [r0]
-    ldr r2, [r1, #0x38]
-    adds r1, r5, #0
-    bl _call_via_r2
-    ldr r0, [r4]
-    ldr r1, [r0]
-    ldr r2, [r1, #0x40]
-    adds r1, r5, #0
-    bl _call_via_r2
-    adds r5, r0, #0
-    cmp r5, #0
-    beq .L080169D4
-    ldr r0, [r5, #0x14]
-    ldr r1, [r0, #0x28]
-    adds r0, r5, #0
-    bl _call_via_r1
-    lsls r0, r0, #0x18
-    cmp r0, #0
-    bne .L080169D4
-    ldr r0, [r5, #0x14]
-    ldr r1, [r0, #0x20]
-    adds r0, r5, #0
-    bl _call_via_r1
-.L080169D4:
-    mov r0, r8
-    ldr r1, [r0]
-    movs r0, #0xbe
-    lsls r0, r0, #3
-    adds r1, r1, r0
-    mov r4, sp
-    mov r0, sp
-    adds r2, r7, #0
-    bl method_0800D074__C4BarnUi
-    cmp r5, #0
-    bne .L080169EE
-    b .L08016AF0
-.L080169EE:
-    mov r0, sp
-    movs r1, #0
-    ldrsh r2, [r0, r1]
-    movs r0, #2
-    ldrsh r3, [r4, r0]
-    adds r0, r5, #0
-    movs r1, #0x25
-    bl SetLocation__7AEntityUiii
-    b .L08016AF0
-.L08016A02:
-    adds r4, r6, #0
-    adds r4, #0x8c
-    ldr r0, [r4]
-    movs r1, #0x82
-    lsls r1, r1, #3
-    adds r0, r0, r1
-    bl GetUnkEnt__C4Coop
-    adds r7, r0, #0
-    movs r0, #1
-    rsbs r0, r0, #0
-    mov r8, r4
-    cmp r7, r0
-    beq .L08016AF0
-    ldr r0, [r4]
-    movs r1, #0x82
-    lsls r1, r1, #3
-    adds r0, r0, r1
-    bl method_0800CBC0__4Coop
-    adds r5, r7, #0
-    adds r5, #0x2e
-    adds r4, #0x1c
-    ldr r0, [r4]
-    ldr r1, [r0]
-    ldr r2, [r1, #0x38]
-    adds r1, r5, #0
-    bl _call_via_r2
-    ldr r0, [r4]
-    ldr r1, [r0]
-    ldr r2, [r1, #0x40]
-    adds r1, r5, #0
-    bl _call_via_r2
-    adds r4, r0, #0
-    cmp r4, #0
-    beq .L08016A68
-    ldr r0, [r4, #0x14]
-    ldr r1, [r0, #0x28]
-    adds r0, r4, #0
-    bl _call_via_r1
-    lsls r0, r0, #0x18
-    cmp r0, #0
-    bne .L08016A68
-    ldr r0, [r4, #0x14]
-    ldr r1, [r0, #0x20]
-    adds r0, r4, #0
-    bl _call_via_r1
-.L08016A68:
-    mov r0, r8
-    ldr r1, [r0]
-    movs r0, #0x82
-    lsls r0, r0, #3
-    adds r1, r1, r0
-    add r5, sp, #4
-    adds r0, r5, #0
-    adds r2, r7, #0
-    bl method_0800C6F0__C4CoopUi
-    cmp r4, #0
-    beq .L08016AF0
-    movs r1, #0
-    ldrsh r2, [r5, r1]
-    movs r0, #2
-    ldrsh r3, [r5, r0]
-    adds r0, r4, #0
-    movs r1, #0x11
-    bl SetLocation__7AEntityUiii
-    b .L08016AF0
-.L08016A92:
-    adds r4, r6, #0
-    adds r4, #0xa8
-    ldr r0, [r4]
-    ldr r1, [r0]
-    ldr r2, [r1, #0x40]
-    movs r1, #0x2b
-    bl _call_via_r2
-    cmp r0, #0
-    bne .L08016AF0
-    ldr r0, [r4]
-    ldr r1, [r0]
-    ldr r2, [r1, #0x38]
-    movs r1, #0x2b
-    bl _call_via_r2
-    ldr r0, [r4]
-    ldr r1, [r0]
-    ldr r2, [r1, #0x40]
-    movs r1, #0x2b
-    bl _call_via_r2
-    adds r4, r0, #0
-    cmp r4, #0
-    beq .L08016ADE
-    ldr r0, [r4, #0x14]
-    ldr r1, [r0, #0x28]
-    adds r0, r4, #0
-    bl _call_via_r1
-    lsls r0, r0, #0x18
-    cmp r0, #0
-    bne .L08016ADE
-    ldr r0, [r4, #0x14]
-    ldr r1, [r0, #0x20]
-    adds r0, r4, #0
-    bl _call_via_r1
-.L08016ADE:
-    cmp r4, #0
-    beq .L08016AF0
-    adds r0, r4, #0
-    movs r1, #2
-    movs r2, #0xbf
-    lsls r2, r2, #1
-    movs r3, #0x52
-    bl SetLocation__7AEntityUiii
-.L08016AF0:
-    add sp, #8
-    pop {r3}
-    mov r8, r3
-    pop {r4, r5, r6, r7}
-    pop {r0}
-    bx r0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     thumb_func_start func_08016AFC
 func_08016AFC: @ 0x08016AFC

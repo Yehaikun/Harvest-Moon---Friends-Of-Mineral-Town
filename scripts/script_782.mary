@@ -1,0 +1,27 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 782 EventScript_782
+{
+    const MESSAGE_0 = "!!...Where did you \r\nfind this...?\x05"
+    const MESSAGE_1 = "Ahh..So you told \r\nAnn and the others for me.\x05\x0CThis photo shows me with\r\nmy mother and sister.\x05\x0C"
+    const MESSAGE_2 = "I didn't like the town\r\nwe lived in, so I left my\r\nmother and my sister to\x05\r\nstrike off on my own. \x05\x0CWhen I came back, my \r\nmother had died and my\r\nsister was gone...\x05\r\nThis town reminds me of\r\nthat one very much...\x05"
+    const MESSAGE_3 = "Sorry! I'm sure you don't\r\ncare about my story...\r\nThanks for the photo!\x05"
+    SetEntityAnim(23, 663)
+    TalkOpen()
+    Proc030(30)
+    Proc02D(23)
+    TalkMessage(MESSAGE_0)
+    Proc030(23)
+    TalkMessage(MESSAGE_1)
+    Proc030(26)
+    TalkMessage(MESSAGE_2)
+    Proc030(23)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    SetEntityAnim(0, 294)
+    Proc037(60)
+    SetEntityAnim(23, 659)
+    Proc03F(292, 2)
+    Proc080(23, 20)
+    Proc083(23)
+}

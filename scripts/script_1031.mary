@@ -1,0 +1,1929 @@
+================================ PARTIAL DECOMPILATION
+    /* Complete statements */
+    var_1 = 0
+    TalkOpen()
+location_571:
+    /* Complete statements */
+    Proc02E(0)
+    var_0 = TalkChoice5(1, 2, 3, 4, 5)
+    /* Variable Value */
+    push var_0
+    jmp location_0
+location_89:
+case 1:
+    /* Complete statements */
+    Proc02E(1)
+    var_0 = TalkChoice6(6, 7, 8, 9, 10, 11)
+    switch var_0
+    {
+        case 1
+        {
+            Proc030(7)
+            Proc02D(3)
+            do
+            {
+                Proc039(0, Func089(3))
+                var_0 = Func027(12, 13, 14, 15, 16)
+                switch var_0
+                {
+                    case 1
+                    {
+                        Proc08A(3, 1000)
+                        var_2 = 0
+                    }
+                    case 2
+                    {
+                        Proc08A(3, -1000)
+                        var_2 = 0
+                    }
+                    case 3
+                    {
+                        Proc031()
+                        var_2 = 10
+                    }
+                    case 4
+                    {
+                        Proc031()
+                        var_2 = 1
+                    }
+                }
+            } while var_2 == 0
+            if var_2 == 1
+            {
+                var_2 = 1
+            }
+            else
+            {
+                var_2 = 0
+            }
+        }
+        case 2
+        {
+            Proc030(87)
+            Proc02D(25)
+            do
+            {
+                Proc039(0, Func089(25))
+                var_0 = Func027(17, 13, 14, 15, 16)
+                switch var_0
+                {
+                    case 1
+                    {
+                        Proc08A(25, 1000)
+                        var_2 = 0
+                    }
+                    case 2
+                    {
+                        Proc08A(25, -1000)
+                        var_2 = 0
+                    }
+                    case 3
+                    {
+                        Proc031()
+                        var_2 = 10
+                    }
+                    case 4
+                    {
+                        Proc031()
+                        var_2 = 1
+                    }
+                }
+            } while var_2 == 0
+            if var_2 == 1
+            {
+                var_2 = 1
+            }
+            else
+            {
+                var_2 = 0
+            }
+        }
+        case 3
+        {
+            Proc030(121)
+            Proc02D(21)
+            do
+            {
+                Proc039(0, Func089(21))
+                var_0 = Func027(18, 19, 20, 15, 16)
+                switch var_0
+                {
+                    case 1
+                    {
+                        Proc08A(21, 1000)
+                        var_2 = 0
+                    }
+                    case 2
+                    {
+                        Proc08A(21, -1000)
+                        var_2 = 0
+                    }
+                    case 3
+                    {
+                        Proc031()
+                        var_2 = 10
+                    }
+                    case 4
+                    {
+                        Proc031()
+                        var_2 = 1
+                    }
+                }
+            } while var_2 == 0
+            if var_2 == 1
+            {
+                var_2 = 1
+            }
+            else
+            {
+                var_2 = 0
+            }
+        }
+        case 4
+        {
+            Proc030(103)
+            Proc02D(12)
+            do
+            {
+                Proc039(0, Func089(12))
+                var_0 = Func027(21, 19, 20, 15, 16)
+                switch var_0
+                {
+                    case 1
+                    {
+                        Proc08A(12, 1000)
+                        var_2 = 0
+                    }
+                    case 2
+                    {
+                        Proc08A(12, -1000)
+                        var_2 = 0
+                    }
+                    case 3
+                    {
+                        Proc031()
+                        var_2 = 10
+                    }
+                    case 4
+                    {
+                        Proc031()
+                        var_2 = 1
+                    }
+                }
+            } while var_2 == 0
+            if var_2 == 1
+            {
+                var_2 = 1
+            }
+            else
+            {
+                var_2 = 0
+            }
+        }
+        case 5
+        {
+            Proc030(72)
+            Proc02D(19)
+            do
+            {
+                Proc039(0, Func089(19))
+                var_0 = Func027(22, 19, 20, 15, 16)
+                switch var_0
+                {
+                    case 1
+                    {
+                        Proc08A(19, 1000)
+                        var_2 = 0
+                    }
+                    case 2
+                    {
+                        Proc08A(19, -1000)
+                        var_2 = 0
+                    }
+                    case 3
+                    {
+                        Proc031()
+                        var_2 = 10
+                    }
+                    case 4
+                    {
+                        Proc031()
+                        var_2 = 1
+                    }
+                }
+            } while var_2 == 0
+            if var_2 == 1
+            {
+                var_2 = 1
+            }
+            else
+            {
+                var_2 = 0
+            }
+        }
+        case 6
+        {
+            Proc030(56)
+            Proc02D(31)
+            do
+            {
+                Proc039(0, Func089(31))
+                var_0 = Func027(23, 19, 20, 15, 16)
+                switch var_0
+                {
+                    case 1
+                    {
+                        Proc08A(31, 1000)
+                        var_2 = 0
+                    }
+                    case 2
+                    {
+                        Proc08A(31, -1000)
+                        var_2 = 0
+                    }
+                    case 3
+                    {
+                        Proc031()
+                        var_2 = 10
+                    }
+                    case 4
+                    {
+                        Proc031()
+                        var_2 = 1
+                    }
+                }
+            } while var_2 == 0
+            if var_2 == 1
+            {
+                var_2 = 1
+            }
+            else
+            {
+                var_2 = 0
+            }
+        }
+    }
+    /* Expression */
+    push var_2 == 0
+    bne location_89
+    /* Complete statements */
+    var_2 = 0
+    jmp location_90
+location_563:
+case 2:
+    /* Complete statements */
+    switch var_1
+    {
+        case 0
+        {
+            Proc02E(24)
+            var_0 = TalkChoice6(25, 26, 27, 28, 6, 29)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 10
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(14)
+                    Proc02D(1)
+                    do
+                    {
+                        Proc039(0, Func07F(1))
+                        var_0 = Func027(30, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(1, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(1, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(0)
+                    Proc02D(2)
+                    do
+                    {
+                        Proc039(0, Func07F(2))
+                        var_0 = Func027(33, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(2, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(2, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 1
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(7)
+                    Proc02D(3)
+                    do
+                    {
+                        Proc039(0, Func07F(3))
+                        var_0 = Func027(34, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(3, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(3, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc030(153)
+                    Proc02D(26)
+                    do
+                    {
+                        Proc039(0, Func07F(26))
+                        var_0 = Func027(35, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(26, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(26, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+            }
+        }
+        case 1
+        {
+            Proc02E(36)
+            var_0 = TalkChoice6(25, 37, 8, 28, 38, 39)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 0
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(35)
+                    Proc02D(20)
+                    do
+                    {
+                        Proc039(0, Func07F(20))
+                        var_0 = Func027(40, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(20, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(20, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(121)
+                    Proc02D(21)
+                    do
+                    {
+                        Proc039(0, Func07F(21))
+                        var_0 = Func027(41, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(21, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(21, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 2
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(128)
+                    Proc02D(16)
+                    do
+                    {
+                        Proc039(0, Func07F(16))
+                        var_0 = Func027(42, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(16, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(16, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc030(63)
+                    Proc02D(15)
+                    do
+                    {
+                        Proc039(0, Func07F(15))
+                        var_0 = Func027(43, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(15, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(15, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+            }
+        }
+        case 2
+        {
+            Proc02E(44)
+            var_0 = TalkChoice6(25, 10, 45, 28, 46, 15)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 1
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(72)
+                    Proc02D(19)
+                    do
+                    {
+                        Proc039(0, Func07F(19))
+                        var_0 = Func027(47, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(19, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(19, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(67)
+                    Proc02D(17)
+                    do
+                    {
+                        Proc039(0, Func07F(17))
+                        var_0 = Func027(48, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(17, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(17, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 3
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(79)
+                    Proc02D(18)
+                    do
+                    {
+                        Proc039(0, Func07F(18))
+                        var_0 = Func027(49, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(18, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(18, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc031()
+                    var_2 = 1
+                }
+            }
+        }
+        case 3
+        {
+            Proc02E(50)
+            var_0 = TalkChoice6(25, 51, 52, 28, 53, 54)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 2
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(180)
+                    Proc02D(4)
+                    do
+                    {
+                        Proc039(0, Func07F(4))
+                        var_0 = Func027(55, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(4, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(4, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(176)
+                    Proc02D(5)
+                    do
+                    {
+                        Proc039(0, Func07F(5))
+                        var_0 = Func027(56, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(5, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(5, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 4
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(168)
+                    Proc02D(6)
+                    do
+                    {
+                        Proc039(0, Func07F(6))
+                        var_0 = Func027(57, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(6, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(6, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc030(160)
+                    Proc02D(7)
+                    do
+                    {
+                        Proc039(0, Func07F(7))
+                        var_0 = Func027(58, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(7, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(7, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+            }
+        }
+        case 4
+        {
+            Proc02E(59)
+            var_0 = TalkChoice6(25, 60, 61, 28, 62, 63)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 3
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(133)
+                    Proc02D(8)
+                    do
+                    {
+                        Proc039(0, Func07F(8))
+                        var_0 = Func027(64, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(8, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(8, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(137)
+                    Proc02D(9)
+                    do
+                    {
+                        Proc039(0, Func07F(9))
+                        var_0 = Func027(65, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(9, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(9, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 5
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(117)
+                    Proc02D(13)
+                    do
+                    {
+                        Proc039(0, Func07F(13))
+                        var_0 = Func027(66, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(13, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(13, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc030(145)
+                    Proc02D(14)
+                    do
+                    {
+                        Proc039(0, Func07F(14))
+                        var_0 = Func027(67, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(14, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(14, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+            }
+        }
+        case 5
+        {
+            Proc02E(68)
+            var_0 = TalkChoice6(25, 69, 70, 28, 9, 71)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 4
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(99)
+                    Proc02D(10)
+                    do
+                    {
+                        Proc039(0, Func07F(10))
+                        var_0 = Func027(72, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(10, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(10, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(110)
+                    Proc02D(11)
+                    do
+                    {
+                        Proc039(0, Func07F(11))
+                        var_0 = Func027(73, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(11, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(11, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 6
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(103)
+                    Proc02D(12)
+                    do
+                    {
+                        Proc039(0, Func07F(12))
+                        var_0 = Func027(74, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(12, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(12, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc030(149)
+                    Proc02D(22)
+                    do
+                    {
+                        Proc039(0, Func07F(22))
+                        var_0 = Func027(75, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(22, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(22, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+            }
+        }
+        case 6
+        {
+            Proc02E(76)
+            var_0 = TalkChoice6(25, 77, 7, 28, 78, 15)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 5
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(83)
+                    Proc02D(24)
+                    do
+                    {
+                        Proc039(0, Func07F(24))
+                        var_0 = Func027(79, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(24, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(24, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(87)
+                    Proc02D(25)
+                    do
+                    {
+                        Proc039(0, Func07F(25))
+                        var_0 = Func027(80, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(25, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(25, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 7
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(23)
+                    Proc02D(23)
+                    do
+                    {
+                        Proc039(0, Func07F(23))
+                        var_0 = Func027(81, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(23, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(23, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc031()
+                    var_2 = 1
+                }
+            }
+        }
+        case 7
+        {
+            Proc02E(82)
+            var_0 = TalkChoice6(25, 83, 84, 28, 85, 86)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 6
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(114)
+                    Proc02D(29)
+                    do
+                    {
+                        Proc039(0, Func07F(29))
+                        var_0 = Func027(87, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(29, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(29, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(59)
+                    Proc02D(30)
+                    do
+                    {
+                        Proc039(0, Func07F(30))
+                        var_0 = Func027(88, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(30, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(30, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 8
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(172)
+                    Proc02D(27)
+                    do
+                    {
+                        Proc039(0, Func07F(27))
+                        var_0 = Func027(89, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(27, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(27, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc030(31)
+                    Proc02D(28)
+                    do
+                    {
+                        Proc039(0, Func07F(28))
+                        var_0 = Func027(90, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(28, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(28, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+            }
+        }
+        case 8
+        {
+            Proc02E(91)
+            var_0 = TalkChoice6(25, 11, 92, 28, 93, 94)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 7
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(56)
+                    Proc02D(31)
+                    do
+                    {
+                        Proc039(0, Func07F(31))
+                        var_0 = Func027(95, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(31, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(31, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(42)
+                    Proc02D(36)
+                    do
+                    {
+                        Proc039(0, Func07F(36))
+                        var_0 = Func027(96, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(36, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(36, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 9
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(44)
+                    Proc02D(37)
+                    do
+                    {
+                        Proc039(0, Func07F(37))
+                        var_0 = Func027(97, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(37, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(37, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc030(46)
+                    Proc02D(38)
+                    do
+                    {
+                        Proc039(0, Func07F(38))
+                        var_0 = Func027(98, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(38, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(38, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+            }
+        }
+        case 9
+        {
+            Proc02E(99)
+            var_0 = TalkChoice6(25, 100, 101, 28, 102, 103)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 8
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(48)
+                    Proc02D(39)
+                    do
+                    {
+                        Proc039(0, Func07F(39))
+                        var_0 = Func027(104, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(39, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(39, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(50)
+                    Proc02D(40)
+                    do
+                    {
+                        Proc039(0, Func07F(40))
+                        var_0 = Func027(105, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(40, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(40, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 10
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(52)
+                    Proc02D(41)
+                    do
+                    {
+                        Proc039(0, Func07F(41))
+                        var_0 = Func027(106, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(41, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(41, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc030(54)
+                    Proc02D(42)
+                    do
+                    {
+                        Proc039(0, Func07F(42))
+                        var_0 = Func027(107, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(42, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(42, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+            }
+        }
+        case 10
+        {
+            Proc02E(108)
+            var_0 = TalkChoice6(25, 109, 110, 28, 111, 15)
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 9
+                    var_2 = 0
+                }
+                case 2
+                {
+                    Proc030(141)
+                    Proc02D(33)
+                    do
+                    {
+                        Proc039(0, Func07F(33))
+                        var_0 = Func027(112, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(33, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(33, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 3
+                {
+                    Proc030(94)
+                    Proc02D(34)
+                    do
+                    {
+                        Proc039(0, Func07F(34))
+                        var_0 = Func027(113, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(34, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(34, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 4
+                {
+                    var_1 = 0
+                    var_2 = 0
+                }
+                case 5
+                {
+                    Proc030(18)
+                    Proc02D(35)
+                    do
+                    {
+                        Proc039(0, Func07F(35))
+                        var_0 = Func027(114, 31, 32, 15, 15)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                Proc080(35, 10)
+                                var_2 = 0
+                            }
+                            case 2
+                            {
+                                Proc080(35, -10)
+                                var_2 = 0
+                            }
+                            case 3
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                            case 4
+                            {
+                                Proc031()
+                                var_2 = 10
+                            }
+                        }
+                    } while var_2 == 0
+                    var_2 = 0
+                }
+                case 6
+                {
+                    Proc031()
+                    var_2 = 1
+                }
+            }
+        }
+    }
+    /* Expression */
+    push var_2 == 0
+    bne location_563
+    /* Complete statements */
+    var_2 = 0
+    jmp location_564
+    /* Case blocks (switch 60) */
+    case 3
+    {
+        TalkClose()
+        Proc038(424)
+    } // breaks to location_565
+    case 4
+    {
+        TalkClose()
+        Proc038(423)
+    } // breaks to location_566
+    case 5
+    {
+        var_2 = 10
+    } // breaks to location_567
+    jmp location_568
+location_0:
+================================ REMAINING INSTRUCTIONS
+>   Switch(SwitchId(60))
+    Label(JumpId(568))
+    Label(JumpId(567))
+    Label(JumpId(566))
+    Label(JumpId(565))
+    Label(JumpId(564))
+    Label(JumpId(90))
+    PushVar(VarId(2))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(569))
+    PushInt(0)
+    Jmp(JumpId(570))
+    Label(JumpId(569))
+    PushInt(1)
+    Label(JumpId(570))
+    Bne(JumpId(571))
+    Call(CallId(32))
+================================ END OF SCRIPT
+Decompile error: Couldn't reduce
+Error: ()

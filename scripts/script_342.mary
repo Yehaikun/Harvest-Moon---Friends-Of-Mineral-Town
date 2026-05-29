@@ -1,0 +1,109 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 342 EventScript_342
+{
+    const MESSAGE_0 = "Turn in for the day?"
+    const MESSAGE_1 = "Yes"
+    const MESSAGE_2 = "No"
+    const MESSAGE_3 = "Bed\r\nInvestigate from left \r\nside to sleep.\x05"
+    var var_0, var_1, var_2, var_3
+    if GetEntityFacing(0) == 3
+    {
+        var_0 = Func03E(1)
+        var_1 = Func03E(2)
+        var_2 = Func03E(3)
+        TalkOpen()
+        var_3 = Func025(MESSAGE_0, MESSAGE_1, MESSAGE_2)
+        TalkClose()
+        switch var_3
+        {
+            case 1
+            {
+                Proc06B()
+                if GetEntityY(0) != 76
+                {
+                    SetEntityAnim(0, 454)
+                    SetEntityFacing(0, 1)
+                    Proc00A(0, 76, 1)
+                    Proc00C(0)
+                    SetEntityAnim(0, 402)
+                    SetEntityFacing(0, 3)
+                }
+                switch Func03E(14)
+                {
+                    case 0
+                    {
+                        if GetEntityX(0) != 193
+                        {
+                            SetEntityAnim(0, 454)
+                            Proc008(0, 193, 1)
+                            Proc00C(0)
+                            SetEntityAnim(0, 402)
+                        }
+                    }
+                    case 1
+                    {
+                        if GetEntityX(0) != 313
+                        {
+                            SetEntityAnim(0, 454)
+                            Proc008(0, 313, 1)
+                            Proc00C(0)
+                            SetEntityAnim(0, 402)
+                        }
+                    }
+                    case 2
+                    {
+                        if GetEntityX(0) != 377
+                        {
+                            SetEntityAnim(0, 454)
+                            Proc008(0, 377, 1)
+                            Proc00C(0)
+                            SetEntityAnim(0, 402)
+                        }
+                    }
+                }
+                SetEntityAnim(0, 270)
+                Proc037(12)
+                Proc009(0, GetEntityX(0) + 16, 32768)
+                Proc037(32)
+                switch Func03E(14)
+                {
+                    case 0
+                    {
+                        SetEntityPosition(0, 200, -46, 0)
+                    }
+                    case 1
+                    {
+                        SetEntityPosition(0, 320, -46, 0)
+                    }
+                    case 2
+                    {
+                        SetEntityPosition(0, 384, -46, 0)
+                    }
+                }
+                SetEntityAnim(0, 398)
+                Proc037(30)
+                Proc034(2, 1)
+                Proc05C(50, -5)
+                if var_0 == 3 && (var_1 == 14 && (var_2 >= 18 && var_2 <= 23) || var_1 == 15 && (var_2 >= 0 && var_2 <= 5)) && (Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2)
+                {
+                    Proc038(1299)
+                }
+                else if var_0 == 3 && (var_1 == 25 && (var_2 >= 21 && var_2 <= 23))
+                {
+                    Proc038(1307)
+                }
+                Proc038(988)
+            }
+            case 2
+            {
+            }
+        }
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_3)
+        TalkClose()
+    }
+}

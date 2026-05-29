@@ -1,0 +1,86 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1199 EventScript_1199
+{
+    const MESSAGE_0 = "Good evening. I think \r\nthey're about to start. \x05"
+    const MESSAGE_1 = "Invite to the fireworks?"
+    const MESSAGE_2 = "Invite."
+    const MESSAGE_3 = "Don't invite."
+    const MESSAGE_4 = "That's a good idea. \r\nLet's watch together. \x05"
+    const MESSAGE_5 = "So you're here, too?\r\nLet's watch together. \x05"
+    var var_0, var_1, var_2, var_3, var_4
+    if Func086(12) == 0
+    {
+        Proc083(12)
+    }
+    SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+    if Func085(12) == 0
+    {
+        Proc080(12, 5)
+    }
+    Proc083(12)
+    TalkOpen()
+    var_1 = Func03E(76) == 0 && Func03E(85) == 0 && Func03E(95) == 0 && Func03E(103) == 0 && Func03E(111) == 0 && Func03E(371) == 0
+    var_2 = Func03E(85) == 2 || Func03E(95) == 2 || Func03E(76) == 2 || Func03E(111) == 2 || Func03E(371) == 2
+    var_3 = Func03E(103) == 0 && Func03E(142) == 0 && Func03E(143) == 0
+    var_4 = Func03E(142) == 2 || Func03E(143) == 2
+    if var_1 && var_3 && Func089(12) < 30000 || var_4 || var_2
+    {
+        Proc030(103)
+        Proc02D(12)
+        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(142) == 2 || Func03E(143) == 2)
+        {
+            Proc032(12)
+        }
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+    else if var_1 && var_3 && Func089(12) >= 30000
+    {
+        Proc030(103)
+        Proc02D(12)
+        Proc032(12)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        TalkOpen()
+        var_0 = Func025(MESSAGE_1, MESSAGE_2, MESSAGE_3)
+        switch var_0
+        {
+            case 1
+            {
+                Proc03F(415, 3)
+                TalkClose()
+                TalkOpen()
+                Proc030(104)
+                Proc02D(12)
+                Proc032(12)
+                TalkMessage(MESSAGE_4)
+                TalkClose()
+                Proc034(2, 1)
+                Proc038(1192)
+            }
+            case 2
+            {
+                TalkClose()
+            }
+        }
+    }
+    else if Func03E(103) == 2
+    {
+        Proc03F(415, 3)
+        Proc030(103)
+        Proc02D(12)
+        Proc032(12)
+        TalkMessage(MESSAGE_5)
+        TalkClose()
+        Proc034(2, 1)
+        Proc038(1192)
+    }
+    if Func085(2) && Func085(7) && Func085(20) && (Func03E(244) == 0 || Func085(23)) && Func085(26) && Func085(19) && Func085(21) && Func085(25) && Func085(3) && Func085(12)
+    {
+        Proc03F(415, 0)
+        Proc034(2, 1)
+        Proc038(1192)
+    }
+    SetEntityFacing(12, 3)
+}

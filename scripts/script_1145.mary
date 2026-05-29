@@ -1,0 +1,49 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1145 EventScript_1145
+{
+    const MESSAGE_0 = "Listen, everyone!\r\nThis year's champion is\r\n\xFF#!!\x05\r\nGood job!\x05"
+    Proc016(1, 156, 154)
+    StopBGM()
+    SetEntityPosition(28, 156, 136, 0)
+    SetEntityAnim(28, 792)
+    SetEntityPosition(0, 156, 154, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(70, 140, 154, 1)
+    Proc010(70, 0)
+    SetEntityAnim(70, 824)
+    Proc035(3, 1)
+    Proc037(60)
+    StopBGM()
+    PlaySong(0, 176)
+    Proc037(60 * 4)
+    PlayBGM(1, 7)
+    TalkOpen()
+    Proc030(32)
+    Proc02D(28)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func040() == 1 && Func03E(588) == 0
+    {
+        Proc062()
+        Proc03F(588, 1)
+    }
+    PlaySong(0, 181)
+    Proc037(60 * 4)
+    Proc034(2, 1)
+    Proc080(13, 20)
+    Proc080(17, 20)
+    Proc080(18, 20)
+    Proc080(26, 20)
+    Proc080(3, 20)
+    Proc080(28, 20)
+    Proc00F(70)
+    Proc038(1138)
+}

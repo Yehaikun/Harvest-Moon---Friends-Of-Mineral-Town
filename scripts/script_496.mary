@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 496 EventScript_496
+{
+    const MESSAGE_0 = "Supermarket\r\nOpen 9AM-5PM\r\nClosed Tuesdays and Sundays\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

@@ -1,0 +1,44 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1154 EventScript_1154
+{
+    const MESSAGE_0 = "This year's competition was \r\ngreat, don't you think?\x05"
+    const MESSAGE_1 = "Yeah, \xFF% \r\nwas particularly strong. \x05"
+    const MESSAGE_2 = "Sorry you didn't win. \r\nAll the other Chickens were\r\nvery strong, though. \x05"
+    var var_0
+    var_0 = Func11D(3)
+    GetAnimalName(0, 3, var_0)
+    if Func086(2) == 0
+    {
+        Proc083(2)
+    }
+    SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(407) == 0
+    {
+        TalkOpen()
+        Proc030(0)
+        Proc02D(2)
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(409) == 1
+    {
+        TalkOpen()
+        Proc030(1)
+        Proc02D(2)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(0)
+        Proc02D(2)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(2) == 0
+    {
+        Proc080(2, 5)
+    }
+    Proc083(2)
+    SetEntityFacing(2, 2)
+}

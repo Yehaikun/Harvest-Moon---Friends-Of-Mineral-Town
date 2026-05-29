@@ -1,0 +1,52 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 741 EventScript_741
+{
+    const MESSAGE_0 = "Sorry to bother you\r\nso late. \x05"
+    const MESSAGE_1 = "I don't look so well?\r\nWell, there's a reason.\x05\x0CAfter talking to you, I \r\nwrote to Aja and told her\r\neverything how I feel \x05\r\nabout her. \x05\x0CHer response came today.\x05"
+    const MESSAGE_2 = "Aja says that she already \r\nhas a boyfriend \r\nin the city!\x05\x0CNo luck for me, I guess.\x05"
+    const MESSAGE_3 = "No, don't blame yourself. \r\nYou see, I'm actually very \r\nthankful to you. \x05\x0CIf I hadn't written that \r\nletter, I never would have \r\nknown Aja was in love\x05\r\nwith someone else.\x05\x0CBut, now I know\r\nto give up on her. Thanks \r\nagain, \xFF!. \x05\r\nDon't forget to lock you \r\ndoors at night. \x05"
+    SetEntityPosition(14, 228, 145, 1)
+    SetEntityAnim(14, 2276)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(148)
+    Proc02D(14)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(148)
+    Proc02D(14)
+    TalkMessage(MESSAGE_1)
+    Proc030(146)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    Proc011(0, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(145)
+    Proc02D(14)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    Proc080(14, 20)
+    SetEntityAnim(14, 2280)
+    SetEntityFacing(14, 3)
+    Proc008(14, 319, 1)
+    Proc00C(14)
+    SetEntityFacing(14, 1)
+    Proc00A(14, 0, 1)
+    Proc00C(14)
+    Proc00F(14)
+    Proc03F(270, 2)
+    Proc083(14)
+}

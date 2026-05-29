@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1074 EventScript_1074
+{
+    const MESSAGE_0 = "So you're here too, \r\n\xFF!?\x05\r\nI don't usually eat Rice \r\nCakes because they're \r\nfattening. Just this once, \x05\r\nevery year, I let myself \r\nlose control. Tee-hee...\x05"
+    if Func086(9) == 0
+    {
+        Proc083(9)
+    }
+    SetEntityFacing(9, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessage(MESSAGE_0)
+    Proc031()
+    TalkClose()
+    if Func084(9) == 0
+    {
+        Proc080(9, 5)
+    }
+    Proc083(9)
+    SetEntityFacing(9, 2)
+}

@@ -1,0 +1,7 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 275 EventScript_275
+{
+    PlaySong(0, 156)
+    Proc0CA(4)
+}

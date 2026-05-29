@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 989 EventScript_989
+{
+    SetEntityAnim(0, 402)
+    Proc036(1, 0)
+    Proc034(1, 0)
+    Proc035(1, 0)
+}

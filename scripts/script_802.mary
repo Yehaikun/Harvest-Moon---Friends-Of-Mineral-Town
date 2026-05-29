@@ -1,0 +1,24 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 802 EventScript_802
+{
+    const MESSAGE_0 = "Ever since he lost his wife \r\nand daughter in the \r\nmountains, Gotz has taken \x05\r\nit upon himself to patrol \r\nthem in his spare time. \x05"
+    const MESSAGE_1 = "I'm really grateful to \r\nhim for it. \x05"
+    SetEntityFacing(14, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(14)
+    if Func085(14) == 0
+    {
+        Proc030(148)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(145)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    Proc083(14)
+    SetEntityFacing(14, 3)
+    exit
+}

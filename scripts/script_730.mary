@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 730 EventScript_730
+{
+    const MESSAGE_0 = "Basil really is such \r\na genius! \x05"
+    const MESSAGE_1 = "I'm glad to have someone \r\nlike that in my own family!\x05"
+    SetEntityFacing(7, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(7)
+    Proc030(161)
+    TalkMessage(MESSAGE_0)
+    Proc030(166)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    Proc083(7)
+    SetEntityFacing(7, 1)
+    exit
+}

@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 882 EventScript_882
+{
+    const MESSAGE_0 = "Karen...\x05"
+    const MESSAGE_1 = "Karen's so pretty...\x05"
+    if Func086(17) == 0
+    {
+        Proc083(17)
+    }
+    if Func085(17) == 0
+    {
+        SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(70)
+        Proc02D(17)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(17, 2)
+        Proc083(17)
+    }
+    else
+    {
+        SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(67)
+        Proc02D(17)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(17, 2)
+        Proc083(17)
+    }
+}

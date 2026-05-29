@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 939 EventScript_939
+{
+    const MESSAGE_0 = "I'd never met anybody like \r\nGray before. He's so blunt \r\nand honest, but in a good\x05\r\nway... \x05"
+    const MESSAGE_1 = "Inside he's so gentle, \r\nthough. \x05\x0CI was so glad when he \r\nproposed to me! \x05"
+    if Func086(12) == 0
+    {
+        Proc083(12)
+    }
+    if Func085(12) == 0
+    {
+        SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(109)
+        Proc02D(12)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(12, 0)
+        Proc083(12)
+    }
+    else
+    {
+        SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(109)
+        Proc02D(12)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(12, 0)
+        Proc083(12)
+    }
+}

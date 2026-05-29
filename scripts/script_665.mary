@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 665 EventScript_665
+{
+    const MESSAGE_0 = "I can't wait to go \r\nfor a family picnic!\x05"
+    SetEntityFacing(3, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(3)
+    Proc030(7)
+    Proc032(3)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(3)
+    SetEntityFacing(3, 2)
+}

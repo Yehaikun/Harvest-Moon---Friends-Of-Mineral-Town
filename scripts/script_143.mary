@@ -1,0 +1,77 @@
+================================ PARTIAL DECOMPILATION
+    /* Assignment Expression */
+    push var_0 = 1
+    /* Complete statements */
+    if GetEntityFacing(0) == 0
+    {
+        if Func03E(131) == 1
+        {
+            Proc03F(131, 2)
+            Proc08D(23)
+            Proc08D(22)
+            Proc0F3()
+        }
+        else if Func03E(119) == 1
+        {
+            Proc0F3()
+            Proc03F(121, 1)
+            Proc03F(119, 0)
+        }
+        else if Func03E(127) == 1
+        {
+            Proc0F3()
+            Proc03F(129, 1)
+            Proc03F(127, 0)
+        }
+        else if Func03E(135) == 1
+        {
+            Proc0F3()
+            Proc03F(137, 1)
+            Proc03F(135, 0)
+        }
+        else if Func03E(143) == 1
+        {
+            Proc0F3()
+            Proc03F(145, 1)
+            Proc03F(143, 0)
+        }
+        else if Func03E(151) == 1
+        {
+            Proc0F3()
+            Proc03F(153, 1)
+            Proc03F(151, 0)
+        }
+        else if Func03E(418) == 1
+        {
+            SetEntityFacing(22, 0)
+            TalkOpen()
+            Proc030(151)
+            Proc02D(22)
+            TalkMessage(0)
+            TalkClose()
+            var_0 = 0
+        }
+        else if Func03E(288) == 1
+        {
+            Proc03F(288, 2)
+            Proc08D(22)
+            Proc0F3()
+        }
+        if var_0
+        {
+            Proc034(2, 1)
+            Proc016(5, 1232, 168)
+            SetEntityPosition(0, 1232, 168, 0)
+            PlaySong(0, 205)
+            Proc035(2, 1)
+        }
+        else
+        {
+            SetEntityFacing(0, 1)
+            Proc00A(0, 292, 1)
+            Proc00C(0)
+        }
+    }
+================================ END OF SCRIPT
+Decompile error: Couldn't reduce at end of input
+Error: ()

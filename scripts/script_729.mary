@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 729 EventScript_729
+{
+    const MESSAGE_0 = "I'm so proud to have \r\nsuch a smart husband!\x05"
+    SetEntityFacing(11, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(110)
+    Proc02D(11)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(11)
+    SetEntityFacing(11, 1)
+    exit
+}

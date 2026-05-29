@@ -1,0 +1,47 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 784 EventScript_784
+{
+    const MESSAGE_0 = "This is the anniversary \r\nof Ann's mother's death.\x05\x0CAnn lets me take the day \r\noff every year, bless her. \x05"
+    Proc016(8, 230, 280)
+    SetEntityPosition(0, 230, 420, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(24, 200, 280, 1)
+    SetEntityAnim(24, 1970)
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 280, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(30)
+    TalkOpen()
+    Proc030(86)
+    Proc02D(24)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(24)
+    Proc0F2()
+    Proc03F(295, 1)
+    Proc08C(24, 785)
+}

@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 458 EventScript_458
+{
+    const MESSAGE_0 = "There is no Chicken Feed\r\nin the Feed Bin.\x05"
+    if !Func040() && Func041() == 1 && !Func042() && Func044() == 91
+    {
+        Proc046()
+        Proc03F(41, Func03E(41) + 1)
+    }
+    else if Func03E(41) == 0
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+    else
+    {
+        Proc049(91)
+        Proc03F(41, Func03E(41) - 1)
+    }
+}

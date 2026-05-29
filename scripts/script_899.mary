@@ -1,0 +1,172 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 899 EventScript_899
+{
+    const MESSAGE_0 = "Rick, thanks for stopping \r\nobjecting to Popuri and me\r\ngetting married. \x05"
+    const MESSAGE_1 = "Yes, thank you.\x05"
+    const MESSAGE_2 = "Well, I still do ob-...\x05"
+    const MESSAGE_3 = "Rick!\x05"
+    const MESSAGE_4 = "Well...\x05"
+    const MESSAGE_5 = "Just make Popuri happy, Kai.\x05"
+    const MESSAGE_6 = "I'll do my best. \r\nI promise. \x05"
+    const MESSAGE_7 = "Hey there, \xFF!!\r\nToday is Popuri and Kai's \r\nwedding day!\x05\x0CDo you want to celebrate \r\nwith us 'til morning?\x05"
+    const MESSAGE_8 = "OK!"
+    const MESSAGE_9 = "I still have work to do."
+    const MESSAGE_10 = "Let's celebrate then!\x05"
+    const MESSAGE_11 = "To the new couple!\x05"
+    const MESSAGE_12 = "Well, come join us if you \r\nhave time. \x05"
+    var var_0
+    Proc016(12, 184, 320)
+    PlayBGM(1, 6)
+    SetEntityPosition(3, 200, 152, 0)
+    SetEntityAnim(3, 591)
+    SetEntityPosition(26, 168, 152, 0)
+    SetEntityAnim(26, 2318)
+    SetEntityPosition(22, 144, 152, 3)
+    SetEntityAnim(22, 2284)
+    SetEntityPosition(0, 184, 320, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(1, 264, 155, 2)
+    SetEntityAnim(1, 607)
+    SetEntityPosition(19, 296, 195, 2)
+    SetEntityAnim(19, 1681)
+    SetEntityPosition(2, 264, 195, 2)
+    SetEntityAnim(2, 531)
+    if GetEntityLocation(23) == 12
+    {
+        Proc00F(23)
+    }
+    if GetEntityLocation(17) == 12
+    {
+        Proc00F(17)
+    }
+    if GetEntityLocation(20) == 12
+    {
+        Proc00F(20)
+    }
+    if GetEntityLocation(8) == 12
+    {
+        Proc00F(8)
+    }
+    if GetEntityLocation(9) == 12
+    {
+        Proc00F(9)
+    }
+    if Func03E(128) == 0
+    {
+        Proc035(2, 1)
+        Proc017(184, 160, 1)
+        Proc018()
+        TalkOpen()
+        Proc030(159)
+        Proc02D(26)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        TalkOpen()
+        Proc030(13)
+        Proc02D(3)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        TalkOpen()
+        Proc030(4)
+        Proc02D(2)
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        TalkOpen()
+        Proc030(74)
+        Proc02D(19)
+        TalkMessage(MESSAGE_3)
+        TalkClose()
+        TalkOpen()
+        Proc030(3)
+        Proc02D(2)
+        TalkMessage(MESSAGE_4)
+        TalkClose()
+        TalkOpen()
+        Proc030(73)
+        Proc02D(19)
+        TalkMessage(MESSAGE_5)
+        TalkClose()
+        TalkOpen()
+        Proc030(159)
+        Proc02D(26)
+        TalkMessage(MESSAGE_6)
+        TalkClose()
+        SetEntityFacing(22, 0)
+        TalkOpen()
+        Proc030(149)
+        Proc02D(22)
+        TalkMessage(MESSAGE_7)
+        TalkClose()
+        TalkOpen()
+        var_0 = TalkChoice2(MESSAGE_8, MESSAGE_9)
+        switch var_0
+        {
+            case 1
+            {
+                Proc080(22, 20)
+                Proc080(1, 20)
+                Proc080(2, 20)
+                Proc080(19, 20)
+                Proc081(3, 200)
+                Proc081(26, 200)
+                TalkClose()
+                TalkOpen()
+                Proc030(150)
+                Proc02D(22)
+                TalkMessage(MESSAGE_10)
+                TalkClose()
+                Proc034(2, 1)
+                TalkOpen()
+                TalkMessage(MESSAGE_11)
+                TalkClose()
+                Proc083(22)
+                Proc03F(127, 2)
+                Proc03F(129, 0)
+                Proc03F(582, 0)
+                Proc038(988)
+            }
+            case 2
+            {
+                Proc03F(128, 1)
+                TalkClose()
+                TalkOpen()
+                Proc030(149)
+                Proc02D(22)
+                TalkMessage(MESSAGE_12)
+                TalkClose()
+                SetEntityFacing(22, 3)
+                Proc017(184, 320, 1)
+                Proc018()
+                Proc0F2()
+                Proc083(22)
+                Proc08C(2, 900)
+                Proc08C(3, 901)
+                Proc08C(1, 902)
+                Proc08C(19, 903)
+                Proc08C(22, 904)
+                Proc08C(26, 905)
+                Proc03F(127, 1)
+            }
+        }
+    }
+    else
+    {
+        Proc0F2()
+        Proc035(2, 1)
+        Proc08C(2, 900)
+        Proc08C(3, 901)
+        Proc08C(1, 902)
+        Proc08C(19, 903)
+        Proc08C(22, 904)
+        Proc08C(26, 905)
+        Proc03F(127, 1)
+    }
+}

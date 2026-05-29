@@ -1,0 +1,383 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1306 EventScript_1306
+{
+    const MESSAGE_0 = "Today is the Starry Night \r\nFestival. It took a lot of \r\neffort to make all this\x05\r\nfood, so eat up!\x05"
+    const MESSAGE_1 = "Today is the Starry Night\r\nFestival. I made some \r\ndelicious food, so \x05\r\nlet's eat together!\x05"
+    const MESSAGE_2 = "Look at this feast! \r\nLet's start our \r\nStarry Night Festival.\x05"
+    const MESSAGE_3 = "Today my mom made some cake\r\nfor the Starry Night \r\nFestival. \x05\r\nTell me what you think of\r\neverything!\x05"
+    const MESSAGE_4 = "Why do you look so \r\nsurprised? Even I can make\r\nsomething good for the \x05\r\nStarry Night Festival. \x05\x0CLet's eat!\x05"
+    const MESSAGE_5 = "I made a delicious feast for\r\nthe Starry Night Festival.\x05\x0CLet's eat it together, \r\nalright?\x05"
+    const MESSAGE_6 = "It took all day to make this\r\nfeast for the Starry \r\nNight Festival. \x05\x0CLet's us 3 eat up!\x05"
+    const MESSAGE_7 = "It took all day to make this\r\ndinner for the Starry \r\nNight Festival. \x05\x0CLet's us 3 eat up!\x05"
+    const MESSAGE_8 = "It took all day to make this\r\nfeast for the Starry \r\nNight Festival. \x05\x0CLet's us 3 enjoy it!\x05"
+    const MESSAGE_9 = "Goo-goo!\x05"
+    const MESSAGE_10 = "Let's go to the mountaintop!\r\nWe shouldn't spend the \r\nwhole Starry Night \x05\r\nFestival indoors!\x05"
+    const MESSAGE_11 = "They say this is when the\r\nstars are the prettiest.\r\nLet's go look, OK?\x05"
+    const MESSAGE_12 = "You're already tired?\r\nCan't you at least \r\nclimb the mountain?\x05"
+    const MESSAGE_13 = "The stars should be \r\nout by now. Let's go\r\nto the mountaintop.\x05"
+    const MESSAGE_14 = "This is perfect star-viewing\r\nweather, isn't it?\x05\x0CLet's go look later. \x05"
+    const MESSAGE_15 = "Want to go to the \r\nmountaintop to look at the \r\nbest stars of the year \x05\r\nwith me? \x05"
+    const MESSAGE_16 = "I never get tired \r\nof looking at the stars\r\nfrom here. \x05\x0CThey're so beautiful...\x05"
+    const MESSAGE_17 = "No matter how many times I\r\nsee them, they change. \x05\x0CPeople don't think so, but\r\nthe mountain and stars are\r\nalive too, you know!\x05"
+    const MESSAGE_18 = "When I see a whole sky \r\nfull of stars like this,\r\nit fills me with wonder.\x05"
+    const MESSAGE_19 = "I wonder if there is \r\nsomeone out there looking\r\nat our star and thinking\x05\r\nthe same thing...?\x05"
+    const MESSAGE_20 = "Look! A falling star..!!\x05\r\nDid you see it?\x05"
+    const MESSAGE_21 = "Oh darn, I forgot \r\nto make a wish!\x05"
+    const MESSAGE_22 = "These stars we're looking at\r\nnow may not even \r\nexist any more...\x05"
+    const MESSAGE_23 = "But even though they may be\r\ngone, their light still \r\nreaches us...\x05"
+    const MESSAGE_24 = "Look at all the stars...\x05\r\nWhen my parents died, my\r\ngrandmother could still \r\nwalk, so she took me \x05\r\nup here one night...\x05"
+    const MESSAGE_25 = "She told me I could come up\r\nhere whenever I wanted and\r\nbe with my parents again.\x05"
+    const MESSAGE_26 = "It seems like I'm always \r\nstaring down at the ground.\x05\x0CIt feels good to stare up \r\nat the sky once in a while!\x05"
+    const MESSAGE_27 = "I'd love to stay up here\r\nwith you forever, \r\n\xFF!.\x05\x0CBut, the job of a Harvest\r\nGoddess never ends.\x05\x0CI need a vacation! \x05"
+    const MESSAGE_28 = "That was fun! \r\nI know I'll sleep well\r\ntonight...\x05"
+    Proc016(29, 288, 152)
+    PlayBGM(1, 7)
+    Proc13D(0, 288, 112, 1, Func13F(143))
+    Proc13D(1, 304, 112, 1, Func13F(61))
+    SetEntityPosition(0, 304, 208, 1)
+    if Func03E(76) == 2
+    {
+        SetEntityPosition(19, 288, 100, 0)
+        SetEntityAnim(19, 1681)
+    }
+    if Func03E(85) == 2
+    {
+        SetEntityPosition(3, 288, 100, 0)
+        SetEntityAnim(3, 559)
+    }
+    if Func03E(95) == 2
+    {
+        SetEntityPosition(25, 288, 100, 0)
+        SetEntityAnim(25, 1982)
+    }
+    if Func03E(103) == 2
+    {
+        SetEntityPosition(12, 288, 100, 0)
+        SetEntityAnim(12, 2067)
+    }
+    if Func03E(111) == 2
+    {
+        SetEntityPosition(21, 288, 100, 0)
+        SetEntityAnim(21, 2180)
+    }
+    if Func03E(371) == 2
+    {
+        SetEntityPosition(31, 288, 100, 0)
+        SetEntityAnim(31, 1641)
+    }
+    if Func03E(47) == 1
+    {
+        SetEntityPosition(35, 304, 96, 0)
+        SetEntityAnim(35, 615)
+    }
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 152, 1)
+    Proc00C(0)
+    SetEntityFacing(0, 2)
+    Proc008(0, 288, 1)
+    Proc00C(0)
+    SetEntityFacing(0, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    if Func03E(47) == 0
+    {
+        if Func03E(76) == 2
+        {
+            Proc02D(19)
+            Proc030(73)
+            Proc032(19)
+            TalkMessage(MESSAGE_0)
+        }
+        if Func03E(85) == 2
+        {
+            Proc02D(3)
+            Proc030(8)
+            Proc032(3)
+            TalkMessage(MESSAGE_1)
+        }
+        if Func03E(95) == 2
+        {
+            Proc02D(25)
+            Proc030(88)
+            Proc032(25)
+            TalkMessage(MESSAGE_2)
+        }
+        if Func03E(103) == 2
+        {
+            Proc02D(12)
+            Proc030(104)
+            Proc032(12)
+            TalkMessage(MESSAGE_3)
+        }
+        if Func03E(111) == 2
+        {
+            Proc02D(21)
+            Proc030(122)
+            Proc032(21)
+            TalkMessage(MESSAGE_4)
+        }
+        if Func03E(371) == 2
+        {
+            Proc02D(31)
+            Proc030(57)
+            Proc032(31)
+            TalkMessage(MESSAGE_5)
+        }
+        TalkClose()
+        SetEntityAnim(0, 510)
+        Proc037(30)
+    }
+    else
+    {
+        if Func03E(76) == 2
+        {
+            Proc02D(19)
+            Proc030(73)
+            Proc032(19)
+            TalkMessage(MESSAGE_6)
+        }
+        if Func03E(85) == 2
+        {
+            Proc02D(3)
+            Proc030(8)
+            Proc032(3)
+            TalkMessage(MESSAGE_7)
+        }
+        if Func03E(95) == 2
+        {
+            Proc02D(25)
+            Proc030(88)
+            Proc032(25)
+            TalkMessage(MESSAGE_8)
+        }
+        if Func03E(103) == 2
+        {
+            Proc02D(12)
+            Proc030(104)
+            Proc032(12)
+            TalkMessage(MESSAGE_3)
+        }
+        if Func03E(111) == 2
+        {
+            Proc02D(21)
+            Proc030(122)
+            Proc032(21)
+            TalkMessage(MESSAGE_4)
+        }
+        if Func03E(371) == 2
+        {
+            Proc02D(31)
+            Proc030(57)
+            Proc032(31)
+            TalkMessage(MESSAGE_5)
+        }
+        TalkClose()
+        TalkOpen()
+        Proc02D(35)
+        Proc030(19)
+        TalkMessage(MESSAGE_9)
+        TalkClose()
+        Proc034(2, 1)
+        Proc035(2, 1)
+        TalkOpen()
+        if Func03E(76) == 2
+        {
+            Proc02D(19)
+            Proc030(73)
+            Proc032(19)
+            TalkMessage(MESSAGE_10)
+        }
+        if Func03E(85) == 2
+        {
+            Proc02D(3)
+            Proc030(8)
+            Proc032(3)
+            TalkMessage(MESSAGE_11)
+        }
+        if Func03E(95) == 2
+        {
+            Proc02D(25)
+            Proc030(88)
+            Proc032(25)
+            TalkMessage(MESSAGE_12)
+        }
+        if Func03E(103) == 2
+        {
+            Proc02D(12)
+            Proc030(104)
+            Proc032(12)
+            TalkMessage(MESSAGE_13)
+        }
+        if Func03E(111) == 2
+        {
+            Proc02D(21)
+            Proc030(122)
+            Proc032(21)
+            TalkMessage(MESSAGE_14)
+        }
+        if Func03E(371) == 2
+        {
+            Proc02D(31)
+            Proc030(57)
+            Proc032(31)
+            TalkMessage(MESSAGE_15)
+        }
+        TalkClose()
+        SetEntityAnim(0, 510)
+        Proc037(30)
+        FadeOutBGM()
+        Proc034(2, 1)
+        Proc0F7(21, 0)
+        PlayBGM(1, 14)
+        Proc016(8, 224, 256)
+        SetEntityPosition(0, 224, 256, 3)
+        if Func03E(76) == 2
+        {
+            SetEntityPosition(19, 240, 256, 2)
+            SetEntityAnim(19, 1681)
+        }
+        if Func03E(85) == 2
+        {
+            SetEntityPosition(3, 240, 256, 2)
+            SetEntityAnim(3, 559)
+        }
+        if Func03E(95) == 2
+        {
+            SetEntityPosition(25, 240, 256, 2)
+            SetEntityAnim(25, 1982)
+        }
+        if Func03E(103) == 2
+        {
+            SetEntityPosition(12, 240, 256, 2)
+            SetEntityAnim(12, 2067)
+        }
+        if Func03E(111) == 2
+        {
+            SetEntityPosition(21, 240, 256, 2)
+            SetEntityAnim(21, 2180)
+        }
+        if Func03E(371) == 2
+        {
+            SetEntityPosition(31, 240, 256, 2)
+            SetEntityAnim(31, 1641)
+        }
+        Proc035(2, 1)
+        TalkOpen()
+        if Func03E(76) == 2
+        {
+            Proc02D(19)
+            Proc030(73)
+            Proc032(19)
+            TalkMessage(MESSAGE_16)
+            SetEntityFacing(19, 1)
+            Proc030(72)
+            TalkMessage(MESSAGE_17)
+        }
+        if Func03E(85) == 2
+        {
+            Proc02D(3)
+            Proc030(11)
+            Proc032(3)
+            TalkMessage(MESSAGE_18)
+            SetEntityFacing(3, 1)
+            Proc030(12)
+            TalkMessage(MESSAGE_19)
+        }
+        if Func03E(95) == 2
+        {
+            Proc02D(25)
+            Proc030(89)
+            Proc032(25)
+            TalkMessage(MESSAGE_20)
+            SetEntityFacing(25, 1)
+            Proc030(89)
+            TalkMessage(MESSAGE_21)
+        }
+        if Func03E(103) == 2
+        {
+            Proc02D(12)
+            Proc030(106)
+            Proc032(12)
+            TalkMessage(MESSAGE_22)
+            SetEntityFacing(12, 1)
+            Proc030(104)
+            TalkMessage(MESSAGE_23)
+        }
+        if Func03E(111) == 2
+        {
+            Proc02D(21)
+            Proc030(125)
+            Proc032(21)
+            TalkMessage(MESSAGE_24)
+            SetEntityFacing(21, 1)
+            Proc030(124)
+            TalkMessage(MESSAGE_25)
+        }
+        if Func03E(371) == 2
+        {
+            Proc02D(31)
+            Proc030(57)
+            Proc032(31)
+            TalkMessage(MESSAGE_26)
+            SetEntityFacing(31, 1)
+            TalkMessage(MESSAGE_27)
+        }
+        TalkClose()
+        SetEntityAnim(0, 510)
+        Proc037(30)
+        SetEntityFacing(0, 1)
+        Proc037(30)
+    }
+    if Func03E(76) == 2
+    {
+        Proc08A(19, 1000)
+    }
+    if Func03E(85) == 2
+    {
+        Proc08A(3, 1000)
+    }
+    if Func03E(95) == 2
+    {
+        Proc08A(25, 1000)
+    }
+    if Func03E(103) == 2
+    {
+        Proc08A(12, 1000)
+    }
+    if Func03E(111) == 2
+    {
+        Proc08A(21, 1000)
+    }
+    if Func03E(371) == 2
+    {
+        Proc08A(31, 1000)
+    }
+    if Func03E(200) == 2 || Func03E(201) == 2 || Func03E(202) == 2 || Func03E(203) == 2 || Func03E(204) == 2 || Func03E(378) == 2
+    {
+        Proc080(35, 20)
+    }
+    Proc034(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_28)
+    TalkClose()
+    Proc13E(0)
+    Proc13E(1)
+    Proc03F(461, 2)
+    Proc038(988)
+}

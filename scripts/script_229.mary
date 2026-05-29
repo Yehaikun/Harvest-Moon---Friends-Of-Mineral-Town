@@ -1,0 +1,46 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 229 EventScript_229
+{
+    const MESSAGE_0 = "Hey!! Where did you\r\nfind this!?\x05"
+    const MESSAGE_1 = "Oh...I see...\r\nYou told Ann and the\r\nothers for me.\x05\x0CThis photo shows my \r\nmother any my sister...\x05"
+    const MESSAGE_2 = "You see...I...\x05\x0CI didn't like where I lived,\r\nso I left my mother and \r\nsister to strike \x05\r\non my own.\x05\x0CWhen I came back, my mother\r\nhad died and my sister had\r\ngone somewhere...\x05\x0CWhere, I just don't know...\x05\x0CThis town reminds me of that\r\nother one, long ago...\x05"
+    const MESSAGE_3 = "I'm sorry to bother you\r\nwith my story. I'm sure you\r\ndon't want to hear it...\x05"
+    const MESSAGE_4 = "Cliff is sleeping well...\x05"
+    const MESSAGE_5 = "Bed\x05"
+    if Func03E(291) == 2 && Func03E(292) == 1 && Func044() == 82
+    {
+        Proc046()
+        SetEntityAnim(23, 663)
+        Proc037(60)
+        TalkOpen()
+        Proc030(30)
+        Proc02D(23)
+        TalkMessage(MESSAGE_0)
+        Proc030(23)
+        TalkMessage(MESSAGE_1)
+        Proc030(26)
+        TalkMessage(MESSAGE_2)
+        Proc030(23)
+        TalkMessage(MESSAGE_3)
+        TalkClose()
+        SetEntityAnim(0, 294)
+        Proc037(60)
+        SetEntityAnim(23, 659)
+        Proc037(60)
+        Proc080(23, 20)
+        Proc083(23)
+    }
+    else if Func03E(292) == 1
+    {
+        TalkOpen()
+        Proc024(MESSAGE_4)
+        TalkClose()
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_5)
+        TalkClose()
+    }
+}

@@ -1,0 +1,210 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 731 EventScript_731
+{
+    const MESSAGE_0 = "...and then what do you\r\nput in? \x05"
+    const MESSAGE_1 = "You put in...\r\n...then you use the...\x05"
+    const MESSAGE_2 = "I never would have\r\nthought of that!...\x05"
+    const MESSAGE_3 = "Hi, \xFF!.\r\nCome on in. \x05"
+    const MESSAGE_4 = "Hi there, \xFF!. \x05"
+    const MESSAGE_5 = "What were we doing? \r\nAnna was just teaching me\r\nhow to make desserts. \x05\x0CShe's famous for her \r\ndesserts, you know. \x05"
+    const MESSAGE_6 = "Oh, stop flattering me, \r\nManna!...\x05"
+    const MESSAGE_7 = "It's true! \r\nYou cook too, don't you, \r\n\xFF!?\x05\x0CIn that case, you should \r\nlearn from Anna, too!\x05"
+    const MESSAGE_8 = "Learn."
+    const MESSAGE_9 = "Sorry, I'm too busy."
+    const MESSAGE_10 = "Really? \r\nI'd be glad to teach you!\x05"
+    const MESSAGE_11 = "In that case, both of you \r\nlisten to this simple and \r\neasy Cake recipe. \x05\x0CIngredients are Eggs, Flour,\r\nand Butter. \x05\x0CSeasoning is Sugar, of \r\ncourse. \r\nFirst, mix the Egg and \x05\r\nButter with a Whisk, then\r\nadd Flour and put it all in\r\nthe Oven. \x05\x0CNot too hard, is it?\r\nYou can also add all kinds\r\nof fruit to make it even \x05\r\nbetter. Or, you can add \r\nChocolate to make it a \r\nChocolate Cake!\x05"
+    const MESSAGE_12 = "Can you teach me \r\nanything else?\x05"
+    const MESSAGE_13 = "How about this...\r\nCome back again at this same\r\ntime and I'll teach you a \x05\r\nnew dish. \x05\x0CIt'll be a miniature cooking\r\nschool!\x05"
+    const MESSAGE_14 = "Really? That sounds great! \x05"
+    const MESSAGE_15 = "Sure! I'd love to!\x05"
+    const MESSAGE_16 = "You'll come too, won't \r\nyou \xFF!?\x05"
+    const MESSAGE_17 = "Aww...You're no fun!\r\nDon't you know that women \r\nlove a man who knows\x05\r\nhow to cook?\x05"
+    const MESSAGE_18 = "I'm sure he's busy, Manna. \r\nIt's tough running a farm \r\nall by yourself, after all! \x05\x0CI'll teach you, instead. \x05"
+    const MESSAGE_19 = "How about a recipe for a\r\nCake, then? Duke loves \r\nCake...\x05"
+    const MESSAGE_20 = "OK. First you...\x05"
+    var var_0
+    Proc0F2()
+    Proc016(26, 120, 208)
+    SetEntityPosition(0, 120, 208, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(11, 112, 96, 0)
+    SetEntityAnim(11, 2123)
+    SetEntityPosition(9, 88, 120, 3)
+    SetEntityAnim(9, 2256)
+    Proc035(2, 1)
+    Proc017(120, 120, 2)
+    Proc018()
+    TalkOpen()
+    Proc030(137)
+    Proc02D(9)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(111)
+    Proc02D(11)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 152, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc011(11, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(110)
+    Proc02D(11)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    SetEntityFacing(9, 0)
+    TalkOpen()
+    Proc030(137)
+    Proc02D(9)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(137)
+    Proc02D(9)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    TalkOpen()
+    Proc030(111)
+    Proc02D(11)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_8, MESSAGE_9)
+    switch var_0
+    {
+        case 1
+        {
+            TalkOpen()
+            Proc030(111)
+            Proc02D(11)
+            TalkMessage(MESSAGE_10)
+            SetEntityFacing(9, 3)
+            Proc030(110)
+            TalkMessage(MESSAGE_11)
+            TalkClose()
+            SetEntityFacing(9, 1)
+            TalkOpen()
+            Proc030(137)
+            Proc02D(9)
+            TalkMessage(MESSAGE_12)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(30)
+            if Func040() == 1
+            {
+                SetEntityAnim(0, 402)
+            }
+            else
+            {
+                SetEntityAnim(0, 338)
+            }
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_13)
+            TalkClose()
+            TalkOpen()
+            Proc030(138)
+            Proc02D(9)
+            TalkMessage(MESSAGE_14)
+            TalkClose()
+            TalkOpen()
+            Proc030(111)
+            Proc02D(11)
+            TalkMessage(MESSAGE_15)
+            TalkClose()
+            SetEntityFacing(9, 0)
+            TalkOpen()
+            Proc030(138)
+            Proc02D(9)
+            TalkMessage(MESSAGE_16)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(30)
+            if Func040() == 1
+            {
+                SetEntityAnim(0, 402)
+            }
+            else
+            {
+                SetEntityAnim(0, 338)
+            }
+            Proc080(11, 20)
+            Proc080(9, 20)
+            Proc03F(257, 1)
+        }
+        case 2
+        {
+            TalkOpen()
+            Proc030(139)
+            Proc02D(9)
+            TalkMessage(MESSAGE_17)
+            TalkClose()
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_18)
+            TalkClose()
+            SetEntityFacing(9, 1)
+            TalkOpen()
+            Proc030(138)
+            Proc02D(9)
+            TalkMessage(MESSAGE_19)
+            TalkClose()
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_20)
+            TalkClose()
+            Proc080(11, -10)
+            Proc080(9, -10)
+        }
+    }
+    Proc083(11)
+    Proc083(9)
+    Proc0F3()
+    Proc03F(256, 2)
+    Proc034(2, 1)
+    Proc016(5, 200, 168)
+    SetEntityPosition(0, 200, 168, 0)
+    PlaySong(0, 205)
+    Proc0F7(13, 0)
+    Proc035(2, 1)
+    Proc0F3()
+    exit
+}

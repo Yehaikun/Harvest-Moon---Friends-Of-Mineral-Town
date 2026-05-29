@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 923 EventScript_923
+{
+    const MESSAGE_0 = "I think of Cliff just like \r\nmy own son. \x05\x0CI'm so glad for him. \x05"
+    const MESSAGE_1 = "Ann is a good girl, so I'm\r\nhappy, too. \r\nDoug is a good guy. \x05"
+    if Func086(8) == 0
+    {
+        Proc083(8)
+    }
+    if Func085(8) == 0
+    {
+        SetEntityFacing(8, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(134)
+        Proc02D(8)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(8, 3)
+        Proc083(8)
+    }
+    else
+    {
+        SetEntityFacing(8, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(134)
+        Proc02D(8)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(8, 3)
+        Proc083(8)
+    }
+}

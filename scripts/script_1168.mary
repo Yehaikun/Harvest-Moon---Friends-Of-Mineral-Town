@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1168 EventScript_1168
+{
+    const MESSAGE_0 = "You should drink Milk \r\neveryday, you know. \x05"
+    const MESSAGE_1 = "Do you think you have a \r\nchance of winning? \x05"
+    if Func086(20) == 0
+    {
+        Proc083(20)
+    }
+    SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(411) == 0
+    {
+        TalkOpen()
+        Proc030(35)
+        Proc02D(20)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(35)
+        Proc02D(20)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(20) == 0
+    {
+        Proc080(20, 5)
+    }
+    Proc083(20)
+    SetEntityFacing(20, 0)
+}

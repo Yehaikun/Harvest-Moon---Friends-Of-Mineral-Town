@@ -1,0 +1,40 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 706 EventScript_706
+{
+    const MESSAGE_0 = "Ahh....This is the life!\x05"
+    const MESSAGE_1 = "Stop it...!\x05"
+    const MESSAGE_2 = "I'm so glad I married you, \r\nKaren. \x05"
+    const MESSAGE_3 = "Will you stop embarrasing me\r\nin front of \xFF!?\x05"
+    SetEntityFacing(19, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    if Func085(2) == 0
+    {
+        Proc030(0)
+        Proc02D(2)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(19, 3)
+        TalkOpen()
+        Proc030(76)
+        Proc02D(19)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        Proc030(1)
+        Proc02D(2)
+        TalkMessage(MESSAGE_2)
+        SetEntityFacing(19, 3)
+        TalkOpen()
+        Proc030(76)
+        Proc02D(19)
+        TalkMessage(MESSAGE_3)
+    }
+    TalkClose()
+    Proc083(2)
+    Proc083(19)
+    SetEntityFacing(2, 2)
+    SetEntityFacing(19, 3)
+    exit
+}

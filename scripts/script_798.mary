@@ -1,0 +1,50 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 798 EventScript_798
+{
+    const MESSAGE_0 = "Summer's over, so Popuri and \r\nI are leaving for the city.\x05\x0CI just wanted to say \r\ngoodbye. \x05"
+    const MESSAGE_1 = "Summer's over, so \r\nI'm leaving for the city.\x05\x0CI just wanted to say \r\ngoodbye. \x05"
+    const MESSAGE_2 = "See you next year!\x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(26, 228, 145, 1)
+    SetEntityAnim(26, 2306)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    if Func03E(126) == 2 || Func03E(127) == 2
+    {
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    SetEntityFacing(26, 3)
+    SetEntityAnim(26, 2310)
+    Proc008(26, 319, 1)
+    Proc00C(26)
+    SetEntityAnim(26, 2306)
+    SetEntityFacing(26, 2)
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    SetEntityFacing(26, 1)
+    SetEntityAnim(26, 2310)
+    Proc00A(26, 0, 1)
+    Proc00C(26)
+    Proc00F(26)
+    Proc083(26)
+    Proc03F(303, 2)
+    exit
+}

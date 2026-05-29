@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 970 EventScript_970
+{
+    const MESSAGE_0 = "Large Stone\r\nYour Hammer can't crush\r\nit unless it's LV2\x05\r\nor higher.\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

@@ -1,0 +1,238 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 168 EventScript_168
+{
+    const MESSAGE_0 = "You can't go inside\r\nwhile riding a horse!\x05"
+    var var_0, var_1, var_2
+    if GetEntityFacing(0) == 1
+    {
+        if Func064() == 1
+        {
+            TalkOpen()
+            Proc024(MESSAGE_0)
+            TalkClose()
+            exit
+        }
+        if Func0B7(29)
+        {
+            switch Func03E(1)
+            {
+                case 0
+                {
+                    Proc05C(0, 1)
+                }
+                case 1
+                {
+                    Proc05C(0, 2)
+                }
+                case 2
+                {
+                    Proc05C(0, 1)
+                }
+                case 3
+                {
+                    Proc05C(0, -1)
+                }
+            }
+        }
+        Proc03F(578, 1)
+        PlaySong(0, 156)
+        Proc034(2, 1)
+        Proc016(29, 304, 208)
+        SetEntityPosition(0, 304, 208, 1)
+        var_0 = Func03E(1)
+        var_1 = Func03E(2)
+        var_2 = Func03E(3)
+        if Func03E(437) == 0 && var_0 == 2 && var_1 == 30
+        {
+            if Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2
+            {
+                if var_2 >= 12 && var_2 < 18
+                {
+                    Proc03F(437, 1)
+                    Proc038(1293)
+                }
+            }
+        }
+        else if Func03E(461) == 0 && var_0 == 3 && var_1 == 24
+        {
+            if Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2
+            {
+                if var_2 >= 12 && var_2 < 18
+                {
+                    Proc03F(461, 1)
+                    Proc038(1306)
+                }
+            }
+        }
+        else if Func03E(85) == 2
+        {
+            if Func03E(48) == var_0 && Func03E(49) == var_1 && (Func03E(180) == 0 || Func03E(180) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(180, 1)
+                Proc038(609)
+            }
+            else if Func07E(3) == 1 && (Func03E(185) == 0 || Func03E(185) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(185, 1)
+                Proc038(624)
+            }
+            else if Func03E(8) == var_0 && Func03E(9) == var_1 && (Func03E(190) == 0 || Func03E(190) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(190, 1)
+                Proc038(639)
+            }
+            else if var_2 >= 0 && var_2 < 6
+            {
+                Proc13E(0)
+                Proc13E(1)
+                Proc08D(3)
+                Proc08D(35)
+                Proc03F(185, 2)
+                Proc03F(190, 2)
+                Proc03F(180, 2)
+            }
+        }
+        else if Func03E(95) == 2
+        {
+            if Func03E(48) == var_0 && Func03E(49) == var_1 && (Func03E(181) == 0 || Func03E(181) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(181, 1)
+                Proc038(612)
+            }
+            else if Func07E(25) == 1 && (Func03E(186) == 0 || Func03E(186) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(186, 1)
+                Proc038(627)
+            }
+            else if Func03E(8) == var_0 && Func03E(9) == var_1 && (Func03E(191) == 0 || Func03E(191) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(191, 1)
+                Proc038(642)
+            }
+            else if var_2 >= 0 && var_2 < 6
+            {
+                Proc13E(0)
+                Proc13E(1)
+                Proc08D(25)
+                Proc08D(35)
+                Proc03F(181, 2)
+                Proc03F(186, 2)
+                Proc03F(191, 2)
+            }
+        }
+        else if Func03E(111) == 2
+        {
+            if Func03E(48) == var_0 && Func03E(49) == var_1 && (Func03E(182) == 0 || Func03E(182) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(182, 1)
+                Proc038(615)
+            }
+            else if Func07E(21) == 1 && (Func03E(187) == 0 || Func03E(187) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(187, 1)
+                Proc038(630)
+            }
+            else if Func03E(8) == var_0 && Func03E(9) == var_1 && (Func03E(192) == 0 || Func03E(192) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(192, 1)
+                Proc038(645)
+            }
+            else if var_2 >= 0 && var_2 < 6
+            {
+                Proc13E(0)
+                Proc13E(1)
+                Proc08D(21)
+                Proc08D(35)
+                Proc03F(182, 2)
+                Proc03F(187, 2)
+                Proc03F(192, 2)
+            }
+        }
+        else if Func03E(76) == 2
+        {
+            if Func03E(48) == var_0 && Func03E(49) == var_1 && (Func03E(183) == 0 || Func03E(183) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(183, 1)
+                Proc038(618)
+            }
+            else if Func07E(19) == 1 && (Func03E(188) == 0 || Func03E(188) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(188, 1)
+                Proc038(633)
+            }
+            else if Func03E(8) == var_0 && Func03E(9) == var_1 && (Func03E(193) == 0 || Func03E(193) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(193, 1)
+                Proc038(648)
+            }
+            else if var_2 >= 0 && var_2 < 6
+            {
+                Proc13E(0)
+                Proc13E(1)
+                Proc08D(19)
+                Proc08D(35)
+                Proc03F(183, 2)
+                Proc03F(188, 2)
+                Proc03F(193, 2)
+            }
+        }
+        else if Func03E(103) == 2
+        {
+            if Func03E(48) == var_0 && Func03E(49) == var_1 && (Func03E(184) == 0 || Func03E(184) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(184, 1)
+                Proc038(621)
+            }
+            else if Func07E(12) == 1 && (Func03E(189) == 0 || Func03E(189) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(189, 1)
+                Proc038(636)
+            }
+            if Func03E(8) == var_0 && Func03E(9) == var_1 && (Func03E(194) == 0 || Func03E(194) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(194, 1)
+                Proc038(651)
+            }
+            else if var_2 >= 0 && var_2 < 6
+            {
+                Proc13E(0)
+                Proc13E(1)
+                Proc08D(12)
+                Proc08D(35)
+                Proc03F(184, 2)
+                Proc03F(189, 2)
+                Proc03F(194, 2)
+            }
+        }
+        else if Func03E(371) == 2
+        {
+            if Func03E(48) == var_0 && Func03E(49) == var_1 && (Func03E(374) == 0 || Func03E(374) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(374, 1)
+                Proc038(853)
+            }
+            else if Func07E(31) == 1 && (Func03E(375) == 0 || Func03E(375) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(375, 1)
+                Proc038(856)
+            }
+            if Func03E(8) == var_0 && Func03E(9) == var_1 && (Func03E(376) == 0 || Func03E(376) == 2) && (var_2 >= 18 && var_2 <= 23)
+            {
+                Proc03F(376, 1)
+                Proc038(859)
+            }
+            else if var_2 >= 0 && var_2 < 6
+            {
+                Proc13E(0)
+                Proc13E(1)
+                Proc08D(31)
+                Proc08D(35)
+                Proc03F(374, 2)
+                Proc03F(375, 2)
+                Proc03F(376, 2)
+            }
+        }
+        Proc035(2, 1)
+    }
+}

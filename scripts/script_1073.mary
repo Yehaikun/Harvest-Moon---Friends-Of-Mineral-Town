@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1073 EventScript_1073
+{
+    const MESSAGE_0 = "They're so tasty, \r\nit's easy to get stuffed\r\non 'em! \x05"
+    if Func086(8) == 0
+    {
+        Proc083(8)
+    }
+    SetEntityFacing(8, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(134)
+    Proc02D(8)
+    TalkMessage(MESSAGE_0)
+    Proc031()
+    TalkClose()
+    if Func084(8) == 0
+    {
+        Proc080(8, 5)
+    }
+    Proc083(8)
+    SetEntityFacing(8, 0)
+}

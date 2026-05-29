@@ -1,0 +1,101 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 107 EventScript_107
+{
+    const MESSAGE_0 = "Where are you going?\r\nThe fireworks are\r\nabout to start!\x05"
+    const MESSAGE_1 = "Where are you going?\r\nThe Beach Day\r\nis about to start!\x05"
+    const MESSAGE_2 = "That was fun!\r\nAlright, back to work...\x05"
+    var var_0, var_1, var_2, var_3
+    var_0 = Func03E(1)
+    var_1 = Func03E(2)
+    var_2 = Func03E(3)
+    var_3 = Func03E(4)
+    if GetEntityFacing(0) == 1
+    {
+        if Func03E(414) == 1
+        {
+            TalkOpen()
+            Proc030(0)
+            Proc02D(2)
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            exit
+        }
+        else if Func03E(122) == 1
+        {
+            Proc03F(122, 2)
+            Proc08D(3)
+            Proc08D(26)
+            Proc0F3()
+        }
+        else if Func03E(123) == 1
+        {
+            Proc03F(123, 2)
+            Proc08D(26)
+            Proc0F3()
+        }
+        else if Func03E(124) == 1
+        {
+            Proc03F(124, 2)
+            Proc08D(3)
+            Proc08D(26)
+            Proc0F3()
+        }
+        else if Func03E(149) == 1
+        {
+            Proc03F(149, 2)
+            Proc08D(20)
+            Proc08D(21)
+            Proc0F3()
+        }
+        if Func03E(404) == 1
+        {
+            if !(var_2 == 18 && var_3 == 1)
+            {
+                TalkOpen()
+                Proc030(33)
+                Proc02D(28)
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+                SetEntityFacing(0, 0)
+                exit
+            }
+            else
+            {
+                PlaySong(0, 156)
+                Proc034(2, 1)
+                if Func03E(405) == 1
+                {
+                    Proc080(13, 20)
+                    Proc080(17, 20)
+                    Proc080(18, 20)
+                    Proc080(26, 20)
+                    Proc080(3, 20)
+                    Proc080(28, 20)
+                }
+                TalkOpen()
+                TalkMessage(MESSAGE_2)
+                TalkClose()
+                Proc0F3()
+                Proc03F(404, 2)
+                Proc11C(4)
+                Proc03F(403, 0)
+                Proc08D(13)
+                Proc08D(17)
+                Proc08D(18)
+                Proc08D(26)
+                Proc08D(3)
+                Proc08D(28)
+                Proc016(35, 120, 208)
+                SetEntityPosition(0, 120, 208, 1)
+                Proc035(2, 1)
+                exit
+            }
+        }
+        PlaySong(0, 156)
+        Proc034(2, 1)
+        Proc016(35, 120, 208)
+        SetEntityPosition(0, 120, 208, 1)
+        Proc035(2, 1)
+    }
+}

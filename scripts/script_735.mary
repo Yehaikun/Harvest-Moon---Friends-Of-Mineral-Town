@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 735 EventScript_735
+{
+    const MESSAGE_0 = "My face is red...?\r\nIt's nothing, nothing...\x05"
+    SetEntityFacing(7, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(7)
+    Proc030(166)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(7)
+    SetEntityFacing(7, 2)
+    exit
+}

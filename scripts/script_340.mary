@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 340 EventScript_340
+{
+    const MESSAGE_0 = "Stairs to Basement\x05"
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+}

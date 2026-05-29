@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 162 EventScript_162
+{
+    const MESSAGE_0 = "Shipment Box\x81\xA8\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

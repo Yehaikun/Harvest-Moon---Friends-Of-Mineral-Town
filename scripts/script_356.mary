@@ -1,0 +1,197 @@
+================================ PARTIAL DECOMPILATION
+    /* Complete statements */
+    TalkOpen()
+    /* Expression */
+    push (Func03E(3) == 4 || Func03E(3) == 16) && Func03E(4) == 44
+    beq location_6
+    /* Complete statements */
+    Proc0FF(16)
+    jmp location_7
+location_6:
+    /* Expression */
+    push Func03E(6) == 3 || Func03E(6) == 4
+    beq location_12
+    /* Complete statements */
+    Proc0FF(16)
+    if Func0C9()
+    {
+        var_1 = Func0FE(0)
+    }
+    else
+    {
+        var_0 = Func03D(0, 10)
+        switch var_0
+        {
+            case 0
+            {
+                var_1 = Func0FE(1)
+            }
+            case 1, 2, 3, 4, 5
+            {
+                var_1 = Func0FE(2)
+            }
+            case 6, 7, 8, 9, 10
+            {
+                var_1 = Func0FE(3)
+            }
+        }
+    }
+    jmp location_20
+location_12:
+    /* Expression */
+    push Func03E(3) < 6
+    beq location_23
+    /* Complete statements */
+    Proc0FF(1)
+    if Func0C9()
+    {
+        var_1 = Func0FE(4)
+    }
+    else
+    {
+        var_0 = Func03D(0, 10)
+        switch var_0
+        {
+            case 0
+            {
+                var_1 = Func0FE(5)
+            }
+            case 1, 2, 3, 4, 5
+            {
+                var_1 = Func0FE(6)
+            }
+            case 6, 7, 8, 9, 10
+            {
+                var_1 = Func0FE(6)
+            }
+        }
+    }
+    jmp location_31
+location_23:
+    /* Function Call Expression */
+    push Func03E(580)
+    jmp location_32
+    /* Case blocks (switch 4) */
+    case 0
+    {
+        Proc038(1057)
+    } // breaks to location_33
+    case 3
+    {
+        Proc0FF(14)
+        Proc038(1049)
+    } // breaks to location_34
+    case 1
+    {
+        if Func03E(3) < 12
+        {
+            Proc0FF(8)
+            Proc038(1043)
+        }
+        else
+        {
+            Proc0FF(9)
+            Proc038(1044)
+        }
+    } // breaks to location_39
+    case 2
+    {
+        if Func03E(1) == 0 && (Func03E(2) == 1 || Func03E(2) == 2 || Func03E(2) == 3 || Func03E(2) == 4 || Func03E(2) == 5)
+        {
+            var_0 = Func03D(0, 1)
+            switch var_0
+            {
+                case 0
+                {
+                    Proc038(1052)
+                }
+                case 1
+                {
+                    Proc0FF(7)
+                    Proc038(1041)
+                }
+            }
+        }
+        else if Func03E(1) == 3 && (Func03E(2) == 29 || Func03E(2) == 30)
+        {
+            Proc038(1052)
+        }
+        else
+        {
+            switch Func03E(5)
+            {
+                case 0
+                {
+                    Proc0FF(2)
+                    Proc038(1034)
+                }
+                case 1
+                {
+                    Proc0FF(5)
+                    Proc038(1038)
+                }
+                case 2
+                {
+                    Proc0FF(3)
+                    Proc038(1035)
+                }
+                case 3
+                {
+                    Proc0FF(10)
+                    Proc038(1045)
+                }
+                case 4
+                {
+                    Proc0FF(17)
+                    Proc038(1054)
+                }
+                case 5
+                {
+                    Proc0FF(11)
+                    Proc038(1046)
+                }
+                case 6
+                {
+                    Proc038(1051)
+                }
+            }
+        }
+    } // breaks to location_75
+location_32:
+================================ REMAINING INSTRUCTIONS
+>   Switch(SwitchId(4))
+    Label(JumpId(75))
+    Label(JumpId(39))
+    Label(JumpId(34))
+    Label(JumpId(33))
+    Label(JumpId(31))
+    Label(JumpId(20))
+    Label(JumpId(7))
+    Call(CallId(253))
+    Call(CallId(32))
+    PushVar(VarId(1))
+    Jmp(JumpId(76))
+    Case(SwitchId(5), Val(0))
+    Case(SwitchId(5), Val(1))
+    Case(SwitchId(5), Val(2))
+    Case(SwitchId(5), Val(3))
+    PushInt(580)
+    PushVar(VarId(1))
+    Call(CallId(62))
+    PushInt(540)
+    Call(CallId(55))
+    Jmp(JumpId(77))
+    Case(SwitchId(5), Val(4))
+    Case(SwitchId(5), Val(5))
+    Jmp(JumpId(78))
+    Jmp(JumpId(79))
+    Jmp(JumpId(80))
+    Label(JumpId(76))
+    Switch(SwitchId(5))
+    Label(JumpId(80))
+    Label(JumpId(79))
+    Label(JumpId(78))
+    Label(JumpId(77))
+================================ END OF SCRIPT
+Decompile error: Couldn't reduce
+Error: ()

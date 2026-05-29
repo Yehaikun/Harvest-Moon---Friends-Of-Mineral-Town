@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 419 EventScript_419
+{
+    const MESSAGE_0 = "Barrel Shelf\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

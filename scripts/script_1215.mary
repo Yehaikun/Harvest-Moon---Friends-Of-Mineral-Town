@@ -1,0 +1,88 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1215 EventScript_1215
+{
+    const MESSAGE_0 = "That was fun! \r\nI'll sleep well tonight. \x05"
+    Proc016(12, 184, 80)
+    PlayBGM(1, 8)
+    SetEntityPosition(5, 264, 195, 1)
+    SetEntityAnim(5, 2535)
+    SetEntityPosition(12, 264, -62, 1)
+    SetEntityAnim(12, 2119)
+    SetEntityPosition(16, 296, 195, 1)
+    SetEntityAnim(16, 2232)
+    SetEntityPosition(17, 104, 195, 1)
+    SetEntityAnim(17, 1673)
+    SetEntityPosition(18, 72, 195, 1)
+    SetEntityAnim(18, 1733)
+    SetEntityPosition(19, 184, 140, 0)
+    SetEntityAnim(19, 1681)
+    SetEntityPosition(21, 166, 67, 0)
+    SetEntityAnim(21, 2180)
+    SetEntityPosition(22, 84, 100, 3)
+    SetEntityAnim(22, 2284)
+    SetEntityPosition(25, 198, 67, 0)
+    SetEntityAnim(25, 1982)
+    if Func03E(417) == 1
+    {
+        SetEntityPosition(0, 264, 120, 0)
+        SetEntityAnim(0, 402)
+        Proc080(21, 10)
+        Proc080(22, 10)
+        Proc080(5, 10)
+        Proc080(25, 10)
+        Proc080(19, 10)
+        Proc080(12, 10)
+        Proc080(17, 10)
+        Proc080(18, 10)
+        Proc080(16, 10)
+    }
+    else
+    {
+        SetEntityPosition(0, 108, 150, 1)
+        Proc06B()
+        SetEntityAnim(0, 402)
+    }
+    Proc035(2, 1)
+    StopAllSongs()
+    Proc037(60 * 4)
+    PlayBGM(1, 15)
+    if Func03E(417) == 1
+    {
+        SetEntityAnim(0, 302)
+    }
+    else
+    {
+        SetEntityAnim(0, 402)
+    }
+    SetEntityAnim(12, 2083)
+    SetEntityAnim(21, 2212)
+    SetEntityAnim(25, 2014)
+    Proc037(60 * 12)
+    SetEntityAnim(19, 1705)
+    Proc037(60 * 34)
+    SetEntityAnim(12, 2119)
+    SetEntityAnim(21, 2180)
+    SetEntityAnim(25, 1982)
+    SetEntityAnim(19, 1681)
+    SetEntityAnim(0, 402)
+    Proc037(60 * 4)
+    StopAllSongs()
+    PlaySong(0, 193)
+    Proc034(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc0F3()
+    Proc08D(21)
+    Proc08D(22)
+    Proc08D(5)
+    Proc08D(25)
+    Proc08D(19)
+    Proc08D(12)
+    Proc08D(17)
+    Proc08D(18)
+    Proc08D(16)
+    Proc03F(418, 2)
+    Proc038(988)
+}

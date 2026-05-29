@@ -1,0 +1,133 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 713 EventScript_713
+{
+    const MESSAGE_0 = "Thanks for coming, Sai. \x05"
+    const MESSAGE_1 = "Hi there, Saibara.\x05"
+    const MESSAGE_2 = "I was just passing by, so \r\nI thought I'd drop in. \x05"
+    const MESSAGE_3 = "You're welcome any \r\ntime, Sai! \x05"
+    const MESSAGE_4 = "I wish I could come visit \r\nyou, but with these legs...\r\nI can hardely walk!\x05"
+    const MESSAGE_5 = "........\x05"
+    const MESSAGE_6 = "I can't even go outside\r\nwith these legs!\x05"
+    const MESSAGE_7 = "I remember when we used to \r\ntake walks to the mountains,\r\nthe beach, and lots of \x05\r\nplaces together...!\x05\x0CToo bad we can't now,\r\nall because of these \r\ndarned legs of mine!\x05"
+    const MESSAGE_8 = "Don't say that!\r\nI'm sure your legs'll get \r\nbetter, and we can \x05\r\ntake our walks again! \x05"
+    const MESSAGE_9 = "Thanks, Sai...\x05"
+    const MESSAGE_10 = "It's nothing....\r\nErr...I guess I'll be \r\ngoing, now... \x05"
+    const MESSAGE_11 = "Oh, \xFF!!\r\nI didn't see you there.\r\nWhat are you doing here?\x05"
+    const MESSAGE_12 = "Umm...This is MY house,\r\nSaibara!\x05"
+    const MESSAGE_13 = "Oh! You're right...\r\nSorry...! Bye now...\x05"
+    const MESSAGE_14 = "Saibara can be so\r\nstrange sometimes!\x05"
+    Proc016(14, 84, 156)
+    SetEntityPosition(15, 128, 96, 0)
+    SetEntityAnim(15, 1669)
+    SetEntityPosition(6, 128, 240, 1)
+    SetEntityAnim(6, 2465)
+    SetEntityPosition(16, 176, 118, 2)
+    SetEntityAnim(16, 2232)
+    SetEntityPosition(0, 84, 156, 3)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    PlaySong(0, 156)
+    SetEntityAnim(6, 2469)
+    Proc00A(6, 118, 1)
+    Proc00C(6)
+    SetEntityAnim(6, 2465)
+    Proc037(30)
+    TalkOpen()
+    Proc030(63)
+    Proc02D(15)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(128)
+    Proc02D(16)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(169)
+    Proc02D(6)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(64)
+    Proc02D(15)
+    TalkMessage(MESSAGE_3)
+    Proc030(66)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(168)
+    Proc02D(6)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    TalkOpen()
+    Proc030(66)
+    Proc02D(15)
+    TalkMessage(MESSAGE_6)
+    Proc030(64)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    Proc011(6, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(169)
+    Proc02D(6)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    Proc037(60)
+    TalkOpen()
+    Proc030(64)
+    Proc02D(15)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    Proc030(168)
+    Proc02D(6)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    SetEntityFacing(6, 2)
+    Proc011(6, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(168)
+    Proc02D(6)
+    TalkMessage(MESSAGE_11)
+    TalkClose()
+    TalkOpen()
+    Proc030(129)
+    Proc02D(16)
+    TalkMessage(MESSAGE_12)
+    TalkClose()
+    Proc011(6, 4, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(168)
+    Proc02D(6)
+    TalkMessage(MESSAGE_13)
+    TalkClose()
+    SetEntityAnim(6, 2469)
+    SetEntityFacing(6, 0)
+    Proc00A(6, 240, 1)
+    Proc00C(6)
+    PlaySong(0, 205)
+    Proc00F(6)
+    Proc037(30)
+    TalkOpen()
+    Proc030(129)
+    Proc02D(16)
+    TalkMessage(MESSAGE_14)
+    TalkClose()
+    Proc037(30)
+    Proc03F(240, 1)
+    Proc083(6)
+    Proc080(15, 20)
+    Proc080(6, 20)
+    Proc080(16, 20)
+}

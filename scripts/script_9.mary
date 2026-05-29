@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 9 EventScript_9
+{
+    const MESSAGE_0 = "Here here...\r\nGet big and strong now.\x05"
+    var var_0
+    var_0 = HasAnimalBeenTalkedTo(0, 0)
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    PlaySong(0, 167)
+    if !var_0
+    {
+        Proc011(44, 1, 0)
+        SetAnimalTalkedTo(0, 0)
+        Proc109(0, 0, 1)
+    }
+}

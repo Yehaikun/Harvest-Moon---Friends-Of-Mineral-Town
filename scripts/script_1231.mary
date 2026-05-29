@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1231 EventScript_1231
+{
+    const MESSAGE_0 = "We have to be careful \r\nand watch Karen. \x05\x0CLast year she put \r\nChocolate in! \x05"
+    if Func086(18) == 0
+    {
+        Proc083(18)
+    }
+    SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(81)
+    Proc02D(18)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(18) == 0
+    {
+        Proc080(18, 5)
+    }
+    SetEntityFacing(18, 2)
+    Proc083(18)
+}

@@ -1,0 +1,54 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 818 EventScript_818
+{
+    const MESSAGE_0 = "You again? \r\nYou've already collected \r\nall the Kappa Jewels, so \x05\r\nI'll exchange them for the \r\nKappa Gem if you promise\r\nnot to come back!\x05"
+    Proc036(0, 0)
+    Proc036(0, 0)
+    Proc034(0, 1)
+    if GetEntityX(0) > 160
+    {
+        SetEntityPosition(32, GetEntityX(0) - 16, GetEntityY(0), 0)
+    }
+    else
+    {
+        SetEntityPosition(32, GetEntityX(0) + 16, GetEntityY(0), 0)
+    }
+    SetEntityAnim(32, 2046)
+    Proc035(0, 1)
+    if GetEntityX(0) > 160
+    {
+        SetEntityFacing(32, 3)
+        Proc037(10)
+        SetEntityFacing(0, 2)
+    }
+    else
+    {
+        SetEntityFacing(32, 2)
+        Proc037(10)
+        SetEntityFacing(0, 3)
+    }
+    TalkOpen()
+    Proc02D(32)
+    Proc030(98)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc034(0, 1)
+    Proc00F(32)
+    Proc046()
+    Proc061(38)
+    Proc036(1, 1)
+    PlaySong(0, 182)
+    Proc05B(79)
+    Proc037(50)
+    SetEntityAnim(0, 402)
+    if Func050() == -1
+    {
+        Proc051(79, 1)
+    }
+    else
+    {
+        Func05A(79, 1)
+    }
+    Proc03F(332, 2)
+}

@@ -1,0 +1,56 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 441 EventScript_441
+{
+    const MESSAGE_0 = "Cheese Maker\r\nPlace Milk here to \r\nmake Cheese\x05"
+    var var_0, var_1
+    var_0 = 0
+    if !Func040() && Func041() == 0 && !Func042()
+    {
+        var_1 = Func043()
+        switch var_1
+        {
+            case 28, 29, 30, 31, 32, 33
+            {
+                var_0 = 1
+            }
+        }
+    }
+    if var_0
+    {
+        Proc046()
+        switch var_1
+        {
+            case 28
+            {
+                Proc048(34)
+            }
+            case 29
+            {
+                Proc048(35)
+            }
+            case 30
+            {
+                Proc048(36)
+            }
+            case 31
+            {
+                Proc048(37)
+            }
+            case 32
+            {
+                Proc048(38)
+            }
+            case 33
+            {
+                Proc048(39)
+            }
+        }
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+}

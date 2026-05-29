@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 948 EventScript_948
+{
+    const MESSAGE_0 = "I'm so grateful to Elli \r\nand the Doctor. \x05"
+    SetEntityFacing(15, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(64)
+    Proc02D(15)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(15, 0)
+    Proc083(15)
+}

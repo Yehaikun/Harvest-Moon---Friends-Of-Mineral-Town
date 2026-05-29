@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1272 EventScript_1272
+{
+    const MESSAGE_0 = "Looking at these Sheep just\r\nputs me in a good mood.\x05"
+    const MESSAGE_1 = "I'll be praying for\r\nyour Sheep. \x05"
+    if Func086(14) == 0
+    {
+        Proc083(14)
+    }
+    SetEntityFacing(14, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(431) == 0
+    {
+        TalkOpen()
+        Proc030(145)
+        Proc02D(14)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(146)
+        Proc02D(14)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(14) == 0
+    {
+        Proc080(14, 5)
+    }
+    Proc083(14)
+    SetEntityFacing(14, 0)
+}

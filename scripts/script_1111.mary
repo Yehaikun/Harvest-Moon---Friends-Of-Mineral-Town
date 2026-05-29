@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1111 EventScript_1111
+{
+    const MESSAGE_0 = "You're going to enter \r\nthis year, \xFF!? \r\nThat's great! I love seeing\x05\r\nmen cook, you know. \r\nMy husband can't cook\r\nat all...\r\nI'll be rooting for you! \x05"
+    if Func086(9) == 0
+    {
+        Proc083(9)
+    }
+    SetEntityFacing(9, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(137)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_0)
+    TalkClose()
+    if Func084(9) == 0
+    {
+        Proc080(9, 5)
+    }
+    SetEntityFacing(9, 2)
+    Proc083(9)
+}

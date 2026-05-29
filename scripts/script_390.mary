@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 390 EventScript_390
+{
+    const MESSAGE_0 = "I haven't cleaned upstairs\r\nyet, so please don't \r\ngo up there.\x05"
+    if GetEntityFacing(0) == 1
+    {
+        if Func03E(251) == 1
+        {
+            TalkOpen()
+            Proc030(137)
+            Proc02D(9)
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            SetEntityFacing(0, 0)
+            if Func040() == 1
+            {
+                SetEntityAnim(0, 454)
+            }
+            else
+            {
+                SetEntityAnim(0, 342)
+            }
+            Proc00A(0, 128, 1)
+            Proc00C(0)
+            if Func040() == 1
+            {
+                SetEntityAnim(0, 402)
+            }
+            else
+            {
+                SetEntityAnim(0, 338)
+            }
+            exit
+        }
+        Proc034(2, 1)
+        Proc016(32, 216, 64)
+        SetEntityPosition(0, 216, 64, 1)
+        Proc035(2, 1)
+    }
+}

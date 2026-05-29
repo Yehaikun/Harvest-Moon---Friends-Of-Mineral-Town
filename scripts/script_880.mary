@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 880 EventScript_880
+{
+    const MESSAGE_0 = "This does feel kind of \r\nstrange. After all, I've\r\nknown Karen for ever. \x05"
+    const MESSAGE_1 = "But, I like being with her\r\nmore than anybody. I guess\r\nI always knew this would \x05\r\nhappen. \x05"
+    if Func086(2) == 0
+    {
+        Proc083(2)
+    }
+    if Func085(2) == 0
+    {
+        SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(6)
+        Proc02D(2)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(2, 0)
+        Proc083(2)
+    }
+    else
+    {
+        SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(6)
+        Proc02D(2)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(2, 0)
+        Proc083(2)
+    }
+}

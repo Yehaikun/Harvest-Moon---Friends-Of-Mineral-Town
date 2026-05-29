@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 504 EventScript_504
+{
+    const MESSAGE_0 = "Poultry Farm\r\nOpen 11AM-4PM\r\nClosed every Sunday\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

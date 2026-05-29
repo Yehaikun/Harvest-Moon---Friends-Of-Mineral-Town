@@ -1,0 +1,109 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 978 EventScript_978
+{
+    const MESSAGE_0 = "Go down?"
+    const MESSAGE_1 = "Yes"
+    const MESSAGE_2 = "No"
+    const MESSAGE_3 = "It's morning...\x05"
+    const MESSAGE_4 = "Underground in the mine\r\nnear the spring,\r\nlevel \xFF%\x05"
+    const MESSAGE_5 = "Underground in the mine\r\nnear the lake,\r\nlevel \xFF%\x05"
+    var var_0, var_1, var_2, var_3, var_4, var_5, var_6
+    TalkOpen()
+    var_0 = Func025(MESSAGE_0, MESSAGE_1, MESSAGE_2)
+    TalkClose()
+    switch var_0
+    {
+        case 1
+        {
+            Proc034(3, 1)
+            Proc139()
+            Proc035(3, 1)
+            var_3 = Func03E(3)
+            var_4 = Func03E(4)
+            if var_4 == 59
+            {
+                var_4 = 0
+                if var_3 == 23
+                {
+                    var_3 = 0
+                }
+                else
+                {
+                    var_3++
+                }
+            }
+            else
+            {
+                var_4++
+            }
+            Proc0F7(var_3, var_4)
+            if var_3 == 6 && var_4 == 0
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_3)
+                TalkClose()
+                var_5 = Func03E(12)
+                Proc068()
+                Proc05C(0, 10)
+                var_6 = Func03E(12)
+                if var_5 < var_6
+                {
+                    if var_6 == 100
+                    {
+                        SetEntityAnim(0, 282)
+                        Proc037(194)
+                        Proc038(694)
+                    }
+                    else if var_5 < 80 && 80 <= var_6
+                    {
+                        SetEntityAnim(0, 286)
+                        Proc037(282)
+                    }
+                    else if var_5 < 50 && 50 <= var_6
+                    {
+                        SetEntityAnim(0, 290)
+                        Proc037(240)
+                    }
+                }
+                Proc034(2, 1)
+                Proc038(980)
+            }
+            var_1 = GetEntityLocation(0)
+            if 52 <= var_1 && var_1 < 52 + 256
+            {
+                var_2 = var_1 - 52
+                if Func03E(365) == 0 && var_2 == 100
+                {
+                    Proc038(842)
+                }
+                else if Func03E(366) == 0 && var_2 == 200
+                {
+                    Proc038(843)
+                }
+                else if Func03E(367) == 0 && var_2 == 255
+                {
+                    Proc038(844)
+                }
+                else
+                {
+                    Proc039(0, var_2)
+                    TalkOpen()
+                    Proc024(MESSAGE_4)
+                    TalkClose()
+                }
+            }
+            else if 308 <= var_1 && var_1 < 308 + 256
+            {
+                var_2 = var_1 - 308
+                Proc039(0, var_2)
+                TalkOpen()
+                Proc024(MESSAGE_5)
+                TalkClose()
+            }
+        }
+        case 2
+        {
+        }
+    }
+}

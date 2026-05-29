@@ -1,0 +1,25 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 416 EventScript_416
+{
+    const MESSAGE_0 = "Right now I'm organizing\r\nthe wine shelves, so \r\ndon't go down there, OK?\x05"
+    if GetEntityFacing(0) == 0
+    {
+        if Func03E(133) == 1
+        {
+            TalkOpen()
+            Proc030(133)
+            Proc02D(8)
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            Proc00A(0, GetEntityY(0) - 2, 1)
+            Proc017(GetEntityX(0), GetEntityY(0) - 2, 1)
+            Proc00C(0)
+            exit
+        }
+        Proc034(2, 1)
+        Proc016(34, 120, 152)
+        SetEntityPosition(0, 120, 152, 0)
+        Proc035(2, 1)
+    }
+}

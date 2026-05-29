@@ -1,0 +1,106 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1297 EventScript_1297
+{
+    const MESSAGE_0 = "This is from me. \r\nI hope you like it. \x05"
+    const MESSAGE_1 = "This is for the Cookies\r\nyou gave me in Spring. \x05"
+    const MESSAGE_2 = "I came to give you \r\nsomething. \x05"
+    var var_0
+    Proc03F(444, 1)
+    var_0 = GetEntityFacing(19)
+    SetEntityFacing(19, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(19)
+    if Func040()
+    {
+        if Func03E(386) == 0
+        {
+            Proc030(73)
+            Proc032(19)
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            SetEntityAnim(19, 1689)
+            Proc037(60)
+            SetEntityAnim(19, 1681)
+            SetEntityAnim(0, 326)
+            PlaySong(0, 106)
+            if Func089(19) >= 40000
+            {
+                Proc04A(144)
+            }
+            else if Func089(19) < 40000
+            {
+                Proc04A(69)
+            }
+            Proc03F(445, 1)
+            Proc08A(19, 1000)
+            SetEntityAnim(0, 338)
+            if GetEntityX(19) != 340
+            {
+                SetEntityFacing(19, 3)
+                SetEntityAnim(19, 1685)
+                Proc008(19, 340, 1)
+                Proc00C(19)
+                SetEntityAnim(19, 1681)
+            }
+            SetEntityFacing(19, 1)
+            SetEntityAnim(19, 1685)
+            Proc00A(19, 0, 1)
+            Proc00C(19)
+            SetEntityAnim(19, 1681)
+            Proc00F(19)
+            Proc03F(444, 2)
+            Proc101()
+        }
+        else
+        {
+            Proc030(73)
+            Proc032(19)
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+            SetEntityAnim(19, 1689)
+            Proc037(60)
+            SetEntityAnim(19, 1681)
+            SetEntityAnim(0, 326)
+            PlaySong(0, 106)
+            if Func089(19) >= 40000
+            {
+                Proc04A(144)
+            }
+            else if Func089(19) < 40000
+            {
+                Proc04A(69)
+            }
+            Proc03F(445, 1)
+            Proc03F(386, 0)
+            Proc08A(19, 1000)
+            SetEntityAnim(0, 338)
+            if GetEntityX(19) != 340
+            {
+                SetEntityFacing(19, 3)
+                SetEntityAnim(19, 1685)
+                Proc008(19, 340, 1)
+                Proc00C(19)
+                SetEntityAnim(19, 1681)
+            }
+            SetEntityFacing(19, 1)
+            SetEntityAnim(19, 1685)
+            Proc00A(19, 0, 1)
+            Proc00C(19)
+            SetEntityAnim(19, 1681)
+            Proc00F(19)
+            Proc03F(444, 2)
+            Proc101()
+        }
+    }
+    else
+    {
+        Proc030(73)
+        Proc032(19)
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        Proc03F(444, 0)
+    }
+    SetEntityFacing(19, var_0)
+    Proc083(19)
+}

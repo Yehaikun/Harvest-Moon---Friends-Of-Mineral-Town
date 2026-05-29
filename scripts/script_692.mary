@@ -1,0 +1,39 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 692 EventScript_692
+{
+    const MESSAGE_0 = "Beach Day is today at the\r\nBeach from 10 AM on. \x05\x0CRight now I'm getting ready\r\nfor it.\x05\x0CYou should come, too. \x05"
+    var var_0, var_1, var_2
+    Proc016(1, 24, 280)
+    PlayBGM(1, 12)
+    SetEntityPosition(0, 24, 280, 3)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(13, 48, 280, 2)
+    SetEntityAnim(13, 2143)
+    Proc035(2, 1)
+    var_0 = Func03E(1)
+    var_1 = Func03E(2)
+    var_2 = Func03E(3)
+    Proc03F(226, 1)
+    if Func03E(404) == 0 && var_0 == 1 && var_1 == 1
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(117)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc03F(226, 2)
+        Proc034(2, 1)
+        Proc016(6, 456, 128)
+        SetEntityPosition(0, 456, 128, 2)
+        Proc035(2, 1)
+        exit
+    }
+}

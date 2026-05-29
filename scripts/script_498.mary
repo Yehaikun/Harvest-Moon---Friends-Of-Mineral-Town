@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 498 EventScript_498
+{
+    const MESSAGE_0 = "\x81\xAANorth side of Mineral Town\r\n\x81@Central Mineral Town\x81\xA8\r\n\x81\xABSouth side of Mineral Town\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

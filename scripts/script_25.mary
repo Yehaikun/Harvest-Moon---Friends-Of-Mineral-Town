@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 25 EventScript_25
+{
+    const MESSAGE_0 = "I wanted you to go with\r\nKaren to pick up the Wine,\r\nbut if you're really too\x05\r\nbusy...\x05"
+    if Func03E(73) == 1
+    {
+
+    }
+    SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(67)
+    Proc02D(17)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(17, 0)
+    Proc083(17)
+}

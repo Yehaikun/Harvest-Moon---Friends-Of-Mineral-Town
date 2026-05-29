@@ -1,0 +1,116 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 953 EventScript_953
+{
+    const MESSAGE_0 = "Doctor, is there some reason\r\nyou asked for me? \x05"
+    const MESSAGE_1 = "Ahem...Um...Let's see...\x05"
+    const MESSAGE_2 = "Doctor...?\x05"
+    const MESSAGE_3 = "I've never done this \r\nbefore, you see...\x05"
+    const MESSAGE_4 = "Done what...?\x05"
+    const MESSAGE_5 = "...How is your grandmother?\x05"
+    const MESSAGE_6 = "I'm trying to massage her\r\nlegs everyday. That makes\r\nit a little better...\x05\x0CI still hope to heal her\r\ncompletely, though!\x05"
+    const MESSAGE_7 = "Elli, you are so strong...\r\nI think that's why I \r\nfell in love with you...\x05"
+    const MESSAGE_8 = "...Wh-what did you just say?\x05"
+    const MESSAGE_9 = "Elli. I want you to stay \r\nwith me always. I couldn't \r\ndo anything without you. \x05"
+    const MESSAGE_10 = "You...you really mean it? \x05"
+    const MESSAGE_11 = "Yes. I want you by my \r\nside... always. \x05"
+    Proc016(1, 240, 334)
+    PlayBGM(1, 16)
+    SetEntityPosition(0, 24, 280, 3)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(21, 240, 348, 3)
+    SetEntityAnim(21, 2180)
+    SetEntityPosition(20, 240, 312, 3)
+    SetEntityAnim(20, 800)
+    if GetEntityLocation(19) == 1
+    {
+        Proc00F(19)
+    }
+    if GetEntityLocation(26) == 1
+    {
+        Proc00F(26)
+    }
+    Proc035(2, 1)
+    SetEntityFacing(21, 1)
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(20, 0)
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(39)
+    Proc02D(20)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc011(21, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    Proc011(20, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    Proc030(126)
+    Proc02D(21)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    Proc011(21, 1, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(126)
+    Proc02D(21)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_11)
+    TalkClose()
+    Proc017(24, 280, 2)
+    Proc018()
+    Proc0F2()
+    Proc08C(20, 954)
+    Proc08C(21, 955)
+    Proc03F(149, 1)
+    exit
+}

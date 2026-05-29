@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 150 EventScript_150
+{
+    const MESSAGE_0 = "Who is this photo of...?\x05"
+    const MESSAGE_1 = "It's a photo of Lillia.\x05"
+    TalkOpen()
+    if Func086(1) == 0
+    {
+        Proc024(MESSAGE_0)
+    }
+    else
+    {
+        Proc024(MESSAGE_1)
+    }
+    TalkClose()
+}

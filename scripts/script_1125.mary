@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1125 EventScript_1125
+{
+    const MESSAGE_0 = "I always try to cook like\r\nmom-made. That's what I do\r\nall the time, so I think \r\nI've got a decent chance!\x05"
+    if Func086(9) == 0
+    {
+        Proc083(9)
+    }
+    SetEntityFacing(9, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(137)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_0)
+    TalkClose()
+    if Func084(9) == 0
+    {
+        Proc080(9, 5)
+    }
+    SetEntityFacing(9, 2)
+    Proc083(9)
+}

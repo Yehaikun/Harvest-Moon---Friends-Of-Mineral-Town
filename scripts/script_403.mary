@@ -1,0 +1,116 @@
+================================ PARTIAL DECOMPILATION
+    /* Complete statements */
+    TalkOpen()
+    /* Function Call Expression */
+    push Func0C9()
+    beq location_0
+    /* Complete statements */
+    Proc024(0)
+    jmp location_1
+location_0:
+    /* Function Call Expression */
+    push Func03E(1)
+    jmp location_2
+    /* Case blocks (switch 4) */
+    case 0
+    {
+        switch Func03E(2)
+        {
+            case 1
+            {
+                Proc024(1)
+            }
+            case 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+            {
+                Proc024(2)
+            }
+            case 19, 20, 21, 22
+            {
+                Proc024(3)
+            }
+            case 23, 24, 25, 26, 27, 28, 29, 30
+            {
+                Proc024(4)
+            }
+        }
+    } // breaks to location_9
+    case 1
+    {
+        switch Func03E(2)
+        {
+            case 1, 2, 3, 4, 5, 6, 7
+            {
+                Proc024(5)
+            }
+            case 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+            {
+                Proc024(6)
+            }
+            case 21, 22, 23, 24
+            {
+                Proc024(7)
+            }
+            case 25, 26, 27, 28, 29, 30
+            {
+                Proc024(8)
+            }
+        }
+    } // breaks to location_16
+    case 2
+    {
+        switch Func03E(2)
+        {
+            case 1, 2, 3
+            {
+                Proc024(8)
+            }
+            case 4, 5, 6, 7, 8, 9
+            {
+                Proc024(9)
+            }
+            case 10, 11, 12, 13, 14, 15, 16, 17, 18
+            {
+                Proc024(10)
+            }
+            case 19, 20, 21
+            {
+                Proc024(11)
+            }
+            case 22, 23, 24, 25, 26, 27, 28, 29, 30
+            {
+                Proc024(12)
+            }
+        }
+    } // breaks to location_24
+case 3:
+    /* Function Call Expression */
+    push Func03E(2)
+    jmp location_25
+    /* Case blocks (switch 3) */
+    case 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25
+    {
+        Proc024(12)
+    } // breaks to location_26
+    case 26, 27, 28, 29, 30
+    {
+        Proc024(13)
+    } // breaks to location_27
+location_25:
+================================ REMAINING INSTRUCTIONS
+>   Switch(SwitchId(3))
+    Label(JumpId(27))
+    Label(JumpId(26))
+    Jmp(JumpId(28))
+    Jmp(JumpId(29))
+    Label(JumpId(2))
+    Switch(SwitchId(4))
+    Label(JumpId(29))
+    Label(JumpId(28))
+    Label(JumpId(24))
+    Label(JumpId(16))
+    Label(JumpId(9))
+    Label(JumpId(1))
+    Call(CallId(32))
+================================ END OF SCRIPT
+Decompile error: Couldn't reduce
+Error: ()

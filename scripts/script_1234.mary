@@ -1,0 +1,26 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1234 EventScript_1234
+{
+    const MESSAGE_0 = "Is it just me, or is the \r\nwhole thing out of control? \x05"
+    if Func086(12) == 0
+    {
+        Proc083(12)
+    }
+    SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(105)
+    Proc02D(12)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(142) == 2 || Func03E(143) == 2)
+    {
+        Proc032(12)
+    }
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(12) == 0
+    {
+        Proc080(12, 5)
+    }
+    SetEntityFacing(12, 1)
+    Proc083(12)
+}

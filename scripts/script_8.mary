@@ -1,0 +1,64 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 8 EventScript_8
+{
+    const MESSAGE_0 = "Ah...your\xFF%\r\nis sick.\x05"
+    const MESSAGE_1 = "\xFF% is pregnant.\r\nShe'll give birth soon.\x05"
+    const MESSAGE_2 = "\xFF% is pregnant.\r\nThe baby is due in\r\nabout \xFF& days.\x05"
+    const MESSAGE_3 = "Hmmm...\xFF%\r\ndoesn't seem too happy.\x05"
+    const MESSAGE_4 = "Hi, \xFF%.\r\nYou seem happy today!\x05"
+    var var_0, var_1, var_2
+    var_0 = Func106()
+    var_1 = 21 - Func10D(1, var_0)
+    var_2 = HasAnimalBeenTalkedTo(1, var_0)
+    GetAnimalName(0, 1, var_0)
+    if GetAnimalAge(1, var_0)
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc011(54 + var_0, 7, 0)
+    }
+    else if Func10C(1, var_0)
+    {
+        Proc039(1, var_1)
+        TalkOpen()
+        if var_1 < 2
+        {
+            TalkMessage(MESSAGE_1)
+        }
+        else
+        {
+            TalkMessage(MESSAGE_2)
+        }
+        TalkClose()
+        PlaySong(0, 161)
+        if !var_2
+        {
+            Proc011(54 + var_0, 1, 0)
+        }
+    }
+    else if Func10A(1, var_0)
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_3)
+        TalkClose()
+        Proc011(54 + var_0, 6, 0)
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_4)
+        TalkClose()
+        PlaySong(0, 161)
+        if !var_2
+        {
+            Proc011(54 + var_0, 1, 0)
+        }
+    }
+    if !var_2
+    {
+        SetAnimalTalkedTo(1, var_0)
+        Proc109(1, var_0, 1)
+    }
+}

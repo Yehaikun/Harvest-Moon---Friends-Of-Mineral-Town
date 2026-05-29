@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 30 EventScript_30
+{
+    const MESSAGE_0 = "So I have to eat Karen's\r\ncooking?...\x05\x0CJust the thought makes\r\nme queasy!\x05"
+    if Func03E(74) == 1
+    {
+
+    }
+    SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(71)
+    Proc02D(17)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(17, 1)
+    Proc083(17)
+}

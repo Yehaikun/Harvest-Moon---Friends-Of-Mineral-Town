@@ -1,0 +1,181 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 932 EventScript_932
+{
+    const MESSAGE_0 = "Mary, your novel was \r\nreally great! \x05"
+    const MESSAGE_1 = "You mean it?\r\nThat makes me glad I \r\nwrote it. \x05"
+    const MESSAGE_2 = "I think you'll get even \r\nbetter with practice! \x05"
+    const MESSAGE_3 = "And I can't do anything...\x05"
+    const MESSAGE_4 = "What's wrong, Gray? \x05"
+    const MESSAGE_5 = "I just don't get any better \r\nat being a blacksmith! \x05\x0CI don't have any talent, \r\nunlike you...\x05"
+    const MESSAGE_6 = "That's wrong, Gray! \x05"
+    const MESSAGE_7 = "Why? \x05"
+    const MESSAGE_8 = "Hmm...\r\nDo you like being a \r\nblacksmith, Gray?\x05"
+    const MESSAGE_9 = "......I guess so.\x05"
+    const MESSAGE_10 = "Do you like it or not?\x05"
+    const MESSAGE_11 = "I think whatever you are\r\ntrying to do...\r\nA blacksmith or an author.\x05\x0CIf you really love what you\r\ndo, you'll be good at it.\x05"
+    const MESSAGE_12 = "Of course, I can't write \r\nreal novels, yet. \x05"
+    const MESSAGE_13 = "But I want to, more than \r\nanything. So I work hard \r\nat it. \x05"
+    const MESSAGE_14 = "Mary...\x05"
+    const MESSAGE_15 = "So, if you really love being\r\na blacksmith, then \r\neventually you'll improve.\x05"
+    const MESSAGE_16 = "Shall we get back now?\x05"
+    const MESSAGE_17 = "Sure. \x05"
+    Proc016(8, 237, 276)
+    PlayBGM(1, 16)
+    SetEntityPosition(12, 224, 406, 1)
+    SetEntityAnim(12, 2067)
+    SetEntityPosition(7, 255, 406, 1)
+    SetEntityAnim(7, 2441)
+    Proc035(2, 1)
+    SetEntityAnim(12, 2071)
+    SetEntityAnim(7, 2445)
+    Proc00A(12, 284, 1)
+    Proc00A(7, 284, 1)
+    Proc00C(12)
+    Proc00C(7)
+    SetEntityAnim(12, 2067)
+    SetEntityAnim(7, 2441)
+    Proc037(30)
+    SetEntityFacing(12, 3)
+    SetEntityFacing(7, 2)
+    Proc037(60)
+    TalkOpen()
+    Proc030(161)
+    Proc02D(7)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(104)
+    Proc02D(12)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    Proc011(12, 5, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_2)
+    Proc030(163)
+    Proc02D(7)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(106)
+    Proc02D(12)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc011(7, 6, 0)
+    Proc011(12, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(163)
+    Proc02D(7)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(12, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(105)
+    Proc02D(12)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    Proc030(106)
+    Proc02D(12)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    Proc030(106)
+    Proc02D(12)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    Proc011(7, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_11)
+    Proc030(104)
+    Proc02D(12)
+    TalkMessage(MESSAGE_12)
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_13)
+    TalkClose()
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_14)
+    TalkClose()
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_15)
+    TalkClose()
+    Proc011(7, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_16)
+    TalkClose()
+    TalkOpen()
+    Proc030(163)
+    Proc02D(7)
+    TalkMessage(MESSAGE_17)
+    TalkClose()
+    SetEntityFacing(12, 0)
+    SetEntityFacing(7, 0)
+    SetEntityAnim(12, 2071)
+    SetEntityAnim(7, 2445)
+    Proc00A(12, 406, 1)
+    Proc00A(7, 406, 1)
+    Proc00C(12)
+    Proc00C(7)
+    SetEntityAnim(12, 2067)
+    SetEntityAnim(7, 2441)
+    Proc00F(12)
+    Proc00F(7)
+    Proc034(2, 1)
+    Proc03F(140, 2)
+    Proc016(8, 236, 411)
+    SetEntityPosition(0, 236, 500, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 464, 1)
+    Proc00C(0)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    exit
+}

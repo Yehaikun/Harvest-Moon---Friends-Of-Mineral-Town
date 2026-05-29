@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 962 EventScript_962
+{
+    const MESSAGE_0 = "We may not look like it, but\r\nthe Doctor and I are \r\nthe same age. \x05\x0CWe used to play together...\x05"
+    const MESSAGE_1 = "We used to say how we wanted\r\nto help the people of this \r\ntown somehow. \x05"
+    if Func086(14) == 0
+    {
+        Proc083(14)
+    }
+    if Func085(14) == 0
+    {
+        SetEntityFacing(14, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(145)
+        Proc02D(14)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(14, 3)
+        Proc083(14)
+    }
+    else
+    {
+        SetEntityFacing(14, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(146)
+        Proc02D(14)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(14, 3)
+        Proc083(14)
+    }
+}

@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 961 EventScript_961
+{
+    const MESSAGE_0 = "Elli's so pretty! \x05"
+    const MESSAGE_1 = "I bet he'll be surprised\r\nwhen he eats Elli's cooking!\x05"
+    if Func086(16) == 0
+    {
+        Proc083(16)
+    }
+    if Func085(16) == 0
+    {
+        SetEntityFacing(16, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(128)
+        Proc02D(16)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(16, 2)
+        Proc083(16)
+    }
+    else
+    {
+        SetEntityFacing(16, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(129)
+        Proc02D(16)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(16, 2)
+        Proc083(16)
+    }
+}

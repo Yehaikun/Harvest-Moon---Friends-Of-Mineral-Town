@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 972 EventScript_972
+{
+    const MESSAGE_0 = "Your Axe can't\r\ncut this stump unless it's\r\nLV2 or higher.\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

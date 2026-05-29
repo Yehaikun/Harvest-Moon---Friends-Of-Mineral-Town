@@ -1,0 +1,106 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 740 EventScript_740
+{
+    const MESSAGE_0 = "Sorry to bother you \r\nso late, but can I ask \r\nyou something? \x05"
+    const MESSAGE_1 = "Sure."
+    const MESSAGE_2 = "Not now."
+    const MESSAGE_3 = "You see...I have a secret \r\ncrush on Aja, Duke and \r\nManna's daughter who's \x05\r\nliving in the city.\x05"
+    const MESSAGE_4 = "I want to write her a \r\nletter, but I'm kind of\r\nstuck...\x05"
+    const MESSAGE_5 = "I thought that you might\r\nbe a good person to ask \r\nadvice from. \x05\x0CDo you have any idea \r\nwhat I should write to Aja?\x05"
+    const MESSAGE_6 = "Tell her how you feel."
+    const MESSAGE_7 = "Think for yourself."
+    const MESSAGE_8 = "You're right! I'm \r\nthinking too much about it,\r\nI guess. Simple is best. \x05"
+    const MESSAGE_9 = "Thanks to your advice, \r\nI've decided to take a \r\nchance and just tell \x05\r\nAja how I feel. \x05\x0CThanks a lot!\x05"
+    const MESSAGE_10 = "OK...Sorry to\r\nbother you...\x05"
+    const MESSAGE_11 = "OK...Sorry to bother you. \x05\x0CDon't forget to lock you \r\ndoors at night. \x05"
+    var var_0
+    SetEntityPosition(14, 228, 145, 1)
+    SetEntityAnim(14, 2276)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(148)
+    Proc02D(14)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_1, MESSAGE_2)
+    switch var_0
+    {
+        case 1
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(148)
+            Proc02D(14)
+            TalkMessage(MESSAGE_3)
+            TalkClose()
+            Proc011(0, 2, 0)
+            Proc037(60)
+            TalkOpen()
+            Proc030(148)
+            Proc02D(14)
+            TalkMessage(MESSAGE_4)
+            Proc030(145)
+            TalkMessage(MESSAGE_5)
+            TalkClose()
+            TalkOpen()
+            var_0 = TalkChoice2(MESSAGE_6, MESSAGE_7)
+            switch var_0
+            {
+                case 1
+                {
+                    Proc03F(268, 0)
+                    Proc080(14, 20)
+                    TalkClose()
+                    TalkOpen()
+                    Proc030(145)
+                    Proc02D(14)
+                    TalkMessage(MESSAGE_8)
+                    Proc030(146)
+                    TalkMessage(MESSAGE_9)
+                    TalkClose()
+                }
+                case 2
+                {
+                    Proc080(14, -20)
+                    Proc03F(268, 1)
+                    TalkClose()
+                    TalkOpen()
+                    Proc030(148)
+                    Proc02D(14)
+                    TalkMessage(MESSAGE_10)
+                    TalkClose()
+                }
+            }
+        }
+        case 2
+        {
+            Proc03F(268, 1)
+            TalkClose()
+            TalkOpen()
+            Proc030(148)
+            Proc02D(14)
+            TalkMessage(MESSAGE_11)
+            TalkClose()
+        }
+    }
+    SetEntityAnim(14, 2280)
+    SetEntityFacing(14, 3)
+    Proc008(14, 319, 1)
+    Proc00C(14)
+    SetEntityFacing(14, 1)
+    Proc00A(14, 0, 1)
+    Proc00C(14)
+    Proc00F(14)
+    Proc03F(267, 2)
+    Proc083(14)
+}

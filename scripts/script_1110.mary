@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1110 EventScript_1110
+{
+    const MESSAGE_0 = "I wonder what the food for\r\nthis year will be...?\x05"
+    if Func086(13) == 0
+    {
+        Proc083(13)
+    }
+    SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(118)
+    Proc02D(13)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(13) == 0
+    {
+        Proc080(13, 5)
+    }
+    SetEntityFacing(13, 0)
+    Proc083(13)
+}

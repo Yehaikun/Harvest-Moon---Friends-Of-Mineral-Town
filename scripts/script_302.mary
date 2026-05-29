@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 302 EventScript_302
+{
+    const MESSAGE_0 = "Counter\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

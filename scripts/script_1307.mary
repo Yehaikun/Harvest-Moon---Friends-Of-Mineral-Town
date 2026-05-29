@@ -1,0 +1,120 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1307 EventScript_1307
+{
+    const MESSAGE_0 = "Thump!!...Phew, it's a lot\r\nharder to sneak into houses\r\nthan I thought!\x05\x0CWait, there's no stocking \r\nhere!...\x05\x0CThat means I can't leave my\r\npresent. Too bad!\x05\x0CI guess I'll have to bring\r\nit back with me...\x05"
+    const MESSAGE_1 = "Thump!!...Phew, it's a lot\r\nharder to sneak into houses\r\nthan I thought!\x05\x0CGood, he remembered to put\r\na stocking up. \x05\x0CBut it's so dark I can't\r\nsee which present is his!\x05\x0COh well, I'll just assume\r\nit's this one!\x05"
+    const MESSAGE_2 = "Thump!!...Phew, it's a lot\r\nharder to sneak into houses\r\nthan I thought!\x05\x0CThe present is still there!\r\nSome people don't even \r\ncare for the trouble I go \x05\r\nthrough to do this!\x05\x0CHow depressing...I'll \r\njust go home, I guess...\x05"
+    PlayBGM(1, 14)
+    switch Func03E(14)
+    {
+        case 0
+        {
+            Proc016(29, 200, 48)
+            SetEntityPosition(0, 200, -46, 0)
+        }
+        case 1
+        {
+            Proc016(29, 320, 48)
+            SetEntityPosition(0, 320, -46, 0)
+        }
+        case 2
+        {
+            Proc016(29, 384, 48)
+            SetEntityPosition(0, 384, -46, 0)
+        }
+    }
+    SetEntityAnim(0, 398)
+    if Func03E(76) == 2
+    {
+        SetEntityPosition(19, 440, -48, 0)
+        SetEntityAnim(19, 1697)
+    }
+    else if Func03E(85) == 2
+    {
+        SetEntityPosition(3, 440, -48, 0)
+        SetEntityAnim(3, 575)
+    }
+    else if Func03E(95) == 2
+    {
+        SetEntityPosition(25, 440, -48, 0)
+        SetEntityAnim(25, 2002)
+    }
+    else if Func03E(103) == 2
+    {
+        SetEntityPosition(12, 440, -48, 0)
+        SetEntityAnim(12, 2087)
+    }
+    else if Func03E(111) == 2
+    {
+        SetEntityPosition(21, 440, -48, 0)
+        SetEntityAnim(21, 2204)
+    }
+    if Func03E(200) == 2 || Func03E(201) == 2 || Func03E(202) == 2 || Func03E(203) == 2 || Func03E(204) == 2 || Func03E(378) == 2
+    {
+        if Func03E(46) >= 60
+        {
+            SetEntityPosition(35, 416, -48, 0)
+            SetEntityAnim(35, 631)
+        }
+        else
+        {
+            SetEntityPosition(35, 416, -48, 0)
+            SetEntityAnim(35, 12)
+        }
+    }
+    Proc035(2, 1)
+    Proc03F(462, 1)
+    Proc037(60 * 2)
+    Proc034(2, 1)
+    Proc083(13)
+    TalkOpen()
+    Proc02D(13)
+    if Func03E(30) == 0
+    {
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc03F(462, 2)
+        Proc038(988)
+    }
+    else if Func03E(31) == 95
+    {
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc03F(462, 2)
+        switch Func03E(463)
+        {
+            case 0, 1
+            {
+                Proc03F(31, 21)
+            }
+            case 2
+            {
+                Proc03F(31, 22)
+            }
+            case 3
+            {
+                Proc03F(31, 24)
+            }
+            case 4
+            {
+                Proc03F(31, 25)
+            }
+            case 5
+            {
+                Proc03F(31, 27)
+            }
+        }
+        Proc03F(463, 0)
+        Proc080(13, 20)
+        Proc038(988)
+    }
+    else
+    {
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        Proc03F(462, 2)
+        Proc03F(463, 0)
+        Proc038(988)
+    }
+}

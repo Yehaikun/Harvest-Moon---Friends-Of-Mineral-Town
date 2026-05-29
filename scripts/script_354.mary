@@ -1,0 +1,142 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 354 EventScript_354
+{
+    const MESSAGE_0 = "Nothing in the sock.\x05"
+    const MESSAGE_1 = "There was a present inside!\x05"
+    const MESSAGE_2 = "It's Mystrile!\x05"
+    const MESSAGE_3 = "I have to put \r\nsomething down first.\x05"
+    const MESSAGE_4 = "It's Orichalc!\x05"
+    const MESSAGE_5 = "It's a Moon Stone!\x05"
+    const MESSAGE_6 = "It's Sand Rose!\x05"
+    const MESSAGE_7 = "It's Alexandrite \x05"
+    const MESSAGE_8 = "Sock Hook\x05"
+    if Func03E(30) == 1
+    {
+        switch Func03E(31)
+        {
+            case 95
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_0)
+                TalkClose()
+            }
+            case 21
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+                if Func040()
+                {
+                    PlaySong(0, 106)
+                    Proc04B(21)
+                    Proc037(30)
+                    TalkOpen()
+                    TalkMessage(MESSAGE_2)
+                    TalkClose()
+                    Proc03F(31, 95)
+                }
+                else
+                {
+                    TalkOpen()
+                    TalkMessage(MESSAGE_3)
+                    TalkClose()
+                }
+            }
+            case 22
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+                if Func040()
+                {
+                    PlaySong(0, 106)
+                    Proc04B(22)
+                    Proc037(30)
+                    TalkOpen()
+                    TalkMessage(MESSAGE_4)
+                    TalkClose()
+                    Proc03F(31, 95)
+                }
+                else
+                {
+                    TalkOpen()
+                    TalkMessage(MESSAGE_3)
+                    TalkClose()
+                }
+            }
+            case 24
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+                if Func040()
+                {
+                    PlaySong(0, 106)
+                    Proc04B(24)
+                    Proc037(30)
+                    TalkOpen()
+                    TalkMessage(MESSAGE_5)
+                    TalkClose()
+                    Proc03F(31, 95)
+                }
+                else
+                {
+                    TalkOpen()
+                    TalkMessage(MESSAGE_3)
+                    TalkClose()
+                }
+            }
+            case 25
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+                if Func040()
+                {
+                    PlaySong(0, 106)
+                    Proc04B(25)
+                    Proc037(30)
+                    TalkOpen()
+                    TalkMessage(MESSAGE_6)
+                    TalkClose()
+                    Proc03F(31, 95)
+                }
+                else
+                {
+                    TalkOpen()
+                    TalkMessage(MESSAGE_3)
+                    TalkClose()
+                }
+            }
+            case 27
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+                if Func040()
+                {
+                    PlaySong(0, 106)
+                    Proc04B(27)
+                    Proc037(30)
+                    TalkOpen()
+                    TalkMessage(MESSAGE_7)
+                    TalkClose()
+                    Proc03F(31, 95)
+                }
+                else
+                {
+                    TalkOpen()
+                    TalkMessage(MESSAGE_3)
+                    TalkClose()
+                }
+            }
+        }
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_8)
+        TalkClose()
+    }
+}

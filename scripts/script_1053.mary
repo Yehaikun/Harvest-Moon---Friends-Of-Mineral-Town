@@ -1,0 +1,77 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1053 EventScript_1053
+{
+    const MESSAGE_0 = "That's impossible!\r\n\x05"
+    var var_0
+    switch Func03E(1)
+    {
+        case 0
+        {
+            Proc0FF(15)
+            switch Func03E(2)
+            {
+                case 1
+                {
+                    Proc038(1050)
+                }
+                case 2
+                {
+                    Proc038(1050)
+                }
+                case 3
+                {
+                    Proc038(1050)
+                }
+                case 4
+                {
+                    Proc038(1050)
+                }
+                case 5
+                {
+                    Proc038(1050)
+                }
+                case 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+                {
+                    var_0 = Func0FE(MESSAGE_0)
+                }
+            }
+        }
+        case 1, 2
+        {
+            var_0 = Func0FE(MESSAGE_0)
+        }
+        case 3
+        {
+            Proc0FF(26)
+            switch Func03E(2)
+            {
+                case 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28
+                {
+                    var_0 = Func0FE(MESSAGE_0)
+                }
+                case 29
+                {
+                    Proc038(1050)
+                }
+                case 30
+                {
+                    Proc038(1050)
+                }
+            }
+        }
+    }
+    Proc100()
+    TalkClose()
+    switch var_0
+    {
+        case 0, 1, 2, 3
+        {
+            Proc03F(580, var_0)
+            Proc038(540)
+        }
+        case 4, 5
+        {
+        }
+    }
+}

@@ -1,0 +1,28 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1195 EventScript_1195
+{
+    const MESSAGE_0 = "They used to have summer\r\nfireworks where I used to \r\nlive. It makes me a little\x05\r\nhomesick...\x05"
+    if Func086(23) == 0
+    {
+        Proc083(23)
+    }
+    SetEntityFacing(23, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(23)
+    Proc02D(23)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func085(23) == 0
+    {
+        Proc080(23, 5)
+    }
+    Proc083(23)
+    if Func085(2) && Func085(7) && Func085(20) && (Func03E(244) == 0 || Func085(23)) && Func085(26) && Func085(19) && Func085(21) && Func085(25) && Func085(3) && Func085(12)
+    {
+        Proc03F(415, 0)
+        Proc034(2, 1)
+        Proc038(1192)
+    }
+    SetEntityFacing(23, 3)
+}

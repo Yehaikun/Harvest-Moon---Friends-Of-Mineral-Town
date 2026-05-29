@@ -1,0 +1,69 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 749 EventScript_749
+{
+    const MESSAGE_0 = "Thanks very much! \r\nI'm going to use this yarn \r\nto knit you a sock for a \x05\r\nStarry Night present!\r\nJust wait one moment. \x05"
+    const MESSAGE_1 = "Ellen knits a sock \r\nwith lightning speed...\x05"
+    const MESSAGE_2 = "It's ready!\x05\x0CHa...I'm tired.\x05"
+    const MESSAGE_3 = "I'm glad you like it.\r\nI will have Stu deliver\r\nit to you later.\x05"
+    const MESSAGE_4 = "I will hang this sock\r\non my wall from now on...\x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(64)
+    Proc02D(15)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc034(2, 1)
+    Proc046()
+    TalkOpen()
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityPosition(0, 128, 117, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(63)
+    Proc02D(15)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    Proc011(0, 5, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(64)
+    Proc02D(15)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    Proc034(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc12A()
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc0F7(18, 0)
+    Proc080(15, 20)
+    Proc083(15)
+    Proc03F(30, 1)
+    Proc03F(274, 2)
+    Proc035(2, 1)
+}

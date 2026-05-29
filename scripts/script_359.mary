@@ -1,0 +1,64 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 359 EventScript_359
+{
+    const MESSAGE_0 = "Vase\x05"
+    const MESSAGE_1 = "Throw away these flowers?"
+    const MESSAGE_2 = "Yes"
+    const MESSAGE_3 = "No"
+    var var_0, var_1, var_2
+    var_1 = 0
+    if !Func040() && Func041() == 1 && !Func042()
+    {
+        var_2 = Func044()
+        switch var_2
+        {
+            case 0, 1, 2, 3, 4
+            {
+                var_1 = 1
+            }
+        }
+    }
+    if var_1
+    {
+        if Func042() == 1
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            exit
+        }
+        else if Func0B9() != -1
+        {
+            TalkOpen()
+            var_0 = Func025(MESSAGE_1, MESSAGE_2, MESSAGE_3)
+            TalkClose()
+            switch var_0
+            {
+                case 1
+                {
+                    Proc046()
+                    Proc0B8(var_2)
+                }
+                case 2
+                {
+                    exit
+                }
+                case 
+                {
+                }
+            }
+        }
+        else
+        {
+            Proc046()
+            Proc0B8(var_2)
+        }
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+}

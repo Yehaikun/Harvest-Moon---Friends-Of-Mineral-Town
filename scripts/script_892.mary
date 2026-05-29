@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 892 EventScript_892
+{
+    const MESSAGE_0 = "Are you curious about other\r\nplaces, \xFF!?\x05"
+    SetEntityFacing(3, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(7)
+    Proc02D(3)
+    if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+    {
+        Proc032(3)
+    }
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(3, 0)
+    Proc083(3)
+}

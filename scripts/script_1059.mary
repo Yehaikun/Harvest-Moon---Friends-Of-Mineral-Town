@@ -1,0 +1,30 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1059 EventScript_1059
+{
+    const MESSAGE_0 = "Which animal?"
+    const MESSAGE_1 = "Chickens"
+    const MESSAGE_2 = "Cows"
+    const MESSAGE_3 = "Sheep"
+    const MESSAGE_4 = "Cancel"
+    var var_0
+    TalkOpen()
+    var_0 = Func027(MESSAGE_0, MESSAGE_1, MESSAGE_2, MESSAGE_3, MESSAGE_4)
+    TalkClose()
+    switch var_0
+    {
+        case 1
+        {
+            Proc038(1061)
+        }
+        case 2
+        {
+            Proc038(1060)
+        }
+        case 3
+        {
+            Proc038(1062)
+        }
+    }
+    exit
+}

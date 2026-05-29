@@ -1,0 +1,37 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 924 EventScript_924
+{
+    const MESSAGE_0 = "Seems like Cliff is going to\r\nsettle down here for good. \r\nOf course, that means he \r\ncan't marry Aja...\x05"
+    const MESSAGE_1 = "Still, Cliff is like my own \r\nson already, so that means \r\nAnn will become like our \r\ndaughter! \x05"
+    const MESSAGE_2 = "Still...I hope Aja comes \r\nback home soon...\r\nI thought she'd get home-\r\nsick and come back sooner.\x05"
+    if Func086(9) == 0
+    {
+        Proc083(9)
+    }
+    if Func085(9) == 0
+    {
+        SetEntityFacing(9, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(137)
+        Proc02D(9)
+        TalkMessageSlow(MESSAGE_0)
+        Proc030(138)
+        Proc02D(9)
+        TalkMessageSlow(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(9, 3)
+        Proc083(9)
+    }
+    else
+    {
+        SetEntityFacing(9, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(140)
+        Proc02D(9)
+        TalkMessageSlow(MESSAGE_2)
+        TalkClose()
+        SetEntityFacing(9, 3)
+        Proc083(9)
+    }
+}

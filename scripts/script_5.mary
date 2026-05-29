@@ -1,0 +1,172 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 5 EventScript_5
+{
+    const MESSAGE_0 = "Hello, \xFF!.\r\nI've got a favor I'd\r\nlike to ask of you.\x05"
+    const MESSAGE_1 = "This Foal was born at\r\nour farm, but for some\r\nreason he's not doing\x05\r\nvery well.\x05\r\nWe can't look after him\r\nall the time, so do you\r\nthink you'd be able to\x05\r\nuntil he grows up?\x05"
+    const MESSAGE_2 = "Won't you reconsider?\r\nWe really have\r\nanywhere else to go...\x05"
+    const MESSAGE_3 = "Are you absolutely sure?\x05"
+    const MESSAGE_4 = "Accept"
+    const MESSAGE_5 = "Don't accept"
+    const MESSAGE_6 = "Well, I guess I \r\nwas wrong to depend on\r\nyou, anyway!\x05\r\nBye now.\x05"
+    const MESSAGE_7 = "That's great!\r\nThanks so much!\x05\x0CIn that case, you \r\ncan even name him!\x05"
+    const MESSAGE_8 = "Of course, you don't need\r\nto worry about him\r\nall that much.\x05\x0CJust take care of him,\r\nand look after his needs.\x05\x0CMost importantly, don't\r\nforget to talk to him\r\neveryday.\x05\x0CBrushing regularly is also\r\na good idea.\x05"
+    const MESSAGE_9 = "I'll bring him to \r\nthe Stable for you.\x05"
+    const MESSAGE_10 = "I'll come back again\r\nwhen he gets bigger.\x05\x0CUntil then please take\r\ngood care of him, OK?\x05"
+    var var_0, var_1, var_2
+    var_2 = 0
+    Proc103(0, 0, 2, 207, 145)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(4, 228, 145, 1)
+    SetEntityAnim(4, 2543)
+    SetEntityPosition(44, 207, 145, 1)
+    SetEntityAnim(44, 1946)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(183)
+    Proc02D(4)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(4, 2)
+    Proc037(60)
+    SetEntityFacing(4, 1)
+    do
+    {
+        switch var_2
+        {
+            case 0
+            {
+                TalkOpen()
+                Proc030(183)
+                Proc02D(4)
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+            }
+            case 1
+            {
+                TalkOpen()
+                Proc030(183)
+                Proc02D(4)
+                TalkMessage(MESSAGE_2)
+                TalkClose()
+            }
+            case 2
+            {
+                TalkOpen()
+                Proc030(183)
+                Proc02D(4)
+                TalkMessage(MESSAGE_3)
+                TalkClose()
+            }
+        }
+        TalkOpen()
+        var_0 = TalkChoice2(MESSAGE_4, MESSAGE_5)
+        TalkClose()
+        switch var_0
+        {
+            case 1
+            {
+                var_1 = 0
+            }
+            case 2
+            {
+                var_1 = 1
+                ++var_2
+            }
+        }
+    } while var_1 != 0 && var_2 < 3
+    if var_1 != 0
+    {
+        TalkOpen()
+        Proc030(182)
+        Proc02D(4)
+        TalkMessage(MESSAGE_6)
+        TalkClose()
+        Proc080(4, -10)
+        SetEntityFacing(0, 3)
+        SetEntityFacing(4, 3)
+        SetEntityAnim(4, 2547)
+        Proc008(4, 337, 1)
+        Proc00C(4)
+        SetEntityAnim(4, 2543)
+        SetEntityFacing(4, 2)
+        SetEntityFacing(44, 3)
+        SetEntityAnim(44, 1950)
+        Proc008(44, 305, 1)
+        Proc00C(44)
+        SetEntityAnim(44, 1946)
+        Proc037(30)
+        SetEntityFacing(44, 1)
+        SetEntityFacing(4, 1)
+        SetEntityAnim(4, 2547)
+        Proc00A(4, 0, 1)
+        SetEntityAnim(44, 1950)
+        Proc00A(44, 0, 1)
+        Proc00C(4)
+        Proc00C(44)
+        Proc00F(4)
+        Proc00F(44)
+        Proc104(0, 0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(181)
+        Proc02D(4)
+        TalkMessage(MESSAGE_7)
+        TalkClose()
+        Proc034(3, 1)
+        Proc0A6(0, 0)
+        Proc035(3, 1)
+        TalkOpen()
+        Proc030(180)
+        Proc02D(4)
+        TalkMessage(MESSAGE_8)
+        TalkClose()
+        SetEntityFacing(4, 2)
+        Proc037(30)
+        SetEntityFacing(4, 1)
+        TalkOpen()
+        Proc030(180)
+        Proc02D(4)
+        TalkMessage(MESSAGE_9)
+        TalkClose()
+        SetEntityFacing(0, 3)
+        SetEntityFacing(4, 3)
+        SetEntityAnim(4, 2547)
+        SetEntityFacing(44, 3)
+        SetEntityAnim(44, 1950)
+        Proc008(4, 500, 1)
+        Proc008(44, 500, 1)
+        Proc00C(4)
+        Proc00C(44)
+        Proc132(44, 9, 84, 124)
+        SetEntityAnim(4, 2543)
+        SetEntityFacing(4, 2)
+        SetEntityAnim(4, 2547)
+        Proc008(4, 319, 1)
+        Proc00C(4)
+        SetEntityAnim(4, 2543)
+        TalkOpen()
+        Proc030(180)
+        Proc02D(4)
+        TalkMessage(MESSAGE_10)
+        TalkClose()
+        SetEntityFacing(4, 1)
+        SetEntityAnim(4, 2547)
+        Proc00A(4, 0, 1)
+        Proc00C(4)
+        SetEntityAnim(4, 2543)
+        Proc00F(4)
+        Proc080(4, 10)
+    }
+    Proc03F(220, 2)
+    SetEntityFacing(0, 0)
+}

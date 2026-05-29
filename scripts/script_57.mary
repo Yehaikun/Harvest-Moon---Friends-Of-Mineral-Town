@@ -1,0 +1,145 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 57 EventScript_57
+{
+    const MESSAGE_0 = "I wonder what I should do \r\nwith this?...No...Hmm....\x05"
+    const MESSAGE_1 = "Oh! \r\nI'm sorry I didn't see\r\nyou there. \x05"
+    const MESSAGE_2 = "I've never seen you \r\nbefore...Are you a \r\ntourist or something? \x05"
+    const MESSAGE_3 = "Oh, you're the new fellow\r\nup at the farm...!\x05\r\n\xFF!, right? \r\nI'm Mary. Nice to meet you.\x05"
+    const MESSAGE_4 = "Hi, \xFF!. \r\nWelcome to the Library. \x05"
+    const MESSAGE_5 = "Not many people come to the\r\nLibrary, I'm glad you came!\x05"
+    const MESSAGE_6 = "Sorry about that before...\r\nWhen I get lost in thought,\r\nI don't notice anything. \x05"
+    const MESSAGE_7 = "Can I help?"
+    const MESSAGE_8 = "Be careful."
+    const MESSAGE_9 = "I'm writing a novel, \r\nyou see. I was just having\r\na case of writer's block,\x05\r\nthat's all.\x05"
+    const MESSAGE_10 = "Just let me know if you \r\nwant to read anything.\x05\x0CI bet I have lots of books\r\nyou'd like!\x05"
+    const MESSAGE_11 = "I'll try to be more\r\ncareful from now on. \x05"
+    var var_0
+    Proc016(24, 120, 144)
+    PlayBGM(1, 17)
+    SetEntityPosition(0, 120, 208, 1)
+    SetEntityAnim(0, 402)
+    SetEntityPosition(12, 216, 168, 2)
+    SetEntityAnim(12, 2067)
+    Proc035(2, 1)
+    SetEntityAnim(0, 454)
+    Proc00A(0, 168, 1)
+    Proc00C(0)
+    SetEntityAnim(0, 402)
+    SetEntityFacing(0, 3)
+    TalkOpen()
+    Proc030(107)
+    Proc02D(12)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityAnim(12, 2071)
+    Proc008(12, 136, 1)
+    Proc00C(12)
+    SetEntityAnim(12, 2067)
+    Proc011(12, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(106)
+    Proc02D(12)
+    Proc032(12)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityAnim(0, 294)
+    Proc037(60)
+    SetEntityAnim(0, 402)
+    Proc011(12, 2, 0)
+    Proc037(60)
+    if Func086(12) == 0
+    {
+        TalkOpen()
+        Proc030(103)
+        Proc02D(12)
+        Proc032(12)
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        SetEntityAnim(0, 294)
+        Proc037(60)
+        SetEntityAnim(0, 402)
+        TalkOpen()
+        Proc030(103)
+        Proc02D(12)
+        Proc032(12)
+        TalkMessage(MESSAGE_3)
+        TalkClose()
+        SetEntityAnim(0, 510)
+        Proc037(60)
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(104)
+        Proc02D(12)
+        Proc032(12)
+        TalkMessage(MESSAGE_4)
+        TalkClose()
+        SetEntityAnim(0, 510)
+        Proc037(60)
+        SetEntityAnim(0, 402)
+        TalkOpen()
+        Proc030(104)
+        Proc02D(12)
+        Proc032(12)
+        TalkMessage(MESSAGE_5)
+        TalkClose()
+        SetEntityAnim(0, 510)
+        Proc037(60)
+        SetEntityAnim(0, 402)
+    }
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    Proc032(12)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_7, MESSAGE_8)
+    switch var_0
+    {
+        case 1
+        {
+            Proc08A(12, 3000)
+            TalkClose()
+            TalkOpen()
+            Proc030(104)
+            Proc02D(12)
+            Proc032(12)
+            TalkMessage(MESSAGE_9)
+            TalkClose()
+            TalkOpen()
+            Proc030(103)
+            Proc02D(12)
+            Proc032(12)
+            TalkMessage(MESSAGE_10)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(60)
+            SetEntityAnim(0, 402)
+            Proc083(12)
+            Proc08C(12, 58)
+            Proc03F(97, 1)
+        }
+        case 2
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(106)
+            Proc02D(12)
+            Proc032(12)
+            TalkMessage(MESSAGE_11)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(60)
+            SetEntityAnim(0, 402)
+            Proc083(12)
+            Proc08C(12, 58)
+            Proc03F(97, 1)
+        }
+    }
+    Proc0F2()
+}

@@ -1,0 +1,454 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 763 EventScript_763
+{
+    const MESSAGE_0 = "Hi, \xFF!. \r\nYou've come just in time. \x05"
+    const MESSAGE_1 = "Duke has run up a huge tab\r\nat the Supermarket, so \r\nwe've decided to have a \x05\r\ndrinking contest to \r\nsettle it. \x05"
+    const MESSAGE_2 = "If Karen wins, I have to \r\npay it all off. \x05\x0CIf I win, then they call \r\nthe debt off. \x05\x0CSounds like fun, huh? \x05"
+    const MESSAGE_3 = "Will you judge the contest? \x05"
+    const MESSAGE_4 = "You've got to be kidding."
+    const MESSAGE_5 = "Sure."
+    const MESSAGE_6 = "Thanks for nothing!\r\nWell, you can still \r\nwatch if you want to. \x05"
+    const MESSAGE_7 = "Let's start! \x05"
+    const MESSAGE_8 = "Here we go!\x05"
+    const MESSAGE_9 = "I knew we could count on \r\nyou, \xFF!. Thanks!\x05"
+    const MESSAGE_10 = "Ha! I tolddd youu I'dd \r\nwinn handss dowwwn! \x05"
+    const MESSAGE_11 = "I'mm goinnng hooome nowww.\r\nDon't forrrget the tabbb!...\x05"
+    const MESSAGE_12 = "Sorry to ask this, \r\n\xFF!, but will \r\nyou take Duke back home?\x05\x0CI don't think he can make\r\nit himself. \x05"
+    const MESSAGE_13 = "Thanks. You're a pal. \x05"
+    const MESSAGE_14 = "Thhaankssss....\r\nI 'preceeeate dis...\x05"
+    const MESSAGE_15 = "Ughh....\x05"
+    const MESSAGE_16 = "Duke!\x05"
+    const MESSAGE_17 = "Wh...what?\x05"
+    const MESSAGE_18 = "Don't \"what\" me!\x05"
+    const MESSAGE_19 = "Ohh....My head hurts...\r\nPlease don't shout...\x05"
+    const MESSAGE_20 = "I heard from \xFF!\r\nthat you got into a \r\ndrinking match with Karen!\x05"
+    const MESSAGE_21 = "Oh...I did! \r\nWhat happened? Did I win? \x05"
+    const MESSAGE_22 = "No...You lost!!\x05"
+    const MESSAGE_23 = "Oh yeah...\r\nWho would have thought \r\nKaren could put 'em\x05\r\naway like that...? \x05"
+    const MESSAGE_24 = "This isn't funny!\r\nNow we have to pay all\r\nthe money you owe!\x05"
+    const MESSAGE_25 = "I'd forgotten about that...\x05"
+    const MESSAGE_26 = "What did you buy without\r\ntelling me?!\x05"
+    const MESSAGE_27 = "Umm...Does it really \r\nmatter any more? \x05"
+    const MESSAGE_28 = "Well...A promise is a \r\npromise, so I'm going to go\r\npay your debt!\x05"
+    const MESSAGE_29 = "This is coming out \r\nof your allowance!\x05"
+    const MESSAGE_30 = "OK...\x05"
+    const MESSAGE_31 = "Also, say thank you to \r\n\xFF! for \r\ncarrying you here!\x05"
+    const MESSAGE_32 = "Thanks, \xFF!. \r\nSorry about that...\x05"
+    const MESSAGE_33 = "I apologize for my husband, \r\n\xFF!. He\r\nreally is an idiot. \x05"
+    const MESSAGE_34 = "Don't call me an idiot!\x05"
+    const MESSAGE_35 = "I'm just telling the \r\ntruth, that's all!\x05"
+    const MESSAGE_36 = "I think now is a good time \r\nto leave...\x05"
+    var var_0
+    Proc016(21, 277, 129)
+    SetEntityPosition(19, 308, 121, 3)
+    SetEntityAnim(19, 1681)
+    SetEntityPosition(8, 329, 121, 2)
+    SetEntityAnim(8, 2240)
+    SetEntityPosition(24, 315, 80, 0)
+    SetEntityAnim(24, 1970)
+    SetEntityPosition(0, 184, 320, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 200, 1)
+    Proc00C(0)
+    SetEntityFacing(0, 3)
+    Proc008(0, 319, 1)
+    Proc00C(0)
+    SetEntityFacing(0, 1)
+    Proc00A(0, 145, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(30)
+    SetEntityFacing(19, 0)
+    Proc037(30)
+    TalkOpen()
+    Proc030(72)
+    Proc02D(19)
+    if !(Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2)
+    {
+        Proc032(19)
+    }
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(76)
+    Proc02D(19)
+    if !(Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2)
+    {
+        Proc032(19)
+    }
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityFacing(8, 0)
+    Proc037(30)
+    TalkOpen()
+    Proc030(134)
+    Proc02D(8)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(72)
+    Proc02D(19)
+    if !(Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2)
+    {
+        Proc032(19)
+    }
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_4, MESSAGE_5)
+    switch var_0
+    {
+        case 1
+        {
+            TalkClose()
+            Proc037(30)
+            SetEntityAnim(0, 294)
+            Proc037(60)
+            if Func040() == 1
+            {
+                SetEntityAnim(0, 402)
+            }
+            else
+            {
+                SetEntityAnim(0, 338)
+            }
+            TalkOpen()
+            Proc030(74)
+            Proc02D(19)
+            if !(Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2)
+            {
+                Proc032(19)
+            }
+            TalkMessage(MESSAGE_6)
+            TalkClose()
+            SetEntityFacing(19, 3)
+            SetEntityFacing(8, 2)
+            Proc037(30)
+            TalkOpen()
+            Proc030(74)
+            Proc02D(19)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+            TalkOpen()
+            Proc030(134)
+            Proc02D(8)
+            TalkMessage(MESSAGE_8)
+            TalkClose()
+            Proc08A(19, -2000)
+        }
+        case 2
+        {
+            TalkClose()
+            Proc037(30)
+            SetEntityAnim(0, 510)
+            Proc037(60)
+            if Func040() == 1
+            {
+                SetEntityAnim(0, 402)
+            }
+            else
+            {
+                SetEntityAnim(0, 338)
+            }
+            TalkOpen()
+            Proc030(73)
+            Proc02D(19)
+            if !(Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2)
+            {
+                Proc032(19)
+            }
+            TalkMessage(MESSAGE_9)
+            TalkClose()
+            SetEntityFacing(19, 3)
+            SetEntityFacing(8, 2)
+            Proc037(30)
+            TalkOpen()
+            Proc030(72)
+            Proc02D(19)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+            TalkOpen()
+            Proc030(134)
+            Proc02D(8)
+            TalkMessage(MESSAGE_8)
+            TalkClose()
+            Proc08A(19, 3000)
+        }
+    }
+    Proc034(2, 1)
+    SetEntityAnim(8, 2248)
+    Proc037(60 * 2)
+    Proc035(2, 1)
+    Proc037(30)
+    TalkOpen()
+    Proc030(77)
+    Proc02D(19)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    Proc011(0, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(77)
+    Proc02D(19)
+    TalkMessage(MESSAGE_11)
+    TalkClose()
+    Proc037(30)
+    SetEntityFacing(19, 2)
+    Proc037(30)
+    SetEntityFacing(0, 2)
+    SetEntityAnim(19, 1685)
+    Proc008(19, 277, 1)
+    Proc00C(19)
+    SetEntityAnim(19, 1681)
+    Proc037(30)
+    SetEntityFacing(19, 0)
+    Proc037(30)
+    SetEntityAnim(19, 1685)
+    Proc00A(19, 157, 1)
+    Proc00C(19)
+    SetEntityAnim(19, 1681)
+    Proc037(30)
+    SetEntityFacing(0, 0)
+    SetEntityAnim(19, 1685)
+    Proc00A(19, 194, 1)
+    Proc00C(19)
+    SetEntityAnim(19, 1681)
+    Proc037(30)
+    SetEntityFacing(19, 2)
+    Proc037(30)
+    SetEntityAnim(19, 1685)
+    Proc008(19, 230, 1)
+    Proc00C(19)
+    SetEntityAnim(19, 1681)
+    Proc037(30)
+    SetEntityAnim(19, 1685)
+    Proc008(19, 185, 1)
+    Proc00C(19)
+    SetEntityAnim(19, 1681)
+    Proc037(30)
+    SetEntityFacing(19, 0)
+    Proc037(30)
+    SetEntityAnim(19, 1685)
+    Proc00A(19, 283, 1)
+    Proc00C(19)
+    Proc00F(19)
+    TalkOpen()
+    Proc030(83)
+    Proc02D(24)
+    TalkMessage(MESSAGE_12)
+    TalkClose()
+    SetEntityFacing(0, 1)
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(84)
+    Proc02D(24)
+    TalkMessage(MESSAGE_13)
+    TalkClose()
+    Proc034(2, 1)
+    Proc016(31, 119, 168)
+    SetEntityPosition(9, 156, 132, 2)
+    SetEntityAnim(9, 2256)
+    SetEntityPosition(8, 134, 132, 3)
+    SetEntityAnim(8, 2240)
+    SetEntityPosition(0, 119, 168, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    TalkMessage(MESSAGE_14)
+    TalkClose()
+    TalkOpen()
+    Proc030(136)
+    Proc02D(8)
+    TalkMessage(MESSAGE_15)
+    TalkClose()
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_16)
+    TalkClose()
+    TalkOpen()
+    Proc030(135)
+    Proc02D(8)
+    TalkMessage(MESSAGE_17)
+    TalkClose()
+    Proc037(60)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_18)
+    TalkClose()
+    Proc011(8, 4, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(135)
+    Proc02D(8)
+    TalkMessage(MESSAGE_19)
+    TalkClose()
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_20)
+    TalkClose()
+    TalkOpen()
+    Proc030(134)
+    Proc02D(8)
+    TalkMessage(MESSAGE_21)
+    TalkClose()
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_22)
+    TalkClose()
+    TalkOpen()
+    Proc030(134)
+    Proc02D(8)
+    TalkMessage(MESSAGE_23)
+    TalkClose()
+    Proc011(9, 0, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_24)
+    TalkClose()
+    TalkOpen()
+    Proc030(135)
+    Proc02D(8)
+    TalkMessage(MESSAGE_25)
+    TalkClose()
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_26)
+    TalkClose()
+    Proc011(8, 4, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(135)
+    Proc02D(8)
+    TalkMessage(MESSAGE_27)
+    TalkClose()
+    TalkOpen()
+    Proc030(137)
+    Proc02D(9)
+    TalkMessage(MESSAGE_28)
+    Proc030(139)
+    TalkMessage(MESSAGE_29)
+    TalkClose()
+    Proc011(8, 4, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(133)
+    Proc02D(8)
+    TalkMessage(MESSAGE_30)
+    TalkClose()
+    Proc037(30)
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_31)
+    TalkClose()
+    SetEntityFacing(9, 0)
+    SetEntityFacing(8, 0)
+    Proc037(30)
+    TalkOpen()
+    Proc030(134)
+    Proc02D(8)
+    TalkMessage(MESSAGE_32)
+    TalkClose()
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessage(MESSAGE_33)
+    TalkClose()
+    Proc011(8, 0, 0)
+    Proc037(60)
+    SetEntityFacing(8, 3)
+    TalkOpen()
+    Proc030(135)
+    Proc02D(8)
+    TalkMessage(MESSAGE_34)
+    TalkClose()
+    Proc011(9, 0, 0)
+    Proc037(60)
+    SetEntityFacing(9, 2)
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_35)
+    TalkClose()
+    Proc011(8, 0, 0)
+    Proc037(60)
+    Proc011(9, 0, 0)
+    Proc037(60)
+    Proc011(8, 0, 0)
+    Proc037(60)
+    Proc011(9, 0, 0)
+    Proc037(60)
+    TalkOpen()
+    TalkMessage(MESSAGE_36)
+    TalkClose()
+    SetEntityFacing(0, 0)
+    Proc037(60)
+    Proc034(2, 1)
+    Proc016(5, 232, 488)
+    SetEntityPosition(0, 232, 488, 0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc0F7(23, 0)
+    Proc03F(282, 2)
+    PlaySong(0, 205)
+    Proc035(2, 1)
+    Proc083(19)
+    Proc083(24)
+    Proc083(8)
+    Proc083(9)
+}

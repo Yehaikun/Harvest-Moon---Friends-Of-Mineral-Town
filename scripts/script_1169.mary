@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1169 EventScript_1169
+{
+    const MESSAGE_0 = "Good girl...\r\nI love animals, especially \r\ngentle ones like Cows!\x05"
+    const MESSAGE_1 = "I think your Cow has a \r\ngreat face, \xFF!. \x05"
+    if Func086(10) == 0
+    {
+        Proc083(10)
+    }
+    SetEntityFacing(10, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(411) == 0
+    {
+        TalkOpen()
+        Proc030(100)
+        Proc02D(10)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(100)
+        Proc02D(10)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(10) == 0
+    {
+        Proc080(10, 5)
+    }
+    Proc083(10)
+    SetEntityFacing(10, 1)
+}

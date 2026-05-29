@@ -1,0 +1,28 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1201 EventScript_1201
+{
+    const MESSAGE_0 = "I go to lots of different \r\ntowns during summertime, \r\nso I see lots of fireworks.\x05\x0CThe ones in Mineral Town \r\nare definitely the best.\x05"
+    if Func086(26) == 0
+    {
+        Proc083(26)
+    }
+    SetEntityFacing(26, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func085(26) == 0
+    {
+        Proc080(26, 5)
+    }
+    Proc083(26)
+    if Func085(2) && Func085(7) && Func085(20) && (Func03E(244) == 0 || Func085(23)) && Func085(26) && Func085(19) && Func085(21) && Func085(25) && Func085(3) && Func085(12)
+    {
+        Proc03F(415, 0)
+        Proc034(2, 1)
+        Proc038(1192)
+    }
+    SetEntityFacing(26, 3)
+}

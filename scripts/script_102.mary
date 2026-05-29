@@ -1,0 +1,24 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 102 EventScript_102
+{
+    const MESSAGE_0 = "Plants\x05"
+    const MESSAGE_1 = "Snowman\x05"
+    TalkOpen()
+    if Func03E(1) == 3
+    {
+        if Func03E(2) == 1 && Func03E(3) < 6
+        {
+            Proc024(MESSAGE_0)
+        }
+        else
+        {
+            Proc024(MESSAGE_1)
+        }
+    }
+    else
+    {
+        Proc024(MESSAGE_0)
+    }
+    TalkClose()
+}

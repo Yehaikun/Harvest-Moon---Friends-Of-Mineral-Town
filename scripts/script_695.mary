@@ -1,0 +1,150 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 695 EventScript_695
+{
+    const MESSAGE_0 = "I'm not feeling very well\r\ntoday, so the store is \r\nclosed. \x05\x0CSorry, \xFF!. \x05"
+    const MESSAGE_1 = "Rick and Popuri?\r\nThey both rushed off \r\nsomewhere, but I don't\r\nknow where...\x05"
+    const MESSAGE_2 = "Pant...wheeze...gasp...\x05"
+    const MESSAGE_3 = "Rick! What's wrong! \r\nWhere did you run to?...\x05"
+    const MESSAGE_4 = "You weren't feeling well, \r\nso I ran to the Clinic to \r\nbuy some medicine!\x05"
+    const MESSAGE_5 = "You're so thoughtful...\x05"
+    const MESSAGE_6 = "Pant...gasp...\r\nI brought you some \r\nmedicine, Mom!\x05"
+    const MESSAGE_7 = "So you went too?!\x05"
+    const MESSAGE_8 = "You went too, Rick?\r\nLooks like we bought \r\ntwice as much as \x05\r\nyou need...\x05\x0CSorry, Mom...\x05"
+    const MESSAGE_9 = "Don't worry about it. \r\nI'm just glad my children \r\nare so concerned about me!\x05\x0CThank you both, dears...\x05"
+    const MESSAGE_10 = "Just take care, Mom...\x05"
+    Proc0F2()
+    Proc016(10, 192, 80)
+    Proc00F(3)
+    Proc00F(2)
+    SetEntityPosition(0, 192, 80, 3)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(1, 216, 80, 2)
+    SetEntityAnim(1, 607)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(17)
+    Proc02D(1)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityAnim(0, 294)
+    Proc037(60)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(60)
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(17)
+    Proc02D(1)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityPosition(2, 120, 224, 1)
+    SetEntityAnim(2, 535)
+    Proc00A(2, 152, 1)
+    Proc00C(2)
+    SetEntityFacing(2, 3)
+    Proc008(2, 168, 1)
+    Proc00C(2)
+    SetEntityFacing(2, 1)
+    Proc00A(2, 98, 1)
+    Proc00C(2)
+    SetEntityFacing(2, 3)
+    SetEntityFacing(0, 0)
+    Proc008(2, 216, 1)
+    Proc00C(2)
+    SetEntityFacing(2, 1)
+    SetEntityFacing(1, 0)
+    SetEntityAnim(2, 531)
+    TalkOpen()
+    Proc030(2)
+    Proc02D(2)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(14)
+    Proc02D(1)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(0)
+    Proc02D(2)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc011(1, 5, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(15)
+    Proc02D(1)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    SetEntityPosition(3, 120, 224, 1)
+    SetEntityAnim(3, 563)
+    Proc00A(3, 152, 1)
+    Proc00C(3)
+    SetEntityFacing(3, 3)
+    Proc008(3, 168, 1)
+    Proc00C(3)
+    SetEntityFacing(3, 1)
+    Proc00A(3, 98, 1)
+    Proc00C(3)
+    SetEntityFacing(3, 3)
+    SetEntityFacing(2, 2)
+    Proc008(3, 208, 1)
+    Proc00C(3)
+    Proc008(3, 212, 1)
+    Proc008(2, 226, 1)
+    Proc00C(3)
+    SetEntityFacing(3, 1)
+    SetEntityAnim(3, 559)
+    TalkOpen()
+    Proc030(11)
+    Proc02D(3)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    Proc011(2, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(4)
+    Proc02D(2)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    SetEntityFacing(3, 3)
+    TalkOpen()
+    Proc030(10)
+    Proc02D(3)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    SetEntityFacing(3, 1)
+    TalkOpen()
+    Proc030(15)
+    Proc02D(1)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    Proc030(8)
+    Proc02D(3)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    Proc083(1)
+    Proc03F(228, 1)
+    Proc03F(229, 1)
+    Proc0F2()
+    Proc08C(3, 697)
+    Proc08C(2, 696)
+    Proc08C(1, 698)
+    exit
+}

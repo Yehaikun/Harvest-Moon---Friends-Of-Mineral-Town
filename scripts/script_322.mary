@@ -1,0 +1,47 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 322 EventScript_322
+{
+    const MESSAGE_0 = "A Jewel of Truth is\r\nfallen in the bookshelf.\x05"
+    const MESSAGE_1 = "A Jewel of Truth is\r\nfallen in the bookshelf.\x05\x0C...But your hands are\r\nalready full, so you \r\ncan't hold it.\x05"
+    const MESSAGE_2 = "Bookshelf\r\n\x05"
+    if GetEntityFacing(0) == 1
+    {
+        if Func03E(530) == 1
+        {
+            Proc034(3, 1)
+            Proc09B(14)
+            Proc035(3, 1)
+        }
+        else if Func03E(22) == 1
+        {
+            if Func040() == 1
+            {
+                Proc049(39)
+                TalkOpen()
+                TalkMessage(MESSAGE_0)
+                TalkClose()
+                Proc03F(530, 1)
+                Proc03F(340, Func03E(340) + 1)
+            }
+            else
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+            }
+        }
+        else
+        {
+            Proc034(3, 1)
+            Proc09B(14)
+            Proc035(3, 1)
+        }
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+    }
+}

@@ -1,0 +1,40 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1099 EventScript_1099
+{
+    const MESSAGE_0 = "The Cooking Festival is \r\ntomorrow at 10AM in Rose \r\nSquare, you know.\x05\x0CIf you bring a dish, you\r\ncan enter it. \x05"
+    Proc016(2, 228, 120)
+    SetEntityPosition(0, 228, 120, 0)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(13, 228, 145, 1)
+    SetEntityAnim(13, 2143)
+    Proc035(2, 1)
+    Proc03F(395, 1)
+    TalkOpen()
+    Proc030(117)
+    Proc02D(13)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(13, 3)
+    SetEntityAnim(13, 2147)
+    Proc008(13, 319, 1)
+    Proc00C(13)
+    SetEntityAnim(13, 2143)
+    SetEntityFacing(13, 1)
+    SetEntityAnim(13, 2147)
+    SetEntityFacing(0, 3)
+    Proc00A(13, 0, 1)
+    Proc00C(13)
+    SetEntityAnim(13, 2143)
+    Proc00F(13)
+    Proc083(13)
+    Proc03F(395, 2)
+    exit
+}

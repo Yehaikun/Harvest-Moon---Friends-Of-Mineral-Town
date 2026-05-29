@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1228 EventScript_1228
+{
+    const MESSAGE_0 = "This kind of thing is what \r\nmakes this Festival so fun!\r\nHa ha ha...!!\x05"
+    const MESSAGE_1 = "It's fun when you eat with\r\nall your friends like this!\x05"
+    if Func086(22) == 0
+    {
+        Proc083(22)
+    }
+    SetEntityFacing(22, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(22) == 0
+    {
+        Proc080(22, 5)
+    }
+    TalkOpen()
+    Proc02D(22)
+    if Func03E(421) == 1
+    {
+        Proc030(150)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(22)
+    }
+    else
+    {
+        Proc030(149)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(22)
+    }
+    SetEntityFacing(22, 0)
+}

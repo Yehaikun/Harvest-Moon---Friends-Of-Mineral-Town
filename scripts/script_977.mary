@@ -1,0 +1,35 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 977 EventScript_977
+{
+    var var_0, var_1, var_2, var_3, var_4, var_5, var_6
+    var_0 = Func03E(1)
+    var_1 = Func03E(2)
+    var_3 = Func03E(3)
+    var_2 = Func03E(5)
+    var_4 = Func03E(6)
+    var_5 = Func03E(0)
+    var_6 = GetEntityLocation(0)
+    Proc034(2, 1)
+    if 52 <= var_6 && var_6 < 52 + 256
+    {
+        Proc016(0, 900, 350)
+        SetEntityPosition(0, 900, 350, 0)
+        if Func03E(113) == 0 && !(var_0 == 0 && var_1 == 1 || var_0 == 0 && var_1 == 18 || var_0 == 0 && var_1 == 22 || var_0 == 1 && var_1 == 1 || var_0 == 1 && var_1 == 7 || var_0 == 1 && var_1 == 24 || var_0 == 1 && var_1 == 20 || var_0 == 2 && var_1 == 3 || var_0 == 2 && var_1 == 9 || var_0 == 2 && var_1 == 13 || var_0 == 2 && var_1 == 18 || var_0 == 2 && var_1 == 21 || var_0 == 3 && var_1 == 24 || var_0 == 3 && var_1 == 30) && !(var_2 == 0 || var_2 == 1 || var_2 == 2) && var_4 == 0 && (var_3 >= 11 && var_3 < 18) && Func03E(76) == 0 && Func03E(117) == 0 && Func03E(118) == 0 && Func03E(119) == 0 && Func03E(75) == 0 && GetEntityLocation(3) != 0 && GetEntityLocation(25) != 0 && GetEntityLocation(4) != 0 && GetEntityLocation(5) != 0 && Func089(19) < 10000 && Func086(19) == 1 && Func086(2) == 1
+        {
+            Proc03F(113, 1)
+            Proc038(873)
+        }
+        else if Func03E(114) == 2 && Func03E(115) == 0 && (!(var_0 == 0 && var_1 == 1) || var_0 == 0 && var_1 == 18 || var_0 == 0 && var_1 == 22 || var_0 == 1 && var_1 == 1 || var_0 == 1 && var_1 == 7 || var_0 == 1 && var_1 == 20 || var_0 == 2 && var_1 == 3 || var_0 == 2 && var_1 == 9 || var_0 == 2 && var_1 == 18 || var_0 == 2 && var_1 == 21 || var_0 == 3 && var_1 == 24 || var_0 == 3 && var_1 == 30) && var_5 >= 2 && var_4 == 0 && (var_2 == 3 || var_2 == 5) && (var_3 >= 11 && var_3 < 18) && Func03E(76) == 0 && Func03E(117) == 0 && Func03E(118) == 0 && Func03E(119) == 0 && Func03E(75) == 0 && GetEntityLocation(3) != 0 && GetEntityLocation(25) != 0 && GetEntityLocation(4) != 0 && GetEntityLocation(5) != 0 && Func089(19) < 40000
+        {
+            Proc03F(115, 1)
+            Proc038(875)
+        }
+    }
+    else if 308 <= var_6 && var_6 < 308 + 256
+    {
+        Proc016(0, 424, 448)
+        SetEntityPosition(0, 424, 448, 0)
+    }
+    Proc035(2, 1)
+}

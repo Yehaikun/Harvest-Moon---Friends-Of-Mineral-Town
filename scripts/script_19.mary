@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 19 EventScript_19
+{
+    const MESSAGE_0 = "Good luck on the farm!\r\nJust ask me if you \r\nhave any questions.\x05"
+    if Func03E(70) == 1
+    {
+
+    }
+    SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(79)
+    Proc02D(18)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(18, 0)
+    Proc083(18)
+}

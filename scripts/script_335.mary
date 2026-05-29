@@ -1,0 +1,37 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 335 EventScript_335
+{
+    const MESSAGE_0 = "Refrigerator\x05"
+    const MESSAGE_1 = "There's a Jewel of Truth\r\nfallen in the Refrigerator.\x05"
+    const MESSAGE_2 = "There's a Jewel of Truth\r\nfallen in the Refrigerator.\x05\x0C...But your hands are\r\nalready full, so you \r\ncan't hold it.\x05"
+    if Func03E(340) == 8
+    {
+        if Func03E(526) == 1
+        {
+            TalkOpen()
+            Proc024(MESSAGE_0)
+        }
+        else if Func040() == 1
+        {
+            Proc049(39)
+            TalkOpen()
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+            Proc03F(526, 1)
+            Proc03F(340, Func03E(340) + 1)
+            Proc038(820)
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_2)
+        }
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+    }
+    TalkClose()
+}

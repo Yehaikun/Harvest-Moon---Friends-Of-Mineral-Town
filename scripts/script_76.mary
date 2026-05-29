@@ -1,0 +1,117 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 76 EventScript_76
+{
+    const MESSAGE_0 = "Hi there, \xFF!. \x05"
+    const MESSAGE_1 = "Are you surprised to see me \r\nat the Beach? \x05\x0CWe used to come here often \r\nwhen my parents were alive. \x05\x0CIt has lots of memories\r\nfor me...\x05"
+    const MESSAGE_2 = "I come when I have\r\na lot on my mind. \x05\x0CI feel like my parents can \r\nhear me here.\x05"
+    const MESSAGE_3 = "Today I came about Stu...\x05"
+    const MESSAGE_4 = "Stu always makes trouble, \r\nand doesn't mind me at all!\x05\x0CI've tried to be like a \r\nmother to him, but I don't\r\nthink I've done a good job.\x05"
+    const MESSAGE_5 = "You've spoiled him."
+    const MESSAGE_6 = "You're doing a great job!"
+    const MESSAGE_7 = "I knew I should have been\r\nstricter with him...\x05\x0CEveryone else in town \r\nprobably thinks so, too...\r\nAhh...I'm going home now.\x05"
+    const MESSAGE_8 = "Thanks, \xFF!!\r\nIf you say so, then I can \r\nbe confident I'm doing\x05\r\na good job. \x05"
+    var var_0
+    Proc016(1, 385, 144)
+    PlayBGM(1, 17)
+    SetEntityPosition(0, 231, 144, 3)
+    SetEntityAnim(0, 402)
+    SetEntityPosition(21, 221, 124, 3)
+    SetEntityAnim(21, 2180)
+    Proc035(2, 1)
+    SetEntityAnim(21, 2184)
+    Proc008(21, 385, 1)
+    Proc00C(21)
+    SetEntityAnim(21, 2180)
+    Proc037(60)
+    Proc011(21, 6, 0)
+    Proc037(90)
+    SetEntityAnim(0, 454)
+    Proc008(0, 385, 1)
+    Proc00C(0)
+    SetEntityAnim(0, 402)
+    SetEntityFacing(0, 1)
+    Proc037(60)
+    SetEntityFacing(21, 0)
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    Proc032(21)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    SetEntityAnim(0, 402)
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    Proc032(21)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    SetEntityAnim(0, 402)
+    TalkOpen()
+    Proc030(124)
+    Proc02D(21)
+    Proc032(21)
+    TalkMessage(MESSAGE_2)
+    Proc030(125)
+    Proc02D(21)
+    Proc032(21)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(125)
+    Proc02D(21)
+    Proc032(21)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_5, MESSAGE_6)
+    switch var_0
+    {
+        case 1
+        {
+            Proc08A(21, -2000)
+            TalkClose()
+            TalkOpen()
+            Proc030(124)
+            Proc02D(21)
+            Proc032(21)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+            SetEntityFacing(21, 2)
+            SetEntityAnim(21, 2184)
+            SetEntityFacing(0, 2)
+            Proc008(21, 231, 1)
+            Proc00C(21)
+            SetEntityAnim(21, 2180)
+            Proc00F(21)
+            Proc083(21)
+            Proc03F(109, 2)
+        }
+        case 2
+        {
+            Proc08A(21, 3000)
+            TalkClose()
+            TalkOpen()
+            Proc030(126)
+            Proc02D(21)
+            Proc032(21)
+            TalkMessage(MESSAGE_8)
+            TalkClose()
+            SetEntityFacing(21, 2)
+            SetEntityAnim(21, 2184)
+            SetEntityFacing(0, 2)
+            Proc008(21, 231, 1)
+            Proc00C(21)
+            SetEntityAnim(21, 2180)
+            Proc00F(21)
+            Proc083(21)
+            Proc03F(109, 2)
+        }
+    }
+}

@@ -1,0 +1,239 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 779 EventScript_779
+{
+    const MESSAGE_0 = "Carter's not here. \r\nI wonder where he is...?\x05"
+    const MESSAGE_1 = "The door's open. \r\nMight as well go in...\x05"
+    const MESSAGE_2 = "I love Fall, because then \r\neven I can have a little \r\ntreat...\x05"
+    const MESSAGE_3 = "I just can't let anyone\r\nfind out about this!\x05\r\nMmm...It looks delicious!\x05"
+    const MESSAGE_4 = "\xFF!, \r\nwhat are you doing here? \x05"
+    const MESSAGE_5 = "The door was open, so you\r\njust wandered in...\r\nIt\x81fs alright...\x05"
+    const MESSAGE_6 = "What was I doing...?\x05\x0CI was just...um...cleaning\r\nup around here. \x05"
+    const MESSAGE_7 = "Don't look at me like that!\r\nOK, I'll stop lying. \x05\x0CI was hunting for \r\nMushrooms, you see. \x05"
+    const MESSAGE_8 = "This area has always been\r\ngreat for Mushroom hunting.\x05\x0CIn the Fall the Mushrooms \r\ncome out, and even someone\r\nlike me with no money can \x05\r\nhave a delicious meal. \x05\x0CYou won't tell anybody \r\nabout this spot, will you?\x05"
+    const MESSAGE_9 = "Will you please keep \r\nthis my secret, \r\n\xFF!? \x05"
+    const MESSAGE_10 = "Yes"
+    const MESSAGE_11 = "No"
+    const MESSAGE_12 = "You have my gratitude. \r\nAs a thanks, I'll leave \r\nthis back door open for you\x05\r\naround this time everyday.\x05\x0CCome and go as you please. \x05"
+    const MESSAGE_13 = "Now back to the \r\nMushrooms...\x05"
+    const MESSAGE_14 = "Don't forget about \r\nthis door!\x05"
+    const MESSAGE_15 = "I guess you're right...\r\nIt's not right to keep a \r\nplace like this all to \x05\r\nmyself. It's too selfish. \x05\x0CFrom now on, I'll leave \r\nthis back door open for you\r\naround this time everyday.\x05\x0CCome and go as you please. \x05"
+    var var_0
+    Proc016(12, 236, 95)
+    SetEntityPosition(0, 185, 212, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    if GetEntityLocation(22) == 12
+    {
+        Proc00F(22)
+    }
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 100, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityFacing(0, 3)
+    Proc037(30)
+    SetEntityFacing(0, 1)
+    Proc037(10)
+    SetEntityFacing(0, 2)
+    Proc037(30)
+    SetEntityFacing(0, 1)
+    Proc037(30)
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(0, 3)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc008(0, 309, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(30)
+    SetEntityFacing(0, 1)
+    Proc037(30)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 60, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(30)
+    Proc011(0, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    Proc034(2, 1)
+    Proc016(4, 140, 115)
+    SetEntityPosition(0, 140, 267, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(22, 140, 76, 1)
+    SetEntityAnim(22, 2284)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(149)
+    Proc02D(22)
+    TalkMessage(MESSAGE_2)
+    Proc030(150)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 135, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(30)
+    Proc011(22, 2, 0)
+    Proc037(60)
+    SetEntityFacing(22, 0)
+    TalkOpen()
+    Proc030(151)
+    Proc02D(22)
+    TalkMessage(MESSAGE_4)
+    Proc030(152)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(150)
+    Proc02D(22)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    Proc011(0, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(152)
+    Proc02D(22)
+    TalkMessage(MESSAGE_7)
+    Proc030(149)
+    TalkMessage(MESSAGE_8)
+    Proc030(152)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_10, MESSAGE_11)
+    switch var_0
+    {
+        case 1
+        {
+            TalkClose()
+            Proc011(22, 5, 0)
+            Proc037(60)
+            TalkOpen()
+            Proc030(150)
+            Proc02D(22)
+            TalkMessage(MESSAGE_12)
+            Proc030(149)
+            TalkMessage(MESSAGE_13)
+            Proc030(150)
+            TalkMessage(MESSAGE_14)
+            TalkClose()
+            Proc080(22, 20)
+            SetEntityAnim(22, 2288)
+            SetEntityFacing(22, 2)
+            Proc008(22, 103, 1)
+            Proc00C(22)
+            SetEntityFacing(22, 0)
+            Proc00A(22, 253, 1)
+            Proc00C(22)
+            Proc00F(22)
+        }
+        case 2
+        {
+            TalkClose()
+            Proc011(22, 4, 0)
+            Proc037(60)
+            TalkOpen()
+            Proc030(152)
+            Proc02D(22)
+            TalkMessage(MESSAGE_15)
+            Proc030(149)
+            TalkMessage(MESSAGE_13)
+            Proc030(150)
+            TalkMessage(MESSAGE_14)
+            TalkClose()
+            Proc080(22, -10)
+            SetEntityAnim(22, 2288)
+            SetEntityFacing(22, 2)
+            Proc008(22, 103, 1)
+            Proc00C(22)
+            SetEntityFacing(22, 0)
+            Proc00A(22, 253, 1)
+            Proc00C(22)
+            Proc00F(22)
+        }
+    }
+    Proc017(140, 135, 2)
+    Proc018()
+    Proc083(22)
+    Proc03F(289, 2)
+}

@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 900 EventScript_900
+{
+    const MESSAGE_0 = "As her older brother, I'm not\r\nsure what to think of this.\x05"
+    const MESSAGE_1 = "But...just as long as \r\nPopuri is happy, I guess...\x05"
+    if Func086(2) == 0
+    {
+        Proc083(2)
+    }
+    if Func085(2) == 0
+    {
+        SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(3)
+        Proc02D(2)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(2, 2)
+        Proc083(2)
+    }
+    else
+    {
+        SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(3)
+        Proc02D(2)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(2, 2)
+        Proc083(2)
+    }
+}

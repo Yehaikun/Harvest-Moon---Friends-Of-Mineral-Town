@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 797 EventScript_797
+{
+    const MESSAGE_0 = "How have you been? \r\nI look forward to seeing \r\nyou this summer. \x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(26, 228, 145, 1)
+    SetEntityAnim(26, 2306)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(154)
+    Proc02D(26)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(26, 3)
+    SetEntityAnim(26, 2310)
+    Proc008(26, 319, 1)
+    Proc00C(26)
+    SetEntityFacing(26, 1)
+    Proc00A(26, 0, 1)
+    Proc00C(26)
+    Proc00F(26)
+    Proc083(26)
+    Proc03F(302, 2)
+    exit
+}

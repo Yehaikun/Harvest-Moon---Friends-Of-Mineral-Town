@@ -1,0 +1,35 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 60 EventScript_60
+{
+    const MESSAGE_0 = "Now I can get some more \r\nwritten on my novel. \x05"
+    const MESSAGE_1 = "I wonder where I put \r\nthat...I can't write \r\nwithout it...\x05"
+    if Func03E(98) == 1
+    {
+
+    }
+    if Func03E(99) == 0
+    {
+        SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(104)
+        Proc02D(12)
+        Proc032(12)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(12, 2)
+        Proc083(12)
+    }
+    else
+    {
+        SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(105)
+        Proc02D(12)
+        Proc032(12)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(12, 0)
+        Proc083(12)
+    }
+}

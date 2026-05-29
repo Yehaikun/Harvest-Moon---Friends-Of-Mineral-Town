@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 881 EventScript_881
+{
+    const MESSAGE_0 = "Why is it so surprising how \r\nfast kids grow up?!...\x05"
+    const MESSAGE_1 = "If only I would get better\r\nso that my darling could\r\ncome home...\x05\x0CIf he were here with me \r\neverything would be OK...\x05"
+    if Func086(1) == 0
+    {
+        Proc083(1)
+    }
+    if Func085(1) == 0
+    {
+        SetEntityFacing(1, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(14)
+        Proc02D(1)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(1, 3)
+        Proc083(1)
+    }
+    else
+    {
+        SetEntityFacing(1, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(15)
+        Proc02D(1)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(1, 3)
+        Proc083(1)
+    }
+}

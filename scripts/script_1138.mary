@@ -1,0 +1,38 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1138 EventScript_1138
+{
+    const MESSAGE_0 = "Beach Day is now over. \r\nWe'll return your Dogs to\r\nyour homes, so you can go\x05\r\nback home without them. \r\nCome again next year!\x05"
+    PlayBGM(1, 7)
+    Proc0F7(18, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(13, 245, 178, 3)
+    SetEntityAnim(13, 2143)
+    SetEntityPosition(17, 128, 301, 3)
+    SetEntityAnim(17, 1673)
+    SetEntityPosition(18, 128, 260, 3)
+    SetEntityAnim(18, 1733)
+    SetEntityPosition(26, 211, 318, 3)
+    SetEntityAnim(26, 2306)
+    SetEntityPosition(3, 231, 349, 3)
+    SetEntityAnim(3, 559)
+    SetEntityPosition(28, 205, 131, 0)
+    SetEntityAnim(28, 792)
+    Proc035(3, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc08C(13, 1142)
+    Proc08C(17, 1140)
+    Proc08C(18, 1141)
+    Proc08C(26, 1143)
+    Proc08C(3, 1139)
+    Proc08C(28, 1144)
+}

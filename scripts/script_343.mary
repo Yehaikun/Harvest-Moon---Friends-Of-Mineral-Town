@@ -1,0 +1,611 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 343 EventScript_343
+{
+    const MESSAGE_0 = "Sorry. I don't\r\nfeel like talking today.\x05"
+    const MESSAGE_1 = "Please leave me alone!\x05"
+    const MESSAGE_2 = "Good night!\x05"
+    const MESSAGE_3 = "I always want to go play\r\nat night...\x05"
+    const MESSAGE_4 = "Good night.\x05"
+    const MESSAGE_5 = "If you don't go to\r\nsleep now, you'll regret it\r\nin the morning!\x05"
+    const MESSAGE_6 = "Good night.\r\nGood work today!\x05"
+    const MESSAGE_7 = "Tomorrow's another day!\x05"
+    const MESSAGE_8 = "\xFF), \r\ngood night.\x05"
+    const MESSAGE_9 = "I can't wait until morning!\r\nSleeping is sooo boring...!\x05"
+    const MESSAGE_10 = "............................\x05"
+    const MESSAGE_11 = "I can't stand this any more!\r\nI want to go back home!\x05"
+    const MESSAGE_12 = "I stayed up late\r\nwaiting for you, you know.\x05"
+    const MESSAGE_13 = "I'm going to bed now, \r\nthough. I'm tired!\x05"
+    const MESSAGE_14 = "I get tired so easily, \r\nyou know. \x05"
+    const MESSAGE_15 = "Look, my hands are already \r\nwarm!\x05"
+    const MESSAGE_16 = "You look beat!\r\nHard day on the farm, \r\n\xFF)?\x05"
+    const MESSAGE_17 = "The best thing for a hard\r\nday's work is a good \r\nnight's sleep!\x05"
+    const MESSAGE_18 = "Aren\x81ft you tired?\r\nI\x81fm going to bed soon.\r\nYou should too.\x05"
+    const MESSAGE_19 = "Hah...\r\nI feel so depressed.\x05"
+    const MESSAGE_20 = "Fine! Do whatever you want!\x05"
+    const MESSAGE_21 = "(Yawn)...\r\nI'm so tired today...\x05"
+    const MESSAGE_22 = "You should get to sleep now,\r\nso you're not tired in the\r\nmorning. \x05"
+    const MESSAGE_23 = "Better get to sleep now\r\nso you don't sleep in \r\ntomorrow!\x05"
+    const MESSAGE_24 = "Good night. You've got a\r\nfull day waiting for you \r\ntomorrow, remember.\x05"
+    const MESSAGE_25 = "I hope tomorrow will be \r\nas good as today!\x05"
+    const MESSAGE_26 = "......\x05"
+    const MESSAGE_27 = "Boy, the days sure go\r\nquickly when you're working\r\nhard and enjoying it! Night!\x05"
+    const MESSAGE_28 = "Don't you think you're \r\na little cold to me lately?\x05"
+    const MESSAGE_29 = "I know you need to work, but\r\nput aside some time for\r\nme, too!\x05"
+    const MESSAGE_30 = "Good night. \x05"
+    const MESSAGE_31 = "I'll go to bed later. I'm\r\nnot tired now. \x05"
+    const MESSAGE_32 = "Don't worry! I won't go\r\nanywhere while you're \r\nsleeping!\x05"
+    const MESSAGE_33 = "You sure look tired!\r\nGo to sleep, now. \x05"
+    const MESSAGE_34 = "Let me know if you \r\ndream about me!\x05"
+    const MESSAGE_35 = "I like staying up late at \r\nnight, especially reading. \r\nSometimes I wake up with my\x05\r\nface in a book!\x05"
+    const MESSAGE_36 = "I wish we could wake up\r\ntogether, but I know how \r\nhard you have to work.\x05"
+    const MESSAGE_37 = "Sorry, but I'm tired and \r\ndon't feel like talking. \x05"
+    const MESSAGE_38 = ".........\x05"
+    const MESSAGE_39 = "I'm so tired!...\x05"
+    const MESSAGE_40 = "I'm so sleepy...\x05"
+    const MESSAGE_41 = "Don't stay up late. \r\nGo to bed, already!\x05"
+    const MESSAGE_42 = "Go to bed early, \r\nso you're refreshed \r\ntomorrow. \x05"
+    const MESSAGE_43 = "Hurry up and go to \r\nsleep, already!\x05"
+    const MESSAGE_44 = "Good night, \xFF). \x05"
+    const MESSAGE_45 = "I'll stay up, so you go to \r\nsleep first, OK?\x05"
+    const MESSAGE_46 = "Big Bed\x05"
+    var var_0, var_1, var_2, var_3, var_4
+    var_0 = 0
+    var_1 = Func03E(1)
+    var_2 = Func03E(2)
+    var_4 = Func03E(3)
+    var_3 = Func03E(5)
+    if Func03E(76) == 2
+    {
+        if Func03E(213) == 1
+        {
+            var_0 = 0
+        }
+        else if var_4 >= 20
+        {
+            if var_1 == 0 && var_2 == 22 || var_1 == 2 && var_2 == 13
+            {
+                var_0 = 0
+            }
+            else
+            {
+                var_0 = 1
+            }
+        }
+        else
+        {
+            var_0 = 0
+        }
+    }
+    else if Func03E(85) == 2
+    {
+        if Func03E(210) == 1
+        {
+            var_0 = 0
+        }
+        else if var_4 >= 20
+        {
+            if var_1 == 2 && var_2 == 13
+            {
+                var_0 = 0
+            }
+            else
+            {
+                var_0 = 1
+            }
+        }
+        else
+        {
+            var_0 = 0
+        }
+    }
+    else if Func03E(95) == 2
+    {
+        if Func03E(211) == 1
+        {
+            var_0 = 0
+        }
+        else if var_4 >= 20
+        {
+            if var_1 == 0 && var_2 == 22 || var_1 == 2 && var_2 == 13
+            {
+                var_0 = 0
+            }
+            else
+            {
+                var_0 = 1
+            }
+        }
+        else
+        {
+            var_0 = 0
+        }
+    }
+    else if Func03E(103) == 2
+    {
+        if Func03E(214) == 1
+        {
+            var_0 = 0
+        }
+        else if var_4 >= 20
+        {
+            if var_1 == 2 && var_2 == 13
+            {
+                var_0 = 0
+            }
+            else
+            {
+                var_0 = 1
+            }
+        }
+        else
+        {
+            var_0 = 0
+        }
+    }
+    else if Func03E(111) == 2
+    {
+        if Func03E(212) == 1
+        {
+            var_0 = 0
+        }
+        else if var_4 >= 20
+        {
+            if var_1 == 2 && var_2 == 13
+            {
+                var_0 = 0
+            }
+            else
+            {
+                var_0 = 1
+            }
+        }
+        else
+        {
+            var_0 = 0
+        }
+    }
+    else
+    {
+        var_0 = 0
+    }
+    if var_0 == 1
+    {
+        if Func03E(76) == 2
+        {
+            SetEntityAnim(19, 1701)
+            Proc037(15)
+            TalkOpen()
+            Proc02D(19)
+            if Func089(19) < 30000
+            {
+                if Func085(19) == 0
+                {
+                    Proc030(76)
+                    Proc032(19)
+                    TalkMessage(MESSAGE_0)
+                }
+                else
+                {
+                    Proc030(74)
+                    Proc032(19)
+                    TalkMessage(MESSAGE_1)
+                }
+            }
+            else if Func089(19) >= 30000 && Func089(19) < 40000
+            {
+                if Func085(19) == 0
+                {
+                    Proc030(72)
+                    Proc032(19)
+                    TalkMessage(MESSAGE_2)
+                }
+                else
+                {
+                    Proc030(76)
+                    Proc032(19)
+                    TalkMessage(MESSAGE_3)
+                }
+            }
+            else if Func089(19) >= 40000 && Func089(19) < 50000
+            {
+                if Func085(19) == 0
+                {
+                    Proc030(72)
+                    Proc032(19)
+                    TalkMessage(MESSAGE_4)
+                }
+                else
+                {
+                    Proc030(73)
+                    Proc032(19)
+                    TalkMessage(MESSAGE_5)
+                }
+            }
+            else if Func089(19) >= 50000 && Func089(19) < 60000
+            {
+                if Func085(19) == 0
+                {
+                    Proc030(77)
+                    Proc032(19)
+                    TalkMessage(MESSAGE_6)
+                }
+                else
+                {
+                    Proc030(77)
+                    Proc032(19)
+                    TalkMessage(MESSAGE_7)
+                }
+            }
+            else if Func089(19) >= 60000
+            {
+                if Func085(19) == 0
+                {
+                    Proc030(77)
+                    Proc032(19)
+                    TalkMessage(MESSAGE_8)
+                }
+                else
+                {
+                    Proc030(77)
+                    Proc032(19)
+                    TalkMessage(MESSAGE_9)
+                }
+            }
+            TalkClose()
+            Proc083(19)
+            SetEntityAnim(19, 1729)
+            Proc037(15)
+        }
+        else if Func03E(85) == 2
+        {
+            SetEntityAnim(3, 579)
+            Proc037(15)
+            TalkOpen()
+            Proc02D(3)
+            if Func089(3) < 30000
+            {
+                if Func085(3) == 0
+                {
+                    Proc030(9)
+                    Proc032(3)
+                    TalkMessage(MESSAGE_10)
+                }
+                else
+                {
+                    Proc030(9)
+                    Proc032(3)
+                    TalkMessage(MESSAGE_11)
+                }
+            }
+            else if Func089(3) >= 30000 && Func089(3) < 40000
+            {
+                if Func085(3) == 0
+                {
+                    Proc030(11)
+                    Proc032(3)
+                    TalkMessage(MESSAGE_12)
+                }
+                else
+                {
+                    Proc030(9)
+                    Proc032(3)
+                    TalkMessage(MESSAGE_13)
+                }
+            }
+            else if Func089(3) >= 40000 && Func089(3) < 50000
+            {
+                if Func085(3) == 0
+                {
+                    Proc030(10)
+                    Proc032(3)
+                    TalkMessage(MESSAGE_14)
+                }
+                else
+                {
+                    Proc030(12)
+                    Proc032(3)
+                    TalkMessage(MESSAGE_15)
+                }
+            }
+            else if Func089(3) >= 50000 && Func089(3) < 60000
+            {
+                if Func085(3) == 0
+                {
+                    Proc030(8)
+                    Proc032(3)
+                    TalkMessage(MESSAGE_16)
+                }
+                else
+                {
+                    Proc030(8)
+                    Proc032(3)
+                    TalkMessage(MESSAGE_17)
+                }
+            }
+            else if Func089(3) >= 60000
+            {
+                if Func085(3) == 0
+                {
+                    Proc030(12)
+                    Proc032(3)
+                    TalkMessage(MESSAGE_2)
+                }
+                else
+                {
+                    Proc030(8)
+                    Proc032(3)
+                    TalkMessage(MESSAGE_18)
+                }
+            }
+            TalkClose()
+            Proc083(3)
+            SetEntityAnim(3, 603)
+            Proc037(15)
+        }
+        else if Func03E(95) == 2
+        {
+            SetEntityAnim(25, 2006)
+            Proc037(15)
+            TalkOpen()
+            Proc02D(25)
+            if Func089(25) < 30000
+            {
+                if Func085(25) == 0
+                {
+                    Proc030(90)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_19)
+                }
+                else
+                {
+                    Proc030(90)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_20)
+                }
+            }
+            else if Func089(25) >= 30000 && Func089(25) < 40000
+            {
+                if Func085(25) == 0
+                {
+                    Proc030(89)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_21)
+                }
+                else
+                {
+                    Proc030(91)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_22)
+                }
+            }
+            else if Func089(25) >= 40000 && Func089(25) < 50000
+            {
+                if Func085(25) == 0
+                {
+                    Proc030(87)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_2)
+                }
+                else
+                {
+                    Proc030(88)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_23)
+                }
+            }
+            else if Func089(25) >= 50000 && Func089(25) < 60000
+            {
+                if Func085(25) == 0
+                {
+                    Proc030(88)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_24)
+                }
+                else
+                {
+                    Proc030(88)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_25)
+                }
+            }
+            else if Func089(25) >= 60000
+            {
+                if Func085(25) == 0
+                {
+                    Proc030(92)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_26)
+                }
+                else
+                {
+                    Proc030(91)
+                    Proc032(25)
+                    TalkMessage(MESSAGE_27)
+                }
+            }
+            TalkClose()
+            Proc083(25)
+            SetEntityAnim(25, 2030)
+            Proc037(15)
+        }
+        else if Func03E(103) == 2
+        {
+            SetEntityAnim(12, 2091)
+            Proc037(15)
+            TalkOpen()
+            Proc02D(12)
+            if Func089(12) < 30000
+            {
+                if Func085(12) == 0
+                {
+                    Proc030(107)
+                    Proc032(12)
+                    TalkMessage(MESSAGE_28)
+                }
+                else
+                {
+                    Proc030(105)
+                    Proc032(12)
+                    TalkMessage(MESSAGE_29)
+                }
+            }
+            else if Func089(12) >= 30000 && Func089(12) < 40000
+            {
+                if Func085(12) == 0
+                {
+                    Proc030(107)
+                    Proc032(12)
+                    TalkMessage(MESSAGE_30)
+                }
+                else
+                {
+                    Proc030(107)
+                    Proc032(12)
+                    TalkMessage(MESSAGE_31)
+                }
+            }
+            else if Func089(12) >= 40000 && Func089(12) < 50000
+            {
+                if Func085(12) == 0
+                {
+                    Proc030(103)
+                    Proc032(12)
+                    TalkMessage(MESSAGE_30)
+                }
+                else
+                {
+                    Proc030(104)
+                    Proc032(12)
+                    TalkMessage(MESSAGE_32)
+                }
+            }
+            else if Func089(12) >= 50000 && Func089(12) < 60000
+            {
+                if Func085(12) == 0
+                {
+                    Proc030(104)
+                    Proc032(12)
+                    TalkMessage(MESSAGE_33)
+                }
+                else
+                {
+                    Proc030(108)
+                    Proc032(12)
+                    TalkMessage(MESSAGE_34)
+                }
+            }
+            else if Func089(12) >= 60000
+            {
+                if Func085(12) == 0
+                {
+                    Proc030(104)
+                    Proc032(12)
+                    TalkMessage(MESSAGE_35)
+                }
+                else
+                {
+                    Proc030(104)
+                    Proc032(12)
+                    TalkMessage(MESSAGE_36)
+                }
+            }
+            TalkClose()
+            Proc083(12)
+            SetEntityAnim(12, 2115)
+            Proc037(15)
+        }
+        else if Func03E(111) == 2
+        {
+            SetEntityAnim(21, 2208)
+            Proc037(15)
+            TalkOpen()
+            Proc02D(21)
+            if Func089(21) < 30000
+            {
+                if Func085(21) == 0
+                {
+                    Proc030(123)
+                    Proc032(21)
+                    TalkMessage(MESSAGE_37)
+                }
+                else
+                {
+                    Proc030(125)
+                    Proc032(21)
+                    TalkMessage(MESSAGE_38)
+                }
+            }
+            else if Func089(21) >= 30000 && Func089(21) < 40000
+            {
+                if Func085(21) == 0
+                {
+                    Proc030(123)
+                    Proc032(21)
+                    TalkMessage(MESSAGE_39)
+                }
+                else
+                {
+                    Proc030(125)
+                    Proc032(21)
+                    TalkMessage(MESSAGE_40)
+                }
+            }
+            else if Func089(21) >= 40000 && Func089(21) < 50000
+            {
+                if Func085(21) == 0
+                {
+                    Proc030(121)
+                    Proc032(21)
+                    TalkMessage(MESSAGE_4)
+                }
+                else
+                {
+                    Proc030(123)
+                    Proc032(21)
+                    TalkMessage(MESSAGE_41)
+                }
+            }
+            else if Func089(21) >= 50000 && Func089(21) < 60000
+            {
+                if Func085(21) == 0
+                {
+                    Proc030(122)
+                    Proc032(21)
+                    TalkMessage(MESSAGE_42)
+                }
+                else
+                {
+                    Proc030(123)
+                    Proc032(21)
+                    TalkMessage(MESSAGE_43)
+                }
+            }
+            else if Func089(21) >= 60000
+            {
+                if Func085(21) == 0
+                {
+                    Proc030(126)
+                    Proc032(21)
+                    TalkMessage(MESSAGE_44)
+                }
+                else
+                {
+                    Proc030(126)
+                    Proc032(21)
+                    TalkMessage(MESSAGE_45)
+                }
+            }
+            TalkClose()
+            Proc083(21)
+            SetEntityAnim(21, 2228)
+            Proc037(15)
+        }
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_46)
+        TalkClose()
+    }
+}

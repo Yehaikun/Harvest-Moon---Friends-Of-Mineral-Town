@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 890 EventScript_890
+{
+    const MESSAGE_0 = "Did you hear that?!\r\nRick is such a pain! \x05\x0CHe's always like that when \r\nI talk to Popuri!\x05"
+    SetEntityFacing(26, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(26, 2)
+    Proc083(26)
+}

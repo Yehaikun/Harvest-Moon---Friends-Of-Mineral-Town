@@ -1,0 +1,39 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 98 EventScript_98
+{
+    const MESSAGE_0 = "Water Tank\x05"
+    const MESSAGE_1 = "Inside the water tank is\r\na Jewel of Truth.\x05"
+    const MESSAGE_2 = "Inside the water tank is\r\na Jewel of Truth.\x05\x0C...But, your hands are full,\r\nso you can't hold it.\x05"
+    if Func064()
+    {
+        exit
+    }
+    if Func03E(534) == 1
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+    }
+    else if Func03E(22) == 1
+    {
+        if Func040() == 1
+        {
+            Proc049(39)
+            TalkOpen()
+            TalkMessage(MESSAGE_1)
+            Proc03F(534, 1)
+            Proc03F(340, Func03E(340) + 1)
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_2)
+        }
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+    }
+    TalkClose()
+}

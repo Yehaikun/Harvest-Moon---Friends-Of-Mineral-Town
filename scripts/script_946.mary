@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 946 EventScript_946
+{
+    const MESSAGE_0 = "Hmmm......\x05"
+    SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(124)
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(21, 3)
+    Proc083(21)
+}

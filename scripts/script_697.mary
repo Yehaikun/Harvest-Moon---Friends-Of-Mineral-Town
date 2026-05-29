@@ -1,0 +1,19 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 697 EventScript_697
+{
+    const MESSAGE_0 = "I get so worried about her\r\nwhen she feels sick...\x05\x0CI hope she\x81fll be fine!\x05"
+    SetEntityFacing(3, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(10)
+    Proc02D(3)
+    if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+    {
+        Proc032(3)
+    }
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(3)
+    SetEntityFacing(3, 1)
+    exit
+}

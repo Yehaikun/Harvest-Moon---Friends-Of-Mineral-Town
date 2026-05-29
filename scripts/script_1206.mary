@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1206 EventScript_1206
+{
+    const MESSAGE_0 = "Listening to music \r\nrelaxes me so much. \x05"
+    if Func086(17) == 0
+    {
+        Proc083(17)
+    }
+    SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(68)
+    Proc02D(17)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(17) == 0
+    {
+        Proc080(17, 5)
+    }
+    SetEntityFacing(17, 1)
+    Proc083(17)
+}

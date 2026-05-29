@@ -1,0 +1,44 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 603 EventScript_603
+{
+    const MESSAGE_0 = "Here you are, \xFF).\x05"
+    const MESSAGE_1 = "I'm going to give you a \r\npresent, so empty your \r\nhands, OK?\x05"
+    SetEntityFacing(19, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc032(19)
+    Proc02D(19)
+    if Func040()
+    {
+        Proc030(73)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityAnim(19, 1689)
+        Proc037(60)
+        SetEntityAnim(19, 1681)
+        PlaySong(0, 106)
+        SetEntityAnim(0, 326)
+        Proc04B(Func126())
+        SetEntityAnim(0, 338)
+        Proc037(60)
+        Proc03F(176, 2)
+        Proc0F3()
+        Proc08D(19)
+        if Func03E(203) == 2
+        {
+            Proc08D(35)
+        }
+        Proc034(2, 1)
+        Proc016(29, 327, 112)
+        SetEntityPosition(0, 327, 112, 2)
+        Proc035(2, 1)
+    }
+    else
+    {
+        Proc030(72)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+    }
+    Proc083(19)
+    SetEntityFacing(19, 0)
+}

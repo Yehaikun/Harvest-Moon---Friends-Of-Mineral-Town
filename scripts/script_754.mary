@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 754 EventScript_754
+{
+    const MESSAGE_0 = "I'm OK now!!\r\n...I think...\x05"
+    if Func03E(279) == 1
+    {
+        SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(67)
+        Proc02D(17)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(17)
+        SetEntityFacing(17, 2)
+    }
+}

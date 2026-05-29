@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 928 EventScript_928
+{
+    const MESSAGE_0 = "What's wrong with Gray? \r\nHe's been smiling non-stop! \x05"
+    SetEntityFacing(6, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(168)
+    Proc02D(6)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(6, 0)
+    Proc083(6)
+}

@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 960 EventScript_960
+{
+    const MESSAGE_0 = "I've always been in love \r\nwith the Doctor...But, I\r\ndidn't know how he\x05\r\nfeels about me...! \x05\x0CI\x81fm so happy now...\x05"
+    const MESSAGE_1 = "I'm going to concentrate on\r\nmy studies with him. \x05\x0CMaybe I can even cure \r\ngrandmda's legs! \x05"
+    if Func086(21) == 0
+    {
+        Proc083(21)
+    }
+    if Func085(21) == 0
+    {
+        SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(127)
+        Proc02D(21)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(21, 0)
+        Proc083(21)
+    }
+    else
+    {
+        SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(127)
+        Proc02D(21)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(21, 0)
+        Proc083(21)
+    }
+}

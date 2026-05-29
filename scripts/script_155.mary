@@ -1,0 +1,39 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 155 EventScript_155
+{
+    const MESSAGE_0 = "\xFF#'s House\x05"
+    const MESSAGE_1 = "There is a Jewel of Truth in\r\n\xFF#'s house.\x05"
+    const MESSAGE_2 = "There is a Jewel of Truth in\r\n\xFF#'s house.\x05\x0C...But you can't hold it,\r\nbecause your hands are full.\r\n"
+    if Func064()
+    {
+        exit
+    }
+    if Func03E(532) == 1
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+    }
+    else if Func03E(22) == 1
+    {
+        if Func040() == 1
+        {
+            Proc049(39)
+            TalkOpen()
+            TalkMessage(MESSAGE_1)
+            Proc03F(532, 1)
+            Proc03F(340, Func03E(340) + 1)
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_2)
+        }
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+    }
+    TalkClose()
+}

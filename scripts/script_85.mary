@@ -1,0 +1,38 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 85 EventScript_85
+{
+    const MESSAGE_0 = "Enter the Hot Spring\r\nfrom here. However, you\r\ncan't get in while\x05\r\nholding something.\x05"
+    if GetEntityFacing(0) == 1
+    {
+        if Func040() == 1
+        {
+            SetEntityAnim(0, 454)
+            Proc008(0, 856, 1)
+            Proc00C(0)
+            Proc017(912, 472, 1)
+            PlaySong(0, 156)
+            Proc0CA(13)
+            Proc00A(0, 472, 1)
+            Proc00C(0)
+            PlaySong(0, 205)
+            Proc0CB(13)
+            Proc037(30)
+            PlaySong(0, 105)
+            SetEntityFacing(0, 3)
+            SetEntityAnim(0, 298)
+            Proc008(0, 912, 2)
+            Proc00C(0)
+            SetEntityAnim(0, 242)
+            PlaySong(0, 109)
+            Proc018()
+            Proc065()
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+        }
+    }
+}

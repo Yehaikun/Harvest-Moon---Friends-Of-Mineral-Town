@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1224 EventScript_1224
+{
+    const MESSAGE_0 = "I wonder why I feel so \r\ntired...\x05"
+    const MESSAGE_1 = "That was delicious!\r\nI see there are no \r\ningredients left over. \x05"
+    if Func086(11) == 0
+    {
+        Proc083(11)
+    }
+    SetEntityFacing(11, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(11) == 0
+    {
+        Proc080(11, 5)
+    }
+    TalkOpen()
+    Proc02D(11)
+    if Func03E(421) == 1
+    {
+        Proc030(113)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(11)
+    }
+    else
+    {
+        Proc030(111)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(11)
+    }
+    SetEntityFacing(11, 0)
+}

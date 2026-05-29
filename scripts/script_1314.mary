@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1314 EventScript_1314
+{
+    const MESSAGE_0 = "It just wouldn't be New Year\r\nwithout New Year Noodles, \r\nwould it? \x05"
+    if Func086(8) == 0
+    {
+        Proc083(8)
+    }
+    SetEntityFacing(8, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(134)
+    Proc02D(8)
+    TalkMessage(MESSAGE_0)
+    Proc031()
+    TalkClose()
+    if Func084(8) == 0
+    {
+        Proc080(8, 5)
+    }
+    Proc083(8)
+    SetEntityFacing(8, 3)
+}

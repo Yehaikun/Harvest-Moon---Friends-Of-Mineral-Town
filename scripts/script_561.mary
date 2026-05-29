@@ -1,0 +1,55 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 561 EventScript_561
+{
+    const MESSAGE_0 = "You might get lost, so \r\ndon't go upstairs.\x05"
+    const MESSAGE_1 = "Wooof! WOOF!!\r\nHannah's mad about \r\nsomething...\x05"
+    const MESSAGE_2 = "Please don't go upstairs!\x05"
+    var var_0, var_1
+    if GetEntityFacing(0) == 1
+    {
+        var_0 = 0
+        var_1 = Func03E(3)
+        if var_1 >= 22
+        {
+            var_0 = 0
+        }
+        if Func07F(4) <= 100
+        {
+            var_0 = 0
+        }
+        else if Func07F(4) > 100
+        {
+            var_0 = 1
+        }
+        if var_0 == 1
+        {
+            Proc034(2, 1)
+            Proc016(42, 216, 96)
+            SetEntityPosition(0, 216, 96, 1)
+            Proc035(2, 1)
+        }
+        else
+        {
+            TalkOpen()
+            if var_1 >= 22
+            {
+                TalkMessage(MESSAGE_0)
+            }
+            else if GetEntityLocation(4) != 41 && Func07F(4) <= 100
+            {
+                TalkMessage(MESSAGE_1)
+            }
+            else
+            {
+                Proc030(180)
+                Proc02D(4)
+                TalkMessage(MESSAGE_2)
+            }
+            TalkClose()
+            Proc00A(0, GetEntityY(0) + 2, 1)
+            Proc017(GetEntityX(0), GetEntityY(0) + 2, 1)
+            Proc00C(0)
+        }
+    }
+}

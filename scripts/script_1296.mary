@@ -1,0 +1,106 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1296 EventScript_1296
+{
+    const MESSAGE_0 = "This is from me. \r\nI hope you like it. \x05"
+    const MESSAGE_1 = "This is for the Cookies\r\nyou gave me in Spring. \x05"
+    const MESSAGE_2 = "I came to give you \r\nsomething. \x05"
+    var var_0
+    Proc03F(442, 1)
+    var_0 = GetEntityFacing(21)
+    SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(21)
+    if Func040()
+    {
+        if Func03E(389) == 0
+        {
+            Proc030(122)
+            Proc032(21)
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            SetEntityAnim(21, 2188)
+            Proc037(60)
+            SetEntityAnim(21, 2180)
+            SetEntityAnim(0, 326)
+            PlaySong(0, 106)
+            if Func089(21) >= 40000
+            {
+                Proc04A(144)
+            }
+            else if Func089(21) < 40000
+            {
+                Proc04A(69)
+            }
+            Proc03F(443, 1)
+            Proc08A(21, 1000)
+            SetEntityAnim(0, 338)
+            if GetEntityX(21) != 340
+            {
+                SetEntityFacing(21, 3)
+                SetEntityAnim(21, 2184)
+                Proc008(21, 340, 1)
+                Proc00C(21)
+                SetEntityAnim(21, 2180)
+            }
+            SetEntityFacing(21, 1)
+            SetEntityAnim(21, 2184)
+            Proc00A(21, 0, 1)
+            Proc00C(21)
+            SetEntityAnim(21, 2180)
+            Proc00F(21)
+            Proc03F(442, 2)
+            Proc101()
+        }
+        else
+        {
+            Proc030(122)
+            Proc032(21)
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+            SetEntityAnim(21, 2188)
+            Proc037(60)
+            SetEntityAnim(21, 2180)
+            SetEntityAnim(0, 326)
+            PlaySong(0, 106)
+            if Func089(21) >= 40000
+            {
+                Proc04A(144)
+            }
+            else if Func089(21) < 40000
+            {
+                Proc04A(69)
+            }
+            Proc03F(443, 1)
+            Proc03F(389, 0)
+            Proc08A(21, 1000)
+            SetEntityAnim(0, 338)
+            if GetEntityX(21) != 340
+            {
+                SetEntityFacing(21, 3)
+                SetEntityAnim(21, 2184)
+                Proc008(21, 340, 1)
+                Proc00C(21)
+                SetEntityAnim(21, 2180)
+            }
+            SetEntityFacing(21, 1)
+            SetEntityAnim(21, 2184)
+            Proc00A(21, 0, 1)
+            Proc00C(21)
+            SetEntityAnim(21, 2180)
+            Proc00F(21)
+            Proc03F(442, 2)
+            Proc101()
+        }
+    }
+    else
+    {
+        Proc030(122)
+        Proc032(21)
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        Proc03F(442, 0)
+    }
+    SetEntityFacing(21, var_0)
+    Proc083(21)
+}

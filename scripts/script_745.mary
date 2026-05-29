@@ -1,0 +1,194 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 745 EventScript_745
+{
+    const MESSAGE_0 = "Hi, <playname>!\x05"
+    const MESSAGE_1 = "Yay!! It's \xFF!!\x05"
+    const MESSAGE_2 = "Thanks for coming. Stick\r\naround for a while. \x05"
+    const MESSAGE_3 = "Is the farm keeping\r\nyou busy?\x05"
+    const MESSAGE_4 = "It's not easy running a \r\nfarm. I admire someone \r\nwho can do it alone!\x05"
+    const MESSAGE_5 = "I could take a lesson\r\nfrom you, yes I could.\x05"
+    const MESSAGE_6 = "Elli's working hard, too. \x05\x0CIt's her day off, but she's\r\nstudying a medical textbook\r\neven so. \x05"
+    const MESSAGE_7 = "Quite a sister, she is. \x05"
+    const MESSAGE_8 = "It's nothing, really...\x05"
+    const MESSAGE_9 = "Oh yeah! I forgot to return\r\nthat book to the Doctor!\x05\x0CWhere did I put it...?\x05"
+    const MESSAGE_10 = "It was on this shelf...\r\nOh, here it is! Hmm?\x05"
+    const MESSAGE_11 = "What's wrong?\x05"
+    const MESSAGE_12 = "When I took the book out,\r\na letter came out with it!\x05\x0CIt's addressed to you, \r\nGrandma!\x05"
+    const MESSAGE_13 = "What?\x05"
+    const MESSAGE_14 = "It's from your Grandpa!\x05"
+    const MESSAGE_15 = "Really?!\x05"
+    const MESSAGE_16 = "What's it say? \x05"
+    const MESSAGE_17 = "Let's see...\x05"
+    const MESSAGE_18 = "Dear Ellen,\r\nI am writing this on the \r\nday our granddaughter Elli\r\nis born. \r\nI am truly happy, and \r\nblessed to have you as \r\nmy wife. Thank you. \r\nWhen will you read this\r\nletter? I'm too embarrassed\r\nto give it to you directly,\r\nso I'll just hide it here.\r\nPlease, even if you do \r\ncome across this, don't\r\ntell me you found it.\r\nIt'll be too embarrassing!\x05"
+    const MESSAGE_19 = "I can't believe he wrote\r\nthis the day I was born!...\x05\x0CWhy didn't he give this\r\nto you then, Grandma?\x05"
+    const MESSAGE_20 = "He was very shy and \r\neasily embarrassed. \x05\x0CI can't believe he even \r\nwrote out his feelings \r\nlike he did!\x05\r\nHe's in heaven now, so \r\nI'll treasure this...\x05"
+    Proc016(14, 129, 120)
+    SetEntityPosition(15, 128, 96, 0)
+    SetEntityAnim(15, 1669)
+    SetEntityPosition(21, 150, 96, 0)
+    SetEntityAnim(21, 2180)
+    SetEntityPosition(16, 185, 103, 2)
+    SetEntityAnim(16, 2232)
+    SetEntityPosition(0, 129, 120, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(129)
+    Proc02D(16)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(64)
+    Proc02D(15)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(64)
+    Proc02D(15)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(125)
+    Proc02D(21)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    TalkOpen()
+    Proc030(64)
+    Proc02D(15)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    Proc030(129)
+    Proc02D(16)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    Proc030(122)
+    Proc02D(21)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    Proc011(21, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(122)
+    Proc02D(21)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    SetEntityFacing(21, 1)
+    SetEntityAnim(21, 2184)
+    Proc00A(21, 68, 1)
+    Proc00C(21)
+    SetEntityAnim(21, 2180)
+    Proc037(60)
+    TalkOpen()
+    Proc030(125)
+    Proc02D(21)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    Proc011(21, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(63)
+    Proc02D(15)
+    TalkMessage(MESSAGE_11)
+    TalkClose()
+    TalkOpen()
+    Proc030(125)
+    Proc02D(21)
+    TalkMessage(MESSAGE_12)
+    TalkClose()
+    TalkOpen()
+    Proc030(63)
+    Proc02D(15)
+    TalkMessage(MESSAGE_13)
+    TalkClose()
+    SetEntityFacing(21, 0)
+    SetEntityAnim(21, 2184)
+    Proc00A(21, 96, 1)
+    Proc00C(21)
+    SetEntityAnim(21, 2180)
+    SetEntityFacing(21, 2)
+    SetEntityAnim(21, 2188)
+    Proc037(60)
+    SetEntityAnim(21, 2180)
+    TalkOpen()
+    Proc030(63)
+    Proc02D(15)
+    TalkMessage(MESSAGE_14)
+    TalkClose()
+    TalkOpen()
+    Proc030(128)
+    Proc02D(16)
+    TalkMessage(MESSAGE_15)
+    TalkClose()
+    TalkOpen()
+    Proc030(122)
+    Proc02D(21)
+    TalkMessage(MESSAGE_16)
+    TalkClose()
+    TalkOpen()
+    Proc030(63)
+    Proc02D(15)
+    TalkMessage(MESSAGE_17)
+    TalkClose()
+    TalkOpen()
+    TalkMessageSlow(MESSAGE_18)
+    TalkClose()
+    TalkOpen()
+    Proc030(122)
+    Proc02D(21)
+    TalkMessage(MESSAGE_19)
+    TalkClose()
+    TalkOpen()
+    Proc030(64)
+    Proc02D(15)
+    TalkMessage(MESSAGE_20)
+    TalkClose()
+    Proc080(16, 20)
+    Proc080(21, 20)
+    Proc080(15, 20)
+    Proc083(16)
+    Proc083(21)
+    Proc083(15)
+    Proc0F2()
+    Proc03F(273, 1)
+    Proc08C(15, 746)
+    Proc08C(21, 747)
+    Proc08C(16, 748)
+}

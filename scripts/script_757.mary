@@ -1,0 +1,31 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 757 EventScript_757
+{
+    const MESSAGE_0 = "Aja left home because of \r\nan argument with Duke. \x05"
+    const MESSAGE_1 = "Let's call Aja now. \x05"
+    if Func086(18) == 0
+    {
+        Proc083(18)
+    }
+    if Func03E(280) == 1
+    {
+        SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        if Func085(18) == 0
+        {
+            Proc030(79)
+            Proc02D(18)
+            TalkMessage(MESSAGE_0)
+        }
+        else
+        {
+            Proc030(79)
+            Proc02D(18)
+            TalkMessage(MESSAGE_1)
+        }
+        TalkClose()
+        Proc083(18)
+        SetEntityFacing(18, 0)
+    }
+}

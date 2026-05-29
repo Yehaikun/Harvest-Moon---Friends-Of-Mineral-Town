@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1072 EventScript_1072
+{
+    const MESSAGE_0 = "I like how gooey they are! \x05"
+    if Func086(16) == 0
+    {
+        Proc083(16)
+    }
+    SetEntityFacing(16, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(128)
+    Proc02D(16)
+    TalkMessage(MESSAGE_0)
+    Proc031()
+    TalkClose()
+    if Func084(16) == 0
+    {
+        Proc080(16, 5)
+    }
+    Proc083(16)
+    SetEntityFacing(16, 3)
+}

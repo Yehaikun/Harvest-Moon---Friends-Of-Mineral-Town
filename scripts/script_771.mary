@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 771 EventScript_771
+{
+    const MESSAGE_0 = "I have to tell Sasha about\r\nthis when I get home! \x05\x0CShe always did say that\r\nmy personality was too kind\r\nfor that blood type!\x05"
+    if Func03E(285) == 1
+    {
+        SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(70)
+        Proc02D(17)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(17)
+        SetEntityFacing(17, 0)
+    }
+}

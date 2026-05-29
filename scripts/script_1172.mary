@@ -1,0 +1,35 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1172 EventScript_1172
+{
+    const MESSAGE_0 = "All the cows are so cute. \r\nI like the way they chew!\x05"
+    const MESSAGE_1 = "I bet that Cow of yours\r\nis a sure winner!\x05"
+    if Func086(21) == 0
+    {
+        Proc083(21)
+    }
+    SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    if Func03E(411) == 0
+    {
+        Proc030(121)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(122)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(21) == 0
+    {
+        Proc080(21, 5)
+    }
+    Proc083(21)
+    SetEntityFacing(21, 0)
+}

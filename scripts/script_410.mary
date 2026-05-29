@@ -1,0 +1,347 @@
+================================ PARTIAL DECOMPILATION
+    /* Assignment Expression */
+    push var_7 = 1
+    /* Complete statements */
+    var_0 = Func03E(1)
+    var_1 = Func03E(2)
+    var_2 = Func03E(3)
+    var_3 = Func03E(4)
+    if GetEntityFacing(0) == 1
+    {
+        if Func03E(396) == 1
+        {
+            if Func084(30) == 0
+            {
+                TalkOpen()
+                Proc030(117)
+                Proc02D(13)
+                TalkMessage(0)
+                TalkClose()
+                var_7 = 0
+            }
+            else
+            {
+                Proc034(2, 1)
+                Proc03F(396, 2)
+                Proc08D(13)
+                Proc08D(20)
+                Proc08D(22)
+                Proc08D(30)
+                Proc08D(28)
+                Proc08D(25)
+                Proc08D(27)
+                Proc08D(19)
+                Proc08D(24)
+                Proc08D(18)
+                Proc08D(9)
+                Proc08D(2)
+                Proc08D(1)
+                Proc0F3()
+                TalkOpen()
+                TalkMessage(1)
+                TalkClose()
+                Proc12A()
+                Proc0F7(12, 0)
+                Proc035(2, 1)
+                exit
+            }
+        }
+        else if Func03E(398) == 1
+        {
+            TalkOpen()
+            Proc030(120)
+            Proc02D(13)
+            TalkMessage(2)
+            TalkClose()
+            var_7 = 0
+        }
+        else if Func03E(420) == 1
+        {
+            if Func03E(422) == 1
+            {
+                Proc034(2, 1)
+                Proc03F(420, 2)
+                Proc08D(13)
+                Proc08D(21)
+                Proc08D(22)
+                Proc08D(25)
+                Proc08D(27)
+                Proc08D(19)
+                Proc08D(24)
+                Proc08D(12)
+                Proc08D(18)
+                Proc08D(11)
+                Proc08D(9)
+                Proc0F3()
+                TalkOpen()
+                TalkMessage(3)
+                TalkClose()
+                Proc12A()
+                Proc035(2, 1)
+                exit
+            }
+            else
+            {
+                Proc03F(420, 0)
+                Proc08D(13)
+                Proc08D(21)
+                Proc08D(22)
+                Proc08D(25)
+                Proc08D(27)
+                Proc08D(19)
+                Proc08D(24)
+                Proc08D(12)
+                Proc08D(18)
+                Proc08D(11)
+                Proc08D(9)
+                Proc0F3()
+            }
+        }
+        else if Func03E(384) == 1
+        {
+            TalkOpen()
+            Proc030(120)
+            Proc02D(13)
+            TalkMessage(4)
+            TalkClose()
+            var_7 = 0
+        }
+        else if Func03E(464) == 1
+        {
+            TalkOpen()
+            Proc030(120)
+            Proc02D(13)
+            TalkMessage(5)
+            TalkClose()
+            var_7 = 0
+        }
+        else if Func03E(393) == 1
+        {
+            if !(var_2 == 18 && var_3 == 1)
+            {
+                TalkOpen()
+                Proc030(120)
+                Proc02D(13)
+                TalkMessage(6)
+                TalkClose()
+                var_7 = 0
+            }
+            else
+            {
+                Proc034(2, 1)
+                TalkOpen()
+                TalkMessage(3)
+                TalkClose()
+                Proc0F3()
+                Proc03F(393, 2)
+                Proc11C(0)
+                Proc03F(392, 0)
+                Proc08D(2)
+                Proc08D(3)
+                Proc08D(4)
+                Proc08D(5)
+                Proc08D(6)
+                Proc08D(8)
+                Proc08D(9)
+                Proc08D(13)
+                Proc08D(14)
+                Proc08D(17)
+                Proc08D(18)
+                Proc08D(19)
+                Proc08D(24)
+                Proc08D(25)
+                Proc08D(28)
+                Proc12A()
+                SetEntityAnim(0, 402)
+                Proc035(2, 1)
+                exit
+            }
+        }
+        else if Func03E(408) == 1
+        {
+            if !(var_2 == 18 && var_3 == 1)
+            {
+                TalkOpen()
+                Proc030(2)
+                Proc02D(2)
+                TalkMessage(7)
+                TalkClose()
+                var_7 = 0
+            }
+            else
+            {
+                Proc034(2, 1)
+                TalkOpen()
+                TalkMessage(3)
+                TalkClose()
+                Proc0F3()
+                Proc03F(408, 2)
+                Proc11C(3)
+                Proc03F(407, 0)
+                Proc08D(2)
+                Proc08D(4)
+                Proc08D(6)
+                Proc08D(8)
+                Proc08D(13)
+                Proc08D(3)
+                Proc08D(24)
+                Proc12A()
+                SetEntityAnim(0, 402)
+                Proc035(2, 1)
+                exit
+            }
+        }
+        else if Func03E(412) == 1
+        {
+            if !(var_2 == 18 && var_3 == 1)
+            {
+                TalkOpen()
+                Proc030(183)
+                Proc02D(4)
+                TalkMessage(8)
+                TalkClose()
+                var_7 = 0
+            }
+            else
+            {
+                Proc034(2, 1)
+                TalkOpen()
+                TalkMessage(3)
+                TalkClose()
+                Proc0F3()
+                Proc03F(412, 2)
+                Proc11C(1)
+                Proc03F(411, 0)
+                Proc08D(2)
+                Proc08D(3)
+                Proc08D(4)
+                Proc08D(5)
+                Proc08D(10)
+                Proc08D(12)
+                Proc08D(13)
+                Proc08D(16)
+                Proc08D(20)
+                Proc08D(21)
+                Proc08D(22)
+                Proc00F(71)
+                Proc00F(72)
+                Proc00F(73)
+                Proc08D(71)
+                Proc08D(72)
+                Proc08D(73)
+                Proc12A()
+                SetEntityAnim(0, 402)
+                Proc035(2, 1)
+                exit
+            }
+        }
+        else if Func03E(428) == 1
+        {
+            if !(var_2 == 18 && var_3 == 1)
+            {
+                TalkOpen()
+                Proc030(120)
+                Proc02D(13)
+                TalkMessage(6)
+                TalkClose()
+                var_7 = 0
+            }
+            else
+            {
+                Proc034(2, 1)
+                TalkOpen()
+                TalkMessage(3)
+                TalkClose()
+                Proc0F3()
+                Proc03F(428, 2)
+                Proc11C(0)
+                Proc03F(427, 0)
+                Proc08D(13)
+                Proc08D(4)
+                Proc08D(6)
+                Proc08D(28)
+                Proc08D(27)
+                Proc08D(7)
+                Proc08D(12)
+                Proc08D(24)
+                Proc08D(21)
+                Proc08D(20)
+                Proc08D(22)
+                Proc08D(1)
+                Proc08D(2)
+                Proc08D(14)
+                Proc08D(8)
+                Proc12A()
+                SetEntityAnim(0, 402)
+                Proc035(2, 1)
+                exit
+            }
+        }
+        else if Func03E(432) == 1
+        {
+            if !(var_2 == 18 && var_3 == 1)
+            {
+                TalkOpen()
+                Proc030(180)
+                Proc02D(4)
+                TalkMessage(9)
+                TalkClose()
+                var_7 = 0
+            }
+            else
+            {
+                Proc034(2, 1)
+                TalkOpen()
+                TalkMessage(3)
+                TalkClose()
+                Proc0F3()
+                Proc03F(432, 2)
+                Proc11C(2)
+                Proc03F(431, 0)
+                Proc08D(2)
+                Proc08D(19)
+                Proc08D(4)
+                Proc08D(5)
+                Proc08D(14)
+                Proc08D(11)
+                Proc08D(13)
+                Proc08D(27)
+                Proc08D(7)
+                Proc08D(17)
+                Proc00F(71)
+                Proc00F(72)
+                Proc00F(73)
+                Proc08D(71)
+                Proc08D(72)
+                Proc08D(73)
+                Proc12A()
+                SetEntityAnim(0, 402)
+                Proc035(2, 1)
+                exit
+            }
+        }
+        else if Func03E(280) == 1
+        {
+            Proc03F(280, 2)
+            Proc08D(18)
+            Proc08D(11)
+            Proc08D(9)
+            Proc0F3()
+        }
+        if var_7
+        {
+            Proc034(2, 1)
+            Proc016(5, 1260, 680)
+            SetEntityPosition(0, 1260, 680, 1)
+            Proc035(2, 1)
+        }
+        else
+        {
+            SetEntityFacing(0, 0)
+            Proc00A(0, 60, 1)
+            Proc00C(0)
+        }
+    }
+================================ END OF SCRIPT
+Decompile error: Couldn't reduce at end of input
+Error: ()

@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1082 EventScript_1082
+{
+    const MESSAGE_0 = "Everyone's gone home now.\r\nIf you want to exchange \r\nyour medal for a prize, \x05\r\ncome see me. \x05"
+    if Func086(13) == 0
+    {
+        Proc083(13)
+    }
+    SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(117)
+    Proc02D(13)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(13) == 0
+    {
+        Proc080(13, 5)
+    }
+    Proc083(13)
+    SetEntityFacing(13, 0)
+}

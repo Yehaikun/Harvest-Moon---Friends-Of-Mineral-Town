@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 746 EventScript_746
+{
+    const MESSAGE_0 = "It's just like him to \r\nhide it that way. \x05"
+    const MESSAGE_1 = "He was so easily \r\nembarrassed...!\x05"
+    if Func03E(273) == 1
+    {
+        TalkOpen()
+        Proc030(64)
+        Proc02D(15)
+        TalkMessage(MESSAGE_0)
+        Proc030(63)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(15)
+    }
+}

@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 27 EventScript_27
+{
+    const MESSAGE_0 = "I had no idea Karen would \r\nbe so happy!\x05"
+    if Func03E(73) == 1
+    {
+
+    }
+    SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(80)
+    Proc02D(18)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(18, 3)
+    Proc083(18)
+}

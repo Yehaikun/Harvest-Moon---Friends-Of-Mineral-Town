@@ -1,0 +1,27 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1322 EventScript_1322
+{
+    const MESSAGE_0 = "I don't know about you,\r\nbut I had a great year.\x05"
+    if Func086(10) == 0
+    {
+        Proc083(10)
+    }
+    SetEntityFacing(10, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(100)
+    Proc02D(10)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func085(10) == 0
+    {
+        Proc080(10, 5)
+    }
+    Proc083(10)
+    if (Func03E(244) == 0 || Func085(23)) && Func085(24) && Func085(11) && Func085(10) && Func085(12) && Func085(6) && Func085(7)
+    {
+        Proc034(2, 1)
+        Proc038(1319)
+    }
+    SetEntityFacing(10, 1)
+}

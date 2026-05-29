@@ -1,0 +1,61 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 810 EventScript_810
+{
+    const MESSAGE_0 = "Good day!\x05"
+    const MESSAGE_1 = "I'm Won by name, \r\nand wandering salesman\r\nfrom the East. \x05\x0CHow do you do. \x05"
+    const MESSAGE_2 = "I have lots of rare Seeds!\r\nYou would be very glad to\r\nbuy them. \x05\x0CI stay at Zack's place,\r\nso come any time to \r\ntake a look!\x05"
+    const MESSAGE_3 = "I have to go make \r\nmy rounds now. \r\nI be waiting for you. \x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(29, 228, 145, 1)
+    SetEntityAnim(29, 2135)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(115)
+    Proc02D(29)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(114)
+    Proc02D(29)
+    TalkMessage(MESSAGE_1)
+    Proc030(115)
+    Proc02D(29)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(114)
+    Proc02D(29)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    SetEntityFacing(29, 3)
+    SetEntityAnim(29, 2139)
+    Proc008(29, 319, 1)
+    Proc00C(29)
+    SetEntityFacing(29, 1)
+    Proc00A(29, 0, 1)
+    Proc00C(29)
+    Proc00F(29)
+    Proc083(29)
+    Proc03F(311, 2)
+    exit
+}

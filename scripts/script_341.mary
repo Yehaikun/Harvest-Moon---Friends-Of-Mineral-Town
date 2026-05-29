@@ -1,0 +1,214 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 341 EventScript_341
+{
+    const MESSAGE_0 = "\xFF),\r\nwhere are you going\x05?"
+    const MESSAGE_1 = "\xFF!,\r\nwhere are you going\x05?"
+    const MESSAGE_2 = "You can't take your eye's \r\noff of\xFF*.\x05"
+    const MESSAGE_3 = "Take a bath?"
+    const MESSAGE_4 = "Yes"
+    const MESSAGE_5 = "No"
+    var var_0
+    if Func03E(170) == 1
+    {
+        TalkOpen()
+        Proc030(7)
+        Proc02D(3)
+        Proc032(3)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        exit
+    }
+    else if Func03E(172) == 1
+    {
+        TalkOpen()
+        Proc030(87)
+        Proc02D(25)
+        Proc032(25)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        exit
+    }
+    else if Func03E(174) == 1
+    {
+        TalkOpen()
+        Proc030(121)
+        Proc02D(21)
+        Proc032(21)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        exit
+    }
+    else if Func03E(176) == 1
+    {
+        TalkOpen()
+        Proc030(72)
+        Proc02D(19)
+        Proc032(19)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        exit
+    }
+    else if Func03E(178) == 1
+    {
+        TalkOpen()
+        Proc030(103)
+        Proc02D(12)
+        Proc032(12)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        exit
+    }
+    else if Func03E(372) == 1
+    {
+        TalkOpen()
+        Proc030(56)
+        Proc02D(31)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        exit
+    }
+    else if Func03E(180) == 1 || Func03E(185) == 1 || Func03E(190) == 1 || Func03E(205) == 1
+    {
+        TalkOpen()
+        Proc030(7)
+        Proc02D(3)
+        Proc032(3)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        exit
+    }
+    else if Func03E(181) == 1 || Func03E(186) == 1 || Func03E(191) == 1 || Func03E(206) == 1
+    {
+        TalkOpen()
+        Proc030(87)
+        Proc02D(25)
+        Proc032(25)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        exit
+    }
+    else if Func03E(182) == 1 || Func03E(187) == 1 || Func03E(192) == 1 || Func03E(207) == 1
+    {
+        TalkOpen()
+        Proc030(121)
+        Proc02D(21)
+        Proc032(21)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        exit
+    }
+    else if Func03E(183) == 1 || Func03E(188) == 1 || Func03E(193) == 1 || Func03E(208) == 1
+    {
+        TalkOpen()
+        Proc030(72)
+        Proc02D(19)
+        Proc032(19)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        exit
+    }
+    else if Func03E(184) == 1 || Func03E(189) == 1 || Func03E(194) == 1 || Func03E(209) == 1
+    {
+        TalkOpen()
+        Proc030(103)
+        Proc02D(12)
+        Proc032(12)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        exit
+    }
+    else if Func03E(374) == 1 || Func03E(375) == 1 || Func03E(376) == 1
+    {
+        TalkOpen()
+        Proc030(56)
+        Proc02D(31)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        exit
+    }
+    else if Func03E(379) == 1
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        exit
+    }
+    TalkOpen()
+    var_0 = Func025(MESSAGE_3, MESSAGE_4, MESSAGE_5)
+    TalkClose()
+    if var_0 == 2
+    {
+        exit
+    }
+    PlaySong(0, 156)
+    Proc0CA(12)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc008(0, 20, 1)
+    Proc00C(0)
+    Proc00A(0, 52, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc034(2, 1)
+    PlaySong(0, 205)
+    Proc05C(20, -20)
+    PlaySong(0, 139)
+    Proc037(10)
+    PlaySong(0, 139)
+    Proc037(10)
+    PlaySong(0, 139)
+    Proc037(120)
+    PlaySong(0, 109)
+    Proc037(60)
+    if Func03E(3) == 5 && Func03E(4) >= 30
+    {
+        Proc0CB(12)
+        Proc0F7(6, 0)
+        Proc068()
+        Proc05C(0, 10)
+        Proc038(980)
+    }
+    else if Func03E(4) >= 30
+    {
+        if Func03E(3) == 23
+        {
+            Proc0F7(0, Func03E(4) - 30)
+        }
+        else
+        {
+            Proc0F7(Func03E(3) + 1, Func03E(4) - 30)
+        }
+    }
+    else
+    {
+        Proc0F7(Func03E(3), Func03E(4) + 30)
+    }
+    SetEntityPosition(0, 20, 52, 0)
+    PlaySong(0, 156)
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 64, 1)
+    Proc00C(0)
+    Proc0CB(12)
+}

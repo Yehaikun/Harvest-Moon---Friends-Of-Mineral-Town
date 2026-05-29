@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1261 EventScript_1261
+{
+    const MESSAGE_0 = "You must become one with\r\nthe Horse as you race \r\ntoward your goal. \x05"
+    const MESSAGE_1 = "You must believe\r\nin yourself. \x05"
+    if Func086(6) == 0
+    {
+        Proc083(6)
+    }
+    SetEntityFacing(6, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(427) == 0
+    {
+        TalkOpen()
+        Proc030(168)
+        Proc02D(6)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(168)
+        Proc02D(6)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(6) == 0
+    {
+        Proc080(6, 5)
+    }
+    Proc083(6)
+    SetEntityFacing(6, 3)
+}

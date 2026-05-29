@@ -1,0 +1,116 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 918 EventScript_918
+{
+    const MESSAGE_0 = "I'm getting married to Ann!\r\nShe's the only person who \r\nmakes me happy. \x05"
+    const MESSAGE_1 = "Will you be able to come \r\nto the wedding today? \x05"
+    const MESSAGE_2 = "You may now kiss the bride. \x05"
+    const MESSAGE_3 = "A toast to the newlyweds! \x05"
+    Proc03F(134, 1)
+    PlayBGM(1, 16)
+    Proc016(2, 228, 160)
+    SetEntityPosition(0, 228, 120, 0)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(23, 228, 160, 1)
+    SetEntityAnim(23, 635)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(23)
+    Proc02D(23)
+    TalkMessage(MESSAGE_0)
+    Proc030(24)
+    Proc02D(23)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    Proc034(2, 1)
+    StopBGM()
+    Proc016(12, 184, 160)
+    SetEntityPosition(25, 200, 152, 0)
+    SetEntityAnim(25, 2018)
+    SetEntityPosition(23, 168, 152, 0)
+    SetEntityAnim(23, 647)
+    SetEntityPosition(22, 184, 120, 0)
+    SetEntityAnim(22, 2284)
+    SetEntityPosition(0, 104, 195, 3)
+    Proc06B()
+    SetEntityPosition(9, 104, 155, 3)
+    SetEntityAnim(9, 2256)
+    SetEntityPosition(8, 72, 195, 3)
+    SetEntityAnim(8, 2240)
+    SetEntityPosition(24, 264, 155, 2)
+    SetEntityAnim(24, 1970)
+    if GetEntityLocation(17) == 12
+    {
+        Proc00F(17)
+    }
+    if GetEntityLocation(20) == 12
+    {
+        Proc00F(20)
+    }
+    if GetEntityLocation(3) == 12
+    {
+        Proc00F(3)
+    }
+    StopAllSongs()
+    Proc035(2, 1)
+    PlaySong(0, 179)
+    Proc037(60 * 3)
+    PlaySong(0, 179)
+    Proc037(60 * 3)
+    PlayBGM(1, 6)
+    TalkOpen()
+    Proc030(149)
+    Proc02D(22)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    SetEntityFacing(23, 3)
+    SetEntityFacing(25, 2)
+    SetEntityAnim(23, 651)
+    Proc008(23, 184, 1)
+    Proc00C(23)
+    SetEntityAnim(23, 647)
+    SetEntityAnim(23, 655)
+    SetEntityAnim(25, 2026)
+    Proc037(90)
+    SetEntityAnim(23, 647)
+    SetEntityAnim(25, 2018)
+    SetEntityAnim(23, 651)
+    Proc008(23, 168, 1)
+    Proc00C(23)
+    SetEntityAnim(23, 647)
+    Proc037(60)
+    SetEntityFacing(23, 0)
+    SetEntityFacing(25, 0)
+    Proc037(60)
+    SetEntityAnim(23, 651)
+    SetEntityAnim(25, 2022)
+    Proc00A(23, 179, 1)
+    Proc00A(25, 179, 1)
+    Proc00C(23)
+    Proc00C(25)
+    SetEntityFacing(9, 0)
+    SetEntityFacing(24, 0)
+    Proc00A(23, 219, 1)
+    Proc00A(25, 219, 1)
+    Proc00C(23)
+    Proc00C(25)
+    SetEntityFacing(0, 0)
+    SetEntityFacing(8, 0)
+    Proc00A(23, 272, 1)
+    Proc00A(25, 272, 1)
+    Proc037(60 * 3)
+    Proc034(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    Proc083(23)
+    Proc03F(134, 2)
+    Proc038(988)
+}

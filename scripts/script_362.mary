@@ -1,0 +1,34 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 362 EventScript_362
+{
+    const MESSAGE_0 = "It's locked...\x05"
+    var var_0, var_1
+    if GetEntityFacing(0) == 1
+    {
+        var_0 = 0
+        var_1 = Func03E(3)
+        if GetEntityLocation(36) != 28 && GetEntityLocation(37) != 28 && GetEntityLocation(38) != 28 && GetEntityLocation(39) != 28 && GetEntityLocation(40) != 28 && GetEntityLocation(41) != 28 && GetEntityLocation(42) != 28
+        {
+            var_0 = 0
+        }
+        else if var_1 >= 9 && var_1 < 18
+        {
+            var_0 = 1
+        }
+        if var_0 == 1
+        {
+            PlaySong(0, 156)
+            Proc034(2, 1)
+            Proc016(28, 120, 208)
+            SetEntityPosition(0, 120, 208, 1)
+            Proc035(2, 1)
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+        }
+    }
+}

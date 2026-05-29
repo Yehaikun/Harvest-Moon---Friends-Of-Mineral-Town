@@ -1,0 +1,93 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 801 EventScript_801
+{
+    const MESSAGE_0 = "How goes the patrol, Harris?\x05"
+    const MESSAGE_1 = "Mineral Town is safe \r\nand peaceful, as always. \x05"
+    const MESSAGE_2 = "Good to hear...\r\nNothing wrong on the \r\nmountain, either. \x05"
+    const MESSAGE_3 = "It really should be me \r\npatrolling the mountain, \r\nnot you. \x05\x0CThanks for helping out, \r\nGotz. \x05"
+    const MESSAGE_4 = "Don't worry about it. \r\nI know more about the \r\nmountain than you.\x05\x0CBesides, patrolling it was\r\nmy idea. \x05"
+    const MESSAGE_5 = "...........\x05\x0CIt's been quite a while\r\nsince your wife and \r\ndaughter died on the \x05\r\nmountain. \x05"
+    const MESSAGE_6 = "...I think if I \r\ncan prevent others from\r\nmeeting the same fate...\x05\x0CThose two will rest \r\na little bit more \r\npeacefully...\x05"
+    const MESSAGE_7 = "...I think so, too. \x05"
+    Proc0F2()
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(27, 120, 80, 2)
+    SetEntityAnim(27, 2515)
+    SetEntityPosition(14, 100, 80, 3)
+    SetEntityAnim(14, 2276)
+    Proc035(2, 1)
+    Proc017(120, 100, 2)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 100, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(173)
+    Proc02D(27)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(146)
+    Proc02D(14)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(172)
+    Proc02D(27)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(148)
+    Proc02D(14)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(172)
+    Proc02D(27)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(148)
+    Proc02D(14)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(27, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(172)
+    Proc02D(27)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    Proc030(145)
+    Proc02D(14)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    Proc0F2()
+    Proc03F(307, 1)
+    Proc08C(27, 803)
+    Proc08C(14, 802)
+    exit
+}

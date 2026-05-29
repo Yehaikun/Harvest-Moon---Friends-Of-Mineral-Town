@@ -1,0 +1,76 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 800 EventScript_800
+{
+    const MESSAGE_0 = "Yo, \xFF!!\x05"
+    const MESSAGE_1 = "I finally feel like getting \r\ndown to work. Sorry for \r\nputting you off. \x05"
+    const MESSAGE_2 = "Did you come to ask about \r\nan expansion? I'd love to\r\ndo it! \x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(27, 120, 80, 0)
+    SetEntityAnim(27, 2515)
+    Proc035(2, 1)
+    Proc017(120, 100, 2)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 100, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(172)
+    Proc02D(27)
+    TalkMessage(MESSAGE_0)
+    Proc030(173)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityAnim(0, 294)
+    Proc037(60)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(173)
+    Proc02D(27)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    SetEntityFacing(27, 3)
+    SetEntityAnim(27, 2519)
+    Proc008(27, 168, 1)
+    Proc00C(27)
+    SetEntityFacing(27, 0)
+    Proc00A(27, 88, 1)
+    Proc00C(27)
+    SetEntityFacing(27, 3)
+    Proc008(27, 200, 1)
+    Proc00C(27)
+    SetEntityFacing(27, 0)
+    SetEntityAnim(27, 2515)
+    Proc083(27)
+    Proc03F(306, 2)
+    Proc03F(305, 0)
+    exit
+}

@@ -1,0 +1,31 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 550 EventScript_550
+{
+    var var_0, var_1, var_2, var_3, var_4
+    if GetEntityFacing(0) == 0
+    {
+        if Func03E(307) == 1
+        {
+            Proc03F(307, 2)
+            Proc08D(27)
+            Proc08D(14)
+            Proc0F3()
+        }
+        var_0 = Func03E(1)
+        var_1 = Func03E(2)
+        var_3 = Func03E(3)
+        var_2 = Func03E(5)
+        var_4 = Func03E(6)
+        Proc034(2, 1)
+        Proc016(3, 612, 248)
+        SetEntityPosition(0, 612, 248, 0)
+        PlaySong(0, 205)
+        if Func03E(113) == 2 && Func03E(114) == 0 && !(var_0 == 0) && var_4 == 0 && (var_2 == 0 || var_2 == 1) && (var_3 >= 11 && var_3 < 18) && Func03E(76) == 0 && Func03E(117) == 0 && Func03E(118) == 0 && Func03E(119) == 0 && Func03E(75) == 0 && Func089(19) < 30000
+        {
+            Proc03F(114, 1)
+            Proc038(874)
+        }
+        Proc035(2, 1)
+    }
+}

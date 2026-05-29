@@ -1,0 +1,51 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 541 EventScript_541
+{
+    const MESSAGE_0 = "The wind is too strong\r\nto go outside.\x05"
+    const MESSAGE_1 = "The snow is too deep\r\nto go outside.\x05"
+    if GetEntityFacing(0) == 0
+    {
+        if Func03E(6) == 3
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            SetEntityFacing(0, 1)
+            if Func040() == 1
+            {
+                SetEntityAnim(0, 454)
+            }
+            else
+            {
+                SetEntityAnim(0, 342)
+            }
+            Proc00A(0, 200, 1)
+            Proc00C(0)
+            exit
+        }
+        if Func03E(6) == 4
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+            SetEntityFacing(0, 1)
+            if Func040() == 1
+            {
+                SetEntityAnim(0, 454)
+            }
+            else
+            {
+                SetEntityAnim(0, 342)
+            }
+            Proc00A(0, 200, 1)
+            Proc00C(0)
+            exit
+        }
+        Proc034(2, 1)
+        Proc016(7, 548, 106)
+        SetEntityPosition(0, 548, 106, 0)
+        PlaySong(0, 205)
+        Proc035(2, 1)
+    }
+}

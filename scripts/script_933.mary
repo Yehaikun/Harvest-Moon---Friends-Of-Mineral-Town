@@ -1,0 +1,142 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 933 EventScript_933
+{
+    const MESSAGE_0 = "Lately Gramps is finally\r\nletting me do some \r\nreal work. \x05"
+    const MESSAGE_1 = "That's great! \x05"
+    const MESSAGE_2 = "Well, just small things...\x05"
+    const MESSAGE_3 = "That's still good, right?\x05"
+    const MESSAGE_4 = "I guess...\x05"
+    const MESSAGE_5 = "...?\r\nWhat's wrong?\x05"
+    const MESSAGE_6 = "I was just thinking that \r\nI owe everything to you. \x05"
+    const MESSAGE_7 = "Me? But I haven't \r\ndone anything! \x05"
+    const MESSAGE_8 = "Talking to you on the peak\r\nof the mountain made me\r\nrealize what's wrong \x05\r\nwith me.\x05"
+    const MESSAGE_9 = "Oh yeah...\r\nI'm glad anything I said \r\nwas useful...\x05"
+    const MESSAGE_10 = "If you hadn't said that,\r\nthen I might have given up!\x05"
+    const MESSAGE_11 = "Saibara said he would give \r\nme a test on my skills. \x05\x0CIf I pass it, there's some-\r\nthing I want to ask you. \x05"
+    const MESSAGE_12 = "What is it!?\x05"
+    const MESSAGE_13 = "I have to pass the test \r\nfirst! Forget I said it...\x05"
+    const MESSAGE_14 = "If you say so...\x05"
+    Proc016(24, 120, 80)
+    PlayBGM(1, 16)
+    SetEntityPosition(0, 120, 208, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(7, 104, 68, 3)
+    SetEntityAnim(7, 2441)
+    SetEntityPosition(12, 136, 68, 2)
+    SetEntityAnim(12, 2067)
+    Proc035(2, 1)
+    Proc011(7, 5, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(104)
+    Proc02D(12)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(161)
+    Proc02D(7)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(104)
+    Proc02D(12)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(12, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    TalkOpen()
+    Proc030(108)
+    Proc02D(12)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_10)
+    Proc030(161)
+    Proc02D(7)
+    TalkMessage(MESSAGE_11)
+    TalkClose()
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_12)
+    TalkClose()
+    Proc011(12, 3, 0)
+    Proc037(60)
+    Proc011(7, 4, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(165)
+    Proc02D(7)
+    TalkMessage(MESSAGE_13)
+    TalkClose()
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_14)
+    TalkClose()
+    Proc017(120, 144, 1)
+    Proc018()
+    if Func040()
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 160, 1)
+    Proc00C(0)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc0F2()
+    Proc08C(12, 934)
+    Proc08C(7, 935)
+    Proc03F(141, 1)
+    exit
+}

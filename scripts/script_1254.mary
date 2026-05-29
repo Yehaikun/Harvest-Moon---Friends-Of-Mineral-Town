@@ -1,0 +1,35 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1254 EventScript_1254
+{
+    const MESSAGE_0 = "I'm going to bet today, \r\nbut I haven't decided on \r\nwhich Horse yet...\x05"
+    const MESSAGE_1 = "Good luck. \r\nI'll be rooting for you. \x05"
+    if Func086(12) == 0
+    {
+        Proc083(12)
+    }
+    SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(12)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(142) == 2 || Func03E(143) == 2)
+    {
+        Proc032(12)
+    }
+    if Func03E(427) == 0
+    {
+        Proc030(103)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(103)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(12) == 0
+    {
+        Proc080(12, 5)
+    }
+    Proc083(12)
+    SetEntityFacing(12, 0)
+}

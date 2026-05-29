@@ -1,0 +1,53 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 679 EventScript_679
+{
+    const MESSAGE_0 = "I can't believe I collapsed\r\nlike that! Guess I was \r\nworking too hard, huh?\x05"
+    const MESSAGE_1 = "I'm sleepy, so I think I'll \r\ntry to sleep this off now.\x05"
+    Proc016(29, 448, 100)
+    PlayBGM(1, 17)
+    SetEntityPosition(0, 448, 100, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(3, 440, -48, 0)
+    SetEntityAnim(3, 575)
+    Proc035(2, 1)
+    Proc037(60)
+    SetEntityAnim(3, 579)
+    Proc037(60)
+    TalkOpen()
+    Proc02D(3)
+    Proc030(11)
+    Proc032(3)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityAnim(0, 294)
+    Proc037(60)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(60)
+    TalkOpen()
+    Proc02D(3)
+    Proc030(11)
+    Proc032(3)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityAnim(3, 603)
+    Proc037(60)
+    Proc083(3)
+    Proc08A(3, -2000)
+    Proc03F(210, 1)
+    Proc101()
+}

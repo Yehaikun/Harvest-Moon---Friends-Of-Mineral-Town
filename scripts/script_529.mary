@@ -1,0 +1,35 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 529 EventScript_529
+{
+    if GetEntityFacing(0) == 1
+    {
+        PlaySong(0, 156)
+        Proc034(2, 1)
+        Proc016(39, 120, 208)
+        SetEntityPosition(0, 120, 208, 1)
+        if Func0B7(39)
+        {
+            switch Func03E(1)
+            {
+                case 0
+                {
+                    Proc05C(0, 1)
+                }
+                case 1
+                {
+                    Proc05C(0, 2)
+                }
+                case 2
+                {
+                    Proc05C(0, 1)
+                }
+                case 3
+                {
+                    Proc05C(0, -1)
+                }
+            }
+        }
+        Proc035(2, 1)
+    }
+}

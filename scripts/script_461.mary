@@ -1,0 +1,10 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 461 EventScript_461
+{
+    const MESSAGE_0 = "Amount of Animal Fodder\r\n\x81@\r\n\x81@\x81@\x81@\x81@\x81@\x81@\x81@\xFF%bushels\x05"
+    TalkOpen()
+    Proc03A(0, Func03E(41), 3)
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

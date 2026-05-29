@@ -1,0 +1,64 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 812 EventScript_812
+{
+    const MESSAGE_0 = "This is a very beautiful \r\nhouse! It deserves \r\nsomething special...\x05"
+    const MESSAGE_1 = "What this house lacks is a \r\nVase! Believe me, I know \r\nabout such things! \x05\x0CI happen to have one here \r\nI can sell for just 5000G.\x05"
+    const MESSAGE_2 = "Buy Vase."
+    const MESSAGE_3 = "Don't Buy."
+    const MESSAGE_4 = "It\x81fs a very rare vase from\r\nthe Ming Dynasty!\x05"
+    const MESSAGE_5 = "Of course, you'll have to \r\nfind some flowers for it \r\nyourself. \x05"
+    const MESSAGE_6 = "It's good for your soul to\r\nsurround yourself with \r\nbeauty!\x05"
+    var var_0
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(29, 228, 145, 1)
+    SetEntityAnim(29, 2135)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(115)
+    Proc02D(29)
+    TalkMessage(MESSAGE_0)
+    Proc030(115)
+    TalkMessage(MESSAGE_1)
+    var_0 = TalkChoice2(MESSAGE_2, MESSAGE_3)
+    switch var_0
+    {
+        case 1
+        {
+            TalkOpen()
+            Proc030(115)
+            Proc02D(29)
+            TalkMessage(MESSAGE_4)
+            Proc030(116)
+            TalkMessage(MESSAGE_5)
+            Proc03F(28, 1)
+            Proc0F1(5000)
+        }
+        case 2
+        {
+            TalkOpen()
+            Proc030(116)
+            Proc02D(29)
+            TalkMessage(MESSAGE_6)
+        }
+    }
+    TalkClose()
+    SetEntityFacing(29, 3)
+    SetEntityAnim(29, 2139)
+    Proc008(29, 319, 1)
+    Proc00C(29)
+    SetEntityFacing(29, 1)
+    Proc00A(29, 0, 1)
+    Proc00C(29)
+    Proc00F(29)
+    Proc083(29)
+    Proc03F(313, 2)
+    exit
+}

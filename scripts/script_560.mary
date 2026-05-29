@@ -1,0 +1,30 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 560 EventScript_560
+{
+    const MESSAGE_0 = "It's locked...\x05"
+    var unused_0, var_1, var_2
+    if GetEntityFacing(0) == 0
+    {
+        var_2 = 0
+        var_1 = Func03E(6)
+        if var_1 == 0
+        {
+            var_2 = 1
+        }
+        if var_2 == 1
+        {
+            Proc034(2, 1)
+            Proc016(7, 944, 232)
+            SetEntityPosition(0, 944, 232, 0)
+            PlaySong(0, 205)
+            Proc035(2, 1)
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+        }
+    }
+}

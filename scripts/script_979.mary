@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 979 EventScript_979
+{
+    const MESSAGE_0 = "Go back to the surface?"
+    const MESSAGE_1 = "Yes"
+    const MESSAGE_2 = "No"
+    var var_0
+    TalkOpen()
+    var_0 = Func025(MESSAGE_0, MESSAGE_1, MESSAGE_2)
+    TalkClose()
+    switch var_0
+    {
+        case 1
+        {
+            Proc038(977)
+        }
+        case 2
+        {
+        }
+    }
+}

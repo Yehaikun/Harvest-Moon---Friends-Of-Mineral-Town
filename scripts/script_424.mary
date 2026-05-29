@@ -1,0 +1,29 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 424 EventScript_424
+{
+    SetEntityPosition(31, GetEntityX(0) + 16, GetEntityY(0), 0)
+    SetEntityFacing(31, 2)
+    Proc008(31, GetEntityX(0) + 32, 1)
+    Proc015(41, GetEntityX(0) + 16, GetEntityY(0))
+    Proc00C(31)
+    Proc008(31, GetEntityX(0) + 48, 1)
+    Proc015(42, GetEntityX(0) + 32, GetEntityY(0))
+    Proc00C(31)
+    Proc008(31, GetEntityX(0) + 64, 1)
+    Proc015(40, GetEntityX(0) + 48, GetEntityY(0))
+    Proc00C(31)
+    Proc008(31, GetEntityX(0) + 80, 1)
+    Proc015(36, GetEntityX(0) + 64, GetEntityY(0))
+    Proc00C(31)
+    Proc008(31, GetEntityX(0) + 96, 1)
+    Proc015(38, GetEntityX(0) + 80, GetEntityY(0))
+    Proc00C(31)
+    Proc008(31, GetEntityX(0) + 112, 1)
+    Proc015(37, GetEntityX(0) + 96, GetEntityY(0))
+    Proc00C(31)
+    Proc00F(31)
+    Proc015(39, GetEntityX(0) + 112, GetEntityY(0))
+    PlaySong(0, 190)
+    exit
+}

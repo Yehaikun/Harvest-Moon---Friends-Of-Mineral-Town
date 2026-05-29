@@ -1,0 +1,74 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 572 EventScript_572
+{
+    const MESSAGE_0 = "\x81c\x81c\x81c\x81c\r\n\r\n\x05"
+    const MESSAGE_1 = "...Here you go.\r\nDon't come back.\r\n\x05"
+    const MESSAGE_2 = "You sure are stubborn.\r\n\r\n\x05"
+    SetEntityAnim(0, 402)
+    Proc036(0, 0)
+    Proc036(0, 0)
+    Proc034(0, 1)
+    switch GetEntityFacing(0)
+    {
+        case 1
+        {
+            SetEntityPosition(32, GetEntityX(0), GetEntityY(0) - 24, 0)
+        }
+        case 0
+        {
+            SetEntityPosition(32, GetEntityX(0), GetEntityY(0) + 24, 1)
+        }
+        case 2
+        {
+            SetEntityPosition(32, GetEntityX(0) - 24, GetEntityY(0), 3)
+        }
+        case 3
+        {
+            SetEntityPosition(32, GetEntityX(0) + 24, GetEntityY(0), 2)
+        }
+    }
+    SetEntityAnim(32, 2046)
+    Proc035(0, 1)
+    TalkOpen()
+    Proc02D(32)
+    Proc030(98)
+    if Func03E(328) != 2
+    {
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc03F(328, 2)
+    }
+    else if Func03E(576) == 10 && Func03E(330) != 2
+    {
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityAnim(32, 2050)
+        Proc037(30)
+        SetEntityAnim(32, 2046)
+        PlaySong(0, 182)
+        Proc063()
+        Proc03F(330, 2)
+        Proc03F(13, 1)
+    }
+    else
+    {
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+    }
+    if Func03E(575) != 1
+    {
+        if Func03E(576) == 10
+        {
+            Proc03F(576, 0)
+        }
+        else
+        {
+            Proc03F(576, Func03E(576) + 1)
+        }
+        Proc03F(575, 1)
+    }
+    Proc034(0, 1)
+    Proc00F(32)
+    Proc035(0, 1)
+}

@@ -1,0 +1,28 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 788 EventScript_788
+{
+    const MESSAGE_0 = "Huh, can you believe this?\x05"
+    const MESSAGE_1 = "Dad!...\r\nStop arguing already!!\x05"
+    SetEntityFacing(25, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(25)
+    if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+    {
+        Proc032(3)
+    }
+    if Func03E(297) == 0
+    {
+        Proc030(89)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(89)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    Proc083(25)
+    SetEntityFacing(25, 0)
+    exit
+}

@@ -1,0 +1,48 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1163 EventScript_1163
+{
+    const MESSAGE_0 = "Congratulations on winning!\r\nI've never seen such a\r\nstrong Chicken! \x05\x0CThanks again for a\r\ngreat set of bouts! \x05"
+    Proc016(6, 220, 94)
+    StopBGM()
+    SetEntityPosition(2, 220, 76, 0)
+    SetEntityAnim(2, 531)
+    SetEntityPosition(0, 220, 94, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(70, 200, 98, 1)
+    Proc010(70, 0)
+    SetEntityAnim(70, 1820)
+    if GetEntityLocation(43) == 6
+    {
+        SetEntityPosition(43, 416, 133, 0)
+    }
+    Proc035(3, 1)
+    Proc037(60)
+    PlaySong(0, 176)
+    Proc037(60 * 4)
+    PlayBGM(1, 7)
+    TalkOpen()
+    Proc030(1)
+    Proc02D(2)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    PlaySong(0, 181)
+    Proc037(60 * 4)
+    Proc034(2, 1)
+    Proc080(2, 20)
+    Proc080(4, 20)
+    Proc080(6, 20)
+    Proc080(8, 20)
+    Proc080(13, 20)
+    Proc080(3, 20)
+    Proc080(24, 20)
+    Proc00F(70)
+    Proc038(1162)
+}

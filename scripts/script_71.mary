@@ -1,0 +1,19 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 71 EventScript_71
+{
+    const MESSAGE_0 = "There's never an end\r\nto work!\x05"
+    if Func03E(106) == 1
+    {
+
+    }
+    SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(121)
+    Proc02D(21)
+    Proc032(21)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(21, 0)
+    Proc083(21)
+}

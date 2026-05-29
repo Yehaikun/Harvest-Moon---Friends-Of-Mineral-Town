@@ -1,0 +1,406 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 404 EventScript_404
+{
+    const MESSAGE_0 = "Are you ready to race, \r\nor do you want to place \r\na bet or exchange a medal\x05\r\nfor a prize?\x05"
+    const MESSAGE_1 = "Begin race."
+    const MESSAGE_2 = "Place a bet."
+    const MESSAGE_3 = "Exchange."
+    const MESSAGE_4 = "Nothing."
+    const MESSAGE_5 = "So you're ready to begin?\x05"
+    const MESSAGE_6 = "Yes"
+    const MESSAGE_7 = "No"
+    const MESSAGE_8 = "Great! \r\nLet's start, then.\x05"
+    const MESSAGE_9 = "So you're not ready\r\nafter all, eh?\x05"
+    const MESSAGE_10 = "Alright. Press SELECT ON \r\nthe Betting Screen to see a\r\ndescription of how to \x05\r\ndo it. \x05"
+    const MESSAGE_11 = "So you're going to exchange\r\nyour medal, eh?\x05"
+    const MESSAGE_12 = "You can't do it while\r\nholding something. \x05"
+    const MESSAGE_13 = "You want to exchange your \r\nmedal for a prize?\x05"
+    const MESSAGE_14 = "Exchange medal for prize."
+    const MESSAGE_15 = "We want to begin judging the\r\nCows now. \r\nAre you ready?\x05"
+    const MESSAGE_16 = "Let's start."
+    const MESSAGE_17 = "Not yet."
+    const MESSAGE_18 = "Great. Let's get started,\r\nthen!\x05"
+    const MESSAGE_19 = "Let me know when \r\nyou're ready, then.\x05"
+    const MESSAGE_20 = "Table\x05"
+    var var_0, var_1, var_2, var_3, var_4, var_5
+    var_1 = Func03E(3)
+    var_2 = Func03E(4)
+    if GetEntityFacing(0) == 1
+    {
+        if Func03E(393) == 1 || Func03E(428) == 1
+        {
+            if !(var_1 == 18 && var_2 == 1)
+            {
+                Proc083(13)
+                SetEntityFacing(13, 0)
+                TalkOpen()
+                Proc030(118)
+                Proc02D(13)
+                TalkMessage(MESSAGE_0)
+                TalkClose()
+                TalkOpen()
+                var_0 = TalkChoice4(MESSAGE_1, MESSAGE_2, MESSAGE_3, MESSAGE_4)
+                switch var_0
+                {
+                    case 1
+                    {
+                        TalkClose()
+                        TalkOpen()
+                        Proc030(118)
+                        Proc02D(13)
+                        TalkMessage(MESSAGE_5)
+                        TalkClose()
+                        TalkOpen()
+                        var_0 = TalkChoice2(MESSAGE_6, MESSAGE_7)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                TalkClose()
+                                TalkOpen()
+                                Proc030(118)
+                                Proc02D(13)
+                                TalkMessage(MESSAGE_8)
+                                TalkClose()
+                                Proc034(3, 1)
+                                var_3 = Func0DA(1)
+                                switch var_3
+                                {
+                                    case -1
+                                    {
+                                        Proc035(3, 1)
+                                    }
+                                    case 0
+                                    {
+                                        Proc035(3, 1)
+                                        PlayBGM(1, 7)
+                                    }
+                                    case 1
+                                    {
+                                        if Func03E(393) == 1
+                                        {
+                                            Proc03F(394, 1)
+                                            Proc038(1098)
+                                        }
+                                        else
+                                        {
+                                            Proc03F(429, 1)
+                                            Proc038(1264)
+                                        }
+                                    }
+                                    case 2
+                                    {
+                                        if Func03E(393) == 1
+                                        {
+                                            Proc03F(394, 0)
+                                            Proc038(1081)
+                                        }
+                                        else
+                                        {
+                                            Proc03F(429, 0)
+                                            Proc038(1247)
+                                        }
+                                    }
+                                }
+                            }
+                            case 2
+                            {
+                                TalkClose()
+                                TalkOpen()
+                                Proc030(117)
+                                Proc02D(13)
+                                TalkMessage(MESSAGE_9)
+                                TalkClose()
+                            }
+                        }
+                    }
+                    case 2
+                    {
+                        TalkClose()
+                        TalkOpen()
+                        Proc030(118)
+                        Proc02D(13)
+                        TalkMessage(MESSAGE_10)
+                        TalkClose()
+                        Proc034(3, 1)
+                        var_3 = Func0DA(0)
+                        switch var_3
+                        {
+                            case -1
+                            {
+                                Proc035(3, 1)
+                            }
+                            case 0
+                            {
+                                Proc035(3, 1)
+                                PlayBGM(1, 7)
+                            }
+                            case 1
+                            {
+                                if Func03E(393) == 1
+                                {
+                                    Proc03F(394, 1)
+                                    Proc038(1098)
+                                }
+                                else
+                                {
+                                    Proc03F(429, 1)
+                                    Proc038(1264)
+                                }
+                            }
+                            case 2
+                            {
+                                if Func03E(393) == 1
+                                {
+                                    Proc03F(394, 0)
+                                    Proc038(1081)
+                                }
+                                else
+                                {
+                                    Proc03F(429, 0)
+                                    Proc038(1247)
+                                }
+                            }
+                        }
+                    }
+                    case 3
+                    {
+                        if Func040() == 1
+                        {
+                            TalkClose()
+                            TalkOpen()
+                            Proc030(117)
+                            Proc02D(13)
+                            TalkMessage(MESSAGE_11)
+                            TalkClose()
+                            Proc034(3, 1)
+                            Proc0DC()
+                            Proc035(3, 1)
+                        }
+                        else
+                        {
+                            TalkClose()
+                            TalkOpen()
+                            Proc030(117)
+                            Proc02D(13)
+                            TalkMessage(MESSAGE_12)
+                            TalkClose()
+                        }
+                    }
+                    case 4
+                    {
+                        TalkClose()
+                        TalkOpen()
+                        Proc030(117)
+                        Proc02D(13)
+                        TalkMessage(MESSAGE_9)
+                        TalkClose()
+                    }
+                }
+            }
+            else
+            {
+                Proc083(13)
+                SetEntityFacing(13, 0)
+                TalkOpen()
+                Proc030(117)
+                Proc02D(13)
+                TalkMessage(MESSAGE_13)
+                TalkClose()
+                TalkOpen()
+                var_0 = TalkChoice2(MESSAGE_14, MESSAGE_4)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func040() == 1
+                        {
+                            TalkClose()
+                            TalkOpen()
+                            Proc030(117)
+                            Proc02D(13)
+                            TalkMessage(MESSAGE_11)
+                            TalkClose()
+                            Proc034(3, 1)
+                            Proc0DC()
+                            Proc035(3, 1)
+                        }
+                        else
+                        {
+                            TalkClose()
+                            TalkOpen()
+                            Proc030(117)
+                            Proc02D(13)
+                            TalkMessage(MESSAGE_12)
+                            TalkClose()
+                        }
+                    }
+                    case 2
+                    {
+                        TalkClose()
+                        TalkOpen()
+                        Proc030(117)
+                        Proc02D(13)
+                        TalkMessage(MESSAGE_9)
+                        TalkClose()
+                    }
+                }
+            }
+        }
+        else if Func03E(412) == 1
+        {
+            if !(var_1 == 18 && var_2 == 1)
+            {
+                var_4 = Func11D(1)
+                if Func086(4) == 0
+                {
+                    Proc083(4)
+                }
+                SetEntityFacing(4, GetOppositeFacing(GetEntityFacing(0)))
+                TalkOpen()
+                Proc030(180)
+                Proc02D(4)
+                TalkMessage(MESSAGE_15)
+                TalkClose()
+                TalkOpen()
+                var_0 = TalkChoice2(MESSAGE_16, MESSAGE_17)
+                switch var_0
+                {
+                    case 1
+                    {
+                        TalkClose()
+                        TalkOpen()
+                        Proc030(180)
+                        Proc02D(4)
+                        TalkMessage(MESSAGE_18)
+                        TalkClose()
+                        Proc034(2, 1)
+                        if Func084(4) == 0
+                        {
+                            Proc080(4, 5)
+                        }
+                        Proc083(4)
+                        SetEntityFacing(4, 0)
+                        if Func10F(1, var_4) >= 200
+                        {
+                            Proc03F(413, 1)
+                        }
+                        if Func03E(413) == 1
+                        {
+                            Proc038(1190)
+                        }
+                        else
+                        {
+                            Proc038(1177)
+                        }
+                    }
+                    case 2
+                    {
+                        TalkClose()
+                        TalkOpen()
+                        Proc030(180)
+                        Proc02D(4)
+                        TalkMessage(MESSAGE_19)
+                        TalkClose()
+                        if Func084(4) == 0
+                        {
+                            Proc080(4, 5)
+                        }
+                        Proc083(4)
+                        SetEntityFacing(4, 0)
+                    }
+                }
+            }
+            else
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_20)
+                TalkClose()
+            }
+        }
+        else if Func03E(432) == 1
+        {
+            if !(var_1 == 18 && var_2 == 1)
+            {
+                var_5 = Func11D(2)
+                if Func086(4) == 0
+                {
+                    Proc083(4)
+                }
+                SetEntityFacing(4, GetOppositeFacing(GetEntityFacing(0)))
+                TalkOpen()
+                Proc030(180)
+                Proc02D(4)
+                TalkMessage(MESSAGE_15)
+                TalkClose()
+                TalkOpen()
+                var_0 = TalkChoice2(MESSAGE_16, MESSAGE_17)
+                switch var_0
+                {
+                    case 1
+                    {
+                        TalkClose()
+                        TalkOpen()
+                        Proc030(180)
+                        Proc02D(4)
+                        TalkMessage(MESSAGE_18)
+                        TalkClose()
+                        Proc034(2, 1)
+                        if Func084(4) == 0
+                        {
+                            Proc080(4, 5)
+                        }
+                        Proc083(4)
+                        SetEntityFacing(4, 0)
+                        if Func10F(2, var_5) >= 200
+                        {
+                            Proc03F(433, 1)
+                        }
+                        if Func03E(433) == 1
+                        {
+                            Proc038(1289)
+                        }
+                        else
+                        {
+                            Proc038(1277)
+                        }
+                    }
+                    case 2
+                    {
+                        TalkClose()
+                        TalkOpen()
+                        Proc030(180)
+                        Proc02D(4)
+                        TalkMessage(MESSAGE_19)
+                        TalkClose()
+                        if Func084(4) == 0
+                        {
+                            Proc080(4, 5)
+                        }
+                        Proc083(4)
+                        SetEntityFacing(4, 0)
+                    }
+                }
+            }
+            else
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_20)
+                TalkClose()
+            }
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_20)
+            TalkClose()
+        }
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_20)
+        TalkClose()
+    }
+}

@@ -1,0 +1,65 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 218 EventScript_218
+{
+    const MESSAGE_0 = "There are already eggs here.\r\nHope they hatch soon...\x05"
+    const MESSAGE_1 = "Incubator\r\nIf you place eggs in here,\r\nthey'll hatch in a few days.\x05"
+    const MESSAGE_2 = "It's already full, so you \r\ncan't incubate any more.\x05"
+    var var_0, var_1, var_2, var_3, var_4, var_5
+    var_0 = 0
+    if !Func040() && Func041() == 0 && !Func042()
+    {
+        var_1 = Func043()
+        switch var_1
+        {
+            case 15, 16, 17, 18, 19, 20
+            {
+                var_0 = 1
+            }
+        }
+    }
+    if Func0BD(0)
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+    else if !var_0
+    {
+        TalkOpen()
+        Proc024(MESSAGE_1)
+        TalkClose()
+    }
+    else
+    {
+        var_2 = Func03E(15)
+        if var_2 == 0
+        {
+            var_3 = 4
+        }
+        else
+        {
+            var_3 = 8
+        }
+        var_4 = Func11A()
+        var_5 = 0
+        if var_2 == 1
+        {
+            if Func0BD(1)
+            {
+                var_5 = 1
+            }
+        }
+        if var_4 + var_5 == var_3
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_2)
+            TalkClose()
+        }
+        else
+        {
+            Proc046()
+            Proc0BC(0)
+        }
+    }
+}

@@ -1,0 +1,60 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 486 EventScript_486
+{
+    const MESSAGE_0 = "Counter\x05"
+    const MESSAGE_1 = "Hey there...\r\nNeed anything to eat?\x05"
+    const MESSAGE_2 = "Hey there...\r\nYou're holding too \r\nmuch to eat!\x05"
+    if Func03E(70) == 1 || Func03E(71) == 1 || Func03E(73) == 1 || Func03E(74) == 1 || Func03E(75) == 1 || Func03E(76) == 1 || Func03E(77) == 1 || Func03E(78) == 1 || Func03E(79) == 1 || Func03E(80) == 1 || Func03E(82) == 1 || Func03E(84) == 1 || Func03E(85) == 1 || Func03E(86) == 1 || Func03E(87) == 1 || Func03E(88) == 1 || Func03E(90) == 1 || Func03E(92) == 1 || Func03E(94) == 1 || Func03E(95) == 1 || Func03E(96) == 1 || Func03E(97) == 1 || Func03E(98) == 1 || Func03E(100) == 1 || Func03E(101) == 1 || Func03E(102) == 1 || Func03E(103) == 1 || Func03E(104) == 1 || Func03E(105) == 1 || Func03E(106) == 1 || Func03E(107) == 1 || Func03E(109) == 1 || Func03E(110) == 1 || Func03E(111) == 1 || Func03E(112) == 1 || Func03E(113) == 1 || Func03E(114) == 1 || Func03E(115) == 1 || Func03E(116) == 1 || Func03E(117) == 1 || Func03E(118) == 1 || Func03E(122) == 1 || Func03E(123) == 1 || Func03E(124) == 1 || Func03E(125) == 1 || Func03E(126) == 1 || Func03E(130) == 1 || Func03E(131) == 1 || Func03E(132) == 1 || Func03E(133) == 1 || Func03E(134) == 1 || Func03E(138) == 1 || Func03E(139) == 1 || Func03E(140) == 1 || Func03E(141) == 1 || Func03E(142) == 1 || Func03E(146) == 1 || Func03E(147) == 1 || Func03E(148) == 1 || Func03E(149) == 1 || Func03E(150) == 1 || Func03E(154) == 1 || Func03E(155) == 1 || Func03E(156) == 1 || Func03E(157) == 1 || Func03E(158) == 1 || Func03E(159) == 1 || Func03E(160) == 1 || Func03E(161) == 1 || Func03E(162) == 1 || Func03E(163) == 1 || Func03E(164) == 1 || Func03E(165) == 1 || Func03E(166) == 1 || Func03E(167) == 1 || Func03E(168) == 1 || Func03E(169) == 1 || Func03E(170) == 1 || Func03E(171) == 1 || Func03E(172) == 1 || Func03E(173) == 1 || Func03E(174) == 1 || Func03E(175) == 1 || Func03E(176) == 1 || Func03E(177) == 1 || Func03E(178) == 1 || Func03E(179) == 1 || Func03E(180) == 1 || Func03E(181) == 1 || Func03E(182) == 1 || Func03E(183) == 1 || Func03E(184) == 1 || Func03E(185) == 1 || Func03E(186) == 1 || Func03E(187) == 1 || Func03E(188) == 1 || Func03E(189) == 1 || Func03E(190) == 1 || Func03E(191) == 1 || Func03E(192) == 1 || Func03E(193) == 1 || Func03E(194) == 1 || Func03E(195) == 1 || Func03E(196) == 1 || Func03E(197) == 1 || Func03E(198) == 1 || Func03E(199) == 1 || Func03E(200) == 1 || Func03E(201) == 1 || Func03E(202) == 1 || Func03E(203) == 1 || Func03E(204) == 1 || Func03E(205) == 1 || Func03E(206) == 1 || Func03E(207) == 1 || Func03E(208) == 1 || Func03E(209) == 1 || Func03E(215) == 1 || Func03E(216) == 1 || Func03E(217) == 1 || Func03E(218) == 1 || Func03E(219) == 1 || Func03E(220) == 1 || Func03E(221) == 1 || Func03E(223) == 1 || Func03E(224) == 1 || Func03E(225) == 1 || Func03E(226) == 1 || Func03E(227) == 1 || Func03E(228) == 1 || Func03E(230) == 1 || Func03E(231) == 1 || Func03E(232) == 1 || Func03E(233) == 1 || Func03E(234) == 1 || Func03E(235) == 1 || Func03E(236) == 1 || Func03E(237) == 1 || Func03E(238) == 1 || Func03E(239) == 1 || Func03E(240) == 1 || Func03E(241) == 1 || Func03E(242) == 1 || Func03E(243) == 1 || Func03E(249) == 1 || Func03E(250) == 1 || Func03E(251) == 1 || Func03E(252) == 1 || Func03E(253) == 1 || Func03E(255) == 1 || Func03E(256) == 1 || Func03E(258) == 1 || Func03E(260) == 1 || Func03E(261) == 1 || Func03E(262) == 1 || Func03E(263) == 1 || Func03E(266) == 1 || Func03E(267) == 1 || Func03E(270) == 1 || Func03E(271) == 1 || Func03E(272) == 1 || Func03E(273) == 1 || Func03E(274) == 1 || Func03E(276) == 1 || Func03E(277) == 1 || Func03E(278) == 1 || Func03E(279) == 1 || Func03E(280) == 1 || Func03E(281) == 1 || Func03E(282) == 1 || Func03E(283) == 1 || Func03E(284) == 1 || Func03E(285) == 1 || Func03E(286) == 1 || Func03E(287) == 1 || Func03E(288) == 1 || Func03E(289) == 1 || Func03E(290) == 1 || Func03E(291) == 1 || Func03E(294) == 1 || Func03E(295) == 1 || Func03E(296) == 1 || Func03E(298) == 1 || Func03E(299) == 1 || Func03E(300) == 1 || Func03E(301) == 1 || Func03E(302) == 1 || Func03E(303) == 1 || Func03E(304) == 1 || Func03E(306) == 1 || Func03E(307) == 1 || Func03E(308) == 1 || Func03E(309) == 1 || Func03E(310) == 1 || Func03E(311) == 1 || Func03E(312) == 1 || Func03E(313) == 1 || Func03E(315) == 1 || Func03E(316) == 1 || Func03E(317) == 1 || Func03E(318) == 1 || Func03E(319) == 1 || Func03E(320) == 1 || Func03E(321) == 1 || Func03E(322) == 1 || Func03E(323) == 1 || Func03E(325) == 1 || Func03E(326) == 1 || Func03E(328) == 1 || Func03E(329) == 1 || Func03E(330) == 1 || Func03E(331) == 1 || Func03E(334) == 1 || Func03E(335) == 1 || Func03E(336) == 1 || Func03E(337) == 1 || Func03E(338) == 1 || Func03E(339) == 1 || Func03E(341) == 1 || Func03E(342) == 1 || Func03E(344) == 1 || Func03E(345) == 1 || Func03E(346) == 1 || Func03E(347) == 1 || Func03E(348) == 1 || Func03E(349) == 1 || Func03E(350) == 1 || Func03E(351) == 1 || Func03E(352) == 1 || Func03E(353) == 1 || Func03E(354) == 1 || Func03E(355) == 1 || Func03E(356) == 1 || Func03E(357) == 1 || Func03E(358) == 1 || Func03E(359) == 1 || Func03E(360) == 1 || Func03E(361) == 1 || Func03E(362) == 1 || Func03E(363) == 1 || Func03E(364) == 1 || Func03E(365) == 1 || Func03E(366) == 1 || Func03E(367) == 1 || Func03E(368) == 1 || Func03E(369) == 1 || Func03E(370) == 1 || Func03E(371) == 1 || Func03E(372) == 1 || Func03E(373) == 1 || Func03E(374) == 1 || Func03E(375) == 1 || Func03E(376) == 1 || Func03E(377) == 1 || Func03E(378) == 1 || Func03E(379) == 1 || Func03E(380) == 1 || Func03E(381) == 1 || Func03E(382) == 1 || Func03E(383) == 1 || Func03E(384) == 1 || Func03E(385) == 1 || Func03E(391) == 1 || Func03E(393) == 1 || Func03E(395) == 1 || Func03E(396) == 1 || Func03E(398) == 1 || Func03E(402) == 1 || Func03E(404) == 1 || Func03E(406) == 1 || Func03E(408) == 1 || Func03E(410) == 1 || Func03E(412) == 1 || Func03E(414) == 1 || Func03E(416) == 1 || Func03E(418) == 1 || Func03E(419) == 1 || Func03E(420) == 1 || Func03E(424) == 1 || Func03E(426) == 1 || Func03E(428) == 1 || Func03E(430) == 1 || Func03E(432) == 1 || Func03E(434) == 1 || Func03E(435) == 1 || Func03E(436) == 1 || Func03E(437) == 1 || Func03E(438) == 1 || Func03E(440) == 1 || Func03E(442) == 1 || Func03E(444) == 1 || Func03E(446) == 1 || Func03E(448) == 1 || Func03E(449) == 1 || Func03E(456) == 1 || Func03E(457) == 1 || Func03E(458) == 1 || Func03E(459) == 1 || Func03E(460) == 1 || Func03E(461) == 1 || Func03E(462) == 1 || Func03E(464) == 1 || Func03E(465) == 1
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        exit
+    }
+    if GetEntityFacing(0) == 1
+    {
+        if GetEntityLocation(26) == 36
+        {
+            if Func03E(233) == 1
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_0)
+                TalkClose()
+                exit
+            }
+            Proc083(26)
+            if Func040() == 1
+            {
+                TalkOpen()
+                Proc030(153)
+                Proc02D(26)
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+                Proc034(3, 1)
+                Proc094()
+                Proc035(3, 1)
+            }
+            else
+            {
+                TalkOpen()
+                Proc030(153)
+                Proc02D(26)
+                TalkMessage(MESSAGE_2)
+                TalkClose()
+            }
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+        }
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+}

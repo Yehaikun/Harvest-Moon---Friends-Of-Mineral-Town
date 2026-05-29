@@ -1,0 +1,21 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 780 EventScript_780
+{
+    const MESSAGE_0 = "Carter's sleeping, so I'll \r\njust sneak out now...\x05"
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc016(5, 1232, 168)
+    SetEntityPosition(0, 1232, 168, 0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    Proc03F(290, 2)
+}

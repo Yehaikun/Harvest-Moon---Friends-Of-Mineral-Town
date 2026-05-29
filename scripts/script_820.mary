@@ -1,0 +1,76 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 820 EventScript_820
+{
+    const MESSAGE_0 = "You have found the final \r\nJewel of Truth. \x05\x0CPlease follow me.\x05"
+    const MESSAGE_1 = "You can now exchange all of \r\nthe Jewels of Truth for \r\nthe Gem of Truth. \x05"
+    const MESSAGE_2 = "...But, it seems you can't \r\nhold any more. \x05\x0CCome back when your \r\nload is lighter. \x05"
+    SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(10)
+    if Func03E(339) != 2
+    {
+        TalkOpen()
+        Proc02D(13)
+        Proc030(118)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc017(120, 88, 1)
+        SetEntityFacing(0, 3)
+        SetEntityAnim(0, 342)
+        Proc008(0, 120, 1)
+        Proc00C(0)
+        SetEntityFacing(0, 0)
+        Proc00A(0, 88, 1)
+        Proc00C(0)
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc02D(13)
+    Proc030(118)
+    TalkMessage(MESSAGE_1)
+    if Func050() != -1 && Func056() == -1
+    {
+        Proc030(120)
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        Proc03F(339, 2)
+    }
+    else
+    {
+        TalkClose()
+        if Func040() == 0
+        {
+            if Func041() == 1
+            {
+                if Func044() == 39
+                {
+                    Proc046()
+                }
+            }
+        }
+        Proc061(39)
+        if Func040() == 1
+        {
+            PlaySong(0, 182)
+            Proc05B(80)
+            SetEntityAnim(0, 402)
+        }
+        if Func050() == -1
+        {
+            Proc051(80, 1)
+        }
+        else
+        {
+            Func05A(80, 1)
+        }
+        Proc03F(341, 2)
+    }
+}

@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1259 EventScript_1259
+{
+    const MESSAGE_0 = "It must feel so great\r\nto gallop on a Horse...!\x05"
+    const MESSAGE_1 = "I hear you are racing?\r\nI'll be praying for you. \x05"
+    if Func086(22) == 0
+    {
+        Proc083(22)
+    }
+    SetEntityFacing(22, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(427) == 0
+    {
+        TalkOpen()
+        Proc030(149)
+        Proc02D(22)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(150)
+        Proc02D(22)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(22) == 0
+    {
+        Proc080(22, 5)
+    }
+    Proc083(22)
+    SetEntityFacing(22, 0)
+}

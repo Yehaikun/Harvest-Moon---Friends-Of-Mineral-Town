@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 508 EventScript_508
+{
+    const MESSAGE_0 = "Saibara the Blacksmith\r\nOpen 10AM-4PM\r\nClosed Thursdays\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

@@ -1,0 +1,104 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 703 EventScript_703
+{
+    const MESSAGE_0 = "Do you have a problem with\r\nme?\x05"
+    const MESSAGE_1 = "Yeah! Don't mess around \r\nwith my sister!\x05"
+    const MESSAGE_2 = "What! Just who do \r\nyou think you are!?\x05"
+    const MESSAGE_3 = "I'm Popuri's brother, and \r\nI don't like her seeing \r\nyou, Kai! \x05"
+    const MESSAGE_4 = "What makes you think you\r\ncan run her life?\x05\x0CShe can do as she wants!\x05"
+    const MESSAGE_5 = "I'm her brother, so \r\nsometimes I know what's \r\nbest for her! \x05"
+    const MESSAGE_6 = "I feel sorry for Popuri,\r\nthat she has a brother like\r\nyou! \x05"
+    const MESSAGE_7 = "Take that back!! \x05\x0C...............\x05"
+    const MESSAGE_8 = "From now on, I forbid you\r\nto see my sister!\x05"
+    const MESSAGE_9 = "Oh yeah, what if she \r\ncomes and visits me anyway? \x05"
+    const MESSAGE_10 = "Grrr...\x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(26, 104, 128, 0)
+    SetEntityAnim(26, 2306)
+    Proc017(92, 128, 2)
+    Proc035(2, 1)
+    Proc018()
+    Proc037(30)
+    SetEntityPosition(2, 80, 264, 1)
+    SetEntityAnim(2, 535)
+    Proc00A(2, 128, 1)
+    Proc00C(2)
+    SetEntityFacing(26, 2)
+    SetEntityFacing(2, 3)
+    SetEntityAnim(2, 531)
+    Proc011(2, 0, 0)
+    Proc011(26, 4, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(157)
+    Proc02D(26)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(2)
+    Proc02D(2)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(157)
+    Proc02D(26)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(2)
+    Proc02D(2)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(156)
+    Proc02D(26)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(2)
+    Proc02D(2)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    TalkOpen()
+    Proc030(156)
+    Proc02D(26)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    Proc011(2, 0, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(5)
+    Proc02D(2)
+    TalkMessage(MESSAGE_7)
+    Proc030(2)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    Proc030(2)
+    Proc02D(2)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    Proc011(2, 0, 1)
+    SetEntityPosition(2, 80, 128, 0)
+    SetEntityAnim(2, 535)
+    Proc00A(2, 264, 1)
+    Proc00C(2)
+    Proc00F(2)
+    Proc017(24, 280, 2)
+    Proc018()
+    Proc03F(231, 2)
+    exit
+}

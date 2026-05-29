@@ -1,0 +1,35 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1087 EventScript_1087
+{
+    const MESSAGE_0 = "I have a knack \r\nfor picking winners! \x05"
+    const MESSAGE_1 = "I'm expecting a good\r\nrace from you! \x05"
+    if Func086(19) == 0
+    {
+        Proc083(19)
+    }
+    SetEntityFacing(19, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(19)
+    if !(Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2)
+    {
+        Proc032(19)
+    }
+    if Func03E(392) == 0
+    {
+        Proc030(73)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(73)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(19) == 0
+    {
+        Proc080(19, 5)
+    }
+    Proc083(19)
+    SetEntityFacing(19, 0)
+}

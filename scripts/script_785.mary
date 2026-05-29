@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 785 EventScript_785
+{
+    const MESSAGE_0 = "Today is the one day I \r\nallow myself to \r\nthink about her...\x05"
+    if Func03E(295) == 1
+    {
+        SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(86)
+        Proc02D(24)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(24)
+        SetEntityFacing(24, 1)
+    }
+}

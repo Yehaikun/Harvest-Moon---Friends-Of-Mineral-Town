@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 53 EventScript_53
+{
+    const MESSAGE_0 = "Take care of Ann for me. \x05"
+    const MESSAGE_1 = "What's up?\r\nDo you want to eat?\x05"
+    if Func03E(92) == 1
+    {
+
+    }
+    if Func03E(93) == 0
+    {
+        SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(84)
+        Proc02D(24)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(24, 0)
+        Proc083(24)
+    }
+    else
+    {
+        SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(83)
+        Proc02D(24)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(24, 0)
+        Proc083(24)
+    }
+}

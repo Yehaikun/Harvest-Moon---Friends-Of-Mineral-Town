@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 418 EventScript_418
+{
+    const MESSAGE_0 = "Large Barrel\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

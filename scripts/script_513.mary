@@ -1,0 +1,27 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 513 EventScript_513
+{
+    const MESSAGE_0 = "That's my room!\r\nDon't go in there!\x05"
+    var var_0
+    if Func07F(6) <= 200
+    {
+        var_0 = 0
+    }
+    else if Func07F(6) > 200
+    {
+        var_0 = 1
+    }
+    if var_0 == 1
+    {
+        PlaySong(0, 156)
+        Proc0CA(8)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(168)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+}

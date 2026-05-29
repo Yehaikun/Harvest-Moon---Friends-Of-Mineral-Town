@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 70 EventScript_70
+{
+    const MESSAGE_0 = "Elli is working very hard.\x05"
+    if Func03E(106) == 1
+    {
+
+    }
+    SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(20, 0)
+    Proc083(20)
+}

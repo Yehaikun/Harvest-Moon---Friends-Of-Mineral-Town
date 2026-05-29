@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 743 EventScript_743
+{
+    const MESSAGE_0 = "I just want to look \r\nat it once before I die...\x05"
+    const MESSAGE_1 = "I know I may never\r\nget my wish, but...\x05"
+    if Func03E(271) == 1
+    {
+        TalkOpen()
+        Proc030(64)
+        Proc02D(15)
+        TalkMessage(MESSAGE_0)
+        Proc030(63)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(15)
+    }
+}

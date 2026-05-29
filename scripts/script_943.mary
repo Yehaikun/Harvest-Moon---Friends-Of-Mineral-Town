@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 943 EventScript_943
+{
+    const MESSAGE_0 = "In my day, it was \r\nunthinkable for a boy to get\r\nmarried before he could \x05\r\nsupport a family on his own!\x05"
+    const MESSAGE_1 = "Mary's a good girl. \r\nI won't have to worry about \r\nGray if she's with him! \x05"
+    if Func086(6) == 0
+    {
+        Proc083(6)
+    }
+    if Func085(6) == 0
+    {
+        SetEntityFacing(6, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(168)
+        Proc02D(6)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(6, 3)
+        Proc083(6)
+    }
+    else
+    {
+        SetEntityFacing(6, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(169)
+        Proc02D(6)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(6, 3)
+        Proc083(6)
+    }
+}

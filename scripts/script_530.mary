@@ -1,0 +1,56 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 530 EventScript_530
+{
+    const MESSAGE_0 = "It's locked...\x05"
+    var var_0, var_1, var_2, var_3
+    if GetEntityFacing(0) == 1
+    {
+        var_0 = 0
+        var_1 = Func03E(1)
+        var_2 = Func03E(2)
+        var_3 = Func03E(3)
+        if var_1 == 0 && var_2 == 1 || var_1 == 0 && var_2 == 18 || var_1 == 0 && var_2 == 22 || var_1 == 1 && var_2 == 1 || var_1 == 1 && var_2 == 7 || var_1 == 1 && var_2 == 24 || var_1 == 1 && var_2 == 20 || var_1 == 2 && var_2 == 3 || var_1 == 2 && var_2 == 9 || var_1 == 2 && var_2 == 13 || var_1 == 2 && var_2 == 18 || var_1 == 2 && var_2 == 21 || var_1 == 3 && var_2 == 24 || var_1 == 3 && var_2 == 30
+        {
+            var_0 = 0
+        }
+        else if GetEntityLocation(4) == 41
+        {
+            if Func07F(4) <= 100
+            {
+                if var_3 >= 10 && var_3 < 19
+                {
+                    var_0 = 1
+                }
+            }
+            else if Func07F(4) > 100
+            {
+                if var_3 >= 8 && var_3 < 20
+                {
+                    var_0 = 1
+                }
+                if Func07F(4) > 200
+                {
+                    if var_3 >= 6 && var_3 < 22
+                    {
+                        var_0 = 1
+                    }
+                }
+            }
+        }
+        if var_0 == 1
+        {
+            PlaySong(0, 156)
+            Proc034(2, 1)
+            Proc016(41, 168, 208)
+            SetEntityPosition(0, 168, 208, 1)
+            Proc035(2, 1)
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+        }
+    }
+}

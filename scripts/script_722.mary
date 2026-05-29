@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 722 EventScript_722
+{
+    const MESSAGE_0 = "Manna really knows how to \r\ntalk, doesn't she?\x05"
+    SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(17)
+    Proc030(68)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(17)
+    SetEntityFacing(17, 0)
+    exit
+}

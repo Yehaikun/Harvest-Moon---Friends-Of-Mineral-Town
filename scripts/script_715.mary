@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 715 EventScript_715
+{
+    const MESSAGE_0 = "I talk with Gray a lot at \r\nthe Inn, \x05\r\nbut this is the first time\r\nhe has come to my place. \x05"
+    if Func03E(241) == 1
+    {
+        SetEntityFacing(26, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(153)
+        Proc02D(26)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(26)
+        SetEntityFacing(26, 0)
+    }
+}

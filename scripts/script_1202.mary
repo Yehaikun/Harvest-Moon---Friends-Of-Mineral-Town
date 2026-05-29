@@ -1,0 +1,28 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1202 EventScript_1202
+{
+    const MESSAGE_0 = "My grandfather said he made\r\na part of the fireworks.\x05\x0CI hope they all work right!\x05"
+    if Func086(7) == 0
+    {
+        Proc083(7)
+    }
+    SetEntityFacing(7, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func085(7) == 0
+    {
+        Proc080(7, 5)
+    }
+    Proc083(7)
+    if Func085(2) && Func085(7) && Func085(20) && (Func03E(244) == 0 || Func085(23)) && Func085(26) && Func085(19) && Func085(21) && Func085(25) && Func085(3) && Func085(12)
+    {
+        Proc03F(415, 0)
+        Proc034(2, 1)
+        Proc038(1192)
+    }
+    SetEntityFacing(7, 3)
+}

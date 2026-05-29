@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1188 EventScript_1188
+{
+    const MESSAGE_0 = "There are lots of good\r\nCows out this year. \x05"
+    const MESSAGE_1 = "You gotta take good care\r\nof all your animals. \x05"
+    const MESSAGE_2 = "Too bad...\x05"
+    if Func086(4) == 0
+    {
+        Proc083(4)
+    }
+    SetEntityFacing(4, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(411) == 0
+    {
+        TalkOpen()
+        Proc030(180)
+        Proc02D(4)
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(413) == 1
+    {
+        TalkOpen()
+        Proc030(180)
+        Proc02D(4)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(180)
+        Proc02D(4)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(4) == 0
+    {
+        Proc080(4, 5)
+    }
+    Proc083(4)
+    SetEntityFacing(4, 0)
+}

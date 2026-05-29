@@ -1,0 +1,37 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1223 EventScript_1223
+{
+    const MESSAGE_0 = "There are some things you \r\nshould just never put in \r\nthe pot! \x05"
+    const MESSAGE_1 = "We should be thankful for \r\nthe bounty of nature, which\r\nsustains us. \x05"
+    if Func086(12) == 0
+    {
+        Proc083(12)
+    }
+    SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(12) == 0
+    {
+        Proc080(12, 5)
+    }
+    TalkOpen()
+    Proc02D(12)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(142) == 2 || Func03E(143) == 2)
+    {
+        Proc032(12)
+    }
+    if Func03E(421) == 1
+    {
+        Proc030(106)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(12)
+    }
+    else
+    {
+        Proc030(103)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(12)
+    }
+    SetEntityFacing(12, 1)
+}

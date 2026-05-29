@@ -1,0 +1,110 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 406 EventScript_406
+{
+    const MESSAGE_0 = "Well, should we start the\r\nNew Year Festival now?\x05"
+    const MESSAGE_1 = "...But, you can't \r\nparticipate while your hands\r\nare full!\x05"
+    const MESSAGE_2 = "Start"
+    const MESSAGE_3 = "Wait a minute"
+    const MESSAGE_4 = "Alright, let's get started.\r\n\r\n\x05"
+    const MESSAGE_5 = "Well, let me know when\r\nyou're ready.\r\n\x05"
+    const MESSAGE_6 = "Shall we get started on\r\nthe new year celebration?\x05"
+    const MESSAGE_7 = "...But, you can't eat while\r\nyour hands are full, \r\ncan you?\x05"
+    const MESSAGE_8 = "Start."
+    const MESSAGE_9 = "Hold on a second."
+    const MESSAGE_10 = "Let's eat, then!\r\n\r\n\x05"
+    const MESSAGE_11 = "Just let me know when you're\r\nready to eat.\r\n\x05"
+    const MESSAGE_12 = "Long table\x05"
+    var var_0
+    if GetEntityFacing(0) == 1
+    {
+        if Func03E(384) == 1
+        {
+            SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+            TalkOpen()
+            Proc030(117)
+            Proc02D(13)
+            TalkMessage(MESSAGE_0)
+            if Func040() == 0
+            {
+                TalkMessage(MESSAGE_1)
+            }
+            TalkClose()
+            TalkOpen()
+            var_0 = TalkChoice2(MESSAGE_2, MESSAGE_3)
+            switch var_0
+            {
+                case 1
+                {
+                    TalkClose()
+                    TalkOpen()
+                    Proc030(118)
+                    Proc02D(13)
+                    TalkMessage(MESSAGE_4)
+                    TalkClose()
+                    Proc083(13)
+                    Proc034(2, 1)
+                    Proc038(1066)
+                }
+                case 2
+                {
+                    TalkClose()
+                    TalkOpen()
+                    Proc030(117)
+                    Proc02D(13)
+                    TalkMessage(MESSAGE_5)
+                    TalkClose()
+                    Proc083(13)
+                    SetEntityFacing(13, 0)
+                }
+            }
+        }
+        else if Func03E(464) == 1
+        {
+            SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+            TalkOpen()
+            Proc030(117)
+            Proc02D(13)
+            TalkMessage(MESSAGE_6)
+            if Func040() == 0
+            {
+                TalkMessage(MESSAGE_7)
+            }
+            TalkClose()
+            TalkOpen()
+            var_0 = TalkChoice2(MESSAGE_8, MESSAGE_9)
+            switch var_0
+            {
+                case 1
+                {
+                    TalkClose()
+                    TalkOpen()
+                    Proc030(118)
+                    Proc02D(13)
+                    TalkMessage(MESSAGE_10)
+                    TalkClose()
+                    Proc083(13)
+                    Proc034(2, 1)
+                    Proc038(1309)
+                }
+                case 2
+                {
+                    TalkClose()
+                    TalkOpen()
+                    Proc030(117)
+                    Proc02D(13)
+                    TalkMessage(MESSAGE_11)
+                    TalkClose()
+                    Proc083(13)
+                    SetEntityFacing(13, 0)
+                }
+            }
+        }
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_12)
+        TalkClose()
+    }
+}

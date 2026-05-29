@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 176 EventScript_176
+{
+    var var_0, var_1, var_2, var_3, var_4
+    if GetEntityFacing(0) == 2
+    {
+        var_0 = Func03E(1)
+        var_1 = Func03E(2)
+        var_2 = Func03E(3)
+        var_3 = Func03E(5)
+        var_4 = Func03E(6)
+        Proc034(2, 1)
+        Proc016(0, 1175, 752)
+        SetEntityPosition(0, 1175, 752, 2)
+        if Func03E(284) == 0 && var_3 == 3 && (var_2 >= 8 && var_2 < 10) && Func07F(20) >= 100 && Func086(20) == 1 && GetEntityLocation(20) == 0
+        {
+            Proc03F(284, 1)
+            Proc038(767)
+        }
+        Proc035(2, 1)
+    }
+}

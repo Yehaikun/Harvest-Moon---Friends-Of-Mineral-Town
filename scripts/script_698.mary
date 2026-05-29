@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 698 EventScript_698
+{
+    const MESSAGE_0 = "I can't believe how luck I \r\nam to have such fine \r\nchildren! \x05\x0CI'll have to stay healthy \r\nfor them...!\x05"
+    SetEntityFacing(1, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(1)
+    Proc030(15)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(1, 0)
+    exit
+}

@@ -1,0 +1,26 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1109 EventScript_1109
+{
+    const MESSAGE_0 = "I'm feeling confident today!\x05"
+    if Func086(25) == 0
+    {
+        Proc083(25)
+    }
+    SetEntityFacing(25, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(88)
+    Proc02D(25)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+    {
+        Proc032(25)
+    }
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(25) == 0
+    {
+        Proc080(25, 5)
+    }
+    SetEntityFacing(25, 2)
+    Proc083(25)
+}

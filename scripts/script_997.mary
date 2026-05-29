@@ -1,0 +1,498 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 997 EventScript_997
+{
+    const MESSAGE_0 = "Hey, how are you!\r\nMy name is Zack, and I'm\r\nin charge of shipping \x05\r\naround here.\x05\x0CI'll come to pick up \r\nwhatever you have to ship\r\neveryday except holidays.\x05"
+    const MESSAGE_1 = "Awww...shucks...!\r\nHow did you know it was \r\nmy birthday? I'm touched!\x05"
+    const MESSAGE_2 = "Thanks a lot!\r\nThis is really excellent!\x05"
+    const MESSAGE_3 = "Thanks. You really \r\nshouldn't have...\x05"
+    const MESSAGE_4 = "Thanks a bunch.\x05"
+    const MESSAGE_5 = "The thought is appreciated,\r\nbut I don't really need \r\nit...\x05"
+    const MESSAGE_6 = "I can't believe you would\r\ntry to give this away!\x05"
+    const MESSAGE_7 = "Cute! I love animals, \r\nyou know.\x05"
+    const MESSAGE_8 = "Eww....Did you know I\r\nhate bugs?\x05"
+    const MESSAGE_9 = "You're really giving this\r\nto me....? I've always \r\nwanted one, too!\x05\x0CWas it hard to find?\x05"
+    const MESSAGE_10 = "You're really giving this\r\nto me? I think I'll\r\ngive it to...\x05"
+    const MESSAGE_11 = "Perfume, huh?\r\nThanks!\x05"
+    const MESSAGE_12 = "Oh, that's right!\r\nI was going to tell you \r\nhow to make some \x05\r\ndelicious Fried Noodles!\x05\x0CAll you do is put Oil in \r\na Frying Pan, then fry\r\nthe noodles! That's it!\x05\x0CYou can even add Eggs or\r\nVegetables to make it\r\ntaste even better.\x05"
+    const MESSAGE_13 = "Hmmph! You have it \r\nlucky, you know that!?...\x05\x0CThe girl I wanted to marry\r\nup and married someone \r\nelse! And I thought she \x05\x0Cwould wait until I was \r\nolder...\x05"
+    const MESSAGE_14 = "You know the Fishing Rod\r\nI gave you?\x05\x0CThat belongs to Greg, who \r\nused to live in my house.\r\nHe loves fishing.\x05\x0CHe said he was going to \r\ncatch every kind of fish\r\nthere was, and he up and\x05\x0Cleft! I wonder how he's \r\ndoing on his quest...?\x05"
+    const MESSAGE_15 = "Hey, what's up?\r\nBusy, lately?\x05"
+    const MESSAGE_16 = "Just keep those \r\nshipments coming!\x05"
+    const MESSAGE_17 = "It's fun shipping things,\r\nyou know.\x05"
+    const MESSAGE_18 = "One perk is that you end\r\nup knowing everybody!\x05\x0CI like talking to folks.\x05"
+    const MESSAGE_19 = "How's the work coming?\r\nKeep at it now!\x05"
+    const MESSAGE_20 = "I'll come again around 5\r\nto pick stuff up. \r\nShip all you can!\x05"
+    const MESSAGE_21 = "Just between you and me...\r\nThere's a lady I have my\r\nheart set on.\x05\x0CShe's already married,\r\nthough...\r\nI'm not telling who!\x05"
+    const MESSAGE_22 = "I wonder when Rod's \r\ncoming back...\r\nIt worries me!\x05"
+    const MESSAGE_23 = "Hey, \xFF!!\r\nDon't work too hard, now!\x05"
+    const MESSAGE_24 = "How are your\r\nshipments coming?\r\nI'm counting on you, now!\x05"
+    const MESSAGE_25 = "Good work today.\r\nSee you tomorrow!\x05"
+    const MESSAGE_26 = "Done for today, \r\n\xFF!? \x05\x0CYou seem to be a \r\nhard worker. Keep at it!\x05"
+    const MESSAGE_27 = "Hi, \xFF!.\r\nI shipped that Ore\r\noff to Saibara for you!\x05"
+    const MESSAGE_28 = "It sells better if \r\nSaibara makes it into \r\nsomething first, see.\x05"
+    const MESSAGE_29 = "Hey, \xFF!,\r\nDo you think girls like\r\ngetting surprise gifts...?\x05"
+    const MESSAGE_30 = "Oh, never mind...\r\nForget I mentioned it!\x05"
+    const MESSAGE_31 = "Should I go there and pick\r\nthat up, or to that other\r\nplace and pick up the \x05\r\nother thing first...?\x05"
+    const MESSAGE_32 = "\xFF!,\r\nI'm working now!\x05"
+    const MESSAGE_33 = "\xFF!\x81A\r\n\x82\xAF\x82\xC1\x82\xB1\x82\xA4\x96q\x8F\xEA\x82\xAA\x82\xC9\x82\xA0\x82\xC1\x82\xC4\x82\xF1\x82\xB6\x82\xE1\r\n\x82\xCB\x82\xA5\x82\xA9\x81H\x05\x0C\x82\xB1\x82\xEA\x82\xC5\x82\xE0\x81A\x82\xD9\x82\xDF\x82\xC4\x82\xF1\x82\xBE\x82\xBA\x81`\x81B\x05"
+    const MESSAGE_34 = "The farming life seems\r\nto suit you pretty well,\r\n\xFF!!\x05"
+    var var_0, var_1, var_2, var_3
+    SetEntityAnim(28, 792)
+    var_3 = GetEntityFacing(28)
+    SetEntityFacing(28, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(28)
+    if Func086(28) == 0
+    {
+        Proc030(31)
+        TalkMessage(MESSAGE_0)
+        Proc083(28)
+    }
+    else
+    {
+        if Func040() || (Func03E(70) == 1 || Func03E(71) == 1 || Func03E(73) == 1 || Func03E(74) == 1 || Func03E(252) == 1 || Func03E(278) == 1 || Func03E(279) == 1) || Func03E(138) == 1
+        {
+            var_0 = 6
+        }
+        else
+        {
+            switch Func041()
+            {
+                case 0
+                {
+                    switch Func043()
+                    {
+                        case 2, 3, 5, 9, 34, 35, 36, 37, 38, 39, 40, 57, 58, 59, 60, 61, 71, 72, 73, 75, 77, 81, 82, 100, 109, 117, 118, 119, 120, 121, 126, 130, 131, 132, 133, 150, 162
+                        {
+                            var_0 = 1
+                        }
+                        case 134
+                        {
+                            var_2 == 1
+                            var_0 = 1
+                        }
+                        case 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 42, 43, 46, 63, 69, 83, 91, 92, 94, 98, 103, 104, 107, 110, 122, 124, 128, 136, 145, 147, 149, 151, 152, 160, 161, 163, 165, 166, 168, 169
+                        {
+                            var_0 = 2
+                        }
+                        case 0, 1, 4, 6, 7, 8, 10, 11, 12, 13, 14, 21, 28, 29, 30, 31, 32, 33, 41, 44, 62, 64, 65, 66, 67, 68, 70, 74, 76, 78, 79, 80, 84, 85, 86, 87, 88, 89, 90, 93, 95, 96, 97, 99, 101, 102, 105, 106, 108, 111, 112, 113, 114, 115, 116, 123, 125, 127, 129, 135, 137, 138, 139, 140, 141, 142, 143, 144, 146, 148, 164, 167, 170
+                        {
+                            var_0 = 3
+                        }
+                        case 45, 47, 48, 49, 50, 51, 52, 53, 54, 55, 153
+                        {
+                            var_0 = 4
+                        }
+                        case 154, 155, 156, 157, 158, 159
+                        {
+                            var_0 = 5
+                        }
+                    }
+                }
+                case 1
+                {
+                    switch Func044()
+                    {
+                        case 1, 22, 26, 29
+                        {
+                            var_0 = 1
+                        }
+                        case 0, 2, 3, 4, 40, 41, 42, 43, 53, 89
+                        {
+                            var_0 = 3
+                        }
+                        case 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 27, 28, 30, 31, 32, 33, 34, 35, 36
+                        {
+                            var_0 = 4
+                        }
+                        case 48, 49, 50, 51, 52, 54, 55, 56, 57, 58, 90, 91, 92
+                        {
+                            var_0 = 5
+                        }
+                        case 37, 38, 39, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 80, 82, 84, 93, 94
+                        {
+                            var_0 = 6
+                        }
+                        case 44, 45, 46, 47
+                        {
+                            var_0 = 9
+                        }
+                        case 85, 86, 87, 88
+                        {
+                            var_0 = 10
+                        }
+                        case 81
+                        {
+                            var_0 = 11
+                        }
+                    }
+                }
+                case 4
+                {
+                    var_0 = 6
+                }
+                case 2
+                {
+                    var_0 = 7
+                }
+                case 3
+                {
+                    var_0 = 7
+                }
+            }
+        }
+        if var_0 != 6
+        {
+            if (var_0 == 1 || var_0 == 2 || var_0 == 3) && Func07E(28)
+            {
+                Proc030(32)
+                TalkMessage(MESSAGE_1)
+            }
+            else
+            {
+                switch var_0
+                {
+                    case 1
+                    {
+                        Proc030(32)
+                        TalkMessage(MESSAGE_2)
+                    }
+                    case 2
+                    {
+                        Proc030(32)
+                        TalkMessage(MESSAGE_3)
+                    }
+                    case 3
+                    {
+                        Proc030(31)
+                        TalkMessage(MESSAGE_4)
+                    }
+                    case 4
+                    {
+                        Proc030(34)
+                        TalkMessage(MESSAGE_5)
+                    }
+                    case 5
+                    {
+                        Proc030(33)
+                        TalkMessage(MESSAGE_6)
+                    }
+                    case 7
+                    {
+                        Proc030(32)
+                        TalkMessage(MESSAGE_7)
+                    }
+                    case 8
+                    {
+                        Proc030(34)
+                        TalkMessage(MESSAGE_8)
+                    }
+                    case 9
+                    {
+                        Proc030(32)
+                        TalkMessage(MESSAGE_9)
+                    }
+                    case 10
+                    {
+                        Proc030(31)
+                        TalkMessage(MESSAGE_10)
+                    }
+                    case 11
+                    {
+                        Proc030(32)
+                        TalkMessage(MESSAGE_11)
+                    }
+                }
+            }
+            if Func088(28) == 0
+            {
+                switch var_0
+                {
+                    case 1
+                    {
+                        var_1 = 9
+                    }
+                    case 2
+                    {
+                        var_1 = 3
+                    }
+                    case 3
+                    {
+                        var_1 = 1
+                    }
+                    case 4
+                    {
+                        var_1 = -3
+                    }
+                    case 5
+                    {
+                        var_1 = -9
+                    }
+                    case 7
+                    {
+                        var_1 = 1
+                    }
+                    case 8
+                    {
+                        var_1 = -3
+                    }
+                    case 9
+                    {
+                        var_1 = 9
+                    }
+                    case 10
+                    {
+                        var_1 = 9
+                    }
+                    case 11
+                    {
+                        var_1 = 1
+                    }
+                }
+            }
+            else
+            {
+                switch var_0
+                {
+                    case 1
+                    {
+                        var_1 = 3
+                    }
+                    case 2
+                    {
+                        var_1 = 1
+                    }
+                    case 3
+                    {
+                        var_1 = 0
+                    }
+                    case 4
+                    {
+                        var_1 = -3
+                    }
+                    case 5
+                    {
+                        var_1 = -9
+                    }
+                    case 7
+                    {
+                        var_1 = 0
+                    }
+                    case 8
+                    {
+                        var_1 = -3
+                    }
+                    case 9
+                    {
+                        var_1 = 3
+                    }
+                    case 10
+                    {
+                        var_1 = 3
+                    }
+                    case 11
+                    {
+                        var_1 = 0
+                    }
+                }
+            }
+            if Func07E(28)
+            {
+                var_1 *= 5
+            }
+            if Func042()
+            {
+                var_1 = var_1 + var_1 / 4
+            }
+            Proc080(28, var_1)
+            if Func03E(480) == 0 && var_2 == 0 && Func07F(28) > 100 && (var_0 == 1 || var_0 == 2 || var_0 == 3)
+            {
+                Proc030(32)
+                TalkMessage(MESSAGE_12)
+                Proc03F(480, 1)
+            }
+            TalkClose()
+            if var_0 == 1 || var_0 == 2 || var_0 == 3 || var_0 == 4 || var_0 == 5 || var_0 == 9 || var_0 == 10 || var_0 == 11
+            {
+                Proc046()
+            }
+            Proc087(28)
+        }
+        else if Func05D()
+        {
+            switch Func04F()
+            {
+                case 75
+                {
+                    Proc030(31)
+                    TalkMessage(MESSAGE_13)
+                }
+            }
+        }
+        else if Func07F(28) > 250 && Func07A(5) == 0 && Func03E(309) == 2
+        {
+            Proc030(32)
+            TalkMessage(MESSAGE_14)
+            Proc07C(5)
+        }
+        else
+        {
+            switch GetEntityLocation(28)
+            {
+                case 13
+                {
+                    if Func07F(28) <= 100
+                    {
+                        if Func085(28) == 0
+                        {
+                            Proc030(31)
+                            TalkMessage(MESSAGE_15)
+                        }
+                        else
+                        {
+                            Proc030(32)
+                            TalkMessage(MESSAGE_16)
+                        }
+                    }
+                    else if Func07F(28) > 100
+                    {
+                        if Func085(28) == 0
+                        {
+                            Proc030(32)
+                            TalkMessage(MESSAGE_17)
+                        }
+                        else
+                        {
+                            Proc030(32)
+                            TalkMessage(MESSAGE_18)
+                        }
+                    }
+                }
+                case 15
+                {
+                    if Func07F(28) <= 100
+                    {
+                        if Func085(28) == 0
+                        {
+                            Proc030(31)
+                            TalkMessage(MESSAGE_19)
+                        }
+                        else
+                        {
+                            Proc030(31)
+                            TalkMessage(MESSAGE_20)
+                        }
+                    }
+                    else if Func085(28) == 0
+                    {
+                        Proc030(32)
+                        TalkMessage(MESSAGE_21)
+                    }
+                    else
+                    {
+                        Proc030(34)
+                        TalkMessage(MESSAGE_22)
+                    }
+                }
+                case 1, 5, 7
+                {
+                    if Func03E(3) >= 7 && Func03E(3) < 18
+                    {
+                        if Func07F(28) <= 100
+                        {
+                            Proc030(32)
+                            TalkMessage(MESSAGE_23)
+                        }
+                        else
+                        {
+                            Proc030(32)
+                            TalkMessage(MESSAGE_24)
+                        }
+                    }
+                    else if Func07F(28) <= 100
+                    {
+                        Proc030(32)
+                        TalkMessage(MESSAGE_25)
+                    }
+                    else
+                    {
+                        Proc030(31)
+                        TalkMessage(MESSAGE_26)
+                    }
+                }
+                case 38
+                {
+                    if Func07F(28) <= 100
+                    {
+                        if Func085(28) == 0
+                        {
+                            Proc030(31)
+                            TalkMessage(MESSAGE_27)
+                        }
+                        else
+                        {
+                            Proc030(32)
+                            TalkMessage(MESSAGE_28)
+                        }
+                    }
+                    else if Func085(28) == 0
+                    {
+                        Proc030(32)
+                        TalkMessage(MESSAGE_29)
+                    }
+                    else
+                    {
+                        Proc030(34)
+                        TalkMessage(MESSAGE_30)
+                    }
+                }
+                case 2
+                {
+                    if Func03E(3) >= 18
+                    {
+                        if Func07F(28) <= 100
+                        {
+                            Proc030(32)
+                            TalkMessage(MESSAGE_25)
+                        }
+                        else
+                        {
+                            Proc030(31)
+                            TalkMessage(MESSAGE_26)
+                        }
+                    }
+                    else if Func07F(28) <= 100
+                    {
+                        if Func085(28) == 0
+                        {
+                            Proc030(32)
+                            TalkMessage(MESSAGE_24)
+                        }
+                        else
+                        {
+                            Proc030(31)
+                            TalkMessage(MESSAGE_31)
+                            Proc030(33)
+                            TalkMessage(MESSAGE_32)
+                        }
+                    }
+                    else if Func085(28) == 0
+                    {
+                        Proc030(32)
+                        TalkMessage(MESSAGE_24)
+                    }
+                    else
+                    {
+                        Proc030(34)
+                        TalkMessage(MESSAGE_33)
+                        TalkMessage(MESSAGE_34)
+                    }
+                }
+            }
+            Proc083(28)
+        }
+    }
+    TalkClose()
+    SetEntityFacing(28, var_3)
+}

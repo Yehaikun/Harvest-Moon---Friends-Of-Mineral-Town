@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1108 EventScript_1108
+{
+    const MESSAGE_0 = "I've got to win, or it's bad\r\nfor my reputation!\x05"
+    if Func086(24) == 0
+    {
+        Proc083(24)
+    }
+    SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(84)
+    Proc02D(24)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(24) == 0
+    {
+        Proc080(24, 5)
+    }
+    SetEntityFacing(24, 2)
+    Proc083(24)
+}

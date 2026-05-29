@@ -1,0 +1,61 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1264 EventScript_1264
+{
+    const MESSAGE_0 = "That was a great race, \r\n\xFF!. \r\nCongratulations!\x05"
+    Proc016(6, 220, 94)
+    StopBGM()
+    SetEntityPosition(13, 220, 76, 0)
+    SetEntityAnim(13, 2143)
+    SetEntityPosition(0, 220, 94, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(70, 200, 98, 1)
+    Proc010(70, 2)
+    SetEntityAnim(70, 1914)
+    if GetEntityLocation(43) == 6
+    {
+        SetEntityPosition(43, 416, 133, 0)
+    }
+    Proc035(3, 1)
+    Proc037(60)
+    PlaySong(0, 176)
+    Proc037(60 * 4)
+    PlayBGM(1, 7)
+    TalkOpen()
+    Proc030(118)
+    Proc02D(13)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func040() == 1 && Func03E(587) == 0
+    {
+        Proc062()
+        Proc03F(587, 1)
+    }
+    PlaySong(0, 181)
+    Proc037(60 * 4)
+    Proc034(2, 1)
+    Proc080(13, 20)
+    Proc080(4, 20)
+    Proc080(6, 20)
+    Proc080(28, 20)
+    Proc080(27, 20)
+    Proc080(7, 20)
+    Proc080(12, 20)
+    Proc080(24, 20)
+    Proc080(21, 20)
+    Proc080(20, 20)
+    Proc080(22, 20)
+    Proc080(1, 20)
+    Proc080(2, 20)
+    Proc080(14, 20)
+    Proc080(8, 20)
+    Proc00F(70)
+    Proc038(1247)
+}

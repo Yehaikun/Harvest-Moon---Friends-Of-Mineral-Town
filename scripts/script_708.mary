@@ -1,0 +1,24 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 708 EventScript_708
+{
+    const MESSAGE_0 = "It's so hard getting along\r\nwith Popuri!\x05\x0CSay the slightest thing\r\nwrong and she breaks down!\x05"
+    const MESSAGE_1 = "Still, Popuri does \r\nunderstand me better than\r\nanyone else.\x05"
+    SetEntityFacing(26, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(26)
+    if Func085(26) == 0
+    {
+        Proc030(156)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(154)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    Proc083(26)
+    SetEntityFacing(26, 1)
+    exit
+}

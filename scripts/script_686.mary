@@ -1,0 +1,153 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 686 EventScript_686
+{
+    const MESSAGE_0 = "\xFF), wake up!\r\nHurry!\x05"
+    const MESSAGE_1 = "When I woke up this morning,\r\n\xFF* had fallen \r\nout of bed and gotten hurt.\x05\r\nWe should do something!...\x05"
+    const MESSAGE_2 = "Waaa...!!!!\x05"
+    const MESSAGE_3 = "He'll be fine!"
+    const MESSAGE_4 = "Let's go to the Clinic."
+    const MESSAGE_5 = "But he could be \r\nseriously injured!\x05"
+    const MESSAGE_6 = "No, I definitely want the\r\nDoctor to look at him. \r\nCome on, \xFF*. \x05"
+    const MESSAGE_7 = "Don't worry, it's only \r\na scratch. \x05"
+    const MESSAGE_8 = "I'm so relieved!\x05"
+    const MESSAGE_9 = "He's OK this time, but you\r\nhave to be especially\r\nwatchful at this age.\x05"
+    const MESSAGE_10 = "I understand. \r\nI'm sorry, \xFF*.\x05"
+    const MESSAGE_11 = "Da-!\x05"
+    var var_0
+    PlayBGM(1, 17)
+    Proc016(29, 400, 100)
+    SetEntityPosition(0, 400, 100, 3)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(21, 450, 100, 2)
+    SetEntityAnim(21, 2180)
+    SetEntityPosition(35, 432, 100, 2)
+    if Func03E(47) == 1
+    {
+        SetEntityAnim(35, 615)
+    }
+    else
+    {
+        SetEntityAnim(35, 619)
+    }
+    TalkOpen()
+    Proc02D(21)
+    Proc030(124)
+    Proc032(21)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc035(2, 1)
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc02D(21)
+    Proc030(124)
+    Proc032(21)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc02D(35)
+    Proc030(21)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_3, MESSAGE_4)
+    switch var_0
+    {
+        case 1
+        {
+            Proc08A(21, -2000)
+            Proc080(35, -10)
+            TalkClose()
+            TalkOpen()
+            Proc02D(21)
+            Proc030(123)
+            Proc032(21)
+            TalkMessage(MESSAGE_5)
+            TalkClose()
+            SetEntityFacing(21, 0)
+            TalkOpen()
+            Proc02D(21)
+            Proc030(123)
+            Proc032(21)
+            TalkMessage(MESSAGE_6)
+            TalkClose()
+            Proc083(21)
+            Proc083(35)
+            Proc03F(217, 2)
+            Proc034(2, 1)
+            Proc038(988)
+        }
+        case 2
+        {
+            Proc08A(21, 3000)
+            Proc080(35, 20)
+            Proc080(20, 20)
+            TalkClose()
+            Proc034(2, 1)
+            Proc016(19, 228, 148)
+            PlayBGM(1, 17)
+            SetEntityPosition(0, 228, 124, 3)
+            if Func040()
+            {
+                SetEntityAnim(0, 402)
+            }
+            else
+            {
+                SetEntityAnim(0, 338)
+            }
+            SetEntityPosition(21, 228, 148, 3)
+            SetEntityAnim(21, 2180)
+            SetEntityPosition(20, 262, 124, 2)
+            SetEntityAnim(20, 800)
+            SetEntityPosition(35, 262, 148, 2)
+            if Func03E(47) == 1
+            {
+                SetEntityAnim(35, 615)
+            }
+            else
+            {
+                SetEntityAnim(35, 619)
+            }
+            Proc035(2, 1)
+            TalkOpen()
+            Proc030(35)
+            Proc02D(20)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+            TalkOpen()
+            Proc02D(21)
+            Proc030(122)
+            TalkMessage(MESSAGE_8)
+            TalkClose()
+            TalkOpen()
+            Proc030(35)
+            Proc02D(20)
+            TalkMessage(MESSAGE_9)
+            TalkClose()
+            TalkOpen()
+            Proc02D(21)
+            Proc030(122)
+            TalkMessage(MESSAGE_10)
+            TalkClose()
+            TalkOpen()
+            Proc02D(35)
+            Proc030(19)
+            TalkMessage(MESSAGE_11)
+            TalkClose()
+            Proc083(21)
+            Proc083(35)
+            Proc083(20)
+            Proc03F(217, 2)
+            Proc034(2, 1)
+            Proc038(988)
+        }
+    }
+}

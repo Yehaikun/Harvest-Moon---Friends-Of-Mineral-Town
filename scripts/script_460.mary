@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 460 EventScript_460
+{
+    const MESSAGE_0 = "Pregnant animal Feed Box\r\nPut Feed for pregnant\r\nanimals here.\x05"
+    var var_0
+    var_0 = 0
+    if !Func040() && Func041() == 1 && !Func042() && Func044() == 91
+    {
+        var_0 = 1
+    }
+    if var_0 && !Func0C1(17)
+    {
+        Proc046()
+        Proc0C2(17)
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+}

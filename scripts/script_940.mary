@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 940 EventScript_940
+{
+    const MESSAGE_0 = "And I thought Mary wasn't \r\ninterested in boys yet! \x05"
+    const MESSAGE_1 = "I'm glad she is, though.\r\nIt's only healthy, \r\nafter all! \x05"
+    if Func086(11) == 0
+    {
+        Proc083(11)
+    }
+    if Func085(11) == 0
+    {
+        SetEntityFacing(11, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(110)
+        Proc02D(11)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(11, 2)
+        Proc083(11)
+    }
+    else
+    {
+        SetEntityFacing(11, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(111)
+        Proc02D(11)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(11, 2)
+        Proc083(11)
+    }
+}

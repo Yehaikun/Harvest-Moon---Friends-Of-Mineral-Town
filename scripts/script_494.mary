@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 494 EventScript_494
+{
+    const MESSAGE_0 = "Woodcutter's \r\nOpen 11AM-4PM\r\nClosed Saturdays\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

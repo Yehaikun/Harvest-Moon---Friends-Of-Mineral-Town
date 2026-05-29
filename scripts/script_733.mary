@@ -1,0 +1,120 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 733 EventScript_733
+{
+    const MESSAGE_0 = "I hear that your latest book\r\nis selling like hotcakes, \r\nMary. \x05"
+    const MESSAGE_1 = "Yeah, the publisher even \r\nwants me to write a \r\nsequel!\x05"
+    const MESSAGE_2 = "Hmm....\x05"
+    const MESSAGE_3 = "Why don't you seem very \r\nhappy about it, Gray?\r\nAren't you glad for me? \x05"
+    const MESSAGE_4 = "It's not like that...\r\nIt's just that, well...\x05"
+    const MESSAGE_5 = "It's not like you to not\r\nsay what you think, Gray. \x05"
+    const MESSAGE_6 = "OK...I'm worried about \r\nyour health!\x05"
+    const MESSAGE_7 = "When you wrote the last\r\nbook, you stayed up late \r\nevery night working on it.\x05\x0CYou were so tired all the\r\ntime I couldn't help but\r\nworry!\x05\x0CI didn't want to stop you \r\nfrom doing what you \r\nwanted, though. \x05"
+    const MESSAGE_8 = "Thanks for caring about me\r\nso much, Gray. \x05"
+    const MESSAGE_9 = "Of course I do!\x05"
+    const MESSAGE_10 = "In that case, I promise not \r\nto work so hard writing\r\nthe next one. \x05"
+    const MESSAGE_11 = "I'll try to do what I can \r\nto help, too. \x05"
+    const MESSAGE_12 = "I'm glad I married \r\nyou, Gray!\x05"
+    const MESSAGE_13 = "Now you're making me\r\nembarrassed...!\x05"
+    Proc0F2()
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(12, 224, 256, 3)
+    SetEntityAnim(12, 2067)
+    SetEntityPosition(7, 244, 256, 2)
+    SetEntityAnim(7, 2441)
+    Proc035(2, 1)
+    Proc017(240, 256, 2)
+    Proc018()
+    TalkOpen()
+    Proc030(161)
+    Proc02D(7)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(104)
+    Proc02D(12)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    Proc011(12, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(105)
+    Proc02D(12)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(162)
+    Proc02D(7)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(105)
+    Proc02D(12)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(7, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(160)
+    Proc02D(7)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    Proc011(12, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(162)
+    Proc02D(7)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    Proc030(106)
+    Proc02D(12)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    TalkOpen()
+    Proc030(165)
+    Proc02D(7)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    Proc011(12, 1, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(104)
+    Proc02D(12)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    TalkOpen()
+    Proc030(161)
+    Proc02D(7)
+    TalkMessage(MESSAGE_11)
+    TalkClose()
+    TalkOpen()
+    Proc030(108)
+    Proc02D(12)
+    TalkMessage(MESSAGE_12)
+    TalkClose()
+    TalkOpen()
+    Proc030(165)
+    Proc02D(7)
+    TalkMessage(MESSAGE_13)
+    TalkClose()
+    Proc017(236, 464, 2)
+    Proc018()
+    Proc0F2()
+    Proc03F(260, 1)
+    Proc08C(12, 734)
+    Proc08C(7, 735)
+    exit
+}

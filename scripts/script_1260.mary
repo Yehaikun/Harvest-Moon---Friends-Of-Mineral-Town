@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1260 EventScript_1260
+{
+    const MESSAGE_0 = "I begged by grampa to \r\nlet me come today! \r\nNow who should I bet on...\x05"
+    const MESSAGE_1 = "You're racing, \xFF!?\r\nGreat! I'll bet on you,\r\nthen! \x05"
+    if Func086(7) == 0
+    {
+        Proc083(7)
+    }
+    SetEntityFacing(7, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(427) == 0
+    {
+        TalkOpen()
+        Proc030(161)
+        Proc02D(7)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(161)
+        Proc02D(7)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(7) == 0
+    {
+        Proc080(7, 5)
+    }
+    Proc083(7)
+    SetEntityFacing(7, 0)
+}

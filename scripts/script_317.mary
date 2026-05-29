@@ -1,0 +1,129 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 317 EventScript_317
+{
+    const MESSAGE_0 = "Blacksmith"
+    const MESSAGE_1 = "Supermarket"
+    const MESSAGE_2 = "Woodcutter"
+    const MESSAGE_3 = "Clinic"
+    const MESSAGE_4 = "Orchard"
+    const MESSAGE_5 = "Other"
+    const MESSAGE_6 = "Inn"
+    const MESSAGE_7 = "Beach House"
+    const MESSAGE_8 = "Poultry Farm"
+    const MESSAGE_9 = "Yodel Farm"
+    const MESSAGE_10 = "Merchant"
+    var var_0, var_1, var_2
+    var_1 = 0
+    TalkOpen()
+    do
+    {
+        switch var_1
+        {
+            case 0
+            {
+                var_0 = TalkChoice6(MESSAGE_0, MESSAGE_1, MESSAGE_2, MESSAGE_3, MESSAGE_4, MESSAGE_5)
+                switch var_0
+                {
+                    case 1
+                    {
+                        TalkClose()
+                        Proc034(3, 1)
+                        Proc09B(61)
+                        Proc035(3, 1)
+                        var_2 = 1
+                    }
+                    case 2
+                    {
+                        TalkClose()
+                        Proc034(3, 1)
+                        Proc09B(62)
+                        Proc035(3, 1)
+                        var_2 = 1
+                    }
+                    case 3
+                    {
+                        TalkClose()
+                        Proc034(3, 1)
+                        Proc09B(63)
+                        Proc035(3, 1)
+                        var_2 = 1
+                    }
+                    case 4
+                    {
+                        TalkClose()
+                        Proc034(3, 1)
+                        Proc09B(64)
+                        Proc035(3, 1)
+                        var_2 = 1
+                    }
+                    case 5
+                    {
+                        TalkClose()
+                        Proc034(3, 1)
+                        Proc09B(65)
+                        Proc035(3, 1)
+                        var_2 = 1
+                    }
+                    case 6
+                    {
+                        var_1 = 1
+                        var_2 = 0
+                    }
+                }
+            }
+            case 1
+            {
+                var_0 = TalkChoice6(MESSAGE_6, MESSAGE_7, MESSAGE_8, MESSAGE_9, MESSAGE_10, MESSAGE_5)
+                switch var_0
+                {
+                    case 1
+                    {
+                        TalkClose()
+                        Proc034(3, 1)
+                        Proc09B(66)
+                        Proc035(3, 1)
+                        var_2 = 1
+                    }
+                    case 2
+                    {
+                        TalkClose()
+                        Proc034(3, 1)
+                        Proc09B(67)
+                        Proc035(3, 1)
+                        var_2 = 1
+                    }
+                    case 3
+                    {
+                        TalkClose()
+                        Proc034(3, 1)
+                        Proc09B(68)
+                        Proc035(3, 1)
+                        var_2 = 1
+                    }
+                    case 4
+                    {
+                        TalkClose()
+                        Proc034(3, 1)
+                        Proc09B(69)
+                        Proc035(3, 1)
+                        var_2 = 1
+                    }
+                    case 5
+                    {
+                        TalkClose()
+                        Proc034(3, 1)
+                        Proc09B(70)
+                        Proc035(3, 1)
+                        var_2 = 1
+                    }
+                    case 6
+                    {
+                        var_1 = 0
+                        var_2 = 0
+                    }
+                }
+            }
+        }
+    } while var_2 == 0
+}

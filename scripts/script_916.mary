@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 916 EventScript_916
+{
+    const MESSAGE_0 = "Ann...\x05"
+    SetEntityFacing(23, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(26)
+    Proc02D(23)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(23, 0)
+    Proc083(23)
+}

@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1107 EventScript_1107
+{
+    const MESSAGE_0 = "I wonder what the theme for \r\nthis year is? \x05\x0CWhatever it is, I wish \r\nKaren wouldn't compete...\x05"
+    if Func086(18) == 0
+    {
+        Proc083(18)
+    }
+    SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(79)
+    Proc02D(18)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(18) == 0
+    {
+        Proc080(18, 5)
+    }
+    SetEntityFacing(18, 1)
+    Proc083(18)
+}

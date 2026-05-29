@@ -1,0 +1,70 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1302 EventScript_1302
+{
+    const MESSAGE_0 = "Thanks for coming. \r\nWe were just starting \r\nthe party. \x05"
+    const MESSAGE_1 = "You can come over any time,\r\nyou know. You should even \r\nthink about marrying Ann...\x05"
+    const MESSAGE_2 = "Dad! If you keep talking \r\nlike that, he'll never \r\nwant to come again ever!\x05"
+    const MESSAGE_3 = "Spending Starry Night \r\nFestival with Ann's family\r\nsure was fun.\x05"
+    Proc016(21, 140, 272)
+    PlayBGM(1, 7)
+    Proc13D(0, 104, 240, 1, Func13F(115))
+    Proc13D(1, 120, 240, 1, Func13F(62))
+    SetEntityPosition(0, 184, 320, 1)
+    SetEntityPosition(25, 96, 272, 1)
+    SetEntityAnim(25, 1982)
+    SetEntityPosition(24, 96, 224, 0)
+    SetEntityAnim(24, 1970)
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 272, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityFacing(0, 2)
+    SetEntityFacing(25, 3)
+    SetEntityFacing(24, 3)
+    Proc037(10)
+    TalkOpen()
+    Proc02D(25)
+    Proc030(88)
+    Proc032(25)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc02D(24)
+    Proc030(84)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc02D(25)
+    Proc030(92)
+    Proc032(25)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    Proc08A(25, 2000)
+    Proc080(25, 30)
+    Proc080(24, 30)
+    Proc034(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    Proc13E(0)
+    Proc13E(1)
+    Proc03F(457, 2)
+    Proc03F(450, 0)
+    Proc038(988)
+}

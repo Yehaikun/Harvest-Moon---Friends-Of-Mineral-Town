@@ -1,0 +1,42 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1142 EventScript_1142
+{
+    const MESSAGE_0 = "Better luck next time. \r\n\xFF# was fun \r\nto watch, though!\x05"
+    const MESSAGE_1 = "Congratulations, \r\n\xFF!. \r\nI thought you'd win \x05\r\nall the time!\x05"
+    const MESSAGE_2 = "That was fun. \r\nThis is my favorite of all\r\nthe Festivals! \x05"
+    if Func086(13) == 0
+    {
+        Proc083(13)
+    }
+    SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    if Func03E(403) == 1
+    {
+        if Func03E(405) == 0
+        {
+            Proc030(120)
+            Proc02D(13)
+            TalkMessage(MESSAGE_0)
+        }
+        else
+        {
+            Proc030(118)
+            Proc02D(13)
+            TalkMessage(MESSAGE_1)
+        }
+    }
+    else
+    {
+        Proc030(118)
+        Proc02D(13)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(13) == 0
+    {
+        Proc080(13, 5)
+    }
+    Proc083(13)
+    SetEntityFacing(13, 3)
+}

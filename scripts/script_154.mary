@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 154 EventScript_154
+{
+    const MESSAGE_0 = "Bee Nest\r\nCheck everyday to \r\nfind some honey.\x05"
+    if !Func064() && Func040() && Func03E(43)
+    {
+        Proc03F(43, 0)
+        Proc048(41)
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+}

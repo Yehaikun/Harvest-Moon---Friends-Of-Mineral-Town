@@ -1,0 +1,48 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1105 EventScript_1105
+{
+    const MESSAGE_0 = "The theme for this year is\r\nJuice! I can't wait to \r\ntaste everybody's efforts! \x05"
+    const MESSAGE_1 = "The theme for this year is \r\nDesserts! Make some \r\nirresistible Desserts! \x05"
+    const MESSAGE_2 = "The theme for this year is\r\nBread! Make some great \r\nfresh Bread! \x05"
+    const MESSAGE_3 = "The theme for this year is \r\nNoodles! Make some Noodles \r\nno one can resist! \x05"
+    const MESSAGE_4 = "The theme for this year is \r\nRice. Go make some creative\r\nRice dishes for us! \x05"
+    if Func086(30) == 0
+    {
+        Proc083(30)
+    }
+    SetEntityFacing(30, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(59)
+    Proc02D(30)
+    switch Func03E(397)
+    {
+        case 0
+        {
+            TalkMessage(MESSAGE_0)
+        }
+        case 1
+        {
+            TalkMessage(MESSAGE_1)
+        }
+        case 2
+        {
+            TalkMessage(MESSAGE_2)
+        }
+        case 3
+        {
+            TalkMessage(MESSAGE_3)
+        }
+        case 4
+        {
+            TalkMessage(MESSAGE_4)
+        }
+    }
+    TalkClose()
+    if Func084(30) == 0
+    {
+        Proc080(30, 5)
+    }
+    Proc083(30)
+    SetEntityFacing(30, 0)
+}

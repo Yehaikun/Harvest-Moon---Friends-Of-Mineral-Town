@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1281 EventScript_1281
+{
+    const MESSAGE_0 = "Just looking at Sheep \r\nmakes me feel calm...\x05"
+    const MESSAGE_1 = "Congratulations! \r\nI bet that Sheep of yours\r\nwill make a great Sweater!\x05"
+    const MESSAGE_2 = "And I thought your Sheep\r\nwas a sure winner, too!\x05"
+    if Func086(11) == 0
+    {
+        Proc083(11)
+    }
+    SetEntityFacing(11, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(431) == 0
+    {
+        TalkOpen()
+        Proc030(110)
+        Proc02D(11)
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(433) == 1
+    {
+        TalkOpen()
+        Proc030(111)
+        Proc02D(11)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(113)
+        Proc02D(11)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(11) == 0
+    {
+        Proc080(11, 5)
+    }
+    Proc083(11)
+    SetEntityFacing(11, 1)
+}

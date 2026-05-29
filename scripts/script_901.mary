@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 901 EventScript_901
+{
+    const MESSAGE_0 = "This is the happiest \r\nday of my life! \x05"
+    const MESSAGE_1 = "Everybody I love is here to\r\ncelebrate my marriage\r\nwith Kai. \x05"
+    if Func086(3) == 0
+    {
+        Proc083(3)
+    }
+    if Func085(3) == 0
+    {
+        SetEntityFacing(3, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(13)
+        Proc02D(3)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(3, 0)
+        Proc083(3)
+    }
+    else
+    {
+        SetEntityFacing(3, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(13)
+        Proc02D(3)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(3, 0)
+        Proc083(3)
+    }
+}

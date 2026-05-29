@@ -1,0 +1,8 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 426 EventScript_426
+{
+    Proc034(3, 1)
+    Proc09E()
+    Proc035(3, 1)
+}

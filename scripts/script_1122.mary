@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1122 EventScript_1122
+{
+    const MESSAGE_0 = "Am I the only man again?\x05"
+    if Func086(24) == 0
+    {
+        Proc083(24)
+    }
+    SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(86)
+    Proc02D(24)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(24) == 0
+    {
+        Proc080(24, 5)
+    }
+    SetEntityFacing(24, 2)
+    Proc083(24)
+}

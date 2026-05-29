@@ -1,0 +1,60 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 816 EventScript_816
+{
+    const MESSAGE_0 = "Congratulations! \r\nYou have collected all the\r\nGoddess Jewels, so I will \x05\r\nallow you to trade them \r\nfor the Goddess Gem. \x05\x0CBye now. \x05"
+    Proc036(1, 0)
+    Proc036(1, 0)
+    Proc034(1, 1)
+    PlaySong(0, 190)
+    if GetEntityX(0) > 160
+    {
+        SetEntityPosition(31, GetEntityX(0) - 16, GetEntityY(0) - 32, 0)
+    }
+    else
+    {
+        SetEntityPosition(31, GetEntityX(0) + 16, GetEntityY(0) - 32, 0)
+    }
+    SetEntityAnim(31, 1653)
+    Proc035(1, 1)
+    Proc00A(31, GetEntityY(0), 1)
+    Proc00C(31)
+    if GetEntityX(0) > 160
+    {
+        SetEntityFacing(31, 3)
+        Proc037(10)
+        SetEntityFacing(0, 2)
+    }
+    else
+    {
+        SetEntityFacing(31, 2)
+        Proc037(10)
+        SetEntityFacing(0, 3)
+    }
+    TalkOpen()
+    Proc02D(31)
+    Proc030(57)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(31, 0)
+    Proc00A(31, GetEntityY(0) - 100, 1)
+    Proc034(1, 1)
+    PlaySong(0, 190)
+    Proc00F(31)
+    Proc046()
+    Proc061(37)
+    Proc036(1, 1)
+    PlaySong(0, 182)
+    Proc05B(78)
+    Proc037(50)
+    SetEntityAnim(0, 402)
+    if Func050() == -1
+    {
+        Proc051(78, 1)
+    }
+    else
+    {
+        Func05A(78, 1)
+    }
+    Proc03F(326, 2)
+}

@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 938 EventScript_938
+{
+    const MESSAGE_0 = "So Mary's that age already? \x05"
+    const MESSAGE_1 = "Well, I guess it \r\nhad to happen sometime...\x05"
+    if Func086(10) == 0
+    {
+        Proc083(10)
+    }
+    if Func085(10) == 0
+    {
+        SetEntityFacing(10, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(99)
+        Proc02D(10)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(10, 2)
+        Proc083(10)
+    }
+    else
+    {
+        SetEntityFacing(10, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(100)
+        Proc02D(10)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(10, 2)
+        Proc083(10)
+    }
+}

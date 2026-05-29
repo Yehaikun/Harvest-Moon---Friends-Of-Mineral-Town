@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1104 EventScript_1104
+{
+    const MESSAGE_0 = "I came because I heard \r\nLillia was going to compete.\x05\x0CI should be near her in \r\ncase she gets sick. \x05"
+    if Func086(20) == 0
+    {
+        Proc083(20)
+    }
+    SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(20) == 0
+    {
+        Proc080(20, 5)
+    }
+    SetEntityFacing(20, 1)
+    Proc083(20)
+}

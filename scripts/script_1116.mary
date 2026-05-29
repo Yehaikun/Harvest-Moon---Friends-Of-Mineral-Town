@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1116 EventScript_1116
+{
+    const MESSAGE_0 = "I hope lots of \r\npeople come!\x05"
+    if Func086(1) == 0
+    {
+        Proc083(1)
+    }
+    SetEntityFacing(1, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(15)
+    Proc02D(1)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(1) == 0
+    {
+        Proc080(1, 5)
+    }
+    SetEntityFacing(1, 2)
+    Proc083(1)
+}

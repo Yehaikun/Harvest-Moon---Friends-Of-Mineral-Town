@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 700 EventScript_700
+{
+    const MESSAGE_0 = "Letters are nice...\r\nBut I want him to come\r\nhome now!...\x05"
+    SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(2)
+    Proc030(4)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(2)
+    SetEntityFacing(2, 0)
+    exit
+}

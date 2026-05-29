@@ -1,0 +1,26 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1081 EventScript_1081
+{
+    PlayBGM(1, 7)
+    Proc0F7(18, 1)
+    SetEntityPosition(13, 85, 91, 0)
+    SetEntityAnim(13, 2143)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    if Func03E(394) == 1
+    {
+        Proc035(2, 1)
+    }
+    else
+    {
+        Proc035(3, 1)
+    }
+    Proc08C(13, 1082)
+}

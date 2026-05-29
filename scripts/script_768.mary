@@ -1,0 +1,21 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 768 EventScript_768
+{
+    const MESSAGE_0 = ".............................\x05"
+    if Func03E(284) == 1
+    {
+        SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+        if Func086(20) == 0
+        {
+            Proc083(20)
+        }
+        TalkOpen()
+        Proc030(35)
+        Proc02D(20)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(20)
+        SetEntityFacing(20, 1)
+    }
+}

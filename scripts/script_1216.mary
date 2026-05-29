@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1216 EventScript_1216
+{
+    const MESSAGE_0 = "Hi, \xFF!. \r\nTomorrow at 10AM is the\r\nHarvest Festival. \x05\x0CEveryone brings something \r\nto add to the big pot. \x05\x0CBring something good, now!\r\nSee you there. \x05"
+    Proc016(2, 228, 120)
+    PlayBGM(1, 3)
+    SetEntityPosition(0, 228, 120, 0)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(13, 228, 145, 1)
+    SetEntityAnim(13, 2143)
+    Proc035(2, 1)
+    Proc03F(419, 1)
+    TalkOpen()
+    Proc030(117)
+    Proc02D(13)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(13)
+    Proc03F(419, 2)
+    SetEntityFacing(13, 3)
+    SetEntityAnim(13, 2147)
+    Proc008(13, 319, 1)
+    Proc00C(13)
+    SetEntityAnim(13, 2143)
+    SetEntityFacing(13, 1)
+    SetEntityAnim(13, 2147)
+    SetEntityFacing(0, 3)
+    Proc00A(13, 0, 1)
+    Proc00C(13)
+    SetEntityAnim(13, 2143)
+    Proc00F(13)
+    exit
+}

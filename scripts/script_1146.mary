@@ -1,0 +1,167 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1146 EventScript_1146
+{
+    const MESSAGE_0 = "The Chicken Festival is \r\ntomorrow in Rose Square.\x05\x0CWe'll see who is the \r\nstrongest Chicken of all!\x05\x0CI was going to invite you, \r\nbut it seems you don't have\r\nan eligible Chicken. \x05"
+    const MESSAGE_1 = "The Chicken Festival is \r\ntomorrow in Rose Square.\x05\x0CWe'll see who is the \r\nstrongest Chicken of all!\x05\x0CBaby Chicks can't compete,\r\nthough. It's too dangerous.\x05"
+    const MESSAGE_2 = "The Chicken Festival is \r\ntomorrow in Rose Square.\x05\x0CWe'll see who is the \r\nstrongest Chicken of all!\x05\x0CDo you want to enter? \x05"
+    const MESSAGE_3 = "Yes, I do."
+    const MESSAGE_4 = "No, I don't."
+    const MESSAGE_5 = "Will you select which \r\nChicken you want to compete?\x05"
+    const MESSAGE_6 = "The Chicken Festival is \r\ntomorrow in Rose Square.\x05\x0CWe'll see who is the \r\nstrongest Chicken of all!\x05\x0CI was going to invite you, \r\nbut it looks like none of \r\nyour Chickens is eligible. \x05"
+    const MESSAGE_7 = "It's fun to root for other \r\nChickens, though, so you \r\nshould come down, anyway! \x05"
+    const MESSAGE_8 = "In that case, I'll bring \r\n\xFF% along now.\r\nIt starts at 10AM. \x05"
+    var var_0, var_1, var_2, var_3, var_4, var_5
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(2, 228, 145, 1)
+    SetEntityAnim(2, 531)
+    Proc035(2, 1)
+    var_1 = -1
+    var_0 = 2
+    var_5 = 0
+    var_2 = 0
+    var_3 = 0
+    for var_4 = 0; var_4 < 8; var_4++
+    {
+        if Func102(3, var_4)
+        {
+            var_5++
+            if Func110(3, var_4) == 1
+            {
+                if GetAnimalAge(3, var_4) == 0
+                {
+                    var_3++
+                }
+            }
+            else
+            {
+                var_2++
+            }
+        }
+    }
+    TalkOpen()
+    Proc030(0)
+    Proc02D(2)
+    if var_5 == 0
+    {
+        TalkMessage(MESSAGE_0)
+    }
+    else if var_2 >= var_5
+    {
+        TalkOpen()
+        Proc030(0)
+        Proc02D(2)
+        TalkMessage(MESSAGE_1)
+    }
+    else if var_3 > 0
+    {
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        TalkOpen()
+        var_0 = TalkChoice2(MESSAGE_3, MESSAGE_4)
+        TalkClose()
+        if var_0 == 1
+        {
+            TalkOpen()
+            Proc030(0)
+            Proc02D(2)
+            TalkMessage(MESSAGE_5)
+            TalkClose()
+            Proc034(3, 1)
+            var_1 = Func0AA(0)
+            SetEntityPosition(2, 228, 145, 1)
+            SetEntityAnim(2, 531)
+            if Func040() == 1
+            {
+                SetEntityAnim(0, 402)
+            }
+            else
+            {
+                SetEntityAnim(0, 338)
+            }
+            if var_1 != -1
+            {
+                GetAnimalName(0, 3, var_1)
+                if !Func040() && Func041() == 3 && Func045() == var_1
+                {
+                    Proc046()
+                }
+                Proc00F(46 + var_1)
+                Proc03F(407, 1)
+                Proc11B(3, var_1)
+                SetEntityPosition(70, 212, 145, 1)
+                Proc010(70, 0)
+                SetEntityAnim(70, 1820)
+                Proc012(70)
+            }
+            Proc035(3, 1)
+        }
+        if var_1 == -1
+        {
+            TalkOpen()
+            Proc030(0)
+            Proc02D(2)
+        }
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(0)
+        Proc02D(2)
+        TalkMessage(MESSAGE_6)
+    }
+    if var_1 == -1
+    {
+        TalkMessage(MESSAGE_7)
+        TalkClose()
+        SetEntityFacing(2, 3)
+        SetEntityAnim(2, 535)
+        Proc008(2, 319, 1)
+        Proc00C(2)
+        SetEntityFacing(2, 1)
+        Proc00A(2, 0, 1)
+        Proc00C(2)
+        Proc00F(2)
+        Proc03F(407, 0)
+        Proc03F(406, 2)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(0)
+        Proc02D(2)
+        TalkMessage(MESSAGE_8)
+        TalkClose()
+        SetEntityAnim(2, 535)
+        SetEntityFacing(2, 3)
+        Proc008(2, 325, 1)
+        Proc00C(2)
+        SetEntityAnim(2, 531)
+        SetEntityFacing(2, 2)
+        SetEntityAnim(70, 1824)
+        SetEntityFacing(70, 3)
+        Proc008(70, 305, 1)
+        Proc00C(70)
+        SetEntityAnim(70, 1820)
+        Proc037(30)
+        SetEntityFacing(70, 1)
+        SetEntityFacing(2, 1)
+        SetEntityAnim(2, 535)
+        Proc00A(2, 0, 1)
+        SetEntityAnim(70, 1824)
+        Proc00A(70, 0, 1)
+        Proc00C(2)
+        Proc00C(70)
+        Proc00F(2)
+        Proc00F(70)
+        SetEntityFacing(0, 0)
+        Proc03F(406, 2)
+    }
+}

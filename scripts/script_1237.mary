@@ -1,0 +1,26 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1237 EventScript_1237
+{
+    const MESSAGE_0 = "There are so many different\r\nthings in the pot, it must\r\nhave all sorts of vitamins!\x05\x0CI'll bring some home \r\nfor Grandma.\x05"
+    if Func086(21) == 0
+    {
+        Proc083(21)
+    }
+    SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(122)
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(21) == 0
+    {
+        Proc080(21, 5)
+    }
+    SetEntityFacing(21, 0)
+    Proc083(21)
+}

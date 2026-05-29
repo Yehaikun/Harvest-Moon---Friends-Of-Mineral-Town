@@ -1,0 +1,487 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 139 EventScript_139
+{
+    const MESSAGE_0 = "Is something the matter?\x05"
+    const MESSAGE_1 = "Can I help you with \r\nanything else?\x05"
+    const MESSAGE_2 = "Remove a cursed tool."
+    const MESSAGE_3 = "I want to confess."
+    const MESSAGE_4 = "Just saying 'hi'."
+    const MESSAGE_5 = "That will be 1,000 G."
+    const MESSAGE_6 = "OK."
+    const MESSAGE_7 = "No, thanks."
+    const MESSAGE_8 = "In that case, let us pray...\x05\x0COh Harvest Goddess, please\r\nhelp us remove this \r\nunjust curse...\x05"
+    const MESSAGE_9 = "Sorry, but you don't seem\r\nto have enough Gold.\r\nCome back another time.\x05"
+    const MESSAGE_10 = "Are you sure now?\x05"
+    const MESSAGE_11 = "But nothing you have\r\nis cursed!\x05"
+    const MESSAGE_12 = "Repent once each day.\x05"
+    const MESSAGE_13 = "What do you wish\r\nto repent for?\x05"
+    const MESSAGE_14 = "I hardly get any sleep."
+    const MESSAGE_15 = "I'm overworking the HS."
+    const MESSAGE_16 = "I want to marry the HG."
+    const MESSAGE_17 = "Sleep is very important\r\nfor everyone, you know!\x05\x0CI know you're very busy,\r\nbut you really should get\r\nsome rest once in a while.\x05The Harvest Goddess has\r\nnow forgiven you.\x05"
+    const MESSAGE_18 = "Failing to sleep is to \r\nreject the nature granted\r\nyou by the Harvest Goddess!\x05\x0CYou have displeased Her!\x05\x0CShe has not forgiven you,\r\nand someday you will\r\npay the price.\x05"
+    const MESSAGE_19 = "Do not fret. The Harvest\r\nSprites help you because\r\nthey wish to.\x05\x0CHowever, I suggest giving\r\nthen a present for their\r\nefforts to keep them happy.\x05\x0CThe Harvest Goddess has\r\nnow forgiven you.\x05"
+    const MESSAGE_20 = "What do you mean, you make\r\nthe Harvest Sprites work too\r\nhard?! How dare you repay\x05\r\ntheir kindness by exploiting\r\nthem! Don't you give them\r\ngifts, you scoundrel?\x05\x0CThe Harvest Goddess has not\r\nforgiven you, and someday\r\nyou will pay the price!\x05"
+    const MESSAGE_21 = "So you want to marry the\r\nHarvest goddess, do you?\r\nI'm sure she is very \x05\r\nflattered by your attention.\x05\x0CThe Harvest Goddess has\r\nnow forgiven you.\x05"
+    const MESSAGE_22 = "Wh-what!?...You say you\r\nwant to marry the Harvest\r\nGoddess!? That's blasphemy!\x05\r\nOf course, I do too, but...\r\nWait! Forget I said that!\x05\x0CThe Harvest Goddess has not\r\nforgiven you, and someday\r\nyou will pay the price!\x05"
+    const MESSAGE_23 = "I don't care for animals."
+    const MESSAGE_24 = "Worked until I collapsed."
+    const MESSAGE_25 = "Townspeople don't like me."
+    const MESSAGE_26 = "Don't forget that your\r\nanimals give you their own\r\nmilk, eggs, and wool to use!\x05\x0CExpress your gratitude \r\nby caring for them well!\x05\x0CThe Harvest Goddess has\r\nnow forgiven you.\x05"
+    const MESSAGE_27 = "What do you think the\r\nanimals were put into your\r\ncare by the Harvest Goddess\x05\r\nfor?!\x05\x0CThey give of themselves to\r\nyou, so you must repay this\r\ndebt by treating them as\x05\r\nwell as you can! Oh those\r\npoor animals!\x05\x0CThe Harvest Goddess has not\r\nforgiven you, and someday\r\nyou will pay the price!\x05"
+    const MESSAGE_28 = "Your desire to work hard is\r\nvery admirable. However, \r\nyour body has its limits.\x05\x0CIf you work until you\r\ncollapse, you are ignoring \r\nthe limits the Harvest \x05\r\nGoddess has placed on us.\x05\x0CNext time, take some \r\nsustenance or rest before \r\nworking so hard.\x05\x0CThe Harvest Goddess has\r\nnow forgiven you.\x05"
+    const MESSAGE_29 = "What do you mean, working\r\nthe body given to you by \r\nyour parents into the\x05\r\nground? You must show more\r\nrespect and gratitude to \r\nyour body!!\x05\x0CThe Harvest Goddess has not\r\nforgiven you, and someday\r\nyou will pay the price!\x05"
+    const MESSAGE_30 = "If the townspeople do not\r\nfavor you, it's for a \x05\x0Creason. Look inside your own\r\nheart first, then seek to\r\nmake amends with those \x05\r\naround you.\x05\x0CThe Harvest Goddess has\r\nnow forgiven you.\x05"
+    const MESSAGE_31 = "Now even I don't like you\r\nvery much! Let us end this\r\nconversation now!\x05\r\nThe Harvest Goddess has not\r\nforgiven you, and someday\r\nyou will pay the price!\x05"
+    const MESSAGE_32 = "I was cruel to my animals."
+    const MESSAGE_33 = "I slept in late."
+    const MESSAGE_34 = "I littered in the road."
+    const MESSAGE_35 = "The human heart is a weak\r\nthing, and often we seek to\r\nmake ourselves feel better\x05\r\nby cruelty to those weaker \r\nin strength. \x05\x0CRemember that true \r\nstrength lies in kindness\r\nto fellow creatures, \r\nespecially those weaker \r\nthan you.\x05\x0CThe Harvest Goddess has\r\nnow forgiven you.\x05"
+    const MESSAGE_36 = "I can't believe this!\r\nHow can you be so...so...\r\ncruel to poor, helpless\x05\r\nanimals! Oh, the humanity!\x05\x0CI think there is no saving\r\nsuch a dark soul!\x05\x0CThe Harvest Goddess has not\r\nforgiven you, and someday\r\nyou will pay the price!\x05"
+    const MESSAGE_37 = "Do not worry.\r\nSometimes the flesh is weak\r\neven when the spirit is\x05\r\nwilling.\x05\x0CThe Harvest Goddess has\r\nnow forgiven you.\x05"
+    const MESSAGE_38 = "Sleeping in is the sign of\r\nsloth in the heart!\x05\x0CWho knows how many others\r\nyou inconvenience by your\r\nlaziness! You will not gain \x05\r\nfriends living like that!\x05\x0CThe Harvest Goddess has not\r\nforgiven you, and someday\r\nyou will pay the price!\x05"
+    const MESSAGE_39 = "Throwing away your own\r\ngarbage should be natural.\x05\x0CThrowing away others'\r\ngarbage is smiled upon by\r\nthe Harvest Goddess.\x05\x0CThe Harvest Goddess has\r\nnow forgiven you.\x05"
+    const MESSAGE_40 = "...........................\r\n...........................\r\nI'm so flabbergasted, I lost\r\nthe power of speech!\x05\x0CWhat would you think if \r\nsomeone threw their garbage\r\naway in your bedroom!?\x05\r\nYou wouldn't like it, \r\nwould you?!\x05\x0CThe Harvest Goddess has not\r\nforgiven you, and someday\r\nyou will pay the price!\x05"
+    const MESSAGE_41 = "That is enough for \r\ntoday's confession.\x05"
+    const MESSAGE_42 = "Hello. How are you?\x05"
+    const MESSAGE_43 = "Come again any time.\x05"
+    const MESSAGE_44 = "It's locked.\x05"
+    const MESSAGE_45 = "The curse on the Hoe\r\nhas been lifted!\x05"
+    const MESSAGE_46 = "The curse on the Watering\r\nCan has been lifted!\x05"
+    var var_0, var_1, var_2, var_3, var_4, var_5, unused_6, var_7, var_8, var_9
+    var_7 = 0
+    var_3 = 0
+    var_5 = Func03E(5)
+    var_4 = Func03E(3)
+    if Func03E(119) == 1 || Func03E(127) == 1 || Func03E(135) == 1 || Func03E(143) == 1 || Func03E(151) == 1 || Func03E(131) == 1 || Func03E(418) == 1
+    {
+        var_3 = 0
+    }
+    else if GetEntityLocation(22) != 5 && GetEntityLocation(22) != 12
+    {
+        var_3 = 1
+    }
+    else
+    {
+        var_3 = 0
+    }
+    if var_3 == 1
+    {
+        var_2 = 0
+        PlaySong(0, 156)
+        Proc0CA(11)
+        if Func040() == 1
+        {
+            SetEntityAnim(0, 454)
+        }
+        else
+        {
+            SetEntityAnim(0, 342)
+        }
+        Proc008(0, 60, 1)
+        Proc00C(0)
+        Proc00A(0, 56, 1)
+        Proc00C(0)
+        if Func040() == 1
+        {
+            SetEntityAnim(0, 402)
+        }
+        else
+        {
+            SetEntityAnim(0, 338)
+        }
+        Proc034(3, 1)
+        TalkOpen()
+        do
+        {
+            if var_2 != 1
+            {
+                TalkMessage(MESSAGE_0)
+            }
+            else
+            {
+                TalkMessage(MESSAGE_1)
+            }
+            var_0 = TalkChoice3(MESSAGE_2, MESSAGE_3, MESSAGE_4)
+            switch var_0
+            {
+                case 1
+                {
+                    if Func04F() == 5 || Func04F() == 13 || Func04F() == 21 || Func04F() == 29 || Func04F() == 37 || Func04F() == 45
+                    {
+                        var_0 = Func025(MESSAGE_5, MESSAGE_6, MESSAGE_7)
+                        switch var_0
+                        {
+                            case 1
+                            {
+                                if Func0EF() >= 1000
+                                {
+                                    TalkMessage(MESSAGE_8)
+                                    PlaySong(0, 157)
+                                    Proc037(60)
+                                    Proc0F1(1000)
+                                    var_2 = 0
+                                    var_8 = Func04F()
+                                    var_9 = var_8 + 1
+                                    var_7 = Func13C(var_8)
+                                    if var_7
+                                    {
+                                        Proc051(var_9, 1)
+                                    }
+                                    Proc14A()
+                                }
+                                else
+                                {
+                                    TalkMessage(MESSAGE_9)
+                                    var_2 = 1
+                                }
+                            }
+                            case 2
+                            {
+                                TalkMessage(MESSAGE_10)
+                                var_2 = 1
+                            }
+                        }
+                    }
+                    else
+                    {
+                        TalkMessage(MESSAGE_11)
+                        var_2 = 1
+                    }
+                }
+                case 2
+                {
+                    if Func03E(577) == 1
+                    {
+                        TalkMessage(MESSAGE_12)
+                        var_2 = 1
+                    }
+                    else
+                    {
+                        TalkMessage(MESSAGE_13)
+                        if Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(579) == 1
+                        {
+                            var_1 = Func03D(1, 4)
+                        }
+                        else
+                        {
+                            var_1 = Func03D(0, 4)
+                        }
+                        switch var_1
+                        {
+                            case 0
+                            {
+                                var_0 = TalkChoice3(MESSAGE_14, MESSAGE_15, MESSAGE_16)
+                                switch var_0
+                                {
+                                    case 1
+                                    {
+                                        var_1 = Func03D(0, 3)
+                                        switch var_1
+                                        {
+                                            case 0
+                                            {
+                                                TalkMessage(MESSAGE_17)
+                                                Proc05C(10, 0)
+                                            }
+                                            case 1, 2, 3
+                                            {
+                                                TalkMessage(MESSAGE_18)
+                                            }
+                                        }
+                                    }
+                                    case 2
+                                    {
+                                        var_1 = Func03D(0, 3)
+                                        switch var_1
+                                        {
+                                            case 0
+                                            {
+                                                TalkMessage(MESSAGE_19)
+                                                Proc080(36, 2)
+                                                Proc080(37, 2)
+                                                Proc080(38, 2)
+                                                Proc080(39, 2)
+                                                Proc080(40, 2)
+                                                Proc080(41, 2)
+                                                Proc080(42, 2)
+                                            }
+                                            case 1, 2, 3
+                                            {
+                                                TalkMessage(MESSAGE_20)
+                                            }
+                                        }
+                                    }
+                                    case 
+                                    {
+                                    }
+                                    case 3
+                                    {
+                                        var_1 = Func03D(0, 9)
+                                        switch var_1
+                                        {
+                                            case 0
+                                            {
+                                                TalkMessage(MESSAGE_21)
+                                                Proc03F(579, 1)
+                                            }
+                                            case 1, 2, 3, 4, 5, 6, 7, 8, 9
+                                            {
+                                                TalkMessage(MESSAGE_22)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            case 1, 2
+                            {
+                                var_0 = TalkChoice3(MESSAGE_23, MESSAGE_24, MESSAGE_25)
+                                switch var_0
+                                {
+                                    case 1
+                                    {
+                                        var_1 = Func03D(0, 3)
+                                        switch var_1
+                                        {
+                                            case 0
+                                            {
+                                                TalkMessage(MESSAGE_26)
+                                                Proc12E(5)
+                                            }
+                                            case 1, 2, 3
+                                            {
+                                                TalkMessage(MESSAGE_27)
+                                            }
+                                        }
+                                    }
+                                    case 2
+                                    {
+                                        var_1 = Func03D(0, 3)
+                                        switch var_1
+                                        {
+                                            case 0
+                                            {
+                                                TalkMessage(MESSAGE_28)
+                                                Proc05C(10, 0)
+                                            }
+                                            case 1, 2, 3
+                                            {
+                                                TalkMessage(MESSAGE_29)
+                                            }
+                                        }
+                                    }
+                                    case 3
+                                    {
+                                        var_1 = Func03D(0, 3)
+                                        switch var_1
+                                        {
+                                            case 0
+                                            {
+                                                TalkMessage(MESSAGE_30)
+                                                Proc080(1, 2)
+                                                Proc080(2, 2)
+                                                Proc080(3, 2)
+                                                Proc080(4, 2)
+                                                Proc080(5, 2)
+                                                Proc080(6, 2)
+                                                Proc080(7, 2)
+                                                Proc080(8, 2)
+                                                Proc080(9, 2)
+                                                Proc080(10, 2)
+                                                Proc080(11, 2)
+                                                Proc080(12, 2)
+                                                Proc080(13, 2)
+                                                Proc080(14, 2)
+                                                Proc080(15, 2)
+                                                Proc080(16, 2)
+                                                Proc080(17, 2)
+                                                Proc080(18, 2)
+                                                Proc080(19, 2)
+                                                Proc080(20, 2)
+                                                Proc080(21, 2)
+                                                Proc080(22, 2)
+                                                Proc080(23, 2)
+                                                Proc080(24, 2)
+                                                Proc080(25, 2)
+                                                Proc080(26, 2)
+                                                Proc080(27, 2)
+                                                Proc080(28, 2)
+                                                Proc080(29, 2)
+                                                Proc080(30, 2)
+                                                Proc080(31, 2)
+                                                Proc080(33, 2)
+                                                Proc080(34, 2)
+                                                Proc080(35, 2)
+                                            }
+                                            case 1, 2, 3
+                                            {
+                                                TalkMessage(MESSAGE_31)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            case 3, 4
+                            {
+                                var_0 = TalkChoice3(MESSAGE_32, MESSAGE_33, MESSAGE_34)
+                                switch var_0
+                                {
+                                    case 1
+                                    {
+                                        var_1 = Func03D(0, 3)
+                                        switch var_1
+                                        {
+                                            case 0
+                                            {
+                                                TalkMessage(MESSAGE_35)
+                                                Proc12E(5)
+                                            }
+                                            case 1, 2, 3
+                                            {
+                                                TalkMessage(MESSAGE_36)
+                                            }
+                                        }
+                                    }
+                                    case 2
+                                    {
+                                        var_1 = Func03D(0, 3)
+                                        switch var_1
+                                        {
+                                            case 0
+                                            {
+                                                TalkMessage(MESSAGE_37)
+                                                Proc05C(0, -2)
+                                            }
+                                            case 1, 2, 3
+                                            {
+                                                TalkMessage(MESSAGE_38)
+                                            }
+                                        }
+                                    }
+                                    case 3
+                                    {
+                                        var_1 = Func03D(0, 3)
+                                        switch var_1
+                                        {
+                                            case 0
+                                            {
+                                                TalkMessage(MESSAGE_39)
+                                                Proc080(1, 2)
+                                                Proc080(2, 2)
+                                                Proc080(3, 2)
+                                                Proc080(4, 2)
+                                                Proc080(5, 2)
+                                                Proc080(6, 2)
+                                                Proc080(7, 2)
+                                                Proc080(8, 2)
+                                                Proc080(9, 2)
+                                                Proc080(10, 2)
+                                                Proc080(11, 2)
+                                                Proc080(12, 2)
+                                                Proc080(13, 2)
+                                                Proc080(14, 2)
+                                                Proc080(15, 2)
+                                                Proc080(16, 2)
+                                                Proc080(17, 2)
+                                                Proc080(18, 2)
+                                                Proc080(19, 2)
+                                                Proc080(20, 2)
+                                                Proc080(21, 2)
+                                                Proc080(22, 2)
+                                                Proc080(23, 2)
+                                                Proc080(24, 2)
+                                                Proc080(25, 2)
+                                                Proc080(26, 2)
+                                                Proc080(27, 2)
+                                                Proc080(28, 2)
+                                                Proc080(29, 2)
+                                                Proc080(30, 2)
+                                                Proc080(31, 2)
+                                                Proc080(33, 2)
+                                                Proc080(34, 2)
+                                                Proc080(35, 2)
+                                            }
+                                            case 1, 2, 3
+                                            {
+                                                TalkMessage(MESSAGE_40)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        TalkMessage(MESSAGE_41)
+                        Proc03F(577, 1)
+                        var_2 = 0
+                    }
+                }
+                case 3
+                {
+                    TalkMessage(MESSAGE_42)
+                    var_2 = 0
+                }
+            }
+        } while var_2 == 1
+        TalkMessage(MESSAGE_43)
+        TalkClose()
+        SetEntityFacing(0, 0)
+        Proc035(3, 1)
+        if Func040() == 1
+        {
+            SetEntityAnim(0, 454)
+        }
+        else
+        {
+            SetEntityAnim(0, 342)
+        }
+        Proc00A(0, 64, 1)
+        Proc00C(0)
+        if Func040() == 1
+        {
+            SetEntityAnim(0, 402)
+        }
+        else
+        {
+            SetEntityAnim(0, 338)
+        }
+        PlaySong(0, 205)
+        Proc0CB(11)
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_44)
+        TalkClose()
+    }
+    if var_7
+    {
+        switch var_9
+        {
+            case 14
+            {
+                if Func040() == 1
+                {
+                    PlaySong(0, 182)
+                    Proc05B(14)
+                    Proc037(90)
+                }
+                TalkOpen()
+                TalkMessage(MESSAGE_45)
+                TalkClose()
+            }
+            case 38
+            {
+                if Func040() == 1
+                {
+                    PlaySong(0, 182)
+                    Proc05B(38)
+                    Proc037(90)
+                }
+                TalkOpen()
+                TalkMessage(MESSAGE_46)
+                TalkClose()
+            }
+        }
+    }
+}

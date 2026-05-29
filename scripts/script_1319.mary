@@ -1,0 +1,64 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1319 EventScript_1319
+{
+    const MESSAGE_0 = "I think it's almost time!\x05"
+    const MESSAGE_1 = "I hope the new year is \r\na good one for everybody.\x05"
+    Proc016(8, 236, 265)
+    SetEntityPosition(0, 249, 285, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    if Func03E(244) == 1
+    {
+        SetEntityPosition(23, 161, 402, 1)
+        SetEntityAnim(23, 635)
+    }
+    SetEntityPosition(24, 273, 285, 1)
+    SetEntityAnim(24, 1970)
+    SetEntityPosition(11, 298, 388, 1)
+    SetEntityAnim(11, 2123)
+    SetEntityPosition(10, 258, 410, 1)
+    SetEntityAnim(10, 2059)
+    SetEntityPosition(12, 282, 428, 1)
+    SetEntityAnim(12, 2067)
+    SetEntityPosition(6, 191, 303, 1)
+    SetEntityAnim(6, 2465)
+    SetEntityPosition(7, 281, 319, 1)
+    SetEntityAnim(7, 2441)
+    Proc035(2, 1)
+    Proc037(60)
+    TalkOpen()
+    Proc030(83)
+    Proc02D(24)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc037(60)
+    Proc017(236, 170, 1)
+    Proc018()
+    Proc03F(466, 1)
+    Proc037(60 * 3)
+    Proc133()
+    Proc134()
+    Proc037(60 * 2)
+    Proc034(1, 1)
+    Proc135()
+    TalkOpen()
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    Proc0F3()
+    Proc08D(23)
+    Proc08D(24)
+    Proc08D(10)
+    Proc08D(12)
+    Proc08D(11)
+    Proc08D(7)
+    Proc08D(6)
+    Proc03F(465, 2)
+    Proc038(988)
+}

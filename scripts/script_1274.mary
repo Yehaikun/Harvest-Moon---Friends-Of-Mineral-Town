@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1274 EventScript_1274
+{
+    const MESSAGE_0 = "This Sheep looks like it\r\nhas a good personality. \r\nI like him. \x05"
+    const MESSAGE_1 = "Your sheep all look\r\nvery happy. \x05"
+    if Func086(27) == 0
+    {
+        Proc083(27)
+    }
+    SetEntityFacing(27, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(431) == 0
+    {
+        TalkOpen()
+        Proc030(172)
+        Proc02D(27)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(172)
+        Proc02D(27)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(27) == 0
+    {
+        Proc080(27, 5)
+    }
+    Proc083(27)
+    SetEntityFacing(27, 0)
+}

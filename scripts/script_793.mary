@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 793 EventScript_793
+{
+    const MESSAGE_0 = "I love my daughter so much! \r\nI don't mind working,\r\n'cause I know it's for her!\x05"
+    SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(84)
+    Proc02D(24)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(24)
+    SetEntityFacing(24, 0)
+    exit
+}

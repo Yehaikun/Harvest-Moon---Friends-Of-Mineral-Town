@@ -1,0 +1,48 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 156 EventScript_156
+{
+    const MESSAGE_0 = "Woodbin\x05"
+    const MESSAGE_1 = "There's no Lumber\r\nin the Woodbin.\x05"
+    var var_0
+    var_0 = Func03E(40)
+    if Func064()
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+        exit
+    }
+    if Func040()
+    {
+        if var_0 == 0
+        {
+            TalkOpen()
+            Proc024(MESSAGE_1)
+            TalkClose()
+        }
+        else
+        {
+            Proc049(89)
+            Proc03F(40, var_0 - 1)
+        }
+    }
+    else if Func041() == 1 && Func044() == 89
+    {
+        if Func042() == 1
+        {
+            exit
+        }
+        else
+        {
+            Proc046()
+            Proc03F(40, var_0 + 1)
+        }
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+}

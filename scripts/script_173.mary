@@ -1,0 +1,45 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 173 EventScript_173
+{
+    if Func064()
+    {
+        exit
+    }
+    if !Func040()
+    {
+        switch Func041()
+        {
+            case 2, 3, 4
+            {
+                exit
+            }
+            case 1
+            {
+                if !Func04C() || Func044() == 49 || Func044() == 53
+                {
+                    exit
+                }
+            }
+            case 0
+            {
+                if Func043() == 6
+                {
+                    if Func042() == 1
+                    {
+                        exit
+                    }
+                    else
+                    {
+                        Proc046()
+                        PlaySong(0, 110)
+                        Proc037(10)
+                        Proc03F(42, Func03E(42) + 30)
+                        exit
+                    }
+                }
+            }
+        }
+        Proc04E()
+    }
+}

@@ -1,0 +1,20 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 360 EventScript_360
+{
+    var var_0
+    if GetEntityFacing(0) == 0
+    {
+        var_0 = Func03E(3)
+        Proc034(2, 1)
+        Proc016(12, 308, 64)
+        SetEntityPosition(0, 308, 64, 0)
+        PlaySong(0, 205)
+        if var_0 >= 22 && var_0 <= 23 || var_0 >= 0 && var_0 < 6
+        {
+            Proc03F(290, 1)
+            Proc038(780)
+        }
+        Proc035(2, 1)
+    }
+}

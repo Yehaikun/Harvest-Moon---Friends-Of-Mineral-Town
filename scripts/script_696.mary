@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 696 EventScript_696
+{
+    const MESSAGE_0 = "Mom's health has always been\r\nshakey...That's why I have \r\nso much responsibility!\x05"
+    const MESSAGE_1 = "If only she would get \r\nbetter once and for all...\x05"
+    SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(2)
+    Proc030(0)
+    TalkMessage(MESSAGE_0)
+    Proc030(3)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    Proc083(2)
+    SetEntityFacing(2, 2)
+    exit
+}

@@ -1,0 +1,102 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 375 EventScript_375
+{
+    const MESSAGE_0 = "It's locked...\x05"
+    var var_0, var_1, var_2, var_3, var_4
+    if GetEntityFacing(0) == 1
+    {
+        var_0 = 0
+        var_1 = Func03E(1)
+        var_2 = Func03E(2)
+        var_3 = Func03E(3)
+        var_4 = Func03E(5)
+        if var_1 == 0 && var_2 == 1 || var_1 == 0 && var_2 == 18 || var_1 == 0 && var_2 == 22 || var_1 == 1 && var_2 == 1 || var_1 == 1 && var_2 == 7 || var_1 == 1 && var_2 == 24 || var_1 == 1 && var_2 == 20 || var_1 == 2 && var_2 == 3 || var_1 == 2 && var_2 == 9 || var_1 == 2 && var_2 == 13 || var_1 == 2 && var_2 == 18 || var_1 == 2 && var_2 == 21 || var_1 == 3 && var_2 == 30
+        {
+            var_0 = 0
+        }
+        else if var_1 == 3 && var_2 == 24
+        {
+            if Func03E(450) == 5
+            {
+                if var_3 >= 18
+                {
+                    var_0 = 1
+                }
+            }
+            else
+            {
+                var_0 = 0
+            }
+        }
+        else if Func03E(583) == 1 || Func03E(145) == 1
+        {
+            var_0 = 0
+        }
+        else if GetEntityLocation(11) == 26
+        {
+            if Func07F(11) <= 100
+            {
+                if var_3 >= 10 && var_3 < 19
+                {
+                    var_0 = 1
+                }
+            }
+            else if Func07F(11) > 100
+            {
+                if var_3 >= 8 && var_3 < 20
+                {
+                    var_0 = 1
+                }
+                if Func07F(11) > 200
+                {
+                    if var_3 >= 6 && var_3 < 22
+                    {
+                        var_0 = 1
+                    }
+                }
+            }
+        }
+        if var_0 == 1
+        {
+            PlaySong(0, 156)
+            Proc034(2, 1)
+            Proc016(26, 120, 208)
+            SetEntityPosition(0, 120, 208, 1)
+            if var_1 == 3 && var_2 == 24 && Func03E(450) == 5
+            {
+                if var_3 >= 18
+                {
+                    Proc038(1305)
+                }
+            }
+            else if Func03E(100) == 2 && Func03E(101) == 0 && var_4 == 1 && (var_3 >= 10 && var_3 < 13) && Func03E(76) == 0 && Func03E(85) == 0 && Func03E(95) == 0 && Func03E(103) == 0 && Func03E(111) == 0 && Func03E(371) == 0 && Func03E(142) == 0 && Func03E(143) == 0 && Func03E(75) == 0 && Func03E(84) == 0 && Func03E(94) == 0 && Func03E(102) == 0 && Func03E(110) == 0 && Func03E(370) == 0 && Func03E(141) == 0 && Func089(12) >= 40000 && (GetEntityLocation(10) == 26 || GetEntityLocation(10) == 27) && (GetEntityLocation(11) == 26 || GetEntityLocation(11) == 27) && (GetEntityLocation(12) == 26 || GetEntityLocation(12) == 27) && Func040() == 1
+            {
+                Proc03F(101, 1)
+                Proc038(62)
+            }
+            else if Func03E(255) == 0 && var_4 == 4 && (var_3 >= 16 && var_3 < 19) && Func07F(10) >= 250 && (Func03E(142) == 2 || Func03E(143) == 2) && GetEntityLocation(10) == 26 && GetEntityLocation(11) == 26 && GetEntityLocation(12) == 26 && GetEntityLocation(7) == 26 && Func086(10) == 1 && Func086(11) == 1 && Func086(12) == 1 && Func086(7) == 1
+            {
+                Proc03F(255, 1)
+                Proc038(726)
+            }
+            else if Func03E(256) == 0 && var_4 == 6 && (var_3 >= 10 && var_3 < 13) && Func07F(11) >= 200 && GetEntityLocation(9) == 26 && Func086(9) == 1 && Func086(11) == 1
+            {
+                Proc03F(256, 1)
+                Proc038(731)
+            }
+            else if Func03E(256) == 2 && Func03E(257) == 1 && Func03E(258) == 0 && Func03E(259) < 5 && var_4 == 6 && (var_3 >= 10 && var_3 < 13) && GetEntityLocation(9) == 26
+            {
+                Proc03F(258, 1)
+                Proc038(732)
+            }
+            Proc035(2, 1)
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+        }
+    }
+}

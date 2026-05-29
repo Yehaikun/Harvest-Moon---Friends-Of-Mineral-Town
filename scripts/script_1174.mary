@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1174 EventScript_1174
+{
+    const MESSAGE_0 = "People keep Cows all over \r\nthe world, you know. \x05\r\nThey give Milk, and they \r\nwork hard. No wonder people\r\ndepend on them so much. \x05"
+    const MESSAGE_1 = "Are you keeping good care of\r\nyour Cows? You have to give\r\nthem lots of attention, \x05\r\nyou know. \x05"
+    if Func086(22) == 0
+    {
+        Proc083(22)
+    }
+    SetEntityFacing(22, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(411) == 0
+    {
+        TalkOpen()
+        Proc030(150)
+        Proc02D(22)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(149)
+        Proc02D(22)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(22) == 0
+    {
+        Proc080(22, 5)
+    }
+    Proc083(22)
+    SetEntityFacing(22, 0)
+}

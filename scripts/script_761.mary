@@ -1,0 +1,27 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 761 EventScript_761
+{
+    const MESSAGE_0 = "It's nice to have your\r\nhusband by your side all \r\nthe time, isn't it? \x05"
+    const MESSAGE_1 = "You two really do make\r\na cute couple. \x05"
+    if Func03E(281) == 1
+    {
+        SetEntityFacing(1, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        if Func085(1) == 0
+        {
+            Proc030(14)
+            Proc02D(1)
+            TalkMessage(MESSAGE_0)
+        }
+        else
+        {
+            Proc030(15)
+            Proc02D(1)
+            TalkMessage(MESSAGE_1)
+        }
+        TalkClose()
+        Proc083(1)
+        SetEntityFacing(1, 2)
+    }
+}

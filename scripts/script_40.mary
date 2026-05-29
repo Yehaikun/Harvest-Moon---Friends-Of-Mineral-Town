@@ -1,0 +1,44 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 40 EventScript_40
+{
+    const MESSAGE_0 = "Yeah well...\r\nWhat do you know about it?!\x05"
+    const MESSAGE_1 = "I'm glad you understand me. \x05"
+    const MESSAGE_2 = "Sorry for dragging you \r\ninto this. \x05"
+    if Func03E(82) == 1
+    {
+        if Func03E(83) == 0
+        {
+            SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+            TalkOpen()
+            Proc030(2)
+            Proc02D(2)
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            SetEntityFacing(2, 2)
+            Proc083(2)
+        }
+        else if Func03E(83) == 1
+        {
+            SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+            TalkOpen()
+            Proc030(1)
+            Proc02D(2)
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+            SetEntityFacing(2, 2)
+            Proc083(2)
+        }
+        else
+        {
+            SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+            TalkOpen()
+            Proc030(0)
+            Proc02D(2)
+            TalkMessage(MESSAGE_2)
+            TalkClose()
+            SetEntityFacing(2, 1)
+            Proc083(2)
+        }
+    }
+}

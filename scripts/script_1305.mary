@@ -1,0 +1,81 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1305 EventScript_1305
+{
+    const MESSAGE_0 = "Thanks for coming. \x05"
+    const MESSAGE_1 = "Hello! \r\nCome on in! \x05"
+    const MESSAGE_2 = "Mary invited you, eh?\r\nI hope you enjoy yourself.\x05\x0CDo you want to hear about\r\nthe plants I'm researching?\x05"
+    const MESSAGE_3 = "Dad! Don't bore \r\n\xFF!!\x05"
+    const MESSAGE_4 = "In that case, I want to \r\nhear about the farm!\x05"
+    const MESSAGE_5 = "Spending the Starry Night \r\nFestival with Mary's family\r\nsure was fun! \x05"
+    Proc016(26, 120, 160)
+    PlayBGM(1, 7)
+    Proc13D(0, 112, 112, 1, Func13F(143))
+    Proc13D(1, 128, 112, 1, Func13F(84))
+    SetEntityPosition(0, 120, 208, 1)
+    SetEntityPosition(12, 84, 128, 3)
+    SetEntityAnim(12, 2067)
+    SetEntityPosition(11, 112, 96, 0)
+    SetEntityAnim(11, 2123)
+    SetEntityPosition(10, 128, 96, 0)
+    SetEntityAnim(10, 2059)
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 160, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityFacing(12, 0)
+    Proc037(10)
+    TalkOpen()
+    Proc02D(12)
+    Proc030(104)
+    Proc032(12)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc02D(11)
+    Proc030(111)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc02D(10)
+    Proc030(100)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    SetEntityFacing(11, 3)
+    TalkOpen()
+    Proc02D(11)
+    Proc030(112)
+    TalkMessage(MESSAGE_3)
+    Proc02D(11)
+    Proc030(111)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc08A(12, 2000)
+    Proc080(12, 30)
+    Proc080(10, 30)
+    Proc080(11, 30)
+    Proc034(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc13E(0)
+    Proc13E(1)
+    Proc03F(460, 2)
+    Proc03F(450, 0)
+    Proc038(988)
+}

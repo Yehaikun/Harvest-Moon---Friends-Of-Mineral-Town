@@ -1,0 +1,103 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 984 EventScript_984
+{
+    const MESSAGE_0 = "It should be born soon...\x05"
+    const MESSAGE_1 = "A Baby Chick has been born.\r\nGive it a name for this \r\nlife.\x05"
+    const MESSAGE_2 = "A Calf has been born.\r\nGive it a name for this \r\nlife.\x05"
+    const MESSAGE_3 = "A Lamb has been born.\r\nGive it a name for this \r\nlife.\x05"
+    const MESSAGE_4 = "A new member of my family.\r\nGotta work harder.\x05"
+    var var_0, var_1, var_2, var_3, var_4
+    var_2 = 0
+    for var_0 = 0; var_0 < Func0BE(); ++var_0
+    {
+        if Func0BF(var_0)
+        {
+            var_2 = 1
+        }
+    }
+    for var_0 = 0; var_0 < Func0C4(); ++var_0
+    {
+        if Func0C5(var_0)
+        {
+            var_2 = 1
+        }
+    }
+    if var_2 != 0
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        for var_0 = 0; var_0 < Func0BE(); ++var_0
+        {
+            if Func0BF(var_0)
+            {
+                var_1 = Func0C0(var_0)
+                Proc016(17, 59, 153)
+                var_3 = GetEntityX(46 + var_1)
+                var_4 = GetEntityY(46 + var_1)
+                Proc00F(46 + var_1)
+                SetEntityPosition(70, var_3, var_4, 3)
+                SetEntityAnim(70, 1845)
+                SetEntityPosition(0, var_3 + 17, var_4, 2)
+                if Func040() == 1
+                {
+                    SetEntityAnim(0, 402)
+                }
+                else
+                {
+                    SetEntityAnim(0, 338)
+                }
+                Proc035(2, 1)
+                TalkOpen()
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+                Proc034(3, 1)
+                Proc0A6(3, var_1)
+                Proc00F(70)
+                SetEntityPosition(46 + var_1, var_3, var_4, 3)
+            }
+        }
+        for var_0 = 0; var_0 < Func0C4(); ++var_0
+        {
+            if Func0C5(var_0)
+            {
+                var_1 = Func0C6(var_0)
+                var_3 = GetEntityX(54 + var_1)
+                var_4 = GetEntityY(54 + var_1)
+                Proc016(37, var_3 + 26, var_4)
+                SetEntityPosition(0, var_3 + 26, var_4, 2)
+                if Func040() == 1
+                {
+                    SetEntityAnim(0, 402)
+                }
+                else
+                {
+                    SetEntityAnim(0, 338)
+                }
+                Proc035(3, 1)
+                if Func117(var_1)
+                {
+                    TalkOpen()
+                    TalkMessage(MESSAGE_2)
+                    TalkClose()
+                    Proc034(3, 1)
+                    Proc0A6(1, var_1)
+                }
+                else
+                {
+                    TalkOpen()
+                    TalkMessage(MESSAGE_3)
+                    TalkClose()
+                    Proc0A6(2, var_1)
+                }
+            }
+        }
+        Proc035(3, 1)
+        TalkOpen()
+        TalkMessage(MESSAGE_4)
+        TalkClose()
+        Proc034(2, 1)
+    }
+    Proc038(985)
+}

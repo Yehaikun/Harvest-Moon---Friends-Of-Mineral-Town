@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 755 EventScript_755
+{
+    const MESSAGE_0 = "I hope this makes her \r\nbetter...\x05"
+    if Func03E(279) == 1
+    {
+        SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(79)
+        Proc02D(18)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(18)
+        SetEntityFacing(18, 3)
+    }
+}

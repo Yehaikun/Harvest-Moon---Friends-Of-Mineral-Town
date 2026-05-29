@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 813 EventScript_813
+{
+    const MESSAGE_0 = "It is a pleasure to make\r\nyour acquaintaince. \x05\x0CMy name is Van, and I am a \r\ntravelling merchant with\r\nmany rare and valuable \x05\r\nitems. \x05\x0CI'm open for business every\r\nWednesday at second \r\nfloor of the Inn. \x05\x0CI look forward to doing \r\nbusiness with you. \x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(33, 228, 145, 1)
+    SetEntityAnim(33, 2264)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(142)
+    Proc02D(33)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(33, 3)
+    SetEntityAnim(33, 2268)
+    Proc008(33, 319, 1)
+    Proc00C(33)
+    SetEntityFacing(33, 1)
+    Proc00A(33, 0, 1)
+    Proc00C(33)
+    Proc00F(33)
+    Proc083(33)
+    Proc03F(315, 2)
+    exit
+}

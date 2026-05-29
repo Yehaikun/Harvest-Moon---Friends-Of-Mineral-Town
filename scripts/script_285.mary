@@ -1,0 +1,514 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 285 EventScript_285
+{
+    const MESSAGE_0 = "You'll have to wait until \r\nwhat you bought arrives.\x05"
+    const MESSAGE_1 = "There is a phone.\x05"
+    const MESSAGE_2 = "You can make a call for 10G."
+    const MESSAGE_3 = "Make a call."
+    const MESSAGE_4 = "Don't make a call."
+    const MESSAGE_5 = "You need 10G to make a call.\x05"
+    const MESSAGE_6 = "Hello.\r\nThis is the TV\r\nShopping Network.\x05\x0C"
+    const MESSAGE_7 = "The Watch is 2,000G.\r\nDo you want it?\x05"
+    const MESSAGE_8 = "\x81\x99Watch: 2,000G"
+    const MESSAGE_9 = "Buy"
+    const MESSAGE_10 = "Don't buy"
+    const MESSAGE_11 = "The Mirror is 1,000G.\r\nDo you want it?\x05"
+    const MESSAGE_12 = "\x81\x99Mirror: 1,000G"
+    const MESSAGE_13 = "The refrigerator is 2,500G.\r\nDo you want it?\x05"
+    const MESSAGE_14 = "\x81\x99Refrigerator: 2,500G"
+    const MESSAGE_15 = "The Shelf is 2,500G.\r\nDo you want it?\x05"
+    const MESSAGE_16 = "\x81\x99Shelf: 2,500G"
+    const MESSAGE_17 = "The Kitchen is 4,000G.\r\nDo you want it?\x05"
+    const MESSAGE_18 = "\x81\x99Kitchen: 4,000G"
+    const MESSAGE_19 = "The Carpet is 5,000G.\r\nDo you want it?\x05"
+    const MESSAGE_20 = "\x81\x99Carpet: 5,000G"
+    const MESSAGE_21 = "The Large Bed is 10,000G.\r\nDo you want it?\x05"
+    const MESSAGE_22 = "\x81\x99Large Bed: 10,000G"
+    const MESSAGE_23 = "The Knife is 1,500G.\r\nDo you want it?\x05"
+    const MESSAGE_24 = "\x81\x99Knife: 1,500G"
+    const MESSAGE_25 = "The Frying Pan is 1,200G.\r\nDo you want it?\x05"
+    const MESSAGE_26 = "\x81\x99Frying Pan: 1,200G"
+    const MESSAGE_27 = "The Pot is 1,000G.\r\nDo you want it?\x05"
+    const MESSAGE_28 = "\x81\x99Pot: 1,000G"
+    const MESSAGE_29 = "The Mixer is 1,200G.\r\nDo you want it?\x05"
+    const MESSAGE_30 = "\x81\x99Mixer: 1,200G"
+    const MESSAGE_31 = "The Whisk is 500G.\r\nDo you want it?\x05"
+    const MESSAGE_32 = "\x81\x99Whisk: 500G"
+    const MESSAGE_33 = "The Rolling Pin is 750G.\r\nDo you want it?\x05"
+    const MESSAGE_34 = "\x81\x99Rolling Pin: 750G"
+    const MESSAGE_35 = "The Oven is 2,500G.\r\nDo you want it?\x05"
+    const MESSAGE_36 = "\x81\x99Oven: 2,500G"
+    const MESSAGE_37 = "Seasoning Set is 2,500G.\r\nDo you want it?\x05"
+    const MESSAGE_38 = "\x81\x99Seasoning Set: 2,500G"
+    const MESSAGE_39 = "Power Berry is 10,000G.\r\nDo you want it?\x05"
+    const MESSAGE_40 = "\x81\x99Power Berry: 10,000G"
+    const MESSAGE_41 = "...But, I'm not\r\nselling anything right now.\x05"
+    const MESSAGE_42 = "Thanks a lot.\r\nI'll deliver it in \r\n2-3 days.\x05"
+    const MESSAGE_43 = "It looks like you don't\r\nhave enough gold. I'd\r\nhold off if I were you.\x05"
+    const MESSAGE_44 = "Just give me a call if you\r\ndecide you want it \r\nafter all.\x05"
+    var var_0, var_1
+    TalkOpen()
+    if Func0E1() != 16
+    {
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        exit
+    }
+    else if Func03E(14) == 0 && Func03E(26) == 1 && Func03E(27) == 1 || Func03E(14) == 1 && Func03E(26) == 1 && Func03E(27) == 1 && Func03E(21) == 1 && Func03E(22) == 1 && Func03E(23) == 1 && Func03E(32) == 1 && Func03E(33) == 1 && Func03E(34) == 1 && Func03E(35) == 1 && Func03E(36) == 1 && Func03E(37) == 1 && Func03E(38) == 1 && Func03E(39) == 1
+    {
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        exit
+    }
+    else if Func0E0() == 16
+    {
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        exit
+    }
+    else
+    {
+        var_0 = Func025(MESSAGE_2, MESSAGE_3, MESSAGE_4)
+        switch var_0
+        {
+            case 1
+            {
+                if Func0EF() >= 10
+                {
+                    Proc0F1(10)
+                }
+                else
+                {
+                    TalkMessage(MESSAGE_5)
+                    TalkClose()
+                    exit
+                }
+            }
+            case 2
+            {
+                TalkClose()
+                exit
+            }
+            case 
+            {
+            }
+        }
+        TalkMessage(MESSAGE_6)
+        switch Func0E0()
+        {
+            case 0
+            {
+                TalkMessage(MESSAGE_7)
+                var_0 = Func025(MESSAGE_8, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 2000
+                        {
+                            Proc0F1(2000)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 1
+            {
+                TalkMessage(MESSAGE_11)
+                var_0 = Func025(MESSAGE_12, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 1000
+                        {
+                            Proc0F1(1000)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 2
+            {
+                TalkMessage(MESSAGE_13)
+                var_0 = Func025(MESSAGE_14, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 2500
+                        {
+                            Proc0F1(2500)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 3
+            {
+                TalkMessage(MESSAGE_15)
+                var_0 = Func025(MESSAGE_16, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 2500
+                        {
+                            Proc0F1(2500)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 4
+            {
+                TalkMessage(MESSAGE_17)
+                var_0 = Func025(MESSAGE_18, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 4000
+                        {
+                            Proc0F1(4000)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 5
+            {
+                TalkMessage(MESSAGE_19)
+                var_0 = Func025(MESSAGE_20, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 5000
+                        {
+                            Proc0F1(5000)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 6
+            {
+                TalkMessage(MESSAGE_21)
+                var_0 = Func025(MESSAGE_22, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 10000
+                        {
+                            Proc0F1(10000)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 7
+            {
+                TalkMessage(MESSAGE_23)
+                var_0 = Func025(MESSAGE_24, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 1500
+                        {
+                            Proc0F1(1500)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 8
+            {
+                TalkMessage(MESSAGE_25)
+                var_0 = Func025(MESSAGE_26, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 1200
+                        {
+                            Proc0F1(1200)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 9
+            {
+                TalkMessage(MESSAGE_27)
+                var_0 = Func025(MESSAGE_28, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 1000
+                        {
+                            Proc0F1(1000)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 10
+            {
+                TalkMessage(MESSAGE_29)
+                var_0 = Func025(MESSAGE_30, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 1200
+                        {
+                            Proc0F1(1200)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 11
+            {
+                TalkMessage(MESSAGE_31)
+                var_0 = Func025(MESSAGE_32, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 500
+                        {
+                            Proc0F1(500)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 12
+            {
+                TalkMessage(MESSAGE_33)
+                var_0 = Func025(MESSAGE_34, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 750
+                        {
+                            Proc0F1(750)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 13
+            {
+                TalkMessage(MESSAGE_35)
+                var_0 = Func025(MESSAGE_36, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 2500
+                        {
+                            Proc0F1(2500)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 14
+            {
+                TalkMessage(MESSAGE_37)
+                var_0 = Func025(MESSAGE_38, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 2500
+                        {
+                            Proc0F1(2500)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 15
+            {
+                TalkMessage(MESSAGE_39)
+                var_0 = Func025(MESSAGE_40, MESSAGE_9, MESSAGE_10)
+                switch var_0
+                {
+                    case 1
+                    {
+                        if Func0EF() >= 10000
+                        {
+                            Proc0F1(10000)
+                            var_1 = 0
+                        }
+                        else
+                        {
+                            var_1 = 1
+                        }
+                    }
+                    case 2
+                    {
+                        var_1 = 2
+                    }
+                }
+            }
+            case 16
+            {
+                TalkMessage(MESSAGE_41)
+                TalkClose()
+                exit
+            }
+            case 
+            {
+            }
+        }
+    }
+    TalkOpen()
+    switch var_1
+    {
+        case 0
+        {
+            TalkMessage(MESSAGE_42)
+            Proc0E4()
+        }
+        case 1
+        {
+            TalkMessage(MESSAGE_43)
+        }
+        case 2
+        {
+            TalkMessage(MESSAGE_44)
+        }
+    }
+    TalkClose()
+    exit
+}

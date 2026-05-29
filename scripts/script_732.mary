@@ -1,0 +1,237 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 732 EventScript_732
+{
+    const MESSAGE_0 = "Hi, \xFF!. \r\nCome on in. \x05"
+    const MESSAGE_1 = "Hello, \xFF!. \x05"
+    const MESSAGE_2 = "Are we ready to \r\nbegin the class? \x05"
+    const MESSAGE_3 = "Yes, Teacher. \r\nPlease begin!\x05"
+    const MESSAGE_4 = "Listen up, now...\x05"
+    const MESSAGE_5 = "Today's class will be on \r\nCookies. All of you who \r\nlike sweets will love this.\x05\x0CThe Ingredients are Egg, \r\nFlour, Butter, and Sugar.\x05\x0CYou also need a Rolling Pin\r\nand an Oven. \x05\x0CIt will also taste better \r\nif you add Honey. \x05\x0CAlso, if you add Chocolate,\r\nyou can make Chocolate\r\nCookies that are perfect\x05\r\nfor the Spring \r\nThanksgiving Festival. \x05"
+    const MESSAGE_6 = "Thank you, Teacher!\x05"
+    const MESSAGE_7 = "Don't mention it. \r\nUntil next time. \x05"
+    const MESSAGE_8 = "I think Pudding is a good \r\nsubject for today's class. \x05\x0CAll you need is Egg, Milk, \r\nSugar, and an Oven to \r\ncook it all in. \x05\x0CThey taste even better with\r\nFruit or Corn Flakes. \r\nTry it out!\x05"
+    const MESSAGE_9 = "Today's lesson will be on \r\nCheese Cake. \r\nQuite a sophisticated \x05\r\ndessert, don't you think?\x05\x0CIt's made with Cheese, \r\nEggs, and Milk, along with \r\nSugar to sweeten it. \x05\x0CYou'll need a Pot, a Whisk,\r\nand an Oven. \x05\x0CYou can also add Honey \r\non special occasions. \x05"
+    const MESSAGE_10 = "Today's lesson will be on \r\nApple Pie. \x05\x0CI know that Ellen likes \r\nthis recipe very well. \x05\x0CShe'll love it if you \r\nbring her some. \x05\x0CIngredients are Egg, Flour,\r\nand Butter. \r\nYou'll need a Knife, a Pot,\x05\r\na Rolling Pin, and an Oven.\x05\x0CIt's not easy, but it's \r\nvery delicious. \x05"
+    const MESSAGE_11 = "I'm afraid next time will be\r\nour final lesson. \x05"
+    const MESSAGE_12 = "Really? Why?\x05"
+    const MESSAGE_13 = "Yes, Basil is starting \r\nanother book, so I don't\r\nwant to disturb him.\x05"
+    const MESSAGE_14 = "That's too bad...\r\n\x05"
+    const MESSAGE_15 = "Sorry, \xFF!, \r\nbut that's all I can teach\r\nyou. \x05"
+    const MESSAGE_16 = "Our final lesson will be on \r\nIce Cream. \r\nEverybody loves Ice Cream. \x05\x0CYou'll need Milk, Egg, \r\nand of course Sugar. \x05\x0CYou'll also need a Pot \r\nand a Whisk. \x05\x0CAll children love this!\x05"
+    const MESSAGE_17 = "That's it for my Dessert \r\nClassroom. \x05"
+    const MESSAGE_18 = "Don't mention it. I'm \r\nglad to be able to share\r\nthese recipes. \x05"
+    Proc0F2()
+    Proc016(26, 120, 208)
+    SetEntityPosition(0, 120, 208, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(11, 112, 96, 0)
+    SetEntityAnim(11, 2123)
+    SetEntityPosition(9, 88, 120, 3)
+    SetEntityAnim(9, 2256)
+    Proc035(2, 1)
+    Proc017(120, 120, 2)
+    Proc018()
+    TalkOpen()
+    Proc030(110)
+    Proc02D(11)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(9, 0)
+    TalkOpen()
+    Proc030(137)
+    Proc02D(9)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 152, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityAnim(0, 510)
+    Proc037(30)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    TalkOpen()
+    Proc030(110)
+    Proc02D(11)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    SetEntityFacing(9, 1)
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(111)
+    Proc02D(11)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    switch Func03E(259)
+    {
+        case 0
+        {
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_5)
+            TalkClose()
+            TalkOpen()
+            Proc030(138)
+            Proc02D(9)
+            TalkMessage(MESSAGE_6)
+            TalkClose()
+            TalkOpen()
+            Proc030(111)
+            Proc02D(11)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+        }
+        case 1
+        {
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_8)
+            TalkClose()
+            TalkOpen()
+            Proc030(138)
+            Proc02D(9)
+            TalkMessage(MESSAGE_6)
+            TalkClose()
+            TalkOpen()
+            Proc030(111)
+            Proc02D(11)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+        }
+        case 2
+        {
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_9)
+            TalkClose()
+            TalkOpen()
+            Proc030(138)
+            Proc02D(9)
+            TalkMessage(MESSAGE_6)
+            TalkClose()
+            TalkOpen()
+            Proc030(111)
+            Proc02D(11)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+        }
+        case 3
+        {
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_10)
+            TalkClose()
+            TalkOpen()
+            Proc030(138)
+            Proc02D(9)
+            TalkMessage(MESSAGE_6)
+            TalkClose()
+            TalkOpen()
+            Proc030(111)
+            Proc02D(11)
+            TalkMessage(MESSAGE_11)
+            TalkClose()
+            TalkOpen()
+            Proc030(139)
+            Proc02D(9)
+            TalkMessage(MESSAGE_12)
+            TalkClose()
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_13)
+            TalkClose()
+            TalkOpen()
+            Proc030(140)
+            Proc02D(9)
+            TalkMessage(MESSAGE_14)
+            TalkClose()
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_15)
+            TalkClose()
+        }
+        case 4
+        {
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_16)
+            Proc030(111)
+            TalkMessage(MESSAGE_17)
+            TalkClose()
+            TalkOpen()
+            Proc030(138)
+            Proc02D(9)
+            TalkMessage(MESSAGE_6)
+            TalkClose()
+            TalkOpen()
+            Proc030(111)
+            Proc02D(11)
+            TalkMessage(MESSAGE_18)
+            TalkClose()
+            Proc080(11, 20)
+            Proc080(9, 20)
+        }
+    }
+    SetEntityAnim(0, 510)
+    Proc037(30)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc083(11)
+    Proc083(9)
+    Proc0F3()
+    Proc03F(258, 2)
+    Proc03F(259, Func03E(259) + 1)
+    Proc034(2, 1)
+    Proc016(5, 200, 168)
+    SetEntityPosition(0, 200, 168, 0)
+    PlaySong(0, 205)
+    Proc0F7(13, 0)
+    Proc035(2, 1)
+    Proc0F3()
+    exit
+}

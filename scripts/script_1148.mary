@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1148 EventScript_1148
+{
+    const MESSAGE_0 = "Are you going to enter \r\na Chicken? It's very fun. \x05"
+    const MESSAGE_1 = "The Chickens are so cute!...\x05"
+    if Func086(3) == 0
+    {
+        Proc083(3)
+    }
+    SetEntityFacing(3, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(407) == 0
+    {
+        TalkOpen()
+        Proc030(7)
+        Proc02D(3)
+        if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+        {
+            Proc032(3)
+        }
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(8)
+        Proc02D(3)
+        if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+        {
+            Proc032(3)
+        }
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(3) == 0
+    {
+        Proc080(3, 5)
+    }
+    Proc083(3)
+    SetEntityFacing(3, 1)
+}

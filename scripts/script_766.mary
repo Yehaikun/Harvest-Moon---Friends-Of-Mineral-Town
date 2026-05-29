@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 766 EventScript_766
+{
+    const MESSAGE_0 = "Not everything is for \r\nfree, you know! Pay up!\x05"
+    if Func03E(283) == 1
+    {
+        SetEntityFacing(29, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(114)
+        Proc02D(29)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(29)
+        SetEntityFacing(29, 2)
+    }
+}

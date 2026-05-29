@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 814 EventScript_814
+{
+    const MESSAGE_0 = "Hi there. \x05\x0CMy name's Lou. I come to \r\nMineral Town every week \r\nto buy food. \x05\x0CThe food from Mineral Town \r\nis so delicious, I've \r\ndecided to use it at my \x05\r\nown Inn! \x05\x0CI'm at the Inn here every \r\nMonday, so come by if you\r\nwant to sell something! \x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(34, 228, 145, 1)
+    SetEntityAnim(34, 2034)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(95)
+    Proc02D(34)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(34, 3)
+    SetEntityAnim(34, 2038)
+    Proc008(34, 319, 1)
+    Proc00C(34)
+    SetEntityFacing(34, 1)
+    Proc00A(34, 0, 1)
+    Proc00C(34)
+    Proc00F(34)
+    Proc083(34)
+    Proc03F(318, 2)
+    exit
+}

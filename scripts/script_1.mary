@@ -1,0 +1,21 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1 EventScript_1
+{
+    const MESSAGE_0 = "\xFF%is \r\nprengant!\x05"
+    var var_0, var_1
+    var_0 = Func106()
+    var_1 = 54 + var_0
+    if Func117(var_0)
+    {
+        GetAnimalName(0, 1, var_0)
+    }
+    else
+    {
+        GetAnimalName(0, 2, var_0)
+    }
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc011(var_1, 1, 0)
+}

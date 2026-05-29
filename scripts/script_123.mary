@@ -1,0 +1,86 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 123 EventScript_123
+{
+    const MESSAGE_0 = "Where are you going?\x05"
+    const MESSAGE_1 = "I haven't cleaned \r\nupstairs yet.\r\nPlease don't go up yet.\x05"
+    const MESSAGE_2 = "I haven't picked up\r\nupstairs yet.\r\nPlease don't go up yet.\x05"
+    const MESSAGE_3 = "Please don't go upstairs.\x05"
+    var var_0, var_1
+    if GetEntityFacing(0) == 1
+    {
+        var_0 = 0
+        var_1 = Func03E(5)
+        if Func03E(125) == 1 || Func03E(82) == 1 || Func03E(228) == 1 || Func03E(230) == 1 || Func03E(308) == 1 || Func03E(281) == 1 || Func03E(232) == 1
+        {
+            var_0 = 0
+        }
+        else if Func03E(85) == 2
+        {
+            var_0 = 1
+        }
+        else if Func07F(1) <= 200
+        {
+            var_0 = 0
+        }
+        else
+        {
+            var_0 = 1
+        }
+        if var_0 == 1
+        {
+            Proc034(2, 1)
+            Proc016(11, 24, 96)
+            SetEntityPosition(0, 24, 96, 1)
+            Proc035(2, 1)
+        }
+        else
+        {
+            TalkOpen()
+            if Func03E(125) == 1
+            {
+                Proc030(2)
+                Proc02D(2)
+                TalkMessage(MESSAGE_0)
+            }
+            else if Func03E(82) == 1 || Func03E(228) == 1 || Func03E(230) == 1 || Func03E(308) == 1 || Func03E(281) == 1
+            {
+                Proc030(14)
+                Proc02D(1)
+                TalkMessage(MESSAGE_1)
+            }
+            else if Func03E(232) == 1
+            {
+                Proc030(0)
+                Proc02D(2)
+                TalkMessage(MESSAGE_2)
+            }
+            else if var_1 == 0
+            {
+                Proc030(2)
+                Proc02D(2)
+                TalkMessage(MESSAGE_3)
+            }
+            else if Func03E(126) == 2 || Func03E(127) == 2
+            {
+                Proc030(14)
+                Proc02D(1)
+                TalkMessage(MESSAGE_3)
+            }
+            else
+            {
+                Proc030(7)
+                Proc02D(3)
+                if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+                {
+                    Proc032(3)
+                }
+                TalkMessage(MESSAGE_3)
+            }
+            TalkClose()
+            Proc00A(0, GetEntityY(0) + 2, 1)
+            Proc017(GetEntityX(0), GetEntityY(0) + 2, 1)
+            Proc00C(0)
+        }
+    }
+}

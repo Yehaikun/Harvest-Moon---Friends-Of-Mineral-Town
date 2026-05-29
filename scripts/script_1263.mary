@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1263 EventScript_1263
+{
+    const MESSAGE_0 = "I look forward to this \r\nday every year. \x05"
+    const MESSAGE_1 = "You're racing? My advice\r\nis to just have fun. \x05"
+    if Func086(4) == 0
+    {
+        Proc083(4)
+    }
+    SetEntityFacing(4, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(427) == 0
+    {
+        TalkOpen()
+        Proc030(181)
+        Proc02D(4)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(180)
+        Proc02D(4)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(4) == 0
+    {
+        Proc080(4, 5)
+    }
+    Proc083(4)
+    SetEntityFacing(4, 3)
+}

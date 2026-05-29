@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1238 EventScript_1238
+{
+    const MESSAGE_0 = "Hi there, \xFF!. \r\nDid you bring something \r\nextra tasty from the farm\r\nfor the pot?\r\nWe're counting on you!\x05"
+    if Func086(9) == 0
+    {
+        Proc083(9)
+    }
+    SetEntityFacing(9, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_0)
+    TalkClose()
+    if Func084(9) == 0
+    {
+        Proc080(9, 5)
+    }
+    SetEntityFacing(9, 3)
+    Proc083(9)
+}

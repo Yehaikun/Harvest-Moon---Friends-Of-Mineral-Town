@@ -1,0 +1,109 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 821 EventScript_821
+{
+    const MESSAGE_0 = "Wow, shooting stars!\r\nI'll wish for...\x05"
+    const MESSAGE_1 = "Healthy animals."
+    const MESSAGE_2 = "Befriend townspeople."
+    const MESSAGE_3 = "Shipping for a high price."
+    const MESSAGE_4 = "I hope my wish \r\ncomes true...\x05"
+    var var_0, unused_1, var_2
+    Proc03F(342, 1)
+    Proc035(3, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc017(236, 140, 1)
+    Proc00A(0, 248, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc018()
+    PlaySong(0, 188)
+    Proc136()
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    var_0 = TalkChoice3(MESSAGE_1, MESSAGE_2, MESSAGE_3)
+    switch var_0
+    {
+        case 1
+        {
+            Proc12D()
+        }
+        case 2
+        {
+            TalkClose()
+            Proc080(1, 10)
+            Proc080(2, 10)
+            Proc080(3, 10)
+            Proc080(4, 10)
+            Proc080(5, 10)
+            Proc080(6, 10)
+            Proc080(7, 10)
+            Proc080(8, 10)
+            Proc080(9, 10)
+            Proc080(10, 10)
+            Proc080(11, 10)
+            Proc080(12, 10)
+            Proc080(13, 10)
+            Proc080(14, 10)
+            Proc080(15, 10)
+            Proc080(16, 10)
+            Proc080(17, 10)
+            Proc080(18, 10)
+            Proc080(19, 10)
+            Proc080(20, 10)
+            Proc080(21, 10)
+            Proc080(22, 10)
+            Proc080(23, 10)
+            Proc080(24, 10)
+            Proc080(25, 10)
+            Proc080(26, 10)
+            Proc080(27, 10)
+            Proc080(28, 10)
+            Proc080(29, 10)
+            Proc080(30, 10)
+            Proc080(31, 10)
+            Proc080(33, 10)
+            Proc080(34, 10)
+            Proc080(35, 10)
+            Proc080(36, 10)
+            Proc080(37, 10)
+            Proc080(38, 10)
+            Proc080(39, 10)
+            Proc080(40, 10)
+            Proc080(41, 10)
+            Proc080(42, 10)
+        }
+        case 3
+        {
+            Proc12F()
+        }
+    }
+    TalkClose()
+    var_2 = Func03D(1, 4)
+    do
+    {
+        Proc136()
+        PlaySong(0, 188)
+        Proc037(3)
+        var_2 = var_2 - 1
+    } while var_2 >= 0
+    Proc034(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc03F(342, 2)
+    Proc038(988)
+}

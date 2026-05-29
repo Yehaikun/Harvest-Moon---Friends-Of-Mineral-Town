@@ -1,0 +1,50 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 240 EventScript_240
+{
+    const MESSAGE_0 = "It's locked...\x05"
+    var var_0
+    var_0 = 0
+    if Func03E(111) == 2
+    {
+        var_0 = 1
+    }
+    else if Func03E(76) == 0 && Func03E(85) == 0 && Func03E(95) == 0 && Func03E(103) == 0 && Func03E(371) == 0 && Func03E(111) == 0 && Func03E(150) == 0 && Func03E(151) == 0
+    {
+        if Func089(21) <= 10000
+        {
+            var_0 = 0
+        }
+        else if Func089(21) > 10000
+        {
+            var_0 = 0
+            if Func089(21) > 30000
+            {
+                var_0 = 1
+            }
+        }
+    }
+    else if Func07F(21) <= 100
+    {
+        var_0 = 0
+    }
+    else if Func07F(21) > 100
+    {
+        var_0 = 0
+        if Func07F(21) > 200
+        {
+            var_0 = 1
+        }
+    }
+    if var_0 == 1
+    {
+        PlaySong(0, 156)
+        Proc0CA(6)
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+}

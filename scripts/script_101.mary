@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 101 EventScript_101
+{
+    const MESSAGE_0 = "Parasol\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

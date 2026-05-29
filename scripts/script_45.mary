@@ -1,0 +1,160 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 45 EventScript_45
+{
+    const MESSAGE_0 = "Now that we're married, \r\nwe have to think of \r\nnicknames! What do you \x05\r\nwant to be called? \x05"
+    const MESSAGE_1 = "Just my name"
+    const MESSAGE_2 = "Honey"
+    const MESSAGE_3 = "Darling"
+    const MESSAGE_4 = "Other"
+    const MESSAGE_5 = "\xFF!"
+    const MESSAGE_6 = "OK, it's set!\r\nFrom now on, I'll call \r\nyou \xFF)!\x05"
+    const MESSAGE_7 = "What?\r\nWhat do you want me\r\nto call you then?\x05"
+    const MESSAGE_8 = "OK. \r\nFrom now on I'll call you\r\n\xFF).\x05"
+    const MESSAGE_9 = "Can I ask you a question, \r\n\xFF)?\x05\r\nI would still like to help\x05\r\nmy mom out. Is that OK?\x05"
+    const MESSAGE_10 = "Of course!"
+    const MESSAGE_11 = "No."
+    const MESSAGE_12 = "Thanks, \xFF).\x05"
+    const MESSAGE_13 = "Tomorrow is the first day\r\nof our new life together! \x05"
+    const MESSAGE_14 = "Alright. In that case,\r\nleave the house chores \r\nto me. \x05"
+    const MESSAGE_15 = "Tomorrow is the first day\r\nof our new life together!\x05"
+    var var_0
+    Proc03F(86, 1)
+    Proc016(29, 303, 148)
+    PlayBGM(1, 17)
+    SetEntityPosition(0, 303, 148, 3)
+    Proc06B()
+    SetEntityAnim(0, 402)
+    SetEntityPosition(3, 331, 148, 2)
+    SetEntityAnim(3, 559)
+    Proc035(1, 1)
+    TalkOpen()
+    Proc030(12)
+    Proc02D(3)
+    Proc032(3)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice4(MESSAGE_1, MESSAGE_2, MESSAGE_3, MESSAGE_4)
+    switch var_0
+    {
+        case 1
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(12)
+            Proc02D(3)
+            Proc032(3)
+            Proc129(MESSAGE_5)
+            TalkMessage(MESSAGE_6)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(60)
+            SetEntityAnim(0, 402)
+        }
+        case 2
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(12)
+            Proc02D(3)
+            Proc032(3)
+            Proc129(MESSAGE_2)
+            TalkMessage(MESSAGE_6)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(60)
+            SetEntityAnim(0, 402)
+        }
+        case 3
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(12)
+            Proc02D(3)
+            Proc032(3)
+            Proc129(MESSAGE_3)
+            TalkMessage(MESSAGE_6)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(60)
+            SetEntityAnim(0, 402)
+        }
+        case 4
+        {
+            TalkClose()
+            TalkOpen()
+            Proc030(7)
+            Proc02D(3)
+            Proc032(3)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+            Proc034(3, 1)
+            Proc0A6(5, 0)
+            Proc06B()
+            Proc035(3, 1)
+            TalkOpen()
+            Proc030(12)
+            Proc02D(3)
+            Proc032(3)
+            TalkMessage(MESSAGE_8)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(60)
+            SetEntityAnim(0, 402)
+        }
+    }
+    TalkOpen()
+    Proc030(7)
+    Proc02D(3)
+    Proc032(3)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_10, MESSAGE_11)
+    switch var_0
+    {
+        case 1
+        {
+            Proc03F(53, 1)
+            TalkClose()
+            TalkOpen()
+            Proc030(8)
+            Proc02D(3)
+            Proc032(3)
+            TalkMessage(MESSAGE_12)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(60)
+            SetEntityAnim(0, 402)
+            Proc083(3)
+            Proc03F(86, 2)
+            Proc034(2, 1)
+            TalkOpen()
+            TalkMessage(MESSAGE_13)
+            TalkClose()
+            Proc038(988)
+        }
+        case 2
+        {
+            Proc03F(53, 0)
+            TalkClose()
+            TalkOpen()
+            Proc030(7)
+            Proc02D(3)
+            Proc032(3)
+            TalkMessage(MESSAGE_14)
+            TalkClose()
+            SetEntityAnim(0, 510)
+            Proc037(60)
+            SetEntityAnim(0, 402)
+            Proc083(3)
+            Proc03F(86, 2)
+            Proc034(2, 1)
+            TalkOpen()
+            TalkMessage(MESSAGE_15)
+            TalkClose()
+            Proc038(988)
+        }
+    }
+}

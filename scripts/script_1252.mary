@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1252 EventScript_1252
+{
+    const MESSAGE_0 = "Lillia said she wanted to \r\ncome see the Horses. \x05\x0CI came with her in case\r\nshe catches a chill. \x05"
+    const MESSAGE_1 = "Please try not to hurt \r\nyourselves!\x05"
+    if Func086(20) == 0
+    {
+        Proc083(20)
+    }
+    SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(427) == 0
+    {
+        TalkOpen()
+        Proc030(35)
+        Proc02D(20)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(35)
+        Proc02D(20)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(20) == 0
+    {
+        Proc080(20, 5)
+    }
+    Proc083(20)
+    SetEntityFacing(20, 2)
+}

@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1225 EventScript_1225
+{
+    const MESSAGE_0 = "Since everybody helps\r\nmake it, it tastes, well...\x05"
+    const MESSAGE_1 = "Did you have fun? \r\nSome times it's fun to eat\r\nwith everyone, isn't it? \x05"
+    if Func086(13) == 0
+    {
+        Proc083(13)
+    }
+    SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(13) == 0
+    {
+        Proc080(13, 5)
+    }
+    TalkOpen()
+    Proc02D(13)
+    if Func03E(421) == 1
+    {
+        Proc030(120)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(13)
+    }
+    else
+    {
+        Proc030(118)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(13)
+    }
+    SetEntityFacing(13, 0)
+}

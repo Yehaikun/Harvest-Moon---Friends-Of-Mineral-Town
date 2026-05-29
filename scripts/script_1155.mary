@@ -1,0 +1,53 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1155 EventScript_1155
+{
+    const MESSAGE_0 = "That was fun. \r\nI thought the Chickens were\r\ncute!\x05"
+    const MESSAGE_1 = "Congratulations! \r\nNow your Chicken may start\r\nlaying Golden Eggs!\x05"
+    const MESSAGE_2 = "That was too bad...\r\nSometimes these things just \r\nhappen, though. \x05"
+    if Func086(3) == 0
+    {
+        Proc083(3)
+    }
+    SetEntityFacing(3, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(407) == 0
+    {
+        TalkOpen()
+        Proc030(7)
+        Proc02D(3)
+        if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+        {
+            Proc032(3)
+        }
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(409) == 1
+    {
+        TalkOpen()
+        Proc030(8)
+        Proc02D(3)
+        if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+        {
+            Proc032(3)
+        }
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(11)
+        Proc02D(3)
+        if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+        {
+            Proc032(3)
+        }
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(3) == 0
+    {
+        Proc080(3, 5)
+    }
+    Proc083(3)
+    SetEntityFacing(3, 1)
+}

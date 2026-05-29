@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 131 EventScript_131
+{
+    const MESSAGE_0 = "Painting of a Mountain\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

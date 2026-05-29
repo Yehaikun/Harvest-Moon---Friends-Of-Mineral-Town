@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 752 EventScript_752
+{
+    const MESSAGE_0 = "I think his painting is\r\ngreat. Who knew he had\r\nsuch talent?\x05"
+    if Func03E(278) == 1
+    {
+        SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(80)
+        Proc02D(18)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(18)
+        SetEntityFacing(18, 3)
+    }
+}

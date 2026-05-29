@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1258 EventScript_1258
+{
+    const MESSAGE_0 = "My greatest joy is \r\nobserving everybody's \r\nHorses. \x05"
+    const MESSAGE_1 = "Look like the races are \r\nbeginning. Best of luck! \x05"
+    if Func086(14) == 0
+    {
+        Proc083(14)
+    }
+    SetEntityFacing(14, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(427) == 0
+    {
+        TalkOpen()
+        Proc030(145)
+        Proc02D(14)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(146)
+        Proc02D(14)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(14) == 0
+    {
+        Proc080(14, 5)
+    }
+    Proc083(14)
+    SetEntityFacing(14, 0)
+}

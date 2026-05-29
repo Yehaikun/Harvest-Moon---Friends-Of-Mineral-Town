@@ -1,0 +1,37 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1222 EventScript_1222
+{
+    const MESSAGE_0 = "My stomach isn't full \r\nyet! I can still eat more!\x05"
+    const MESSAGE_1 = "Ohhh...I ate too much again\r\nthis year too...\x05"
+    if Func086(25) == 0
+    {
+        Proc083(25)
+    }
+    SetEntityFacing(25, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(25) == 0
+    {
+        Proc080(25, 5)
+    }
+    TalkOpen()
+    Proc02D(25)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(134) == 2 || Func03E(135) == 2)
+    {
+        Proc032(25)
+    }
+    if Func03E(421) == 1
+    {
+        Proc030(90)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(25)
+    }
+    else
+    {
+        Proc030(91)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(25)
+    }
+    SetEntityFacing(25, 0)
+}

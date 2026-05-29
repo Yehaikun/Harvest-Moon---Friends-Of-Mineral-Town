@@ -1,0 +1,60 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1114 EventScript_1114
+{
+    PlayBGM(1, 7)
+    SetEntityPosition(13, 180, 102, 0)
+    SetEntityAnim(13, 2143)
+    SetEntityPosition(30, 220, 118, 0)
+    SetEntityAnim(30, 1657)
+    SetEntityPosition(18, 316, 294, 1)
+    SetEntityAnim(18, 1733)
+    SetEntityPosition(19, 284, 326, 0)
+    SetEntityAnim(19, 1681)
+    SetEntityPosition(9, 316, 350, 2)
+    SetEntityAnim(9, 2256)
+    SetEntityPosition(27, 116, 196, 1)
+    SetEntityAnim(27, 2515)
+    SetEntityPosition(22, 308, 98, 0)
+    SetEntityAnim(22, 2284)
+    SetEntityPosition(28, 68, 172, 3)
+    SetEntityAnim(28, 792)
+    SetEntityPosition(1, 100, 244, 2)
+    SetEntityAnim(1, 607)
+    SetEntityPosition(24, 348, 174, 2)
+    SetEntityAnim(24, 1970)
+    SetEntityPosition(25, 320, 198, 2)
+    SetEntityAnim(25, 1982)
+    SetEntityPosition(2, 68, 244, 3)
+    SetEntityAnim(2, 531)
+    SetEntityPosition(20, 148, 350, 1)
+    SetEntityAnim(20, 800)
+    if GetEntityLocation(74) == 6
+    {
+        SetEntityPosition(74, 416 + 16, 133, 0)
+    }
+    if GetEntityLocation(75) == 6
+    {
+        SetEntityPosition(75, 416 + 32, 133, 0)
+    }
+    if GetEntityLocation(43) == 6
+    {
+        SetEntityPosition(43, 416, 133, 0)
+    }
+    Proc035(2, 1)
+    Proc0F2()
+    Proc08C(13, 1124)
+    Proc08C(20, 1118)
+    Proc08C(22, 1126)
+    Proc08C(30, 1119)
+    Proc08C(28, 1117)
+    Proc08C(25, 1123)
+    Proc08C(27, 1127)
+    Proc08C(19, 1120)
+    Proc08C(24, 1122)
+    Proc08C(18, 1121)
+    Proc08C(9, 1125)
+    Proc08C(2, 1115)
+    Proc08C(1, 1116)
+    Proc03F(398, 1)
+}

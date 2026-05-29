@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 23 EventScript_23
+{
+    const MESSAGE_0 = "Hmm...\r\nI think the Seeds I chose \r\nwere better.\x05"
+    const MESSAGE_1 = "You chose the same Seeds \r\nas me. Good choice. \x05"
+    if Func03E(71) == 1
+    {
+
+    }
+    if Func03E(72) == 0
+    {
+        SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(82)
+        Proc02D(18)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(18, 3)
+        Proc083(18)
+    }
+    else
+    {
+        SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(80)
+        Proc02D(18)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(18, 3)
+        Proc083(18)
+    }
+}

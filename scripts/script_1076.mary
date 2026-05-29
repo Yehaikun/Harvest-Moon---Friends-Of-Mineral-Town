@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1076 EventScript_1076
+{
+    const MESSAGE_0 = "I love making Rice Cakes\r\nevery New Year. I never \r\nmiss it. \x05"
+    if Func086(6) == 0
+    {
+        Proc083(6)
+    }
+    SetEntityFacing(6, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(169)
+    Proc02D(6)
+    TalkMessage(MESSAGE_0)
+    Proc031()
+    TalkClose()
+    if Func084(6) == 0
+    {
+        Proc080(6, 5)
+    }
+    Proc083(6)
+    SetEntityFacing(6, 0)
+}

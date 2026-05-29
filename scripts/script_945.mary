@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 945 EventScript_945
+{
+    const MESSAGE_0 = "I wonder if Elli is OK?\r\nShe seems even worse now...\x05"
+    SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(38)
+    Proc02D(20)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(20, 2)
+    Proc083(20)
+}

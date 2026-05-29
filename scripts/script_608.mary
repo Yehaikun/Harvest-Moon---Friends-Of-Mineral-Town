@@ -1,0 +1,59 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 608 EventScript_608
+{
+    const MESSAGE_0 = "Good morning, \xFF).\r\nToday is our 50th wedding \r\nanniversary!\x05\x0CI have a present for you\r\nthat I know you'll just \r\nlove...It's a Cottage\x05\r\nin the mountains!\x05\x0CHow did I pay for it?\r\nDon't worry about that!\x05"
+    const MESSAGE_1 = "Be sure and go look at it\r\nlater, OK?\x05"
+    Proc016(29, 265, 138)
+    PlayBGM(1, 17)
+    SetEntityPosition(0, 265, 138, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(12, 265, 114, 0)
+    SetEntityAnim(12, 2067)
+    if Func03E(204) == 2
+    {
+        if Func03E(46) >= 60
+        {
+            SetEntityPosition(35, 292, 84, 0)
+            if Func03E(47) == 1
+            {
+                SetEntityAnim(35, 615)
+            }
+            else
+            {
+                SetEntityAnim(35, 619)
+            }
+        }
+        else
+        {
+            SetEntityPosition(35, 416, -48, 0)
+            SetEntityAnim(35, 12)
+        }
+    }
+    Proc035(2, 1)
+    Proc03F(179, 1)
+    TalkOpen()
+    Proc02D(12)
+    Proc030(104)
+    Proc032(12)
+    TalkMessage(MESSAGE_0)
+    Proc02D(12)
+    Proc030(103)
+    Proc032(12)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    Proc083(12)
+    Proc03F(179, 2)
+    Proc0C7()
+    Proc034(2, 1)
+    Proc016(29, 327, 112)
+    SetEntityPosition(0, 327, 112, 2)
+    Proc035(2, 1)
+}

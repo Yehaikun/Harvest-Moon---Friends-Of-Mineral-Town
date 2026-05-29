@@ -1,0 +1,28 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1193 EventScript_1193
+{
+    const MESSAGE_0 = "It wouldn't be Summer \r\nwithout the Firework\r\nFestival!\x05"
+    if Func086(2) == 0
+    {
+        Proc083(2)
+    }
+    SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(1)
+    Proc02D(2)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func085(2) == 0
+    {
+        Proc080(2, 5)
+    }
+    Proc083(2)
+    if Func085(2) && Func085(7) && Func085(20) && (Func03E(244) == 0 || Func085(23)) && Func085(26) && Func085(19) && Func085(21) && Func085(25) && Func085(3) && Func085(12)
+    {
+        Proc03F(415, 0)
+        Proc034(2, 1)
+        Proc038(1192)
+    }
+    SetEntityFacing(2, 3)
+}

@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1184 EventScript_1184
+{
+    const MESSAGE_0 = "Stu causes trouble \r\nno matter where I bring \r\nhim!\x05"
+    const MESSAGE_1 = "Congratulations. It's \r\nbecause you treat your \r\nanimals so well! \x05"
+    const MESSAGE_2 = "If you give your animals \r\nmore affection, you could \r\nwin next year. \x05"
+    if Func086(21) == 0
+    {
+        Proc083(21)
+    }
+    SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    if Func03E(411) == 0
+    {
+        Proc030(123)
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(413) == 1
+    {
+        Proc030(122)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        Proc030(121)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(21) == 0
+    {
+        Proc080(21, 5)
+    }
+    Proc083(21)
+    SetEntityFacing(21, 0)
+}

@@ -1,0 +1,60 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 206 EventScript_206
+{
+    if GetEntityFacing(0) == 0
+    {
+        if Func03E(70) == 1
+        {
+            Proc03F(70, 2)
+            Proc08D(19)
+            Proc08D(18)
+            Proc08D(17)
+            Proc0F3()
+        }
+        else if Func03E(71) == 1
+        {
+            Proc03F(71, 2)
+            Proc08D(19)
+            Proc08D(18)
+            Proc08D(17)
+            Proc0F3()
+        }
+        else if Func03E(73) == 1
+        {
+            Proc03F(73, 2)
+            Proc08D(19)
+            Proc08D(18)
+            Proc08D(17)
+            Proc08D(8)
+            Proc0F3()
+        }
+        else if Func03E(74) == 1
+        {
+            Proc03F(74, 2)
+            Proc08D(19)
+            Proc08D(18)
+            Proc08D(17)
+            Proc0F3()
+        }
+        else if Func03E(252) == 1
+        {
+            Proc03F(252, 2)
+            Proc08D(9)
+            Proc08D(17)
+            Proc0F3()
+        }
+        else if Func03E(279) == 1
+        {
+            Proc03F(279, 2)
+            Proc08D(17)
+            Proc08D(18)
+            Proc0F3()
+        }
+        Proc034(2, 1)
+        Proc016(5, 688, 168)
+        SetEntityPosition(0, 688, 168, 0)
+        PlaySong(0, 205)
+        Proc035(2, 1)
+    }
+}

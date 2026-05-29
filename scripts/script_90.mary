@@ -1,0 +1,19 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 90 EventScript_90
+{
+    if GetEntityFacing(0) == 3
+    {
+        Proc034(2, 1)
+        if Func03E(284) == 1
+        {
+            Proc0F3()
+            Proc08D(20)
+            Proc080(20, 20)
+            Proc03F(284, 2)
+        }
+        Proc016(3, 24, 448)
+        SetEntityPosition(0, 24, 448, 3)
+        Proc035(2, 1)
+    }
+}

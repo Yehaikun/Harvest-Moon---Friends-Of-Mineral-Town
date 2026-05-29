@@ -1,0 +1,56 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1179 EventScript_1179
+{
+    const MESSAGE_0 = "It was too bad this year,\r\nbut you should try again \r\nnext year. \x05"
+    const MESSAGE_1 = "Congratulations! \r\nI thought you would win!\x05"
+    const MESSAGE_2 = "I'm sorry \xFF% \r\ndidn't win. I thought \r\nshe should have!\x05"
+    var var_0
+    var_0 = Func11D(1)
+    GetAnimalName(0, 1, var_0)
+    if Func086(3) == 0
+    {
+        Proc083(3)
+    }
+    SetEntityFacing(3, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(411) == 0
+    {
+        TalkOpen()
+        Proc030(7)
+        Proc02D(3)
+        if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+        {
+            Proc032(3)
+        }
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(413) == 1
+    {
+        TalkOpen()
+        Proc030(8)
+        Proc02D(3)
+        if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+        {
+            Proc032(3)
+        }
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(7)
+        Proc02D(3)
+        if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+        {
+            Proc032(3)
+        }
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(3) == 0
+    {
+        Proc080(3, 5)
+    }
+    Proc083(3)
+    SetEntityFacing(3, 0)
+}

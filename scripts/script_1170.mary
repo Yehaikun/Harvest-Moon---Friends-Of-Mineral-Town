@@ -1,0 +1,35 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1170 EventScript_1170
+{
+    const MESSAGE_0 = "I think it's great for kids\r\nto live with animals. \x05\x0CSome parents won't even let\r\ntheir kids have dogs!\x05"
+    const MESSAGE_1 = "I'll be rooting for \r\nyour Cow. \x05"
+    if Func086(12) == 0
+    {
+        Proc083(12)
+    }
+    SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(142) == 2 || Func03E(143) == 2)
+    {
+        Proc032(12)
+    }
+    Proc02D(12)
+    if Func03E(411) == 0
+    {
+        Proc030(103)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(104)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(12) == 0
+    {
+        Proc080(12, 5)
+    }
+    Proc083(12)
+    SetEntityFacing(12, 2)
+}

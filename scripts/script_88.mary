@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 88 EventScript_88
+{
+    Proc034(2, 1)
+    Proc016(3, 24, 264)
+    SetEntityPosition(0, 24, 264, 3)
+    Proc035(2, 1)
+}

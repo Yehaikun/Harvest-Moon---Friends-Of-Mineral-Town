@@ -1,0 +1,24 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 747 EventScript_747
+{
+    const MESSAGE_0 = "Grandpa was so shy. \x05"
+    const MESSAGE_1 = "I'm glad I found it! \r\nGrandma seems so happy.\x05"
+    if Func03E(273) == 1
+    {
+        SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc02D(21)
+        if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+        {
+            Proc032(21)
+        }
+        Proc030(122)
+        TalkMessage(MESSAGE_0)
+        Proc030(121)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(21)
+        SetEntityFacing(21, 2)
+    }
+}

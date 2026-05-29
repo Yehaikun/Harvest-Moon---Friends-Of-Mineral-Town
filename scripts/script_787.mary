@@ -1,0 +1,27 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 787 EventScript_787
+{
+    const MESSAGE_0 = "I can't believe I forgot\r\nwhat we were arguing over!\r\nI must be getting old...\x05"
+    const MESSAGE_1 = "Sorry, \xFF!. \x05"
+    const MESSAGE_2 = "Hmmph! It was all his fault!\x05"
+    SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(24)
+    if Func03E(297) == 0
+    {
+        Proc030(84)
+        TalkMessage(MESSAGE_0)
+        Proc030(83)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        Proc030(85)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    Proc083(24)
+    SetEntityFacing(24, 3)
+    exit
+}

@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1310 EventScript_1310
+{
+    const MESSAGE_0 = "Buckwheat Noodles are really\r\ngood for you, you know. \x05\x0CThat's why I'm going to \r\neat a lot!\x05"
+    if Func086(17) == 0
+    {
+        Proc083(17)
+    }
+    SetEntityFacing(17, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(68)
+    Proc02D(17)
+    TalkMessage(MESSAGE_0)
+    Proc031()
+    TalkClose()
+    if Func084(17) == 0
+    {
+        Proc080(17, 5)
+    }
+    Proc083(17)
+    SetEntityFacing(17, 0)
+}

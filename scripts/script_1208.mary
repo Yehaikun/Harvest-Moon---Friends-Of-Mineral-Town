@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1208 EventScript_1208
+{
+    const MESSAGE_0 = "I like it that we all make\r\nmusic together. \x05"
+    if Func086(18) == 0
+    {
+        Proc083(18)
+    }
+    SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(80)
+    Proc02D(18)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(18) == 0
+    {
+        Proc080(18, 5)
+    }
+    SetEntityFacing(18, 1)
+    Proc083(18)
+}

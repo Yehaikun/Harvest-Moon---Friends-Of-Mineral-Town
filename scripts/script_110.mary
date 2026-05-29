@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 110 EventScript_110
+{
+    const MESSAGE_0 = "Wood Box\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

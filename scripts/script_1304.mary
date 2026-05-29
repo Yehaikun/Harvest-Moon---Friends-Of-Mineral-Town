@@ -1,0 +1,92 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1304 EventScript_1304
+{
+    const MESSAGE_0 = "Hi, \xFF!!\x05"
+    const MESSAGE_1 = "Karen was afraid you\r\nwouldn't come, \r\n\xFF!. \x05"
+    const MESSAGE_2 = "What do you mean, Karen was\r\nafraid \xFF!\r\nwouldn't come?\x05"
+    const MESSAGE_3 = "Um...\x05"
+    const MESSAGE_4 = "Just forget it!\x05"
+    const MESSAGE_5 = "All I said was that \r\nmaybe you forgot!\x05"
+    const MESSAGE_6 = "Spending the Starry Night\r\nFestival with Karen's \r\nfamily sure was fun. \x05"
+    Proc016(16, 92, 272)
+    PlayBGM(1, 7)
+    Proc13D(0, 160, 192, 1, Func13F(143))
+    Proc13D(1, 176, 192, 1, Func13F(61))
+    SetEntityPosition(0, 92, 320, 1)
+    SetEntityPosition(19, 112, 232, 3)
+    SetEntityAnim(19, 1681)
+    SetEntityPosition(17, 168, 224, 1)
+    SetEntityAnim(17, 1673)
+    SetEntityPosition(18, 200, 192, 2)
+    SetEntityAnim(18, 1733)
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 272, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityFacing(19, 0)
+    SetEntityFacing(17, 0)
+    SetEntityFacing(18, 0)
+    Proc037(10)
+    TalkOpen()
+    Proc02D(19)
+    Proc030(73)
+    Proc032(19)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc02D(18)
+    Proc030(80)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityFacing(17, 1)
+    TalkOpen()
+    Proc02D(17)
+    Proc030(70)
+    TalkMessage(MESSAGE_2)
+    SetEntityFacing(17, 2)
+    Proc02D(17)
+    Proc030(70)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    SetEntityFacing(19, 3)
+    TalkOpen()
+    Proc02D(19)
+    Proc030(77)
+    Proc032(19)
+    TalkMessage(MESSAGE_4)
+    SetEntityFacing(19, 0)
+    Proc02D(19)
+    Proc030(77)
+    Proc032(19)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc08A(19, 2000)
+    Proc080(19, 30)
+    Proc080(17, 30)
+    Proc080(18, 30)
+    Proc034(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    Proc13E(0)
+    Proc13E(1)
+    Proc03F(459, 2)
+    Proc03F(450, 0)
+    Proc038(988)
+}

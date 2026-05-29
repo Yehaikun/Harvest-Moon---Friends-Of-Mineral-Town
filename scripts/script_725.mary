@@ -1,0 +1,24 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 725 EventScript_725
+{
+    const MESSAGE_0 = "Thanks for helping me be \r\nconfident in myself. Now I \r\nhave to write the letter.\x05"
+    const MESSAGE_1 = "I think I need to be\r\nalone now. \r\n\x05\x0C\x05"
+    SetEntityFacing(10, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(10)
+    if Func03E(254) == 1
+    {
+        Proc030(99)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(102)
+        TalkMessage(MESSAGE_1)
+    }
+    Proc083(10)
+    TalkClose()
+    SetEntityFacing(10, 1)
+    exit
+}

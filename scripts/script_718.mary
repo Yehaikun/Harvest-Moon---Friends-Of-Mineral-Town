@@ -1,0 +1,107 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 718 EventScript_718
+{
+    const MESSAGE_0 = "You've been drinking \r\nour juice and wine\r\nagain, haven't you!?!\x05"
+    const MESSAGE_1 = "I have not!\x05"
+    const MESSAGE_2 = "Don't lie to me!\x05\x0CWhat about those bottles \r\nunder the bed!\x05"
+    const MESSAGE_3 = "Err.......\"\x05"
+    const MESSAGE_4 = "I just wanted to research\r\nif I could make them \r\nbetter, that's all...\x05"
+    const MESSAGE_5 = "Research, huh?\x05\x0CThen why do you drink\r\nfrom it every time \r\nI go to bed? \x05"
+    const MESSAGE_6 = "You don't have to check up\r\non me so much, you know!\r\nIt's OK to drink a little, \r\nisn't it!?\x05"
+    const MESSAGE_7 = "You were the one who said\r\nyou'd stop drinking\r\nour sales!\x05\x0CYou should keep your own\r\npromises!\x05\x0CAfter all, Aja left because\r\nyou can\x81ft keep your\r\npromises!\x05\x0CWhat if Cliff left for the\r\nsame reason? \x05\x0CI'd never forgive you!\x05"
+    const MESSAGE_8 = "............\r\n\x05"
+    const MESSAGE_9 = "I never said I wanted you \r\nnot to drink at all, Duke. \x05\x0CI just wanted you to cut \r\nback a little, that's all. \x05\x0CI'm just because I worry \r\nabout you, that's all...\x05"
+    const MESSAGE_10 = "...OK.\x05"
+    const MESSAGE_11 = "Good. I'll forgive you \r\nthis time.\x05"
+    Proc0F2()
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(9, 88, 80, 3)
+    SetEntityAnim(9, 2256)
+    SetEntityPosition(8, 108, 80, 2)
+    SetEntityAnim(8, 2240)
+    Proc035(2, 1)
+    Proc017(120, 80, 2)
+    Proc018()
+    Proc011(9, 0, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(133)
+    Proc02D(8)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    Proc011(8, 4, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(136)
+    Proc02D(8)
+    TalkMessage(MESSAGE_3)
+    Proc030(134)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(8, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(135)
+    Proc02D(8)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    Proc011(9, 0, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(139)
+    Proc02D(9)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    Proc030(135)
+    Proc02D(8)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    TalkOpen()
+    Proc030(140)
+    Proc02D(9)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    Proc011(8, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(136)
+    Proc02D(8)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessage(MESSAGE_11)
+    TalkClose()
+    Proc017(120, 208, 2)
+    Proc018()
+    Proc0F2()
+    Proc03F(251, 1)
+    Proc08C(9, 720)
+    Proc08C(8, 719)
+    exit
+}

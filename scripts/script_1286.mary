@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1286 EventScript_1286
+{
+    const MESSAGE_0 = "I wanted to enter my Sheep,\r\nbut they said it \r\nwas too young!\x05\r\nIt's no fair! I don't think\r\nage should matter at all!\x05"
+    const MESSAGE_1 = "I'm so glad you won, \r\n\xFF!!\x05"
+    const MESSAGE_2 = "Don't feel bad, \r\n\xFF!.\x05"
+    if Func086(5) == 0
+    {
+        Proc083(5)
+    }
+    SetEntityFacing(5, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(431) == 0
+    {
+        TalkOpen()
+        Proc030(178)
+        Proc02D(5)
+        TalkMessage(MESSAGE_0)
+    }
+    else if Func03E(433) == 1
+    {
+        TalkOpen()
+        Proc030(177)
+        Proc02D(5)
+        TalkMessage(MESSAGE_1)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(179)
+        Proc02D(5)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(5) == 0
+    {
+        Proc080(5, 5)
+    }
+    Proc083(5)
+    SetEntityFacing(5, 2)
+}

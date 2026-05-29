@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1091 EventScript_1091
+{
+    const MESSAGE_0 = "This is where you place\r\nbets or exchange medals for\r\nprizes. \x05\x0CAlso, come tell me here\r\nif you want to race. \x05"
+    const MESSAGE_1 = "You can bet even if you \r\nrace. Most people bet on \r\nthemselves. \x05"
+    if Func086(13) == 0
+    {
+        Proc083(13)
+    }
+    SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(392) == 0
+    {
+        TalkOpen()
+        Proc030(117)
+        Proc02D(13)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(117)
+        Proc02D(13)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(13) == 0
+    {
+        Proc080(13, 5)
+    }
+    Proc083(13)
+    SetEntityFacing(13, 0)
+}

@@ -1,0 +1,63 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1241 EventScript_1241
+{
+    Proc016(6, 222, 200)
+    PlayBGM(1, 7)
+    SetEntityPosition(0, 198, 232, 0)
+    SetEntityAnim(0, 326)
+    Proc048(78)
+    SetEntityAnim(0, 338)
+    SetEntityPosition(12, 262, 280, 0)
+    SetEntityAnim(12, 2067)
+    SetEntityPosition(19, 150, 200, 0)
+    SetEntityAnim(19, 1681)
+    SetEntityPosition(21, 158, 160, 0)
+    SetEntityAnim(21, 2180)
+    SetEntityPosition(24, 286, 248, 0)
+    SetEntityAnim(24, 1970)
+    SetEntityPosition(25, 286, 200, 0)
+    SetEntityAnim(25, 1982)
+    SetEntityPosition(13, 222, 232, 0)
+    SetEntityAnim(13, 2143)
+    SetEntityPosition(9, 60, 392, 0)
+    SetEntityAnim(9, 2256)
+    SetEntityPosition(11, 78, 368, 0)
+    SetEntityAnim(11, 2123)
+    SetEntityPosition(18, 100, 392, 0)
+    SetEntityAnim(18, 1733)
+    SetEntityPosition(22, 362, 84, 0)
+    SetEntityAnim(22, 2284)
+    SetEntityPosition(27, 354, 160, 0)
+    SetEntityAnim(27, 2515)
+    Proc035(2, 1)
+    Proc037(60 * 2)
+    PlaySong(0, 101)
+    Proc047()
+    SetEntityAnim(0, 78)
+    Proc037(24)
+    SetEntityAnim(0, 402)
+    Proc037(60)
+    if Func03E(421) == 0
+    {
+        Proc011(0, 9, 0)
+        Proc037(60 * 4)
+        Proc034(2, 1)
+        Proc0F7(18, 0)
+        Proc038(1218)
+    }
+    else
+    {
+        Proc034(4, 0)
+        Proc035(4, 0)
+        Proc037(30)
+        Proc034(4, 0)
+        Proc035(4, 0)
+        Proc037(60)
+        SetEntityAnim(0, 250)
+        Proc037(36)
+        Proc034(2, 1)
+        Proc0F7(18, 0)
+        Proc038(1218)
+    }
+}

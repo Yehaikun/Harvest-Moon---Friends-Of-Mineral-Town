@@ -1,0 +1,17 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 464 EventScript_464
+{
+    const MESSAGE_0 = "Shipment Box\r\nPut things here to ship,\r\nand by evening you'll\x05\r\nrecieve payment.\x05"
+    if Func040()
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+    else if Func04D()
+    {
+        PlaySong(0, 110)
+        Proc0C3()
+    }
+}

@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 237 EventScript_237
+{
+    const MESSAGE_0 = "You can't go upstairs.\x05"
+    var var_0
+    if GetEntityFacing(0) == 1
+    {
+        var_0 = 0
+        if Func07F(20) <= 100
+        {
+            var_0 = 0
+        }
+        else if Func03E(146) == 1 || Func03E(148) == 1 || Func03E(105) == 1 || Func03E(106) == 1 || Func03E(286) == 1 || Func03E(285) == 1
+        {
+            var_0 = 0
+        }
+        else
+        {
+            var_0 = 1
+        }
+        if var_0 == 1
+        {
+            Proc034(2, 1)
+            Proc016(20, 24, 64)
+            SetEntityPosition(0, 24, 64, 1)
+            Proc035(2, 1)
+        }
+        else
+        {
+            TalkOpen()
+            Proc030(39)
+            Proc02D(20)
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            Proc00A(0, GetEntityY(0) + 2, 1)
+            Proc017(GetEntityX(0), GetEntityY(0) + 2, 1)
+            Proc00C(0)
+        }
+    }
+}

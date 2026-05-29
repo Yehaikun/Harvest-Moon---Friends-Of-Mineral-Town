@@ -1,0 +1,167 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 817 EventScript_817
+{
+    const MESSAGE_0 = ".........\x05\x0C....\x05\x0C...\x05"
+    var var_0
+    PlaySong(0, 110)
+    Proc037(10)
+    PlaySong(0, 184)
+    Proc011(0, 2, 0)
+    SetEntityAnim(0, 114)
+    Proc037(20)
+    Proc036(0, 0)
+    Proc036(0, 0)
+    Proc034(0, 1)
+    SetEntityAnim(0, 402)
+    switch GetEntityFacing(0)
+    {
+        case 1
+        {
+            SetEntityPosition(32, GetEntityX(0), GetEntityY(0) - 52, 0)
+        }
+        case 0
+        {
+            SetEntityPosition(32, GetEntityX(0), GetEntityY(0) + 52, 1)
+        }
+        case 2
+        {
+            SetEntityPosition(32, GetEntityX(0) - 52, GetEntityY(0), 3)
+        }
+        case 3
+        {
+            SetEntityPosition(32, GetEntityX(0) + 52, GetEntityY(0), 2)
+        }
+    }
+    SetEntityAnim(32, 2046)
+    Proc035(0, 1)
+    TalkOpen()
+    Proc02D(32)
+    Proc030(98)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    var_0 = 0
+    do
+    {
+        switch GetEntityFacing(0)
+        {
+            case 1
+            {
+                Proc00A(32, GetEntityY(32) - 1, 1)
+                Proc00C(32)
+                Proc00F(32)
+                SetEntityPosition(32, GetEntityX(0), GetEntityY(0) - 52 - var_0, 0)
+                SetEntityAnim(32, 2050)
+                switch var_0 % 8
+                {
+                    case 0, 1
+                    {
+                        SetEntityFacing(32, 0)
+                    }
+                    case 2, 3
+                    {
+                        SetEntityFacing(32, 2)
+                    }
+                    case 4, 5
+                    {
+                        SetEntityFacing(32, 1)
+                    }
+                    case 6, 7
+                    {
+                        SetEntityFacing(32, 3)
+                    }
+                }
+            }
+            case 0
+            {
+                Proc00A(32, GetEntityY(32) + 1, 1)
+                Proc00C(32)
+                Proc00F(32)
+                SetEntityPosition(32, GetEntityX(0), GetEntityY(0) + 52 + var_0, 0)
+                SetEntityAnim(32, 2050)
+                switch var_0 % 8
+                {
+                    case 0, 1
+                    {
+                        SetEntityFacing(32, 0)
+                    }
+                    case 2, 3
+                    {
+                        SetEntityFacing(32, 2)
+                    }
+                    case 4, 5
+                    {
+                        SetEntityFacing(32, 1)
+                    }
+                    case 6, 7
+                    {
+                        SetEntityFacing(32, 3)
+                    }
+                }
+            }
+            case 2
+            {
+                Proc008(32, GetEntityX(32) - 1, 1)
+                Proc00C(32)
+                Proc00F(32)
+                SetEntityPosition(32, GetEntityX(0) - 52 - var_0, GetEntityY(0), 0)
+                SetEntityAnim(32, 2050)
+                switch var_0 % 8
+                {
+                    case 0, 1
+                    {
+                        SetEntityFacing(32, 0)
+                    }
+                    case 2, 3
+                    {
+                        SetEntityFacing(32, 2)
+                    }
+                    case 4, 5
+                    {
+                        SetEntityFacing(32, 1)
+                    }
+                    case 6, 7
+                    {
+                        SetEntityFacing(32, 3)
+                    }
+                }
+            }
+            case 3
+            {
+                Proc008(32, GetEntityX(32) + 1, 1)
+                Proc00C(32)
+                Proc00F(32)
+                SetEntityPosition(32, GetEntityX(0) + 52 + var_0, GetEntityY(0), 0)
+                SetEntityAnim(32, 2050)
+                switch var_0 % 8
+                {
+                    case 0, 1
+                    {
+                        SetEntityFacing(32, 0)
+                    }
+                    case 2, 3
+                    {
+                        SetEntityFacing(32, 2)
+                    }
+                    case 4, 5
+                    {
+                        SetEntityFacing(32, 1)
+                    }
+                    case 6, 7
+                    {
+                        SetEntityFacing(32, 3)
+                    }
+                }
+            }
+        }
+        Proc037(3)
+        var_0 = var_0 + 1
+    } while var_0 <= 50
+    Proc037(60)
+    Proc00F(32)
+    PlaySong(0, 146)
+    Proc037(60)
+    Proc011(0, 6, 0)
+    Proc037(100)
+    Proc03F(331, 2)
+}

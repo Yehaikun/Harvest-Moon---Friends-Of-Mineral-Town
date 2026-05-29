@@ -1,0 +1,21 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 808 EventScript_808
+{
+    const MESSAGE_0 = "You've gotten a nice \r\nfishing rod. \x05"
+    if Func086(29) == 0
+    {
+        Proc083(29)
+    }
+    if Func03E(309) == 1
+    {
+        SetEntityFacing(29, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(114)
+        Proc02D(29)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(29, 2)
+        Proc083(29)
+    }
+}

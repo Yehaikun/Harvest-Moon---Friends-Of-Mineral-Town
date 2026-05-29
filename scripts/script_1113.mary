@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1113 EventScript_1113
+{
+    const MESSAGE_0 = "I always get so excited \r\nabout the Cooking Festival!\x05"
+    if Func086(27) == 0
+    {
+        Proc083(27)
+    }
+    SetEntityFacing(27, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(173)
+    Proc02D(27)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(27) == 0
+    {
+        Proc080(27, 5)
+    }
+    SetEntityFacing(27, 1)
+    Proc083(27)
+}

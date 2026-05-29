@@ -1,0 +1,97 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1066 EventScript_1066
+{
+    const MESSAGE_0 = "Let's eat! \x05"
+    const MESSAGE_1 = "It looks like we made too \r\nmuch this year again! \x05\x0CLet's each take some home. \r\nHelp yourself, \r\n\xFF!. \x05"
+    const MESSAGE_2 = "Looks like your Rucksack is\r\nfull, \xFF!. \r\nToo bad! \x05"
+    const MESSAGE_3 = "Now those were good! \r\nI just wish I could have\r\ntaken some home!...\x05"
+    const MESSAGE_4 = "Now those were good! \r\nI can't wait to eat some\r\nmore at home! \x05"
+    Proc13D(0, 20 * 8 + 8, 18 * 8 + 8, 2, Func13F(151))
+    Proc13D(1, 23 * 8 + 8, 18 * 8 + 8, 2, Func13F(151))
+    Proc13D(2, 26 * 8 + 8, 18 * 8 + 8, 2, Func13F(151))
+    Proc13D(3, 29 * 8 + 8, 18 * 8 + 8, 2, Func13F(151))
+    Proc13D(4, 32 * 8 + 8, 18 * 8 + 8, 2, Func13F(151))
+    Proc13D(5, 35 * 8 + 8, 18 * 8 + 8, 2, Func13F(151))
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        PlaySong(0, 106)
+        Proc048(151)
+        TalkOpen()
+        Proc030(117)
+        Proc02D(13)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc047()
+        PlaySong(0, 101)
+        SetEntityAnim(0, 78)
+        Proc037(30)
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(117)
+        Proc02D(13)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+    Proc034(2, 1)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(117)
+    Proc02D(13)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    if Func040() == 0 && Func057() == -1
+    {
+        SetEntityAnim(0, 294)
+        Proc037(60)
+        SetEntityAnim(0, 402)
+        TalkOpen()
+        Proc030(117)
+        Proc02D(13)
+        TalkMessage(MESSAGE_2)
+        TalkClose()
+        Proc037(20)
+        Proc034(2, 1)
+        TalkOpen()
+        TalkMessage(MESSAGE_3)
+        TalkClose()
+    }
+    else
+    {
+        SetEntityAnim(0, 510)
+        Proc037(20)
+        PlaySong(0, 106)
+        Proc048(151)
+        Func059(151, 8)
+        Proc037(20)
+        Proc034(2, 1)
+        TalkOpen()
+        TalkMessage(MESSAGE_4)
+        TalkClose()
+    }
+    Proc08D(13)
+    Proc08D(25)
+    Proc08D(6)
+    Proc08D(21)
+    Proc08D(5)
+    Proc08D(16)
+    Proc08D(24)
+    Proc08D(8)
+    Proc08D(9)
+    Proc08D(27)
+    Proc08D(28)
+    Proc08D(22)
+    Proc13E(0)
+    Proc13E(1)
+    Proc13E(2)
+    Proc13E(3)
+    Proc13E(4)
+    Proc13E(5)
+    Proc0F3()
+    Proc03F(384, 2)
+    Proc038(988)
+}

@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 951 EventScript_951
+{
+    const MESSAGE_0 = "Hmm... I guess I got\r\na touch of the flu.\x05"
+    SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(20, 2)
+    Proc083(20)
+}

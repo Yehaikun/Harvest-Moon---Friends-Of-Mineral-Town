@@ -1,0 +1,59 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 292 EventScript_292
+{
+    const MESSAGE_0 = "I haven't cleaned upstairs\r\nyet, so please don't \r\ngo up there.\x05"
+    const MESSAGE_1 = "Please don't go upstairs!\x05"
+    var var_0, var_1, var_2, var_3, var_4
+    if GetEntityFacing(0) == 1
+    {
+        var_0 = 0
+        var_1 = Func03E(1)
+        var_2 = Func03E(2)
+        var_4 = Func03E(3)
+        var_3 = Func03E(5)
+        if Func07F(10) <= 200
+        {
+            var_0 = 0
+        }
+        else
+        {
+            var_0 = 1
+        }
+        if var_0 == 1
+        {
+            if Func03E(255) == 1
+            {
+                TalkOpen()
+                Proc030(112)
+                Proc02D(11)
+                TalkMessage(MESSAGE_0)
+                TalkClose()
+                Proc00A(0, GetEntityY(0) + 2, 1)
+                Proc017(GetEntityX(0), GetEntityY(0) + 2, 1)
+                Proc00C(0)
+                exit
+            }
+            Proc034(2, 1)
+            Proc016(27, 216, 88)
+            SetEntityPosition(0, 216, 88, 1)
+            if Func03E(253) == 0 && var_3 != 1 && (var_4 >= 13 && var_4 < 16) && var_1 == 0 && Func07F(10) > 200 && Func03E(103) == 0 && Func03E(142) == 0 && Func03E(143) == 0 && Func086(10) == 1 && GetEntityLocation(10) == 27
+            {
+                Proc03F(253, 1)
+                Proc038(724)
+            }
+            Proc035(2, 1)
+        }
+        else
+        {
+            TalkOpen()
+            Proc030(112)
+            Proc02D(11)
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+            Proc00A(0, GetEntityY(0) + 2, 1)
+            Proc017(GetEntityX(0), GetEntityY(0) + 2, 1)
+            Proc00C(0)
+        }
+    }
+}

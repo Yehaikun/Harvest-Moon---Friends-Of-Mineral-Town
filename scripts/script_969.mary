@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 969 EventScript_969
+{
+    const MESSAGE_0 = "Huge Stone\r\nYour Hammer is LV5,\r\nbut it can't crush\x05\r\nthis Sone.\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

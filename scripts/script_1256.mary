@@ -1,0 +1,35 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1256 EventScript_1256
+{
+    const MESSAGE_0 = "Wow! Look at all \r\nthe pretty Horses!\x05"
+    const MESSAGE_1 = "Good luck today!\x05"
+    if Func086(21) == 0
+    {
+        Proc083(21)
+    }
+    SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    if Func03E(427) == 0
+    {
+        Proc030(122)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(122)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(21) == 0
+    {
+        Proc080(21, 5)
+    }
+    Proc083(21)
+    SetEntityFacing(21, 1)
+}

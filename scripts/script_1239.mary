@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1239 EventScript_1239
+{
+    const MESSAGE_0 = "This reminds me of \r\nlong ago, when I used to\r\nmake a ton of soup \x05\r\nand give it to everybody \r\nin town. \x05"
+    if Func086(22) == 0
+    {
+        Proc083(22)
+    }
+    SetEntityFacing(22, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(150)
+    Proc02D(22)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(22) == 0
+    {
+        Proc080(22, 5)
+    }
+    SetEntityFacing(22, 0)
+    Proc083(22)
+}

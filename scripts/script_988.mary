@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 988 EventScript_988
+{
+    FadeOutBGM()
+    Proc067()
+    Proc0F7(6, 0)
+    Proc038(980)
+}

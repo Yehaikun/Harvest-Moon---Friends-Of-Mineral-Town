@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1273 EventScript_1273
+{
+    const MESSAGE_0 = "Just looking at these \r\nSheep makes me want to \r\nput on a Wool sweater!\x05"
+    const MESSAGE_1 = "I bet your Sheep has a \r\ngood chance. \x05"
+    if Func086(7) == 0
+    {
+        Proc083(7)
+    }
+    SetEntityFacing(7, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(431) == 0
+    {
+        TalkOpen()
+        Proc030(160)
+        Proc02D(7)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(166)
+        Proc02D(7)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(7) == 0
+    {
+        Proc080(7, 5)
+    }
+    Proc083(7)
+    SetEntityFacing(7, 1)
+}

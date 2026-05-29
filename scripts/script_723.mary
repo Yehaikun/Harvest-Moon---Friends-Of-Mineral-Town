@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 723 EventScript_723
+{
+    const MESSAGE_0 = "Jeff is so easy to fool!...\x05"
+    SetEntityFacing(9, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(9)
+    Proc030(137)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(9)
+    SetEntityFacing(9, 3)
+    exit
+}

@@ -1,0 +1,1250 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 982 EventScript_982
+{
+    var var_0, var_1, var_2, var_3, var_4, var_5
+    Proc12C()
+    var_0 = Func03E(0)
+    var_1 = Func03E(1)
+    var_2 = Func03E(2)
+    var_3 = Func03E(5)
+    var_4 = Func03E(6)
+    switch Func0B9()
+    {
+        case 0
+        {
+            Proc05C(10, 0)
+        }
+        case 1
+        {
+            Proc05C(0, -5)
+        }
+        case 2
+        {
+            Proc05C(3, 0)
+        }
+        case 3
+        {
+            Proc05C(0, -10)
+        }
+        case 4
+        {
+            Proc05C(0, -7)
+        }
+    }
+    Proc03F(573, 0)
+    Proc03F(575, 0)
+    Proc03F(577, 0)
+    Proc03F(338, 0)
+    if Func03E(0) == 1 && Func03E(1) == 0 && Func03E(2) == 3
+    {
+        Proc03F(482, 0)
+        Proc03F(483, 0)
+        Proc03F(484, 0)
+        Proc03F(485, 0)
+        Proc03F(486, 0)
+        Proc03F(487, 0)
+        Proc03F(488, 0)
+        Proc03F(489, 0)
+        Proc03F(493, 0)
+        Proc03F(494, 0)
+        Proc03F(491, 0)
+        Proc03F(490, 0)
+        Proc03F(492, 0)
+        Proc03F(495, 0)
+    }
+    if Func03E(1) == 0 && (Func03E(2) == 1 || Func03E(2) == 2 || Func03E(2) == 3 || Func03E(2) == 4 || Func03E(2) == 5) || Func03E(1) == 3 && (Func03E(2) == 29 || Func03E(2) == 30)
+    {
+        Proc03F(494, 0)
+    }
+    if !(Func03E(0) == 1 && Func03E(1) == 0 && Func03E(2) == 6) && Func03E(5) == 5
+    {
+        if Func03E(1) == 0 && (Func03E(2) == 1 || Func03E(2) == 2 || Func03E(2) == 3 || Func03E(2) == 4 || Func03E(2) == 5) || Func03E(1) == 3 && (Func03E(2) == 29 || Func03E(2) == 30)
+        {
+
+        }
+        else
+        {
+            if Func03E(482) == 11
+            {
+                Proc03F(482, 0)
+            }
+            else
+            {
+                Proc03F(482, Func03E(482) + 1)
+            }
+            if Func03E(483) == 33
+            {
+                Proc03F(483, 0)
+            }
+            else
+            {
+                Proc03F(483, Func03E(483) + 1)
+            }
+            if Func03E(484) == 11
+            {
+                Proc03F(484, 0)
+            }
+            else
+            {
+                Proc03F(484, Func03E(484) + 1)
+            }
+            if Func03E(485) == 37
+            {
+                Proc03F(485, 0)
+                Proc03F(486, 0)
+            }
+            else
+            {
+                Proc03F(485, Func03E(485) + 1)
+                Proc03F(486, Func03E(486) + 1)
+            }
+            if Func03E(487) == 38
+            {
+                Proc03F(487, 0)
+            }
+            else
+            {
+                Proc03F(487, Func03E(487) + 1)
+            }
+            if Func03E(488) == 47
+            {
+                Proc03F(488, 0)
+            }
+            else
+            {
+                Proc03F(488, Func03E(488) + 1)
+            }
+            if Func03E(489) == 19
+            {
+                Proc03F(489, 0)
+            }
+            else
+            {
+                Proc03F(489, Func03E(489) + 1)
+            }
+            if Func03E(493) == 39
+            {
+                Proc03F(493, 0)
+            }
+            else
+            {
+                Proc03F(493, Func03E(493) + 1)
+            }
+            if Func03E(494) == 7
+            {
+                Proc03F(494, 0)
+            }
+            else
+            {
+                Proc03F(494, Func03E(494) + 1)
+            }
+            if Func03E(491) == 9
+            {
+                Proc03F(491, 0)
+            }
+            else
+            {
+                Proc03F(491, Func03E(491) + 1)
+            }
+            if Func03E(490) == 24
+            {
+                Proc03F(490, 0)
+            }
+            else
+            {
+                Proc03F(490, Func03E(490) + 1)
+            }
+            if Func03E(492) == 12
+            {
+                Proc03F(492, 0)
+            }
+            else
+            {
+                Proc03F(492, Func03E(492) + 1)
+            }
+            if Func03E(495) == 3
+            {
+                Proc03F(495, 0)
+            }
+            else
+            {
+                Proc03F(495, Func03E(495) + 1)
+            }
+        }
+    }
+    if Func03E(1) == 0 && Func03E(2) == 1
+    {
+        if Func086(23) == 1
+        {
+            if Func07F(23) >= 100
+            {
+                if Func03E(134) == 2 || Func03E(135) == 2
+                {
+                    Proc0FA(79)
+                }
+                else if Func03E(244) == 0 && Func03E(0) >= 2
+                {
+                    Proc0FA(78)
+                }
+                else if Func03E(244) == 1
+                {
+                    Proc0FA(77)
+                }
+            }
+        }
+        if Func086(20) == 1
+        {
+            if Func07F(20) >= 100
+            {
+                if Func03E(150) == 2 || Func03E(151) == 2
+                {
+                    Proc0FA(80)
+                }
+                else if Func03E(111) == 2
+                {
+                    Proc0FA(82)
+                }
+                else
+                {
+                    Proc0FA(81)
+                }
+            }
+        }
+        if Func086(2) == 1 || Func086(3) == 1 || Func086(1) == 1
+        {
+            if Func07F(2) >= 100 || Func07F(3) >= 100 || Func07F(1) >= 100
+            {
+                if Func03E(126) != 2 && Func03E(127) != 2 && Func03E(85) != 2 && Func03E(117) != 2 && Func03E(118) != 2 && Func03E(119) != 2
+                {
+                    Proc0FA(83)
+                }
+                if Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2
+                {
+                    Proc0FA(86)
+                }
+                else
+                {
+                    if Func03E(126) == 2 || Func03E(127) == 2
+                    {
+                        Proc0FA(84)
+                    }
+                    if Func03E(85) == 2
+                    {
+                        Proc0FA(85)
+                    }
+                }
+            }
+        }
+        if Func086(7) == 1
+        {
+            if Func07F(7) >= 100
+            {
+                Proc0FA(87)
+            }
+            else
+            {
+                Proc0FA(88)
+            }
+        }
+        if Func086(26) == 1
+        {
+            if Func07F(26) >= 100
+            {
+                if Func03E(126) == 2 || Func03E(127) == 2
+                {
+                    Proc0FA(90)
+                }
+                else
+                {
+                    Proc0FA(89)
+                }
+            }
+        }
+        if Func086(17) == 1
+        {
+            if Func07F(17) >= 100
+            {
+                Proc0FA(91)
+            }
+        }
+        if Func086(6) == 1
+        {
+            if Func07F(6) >= 100
+            {
+                Proc0FA(92)
+            }
+        }
+        if Func086(24) == 1
+        {
+            if Func07F(24) >= 100
+            {
+                if Func03E(95) == 2
+                {
+                    Proc0FA(94)
+                }
+                else
+                {
+                    Proc0FA(93)
+                }
+            }
+        }
+        if Func086(22) == 1
+        {
+            if Func07F(22) >= 100
+            {
+                Proc0FA(95)
+            }
+        }
+        if Func086(10) == 1 && Func086(11) == 1
+        {
+            if Func07F(10) >= 100 || Func07F(11) >= 100
+            {
+                Proc0FA(96)
+            }
+        }
+        if Func086(5) == 1 && Func086(4) == 1
+        {
+            if Func07F(5) >= 100 && Func07F(4) >= 100
+            {
+                Proc0FA(97)
+            }
+        }
+        if Func086(13) == 1 && Func086(14) == 1
+        {
+            if Func07F(13) >= 100 && Func07F(14) >= 100
+            {
+                Proc0FA(99)
+            }
+            else
+            {
+                Proc0FA(98)
+            }
+        }
+        if Func086(9) == 1 && Func086(8) == 1
+        {
+            if Func07F(9) >= 100 && Func07F(8) >= 100
+            {
+                Proc0FA(100)
+            }
+        }
+        if Func086(15) == 1
+        {
+            if Func07F(15) >= 100
+            {
+                Proc0FA(101)
+            }
+        }
+        if Func086(36) == 1 && Func086(37) == 1 && Func086(39) == 1 && Func086(40) == 1 && Func086(41) == 1 && Func086(42) == 1 && Func086(36) == 1
+        {
+            if Func07F(36) >= 100 && Func07F(38) >= 100 && Func07F(39) >= 100 && Func07F(40) >= 100 && Func07F(41) >= 100 && Func07F(42) >= 100 && Func07F(36) >= 100
+            {
+                Proc0FA(102)
+            }
+        }
+        if Func086(3) == 1
+        {
+            if Func07F(3) >= 100
+            {
+                if Func03E(76) != 2 && Func03E(85) != 2 && Func03E(95) != 2 && Func03E(103) != 2 && Func03E(111) != 2 && Func03E(371) != 2 && Func03E(126) != 2 && Func03E(127) != 2
+                {
+                    Proc0FA(103)
+                }
+            }
+        }
+        if Func086(25) == 1
+        {
+            if Func07F(25) >= 100
+            {
+                if Func03E(76) != 2 && Func03E(85) != 2 && Func03E(95) != 2 && Func03E(103) != 2 && Func03E(111) != 2 && Func03E(371) != 2 && Func03E(134) != 2 && Func03E(135) != 2
+                {
+                    Proc0FA(104)
+                }
+            }
+        }
+        if Func086(19) == 1
+        {
+            if Func07F(19) >= 100
+            {
+                if Func03E(76) != 2 && Func03E(85) != 2 && Func03E(95) != 2 && Func03E(103) != 2 && Func03E(111) != 2 && Func03E(371) != 2 && Func03E(117) != 2 && Func03E(118) != 2 && Func03E(119) != 2
+                {
+                    Proc0FA(105)
+                }
+            }
+        }
+        if Func086(21) == 1
+        {
+            if Func07F(21) >= 100
+            {
+                if Func03E(76) != 2 && Func03E(85) != 2 && Func03E(95) != 2 && Func03E(103) != 2 && Func03E(111) != 2 && Func03E(371) != 2 && Func03E(150) != 2 && Func03E(151) != 2
+                {
+                    Proc0FA(106)
+                }
+            }
+        }
+        if Func086(12) == 1
+        {
+            if Func07F(12) >= 100
+            {
+                if Func03E(76) != 2 && Func03E(85) != 2 && Func03E(95) != 2 && Func03E(103) != 2 && Func03E(111) != 2 && Func03E(371) != 2 && Func03E(142) != 2 && Func03E(143) != 2
+                {
+                    Proc0FA(107)
+                }
+            }
+        }
+    }
+    if Func03E(1) == Func03E(8) && Func03E(2) == Func03E(9)
+    {
+        if Func086(3) == 1
+        {
+            if Func03E(85) != 2
+            {
+                if Func03E(126) == 2 || Func03E(127) == 2
+                {
+                    if Func07F(3) >= 200
+                    {
+                        Proc0FA(109)
+                    }
+                }
+                else if Func089(3) >= 40000
+                {
+                    Proc0FA(109)
+                }
+            }
+        }
+        if Func086(25) == 1
+        {
+            if Func03E(95) != 2
+            {
+                if Func03E(134) == 2 || Func03E(135) == 2
+                {
+                    if Func07F(25) >= 200
+                    {
+                        Proc0FA(110)
+                    }
+                }
+                else if Func089(25) >= 40000
+                {
+                    Proc0FA(110)
+                }
+            }
+        }
+        if Func086(19) == 1
+        {
+            if Func03E(76) != 2
+            {
+                if Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2
+                {
+                    if Func07F(19) >= 200
+                    {
+                        Proc0FA(111)
+                    }
+                }
+                else if Func089(19) >= 40000
+                {
+                    Proc0FA(111)
+                }
+            }
+        }
+        if Func086(21) == 1
+        {
+            if Func03E(111) != 2
+            {
+                if Func03E(150) == 2 || Func03E(151) == 2
+                {
+                    if Func07F(21) >= 200
+                    {
+                        Proc0FA(112)
+                    }
+                }
+                else if Func089(21) >= 40000
+                {
+                    Proc0FA(112)
+                }
+            }
+        }
+        if Func086(12) == 1
+        {
+            if Func03E(103) != 2
+            {
+                if Func03E(142) == 2 || Func03E(143) == 2
+                {
+                    if Func07F(12) >= 200
+                    {
+                        Proc0FA(113)
+                    }
+                }
+                else if Func089(12) >= 40000
+                {
+                    Proc0FA(113)
+                }
+            }
+        }
+        if Func086(26) == 1
+        {
+            if Func07F(26) >= 100
+            {
+                Proc0FA(114)
+            }
+        }
+        if Func086(23) == 1
+        {
+            if Func03E(244) == 0 && Func03E(0) >= 2
+            {
+                if Func07F(23) >= 100
+                {
+                    Proc0FA(115)
+                }
+            }
+        }
+        if Func086(20) == 1
+        {
+            if Func07F(20) >= 100
+            {
+                Proc0FA(116)
+            }
+        }
+    }
+    if Func03E(200) == 2 || Func03E(201) == 2 || Func03E(202) == 2 || Func03E(203) == 2 || Func03E(204) == 2 || Func03E(378) == 2
+    {
+        if Func086(26) == 1 && Func086(3) == 1
+        {
+            if Func03E(126) == 2 || Func03E(127) == 2
+            {
+                if Func0F9(117) == 0
+                {
+                    if Func03E(46) <= 5
+                    {
+                        Proc0FA(117)
+                    }
+                }
+            }
+        }
+        if Func086(23) == 1 && Func086(25) == 1
+        {
+            if Func03E(134) == 2 || Func03E(135) == 2
+            {
+                if Func0F9(118) == 0
+                {
+                    if Func03E(46) <= 5
+                    {
+                        Proc0FA(118)
+                    }
+                }
+            }
+        }
+        if Func086(2) == 1 && Func086(19) == 1
+        {
+            if Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2
+            {
+                if Func0F9(119) == 0
+                {
+                    if Func03E(46) <= 5
+                    {
+                        Proc0FA(119)
+                    }
+                }
+            }
+        }
+        if Func086(20) == 1 && Func086(21) == 1
+        {
+            if Func03E(150) == 2 || Func03E(151) == 2
+            {
+                if Func0F9(120) == 0
+                {
+                    if Func03E(46) <= 5
+                    {
+                        Proc0FA(120)
+                    }
+                }
+            }
+        }
+        if Func086(7) == 1 && Func086(12) == 1
+        {
+            if Func03E(142) == 2 || Func03E(143) == 2
+            {
+                if Func0F9(121) == 0
+                {
+                    if Func03E(46) <= 5
+                    {
+                        Proc0FA(121)
+                    }
+                }
+            }
+        }
+        if Func086(13) == 1 && Func086(14) == 1
+        {
+            if Func0F9(122) == 0
+            {
+                Proc0FA(122)
+            }
+        }
+    }
+    if Func130(0) >= 100 && Func130(1) >= 100 && Func130(2) >= 100
+    {
+        if Func0F9(123) == 0
+        {
+            Proc0FA(123)
+        }
+    }
+    if Func130(5) >= 100 && Func130(6) >= 100 && Func130(7) >= 100
+    {
+        if Func0F9(124) == 0
+        {
+            Proc0FA(124)
+        }
+    }
+    if Func130(10) >= 100 && Func130(11) >= 100 && Func130(12) >= 100
+    {
+        if Func0F9(125) == 0
+        {
+            Proc0FA(125)
+        }
+    }
+    if Func089(19) >= 50000 || Func089(3) >= 50000 || Func089(25) >= 50000 || Func089(12) >= 50000 || Func089(21) >= 50000 || Func089(31) >= 50000
+    {
+        if Func0F9(126) == 0
+        {
+            Proc0FA(126)
+        }
+    }
+    if Func130(50) >= 50
+    {
+        if Func0F9(128) == 0
+        {
+            Proc0FA(128)
+        }
+    }
+    if Func130(51) >= 50
+    {
+        if Func0F9(129) == 0
+        {
+            Proc0FA(129)
+        }
+    }
+    if (Func118() >= 1 || Func119() >= 1 || Func03E(220) == 2 && Func03E(67) == 1) && Func05E(70) == 0
+    {
+        if Func0F9(130) == 0
+        {
+            Proc0FA(130)
+        }
+    }
+    if Func118() >= 1 && Func05E(71) == 0
+    {
+        if Func0F9(131) == 0
+        {
+            Proc0FA(131)
+        }
+    }
+    if Func119() >= 1 && Func05E(72) == 0
+    {
+        if Func0F9(132) == 0
+        {
+            Proc0FA(132)
+        }
+    }
+    if Func086(7) == 1 && Func086(12) == 1
+    {
+        if Func03E(142) == 2 || Func03E(143) == 2
+        {
+            if Func0F9(133) == 0
+            {
+                Proc0FA(133)
+            }
+        }
+    }
+    if var_1 == 1 && (var_2 == 1 || var_2 == 2)
+    {
+        Proc03F(321, 0)
+    }
+    if !Func060(84) && Func03E(321) == 0 && var_1 == 0 && (var_2 == 30 || Func03D(0, 99) < 30) && Func07F(36) >= 75 && Func07F(37) >= 75 && Func07F(38) >= 75 && Func07F(39) >= 75 && Func07F(40) >= 75 && Func07F(41) >= 75 && Func07F(42) >= 75
+    {
+        Proc0FA(134)
+    }
+    if Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2
+    {
+        if Func0F9(135) == 0
+        {
+            Proc0FA(135)
+        }
+    }
+    if Func03E(229) == 1
+    {
+        Proc03F(229, 0)
+    }
+    if Func03E(81) == 1
+    {
+        Proc03F(81, 0)
+    }
+    if Func03E(292) == 1
+    {
+        if Func03E(293) <= 2
+        {
+            Proc03F(293, Func03E(293) + 1)
+        }
+        else
+        {
+            Proc03F(292, 2)
+        }
+    }
+    if Func03E(290) == 2
+    {
+        Proc03F(290, 0)
+    }
+    if var_2 == 30 || var_2 == 1
+    {
+        Proc03F(312, 0)
+        Proc03F(313, 0)
+    }
+    if var_1 == 3 && (var_2 == 2 || var_2 == 3 || var_2 == 4)
+    {
+        Proc03F(263, 0)
+        Proc03F(265, 0)
+        Proc03F(266, 0)
+    }
+    if Func03E(267) == 2 && Func03E(268) == 0 && Func03E(269) < 20
+    {
+        Proc03F(269, Func03E(269) + 1)
+    }
+    if Func03E(258) == 2
+    {
+        Proc03F(258, 0)
+    }
+    if Func03E(221) == 2 && Func03E(223) == 0 && Func03E(222) < 120 && Func03E(67) == 0
+    {
+        Proc03F(222, Func03E(222) + 1)
+    }
+    if var_0 == 1 && var_1 == 2 && (var_2 == 16 || var_2 == 17) && Func03E(249) == 0
+    {
+        Proc03F(249, 2)
+    }
+    if Func03E(578) == 1
+    {
+        Proc03F(578, 0)
+    }
+    if Func03E(331) == 2
+    {
+        Proc03F(331, 0)
+    }
+    if var_1 == 0 && (var_2 == 19 || var_2 == 20)
+    {
+        Proc11C(0)
+        Proc03F(392, 0)
+        Proc03F(394, 0)
+    }
+    if var_1 == 1 && (var_2 == 2 || var_2 == 3)
+    {
+        Proc11C(4)
+        Proc03F(403, 0)
+        Proc03F(405, 0)
+    }
+    if var_1 == 1 && (var_2 == 8 || var_2 == 9)
+    {
+        Proc11C(3)
+        Proc03F(407, 0)
+        Proc03F(409, 0)
+    }
+    if var_1 == 1 && (var_2 == 21 || var_2 == 22)
+    {
+        Proc11C(1)
+        Proc03F(411, 0)
+        Proc03F(413, 0)
+    }
+    if var_1 == 2 && (var_2 == 19 || var_2 == 20)
+    {
+        Proc11C(0)
+        Proc03F(427, 0)
+        Proc03F(429, 0)
+    }
+    if var_1 == 2 && (var_2 == 22 || var_2 == 23)
+    {
+        Proc11C(2)
+        Proc03F(431, 0)
+        Proc03F(433, 0)
+    }
+    if var_0 == 1 && var_1 == 3 && var_2 == 30 || var_0 == 2 && var_1 == 0 && var_2 == 1
+    {
+        if Func03E(244) == 0 && Func03E(294) == 0
+        {
+            Proc03F(294, 2)
+        }
+    }
+    if Func03E(85) == 2
+    {
+        if Func03E(51) == var_1 && Func03E(52) == var_2
+        {
+            Proc03F(586, Func03E(586) + 1)
+        }
+        if Func03E(210) == 1
+        {
+            Proc03F(210, 2)
+        }
+        if Func03E(170) == 1 || Func03E(185) == 1 || Func03E(190) == 1 || Func03E(180) == 1 || Func03E(205) == 1
+        {
+            Proc0F3()
+            Proc13E(0)
+            Proc13E(1)
+        }
+        Proc08D(3)
+        Proc08D(35)
+        Proc03F(170, 2)
+        Proc03F(185, 2)
+        Proc03F(190, 2)
+        Proc03F(180, 2)
+        if Func03E(205) == 1
+        {
+            Proc03F(205, 2)
+        }
+        if Func03E(210) == 1
+        {
+            Proc03F(210, 2)
+        }
+    }
+    if Func03E(95) == 2
+    {
+        if Func03E(51) == var_1 && Func03E(52) == var_2
+        {
+            Proc03F(586, Func03E(586) + 1)
+        }
+        if Func03E(211) == 1
+        {
+            Proc03F(211, 2)
+        }
+        if Func03E(172) == 1 || Func03E(181) == 1 || Func03E(186) == 1 || Func03E(191) == 1 || Func03E(206) == 1
+        {
+            Proc0F3()
+            Proc13E(0)
+            Proc13E(1)
+        }
+        Proc08D(25)
+        Proc08D(35)
+        Proc03F(172, 2)
+        Proc03F(181, 2)
+        Proc03F(186, 2)
+        Proc03F(191, 2)
+        if Func03E(206) == 1
+        {
+            Proc03F(206, 2)
+        }
+        if Func03E(211) == 1
+        {
+            Proc03F(211, 2)
+        }
+    }
+    if Func03E(111) == 2
+    {
+        if Func03E(51) == var_1 && Func03E(52) == var_2
+        {
+            Proc03F(586, Func03E(586) + 1)
+        }
+        if Func03E(212) == 1
+        {
+            Proc03F(212, 2)
+        }
+        if Func03E(174) == 1 || Func03E(182) == 1 || Func03E(187) == 1 || Func03E(192) == 1 || Func03E(207) == 1
+        {
+            Proc0F3()
+            Proc13E(0)
+            Proc13E(1)
+        }
+        Proc08D(21)
+        Proc08D(35)
+        Proc03F(174, 2)
+        Proc03F(182, 2)
+        Proc03F(187, 2)
+        Proc03F(192, 2)
+        if Func03E(207) == 1
+        {
+            Proc03F(207, 2)
+        }
+        if Func03E(212) == 1
+        {
+            Proc03F(212, 2)
+        }
+    }
+    if Func03E(76) == 2
+    {
+        if Func03E(51) == var_1 && Func03E(52) == var_2
+        {
+            Proc03F(586, Func03E(586) + 1)
+        }
+        if Func03E(213) == 1
+        {
+            Proc03F(213, 2)
+        }
+        if Func03E(176) == 1 || Func03E(183) == 1 || Func03E(188) == 1 || Func03E(193) == 1 || Func03E(208) == 1
+        {
+            Proc0F3()
+            Proc13E(0)
+            Proc13E(1)
+        }
+        Proc08D(19)
+        Proc08D(35)
+        Proc03F(176, 2)
+        Proc03F(183, 2)
+        Proc03F(188, 2)
+        Proc03F(193, 2)
+        if Func03E(208) == 1
+        {
+            Proc03F(208, 2)
+        }
+        if Func03E(213) == 1
+        {
+            Proc03F(213, 2)
+        }
+    }
+    if Func03E(103) == 2
+    {
+        if Func03E(51) == var_1 && Func03E(52) == var_2
+        {
+            Proc03F(586, Func03E(586) + 1)
+        }
+        if Func03E(214) == 1
+        {
+            Proc03F(214, 2)
+        }
+        if Func03E(178) == 1 || Func03E(184) == 1 || Func03E(189) == 1 || Func03E(194) == 1 || Func03E(209) == 1
+        {
+            Proc0F3()
+            Proc13E(0)
+            Proc13E(1)
+        }
+        Proc08D(12)
+        Proc08D(35)
+        Proc03F(178, 2)
+        Proc03F(184, 2)
+        Proc03F(189, 2)
+        Proc03F(194, 2)
+        if Func03E(209) == 1
+        {
+            Proc03F(209, 2)
+        }
+        if Func03E(214) == 1
+        {
+            Proc03F(214, 2)
+        }
+    }
+    if Func03E(371) == 2
+    {
+        if Func03E(51) == var_1 && Func03E(52) == var_2
+        {
+            Proc03F(586, Func03E(586) + 1)
+        }
+        if Func03E(372) == 1 || Func03E(374) == 1 || Func03E(375) == 1 || Func03E(376) == 1 || Func03E(379) == 1
+        {
+            Proc0F3()
+            Proc13E(0)
+            Proc13E(1)
+        }
+        Proc08D(31)
+        Proc08D(35)
+        Proc03F(372, 2)
+        Proc03F(374, 2)
+        Proc03F(375, 2)
+        Proc03F(376, 2)
+        if Func03E(379) == 1
+        {
+            Proc03F(379, 2)
+        }
+    }
+    if var_1 == 0 && (var_2 == 15 || var_2 == 16)
+    {
+        Proc03F(439, 0)
+        Proc03F(441, 0)
+        Proc03F(443, 0)
+        Proc03F(445, 0)
+        Proc03F(447, 0)
+    }
+    if var_1 == 2 && (var_2 == 10 || var_2 == 11)
+    {
+        Proc03F(420, 2)
+        Proc08D(13)
+        Proc08D(21)
+        Proc08D(22)
+        Proc08D(25)
+        Proc08D(27)
+        Proc08D(19)
+        Proc08D(24)
+        Proc08D(12)
+        Proc08D(18)
+        Proc08D(11)
+        Proc08D(9)
+    }
+    if var_1 == 2 && (var_2 == 14 || var_2 == 15)
+    {
+        Proc03F(424, 2)
+        switch Func03E(425)
+        {
+            case 0
+            {
+                var_5 = 19
+            }
+            case 1
+            {
+                var_5 = 25
+            }
+            case 2
+            {
+                var_5 = 3
+            }
+            case 3
+            {
+                var_5 = 12
+            }
+            case 4
+            {
+                var_5 = 21
+            }
+        }
+        Proc08D(var_5)
+    }
+    if Func03E(121)
+    {
+        Proc03F(121, 0)
+        Proc03F(581, 0)
+        Proc08D(22)
+        Proc08D(2)
+        Proc08D(1)
+        Proc08D(17)
+        Proc08D(19)
+        Proc08D(18)
+        Proc080(19, -10)
+        Proc080(22, -10)
+        Proc080(1, -10)
+        Proc080(17, -10)
+        Proc080(18, -10)
+        Proc081(2, 100)
+        Proc03F(119, 2)
+    }
+    else if Func03E(581) == 1
+    {
+        Proc03F(581, 0)
+        Proc03F(119, 2)
+    }
+    else if Func03E(129)
+    {
+        Proc03F(129, 0)
+        Proc03F(582, 0)
+        Proc08D(2)
+        Proc08D(3)
+        Proc08D(1)
+        Proc08D(19)
+        Proc08D(22)
+        Proc08D(26)
+        Proc080(22, -10)
+        Proc080(1, -10)
+        Proc080(2, -10)
+        Proc080(19, -10)
+        Proc081(3, 100)
+        Proc03F(127, 2)
+    }
+    else if Func03E(582) == 1
+    {
+        Proc03F(582, 0)
+        Proc03F(127, 2)
+    }
+    else if Func03E(137)
+    {
+        Proc03F(137, 0)
+        Proc03F(585, 0)
+        Proc08D(23)
+        Proc08D(24)
+        Proc08D(25)
+        Proc08D(8)
+        Proc08D(9)
+        Proc08D(22)
+        Proc080(22, -10)
+        Proc080(9, -10)
+        Proc080(8, -10)
+        Proc080(24, -10)
+        Proc081(25, 100)
+        Proc081(23, 100)
+        Proc03F(135, 2)
+    }
+    else if Func03E(585) == 1
+    {
+        Proc03F(585, 0)
+        Proc03F(135, 2)
+    }
+    else if Func03E(145)
+    {
+        Proc03F(145, 0)
+        Proc03F(583, 0)
+        Proc08D(10)
+        Proc08D(12)
+        Proc08D(11)
+        Proc08D(22)
+        Proc08D(7)
+        Proc08D(6)
+        Proc080(22, -10)
+        Proc080(6, -10)
+        Proc080(11, -10)
+        Proc080(10, -10)
+        Proc081(12, 100)
+        Proc081(7, 100)
+        Proc03F(143, 2)
+    }
+    else if Func03E(583) == 1
+    {
+        Proc03F(583, 0)
+        Proc03F(143, 2)
+    }
+    else if Func03E(153)
+    {
+        Proc03F(153, 0)
+        Proc03F(584, 0)
+        Proc08D(20)
+        Proc08D(15)
+        Proc08D(21)
+        Proc08D(16)
+        Proc08D(14)
+        Proc08D(22)
+        Proc080(22, -10)
+        Proc080(15, -10)
+        Proc080(16, -10)
+        Proc080(14, -10)
+        Proc081(21, 100)
+        Proc081(20, 100)
+        Proc03F(151, 2)
+    }
+    else if Func03E(584) == 1
+    {
+        Proc03F(584, 0)
+        Proc03F(151, 2)
+    }
+    if var_1 == 3 && var_2 == 25
+    {
+        Proc03F(463, Func125())
+    }
+    if var_1 == 0 && var_2 == 22
+    {
+        if var_0 >= 6
+        {
+            Proc03F(397, Func03D(0, 4))
+        }
+        else
+        {
+            Proc03F(397, var_0 - 1)
+        }
+    }
+    if var_1 == 0 && var_2 == 18 && Func03E(391) == 0
+    {
+        Proc0DB(0)
+    }
+    if var_1 == 2 && var_2 == 18 && Func03E(426) == 0
+    {
+        Proc0DB(0)
+    }
+    if var_1 == 1 && var_2 == 1
+    {
+        Proc0DF()
+    }
+    if var_1 == 2 && var_2 == 13
+    {
+        Proc03F(425, Func122())
+    }
+    if Func0C9()
+    {
+        Proc03F(572, 1)
+    }
+    else
+    {
+        Proc03F(572, 0)
+    }
+    if var_1 == 0 && var_2 == 1 || var_1 == 0 && var_2 == 2
+    {
+        Proc03F(384, 0)
+        Proc03F(386, 0)
+        Proc03F(387, 0)
+        Proc03F(390, 0)
+        Proc03F(389, 0)
+        Proc03F(388, 0)
+        Proc03F(391, 0)
+        Proc03F(393, 0)
+        Proc03F(395, 0)
+        Proc03F(396, 0)
+        Proc03F(398, 0)
+        Proc03F(402, 0)
+        Proc03F(404, 0)
+        Proc03F(406, 0)
+        Proc03F(408, 0)
+        Proc03F(410, 0)
+        Proc03F(412, 0)
+        Proc03F(414, 0)
+        Proc03F(416, 0)
+        Proc03F(418, 0)
+        Proc03F(417, 0)
+        Proc03F(419, 0)
+        Proc03F(420, 0)
+        Proc03F(422, 0)
+        Proc03F(423, 0)
+        Proc03F(424, 0)
+        Proc03F(426, 0)
+        Proc03F(428, 0)
+        Proc03F(430, 0)
+        Proc03F(432, 0)
+        Proc03F(434, 0)
+        Proc03F(435, 0)
+        Proc03F(436, 0)
+        Proc03F(437, 0)
+        Proc03F(438, 0)
+        Proc03F(440, 0)
+        Proc03F(442, 0)
+        Proc03F(444, 0)
+        Proc03F(446, 0)
+        Proc03F(448, 0)
+        Proc03F(449, 0)
+        Proc03F(450, 0)
+        Proc03F(456, 0)
+        Proc03F(457, 0)
+        Proc03F(458, 0)
+        Proc03F(459, 0)
+        Proc03F(460, 0)
+        Proc03F(451, 0)
+        Proc03F(452, 0)
+        Proc03F(453, 0)
+        Proc03F(454, 0)
+        Proc03F(455, 0)
+        Proc03F(461, 0)
+        Proc03F(462, 0)
+        Proc03F(464, 0)
+        Proc03F(465, 0)
+        Proc03F(302, 0)
+        Proc03F(303, 0)
+        Proc03F(170, 0)
+        Proc03F(172, 0)
+        Proc03F(174, 0)
+        Proc03F(176, 0)
+        Proc03F(178, 0)
+        Proc03F(372, 0)
+        Proc03F(180, 0)
+        Proc03F(181, 0)
+        Proc03F(182, 0)
+        Proc03F(183, 0)
+        Proc03F(184, 0)
+        Proc03F(374, 0)
+        Proc03F(185, 0)
+        Proc03F(186, 0)
+        Proc03F(187, 0)
+        Proc03F(188, 0)
+        Proc03F(189, 0)
+        Proc03F(375, 0)
+        Proc03F(190, 0)
+        Proc03F(191, 0)
+        Proc03F(192, 0)
+        Proc03F(193, 0)
+        Proc03F(194, 0)
+        Proc03F(376, 0)
+        Proc03F(342, 0)
+        Proc03F(295, 0)
+    }
+    if Func03E(227) == 2
+    {
+        Proc03F(227, 0)
+        if !(Func03E(75) == 2 && Func03E(76) == 0 && Func03E(51) == var_1 && Func03E(52) == var_2 || Func03E(84) == 2 && Func03E(85) == 0 && Func03E(51) == var_1 && Func03E(52) == var_2 || Func03E(94) == 2 && Func03E(95) == 0 && Func03E(51) == var_1 && Func03E(52) == var_2 || Func03E(102) == 2 && Func03E(103) == 0 && Func03E(51) == var_1 && Func03E(52) == var_2 || Func03E(110) == 2 && Func03E(111) == 0 && Func03E(51) == var_1 && Func03E(52) == var_2 || Func03E(370) == 2 && Func03E(371) == 0 && Func03E(51) == var_1 && Func03E(52) == var_2)
+        {
+            Proc038(988)
+        }
+    }
+    Proc038(983)
+}

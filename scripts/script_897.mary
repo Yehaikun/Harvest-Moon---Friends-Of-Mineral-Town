@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 897 EventScript_897
+{
+    const MESSAGE_0 = "Things are going to get \r\nbusy around here! \r\nI only wish my darling\x05\r\nwould come back...\x05"
+    SetEntityFacing(1, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(15)
+    Proc02D(1)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(1, 0)
+    Proc083(1)
+}

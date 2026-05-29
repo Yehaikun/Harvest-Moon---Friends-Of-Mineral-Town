@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 363 EventScript_363
+{
+    const MESSAGE_0 = "Barrel\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

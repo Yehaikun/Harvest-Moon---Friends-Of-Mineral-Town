@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 931 EventScript_931
+{
+    const MESSAGE_0 = "Mary\x81fs novel... I can't\r\nwait to read it!\x05"
+    SetEntityFacing(7, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(161)
+    Proc02D(7)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(7, 3)
+    Proc083(7)
+}

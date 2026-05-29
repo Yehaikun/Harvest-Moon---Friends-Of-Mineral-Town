@@ -1,0 +1,140 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 721 EventScript_721
+{
+    const MESSAGE_0 = "Welcome. \x05"
+    const MESSAGE_1 = "Oh, hi \xFF!. \x05"
+    const MESSAGE_2 = "Did you come to do some \r\nshopping, \xFF!? \r\nMe, I came to chat with \r\nSasha, but I think I'll buy\r\nsome things while I'm here.\r\nI need some things for \r\ndinner, come to think \r\nof it. \x05"
+    const MESSAGE_3 = "Can I have a Rice Ball \r\nand Curry Powder, please? \x05"
+    const MESSAGE_4 = "Just one second. \x05"
+    const MESSAGE_5 = "You look awfully handsome\r\nlately, Jeff. Have you been\r\nworking out? \x05"
+    const MESSAGE_6 = "Huh? \x05"
+    const MESSAGE_7 = "Yes, you definitely look\r\nlike you're in great shape!\x05"
+    const MESSAGE_8 = "Well, if you say so...\x05"
+    const MESSAGE_9 = "I might develop a crush \r\non you myself! Now, \r\nhow much for the food...?\x05"
+    const MESSAGE_10 = "Umm...Half price for you \r\ntoday, Manna. \x05"
+    const MESSAGE_11 = "Really? You're a \r\nsweety, Jeff!\r\nI wish my Duke would \r\ntake a lesson from you! \x05"
+    const MESSAGE_12 = "Aww...Shucks...\x05"
+    const MESSAGE_13 = "I always compliment Jeff\r\nlike that, and he always \r\ngives me a deal. \r\nIt never fails!...\x05"
+    Proc0F2()
+    Proc016(15, 228, 152)
+    SetEntityPosition(0, 228, 152, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(17, 228, 112, 0)
+    SetEntityAnim(17, 1673)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(67)
+    Proc02D(17)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(30)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(9, 144, 288, 1)
+    SetEntityAnim(9, 2260)
+    Proc00A(9, 208, 1)
+    Proc00C(9)
+    SetEntityFacing(9, 3)
+    Proc008(9, 208, 1)
+    Proc00C(9)
+    SetEntityFacing(9, 1)
+    Proc00A(9, 152, 1)
+    Proc00C(9)
+    SetEntityFacing(9, 3)
+    SetEntityAnim(9, 2256)
+    TalkOpen()
+    Proc030(137)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_1)
+    TalkClose()
+    SetEntityFacing(0, 2)
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_2)
+    TalkClose()
+    SetEntityFacing(9, 1)
+    TalkOpen()
+    Proc030(137)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(67)
+    Proc02D(17)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    Proc011(9, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_5)
+    TalkClose()
+    TalkOpen()
+    Proc030(69)
+    Proc02D(17)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_7)
+    TalkClose()
+    Proc011(17, 5, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(69)
+    Proc02D(17)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    Proc030(68)
+    Proc02D(17)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_11)
+    TalkClose()
+    TalkOpen()
+    Proc030(68)
+    Proc02D(17)
+    TalkMessage(MESSAGE_12)
+    TalkClose()
+    SetEntityFacing(9, 3)
+    TalkOpen()
+    Proc030(138)
+    Proc02D(9)
+    TalkMessageSlow(MESSAGE_13)
+    TalkClose()
+    Proc011(0, 6, 0)
+    Proc037(60)
+    Proc083(9)
+    Proc0F2()
+    Proc03F(252, 1)
+    Proc08C(9, 723)
+    Proc08C(17, 722)
+    exit
+}

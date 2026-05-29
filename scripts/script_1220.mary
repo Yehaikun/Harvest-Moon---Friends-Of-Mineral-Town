@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1220 EventScript_1220
+{
+    const MESSAGE_0 = "I bet it's Karen's fault \r\nagain! She probably put in \r\ncandy or something...\x05"
+    const MESSAGE_1 = "Thank goodness no one\r\nput in something strange\r\nthis time!\x05"
+    if Func086(18) == 0
+    {
+        Proc083(18)
+    }
+    SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(18) == 0
+    {
+        Proc080(18, 5)
+    }
+    TalkOpen()
+    Proc02D(18)
+    if Func03E(421) == 1
+    {
+        Proc030(82)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(18)
+    }
+    else
+    {
+        Proc030(79)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(18)
+    }
+    SetEntityFacing(18, 2)
+}

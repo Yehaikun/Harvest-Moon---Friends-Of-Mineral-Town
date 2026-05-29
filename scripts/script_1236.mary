@@ -1,0 +1,92 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1236 EventScript_1236
+{
+    const MESSAGE_0 = "It seems you don't have \r\nanything. You should bring\r\nsomething for the pot.\x05"
+    const MESSAGE_1 = "Hi, \xFF!. \r\nDid you bring something \r\nfor the mix? \x05"
+    const MESSAGE_2 = "I did."
+    const MESSAGE_3 = "I didn't."
+    const MESSAGE_4 = "This is what you brought?\r\nLet's throw it in and \r\neat, then!\x05"
+    const MESSAGE_5 = "Is that some kind of joke?\r\nWe can't put that in! \x05"
+    var unused_0, var_1
+    if Func086(13) == 0
+    {
+        Proc083(13)
+    }
+    SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(13) == 0
+    {
+        Proc080(13, 5)
+    }
+    Proc083(13)
+    TalkOpen()
+    Proc02D(13)
+    if Func040()
+    {
+        Proc030(120)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+    else
+    {
+        Proc030(117)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        TalkOpen()
+        var_1 = TalkChoice2(MESSAGE_2, MESSAGE_3)
+        switch var_1
+        {
+            case 1
+            {
+                if Func041() == 0
+                {
+                    TalkClose()
+                    TalkOpen()
+                    Proc030(118)
+                    Proc02D(13)
+                    TalkMessage(MESSAGE_4)
+                    TalkClose()
+                    switch Func041()
+                    {
+                        case 0
+                        {
+                            switch Func043()
+                            {
+                                case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 63, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 85, 88, 92, 93, 94, 95, 96, 98, 99, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 114, 117, 118, 119, 120, 121, 126, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 141, 145, 146, 147, 149, 150, 151, 152, 153, 160, 161, 162, 163, 164, 165, 166, 168, 169, 170
+                                {
+                                    Proc03F(421, 0)
+                                }
+                                case 22, 23, 24, 25, 26, 27, 45, 49, 62, 64, 65, 84, 86, 87, 89, 90, 91, 97, 100, 101, 113, 115, 116, 122, 123, 124, 125, 130, 137, 139, 140, 142, 143, 144, 148, 154, 155, 156, 157, 158, 159, 167
+                                {
+                                    Proc03F(421, 1)
+                                }
+                            }
+                        }
+                    }
+                    Proc034(2, 1)
+                    Proc046()
+                    Proc038(1241)
+                }
+                else
+                {
+                    TalkClose()
+                    TalkOpen()
+                    Proc030(120)
+                    Proc02D(13)
+                    TalkMessage(MESSAGE_5)
+                    TalkClose()
+                }
+            }
+            case 2
+            {
+                TalkClose()
+                TalkOpen()
+                Proc030(120)
+                Proc02D(13)
+                TalkMessage(MESSAGE_0)
+                TalkClose()
+            }
+        }
+    }
+    SetEntityFacing(13, 0)
+}

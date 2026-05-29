@@ -1,0 +1,373 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 983 EventScript_983
+{
+    var var_0, var_1, var_2, var_3, var_4, var_5, var_6
+    var_0 = Func03E(1)
+    var_1 = Func03E(2)
+    var_3 = Func03E(3)
+    var_2 = Func03E(5)
+    var_4 = Func03E(6)
+    if !(var_0 == 0 && var_1 == 1 || var_0 == 0 && var_1 == 14 || var_0 == 0 && var_1 == 18 || var_0 == 0 && var_1 == 22 || var_0 == 1 && var_1 == 1 || var_0 == 1 && var_1 == 7 || var_0 == 1 && var_1 == 24 || var_0 == 1 && var_1 == 20 || var_0 == 2 && var_1 == 3 || var_0 == 2 && var_1 == 9 || var_0 == 2 && var_1 == 13 || var_0 == 2 && var_1 == 18 || var_0 == 2 && var_1 == 21 || var_0 == 2 && var_1 == 30 || var_0 == 3 && var_1 == 14 || var_0 == 3 && var_1 == 30)
+    {
+        if Func03E(75) == 2 && Func03E(76) == 0 && Func03E(51) == var_0 && Func03E(52) == var_1
+        {
+            Proc03F(76, 1)
+            Proc038(34)
+        }
+        else if Func03E(84) == 2 && Func03E(85) == 0 && Func03E(51) == var_0 && Func03E(52) == var_1
+        {
+            Proc03F(85, 1)
+            Proc038(44)
+        }
+        else if Func03E(94) == 2 && Func03E(95) == 0 && Func03E(51) == var_0 && Func03E(52) == var_1
+        {
+            Proc03F(95, 1)
+            Proc038(55)
+        }
+        else if Func03E(102) == 2 && Func03E(103) == 0 && Func03E(51) == var_0 && Func03E(52) == var_1
+        {
+            Proc03F(103, 1)
+            Proc038(64)
+        }
+        else if Func03E(110) == 2 && Func03E(111) == 0 && Func03E(51) == var_0 && Func03E(52) == var_1
+        {
+            Proc03F(111, 1)
+            Proc038(78)
+        }
+        else if Func03E(370) == 2 && Func03E(371) == 0 && Func03E(51) == var_0 && Func03E(52) == var_1
+        {
+            Proc03F(371, 1)
+            Proc038(848)
+        }
+        else if Func03E(116) == 2 && Func03E(117) == 0 && Func03E(118) == 0 && Func03E(119) == 0 && Func03E(60) >= 7
+        {
+            if Func07F(2) < 200 || (GetEntityLocation(0) == 18 || GetEntityLocation(0) == 35 || GetEntityLocation(0) == 39)
+            {
+                Proc03F(581, 1)
+            }
+            else if Func07F(2) >= 200 && Func03E(85) == 2
+            {
+                Proc03F(118, 1)
+                Proc038(878)
+            }
+            else if Func07F(2) >= 200
+            {
+                Proc03F(117, 1)
+                Proc038(877)
+            }
+        }
+        else if Func03E(125) == 2 && Func03E(126) == 0 && Func03E(127) == 0 && Func03E(61) >= 7
+        {
+            if Func07F(26) < 200 || (GetEntityLocation(0) == 18 || GetEntityLocation(0) == 35 || GetEntityLocation(0) == 39)
+            {
+                Proc03F(582, 1)
+            }
+            else if Func07F(26) >= 200
+            {
+                Proc03F(126, 1)
+                Proc038(898)
+            }
+        }
+        else if Func03E(133) == 2 && Func03E(134) == 0 && Func03E(135) == 0 && Func03E(64) >= 7
+        {
+            if Func07F(23) < 200 || (GetEntityLocation(0) == 18 || GetEntityLocation(0) == 35 || GetEntityLocation(0) == 39)
+            {
+                Proc03F(585, 1)
+            }
+            else if Func07F(23) >= 200
+            {
+                Proc03F(134, 1)
+                Proc038(918)
+            }
+        }
+        else if Func03E(141) == 2 && Func03E(142) == 0 && Func03E(143) == 0 && Func03E(62) >= 7
+        {
+            if Func07F(7) < 200 || (GetEntityLocation(0) == 18 || GetEntityLocation(0) == 35 || GetEntityLocation(0) == 39)
+            {
+                Proc03F(583, 1)
+            }
+            else if Func07F(7) >= 200
+            {
+                Proc03F(142, 1)
+                Proc038(936)
+            }
+        }
+        else if Func03E(149) == 2 && Func03E(150) == 0 && Func03E(151) == 0 && Func03E(63) >= 7
+        {
+            if Func07F(20) < 200 || (GetEntityLocation(0) == 18 || GetEntityLocation(0) == 35 || GetEntityLocation(0) == 39)
+            {
+                Proc03F(584, 1)
+            }
+            else if Func07F(20) >= 200
+            {
+                Proc03F(150, 1)
+                Proc038(956)
+            }
+        }
+        else if Func03E(76) == 2 && GetEntityLocation(0) == 29
+        {
+            var_5 = Func03E(1) * 30 + Func03E(2)
+            var_6 = Func03E(51) * 30 + Func03E(52)
+            if var_5 < var_6
+            {
+                var_5 += 120
+            }
+            if Func03E(586) == 50 && Func03E(51) == var_0 && Func03E(52) == var_1 && Func03E(177) == 0
+            {
+                Proc03F(177, 1)
+                Proc038(604)
+            }
+            else if Func03E(51) == var_0 && Func03E(52) == var_1
+            {
+                Proc03F(176, 1)
+                Proc038(601)
+            }
+            else if Func03E(198) == 0 && Func089(19) >= 65000 && var_5 >= var_6 + 30
+            {
+                Proc03F(198, 1)
+                Proc038(657)
+            }
+            else if Func03E(203) == 0 && Func03E(50) >= 60 && !(var_0 == 2 && var_1 == 15) && !(var_0 == 2 && var_1 == 23) && !(Func03E(8) == var_0 && Func03E(9) == var_1)
+            {
+                Proc03F(203, 1)
+                Proc038(662)
+            }
+            else if Func03E(218) == 0 && Func03E(46) >= 60
+            {
+                Proc03F(218, 1)
+                Proc038(687)
+            }
+            else if Func03E(208) == 0 && Func03E(46) >= 120
+            {
+                Proc03F(208, 1)
+                Proc038(673)
+            }
+            else if Func03E(213) == 0 && Func082(19) >= 10 && Func03E(50) == 0 && Func03E(46) == 0
+            {
+                Proc03F(213, 1)
+                Proc038(682)
+            }
+        }
+        else if Func03E(85) == 2 && GetEntityLocation(0) == 29
+        {
+            var_5 = Func03E(1) * 30 + Func03E(2)
+            var_6 = Func03E(51) * 30 + Func03E(52)
+            if var_5 < var_6
+            {
+                var_5 += 120
+            }
+            if Func03E(586) == 50 && Func03E(51) == var_0 && Func03E(52) == var_1 && Func03E(171) == 0
+            {
+                Proc03F(171, 1)
+                Proc038(592)
+            }
+            else if Func03E(51) == var_0 && Func03E(52) == var_1
+            {
+                Proc03F(170, 1)
+                Proc038(589)
+            }
+            else if Func03E(195) == 0 && Func089(3) >= 65000 && var_5 >= var_6 + 30
+            {
+                Proc03F(195, 1)
+                Proc038(654)
+            }
+            else if Func03E(200) == 0 && Func03E(50) >= 60 && !(var_0 == 1 && var_1 == 3) && !(var_0 == 1 && var_1 == 10) && !(Func03E(8) == var_0 && Func03E(9) == var_1)
+            {
+                Proc03F(200, 1)
+                Proc038(659)
+            }
+            else if Func03E(215) == 0 && Func03E(46) >= 60
+            {
+                Proc03F(215, 1)
+                Proc038(684)
+            }
+            else if Func03E(205) == 0 && Func03E(46) >= 120
+            {
+                Proc03F(205, 1)
+                Proc038(664)
+            }
+            else if Func03E(210) == 0 && Func082(3) >= 10 && Func03E(50) == 0 && Func03E(46) == 0
+            {
+                Proc03F(210, 1)
+                Proc038(679)
+            }
+        }
+        else if Func03E(95) == 2 && GetEntityLocation(0) == 29
+        {
+            var_5 = Func03E(1) * 30 + Func03E(2)
+            var_6 = Func03E(51) * 30 + Func03E(52)
+            if var_5 < var_6
+            {
+                var_5 += 120
+            }
+            if Func03E(586) == 50 && Func03E(51) == var_0 && Func03E(52) == var_1 && Func03E(173) == 0
+            {
+                Proc03F(173, 1)
+                Proc038(596)
+            }
+            else if Func03E(51) == var_0 && Func03E(52) == var_1
+            {
+                Proc03F(172, 1)
+                Proc038(593)
+            }
+            else if Func03E(196) == 0 && Func089(25) >= 65000 && var_5 >= var_6 + 30
+            {
+                Proc03F(196, 1)
+                Proc038(655)
+            }
+            else if Func03E(201) == 0 && Func03E(50) >= 60 && !(var_0 == 1 && var_1 == 17) && !(var_0 == 1 && var_1 == 22) && !(Func03E(8) == var_0 && Func03E(9) == var_1)
+            {
+                Proc03F(201, 1)
+                Proc038(660)
+            }
+            else if Func03E(216) == 0 && Func03E(46) >= 60
+            {
+                Proc03F(216, 1)
+                Proc038(685)
+            }
+            else if Func03E(206) == 0 && Func03E(46) >= 120
+            {
+                Proc03F(206, 1)
+                Proc038(667)
+            }
+            else if Func03E(211) == 0 && Func082(25) >= 10 && Func03E(50) == 0 && Func03E(46) == 0
+            {
+                Proc03F(211, 1)
+                Proc038(680)
+            }
+        }
+        else if Func03E(103) == 2 && GetEntityLocation(0) == 29
+        {
+            var_5 = Func03E(1) * 30 + Func03E(2)
+            var_6 = Func03E(51) * 30 + Func03E(52)
+            if var_5 < var_6
+            {
+                var_5 += 120
+            }
+            if Func03E(586) == 50 && Func03E(51) == var_0 && Func03E(52) == var_1 && Func03E(179) == 0
+            {
+                Proc03F(179, 1)
+                Proc038(608)
+            }
+            else if Func03E(51) == var_0 && Func03E(52) == var_1
+            {
+                Proc03F(178, 1)
+                Proc038(605)
+            }
+            else if Func03E(199) == 0 && Func089(12) >= 65000 && var_5 >= var_6 + 30
+            {
+                Proc03F(199, 1)
+                Proc038(658)
+            }
+            else if Func03E(204) == 0 && Func03E(50) >= 60 && !(var_0 == 3 && var_1 == 20) && !(var_0 == 3 && var_1 == 23) && !(Func03E(8) == var_0 && Func03E(9) == var_1)
+            {
+                Proc03F(204, 1)
+                Proc038(663)
+            }
+            else if Func03E(219) == 0 && Func03E(46) >= 60
+            {
+                Proc03F(219, 1)
+                Proc038(688)
+            }
+            else if Func03E(209) == 0 && Func03E(46) >= 120
+            {
+                Proc03F(209, 1)
+                Proc038(676)
+            }
+            else if Func03E(214) == 0 && Func082(12) >= 10 && Func03E(50) == 0 && Func03E(46) == 0
+            {
+                Proc03F(214, 1)
+                Proc038(683)
+            }
+        }
+        else if Func03E(111) == 2 && GetEntityLocation(0) == 29
+        {
+            var_5 = Func03E(1) * 30 + Func03E(2)
+            var_6 = Func03E(51) * 30 + Func03E(52)
+            if var_5 < var_6
+            {
+                var_5 += 120
+            }
+            if Func03E(586) == 50 && Func03E(51) == var_0 && Func03E(52) == var_1 && Func03E(175) == 0
+            {
+                Proc03F(175, 1)
+                Proc038(600)
+            }
+            else if Func03E(51) == var_0 && Func03E(52) == var_1
+            {
+                Proc03F(174, 1)
+                Proc038(597)
+            }
+            else if Func03E(197) == 0 && Func089(21) >= 65000 && var_5 >= var_6 + 30
+            {
+                Proc03F(197, 1)
+                Proc038(656)
+            }
+            else if Func03E(202) == 0 && Func03E(50) >= 60 && !(var_0 == 0 && var_1 == 16) && !(var_0 == 0 && var_1 == 20) && !(Func03E(8) == var_0 && Func03E(9) == var_1)
+            {
+                Proc03F(202, 1)
+                Proc038(661)
+            }
+            else if Func03E(217) == 0 && Func03E(46) >= 60
+            {
+                Proc03F(217, 1)
+                Proc038(686)
+            }
+            else if Func03E(207) == 0 && Func03E(46) >= 120
+            {
+                Proc03F(207, 1)
+                Proc038(670)
+            }
+            else if Func03E(212) == 0 && Func082(21) >= 10 && Func03E(50) == 0 && Func03E(46) == 0
+            {
+                Proc03F(212, 1)
+                Proc038(681)
+            }
+        }
+        else if Func03E(371) == 2 && GetEntityLocation(0) == 29
+        {
+            var_5 = Func03E(1) * 30 + Func03E(2)
+            var_6 = Func03E(51) * 30 + Func03E(52)
+            if var_5 < var_6
+            {
+                var_5 += 120
+            }
+            if Func03E(586) == 50 && Func03E(51) == var_0 && Func03E(52) == var_1 && Func03E(373) == 0
+            {
+                Proc03F(373, 1)
+                Proc038(852)
+            }
+            else if Func03E(51) == var_0 && Func03E(52) == var_1
+            {
+                Proc03F(372, 1)
+                Proc038(849)
+            }
+            else if Func03E(377) == 0 && Func089(31) >= 65000 && var_5 >= var_6 + 30
+            {
+                Proc03F(377, 1)
+                Proc038(862)
+            }
+            else if Func03E(378) == 0 && Func03E(50) >= 60 && !(var_0 == 0 && var_1 == 8) && !(var_0 == 0 && var_1 == 9) && !(Func03E(8) == var_0 && Func03E(9) == var_1)
+            {
+                Proc03F(378, 1)
+                Proc038(863)
+            }
+            else if Func03E(380) == 0 && Func03E(46) >= 60
+            {
+                Proc03F(380, 1)
+                Proc038(866)
+            }
+            else if Func03E(379) == 0 && Func03E(46) >= 120
+            {
+                Proc03F(379, 1)
+                Proc038(864)
+            }
+        }
+        if var_4 != 3 && var_4 != 4
+        {
+            Proc038(984)
+        }
+    }
+    Proc038(986)
+}

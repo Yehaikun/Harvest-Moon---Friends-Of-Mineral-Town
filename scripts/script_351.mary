@@ -1,0 +1,61 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 351 EventScript_351
+{
+    const MESSAGE_0 = "Record Player\x05"
+    const MESSAGE_1 = "Table\x05"
+    var var_0, var_1
+    if Func03E(29) == 1
+    {
+        var_0 = 0
+        if !Func040() && Func041() == 1
+        {
+            var_1 = Func044()
+            switch var_1
+            {
+                case 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78
+                {
+                    var_0 = 1
+                }
+            }
+        }
+        if var_0
+        {
+            if Func042() == 1
+            {
+                TalkOpen()
+                TalkMessage(MESSAGE_0)
+                TalkClose()
+                exit
+            }
+            else if Func0B3()
+            {
+                Proc046()
+                var_1 = Func0B4(var_1)
+                Proc049(var_1)
+            }
+            else
+            {
+                Proc046()
+                Func0B4(var_1)
+            }
+        }
+        else if Func040() && Func0B3()
+        {
+            var_1 = Func0B5()
+            Proc049(var_1)
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+        }
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+    }
+}

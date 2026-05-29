@@ -1,0 +1,140 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 891 EventScript_891
+{
+    const MESSAGE_0 = "I wonder why my brother\r\nhates it when I see you \r\nso much? \x05"
+    const MESSAGE_1 = "He probably thinks I'm a \r\nbad influence.\x05"
+    const MESSAGE_2 = "That's so silly! Why would \r\nhe think that...?\x05"
+    const MESSAGE_3 = "That just means your family\r\ntries to protect you, \r\nthat's all. \x05"
+    const MESSAGE_4 = "Hmm...\x05"
+    const MESSAGE_5 = "What does your family do, \r\nKai?\x05"
+    const MESSAGE_6 = "Well, I haven't seen \r\nmy parents for years...\x05"
+    const MESSAGE_7 = "Why?\x05"
+    const MESSAGE_8 = "My parents don't understand\r\nme at all. They don't like\r\nme not wanting to \x05\r\nlive like they do. \x05\x0CI hate following all those \r\nrules all the time! That's \r\njust not me! \x05\x0CBesides...they work all the\r\ntime... They have no\r\ntime for me anyways. \x05"
+    const MESSAGE_9 = "So, I couldn't stand it any\r\nmore and left home.\x05"
+    const MESSAGE_10 = "Really...?\x05"
+    const MESSAGE_11 = "I'm glad I did, though. \x05\x0CI've gotten to see all\r\nkinds of towns, and live my\r\nown way. I enjoy myself. \x05"
+    const MESSAGE_12 = "I wish I could be so free...\x05"
+    const MESSAGE_13 = "Are you serious?\x05"
+    const MESSAGE_14 = "...Yes. \x05"
+    const MESSAGE_15 = "your mom and Rick?\x05\x0CThey are too nice to leave,\r\nI think...\x05"
+    const MESSAGE_16 = "...\x05"
+    Proc016(1, 385, 124)
+    PlayBGM(1, 16)
+    SetEntityPosition(0, 24, 280, 3)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(3, 385, 124, 3)
+    SetEntityAnim(3, 559)
+    SetEntityPosition(26, 385, 144, 3)
+    SetEntityAnim(26, 2306)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(11)
+    Proc02D(3)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(11)
+    Proc02D(3)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(153)
+    Proc02D(26)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    Proc011(3, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(11)
+    Proc02D(3)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    SetEntityFacing(3, 0)
+    TalkOpen()
+    Proc030(7)
+    Proc02D(3)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(26, 2, 0)
+    Proc037(60)
+    SetEntityFacing(26, 1)
+    TalkOpen()
+    Proc030(157)
+    Proc02D(26)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    Proc011(3, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(7)
+    Proc02D(3)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    Proc030(155)
+    Proc02D(26)
+    TalkMessage(MESSAGE_8)
+    Proc030(157)
+    Proc02D(26)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    Proc030(11)
+    Proc02D(3)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    TalkOpen()
+    Proc030(154)
+    Proc02D(26)
+    TalkMessage(MESSAGE_11)
+    TalkClose()
+    Proc011(3, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(7)
+    Proc02D(3)
+    TalkMessage(MESSAGE_12)
+    TalkClose()
+    Proc011(26, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(157)
+    Proc02D(26)
+    TalkMessage(MESSAGE_13)
+    TalkClose()
+    TalkOpen()
+    Proc030(7)
+    Proc02D(3)
+    TalkMessage(MESSAGE_14)
+    TalkClose()
+    TalkOpen()
+    Proc030(157)
+    Proc02D(26)
+    TalkMessage(MESSAGE_15)
+    TalkClose()
+    TalkOpen()
+    Proc030(10)
+    Proc02D(3)
+    TalkMessage(MESSAGE_16)
+    TalkClose()
+    Proc017(24, 280, 2)
+    Proc018()
+    Proc0F2()
+    Proc08C(3, 892)
+    Proc08C(26, 893)
+    Proc03F(124, 1)
+    exit
+}

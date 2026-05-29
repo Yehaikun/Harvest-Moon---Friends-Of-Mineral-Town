@@ -1,0 +1,106 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 783 EventScript_783
+{
+    const MESSAGE_0 = "Are you really leaving...?\x05"
+    const MESSAGE_1 = "Thanks for everything. \r\nI do have to go, though.\r\nI like it here too much...\x05"
+    const MESSAGE_2 = "What are you talking about?\r\nWhat's wrong with liking\r\nit here...?\x05"
+    const MESSAGE_3 = "Tell everyone thanks \r\nfor me again. \x05"
+    const MESSAGE_4 = "Ann will be so sad. \r\nShe likes you so much...\x05"
+    const MESSAGE_5 = "...Bye now.\r\nIt's time for me to go. \x05"
+    const MESSAGE_6 = "Good luck!\x05"
+    const MESSAGE_7 = "Thanks again for \r\neverything. \x05"
+    const MESSAGE_8 = "Come back any time \r\nyou want!\x05"
+    Proc016(1, 211, 164)
+    SetEntityPosition(23, 241, 138, 0)
+    SetEntityAnim(23, 635)
+    SetEntityPosition(24, 241, 168, 1)
+    SetEntityAnim(24, 1970)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc035(2, 1)
+    Proc037(30)
+    TalkOpen()
+    Proc030(86)
+    Proc02D(24)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(23)
+    Proc02D(23)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(85)
+    Proc02D(24)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(23)
+    Proc02D(23)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(86)
+    Proc02D(24)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(26)
+    Proc02D(23)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    SetEntityFacing(23, 3)
+    SetEntityFacing(24, 3)
+    SetEntityAnim(23, 639)
+    Proc008(23, 289, 1)
+    Proc00C(23)
+    SetEntityAnim(23, 635)
+    TalkOpen()
+    Proc030(83)
+    Proc02D(24)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    SetEntityFacing(23, 2)
+    Proc037(30)
+    TalkOpen()
+    Proc030(23)
+    Proc02D(23)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    Proc030(85)
+    Proc02D(24)
+    TalkMessage(MESSAGE_8)
+    TalkClose()
+    Proc037(30)
+    SetEntityFacing(23, 3)
+    SetEntityAnim(23, 639)
+    Proc008(23, 385, 1)
+    Proc00C(23)
+    Proc00F(23)
+    SetEntityFacing(24, 0)
+    SetEntityAnim(24, 1974)
+    Proc00A(24, 307, 1)
+    Proc00C(24)
+    Proc00F(24)
+    Proc034(2, 1)
+    Proc016(1, 24, 280)
+    SetEntityPosition(0, 24, 280, 3)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc03F(294, 2)
+    Proc035(2, 1)
+}

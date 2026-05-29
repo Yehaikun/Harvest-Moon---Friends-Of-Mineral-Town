@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 922 EventScript_922
+{
+    const MESSAGE_0 = "I'm kind of embarrassed \r\nto be all dressed up \r\nlike this!\x05"
+    const MESSAGE_1 = "You're happy for me too,\r\naren't you dad? \x05"
+    if Func086(25) == 0
+    {
+        Proc083(25)
+    }
+    if Func085(25) == 0
+    {
+        SetEntityFacing(25, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(93)
+        Proc02D(25)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(25, 0)
+        Proc083(25)
+    }
+    else
+    {
+        SetEntityFacing(25, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(93)
+        Proc02D(25)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(25, 0)
+        Proc083(25)
+    }
+}

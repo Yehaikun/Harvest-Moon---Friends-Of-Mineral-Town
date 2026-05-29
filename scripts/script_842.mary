@@ -1,0 +1,20 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 842 EventScript_842
+{
+    const MESSAGE_0 = "Ta-daaaa!\r\nYou've reached B100.\x05\x0CThat's all.\r\nThere are more to go.\r\nGood luck.  Bye.\x05"
+    Proc03F(365, 1)
+    Proc036(1, 0)
+    Proc036(1, 0)
+    Proc034(1, 1)
+    PlaySong(0, 190)
+    TalkOpen()
+    Proc02D(31)
+    Proc030(57)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(31)
+    Proc08A(31, 3000)
+    Proc03F(365, 2)
+    Proc035(1, 1)
+}

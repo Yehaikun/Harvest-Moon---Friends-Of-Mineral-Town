@@ -1,0 +1,100 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 847 EventScript_847
+{
+    const MESSAGE_0 = "I'll marry you if you want,\r\n\xFF!. \x05"
+    const MESSAGE_1 = "Nope.\x05"
+    if GetEntityLocation(0) == 0
+    {
+        Proc03F(370, 1)
+        switch GetEntityFacing(0)
+        {
+            case 1
+            {
+                PlaySong(0, 190)
+                SetEntityPosition(70, GetEntityX(0), GetEntityY(0) - 16, 0)
+                Proc010(70, 3)
+                SetEntityAnim(70, 1068)
+                Proc036(1, 0)
+                Proc036(1, 0)
+                Proc034(1, 1)
+                Proc00F(70)
+                SetEntityPosition(31, GetEntityX(0), GetEntityY(0) - 16, 0)
+                Proc035(1, 1)
+            }
+            case 0
+            {
+                PlaySong(0, 190)
+                SetEntityPosition(70, GetEntityX(0), GetEntityY(0) + 16, 0)
+                Proc010(70, 3)
+                SetEntityAnim(70, 1068)
+                Proc036(1, 0)
+                Proc036(1, 0)
+                Proc034(1, 1)
+                Proc00F(70)
+                SetEntityPosition(31, GetEntityX(0), GetEntityY(0) + 16, 1)
+                Proc035(1, 1)
+            }
+            case 2
+            {
+                PlaySong(0, 190)
+                SetEntityPosition(70, GetEntityX(0) - 16, GetEntityY(0), 0)
+                Proc010(70, 3)
+                SetEntityAnim(70, 1068)
+                Proc036(1, 0)
+                Proc036(1, 0)
+                Proc034(1, 1)
+                Proc00F(70)
+                SetEntityPosition(31, GetEntityX(0) - 16, GetEntityY(0), 3)
+                Proc035(1, 1)
+            }
+            case 3
+            {
+                PlaySong(0, 190)
+                SetEntityPosition(70, GetEntityX(0) + 16, GetEntityY(0), 0)
+                Proc010(70, 3)
+                SetEntityAnim(70, 1068)
+                Proc036(1, 0)
+                Proc036(1, 0)
+                Proc034(1, 1)
+                Proc00F(70)
+                SetEntityPosition(31, GetEntityX(0) + 16, GetEntityY(0), 2)
+                Proc035(1, 1)
+            }
+        }
+        SetEntityAnim(31, 1641)
+        Proc037(60)
+        TalkOpen()
+        Proc02D(31)
+        if Func03E(0) >= 5 && Func089(31) >= 60000 && Func03E(579) == 1 && Func03E(324) == 5 && Func03E(326) == 2 && Func03E(357) == 2 && Func03E(364) == 2 && Func03E(368) == 2 && Func03E(369) == 2 && Func03E(158) == 2
+        {
+            Proc030(57)
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            Proc083(31)
+            Proc08A(31, 3000)
+            Proc052()
+            Proc03F(370, 2)
+        }
+        else
+        {
+            Proc030(58)
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+            Proc083(31)
+            Proc03F(370, 0)
+        }
+        Proc037(60)
+        PlaySong(0, 190)
+        SetEntityPosition(70, GetEntityX(31), GetEntityY(31) + 2, 0)
+        Proc010(70, 3)
+        SetEntityAnim(70, 1068)
+        Proc036(1, 0)
+        Proc036(1, 0)
+        Proc034(1, 1)
+        Proc00F(70)
+        Proc00F(31)
+        Proc037(30)
+        Proc035(1, 1)
+    }
+}

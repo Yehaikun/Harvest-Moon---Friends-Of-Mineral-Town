@@ -1,0 +1,19 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 357 EventScript_357
+{
+    const MESSAGE_0 = "Ouch!...\x05"
+    var var_0
+    Proc0AD()
+    Proc034(3, 1)
+    Proc09F()
+    Proc0AD()
+    Proc036(3, 1)
+    Proc0AE()
+    var_0 = Func03D(0, 65535)
+    if var_0 == 0
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_0)
+    }
+}

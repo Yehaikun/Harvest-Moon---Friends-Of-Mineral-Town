@@ -1,0 +1,27 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 239 EventScript_239
+{
+    const MESSAGE_0 = "It's locked...\x05"
+    var var_0
+    var_0 = 0
+    if Func07F(20) <= 100
+    {
+        var_0 = 0
+    }
+    else
+    {
+        var_0 = 1
+    }
+    if var_0 == 1
+    {
+        PlaySong(0, 156)
+        Proc0CA(7)
+    }
+    else
+    {
+        TalkOpen()
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+}

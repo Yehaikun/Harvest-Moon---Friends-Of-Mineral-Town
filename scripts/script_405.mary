@@ -1,0 +1,39 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 405 EventScript_405
+{
+    const MESSAGE_0 = "The Square's Garbage Can\r\nThrow away garbage here.\x05"
+    if Func040() == 1
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+    else if Func041() == 4 || Func041() == 2
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+    else if Func041() == 1
+    {
+        if !Func04C()
+        {
+            TalkOpen()
+            Proc024(MESSAGE_0)
+            TalkClose()
+        }
+        else
+        {
+            PlaySong(0, 108)
+            Proc046()
+            PlaySong(0, 110)
+        }
+    }
+    else
+    {
+        PlaySong(0, 108)
+        Proc046()
+        PlaySong(0, 110)
+    }
+}

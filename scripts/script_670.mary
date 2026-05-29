@@ -1,0 +1,91 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 670 EventScript_670
+{
+    const MESSAGE_0 = "There's something I want \r\nto show you!\x05"
+    const MESSAGE_1 = "Come here, \r\n\xFF*.\x05"
+    const MESSAGE_2 = "Da-da.\x05"
+    const MESSAGE_3 = "Isn't that amazing!?\x05"
+    const MESSAGE_4 = "He took his first steps \r\ntoday. He's early for his\r\nage. Precocious, like you!\x05"
+    const MESSAGE_5 = "Or do all parents think their\r\nown baby is the smartest...?\x05"
+    Proc016(29, 332, 124)
+    PlayBGM(1, 17)
+    SetEntityPosition(0, 332, 124, 3)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(21, 360, 124, 2)
+    SetEntityAnim(21, 2180)
+    SetEntityPosition(35, 180, 124, 3)
+    SetEntityAnim(35, 615)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc02D(21)
+    Proc030(122)
+    Proc032(21)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc02D(21)
+    Proc030(122)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc02D(35)
+    Proc030(19)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    SetEntityFacing(0, 2)
+    Proc037(60)
+    Proc011(0, 2, 0)
+    Proc037(60)
+    SetEntityAnim(35, 623)
+    Proc008(35, 245, 1)
+    Proc00C(35)
+    SetEntityAnim(35, 615)
+    Proc037(60)
+    SetEntityFacing(0, 3)
+    TalkOpen()
+    Proc02D(21)
+    Proc030(121)
+    Proc032(21)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(60)
+    TalkOpen()
+    Proc02D(21)
+    Proc030(121)
+    Proc032(21)
+    TalkMessage(MESSAGE_4)
+    Proc02D(21)
+    Proc030(122)
+    Proc032(21)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc083(21)
+    Proc083(35)
+    Proc08A(21, 3000)
+    Proc080(35, 20)
+    Proc03F(47, 1)
+    Proc0F2()
+    Proc08C(21, 672)
+    Proc08C(35, 671)
+    Proc03F(207, 1)
+}

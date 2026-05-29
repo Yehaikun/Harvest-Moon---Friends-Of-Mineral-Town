@@ -1,0 +1,35 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 74 EventScript_74
+{
+    const MESSAGE_0 = "I have to get better at \r\ncooking for Stu's sake!\x05"
+    const MESSAGE_1 = "I'm going to try \r\nagain tonight. \x05"
+    if Func03E(107) == 1
+    {
+
+    }
+    if Func03E(108) == 0
+    {
+        SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(121)
+        Proc032(21)
+        Proc02D(21)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(21, 0)
+        Proc083(21)
+    }
+    else
+    {
+        SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(122)
+        Proc02D(21)
+        Proc032(21)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(21, 0)
+        Proc083(21)
+    }
+}

@@ -1,0 +1,62 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1177 EventScript_1177
+{
+    const MESSAGE_0 = "The Cow Festival is now \r\nover. We will bring your Cow\r\nto your house for you,\x05\r\nso you may go home now. \x05"
+    PlayBGM(1, 9)
+    Proc0F7(18, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(4, 85, 91, 0)
+    SetEntityAnim(4, 2543)
+    SetEntityPosition(2, 130, 310, 0)
+    SetEntityAnim(2, 531)
+    SetEntityPosition(3, 90, 319, 0)
+    SetEntityAnim(3, 559)
+    SetEntityPosition(13, 76, 345, 3)
+    SetEntityAnim(13, 2143)
+    SetEntityPosition(5, 256, 115, 2)
+    SetEntityAnim(5, 2535)
+    SetEntityPosition(16, 220, 133, 1)
+    SetEntityAnim(16, 2232)
+    SetEntityPosition(20, 196, 92, 0)
+    SetEntityAnim(20, 800)
+    SetEntityPosition(21, 235, 87, 0)
+    SetEntityAnim(21, 2180)
+    SetEntityPosition(12, 380, 316, 2)
+    SetEntityAnim(12, 2067)
+    SetEntityPosition(10, 352, 334, 1)
+    SetEntityAnim(10, 2059)
+    SetEntityPosition(22, 354, 289, 0)
+    SetEntityAnim(22, 2284)
+    SetEntityPosition(71, 99, 335, 3)
+    Proc010(71, 2)
+    SetEntityAnim(71, 684)
+    SetEntityPosition(72, 350, 306, 3)
+    Proc010(72, 2)
+    SetEntityAnim(72, 684)
+    SetEntityPosition(73, 222, 109, 2)
+    Proc010(73, 2)
+    SetEntityAnim(73, 684)
+    Proc035(2, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc08C(2, 1178)
+    Proc08C(3, 1179)
+    Proc08C(4, 1188)
+    Proc08C(5, 1187)
+    Proc08C(10, 1181)
+    Proc08C(12, 1182)
+    Proc08C(13, 1183)
+    Proc08C(16, 1185)
+    Proc08C(20, 1180)
+    Proc08C(21, 1184)
+    Proc08C(22, 1186)
+}

@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1162 EventScript_1162
+{
+    const MESSAGE_0 = "The Chicken Festival is now\r\nover. We will bring the\r\nChickens back to your house\x05\r\nfor you. You can go home\r\nwithout them. \r\nThe Festival is over...\x05"
+    PlayBGM(1, 7)
+    Proc0F7(18, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(2, 170, 233, 2)
+    SetEntityAnim(2, 531)
+    SetEntityPosition(4, 140, 271, 3)
+    SetEntityAnim(4, 2543)
+    SetEntityPosition(6, 193, 155, 0)
+    SetEntityAnim(6, 2465)
+    SetEntityPosition(8, 289, 224, 2)
+    SetEntityAnim(8, 2240)
+    SetEntityPosition(13, 88, 86, 0)
+    SetEntityAnim(13, 2143)
+    SetEntityPosition(3, 196, 296, 1)
+    SetEntityAnim(3, 559)
+    SetEntityPosition(24, 275, 162, 2)
+    SetEntityAnim(24, 1970)
+    Proc035(3, 1)
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc08C(2, 1154)
+    Proc08C(4, 1160)
+    Proc08C(6, 1159)
+    Proc08C(8, 1158)
+    Proc08C(13, 1157)
+    Proc08C(3, 1155)
+    Proc08C(24, 1156)
+}

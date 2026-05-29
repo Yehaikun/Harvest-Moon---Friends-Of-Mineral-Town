@@ -1,0 +1,29 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 305 EventScript_305
+{
+    const MESSAGE_0 = "We're still arranging the\r\nbooks upstairs, so please\r\ndon't go up there.\x05"
+    if GetEntityFacing(0) == 1
+    {
+        if Func03E(97) == 1 || Func03E(98) == 1 || Func03E(139) == 1 || Func03E(141) == 1
+        {
+            TalkOpen()
+            Proc030(103)
+            Proc02D(12)
+            if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(142) == 2 || Func03E(143) == 2)
+            {
+                Proc032(12)
+            }
+            TalkMessage(MESSAGE_0)
+            TalkClose()
+            Proc00A(0, GetEntityY(0) + 2, 1)
+            Proc017(GetEntityX(0), GetEntityY(0) + 2, 1)
+            Proc00C(0)
+            exit
+        }
+        Proc034(2, 1)
+        Proc016(25, 216, 96)
+        SetEntityPosition(0, 216, 96, 1)
+        Proc035(2, 1)
+    }
+}

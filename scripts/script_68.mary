@@ -1,0 +1,19 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 68 EventScript_68
+{
+    const MESSAGE_0 = "That child has always been\r\nsuch a handful!\x05"
+    if Func03E(105) == 1
+    {
+
+    }
+    SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(125)
+    Proc02D(21)
+    Proc032(21)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(21, 0)
+    Proc083(21)
+}

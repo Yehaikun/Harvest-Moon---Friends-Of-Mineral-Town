@@ -1,0 +1,37 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1219 EventScript_1219
+{
+    const MESSAGE_0 = "It wasn't me! \r\nI decided not to put \r\nin the Jam!\x05"
+    const MESSAGE_1 = "I accidentally dropped the \r\nwhole jar of Jam in!\x05\x0CI took it out later \r\nsecretly, though. \x05"
+    if Func086(19) == 0
+    {
+        Proc083(19)
+    }
+    SetEntityFacing(19, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(19) == 0
+    {
+        Proc080(19, 5)
+    }
+    TalkOpen()
+    if !(Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2)
+    {
+        Proc032(19)
+    }
+    Proc02D(19)
+    if Func03E(421) == 1
+    {
+        Proc030(72)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(19)
+    }
+    else
+    {
+        Proc030(72)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(19)
+    }
+    SetEntityFacing(19, 3)
+}

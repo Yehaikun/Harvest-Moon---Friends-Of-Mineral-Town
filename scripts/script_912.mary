@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 912 EventScript_912
+{
+    const MESSAGE_0 = "I'll be living here \r\npermanently from now on. \x05\x0CIn a guest room, of course!\x05"
+    SetEntityFacing(23, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(24)
+    Proc02D(23)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(23, 1)
+    Proc083(23)
+}

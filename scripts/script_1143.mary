@@ -1,0 +1,42 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1143 EventScript_1143
+{
+    const MESSAGE_0 = "Good try, but no luck \r\nthis year. \x05\r\nDon't be too hard on \r\nyourself. \x05\r\nThere's always next year!\x05"
+    const MESSAGE_1 = "I was watching, and\r\nyou were fabulous! \r\nCongratulations! \x05"
+    const MESSAGE_2 = "I can't believe that dogs\r\ncan do such amazing things!\x05"
+    if Func086(26) == 0
+    {
+        Proc083(26)
+    }
+    SetEntityFacing(26, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    if Func03E(403) == 1
+    {
+        if Func03E(405) == 0
+        {
+            Proc030(153)
+            Proc02D(26)
+            TalkMessage(MESSAGE_0)
+        }
+        else
+        {
+            Proc030(154)
+            Proc02D(26)
+            TalkMessage(MESSAGE_1)
+        }
+    }
+    else
+    {
+        Proc030(153)
+        Proc02D(26)
+        TalkMessage(MESSAGE_2)
+    }
+    TalkClose()
+    if Func084(26) == 0
+    {
+        Proc080(26, 5)
+    }
+    Proc083(26)
+    SetEntityFacing(26, 3)
+}

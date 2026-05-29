@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 67 EventScript_67
+{
+    const MESSAGE_0 = "I understand how Stu\r\nfeels, though. \x05\x0CAll children want lots of \r\nattention, so they bother \r\npeople they like. \x05"
+    if Func03E(105) == 1
+    {
+
+    }
+    SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(20, 0)
+    Proc083(20)
+}

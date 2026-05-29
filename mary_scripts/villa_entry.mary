@@ -1,0 +1,12 @@
+proc 0x0F0 Proc0F3()
+proc 0x119 Proc11C(arg_1)
+proc 0x033 Proc034(arg_1, arg_2)
+proc 0x034 Proc035(arg_1, arg_2)
+
+script 1064 VillaEntry
+{
+    Proc034(2, 1)
+    Proc0F3()
+    Proc11C(5)
+    Proc035(2, 1)
+}

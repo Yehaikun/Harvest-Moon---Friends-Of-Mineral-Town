@@ -1,0 +1,67 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 941 EventScript_941
+{
+    const MESSAGE_0 = "Are you done with work? \x05"
+    const MESSAGE_1 = "Yes."
+    const MESSAGE_2 = "Not yet."
+    const MESSAGE_3 = "Let's celebrate! \x05"
+    const MESSAGE_4 = "To the young couple!! \x05"
+    const MESSAGE_5 = "Well, come join us if you \r\nhave the time. \x05"
+    var var_0
+    SetEntityFacing(22, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(149)
+    Proc02D(22)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_1, MESSAGE_2)
+    switch var_0
+    {
+        case 1
+        {
+            Proc080(22, 20)
+            Proc080(6, 20)
+            Proc080(11, 20)
+            Proc080(10, 20)
+            Proc081(12, 200)
+            Proc081(7, 200)
+            TalkClose()
+            TalkOpen()
+            Proc030(150)
+            Proc02D(22)
+            TalkMessage(MESSAGE_3)
+            TalkClose()
+            Proc034(2, 1)
+            TalkOpen()
+            TalkMessage(MESSAGE_4)
+            TalkClose()
+            Proc083(22)
+            Proc0F3()
+            Proc08D(10)
+            Proc08D(12)
+            Proc08D(11)
+            Proc08D(22)
+            Proc08D(7)
+            Proc08D(6)
+            Proc03F(143, 2)
+            Proc03F(145, 0)
+            Proc03F(583, 0)
+            Proc038(988)
+        }
+        case 2
+        {
+            Proc03F(144, 1)
+            TalkClose()
+            TalkOpen()
+            Proc030(149)
+            Proc02D(22)
+            TalkMessage(MESSAGE_5)
+            TalkClose()
+            SetEntityFacing(22, 3)
+            Proc083(22)
+            Proc03F(143, 1)
+        }
+    }
+}

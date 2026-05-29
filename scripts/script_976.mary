@@ -1,0 +1,177 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 976 EventScript_976
+{
+    const MESSAGE_0 = "You fished a \xFF%.\x05"
+    const MESSAGE_1 = "You fished a \xFF%.\r\nIt's \xFF&cm big.\x05"
+    const MESSAGE_2 = "You fished a \xFF%.\r\nIt's \xFF&m big.\x05"
+    const MESSAGE_3 = "You fished a \xFF%.\r\nIt's \xFF&m\xFF'cm big.\x05"
+    const MESSAGE_4 = "It's a River King!\x05"
+    const MESSAGE_5 = "It's the maximum size\r\nfor a \xFF%.\x05"
+    const MESSAGE_6 = "Congratulations!\x05\x0CYou have now fished\r\n10,000 fish!\x05\x0CThat's all. You don't get \r\na prize, or anything\r\nlike that. Bye now.\x05"
+    const MESSAGE_7 = "Congratulations!\x05\x0CYou have now fished\r\n100,000 fish!\x05\x0CThat's all. You don't get \r\na prize, or anything\r\nlike that. Bye now.\x05"
+    const MESSAGE_8 = "Congratulations!\x05\x0CYou have now fished\r\n1,000,000 fish!\x05\x0CThat's all. You don't get \r\na prize, or anything\r\nlike that. Bye now.\x05"
+    const MESSAGE_9 = "Congratulations!\x05\x0CYou have now fished\r\n10,000,000 fish!\x05\x0CThat's all. You don't get \r\na prize, or anything\r\nlike that. Bye now.\x05"
+    const MESSAGE_10 = "Congratulations!\x05\x0CYou have now fished\r\n100,000,000 fish!\x05\x0CThat's all. You don't get \r\na prize, or anything\r\nlike that. Bye now.\x05"
+    const MESSAGE_11 = "Congratulations!\x05\x0CYou have now fished\r\n1,000,000,000 fish!\x05\x0CThat's all. You don't get \r\na prize, or anything\r\nlike that. Bye now.\x05"
+    const MESSAGE_12 = "Congratulations!\x05\x0CYou have now fished\r\nevery single species!\x05\x0CThat's all. You don't get \r\na prize, or anything\r\nlike that. Bye now.\x05"
+    var var_0, var_1, var_2
+    var_0 = Func11F()
+    var_1 = var_0 / 100
+    var_2 = var_0 % 100
+    Proc11E(0)
+    TalkOpen()
+    if var_0 == 0
+    {
+        Proc024(MESSAGE_0)
+    }
+    else if var_1 == 0
+    {
+        Proc039(1, var_2)
+        Proc024(MESSAGE_1)
+    }
+    else if var_2 == 0
+    {
+        Proc039(1, var_1)
+        Proc024(MESSAGE_2)
+    }
+    else
+    {
+        Proc039(1, var_1)
+        Proc039(2, var_2)
+        Proc024(MESSAGE_3)
+    }
+    if Func121()
+    {
+        PlaySong(0, 176)
+        Proc024(MESSAGE_4)
+    }
+    else if Func120()
+    {
+        Proc024(MESSAGE_5)
+    }
+    TalkClose()
+    if Func121()
+    {
+        Proc046()
+    }
+    if Func03E(358) == 0 && Func0EC() >= 10000 && var_0 != 0
+    {
+        Proc03F(358, 1)
+        Proc036(1, 0)
+        Proc036(1, 0)
+        Proc034(1, 1)
+        PlaySong(0, 190)
+        TalkOpen()
+        Proc02D(31)
+        Proc030(57)
+        TalkMessage(MESSAGE_6)
+        TalkClose()
+        Proc083(31)
+        Proc08A(31, 3000)
+        Proc03F(358, 2)
+        Proc035(1, 1)
+    }
+    if Func03E(359) == 0 && Func0EC() >= 100000 && var_0 != 0
+    {
+        Proc03F(359, 1)
+        Proc036(1, 0)
+        Proc036(1, 0)
+        Proc034(1, 1)
+        PlaySong(0, 190)
+        TalkOpen()
+        Proc02D(31)
+        Proc030(57)
+        TalkMessage(MESSAGE_7)
+        TalkClose()
+        Proc083(31)
+        Proc08A(31, 3000)
+        Proc03F(359, 2)
+        Proc035(1, 1)
+    }
+    if Func03E(360) == 0 && Func0EC() >= 1000000 && var_0 != 0
+    {
+        Proc03F(360, 1)
+        Proc036(1, 0)
+        Proc036(1, 0)
+        Proc034(1, 1)
+        PlaySong(0, 190)
+        TalkOpen()
+        Proc02D(31)
+        Proc030(57)
+        TalkMessage(MESSAGE_8)
+        TalkClose()
+        Proc083(31)
+        Proc08A(31, 3000)
+        Proc03F(360, 2)
+        Proc035(1, 1)
+    }
+    if Func03E(361) == 0 && Func0EC() >= 10000000 && var_0 != 0
+    {
+        Proc03F(361, 1)
+        Proc036(1, 0)
+        Proc036(1, 0)
+        Proc034(1, 1)
+        PlaySong(0, 190)
+        TalkOpen()
+        Proc02D(31)
+        Proc030(57)
+        TalkMessage(MESSAGE_9)
+        TalkClose()
+        Proc083(31)
+        Proc08A(31, 3000)
+        Proc03F(361, 2)
+        Proc035(1, 1)
+    }
+    if Func03E(362) == 0 && Func0EC() >= 100000000 && var_0 != 0
+    {
+        Proc03F(362, 1)
+        Proc036(1, 0)
+        Proc036(1, 0)
+        Proc034(1, 1)
+        PlaySong(0, 190)
+        TalkOpen()
+        Proc02D(31)
+        Proc030(57)
+        TalkMessage(MESSAGE_10)
+        TalkClose()
+        Proc083(31)
+        Proc08A(31, 3000)
+        Proc03F(362, 2)
+        Proc035(1, 1)
+    }
+    if Func03E(363) == 0 && Func0EC() >= 1000000000 && var_0 != 0
+    {
+        Proc03F(363, 1)
+        Proc036(1, 0)
+        Proc036(1, 0)
+        Proc034(1, 1)
+        PlaySong(0, 190)
+        TalkOpen()
+        Proc02D(31)
+        Proc030(57)
+        TalkMessage(MESSAGE_11)
+        TalkClose()
+        Proc083(31)
+        Proc08A(31, 3000)
+        Proc03F(363, 2)
+        Proc035(1, 1)
+    }
+    if Func03E(364) == 0 && Func0EB()
+    {
+        Proc03F(364, 1)
+        Proc036(1, 0)
+        Proc036(1, 0)
+        Proc034(1, 1)
+        PlaySong(0, 190)
+        TalkOpen()
+        Proc02D(31)
+        Proc030(57)
+        TalkMessage(MESSAGE_12)
+        TalkClose()
+        Proc083(31)
+        Proc08A(31, 3000)
+        Proc03F(364, 2)
+        Proc035(1, 1)
+    }
+}

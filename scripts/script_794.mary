@@ -1,0 +1,100 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 794 EventScript_794
+{
+    const MESSAGE_0 = "Why can't you act more\r\nlike a girl?\x05"
+    const MESSAGE_1 = "I am who I am!\x05"
+    const MESSAGE_2 = "My sister was more \r\ngirl-like than you are...\x05"
+    const MESSAGE_3 = "I'm not your sister! \r\nDon't you like me?...\x05"
+    const MESSAGE_4 = "Of course I like you!\x05"
+    const MESSAGE_5 = "If you really liked me, \r\nyou'd like me just\r\nhow I am! \x05"
+    const MESSAGE_6 = "And you wouldn't compare me\r\nwith your sister, either!\r\nYou wouldn't want me \x05\r\nto change!\x05"
+    const MESSAGE_7 = "I'm sorry...\r\nYou're right, Ann. \x05\x0CI didn't mean to hurt your\r\nfeelings. \x05\x0CI really do like you just \r\nthe way you are!\x05"
+    const MESSAGE_8 = "...I'm sorry too. \r\nI didn't mean to get \r\nso mad.\x05"
+    const MESSAGE_9 = "And...I'll even try to act \r\na little more girl-like \r\nfor you. Once in a while...\x05"
+    const MESSAGE_10 = "That\x81fs alright...\x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(25, 124, 192, 2)
+    SetEntityAnim(25, 1982)
+    SetEntityPosition(23, 104, 192, 3)
+    SetEntityAnim(23, 635)
+    Proc035(2, 1)
+    Proc017(114, 192, 2)
+    Proc018()
+    TalkOpen()
+    Proc030(27)
+    Proc02D(23)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(89)
+    Proc02D(25)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(27)
+    Proc02D(23)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    Proc011(25, 0, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(89)
+    Proc02D(25)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(25)
+    Proc02D(23)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(90)
+    Proc02D(25)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(23, 6, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(89)
+    Proc02D(25)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    Proc030(26)
+    Proc02D(23)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    TalkOpen()
+    Proc030(91)
+    Proc02D(25)
+    TalkMessage(MESSAGE_8)
+    Proc030(87)
+    TalkMessage(MESSAGE_9)
+    TalkClose()
+    TalkOpen()
+    Proc030(23)
+    Proc02D(23)
+    TalkMessage(MESSAGE_10)
+    TalkClose()
+    SetEntityFacing(25, 1)
+    SetEntityFacing(23, 1)
+    SetEntityAnim(25, 1986)
+    SetEntityAnim(23, 639)
+    Proc00A(25, 72, 1)
+    Proc00A(23, 72, 1)
+    Proc00C(25)
+    Proc00F(25)
+    Proc00F(23)
+    Proc017(184, 320, 2)
+    Proc018()
+    Proc03F(299, 2)
+    exit
+}

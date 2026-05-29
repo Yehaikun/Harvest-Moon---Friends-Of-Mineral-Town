@@ -1,0 +1,19 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 31 EventScript_31
+{
+    const MESSAGE_0 = "You'll be sorry you didn't \r\neat them, \xFF!!\x05\x0CThey'll be delicious!\r\n...I think...\x05"
+    if Func03E(74) == 1
+    {
+
+    }
+    SetEntityFacing(19, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(74)
+    Proc02D(19)
+    Proc032(19)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(19, 0)
+    Proc083(19)
+}

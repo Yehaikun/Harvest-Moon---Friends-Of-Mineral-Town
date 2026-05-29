@@ -1,0 +1,106 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 694 EventScript_694
+{
+    const MESSAGE_0 = "I see you're awake now.\r\nYou worked too hard and \r\ncollapsed. \x05"
+    const MESSAGE_1 = "You'll have to learn to pace\r\nyourself better from now on.\r\nRest here for today. \x05"
+    Proc034(2, 1)
+    Proc066()
+    Proc03F(227, 1)
+    PlayBGM(1, 13)
+    if GetEntityLocation(23) == 19
+    {
+        Proc016(19, 241, 306)
+        SetEntityPosition(0, 320 + 112, 232, 0)
+        SetEntityAnim(0, 354)
+        SetEntityPosition(20, 219, 226, 0)
+        SetEntityAnim(20, 800)
+        SetEntityPosition(23, 219, 245, 0)
+        SetEntityAnim(23, 635)
+        SetEntityPosition(21, 100, 257, 3)
+        SetEntityAnim(21, 2180)
+        Proc035(2, 1)
+        Proc037(30)
+        PlaySong(0, 149)
+        SetEntityAnim(20, 808)
+        Proc037(30)
+        Proc034(1, 0)
+        Proc035(1, 0)
+        SetEntityAnim(23, 667)
+        Proc037(60)
+        SetEntityAnim(20, 800)
+        Proc037(30)
+        SetEntityFacing(20, 1)
+        SetEntityAnim(20, 804)
+        Proc00A(20, 143, 1)
+        Proc00C(20)
+        SetEntityFacing(20, 3)
+        SetEntityAnim(20, 804)
+        Proc008(20, 287, 1)
+        Proc00C(20)
+        SetEntityFacing(20, 0)
+        SetEntityAnim(20, 804)
+        Proc00A(20, 263, 1)
+        Proc00C(20)
+        SetEntityFacing(20, 3)
+        SetEntityAnim(20, 804)
+        Proc008(20, 311, 1)
+        Proc00C(20)
+        SetEntityAnim(20, 800)
+        Proc037(60)
+    }
+    else
+    {
+        Proc016(19, 241, 306)
+        SetEntityPosition(0, 320 + 112, 232, 0)
+        SetEntityAnim(0, 354)
+        SetEntityPosition(20, 311, 263, 3)
+        SetEntityAnim(20, 800)
+        Proc035(2, 1)
+    }
+    TalkOpen()
+    Proc030(39)
+    Proc02D(20)
+    TalkMessage(MESSAGE_0)
+    if GetEntityLocation(23) == 19
+    {
+        TalkClose()
+        SetEntityAnim(21, 2184)
+        Proc008(21, 199, 2)
+        Proc00C(21)
+        SetEntityAnim(21, 2180)
+        Proc037(30)
+        SetEntityAnim(21, 2188)
+        Proc037(30)
+        Proc008(21, 152, 2)
+        Proc008(23, 169, 2)
+        Proc00C(21)
+        Proc00C(23)
+        SetEntityFacing(21, 0)
+        Proc00A(21, 240, 2)
+        Proc008(23, 152, 2)
+        Proc037(30)
+        Proc00A(21, 66, 2)
+        Proc00A(23, 79, 2)
+        Proc00C(21)
+        Proc00C(23)
+        TalkOpen()
+    }
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    Proc037(30)
+    Proc034(2, 1)
+    Proc05C(200, -100)
+    Proc132(0, 29, 0, 0)
+    if Func03E(3) < 6
+    {
+        Proc03F(227, 2)
+    }
+    else
+    {
+        Proc03F(227, 0)
+    }
+    Proc038(988)
+}

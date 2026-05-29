@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1227 EventScript_1227
+{
+    const MESSAGE_0 = "\xFF!, \r\ndo you have any water?\x05"
+    const MESSAGE_1 = "It was Anna who put in \r\nthose herbs. They make the \r\nfish much more fragrant.\r\nToo fragrant, maybe...\x05"
+    if Func086(9) == 0
+    {
+        Proc083(9)
+    }
+    SetEntityFacing(9, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(9) == 0
+    {
+        Proc080(9, 5)
+    }
+    TalkOpen()
+    Proc02D(9)
+    if Func03E(421) == 1
+    {
+        Proc030(140)
+        TalkMessageSlow(MESSAGE_0)
+        TalkClose()
+        Proc083(9)
+    }
+    else
+    {
+        Proc030(137)
+        TalkMessageSlow(MESSAGE_1)
+        TalkClose()
+        Proc083(9)
+    }
+    SetEntityFacing(9, 3)
+}

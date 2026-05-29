@@ -1,0 +1,35 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 368 EventScript_368
+{
+    const MESSAGE_0 = "Street lamp\x05"
+    const MESSAGE_1 = "A Jewel of Truth is fallen\r\nbeneath the street lamp.\x05"
+    const MESSAGE_2 = "Found a Jewel of Truth \r\nbeneath the street lamp.\x05\r\n...But my hands are\r\nalready full, so I \r\ncan't hold it.\x05"
+    if Func03E(533) == 1
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+    }
+    else if Func03E(22) == 1
+    {
+        if Func040() == 1
+        {
+            Proc049(39)
+            TalkOpen()
+            TalkMessage(MESSAGE_1)
+            Proc03F(533, 1)
+            Proc03F(340, Func03E(340) + 1)
+        }
+        else
+        {
+            TalkOpen()
+            TalkMessage(MESSAGE_2)
+        }
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+    }
+    TalkClose()
+}

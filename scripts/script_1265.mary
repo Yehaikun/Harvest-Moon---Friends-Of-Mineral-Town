@@ -1,0 +1,169 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1265 EventScript_1265
+{
+    const MESSAGE_0 = "The Sheep Festival is \r\ntomorrow at Rose Square.\x05\x0CAny adult Sheep that isn't \r\npregnant, sick, or shorn \r\ncan compete. \x05\x0CI hope to see an entry from\r\n\xFF$ next year. \x05\r\nHope to see you tomorrow!\x05"
+    const MESSAGE_1 = "The Sheep Festival is \r\ntomorrow at Rose Square.\x05\x0CAny adult Sheep that isn't \r\npregnant, sick, or shorn \r\ncan compete. \x05\x0CI hope to see a Sheep from\r\n\xFF$ next year. \x05\r\nIt's fun; I hope you come!\x05"
+    const MESSAGE_2 = "The Sheep Festival is \r\ntomorrow at Rose Square.\x05\x0CDo you want to enter a \r\nSheep from \xFF$?\x05"
+    const MESSAGE_3 = "Sure!"
+    const MESSAGE_4 = "Not this year."
+    const MESSAGE_5 = "Will you select which Sheep?\r\nRemember, it has to be \r\nadult, and can't be sick, \x05\r\npregnant, or shorn. \x05"
+    const MESSAGE_6 = "Really? And I thought \r\nyour Sheep had a good \r\nchance, too...\x05"
+    const MESSAGE_7 = "The Sheep Festival is \r\ntomorrow at Rose Square.\x05\x0CAny adult Sheep that isn't \r\npregnant, sick, or shorn \r\ncan compete. \x05\x0CYou don't have any eligible\r\nSheep, but I hope you can \r\ncome watch anyway!\x05"
+    const MESSAGE_8 = "I'll bring this one with \r\nme now, then. Don't forget \r\nto come tomorrow. \x05"
+    var var_0, var_1, var_2, var_3, var_4, var_5
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(4, 228, 145, 1)
+    SetEntityAnim(4, 2543)
+    Proc035(2, 1)
+    var_1 = -1
+    TalkOpen()
+    Proc030(180)
+    Proc02D(4)
+    if Func112(2, 0) == 0
+    {
+        TalkOpen()
+        Proc030(180)
+        Proc02D(4)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+    }
+    else
+    {
+        var_2 = 0
+        var_3 = 0
+        var_4 = 0
+        for var_5 = 0; var_5 < 16; var_5++
+        {
+            if Func117(var_5) == 0
+            {
+                if Func110(2, var_5) == 1
+                {
+                    var_3++
+                    if GetAnimalAge(2, var_5) == 0 && Func10C(2, var_5) == 0 && Func111(var_5) == 0
+                    {
+                        var_4++
+                    }
+                }
+                else
+                {
+                    var_2++
+                }
+            }
+        }
+        if var_2 > 0 && var_3 == 0
+        {
+            TalkOpen()
+            Proc030(180)
+            Proc02D(4)
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+        }
+        else if var_4 > 0
+        {
+            TalkOpen()
+            Proc030(180)
+            Proc02D(4)
+            TalkMessage(MESSAGE_2)
+            TalkClose()
+            TalkOpen()
+            var_0 = TalkChoice2(MESSAGE_3, MESSAGE_4)
+            TalkClose()
+            if var_0 == 1
+            {
+                TalkOpen()
+                Proc030(180)
+                Proc02D(4)
+                TalkMessage(MESSAGE_5)
+                TalkClose()
+                Proc034(3, 1)
+                var_1 = Func0AA(2)
+                if var_1 != -1
+                {
+                    GetAnimalName(0, 2, var_1)
+                    SetEntityPosition(4, 242, 145, 1)
+                    SetEntityAnim(4, 2543)
+                    SetEntityPosition(54 + var_1, 212, 145, 1)
+                    SetEntityAnim(54 + var_1, 2333)
+                    Proc012(54 + var_1)
+                }
+                Proc035(3, 1)
+            }
+            else
+            {
+                var_1 = -1
+            }
+            if var_1 == -1
+            {
+                TalkOpen()
+                Proc030(180)
+                Proc02D(4)
+                TalkMessage(MESSAGE_6)
+                TalkClose()
+            }
+        }
+        else
+        {
+            TalkOpen()
+            Proc030(180)
+            Proc02D(4)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+        }
+    }
+    if var_1 == -1
+    {
+        SetEntityAnim(4, 2547)
+        SetEntityFacing(4, 3)
+        Proc008(4, 319, 1)
+        Proc00C(4)
+        SetEntityFacing(4, 1)
+        Proc00A(4, 0, 1)
+        Proc00C(4)
+        Proc00F(4)
+        Proc03F(431, 0)
+        Proc03F(430, 2)
+        exit
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(180)
+        Proc02D(4)
+        TalkMessage(MESSAGE_8)
+        TalkClose()
+        SetEntityAnim(4, 2547)
+        SetEntityFacing(4, 3)
+        Proc008(4, 330, 1)
+        Proc00C(4)
+        SetEntityAnim(4, 2543)
+        SetEntityFacing(4, 2)
+        SetEntityAnim(54 + var_1, 2337)
+        SetEntityFacing(54 + var_1, 3)
+        Proc008(54 + var_1, 305, 1)
+        Proc00C(54 + var_1)
+        SetEntityAnim(54 + var_1, 2333)
+        Proc037(30)
+        SetEntityFacing(54 + var_1, 1)
+        SetEntityFacing(4, 1)
+        SetEntityAnim(4, 2547)
+        Proc00A(4, 0, 1)
+        SetEntityAnim(54 + var_1, 2337)
+        Proc00A(54 + var_1, 0, 1)
+        Proc00C(4)
+        Proc00C(54 + var_1)
+        Proc00F(4)
+        Proc00F(54 + var_1)
+        SetEntityFacing(0, 0)
+        Proc03F(431, 1)
+        Proc11B(2, var_1)
+        Proc03F(430, 2)
+    }
+}

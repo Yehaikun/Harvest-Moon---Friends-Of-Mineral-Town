@@ -1,0 +1,83 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 271 EventScript_271
+{
+    const MESSAGE_0 = "It's locked...\x05"
+    const MESSAGE_1 = "Please don't go in there!\x05"
+    var var_0, var_1, var_2, var_3, var_4, var_5, var_6
+    if GetEntityFacing(0) == 1
+    {
+        var_6 = 0
+        var_0 = Func03E(1)
+        var_1 = Func03E(2)
+        var_3 = Func03E(3)
+        var_2 = Func03E(5)
+        var_4 = Func03E(6)
+        var_5 = Func03E(0)
+        if Func03E(87) == 1
+        {
+            var_6 = 0
+        }
+        else if Func03E(92) == 1
+        {
+            var_6 = 0
+        }
+        else if Func03E(132) == 1
+        {
+            var_6 = 0
+        }
+        else if Func03E(295) == 1
+        {
+            var_6 = 0
+        }
+        else if Func03E(296) == 1
+        {
+            var_6 = 0
+        }
+        else if Func03E(95) == 2
+        {
+            var_6 = 1
+        }
+        else if Func07F(24) <= 100
+        {
+            var_6 = 0
+        }
+        else if Func07F(24) > 100
+        {
+            var_6 = 0
+            if Func07F(24) > 200
+            {
+                var_6 = 1
+            }
+        }
+        if var_6 == 1
+        {
+            PlaySong(0, 156)
+            Proc0CA(1)
+            Proc034(2, 1)
+            Proc016(22, 92, 320)
+            SetEntityPosition(0, 92, 320, 1)
+            if Func03E(298) == 0 && var_0 == 3 && var_1 == 11 && (var_3 >= 19 && var_3 < 21) && Func03E(95) == 0 && Func03E(134) == 0 && Func03E(135) == 0 && Func086(25) == 1 && Func086(24) == 1 && GetEntityLocation(25) == 21 && GetEntityLocation(24) == 22
+            {
+                Proc03F(298, 1)
+                Proc038(792)
+            }
+            Proc035(2, 1)
+        }
+        else
+        {
+            TalkOpen()
+            if Func03E(87) == 1 || Func03E(92) == 1 || Func03E(132) == 1 || Func03E(295) == 1 || Func03E(296) == 1 || GetEntityLocation(24) != 21
+            {
+                TalkMessage(MESSAGE_0)
+            }
+            else
+            {
+                Proc030(85)
+                Proc02D(24)
+                TalkMessage(MESSAGE_1)
+            }
+            TalkClose()
+        }
+    }
+}

@@ -1,0 +1,26 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1204 EventScript_1204
+{
+    const MESSAGE_0 = "I've been waiting for you.\r\nEverybody else is already\r\ninside waiting.\x05"
+    const MESSAGE_1 = "I'm sorry, but you can't \r\nbring any items into the\r\nChurch today. \x05\x0CWould you please put that\r\nin your Rucksack?\x05"
+    TalkOpen()
+    Proc02D(22)
+    if Func040()
+    {
+        Proc030(150)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(22)
+        Proc034(2, 1)
+        Proc03F(418, 1)
+        Proc038(1205)
+    }
+    else
+    {
+        Proc030(149)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(22)
+    }
+}

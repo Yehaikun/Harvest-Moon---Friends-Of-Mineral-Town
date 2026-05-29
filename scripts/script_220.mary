@@ -1,0 +1,56 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 220 EventScript_220
+{
+    const MESSAGE_0 = "Mayonnaise Maker\r\nPlace Eggs here to\r\nmake Mayonnaise.\x05"
+    var var_0, var_1
+    var_0 = 0
+    if !Func040() && Func041() == 0 && !Func042()
+    {
+        var_1 = Func043()
+        switch var_1
+        {
+            case 15, 16, 17, 18, 19, 20
+            {
+                var_0 = 1
+            }
+        }
+    }
+    if var_0
+    {
+        Proc046()
+        switch var_1
+        {
+            case 15
+            {
+                Proc048(22)
+            }
+            case 16
+            {
+                Proc048(23)
+            }
+            case 17
+            {
+                Proc048(24)
+            }
+            case 18
+            {
+                Proc048(25)
+            }
+            case 19
+            {
+                Proc048(26)
+            }
+            case 20
+            {
+                Proc048(27)
+            }
+        }
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+}

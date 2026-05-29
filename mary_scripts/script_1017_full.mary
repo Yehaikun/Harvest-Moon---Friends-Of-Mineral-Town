@@ -1,0 +1,1976 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1017 EventScript_1017
+{
+    const MESSAGE_0 = "Oh, I'd forgotten!\r\nThanks for the great \r\nbirthday present!\x05"
+    const MESSAGE_1 = "What a fantastic gift!\r\nHow did you know I love\r\nthese so much? Thanks!\x05"
+    const MESSAGE_2 = "This is for me? \r\nGee, thanks...I love these!\x05"
+    const MESSAGE_3 = "Wow, thanks...\r\nI'll remember this!\x05"
+    const MESSAGE_4 = "Err...Thanks...\x05"
+    const MESSAGE_5 = "Are you trying to goad\r\nme into losing my temper, \r\n\xFF!?\x05"
+    const MESSAGE_6 = "I guess you're used to \r\nbugs, if you work on \r\na farm!\x05"
+    const MESSAGE_7 = "Yikes!\r\nGet it away from me!\x05"
+    const MESSAGE_8 = "Now this is a great one...!\r\nThanks! I think I'll give \r\nit to Harris' wife when\x05\r\nhe gets married!\x05"
+    const MESSAGE_9 = "Well this is very fancy!\x05\x0COh...You mean it's for me?\r\nI can't exactly use it,\r\nbut I'll give it to \x05\r\nHarris' wife when he gets\x05\r\nmarried.\x05"
+    const MESSAGE_10 = "I bet the animals get\r\nscared when you put this on!\x05\x0COh, it's for me? Thanks!\x05"
+    const MESSAGE_11 = "Congratulations!\r\nWho's the lucky girl, \r\nif I may ask?\x05"
+    const MESSAGE_12 = "Have you heard of the\r\nForget-me-not Valley?\x05\x0CI hear there's someone \r\nthere named \xFF,\r\nwho is very popular. \x05\x0CI'd like to meet him...\x05"
+    const MESSAGE_13 = "A long time ago, someone\r\nnamed Kano used to stay at\r\nmy house. \x05\x0CHe used to love taking \r\npictures of Mineral Town.\x05\x0COne day, though, he just \r\nleft a letter and vanished.\x05\x0CI wonder where he is now?\x05"
+    const MESSAGE_14 = "There's nothing more \r\npleasing to a mayor than \r\na peaceful village!\x05"
+    const MESSAGE_15 = "You should at least \r\nrest on the weekends, \r\n\xFF!!\x05"
+    const MESSAGE_16 = "I bet that's not going\r\nto happen though, is it?\x05"
+    const MESSAGE_17 = "Hmmm...Looks like it's not\r\ngoing to stop. \x05\x0CAnd I was going to go to \r\nthe Square, too!\x05"
+    const MESSAGE_18 = "Ellen and I always eat \r\nApple Pie together on the\r\nweekends. \x05\x0CThe Apple Pie at the \r\nInn is the best!\x05"
+    const MESSAGE_19 = "Hi, \xFF!. \r\nI'm off to go shopping!\x05"
+    const MESSAGE_20 = "Well, if it isn't \r\n\xFF!. \x05\x0CHow are you enjoying \r\nlife on the farm?\x05"
+    const MESSAGE_21 = "I'm sure it will take some\r\ngetting used to.\x05\x0CA farm is a complicated \r\nplace, after all!\x05"
+    const MESSAGE_22 = "Hi, \xFF!!\r\nHave you gotten the hang\r\nof farming, yet?\x05"
+    const MESSAGE_23 = "Myself...I know more about\r\nrunning towns than farms!\x05"
+    const MESSAGE_24 = "Hi, \xFF!!\r\nI hear you've been doing\r\nmighty well at the farm!\x05"
+    const MESSAGE_25 = "People like me depend on\r\npeople like you to grow our\r\nfood, \x05\r\nso you have my gratitude!\x05"
+    const MESSAGE_26 = "Hey there, \xFF!. \r\nDid you come here for a \r\nrest, too?\x05"
+    const MESSAGE_27 = "I bet the animals are happy\r\non days like today, eh?\x05"
+    const MESSAGE_28 = "Hello, \xFF!. \r\nHave you come to like \r\nour town yet?\x05"
+    const MESSAGE_29 = "Just come to me if you\r\never get into any trouble.\r\nI give great advice.\x05"
+    const MESSAGE_30 = "Do you think this \r\nrain will continue...?\x05"
+    const MESSAGE_31 = "I was going to the Square, \r\nso I wish it were sunny...\x05\x0CIs there something new up \r\non the bulletin board?\r\nI forget.\x05"
+    const MESSAGE_32 = "Too bad about this rain...\x05\x0CAnd it's my day off, too!\x05"
+    const MESSAGE_33 = "Harris always comes by the \r\nInn at this hour, so I like\r\nto wait for him here on \x05\r\nrainy days.\x05\x0CJust to make sure everything\r\nis OK, you understand.\x05"
+    var var_0, var_1, var_2
+    SetEntityAnim(13, 2143)
+    var_2 = GetEntityFacing(13)
+    SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(1) == 3 && Func03E(2) == 2
+    {
+        switch GetEntityLocation(13)
+        {
+            case 2
+            {
+                Proc038(739)
+            }
+        }
+    }
+    if Func03E(339) == 2 && Func03E(341) == 0
+    {
+        Proc038(820)
+    }
+    TalkOpen()
+    Proc02D(13)
+    if Func040() || (Func03E(107) == 1 || Func03E(147) == 1 || Func03E(271) == 1 || Func03E(273) == 1) || (Func03E(70) == 1 || Func03E(71) == 1 || Func03E(73) == 1 || Func03E(74) == 1 || Func03E(252) == 1 || Func03E(278) == 1 || Func03E(279) == 1) || (Func03E(87) == 1 || Func03E(92) == 1 || Func03E(132) == 1 || Func03E(296) == 1)
+    {
+        var_0 = 6
+    }
+    else
+    {
+        switch Func041()
+        {
+            case 0
+            {
+                switch Func043()
+                {
+                    case 61, 74, 75, 104, 114, 115, 122, 130, 135, 136, 144, 145, 147, 169
+                    {
+                        var_0 = 1
+                    }
+                    case 0, 1, 3, 8, 9, 12, 15, 16, 17, 18, 19, 20, 21, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 46, 79, 93, 95, 100, 102, 103, 111, 133, 134, 138, 141, 143, 149, 150, 151, 152, 153, 164, 165, 167, 170
+                    {
+                        var_0 = 2
+                    }
+                    case 2, 4, 5, 6, 7, 10, 11, 13, 14, 22, 23, 24, 25, 26, 27, 40, 43, 44, 45, 57, 58, 59, 60, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 76, 77, 78, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 94, 96, 97, 98, 99, 101, 105, 106, 107, 108, 109, 110, 112, 113, 116, 117, 118, 119, 120, 123, 124, 125, 126, 128, 131, 132, 137, 139, 140, 142, 146, 148, 160, 161, 162, 163, 166, 168
+                    {
+                        var_0 = 3
+                    }
+                    case 47, 48, 49, 50, 51, 52, 53, 54, 55, 121, 127, 129
+                    {
+                        var_0 = 4
+                    }
+                    case 154, 155, 156, 157, 158, 159
+                    {
+                        var_0 = 5
+                    }
+                }
+            }
+            case 1
+            {
+                switch Func044()
+                {
+                    case 26, 29
+                    {
+                        var_0 = 1
+                    }
+                    case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 40, 41, 42, 43, 53
+                    {
+                        var_0 = 3
+                    }
+                    case 17, 18, 19, 20, 21, 22, 23, 24, 25, 27, 28, 30, 31, 32, 33, 34, 35, 36, 51, 52, 89
+                    {
+                        var_0 = 4
+                    }
+                    case 48, 49, 50, 54, 55, 56, 57, 58, 90, 91, 92
+                    {
+                        var_0 = 5
+                    }
+                    case 37, 38, 39, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 80, 82, 84, 93, 94
+                    {
+                        var_0 = 6
+                    }
+                    case 44, 45, 46, 47
+                    {
+                        var_0 = 9
+                    }
+                    case 85, 86, 87, 88
+                    {
+                        var_0 = 10
+                    }
+                    case 81
+                    {
+                        var_0 = 11
+                    }
+                }
+            }
+            case 4
+            {
+                var_0 = 6
+            }
+            case 2
+            {
+                var_0 = 8
+            }
+            case 3
+            {
+                var_0 = 7
+            }
+        }
+    }
+    if var_0 != 6
+    {
+        if (var_0 == 1 || var_0 == 2 || var_0 == 3) && Func07E(13)
+        {
+            Proc030(118)
+            TalkMessage(MESSAGE_0)
+        }
+        else
+        {
+            switch var_0
+            {
+                case 1
+                {
+                    Proc030(118)
+                    TalkMessage(MESSAGE_1)
+                }
+                case 2
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_2)
+                }
+                case 3
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_3)
+                }
+                case 4
+                {
+                    Proc030(120)
+                    TalkMessage(MESSAGE_4)
+                }
+                case 5
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_5)
+                }
+                case 7
+                {
+                    Proc030(118)
+                    TalkMessage(MESSAGE_6)
+                }
+                case 8
+                {
+                    Proc030(119)
+                    TalkMessage(MESSAGE_7)
+                }
+                case 9
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_8)
+                }
+                case 10
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_9)
+                }
+                case 11
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_10)
+                }
+            }
+        }
+        if Func088(13) == 0
+        {
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 9
+                }
+                case 2
+                {
+                    var_1 = 3
+                }
+                case 3
+                {
+                    var_1 = 1
+                }
+                case 4
+                {
+                    var_1 = -3
+                }
+                case 5
+                {
+                    var_1 = -9
+                }
+                case 7
+                {
+                    var_1 = 1
+                }
+                case 8
+                {
+                    var_1 = -3
+                }
+                case 9
+                {
+                    var_1 = 9
+                }
+                case 10
+                {
+                    var_1 = 9
+                }
+                case 11
+                {
+                    var_1 = 1
+                }
+            }
+        }
+        else
+        {
+            switch var_0
+            {
+                case 1
+                {
+                    var_1 = 3
+                }
+                case 2
+                {
+                    var_1 = 1
+                }
+                case 3
+                {
+                    var_1 = 0
+                }
+                case 4
+                {
+                    var_1 = -3
+                }
+                case 5
+                {
+                    var_1 = -9
+                }
+                case 7
+                {
+                    var_1 = 0
+                }
+                case 8
+                {
+                    var_1 = -3
+                }
+                case 9
+                {
+                    var_1 = 3
+                }
+                case 10
+                {
+                    var_1 = 3
+                }
+                case 11
+                {
+                    var_1 = 0
+                }
+            }
+        }
+        if Func07E(13)
+        {
+            var_1 *= 5
+        }
+        if Func042()
+        {
+            var_1 = var_1 + var_1 / 4
+        }
+        Proc080(13, var_1)
+        TalkClose()
+        if var_0 == 1 || var_0 == 2 || var_0 == 3 || var_0 == 4 || var_0 == 5 || var_0 == 9 || var_0 == 10 || var_0 == 11
+        {
+            Proc046()
+        }
+        Proc087(13)
+    }
+    else if Func05D()
+    {
+        switch Func04F()
+        {
+            case 75
+            {
+                Proc030(118)
+                TalkMessage(MESSAGE_11)
+            }
+        }
+    }
+    else if Func03E(501) == 1
+    {
+        Proc030(117)
+        TalkMessage(MESSAGE_12)
+        Proc03F(501, 0)
+    }
+    else if Func07F(13) > 250 && Func07A(6) == 0
+    {
+        Proc030(117)
+        TalkMessage(MESSAGE_13)
+        Proc07C(6)
+    }
+    else
+    {
+        switch GetEntityLocation(13)
+        {
+            case 5
+            {
+                if Func03E(3) >= 16
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_14)
+                }
+                else if Func03E(3) >= 13 && Func03E(3) < 16
+                {
+                    if Func03E(6) == 0
+                    {
+                        Proc030(117)
+                        TalkMessage(MESSAGE_15)
+                        Proc030(120)
+                        TalkMessage(MESSAGE_16)
+                    }
+                    else
+                    {
+                        Proc030(120)
+                        TalkMessage(MESSAGE_17)
+                    }
+                }
+                else if Func03E(3) >= 10 && Func03E(3) < 13
+                {
+                    Proc030(118)
+                    TalkMessage(MESSAGE_18)
+                }
+                else
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_19)
+                }
+            }
+            case 14, 15, 30
+            {
+                if Func07F(13) <= 100
+                {
+                    if Func085(13) == 0
+                    {
+                        Proc030(117)
+                        TalkMessage(MESSAGE_20)
+                    }
+                    else
+                    {
+                        Proc030(120)
+                        TalkMessage(MESSAGE_21)
+                    }
+                }
+                else if Func07F(13) > 100 && Func07F(13) <= 200
+                {
+                    if Func085(13) == 0
+                    {
+                        Proc030(117)
+                        TalkMessage(MESSAGE_22)
+                    }
+                    else
+                    {
+                        Proc030(117)
+                        TalkMessage(MESSAGE_23)
+                    }
+                }
+                else if Func085(13) == 0
+                {
+                    Proc030(118)
+                    TalkMessage(MESSAGE_24)
+                }
+                else
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_25)
+                }
+            }
+            case 6
+            {
+                if Func07F(13) <= 100
+                {
+                    if Func085(13) == 0
+                    {
+                        Proc030(118)
+                        TalkMessage(MESSAGE_26)
+                    }
+                    else
+                    {
+                        Proc030(118)
+                        TalkMessage(MESSAGE_27)
+                    }
+                }
+                else if Func085(13) == 0
+                {
+                    Proc030(118)
+                    TalkMessage(MESSAGE_28)
+                }
+                else
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_29)
+                }
+            }
+            case 21
+            {
+                if Func07F(13) <= 100
+                {
+                    if Func085(13) == 0
+                    {
+                        Proc030(120)
+                        TalkMessage(MESSAGE_30)
+                    }
+                    else
+                    {
+                        Proc030(120)
+                        TalkMessage(MESSAGE_31)
+                    }
+                }
+                else if Func085(13) == 0
+                {
+                    Proc030(120)
+                    TalkMessage(MESSAGE_32)
+                }
+                else
+                {
+                    Proc030(117)
+                    TalkMessage(MESSAGE_33)
+                }
+            }
+        }
+        Proc083(13)
+    }
+    TalkClose()
+    SetEntityFacing(13, var_2)
+}
+
+/*
+Script instructions (IR):
+    PushInt(13)
+    PushInt(2143)
+    Call(CallId(13))
+    PushInt(2)
+    PushInt(13)
+    Call(CallId(6))
+    Assign
+    Discard
+    PushInt(13)
+    PushInt(0)
+    Call(CallId(6))
+    Call(CallId(19))
+    Call(CallId(5))
+    PushInt(1)
+    Call(CallId(61))
+    PushInt(3)
+    Cmp
+    Beq(JumpId(0))
+    PushInt(0)
+    Jmp(JumpId(1))
+  Label(JumpId(0))
+    PushInt(1)
+  Label(JumpId(1))
+    PushInt(2)
+    Call(CallId(61))
+    PushInt(2)
+    Cmp
+    Beq(JumpId(2))
+    PushInt(0)
+    Jmp(JumpId(3))
+  Label(JumpId(2))
+    PushInt(1)
+  Label(JumpId(3))
+    LogicalAnd
+    Beq(JumpId(4))
+    PushInt(13)
+    Call(CallId(20))
+    Jmp(JumpId(5))
+  Case(SwitchId(0), Val(2))
+    PushInt(739)
+    Call(CallId(55))
+    Jmp(JumpId(6))
+    Jmp(JumpId(7))
+  Label(JumpId(5))
+    Switch(SwitchId(0))
+  Label(JumpId(7))
+  Label(JumpId(6))
+  Label(JumpId(4))
+    PushInt(339)
+    Call(CallId(61))
+    PushInt(2)
+    Cmp
+    Beq(JumpId(8))
+    PushInt(0)
+    Jmp(JumpId(9))
+  Label(JumpId(8))
+    PushInt(1)
+  Label(JumpId(9))
+    PushInt(341)
+    Call(CallId(61))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(10))
+    PushInt(0)
+    Jmp(JumpId(11))
+  Label(JumpId(10))
+    PushInt(1)
+  Label(JumpId(11))
+    LogicalAnd
+    Beq(JumpId(12))
+    PushInt(820)
+    Call(CallId(55))
+  Label(JumpId(12))
+    Call(CallId(31))
+    PushInt(13)
+    Call(CallId(44))
+    Call(CallId(63))
+    PushInt(107)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(13))
+    PushInt(0)
+    Jmp(JumpId(14))
+  Label(JumpId(13))
+    PushInt(1)
+  Label(JumpId(14))
+    PushInt(147)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(15))
+    PushInt(0)
+    Jmp(JumpId(16))
+  Label(JumpId(15))
+    PushInt(1)
+  Label(JumpId(16))
+    LogicalOr
+    PushInt(271)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(17))
+    PushInt(0)
+    Jmp(JumpId(18))
+  Label(JumpId(17))
+    PushInt(1)
+  Label(JumpId(18))
+    LogicalOr
+    PushInt(273)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(19))
+    PushInt(0)
+    Jmp(JumpId(20))
+  Label(JumpId(19))
+    PushInt(1)
+  Label(JumpId(20))
+    LogicalOr
+    LogicalOr
+    PushInt(70)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(21))
+    PushInt(0)
+    Jmp(JumpId(22))
+  Label(JumpId(21))
+    PushInt(1)
+  Label(JumpId(22))
+    PushInt(71)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(23))
+    PushInt(0)
+    Jmp(JumpId(24))
+  Label(JumpId(23))
+    PushInt(1)
+  Label(JumpId(24))
+    LogicalOr
+    PushInt(73)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(25))
+    PushInt(0)
+    Jmp(JumpId(26))
+  Label(JumpId(25))
+    PushInt(1)
+  Label(JumpId(26))
+    LogicalOr
+    PushInt(74)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(27))
+    PushInt(0)
+    Jmp(JumpId(28))
+  Label(JumpId(27))
+    PushInt(1)
+  Label(JumpId(28))
+    LogicalOr
+    PushInt(252)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(29))
+    PushInt(0)
+    Jmp(JumpId(30))
+  Label(JumpId(29))
+    PushInt(1)
+  Label(JumpId(30))
+    LogicalOr
+    PushInt(278)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(31))
+    PushInt(0)
+    Jmp(JumpId(32))
+  Label(JumpId(31))
+    PushInt(1)
+  Label(JumpId(32))
+    LogicalOr
+    PushInt(279)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(33))
+    PushInt(0)
+    Jmp(JumpId(34))
+  Label(JumpId(33))
+    PushInt(1)
+  Label(JumpId(34))
+    LogicalOr
+    LogicalOr
+    PushInt(87)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(35))
+    PushInt(0)
+    Jmp(JumpId(36))
+  Label(JumpId(35))
+    PushInt(1)
+  Label(JumpId(36))
+    PushInt(92)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(37))
+    PushInt(0)
+    Jmp(JumpId(38))
+  Label(JumpId(37))
+    PushInt(1)
+  Label(JumpId(38))
+    LogicalOr
+    PushInt(132)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(39))
+    PushInt(0)
+    Jmp(JumpId(40))
+  Label(JumpId(39))
+    PushInt(1)
+  Label(JumpId(40))
+    LogicalOr
+    PushInt(296)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(41))
+    PushInt(0)
+    Jmp(JumpId(42))
+  Label(JumpId(41))
+    PushInt(1)
+  Label(JumpId(42))
+    LogicalOr
+    LogicalOr
+    Beq(JumpId(43))
+    PushInt(0)
+    PushInt(6)
+    Assign
+    Discard
+    Jmp(JumpId(44))
+  Label(JumpId(43))
+    Call(CallId(64))
+    Jmp(JumpId(45))
+  Case(SwitchId(3), Val(0))
+    Call(CallId(66))
+    Jmp(JumpId(46))
+  Case(SwitchId(1), Val(61))
+  Case(SwitchId(1), Val(74))
+  Case(SwitchId(1), Val(75))
+  Case(SwitchId(1), Val(104))
+  Case(SwitchId(1), Val(114))
+  Case(SwitchId(1), Val(115))
+  Case(SwitchId(1), Val(122))
+  Case(SwitchId(1), Val(130))
+  Case(SwitchId(1), Val(135))
+  Case(SwitchId(1), Val(136))
+  Case(SwitchId(1), Val(144))
+  Case(SwitchId(1), Val(145))
+  Case(SwitchId(1), Val(147))
+  Case(SwitchId(1), Val(169))
+    PushInt(0)
+    PushInt(1)
+    Assign
+    Discard
+    Jmp(JumpId(47))
+  Case(SwitchId(1), Val(0))
+  Case(SwitchId(1), Val(1))
+  Case(SwitchId(1), Val(3))
+  Case(SwitchId(1), Val(8))
+  Case(SwitchId(1), Val(9))
+  Case(SwitchId(1), Val(12))
+  Case(SwitchId(1), Val(15))
+  Case(SwitchId(1), Val(16))
+  Case(SwitchId(1), Val(17))
+  Case(SwitchId(1), Val(18))
+  Case(SwitchId(1), Val(19))
+  Case(SwitchId(1), Val(20))
+  Case(SwitchId(1), Val(21))
+  Case(SwitchId(1), Val(28))
+  Case(SwitchId(1), Val(29))
+  Case(SwitchId(1), Val(30))
+  Case(SwitchId(1), Val(31))
+  Case(SwitchId(1), Val(32))
+  Case(SwitchId(1), Val(33))
+  Case(SwitchId(1), Val(34))
+  Case(SwitchId(1), Val(35))
+  Case(SwitchId(1), Val(36))
+  Case(SwitchId(1), Val(37))
+  Case(SwitchId(1), Val(38))
+  Case(SwitchId(1), Val(39))
+  Case(SwitchId(1), Val(41))
+  Case(SwitchId(1), Val(42))
+  Case(SwitchId(1), Val(46))
+  Case(SwitchId(1), Val(79))
+  Case(SwitchId(1), Val(93))
+  Case(SwitchId(1), Val(95))
+  Case(SwitchId(1), Val(100))
+  Case(SwitchId(1), Val(102))
+  Case(SwitchId(1), Val(103))
+  Case(SwitchId(1), Val(111))
+  Case(SwitchId(1), Val(133))
+  Case(SwitchId(1), Val(134))
+  Case(SwitchId(1), Val(138))
+  Case(SwitchId(1), Val(141))
+  Case(SwitchId(1), Val(143))
+  Case(SwitchId(1), Val(149))
+  Case(SwitchId(1), Val(150))
+  Case(SwitchId(1), Val(151))
+  Case(SwitchId(1), Val(152))
+  Case(SwitchId(1), Val(153))
+  Case(SwitchId(1), Val(164))
+  Case(SwitchId(1), Val(165))
+  Case(SwitchId(1), Val(167))
+  Case(SwitchId(1), Val(170))
+    PushInt(0)
+    PushInt(2)
+    Assign
+    Discard
+    Jmp(JumpId(48))
+  Case(SwitchId(1), Val(2))
+  Case(SwitchId(1), Val(4))
+  Case(SwitchId(1), Val(5))
+  Case(SwitchId(1), Val(6))
+  Case(SwitchId(1), Val(7))
+  Case(SwitchId(1), Val(10))
+  Case(SwitchId(1), Val(11))
+  Case(SwitchId(1), Val(13))
+  Case(SwitchId(1), Val(14))
+  Case(SwitchId(1), Val(22))
+  Case(SwitchId(1), Val(23))
+  Case(SwitchId(1), Val(24))
+  Case(SwitchId(1), Val(25))
+  Case(SwitchId(1), Val(26))
+  Case(SwitchId(1), Val(27))
+  Case(SwitchId(1), Val(40))
+  Case(SwitchId(1), Val(43))
+  Case(SwitchId(1), Val(44))
+  Case(SwitchId(1), Val(45))
+  Case(SwitchId(1), Val(57))
+  Case(SwitchId(1), Val(58))
+  Case(SwitchId(1), Val(59))
+  Case(SwitchId(1), Val(60))
+  Case(SwitchId(1), Val(62))
+  Case(SwitchId(1), Val(63))
+  Case(SwitchId(1), Val(64))
+  Case(SwitchId(1), Val(65))
+  Case(SwitchId(1), Val(66))
+  Case(SwitchId(1), Val(67))
+  Case(SwitchId(1), Val(68))
+  Case(SwitchId(1), Val(69))
+  Case(SwitchId(1), Val(70))
+  Case(SwitchId(1), Val(71))
+  Case(SwitchId(1), Val(72))
+  Case(SwitchId(1), Val(73))
+  Case(SwitchId(1), Val(76))
+  Case(SwitchId(1), Val(77))
+  Case(SwitchId(1), Val(78))
+  Case(SwitchId(1), Val(80))
+  Case(SwitchId(1), Val(81))
+  Case(SwitchId(1), Val(82))
+  Case(SwitchId(1), Val(83))
+  Case(SwitchId(1), Val(84))
+  Case(SwitchId(1), Val(85))
+  Case(SwitchId(1), Val(86))
+  Case(SwitchId(1), Val(87))
+  Case(SwitchId(1), Val(88))
+  Case(SwitchId(1), Val(89))
+  Case(SwitchId(1), Val(90))
+  Case(SwitchId(1), Val(91))
+  Case(SwitchId(1), Val(92))
+  Case(SwitchId(1), Val(94))
+  Case(SwitchId(1), Val(96))
+  Case(SwitchId(1), Val(97))
+  Case(SwitchId(1), Val(98))
+  Case(SwitchId(1), Val(99))
+  Case(SwitchId(1), Val(101))
+  Case(SwitchId(1), Val(105))
+  Case(SwitchId(1), Val(106))
+  Case(SwitchId(1), Val(107))
+  Case(SwitchId(1), Val(108))
+  Case(SwitchId(1), Val(109))
+  Case(SwitchId(1), Val(110))
+  Case(SwitchId(1), Val(112))
+  Case(SwitchId(1), Val(113))
+  Case(SwitchId(1), Val(116))
+  Case(SwitchId(1), Val(117))
+  Case(SwitchId(1), Val(118))
+  Case(SwitchId(1), Val(119))
+  Case(SwitchId(1), Val(120))
+  Case(SwitchId(1), Val(123))
+  Case(SwitchId(1), Val(124))
+  Case(SwitchId(1), Val(125))
+  Case(SwitchId(1), Val(126))
+  Case(SwitchId(1), Val(128))
+  Case(SwitchId(1), Val(131))
+  Case(SwitchId(1), Val(132))
+  Case(SwitchId(1), Val(137))
+  Case(SwitchId(1), Val(139))
+  Case(SwitchId(1), Val(140))
+  Case(SwitchId(1), Val(142))
+  Case(SwitchId(1), Val(146))
+  Case(SwitchId(1), Val(148))
+  Case(SwitchId(1), Val(160))
+  Case(SwitchId(1), Val(161))
+  Case(SwitchId(1), Val(162))
+  Case(SwitchId(1), Val(163))
+  Case(SwitchId(1), Val(166))
+  Case(SwitchId(1), Val(168))
+    PushInt(0)
+    PushInt(3)
+    Assign
+    Discard
+    Jmp(JumpId(49))
+  Case(SwitchId(1), Val(47))
+  Case(SwitchId(1), Val(48))
+  Case(SwitchId(1), Val(49))
+  Case(SwitchId(1), Val(50))
+  Case(SwitchId(1), Val(51))
+  Case(SwitchId(1), Val(52))
+  Case(SwitchId(1), Val(53))
+  Case(SwitchId(1), Val(54))
+  Case(SwitchId(1), Val(55))
+  Case(SwitchId(1), Val(121))
+  Case(SwitchId(1), Val(127))
+  Case(SwitchId(1), Val(129))
+    PushInt(0)
+    PushInt(4)
+    Assign
+    Discard
+    Jmp(JumpId(50))
+  Case(SwitchId(1), Val(154))
+  Case(SwitchId(1), Val(155))
+  Case(SwitchId(1), Val(156))
+  Case(SwitchId(1), Val(157))
+  Case(SwitchId(1), Val(158))
+  Case(SwitchId(1), Val(159))
+    PushInt(0)
+    PushInt(5)
+    Assign
+    Discard
+    Jmp(JumpId(51))
+    Jmp(JumpId(52))
+  Label(JumpId(46))
+    Switch(SwitchId(1))
+  Label(JumpId(52))
+  Label(JumpId(51))
+  Label(JumpId(50))
+  Label(JumpId(49))
+  Label(JumpId(48))
+  Label(JumpId(47))
+    Jmp(JumpId(53))
+  Case(SwitchId(3), Val(1))
+    Call(CallId(67))
+    Jmp(JumpId(54))
+  Case(SwitchId(2), Val(26))
+  Case(SwitchId(2), Val(29))
+    PushInt(0)
+    PushInt(1)
+    Assign
+    Discard
+    Jmp(JumpId(55))
+  Case(SwitchId(2), Val(0))
+  Case(SwitchId(2), Val(1))
+  Case(SwitchId(2), Val(2))
+  Case(SwitchId(2), Val(3))
+  Case(SwitchId(2), Val(4))
+  Case(SwitchId(2), Val(5))
+  Case(SwitchId(2), Val(6))
+  Case(SwitchId(2), Val(7))
+  Case(SwitchId(2), Val(8))
+  Case(SwitchId(2), Val(9))
+  Case(SwitchId(2), Val(10))
+  Case(SwitchId(2), Val(11))
+  Case(SwitchId(2), Val(12))
+  Case(SwitchId(2), Val(13))
+  Case(SwitchId(2), Val(14))
+  Case(SwitchId(2), Val(15))
+  Case(SwitchId(2), Val(16))
+  Case(SwitchId(2), Val(40))
+  Case(SwitchId(2), Val(41))
+  Case(SwitchId(2), Val(42))
+  Case(SwitchId(2), Val(43))
+  Case(SwitchId(2), Val(53))
+    PushInt(0)
+    PushInt(3)
+    Assign
+    Discard
+    Jmp(JumpId(56))
+  Case(SwitchId(2), Val(17))
+  Case(SwitchId(2), Val(18))
+  Case(SwitchId(2), Val(19))
+  Case(SwitchId(2), Val(20))
+  Case(SwitchId(2), Val(21))
+  Case(SwitchId(2), Val(22))
+  Case(SwitchId(2), Val(23))
+  Case(SwitchId(2), Val(24))
+  Case(SwitchId(2), Val(25))
+  Case(SwitchId(2), Val(27))
+  Case(SwitchId(2), Val(28))
+  Case(SwitchId(2), Val(30))
+  Case(SwitchId(2), Val(31))
+  Case(SwitchId(2), Val(32))
+  Case(SwitchId(2), Val(33))
+  Case(SwitchId(2), Val(34))
+  Case(SwitchId(2), Val(35))
+  Case(SwitchId(2), Val(36))
+  Case(SwitchId(2), Val(51))
+  Case(SwitchId(2), Val(52))
+  Case(SwitchId(2), Val(89))
+    PushInt(0)
+    PushInt(4)
+    Assign
+    Discard
+    Jmp(JumpId(57))
+  Case(SwitchId(2), Val(48))
+  Case(SwitchId(2), Val(49))
+  Case(SwitchId(2), Val(50))
+  Case(SwitchId(2), Val(54))
+  Case(SwitchId(2), Val(55))
+  Case(SwitchId(2), Val(56))
+  Case(SwitchId(2), Val(57))
+  Case(SwitchId(2), Val(58))
+  Case(SwitchId(2), Val(90))
+  Case(SwitchId(2), Val(91))
+  Case(SwitchId(2), Val(92))
+    PushInt(0)
+    PushInt(5)
+    Assign
+    Discard
+    Jmp(JumpId(58))
+  Case(SwitchId(2), Val(37))
+  Case(SwitchId(2), Val(38))
+  Case(SwitchId(2), Val(39))
+  Case(SwitchId(2), Val(59))
+  Case(SwitchId(2), Val(60))
+  Case(SwitchId(2), Val(61))
+  Case(SwitchId(2), Val(62))
+  Case(SwitchId(2), Val(63))
+  Case(SwitchId(2), Val(64))
+  Case(SwitchId(2), Val(65))
+  Case(SwitchId(2), Val(66))
+  Case(SwitchId(2), Val(67))
+  Case(SwitchId(2), Val(68))
+  Case(SwitchId(2), Val(69))
+  Case(SwitchId(2), Val(70))
+  Case(SwitchId(2), Val(71))
+  Case(SwitchId(2), Val(72))
+  Case(SwitchId(2), Val(73))
+  Case(SwitchId(2), Val(74))
+  Case(SwitchId(2), Val(75))
+  Case(SwitchId(2), Val(76))
+  Case(SwitchId(2), Val(77))
+  Case(SwitchId(2), Val(78))
+  Case(SwitchId(2), Val(80))
+  Case(SwitchId(2), Val(82))
+  Case(SwitchId(2), Val(84))
+  Case(SwitchId(2), Val(93))
+  Case(SwitchId(2), Val(94))
+    PushInt(0)
+    PushInt(6)
+    Assign
+    Discard
+    Jmp(JumpId(59))
+  Case(SwitchId(2), Val(44))
+  Case(SwitchId(2), Val(45))
+  Case(SwitchId(2), Val(46))
+  Case(SwitchId(2), Val(47))
+    PushInt(0)
+    PushInt(9)
+    Assign
+    Discard
+    Jmp(JumpId(60))
+  Case(SwitchId(2), Val(85))
+  Case(SwitchId(2), Val(86))
+  Case(SwitchId(2), Val(87))
+  Case(SwitchId(2), Val(88))
+    PushInt(0)
+    PushInt(10)
+    Assign
+    Discard
+    Jmp(JumpId(61))
+  Case(SwitchId(2), Val(81))
+    PushInt(0)
+    PushInt(11)
+    Assign
+    Discard
+    Jmp(JumpId(62))
+    Jmp(JumpId(63))
+  Label(JumpId(54))
+    Switch(SwitchId(2))
+  Label(JumpId(63))
+  Label(JumpId(62))
+  Label(JumpId(61))
+  Label(JumpId(60))
+  Label(JumpId(59))
+  Label(JumpId(58))
+  Label(JumpId(57))
+  Label(JumpId(56))
+  Label(JumpId(55))
+    Jmp(JumpId(64))
+  Case(SwitchId(3), Val(4))
+    PushInt(0)
+    PushInt(6)
+    Assign
+    Discard
+    Jmp(JumpId(65))
+  Case(SwitchId(3), Val(2))
+    PushInt(0)
+    PushInt(8)
+    Assign
+    Discard
+    Jmp(JumpId(66))
+  Case(SwitchId(3), Val(3))
+    PushInt(0)
+    PushInt(7)
+    Assign
+    Discard
+    Jmp(JumpId(67))
+    Jmp(JumpId(68))
+  Label(JumpId(45))
+    Switch(SwitchId(3))
+  Label(JumpId(68))
+  Label(JumpId(67))
+  Label(JumpId(66))
+  Label(JumpId(65))
+  Label(JumpId(64))
+  Label(JumpId(53))
+  Label(JumpId(44))
+    PushVar(VarId(0))
+    PushInt(6)
+    Cmp
+    Bne(JumpId(69))
+    PushInt(0)
+    Jmp(JumpId(70))
+  Label(JumpId(69))
+    PushInt(1)
+  Label(JumpId(70))
+    Beq(JumpId(71))
+    PushVar(VarId(0))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(72))
+    PushInt(0)
+    Jmp(JumpId(73))
+  Label(JumpId(72))
+    PushInt(1)
+  Label(JumpId(73))
+    PushVar(VarId(0))
+    PushInt(2)
+    Cmp
+    Beq(JumpId(74))
+    PushInt(0)
+    Jmp(JumpId(75))
+  Label(JumpId(74))
+    PushInt(1)
+  Label(JumpId(75))
+    LogicalOr
+    PushVar(VarId(0))
+    PushInt(3)
+    Cmp
+    Beq(JumpId(76))
+    PushInt(0)
+    Jmp(JumpId(77))
+  Label(JumpId(76))
+    PushInt(1)
+  Label(JumpId(77))
+    LogicalOr
+    PushInt(13)
+    Call(CallId(123))
+    LogicalAnd
+    Beq(JumpId(78))
+    PushInt(118)
+    Call(CallId(47))
+    PushInt(0)
+    Call(CallId(33))
+    Jmp(JumpId(79))
+  Label(JumpId(78))
+    PushVar(VarId(0))
+    Jmp(JumpId(80))
+  Case(SwitchId(4), Val(1))
+    PushInt(118)
+    Call(CallId(47))
+    PushInt(1)
+    Call(CallId(33))
+    Jmp(JumpId(81))
+  Case(SwitchId(4), Val(2))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(2)
+    Call(CallId(33))
+    Jmp(JumpId(82))
+  Case(SwitchId(4), Val(3))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(3)
+    Call(CallId(33))
+    Jmp(JumpId(83))
+  Case(SwitchId(4), Val(4))
+    PushInt(120)
+    Call(CallId(47))
+    PushInt(4)
+    Call(CallId(33))
+    Jmp(JumpId(84))
+  Case(SwitchId(4), Val(5))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(5)
+    Call(CallId(33))
+    Jmp(JumpId(85))
+  Case(SwitchId(4), Val(7))
+    PushInt(118)
+    Call(CallId(47))
+    PushInt(6)
+    Call(CallId(33))
+    Jmp(JumpId(86))
+  Case(SwitchId(4), Val(8))
+    PushInt(119)
+    Call(CallId(47))
+    PushInt(7)
+    Call(CallId(33))
+    Jmp(JumpId(87))
+  Case(SwitchId(4), Val(9))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(8)
+    Call(CallId(33))
+    Jmp(JumpId(88))
+  Case(SwitchId(4), Val(10))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(9)
+    Call(CallId(33))
+    Jmp(JumpId(89))
+  Case(SwitchId(4), Val(11))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(10)
+    Call(CallId(33))
+    Jmp(JumpId(90))
+    Jmp(JumpId(91))
+  Label(JumpId(80))
+    Switch(SwitchId(4))
+  Label(JumpId(91))
+  Label(JumpId(90))
+  Label(JumpId(89))
+  Label(JumpId(88))
+  Label(JumpId(87))
+  Label(JumpId(86))
+  Label(JumpId(85))
+  Label(JumpId(84))
+  Label(JumpId(83))
+  Label(JumpId(82))
+  Label(JumpId(81))
+  Label(JumpId(79))
+    PushInt(13)
+    Call(CallId(133))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(92))
+    PushInt(0)
+    Jmp(JumpId(93))
+  Label(JumpId(92))
+    PushInt(1)
+  Label(JumpId(93))
+    Beq(JumpId(94))
+    PushVar(VarId(0))
+    Jmp(JumpId(95))
+  Case(SwitchId(5), Val(1))
+    PushInt(1)
+    PushInt(9)
+    Assign
+    Discard
+    Jmp(JumpId(96))
+  Case(SwitchId(5), Val(2))
+    PushInt(1)
+    PushInt(3)
+    Assign
+    Discard
+    Jmp(JumpId(97))
+  Case(SwitchId(5), Val(3))
+    PushInt(1)
+    PushInt(1)
+    Assign
+    Discard
+    Jmp(JumpId(98))
+  Case(SwitchId(5), Val(4))
+    PushInt(1)
+    PushInt(3)
+    Neg
+    Assign
+    Discard
+    Jmp(JumpId(99))
+  Case(SwitchId(5), Val(5))
+    PushInt(1)
+    PushInt(9)
+    Neg
+    Assign
+    Discard
+    Jmp(JumpId(100))
+  Case(SwitchId(5), Val(7))
+    PushInt(1)
+    PushInt(1)
+    Assign
+    Discard
+    Jmp(JumpId(101))
+  Case(SwitchId(5), Val(8))
+    PushInt(1)
+    PushInt(3)
+    Neg
+    Assign
+    Discard
+    Jmp(JumpId(102))
+  Case(SwitchId(5), Val(9))
+    PushInt(1)
+    PushInt(9)
+    Assign
+    Discard
+    Jmp(JumpId(103))
+  Case(SwitchId(5), Val(10))
+    PushInt(1)
+    PushInt(9)
+    Assign
+    Discard
+    Jmp(JumpId(104))
+  Case(SwitchId(5), Val(11))
+    PushInt(1)
+    PushInt(1)
+    Assign
+    Discard
+    Jmp(JumpId(105))
+    Jmp(JumpId(106))
+  Label(JumpId(95))
+    Switch(SwitchId(5))
+  Label(JumpId(106))
+  Label(JumpId(105))
+  Label(JumpId(104))
+  Label(JumpId(103))
+  Label(JumpId(102))
+  Label(JumpId(101))
+  Label(JumpId(100))
+  Label(JumpId(99))
+  Label(JumpId(98))
+  Label(JumpId(97))
+  Label(JumpId(96))
+    Jmp(JumpId(107))
+  Label(JumpId(94))
+    PushVar(VarId(0))
+    Jmp(JumpId(108))
+  Case(SwitchId(6), Val(1))
+    PushInt(1)
+    PushInt(3)
+    Assign
+    Discard
+    Jmp(JumpId(109))
+  Case(SwitchId(6), Val(2))
+    PushInt(1)
+    PushInt(1)
+    Assign
+    Discard
+    Jmp(JumpId(110))
+  Case(SwitchId(6), Val(3))
+    PushInt(1)
+    PushInt(0)
+    Assign
+    Discard
+    Jmp(JumpId(111))
+  Case(SwitchId(6), Val(4))
+    PushInt(1)
+    PushInt(3)
+    Neg
+    Assign
+    Discard
+    Jmp(JumpId(112))
+  Case(SwitchId(6), Val(5))
+    PushInt(1)
+    PushInt(9)
+    Neg
+    Assign
+    Discard
+    Jmp(JumpId(113))
+  Case(SwitchId(6), Val(7))
+    PushInt(1)
+    PushInt(0)
+    Assign
+    Discard
+    Jmp(JumpId(114))
+  Case(SwitchId(6), Val(8))
+    PushInt(1)
+    PushInt(3)
+    Neg
+    Assign
+    Discard
+    Jmp(JumpId(115))
+  Case(SwitchId(6), Val(9))
+    PushInt(1)
+    PushInt(3)
+    Assign
+    Discard
+    Jmp(JumpId(116))
+  Case(SwitchId(6), Val(10))
+    PushInt(1)
+    PushInt(3)
+    Assign
+    Discard
+    Jmp(JumpId(117))
+  Case(SwitchId(6), Val(11))
+    PushInt(1)
+    PushInt(0)
+    Assign
+    Discard
+    Jmp(JumpId(118))
+    Jmp(JumpId(119))
+  Label(JumpId(108))
+    Switch(SwitchId(6))
+  Label(JumpId(119))
+  Label(JumpId(118))
+  Label(JumpId(117))
+  Label(JumpId(116))
+  Label(JumpId(115))
+  Label(JumpId(114))
+  Label(JumpId(113))
+  Label(JumpId(112))
+  Label(JumpId(111))
+  Label(JumpId(110))
+  Label(JumpId(109))
+  Label(JumpId(107))
+    PushInt(13)
+    Call(CallId(123))
+    Beq(JumpId(120))
+    PushInt(1)
+    PushInt(5)
+    AssignMul
+    Discard
+  Label(JumpId(120))
+    Call(CallId(65))
+    Beq(JumpId(121))
+    PushInt(1)
+    PushVar(VarId(1))
+    PushVar(VarId(1))
+    PushInt(4)
+    Div
+    Add
+    Assign
+    Discard
+  Label(JumpId(121))
+    PushInt(13)
+    PushVar(VarId(1))
+    Call(CallId(125))
+    Call(CallId(32))
+    PushVar(VarId(0))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(122))
+    PushInt(0)
+    Jmp(JumpId(123))
+  Label(JumpId(122))
+    PushInt(1)
+  Label(JumpId(123))
+    PushVar(VarId(0))
+    PushInt(2)
+    Cmp
+    Beq(JumpId(124))
+    PushInt(0)
+    Jmp(JumpId(125))
+  Label(JumpId(124))
+    PushInt(1)
+  Label(JumpId(125))
+    LogicalOr
+    PushVar(VarId(0))
+    PushInt(3)
+    Cmp
+    Beq(JumpId(126))
+    PushInt(0)
+    Jmp(JumpId(127))
+  Label(JumpId(126))
+    PushInt(1)
+  Label(JumpId(127))
+    LogicalOr
+    PushVar(VarId(0))
+    PushInt(4)
+    Cmp
+    Beq(JumpId(128))
+    PushInt(0)
+    Jmp(JumpId(129))
+  Label(JumpId(128))
+    PushInt(1)
+  Label(JumpId(129))
+    LogicalOr
+    PushVar(VarId(0))
+    PushInt(5)
+    Cmp
+    Beq(JumpId(130))
+    PushInt(0)
+    Jmp(JumpId(131))
+  Label(JumpId(130))
+    PushInt(1)
+  Label(JumpId(131))
+    LogicalOr
+    PushVar(VarId(0))
+    PushInt(9)
+    Cmp
+    Beq(JumpId(132))
+    PushInt(0)
+    Jmp(JumpId(133))
+  Label(JumpId(132))
+    PushInt(1)
+  Label(JumpId(133))
+    LogicalOr
+    PushVar(VarId(0))
+    PushInt(10)
+    Cmp
+    Beq(JumpId(134))
+    PushInt(0)
+    Jmp(JumpId(135))
+  Label(JumpId(134))
+    PushInt(1)
+  Label(JumpId(135))
+    LogicalOr
+    PushVar(VarId(0))
+    PushInt(11)
+    Cmp
+    Beq(JumpId(136))
+    PushInt(0)
+    Jmp(JumpId(137))
+  Label(JumpId(136))
+    PushInt(1)
+  Label(JumpId(137))
+    LogicalOr
+    Beq(JumpId(138))
+    Call(CallId(69))
+  Label(JumpId(138))
+    PushInt(13)
+    Call(CallId(132))
+    Jmp(JumpId(139))
+  Label(JumpId(71))
+    Call(CallId(92))
+    Beq(JumpId(140))
+    Call(CallId(78))
+    Jmp(JumpId(141))
+  Case(SwitchId(7), Val(75))
+    PushInt(118)
+    Call(CallId(47))
+    PushInt(11)
+    Call(CallId(33))
+    Jmp(JumpId(142))
+    Jmp(JumpId(143))
+  Label(JumpId(141))
+    Switch(SwitchId(7))
+  Label(JumpId(143))
+  Label(JumpId(142))
+    Jmp(JumpId(144))
+  Label(JumpId(140))
+    PushInt(501)
+    Call(CallId(61))
+    PushInt(1)
+    Cmp
+    Beq(JumpId(145))
+    PushInt(0)
+    Jmp(JumpId(146))
+  Label(JumpId(145))
+    PushInt(1)
+  Label(JumpId(146))
+    Beq(JumpId(147))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(12)
+    Call(CallId(33))
+    PushInt(501)
+    PushInt(0)
+    Call(CallId(62))
+    Jmp(JumpId(148))
+  Label(JumpId(147))
+    PushInt(13)
+    Call(CallId(124))
+    PushInt(250)
+    Cmp
+    Bgt(JumpId(149))
+    PushInt(0)
+    Jmp(JumpId(150))
+  Label(JumpId(149))
+    PushInt(1)
+  Label(JumpId(150))
+    PushInt(6)
+    Call(CallId(119))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(151))
+    PushInt(0)
+    Jmp(JumpId(152))
+  Label(JumpId(151))
+    PushInt(1)
+  Label(JumpId(152))
+    LogicalAnd
+    Beq(JumpId(153))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(13)
+    Call(CallId(33))
+    PushInt(6)
+    Call(CallId(121))
+    Jmp(JumpId(154))
+  Label(JumpId(153))
+    PushInt(13)
+    Call(CallId(20))
+    Jmp(JumpId(155))
+  Case(SwitchId(8), Val(5))
+    PushInt(3)
+    Call(CallId(61))
+    PushInt(16)
+    Cmp
+    Bge(JumpId(156))
+    PushInt(0)
+    Jmp(JumpId(157))
+  Label(JumpId(156))
+    PushInt(1)
+  Label(JumpId(157))
+    Beq(JumpId(158))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(14)
+    Call(CallId(33))
+    Jmp(JumpId(159))
+  Label(JumpId(158))
+    PushInt(3)
+    Call(CallId(61))
+    PushInt(13)
+    Cmp
+    Bge(JumpId(160))
+    PushInt(0)
+    Jmp(JumpId(161))
+  Label(JumpId(160))
+    PushInt(1)
+  Label(JumpId(161))
+    PushInt(3)
+    Call(CallId(61))
+    PushInt(16)
+    Cmp
+    Blt(JumpId(162))
+    PushInt(0)
+    Jmp(JumpId(163))
+  Label(JumpId(162))
+    PushInt(1)
+  Label(JumpId(163))
+    LogicalAnd
+    Beq(JumpId(164))
+    PushInt(6)
+    Call(CallId(61))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(165))
+    PushInt(0)
+    Jmp(JumpId(166))
+  Label(JumpId(165))
+    PushInt(1)
+  Label(JumpId(166))
+    Beq(JumpId(167))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(15)
+    Call(CallId(33))
+    PushInt(120)
+    Call(CallId(47))
+    PushInt(16)
+    Call(CallId(33))
+    Jmp(JumpId(168))
+  Label(JumpId(167))
+    PushInt(120)
+    Call(CallId(47))
+    PushInt(17)
+    Call(CallId(33))
+  Label(JumpId(168))
+    Jmp(JumpId(169))
+  Label(JumpId(164))
+    PushInt(3)
+    Call(CallId(61))
+    PushInt(10)
+    Cmp
+    Bge(JumpId(170))
+    PushInt(0)
+    Jmp(JumpId(171))
+  Label(JumpId(170))
+    PushInt(1)
+  Label(JumpId(171))
+    PushInt(3)
+    Call(CallId(61))
+    PushInt(13)
+    Cmp
+    Blt(JumpId(172))
+    PushInt(0)
+    Jmp(JumpId(173))
+  Label(JumpId(172))
+    PushInt(1)
+  Label(JumpId(173))
+    LogicalAnd
+    Beq(JumpId(174))
+    PushInt(118)
+    Call(CallId(47))
+    PushInt(18)
+    Call(CallId(33))
+    Jmp(JumpId(175))
+  Label(JumpId(174))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(19)
+    Call(CallId(33))
+  Label(JumpId(175))
+  Label(JumpId(169))
+  Label(JumpId(159))
+    Jmp(JumpId(176))
+  Case(SwitchId(8), Val(14))
+  Case(SwitchId(8), Val(15))
+  Case(SwitchId(8), Val(30))
+    PushInt(13)
+    Call(CallId(124))
+    PushInt(100)
+    Cmp
+    Ble(JumpId(177))
+    PushInt(0)
+    Jmp(JumpId(178))
+  Label(JumpId(177))
+    PushInt(1)
+  Label(JumpId(178))
+    Beq(JumpId(179))
+    PushInt(13)
+    Call(CallId(130))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(180))
+    PushInt(0)
+    Jmp(JumpId(181))
+  Label(JumpId(180))
+    PushInt(1)
+  Label(JumpId(181))
+    Beq(JumpId(182))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(20)
+    Call(CallId(33))
+    Jmp(JumpId(183))
+  Label(JumpId(182))
+    PushInt(120)
+    Call(CallId(47))
+    PushInt(21)
+    Call(CallId(33))
+  Label(JumpId(183))
+    Jmp(JumpId(184))
+  Label(JumpId(179))
+    PushInt(13)
+    Call(CallId(124))
+    PushInt(100)
+    Cmp
+    Bgt(JumpId(185))
+    PushInt(0)
+    Jmp(JumpId(186))
+  Label(JumpId(185))
+    PushInt(1)
+  Label(JumpId(186))
+    PushInt(13)
+    Call(CallId(124))
+    PushInt(200)
+    Cmp
+    Ble(JumpId(187))
+    PushInt(0)
+    Jmp(JumpId(188))
+  Label(JumpId(187))
+    PushInt(1)
+  Label(JumpId(188))
+    LogicalAnd
+    Beq(JumpId(189))
+    PushInt(13)
+    Call(CallId(130))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(190))
+    PushInt(0)
+    Jmp(JumpId(191))
+  Label(JumpId(190))
+    PushInt(1)
+  Label(JumpId(191))
+    Beq(JumpId(192))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(22)
+    Call(CallId(33))
+    Jmp(JumpId(193))
+  Label(JumpId(192))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(23)
+    Call(CallId(33))
+  Label(JumpId(193))
+    Jmp(JumpId(194))
+  Label(JumpId(189))
+    PushInt(13)
+    Call(CallId(130))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(195))
+    PushInt(0)
+    Jmp(JumpId(196))
+  Label(JumpId(195))
+    PushInt(1)
+  Label(JumpId(196))
+    Beq(JumpId(197))
+    PushInt(118)
+    Call(CallId(47))
+    PushInt(24)
+    Call(CallId(33))
+    Jmp(JumpId(198))
+  Label(JumpId(197))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(25)
+    Call(CallId(33))
+  Label(JumpId(198))
+  Label(JumpId(194))
+  Label(JumpId(184))
+    Jmp(JumpId(199))
+  Case(SwitchId(8), Val(6))
+    PushInt(13)
+    Call(CallId(124))
+    PushInt(100)
+    Cmp
+    Ble(JumpId(200))
+    PushInt(0)
+    Jmp(JumpId(201))
+  Label(JumpId(200))
+    PushInt(1)
+  Label(JumpId(201))
+    Beq(JumpId(202))
+    PushInt(13)
+    Call(CallId(130))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(203))
+    PushInt(0)
+    Jmp(JumpId(204))
+  Label(JumpId(203))
+    PushInt(1)
+  Label(JumpId(204))
+    Beq(JumpId(205))
+    PushInt(118)
+    Call(CallId(47))
+    PushInt(26)
+    Call(CallId(33))
+    Jmp(JumpId(206))
+  Label(JumpId(205))
+    PushInt(118)
+    Call(CallId(47))
+    PushInt(27)
+    Call(CallId(33))
+  Label(JumpId(206))
+    Jmp(JumpId(207))
+  Label(JumpId(202))
+    PushInt(13)
+    Call(CallId(130))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(208))
+    PushInt(0)
+    Jmp(JumpId(209))
+  Label(JumpId(208))
+    PushInt(1)
+  Label(JumpId(209))
+    Beq(JumpId(210))
+    PushInt(118)
+    Call(CallId(47))
+    PushInt(28)
+    Call(CallId(33))
+    Jmp(JumpId(211))
+  Label(JumpId(210))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(29)
+    Call(CallId(33))
+  Label(JumpId(211))
+  Label(JumpId(207))
+    Jmp(JumpId(212))
+  Case(SwitchId(8), Val(21))
+    PushInt(13)
+    Call(CallId(124))
+    PushInt(100)
+    Cmp
+    Ble(JumpId(213))
+    PushInt(0)
+    Jmp(JumpId(214))
+  Label(JumpId(213))
+    PushInt(1)
+  Label(JumpId(214))
+    Beq(JumpId(215))
+    PushInt(13)
+    Call(CallId(130))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(216))
+    PushInt(0)
+    Jmp(JumpId(217))
+  Label(JumpId(216))
+    PushInt(1)
+  Label(JumpId(217))
+    Beq(JumpId(218))
+    PushInt(120)
+    Call(CallId(47))
+    PushInt(30)
+    Call(CallId(33))
+    Jmp(JumpId(219))
+  Label(JumpId(218))
+    PushInt(120)
+    Call(CallId(47))
+    PushInt(31)
+    Call(CallId(33))
+  Label(JumpId(219))
+    Jmp(JumpId(220))
+  Label(JumpId(215))
+    PushInt(13)
+    Call(CallId(130))
+    PushInt(0)
+    Cmp
+    Beq(JumpId(221))
+    PushInt(0)
+    Jmp(JumpId(222))
+  Label(JumpId(221))
+    PushInt(1)
+  Label(JumpId(222))
+    Beq(JumpId(223))
+    PushInt(120)
+    Call(CallId(47))
+    PushInt(32)
+    Call(CallId(33))
+    Jmp(JumpId(224))
+  Label(JumpId(223))
+    PushInt(117)
+    Call(CallId(47))
+    PushInt(33)
+    Call(CallId(33))
+  Label(JumpId(224))
+  Label(JumpId(220))
+    Jmp(JumpId(225))
+    Jmp(JumpId(226))
+  Label(JumpId(155))
+    Switch(SwitchId(8))
+  Label(JumpId(226))
+  Label(JumpId(225))
+  Label(JumpId(212))
+  Label(JumpId(199))
+  Label(JumpId(176))
+    PushInt(13)
+    Call(CallId(128))
+  Label(JumpId(154))
+  Label(JumpId(148))
+  Label(JumpId(144))
+  Label(JumpId(139))
+    Call(CallId(32))
+    PushInt(13)
+    PushVar(VarId(2))
+    Call(CallId(5))
+
+Script strings (IR):
+    0: "Oh, I'd forgotten!\r\nThanks for the great \r\nbirthday present!\x05"
+    1: "What a fantastic gift!\r\nHow did you know I love\r\nthese so much? Thanks!\x05"
+    2: "This is for me? \r\nGee, thanks...I love these!\x05"
+    3: "Wow, thanks...\r\nI'll remember this!\x05"
+    4: "Err...Thanks...\x05"
+    5: "Are you trying to goad\r\nme into losing my temper, \r\n\xFF!?\x05"
+    6: "I guess you're used to \r\nbugs, if you work on \r\na farm!\x05"
+    7: "Yikes!\r\nGet it away from me!\x05"
+    8: "Now this is a great one...!\r\nThanks! I think I'll give \r\nit to Harris' wife when\x05\r\nhe gets married!\x05"
+    9: "Well this is very fancy!\x05\x0COh...You mean it's for me?\r\nI can't exactly use it,\r\nbut I'll give it to \x05\r\nHarris' wife when he gets\x05\r\nmarried.\x05"
+    10: "I bet the animals get\r\nscared when you put this on!\x05\x0COh, it's for me? Thanks!\x05"
+    11: "Congratulations!\r\nWho's the lucky girl, \r\nif I may ask?\x05"
+    12: "Have you heard of the\r\nForget-me-not Valley?\x05\x0CI hear there's someone \r\nthere named \xFF,\r\nwho is very popular. \x05\x0CI'd like to meet him...\x05"
+    13: "A long time ago, someone\r\nnamed Kano used to stay at\r\nmy house. \x05\x0CHe used to love taking \r\npictures of Mineral Town.\x05\x0COne day, though, he just \r\nleft a letter and vanished.\x05\x0CI wonder where he is now?\x05"
+    14: "There's nothing more \r\npleasing to a mayor than \r\na peaceful village!\x05"
+    15: "You should at least \r\nrest on the weekends, \r\n\xFF!!\x05"
+    16: "I bet that's not going\r\nto happen though, is it?\x05"
+    17: "Hmmm...Looks like it's not\r\ngoing to stop. \x05\x0CAnd I was going to go to \r\nthe Square, too!\x05"
+    18: "Ellen and I always eat \r\nApple Pie together on the\r\nweekends. \x05\x0CThe Apple Pie at the \r\nInn is the best!\x05"
+    19: "Hi, \xFF!. \r\nI'm off to go shopping!\x05"
+    20: "Well, if it isn't \r\n\xFF!. \x05\x0CHow are you enjoying \r\nlife on the farm?\x05"
+    21: "I'm sure it will take some\r\ngetting used to.\x05\x0CA farm is a complicated \r\nplace, after all!\x05"
+    22: "Hi, \xFF!!\r\nHave you gotten the hang\r\nof farming, yet?\x05"
+    23: "Myself...I know more about\r\nrunning towns than farms!\x05"
+    24: "Hi, \xFF!!\r\nI hear you've been doing\r\nmighty well at the farm!\x05"
+    25: "People like me depend on\r\npeople like you to grow our\r\nfood, \x05\r\nso you have my gratitude!\x05"
+    26: "Hey there, \xFF!. \r\nDid you come here for a \r\nrest, too?\x05"
+    27: "I bet the animals are happy\r\non days like today, eh?\x05"
+    28: "Hello, \xFF!. \r\nHave you come to like \r\nour town yet?\x05"
+    29: "Just come to me if you\r\never get into any trouble.\r\nI give great advice.\x05"
+    30: "Do you think this \r\nrain will continue...?\x05"
+    31: "I was going to the Square, \r\nso I wish it were sunny...\x05\x0CIs there something new up \r\non the bulletin board?\r\nI forget.\x05"
+    32: "Too bad about this rain...\x05\x0CAnd it's my day off, too!\x05"
+    33: "Harris always comes by the \r\nInn at this hour, so I like\r\nto wait for him here on \x05\r\nrainy days.\x05\x0CJust to make sure everything\r\nis OK, you understand.\x05"
+*/

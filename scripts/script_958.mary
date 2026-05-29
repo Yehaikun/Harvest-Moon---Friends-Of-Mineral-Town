@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 958 EventScript_958
+{
+    const MESSAGE_0 = "Let\x81fs get together \r\nsometime. We can celebrate.\x05"
+    const MESSAGE_1 = "Nothing will change here \r\nat the Clinic. \x05"
+    if Func086(20) == 0
+    {
+        Proc083(20)
+    }
+    if Func085(20) == 0
+    {
+        SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(41)
+        Proc02D(20)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(20, 0)
+        Proc083(20)
+    }
+    else
+    {
+        SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(41)
+        Proc02D(20)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(20, 0)
+        Proc083(20)
+    }
+}

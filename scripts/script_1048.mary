@@ -1,0 +1,1640 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1048 EventScript_1048
+{
+    const MESSAGE_0 = "Mineral Town Friends!\r\n\t\r\n\t\r\nToday we'll introduce \r\nsomeone new.\r\n"
+    const MESSAGE_1 = "His name is Rick.\r\n\r\nHis birthday is the 27th of \r\nSummer.\r\n\r\nHe lives at the Poultry\r\nFarm.\r\n\r\nHis family is: \r\n"
+    const MESSAGE_2 = "his sister Popuri, \r\n"
+    const MESSAGE_3 = "his mother Lillia,\r\n"
+    const MESSAGE_4 = "and his dad Rod.\r\n"
+    const MESSAGE_5 = "He loves his sister very \r\nmuch, and is quite \r\nprotective of her. \r\nHe also has a fierce temper.\r\n\r\n\r\n\r\n"
+    const MESSAGE_6 = "Next time we'll introduce\r\nPopuri.\x05"
+    const MESSAGE_7 = "Mineral Town Friends!\r\n\r\n\r\nToday we'll introduce \r\nsomeone new.\r\n"
+    const MESSAGE_8 = "This is Popuri.\r\n\t\t\t\t\t\r\nHer birthday is the 10th of \r\nSummer.\r\n\t\t\r\nShe lives at the Poultry \r\nFarm. \r\n\r\nHer family is: \r\n"
+    const MESSAGE_9 = "Her name is Popuri.\r\n\r\nHer birthday is the 3rd of \r\nSummer.\r\n\r\nShe lives at the Poultry \r\nFarm. \r\n\r\nHer family is: \r\n"
+    const MESSAGE_10 = "her brother Rick, \r\n"
+    const MESSAGE_11 = "her mother Lillia,\r\n"
+    const MESSAGE_12 = "and her dad Rod.\r\n"
+    const MESSAGE_13 = "She is still childish, and\r\ncan be moody too.\r\nHer dream is to go live in\r\na big city, and she hates \r\nit when Rick babies her.\r\n\r\n\r\n\r\n"
+    const MESSAGE_14 = "Next time we'll introduce\r\nLillia.\x05"
+    const MESSAGE_15 = "Her name is Lillia.\r\n\r\nHer birthday is the 27th of \r\nFall.\r\n\r\nShe runs the Poultry Farm.\r\n\r\nHer family is: \r\n"
+    const MESSAGE_16 = "her daughter Popuri,\r\n"
+    const MESSAGE_17 = "her son Rick, \r\n"
+    const MESSAGE_18 = "and her husband Rod. \r\n"
+    const MESSAGE_19 = "When Lillia took sick long  \r\nago, Rod went off to find\r\nmedicine to heal her.\r\nShe's cheerful and \r\neasygoing.\r\n\r\n\r\n\r\n"
+    const MESSAGE_20 = "Next time we'll introduce\r\nCliff.\x05"
+    const MESSAGE_21 = "His name is Cliff.\r\n\r\nHis birthday is the \r\n6th of Summer.\r\n\r\nHe likes to hang out at the\r\nChurch so much you'd think\r\nhe lives there.\r\n\r\nHe left his family before \r\narriving in Mineral Town.\r\n\r\n"
+    const MESSAGE_22 = "At first he spent all his \r\ntime in confessional, but \r\nnow he's beginning to make\r\nmore friends. \r\n\r\n\r\n"
+    const MESSAGE_23 = "Next time we'll introduce\r\nZack.\x05"
+    const MESSAGE_24 = "His name is Zack.\r\n\r\nHis birthday is the 29th\r\nof Summer.\r\n\r\nHe owns a house in Mineral \r\nBeach. \r\n\r\nThere's someone else \r\nstaying there too...\r\n"
+    const MESSAGE_25 = "The wandering salesman\r\nWon stays there as well.\r\n\r\n"
+    const MESSAGE_26 = "He comes and picks up \r\nthings from your Shipment\r\nbox everyday (except \r\nholidays). He also delivers\r\nwhat you buy on the TV \r\nShopping Network.\r\n\r\n\r\n"
+    const MESSAGE_27 = "Next time we'll introduce\r\nthe Doctor.\x05"
+    const MESSAGE_28 = "This is the Doctor.\r\n\r\nHis birthday is the 17th\r\nof Fall. \r\n\r\nHe runs the Mineral Clinic.\r\n\r\nAt the Clinic, \r\n"
+    const MESSAGE_29 = "Elli works as a \r\nnurse-in-training.\r\n \r\n"
+    const MESSAGE_30 = "He seems cool and aloof,\r\nbut is passionate about his\r\npatients. He's tempted to \r\ngo study medicine in the \r\ncity, but doesn't want to\r\nleave them behind.\r\n\r\n\r\n"
+    const MESSAGE_31 = "Next time we'll introduce\r\nStaid.\x05"
+    const MESSAGE_32 = "His name is Staid.\r\n\r\nHis birthday is the 15th\r\nof Spring.\r\n\r\nHe's a Harvest Sprite who \r\nlives behind the Church.\r\n\r\nWith him live: \r\n"
+    const MESSAGE_33 = "Nappy\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\r\n"
+    const MESSAGE_34 = "Bold\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\r\n"
+    const MESSAGE_35 = "Chef\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\r\n"
+    const MESSAGE_36 = "Aqua\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\r\n"
+    const MESSAGE_37 = "Hoggy\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\r\n"
+    const MESSAGE_38 = "Timid\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\r\n"
+    const MESSAGE_39 = "The 7 brothers (?) live here\r\ntogether.\r\n\r\nStaid likes work the most \r\nout of all of them.\r\n\r\n\r\n"
+    const MESSAGE_40 = "Next time we'll introduce\r\nNappy.\x05"
+    const MESSAGE_41 = "His name is Nappy.\r\n\r\nHis birthday is the 22nd\r\nof Winter.\r\n\r\nHe's a Harvest Sprite who \r\nlives behind the Church.\r\n\r\nWith him live: \r\n"
+    const MESSAGE_42 = "Staid \r\n"
+    const MESSAGE_43 = "The 7 brothers (?) live here\r\ntogether.\r\n\r\nNappy is the most happy and\r\ncheerful of the bunch.\r\n\r\n\r\n"
+    const MESSAGE_44 = "Next time we'll introduce\r\nBold.\x05"
+    const MESSAGE_45 = "His name is Bold.\r\n\r\nHis birthday is the 4th\r\nof Spring.\r\n\r\nHe's a Harvest Sprite who \r\nlives behind the Church.\r\n\r\nWith him live: \r\n"
+    const MESSAGE_46 = "Staid\x81@\x81@\x81@\x81@\x81@\x81@\r\n"
+    const MESSAGE_47 = "Nappy\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\r\n"
+    const MESSAGE_48 = "The 7 brothers (?) live here\r\ntogether.\r\n\r\nBold is the most self-\r\nconfident of them all.\r\n\r\n\r\n"
+    const MESSAGE_49 = "Next time we'll introduce\r\nChef.\x05"
+    const MESSAGE_50 = "His name is Chef.\r\n\r\nHis birthday is the 14th\r\nof Fall.\r\n\r\nHe's a Harvest Sprite who \r\nlives behind the Church.\r\n\r\nWith him live: \r\n"
+    const MESSAGE_51 = "The 7 brothers (?) live here\r\ntogether.\r\n\r\nChef is the most \r\nconscientious of them all.\r\n\r\n\r\n"
+    const MESSAGE_52 = "Next time we'll introduce\r\nAqua.\x05"
+    const MESSAGE_53 = "His name is Aqua.\r\n\r\nHis birthday is the 26th\r\nof Spring.\r\n\r\nHe's a Harvest Sprite who \r\nlives behind the Church.\r\n\r\nWith him live: \r\n"
+    const MESSAGE_54 = "Nappy \r\n"
+    const MESSAGE_55 = "The 7 brothers (?) live here\r\ntogether.\r\n\r\nOf all of them, Aqua is the\r\nmost stylish and fashion-\r\nconscious.\r\n\r\n\r\n"
+    const MESSAGE_56 = "Next time we'll introduce\r\nHoggy.\x05"
+    const MESSAGE_57 = "His name is Hoggy.\r\n\r\nHis birthday is the 10th\r\nof Fall.\r\n\r\nHe's a Harvest Sprite who \r\nlives behind the Church.\r\n\r\nWith him live: \r\n"
+    const MESSAGE_58 = "The 7 brothers (?) live here\r\ntogether.\r\n\r\nHoggy enjoys eating more \r\nthan any of his brothers.\r\n\r\n\r\n"
+    const MESSAGE_59 = "Next time we'll introduce\r\nTimid.\x05"
+    const MESSAGE_60 = "His name is Timid.\r\n\r\nHis birthday is the 16th\r\nof Summer.\r\n\r\nHe's a Harvest Sprite who \r\nlives behind the Church.\r\n\r\nWith him live: \r\n"
+    const MESSAGE_61 = "The 7 brothers (?) live here\r\ntogether.\r\n\r\nTimid is the most, well, \r\ntimid out of all of them.\r\n\r\n\r\n"
+    const MESSAGE_62 = "Next time we'll introduce\r\nthe Harvest Goddess.\x05"
+    const MESSAGE_63 = "This is the Harvest \r\nGoddess. \r\n\r\nHer birthday is the 9th of \r\nSpring. \r\n\r\nShe lives (?) in the spring\r\non Mother's Hill. \r\n\r\nShe'll appear if you throw \r\nan offering into her spring.\r\n\r\n"
+    const MESSAGE_64 = "This is the Harvest \r\nGoddess. \r\n\r\nHer birthday is the 8th of \r\nSpring. \r\n\r\nShe lives (?) in the spring\r\non Mother's Hill. \r\n\r\nShe'll appear if you throw \r\nan offering into her spring.\r\n\r\n"
+    const MESSAGE_65 = "She's in charge of \r\ncommunications, and hates\r\nhaving to appear whenever\r\nsomeone throws an offering\r\ninto her spring. \r\n\r\n\r\n"
+    const MESSAGE_66 = "Next time we'll introduce\r\nthe Gourmet.\x05"
+    const MESSAGE_67 = "This is the Gourmet.\r\n\r\nHis birthday is...unknown.\r\n\r\nHe's the judge of the \r\nCooking Festival. \r\n"
+    const MESSAGE_68 = "More than anything \r\nelse, he loves to eat. He \r\nknows everything about food.\r\n\r\n\r\n"
+    const MESSAGE_69 = "Next time we'll introduce\r\nEllen.\x05"
+    const MESSAGE_70 = "This is Ellen.\r\n\r\nHer birthday is the 13th of\r\nWinter.\r\n\r\nShe lives in a house on the\r\nnorth side of Mineral Town.\r\n\r\nHer family is:    \r\n"
+    const MESSAGE_71 = "her granddaughter Elli\r\n"
+    const MESSAGE_72 = "and her grandson Stu. \r\n"
+    const MESSAGE_73 = "She can't walk very well\r\nbecause of sickness.\r\nShe used to be a midwife.\r\nShe worries about Elli. \r\n\r\n\r\n"
+    const MESSAGE_74 = "Next time we'll introduce\r\nElli.\x05"
+    const MESSAGE_75 = "This is Elli.\r\n\r\nHer birthday is the 20th of \r\nSpring.\r\n\r\nShe wants to become a Nurse,\r\nand works at the Clinic.\r\n\r\nHer family is: \r\n"
+    const MESSAGE_76 = "This is Elli.\r\n\r\nHer birthday is the 16th of \r\nSpring.\r\n\r\nShe wants to become a Nurse,\r\nand works at the Clinic.\r\n\r\nHer family is: \r\n"
+    const MESSAGE_77 = "her grandmother Ellen and\r\n"
+    const MESSAGE_78 = "her younger brother Stu. \r\n"
+    const MESSAGE_79 = "Elli believes in hard work,\r\nmaybe because she's had to \r\nraise her brother after her\r\nparents died. She can be \r\nvery strict.\r\n\r\n\r\n"
+    const MESSAGE_80 = "Next time we'll introduce\r\nStu.\x05"
+    const MESSAGE_81 = "This is Stu.\r\n\r\nHis birthday is the 5th of \r\nFall.\r\n\r\nHe lives in a house on the\r\nnorth side of Mineral Town.\r\n\r\nHis family is:    \r\n"
+    const MESSAGE_82 = "his sister Elli and \r\n"
+    const MESSAGE_83 = "his grandmother Ellen.\x05"
+    const MESSAGE_84 = "Stu loves to play jokes\r\non people, but he's also a \r\ncry-baby. Still, the \r\ntownspeople all like him.\r\n\r\n\r\n"
+    const MESSAGE_85 = "Next time we'll introduce\r\nJeff.\x05"
+    const MESSAGE_86 = "This is Jeff.\r\n\r\nHis birthday is the 29th\r\nof Winter.\r\n\r\nHe runs the Supermarket.\r\n\r\nHis family is: \r\n"
+    const MESSAGE_87 = "his wife Sasha and \r\n"
+    const MESSAGE_88 = "his daughter Karen. \r\n"
+    const MESSAGE_89 = "He can never stand up to \r\npeople, so he always lets\r\neveryone buy on credit.\r\nSo, he suffers from ulcers.\r\nHe's been picked on by Duke\r\nfrom childhood.\r\n\r\n\r\n"
+    const MESSAGE_90 = "Next time we'll introduce\r\nKaren.\x05"
+    const MESSAGE_91 = "This is Karen.\r\n\r\nHer birthday is the 23rd\r\nof Fall. \r\n\r\nHer father runs the\r\nSupermarket.\r\n\r\nHer family is: \r\n"
+    const MESSAGE_92 = "This is Karen.\r\n\r\nHer birthday is the 15th\r\nof Fall. \r\n\r\nHer father runs the\r\nSupermarket.\r\n\r\nHer family is: \r\n"
+    const MESSAGE_93 = "her father Jeff and \r\n"
+    const MESSAGE_94 = "her mother Sasha.  \r\n"
+    const MESSAGE_95 = "She takes after her mother,\r\nso she likes to help folks.\r\nShe likes to drink and \r\ndance, but can't cook \r\nat all. \r\n\r\n\r\n"
+    const MESSAGE_96 = "Next time we'll introduce\r\nSasha.\x05"
+    const MESSAGE_97 = "This is Sasha. \r\n\r\nHer birthday is the 30th\r\nof Spring. \r\n\r\nShe runs the Supermarket.\r\n\r\nHer family is: \r\n"
+    const MESSAGE_98 = "her husband Jeff and \r\n"
+    const MESSAGE_99 = "her daughter Karen.\r\n"
+    const MESSAGE_100 = "Unlike her husband, she\r\nis confident and assertive.\r\nShe loves her husband, but\r\nhas to look after him.\r\n\r\n\r\n"
+    const MESSAGE_101 = "This is Doug. \r\n\r\nHis birthday is the 11th\r\nof Winter.\r\n\r\nHe runs a bar, restaurant\r\nand inn called \"Doug's \r\nInn.\"\r\nHis family is: \r\n"
+    const MESSAGE_102 = "He always worries about\r\nAnn, whom he raised alone.\r\nHe still can't forget Ann's\r\nmom, who died. \r\n\r\n\r\n"
+    const MESSAGE_103 = "Next time we'll introduce\r\nAnn.\x05"
+    const MESSAGE_104 = "This is Ann.\r\n\r\nHer birthday is the 22nd of\r\nSummer.\r\n\r\nShe always helps out her\r\ndad at Doug's Inn. \r\n\r\nHer family is: \r\n"
+    const MESSAGE_105 = "This is Ann.\r\n\r\nHer birthday is the 17th of\r\nSummer.\r\n\r\nShe always helps out her\r\ndad at Doug's Inn. \r\n\r\nHer family is: \r\n"
+    const MESSAGE_106 = "her dad Doug. \r\n"
+    const MESSAGE_107 = "She has no confidence \r\nin herself at all when it \r\ncomes to love.\r\nMaybe because she's a \r\ntom-boy. \r\n\r\n\r\n"
+    const MESSAGE_108 = "Next time we'll introduce\r\nthe Kappa.\x05"
+    const MESSAGE_109 = "This is the Kappa. \r\n\r\nHis (?) birthday is...\r\nunknown.\r\n\r\nHe lives in the lake on \r\nMother's Hill.\r\n\r\nHe likes Cucumbers a lot.\r\nHe also gets upset when he\r\ngets caught up in the hooks\r\nwhen people fish in the \r\nlake. \r\n\r\n\r\n"
+    const MESSAGE_110 = "Next time we'll introduce\r\nBasil.\x05"
+    const MESSAGE_111 = "This is Basil.\r\n\r\nHis birthday is the 11th\r\nof Summer. \r\n\r\nHe's a scientist, and books\r\nwritten by him are at\r\nMary's Library.\r\n\r\nHis family is: \r\n"
+    const MESSAGE_112 = "his wife Anna and \r\n"
+    const MESSAGE_113 = "his daughter Mary.\r\n"
+    const MESSAGE_114 = "He came to Mineral Town\r\nwith his family to study \r\nthe flora there. \r\n\r\n\r\n"
+    const MESSAGE_115 = "Next time we'll introduce\r\nMary.\x05"
+    const MESSAGE_116 = "This is Mary.\r\n\r\nHer birthday is the 25th of\r\nWinter.\r\n\r\nShe works at the Library.\r\n\r\nHer birthday is:   \r\n"
+    const MESSAGE_117 = "This is Mary.\r\n\r\nHer birthday is the 20th of\r\nWinter.\r\n\r\nShe works at the Library.\r\n\r\nHer birthday is:   \r\n"
+    const MESSAGE_118 = "her dad Basil and \r\n"
+    const MESSAGE_119 = "her mother Anna.  \r\n"
+    const MESSAGE_120 = "She loves books, and even\r\nwrites novels herself. \r\nShe's not very interested\r\nin romance at all. \r\n\r\n \r\n"
+    const MESSAGE_121 = "Next time we'll introduce\r\nAnna.\x05"
+    const MESSAGE_122 = "This is Anna.\r\n\r\nHer birthday is the 23rd of\r\nFall. \r\n\r\nShe lives next to the \r\nLibrary. \r\n\r\nHer family is:  \r\n"
+    const MESSAGE_123 = "her husband Basil and \r\n"
+    const MESSAGE_124 = "her daughter Mary. \r\n"
+    const MESSAGE_125 = "She is enjoying the country\r\nliving but a little bored\r\nbecause Basil is always\r\nbusy studying.\r\nGood at baking.\x81@\x81@\x81@\r\n\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\r\n\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\x81@\r\n"
+    const MESSAGE_126 = "Next time we'll introduce\r\nWon.\x05"
+    const MESSAGE_127 = "This is Won.\r\n\r\nHis birthday is the 19th\r\nof Winter.\r\n\r\nHe's a wandering salesman \r\nwho just appeared in\r\nMineral Town. For some \r\nreason, he \r\n"
+    const MESSAGE_128 = "lives at Zack's house,\r\nwhere he also runs his\r\nshop.  \r\n \r\n"
+    const MESSAGE_129 = "He comes to the farm once \r\nin a while to sell his \r\nwares.\r\n\r\n\r\n"
+    const MESSAGE_130 = "Next time we'll introduce\r\nThomas.\x05"
+    const MESSAGE_131 = "This is Thomas.\r\n\r\nHis birthday is the 25th\r\nof Summer.\r\n\r\nHe is a Mayor, and lives in\r\na house on the north side.\r\n\r\nHis family is: \r\n"
+    const MESSAGE_132 = "his son Harris.  \r\n"
+    const MESSAGE_133 = "A photographer named \r\nKano used to live with him,\r\nbut no more.\r\n\r\n\r\nHe believes in serving the\r\ntownspeople as well as he\r\ncan. He takes Ellen Apple\r\nPie every Sunday. He wants \r\neverybody in his town to \r\nbe friendly to each other.\r\n\r\n\r\n \r\n"
+    const MESSAGE_134 = "Next time we'll introduce\r\nHarris.\x05"
+    const MESSAGE_135 = "This is Harris. \r\n\r\nHis birthday is the 4th of\r\nSummer. \r\n\r\nHe is a policeman, and \r\nlives on the north side.\r\n\r\nHis family is: \r\n"
+    const MESSAGE_136 = "his father Thomas.\r\n"
+    const MESSAGE_137 = "He's in charge of keeping\r\nthe peace in town.\r\nHe's in love with Aja, who\r\nlives in the city. \r\n\r\n\r\n"
+    const MESSAGE_138 = "Next time we'll introduce\r\nDuke.\x05"
+    const MESSAGE_139 = "This is Duke\r\n\r\nHis birthday is the 15th\r\nof Winter.\r\n\r\nHe runs Aja Winery. \r\n\r\nHis family is:  \r\n"
+    const MESSAGE_140 = "his wife Manna and  \r\n"
+    const MESSAGE_141 = "his daughter Aja. \r\n"
+    const MESSAGE_142 = "He liked drinking to begin\r\nwith, but ever since Aja \r\nleft he's been drinking \r\ntoo much. He's a bully to \r\neveryone (except Manna, \r\nof course).\r\n\r\n \r\n"
+    const MESSAGE_143 = "Next time we'll introduce\r\nManna.\x05"
+    const MESSAGE_144 = "This is Manna.\r\n\r\nHer birthday is the 11th of \r\nFall. \r\n\r\nShe runs Aja Winery.\r\n\r\nHer family is:  \r\n"
+    const MESSAGE_145 = "her husband Duke \r\n"
+    const MESSAGE_146 = "and her daughter Aja. \r\n"
+    const MESSAGE_147 = "She loves to talk and \r\ngossip about others.\r\nShe always hopes that Aja\r\nwill come back home. \r\n\r\n\r\n"
+    const MESSAGE_148 = "Next time we'll introduce\r\nCarter.\x05"
+    const MESSAGE_149 = "This is Carter. \r\n\r\nHis birthday is the 20th of\r\nFall. \r\n\r\nHe is a priest who lives \r\nat the Church. \r\n"
+    const MESSAGE_150 = "He came to Mineral Town to\r\nspread the gospel, but seems\r\nnot to preach very much \r\nlately. He can lift curses \r\nfrom Tools, but wants to \r\nhelp people in other ways,\r\ntoo. \r\n\r\n \r\n"
+    const MESSAGE_151 = "Next time we'll introduce\r\nKai.\x05"
+    const MESSAGE_152 = "This is Kai. \r\n\r\nHis birthday is the 22nd of\r\nSummer. \r\n\r\nHe runs Kai's Beach House\r\nduring the Summer. \r\n"
+    const MESSAGE_153 = "He comes from the city to \r\nspend Summers in Mineral\r\nBeach. He's popular with \r\nwomen and children, but men\r\ndon't like his attitude\r\nmuch. \r\n\r\n\r\n"
+    const MESSAGE_154 = "Next time we'll introduce\r\nGray.\x05"
+    const MESSAGE_155 = "This is Gray. \r\n\r\nHis birthday is the 6th \r\nof Winter.\r\n\r\nHe is a blacksmith's apprentice.\r\n\r\nHis family is: \r\n"
+    const MESSAGE_156 = "his uncle Saibara. \r\n"
+    const MESSAGE_157 = "He came to Mineral Town to\r\napprentice with his uncle.\r\nHe hated it at first, but \r\nthen began to like it.\r\nHe's very prideful, but \r\nwith a good heart. \r\n\r\n\r\n"
+    const MESSAGE_158 = "Next time we'll introduce\r\nSaibara.\x05"
+    const MESSAGE_159 = "This is Saibara.\r\n\r\nHis birthday is the 11th of\r\nSpring.\r\n\r\nHe's a blacksmith.\r\n\r\nHis family is: \r\n"
+    const MESSAGE_160 = "his grandson Gray. \r\n"
+    const MESSAGE_161 = "He's a stubborn old man,\r\nbut he takes great pride in\r\nhis work. He's training his\r\nnephew Gray.\r\n\r\n\r\n \r\n"
+    const MESSAGE_162 = "Next time we'll introduce\r\nGotz.\x05"
+    const MESSAGE_163 = "This is Gotz.\r\n\r\nHis birthday is the 2nd of\r\nFall. \r\n\r\nHe's a woodcutter who lives\r\nalone in the woods.\r\n \r\n"
+    const MESSAGE_164 = "Both his daughter and\r\nwife died on the mountain\r\nyears ago. \r\n\r\n\r\n"
+    const MESSAGE_165 = "Next time we'll introduce\r\nMay.\x05"
+    const MESSAGE_166 = "This is May.\r\n\r\nHer birthday is the 26th \r\nof Winter.\r\n\r\nShe lives in Yodel Farm. \r\n\r\nHer family is: \r\n"
+    const MESSAGE_167 = "her grandfather Barley\r\n"
+    const MESSAGE_168 = "and her mother Joanna. \r\n \r\n"
+    const MESSAGE_169 = "May is a very sweet little\r\ngirl, whom everybody loves.\r\nShe hopes everyday for her\r\nmom to come back. \r\n\r\n\r\n"
+    const MESSAGE_170 = "Next time we'll introduce\r\nBarley.\x05"
+    const MESSAGE_171 = "This is Barley.\r\n\r\nHis birthday is the 17th \r\nof Spring.\r\n\r\nHe runs Yodel Farm.\r\n\r\nHis family is:  \r\n"
+    const MESSAGE_172 = "his granddaughter May and \r\n"
+    const MESSAGE_173 = "his daughter Joanna. \r\n"
+    const MESSAGE_174 = "His daughter Joanna left to\r\nthe city, then returned \r\nwith her daughter, May.\r\nHowever, she then left May\r\nwith Barley before leaving \r\nagain. Barley loves May \r\nvery much, so he worries \r\nabout her. \r\n\r\n\r\n"
+    const MESSAGE_175 = "Next time we'll introduce\r\nsomeone who never appears.\x05"
+    const MESSAGE_176 = "Today we'll introduce \r\nsomeone new.\r\n\r\n\r\nThis is Kano.\r\nHis birthday is the 2nd of \r\nWinter. \r\n\r\nHe takes photographs of \r\nMineral Town to show people\r\nliving in harmony with \r\nNature. \r\n\r\n\r\nThis is Louis.\r\nHis birthday is the 2nd of \r\nSpring. \r\n\r\nHe studies insects, and \r\ncame to Mineral Town to\r\nwrite about Bees.\r\n\r\n\r\nThis is Greg.\r\nHis birthday is the 29th\r\nof Spring.\r\nHe loves fishing, and \r\nFishing Rods in particular. \r\n"
+    const MESSAGE_177 = "Next time we'll introduce\r\nRick.\x05"
+    var var_0
+    TalkOpen()
+    switch Func03E(493)
+    {
+        case 0
+        {
+            var_0 = Func0FE(MESSAGE_0)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(0)
+            Proc02D(2)
+            TalkMessageSlow(MESSAGE_1)
+            Proc030(13)
+            Proc02D(3)
+            TalkMessageSlow(MESSAGE_2)
+            Proc030(15)
+            Proc02D(1)
+            TalkMessageSlow(MESSAGE_3)
+            Proc02F()
+            Proc031()
+            TalkMessageSlow(MESSAGE_4)
+            Proc030(1)
+            Proc02D(2)
+            TalkMessageSlow(MESSAGE_5)
+            Proc030(8)
+            Proc02D(3)
+            TalkMessageSlow(MESSAGE_6)
+        }
+        case 1
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(7)
+            Proc02D(3)
+            if Func03E(8) == 1 && Func03E(9) == 3
+            {
+                TalkMessageSlow(MESSAGE_8)
+            }
+            else
+            {
+                TalkMessageSlow(MESSAGE_9)
+            }
+            Proc030(6)
+            Proc02D(2)
+            TalkMessageSlow(MESSAGE_10)
+            Proc030(15)
+            Proc02D(1)
+            TalkMessageSlow(MESSAGE_11)
+            Proc02F()
+            Proc031()
+            TalkMessageSlow(MESSAGE_12)
+            Proc030(8)
+            Proc02D(3)
+            TalkMessageSlow(MESSAGE_13)
+            Proc030(15)
+            Proc02D(1)
+            TalkMessageSlow(MESSAGE_14)
+        }
+        case 2
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(14)
+            Proc02D(1)
+            TalkMessageSlow(MESSAGE_15)
+            Proc030(13)
+            Proc02D(3)
+            TalkMessageSlow(MESSAGE_16)
+            Proc030(6)
+            Proc02D(2)
+            TalkMessageSlow(MESSAGE_17)
+            Proc02F()
+            Proc031()
+            TalkMessage(MESSAGE_18)
+            Proc030(15)
+            Proc02D(1)
+            TalkMessageSlow(MESSAGE_19)
+            Proc030(24)
+            Proc02D(23)
+            TalkMessageSlow(MESSAGE_20)
+        }
+        case 3
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(23)
+            Proc02D(23)
+            TalkMessageSlow(MESSAGE_21)
+            Proc030(29)
+            Proc02D(23)
+            TalkMessageSlow(MESSAGE_22)
+            Proc030(32)
+            Proc02D(28)
+            TalkMessageSlow(MESSAGE_23)
+        }
+        case 4
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(31)
+            Proc02D(28)
+            TalkMessageSlow(MESSAGE_24)
+            Proc030(115)
+            Proc02D(29)
+            TalkMessageSlow(MESSAGE_25)
+            Proc030(32)
+            Proc02D(28)
+            TalkMessageSlow(MESSAGE_26)
+            Proc030(36)
+            Proc02D(20)
+            TalkMessageSlow(MESSAGE_27)
+        }
+        case 5
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(36)
+            Proc02D(20)
+            TalkMessageSlow(MESSAGE_28)
+            Proc030(122)
+            Proc02D(21)
+            TalkMessageSlow(MESSAGE_29)
+            Proc030(41)
+            Proc02D(20)
+            TalkMessageSlow(MESSAGE_30)
+            Proc030(42)
+            Proc02D(36)
+            TalkMessageSlow(MESSAGE_31)
+        }
+        case 6
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(43)
+            Proc02D(36)
+            TalkMessageSlow(MESSAGE_32)
+            Proc030(44)
+            Proc02D(37)
+            TalkMessageSlow(MESSAGE_33)
+            Proc030(46)
+            Proc02D(38)
+            TalkMessageSlow(MESSAGE_34)
+            Proc030(48)
+            Proc02D(39)
+            TalkMessageSlow(MESSAGE_35)
+            Proc030(50)
+            Proc02D(40)
+            TalkMessageSlow(MESSAGE_36)
+            Proc030(52)
+            Proc02D(41)
+            TalkMessageSlow(MESSAGE_37)
+            Proc030(54)
+            Proc02D(42)
+            TalkMessageSlow(MESSAGE_38)
+            Proc030(42)
+            Proc02D(36)
+            TalkMessageSlow(MESSAGE_39)
+            Proc030(44)
+            Proc02D(37)
+            TalkMessageSlow(MESSAGE_40)
+        }
+        case 7
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(45)
+            Proc02D(37)
+            TalkMessageSlow(MESSAGE_41)
+            Proc030(42)
+            Proc02D(36)
+            TalkMessageSlow(MESSAGE_42)
+            Proc030(46)
+            Proc02D(38)
+            TalkMessageSlow(MESSAGE_34)
+            Proc030(48)
+            Proc02D(39)
+            TalkMessageSlow(MESSAGE_35)
+            Proc030(50)
+            Proc02D(40)
+            TalkMessageSlow(MESSAGE_36)
+            Proc030(52)
+            Proc02D(41)
+            TalkMessageSlow(MESSAGE_37)
+            Proc030(54)
+            Proc02D(42)
+            TalkMessageSlow(MESSAGE_38)
+            Proc030(44)
+            Proc02D(37)
+            TalkMessageSlow(MESSAGE_43)
+            Proc030(46)
+            Proc02D(38)
+            TalkMessageSlow(MESSAGE_44)
+        }
+        case 8
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(47)
+            Proc02D(38)
+            TalkMessageSlow(MESSAGE_45)
+            Proc030(42)
+            Proc02D(36)
+            TalkMessageSlow(MESSAGE_46)
+            Proc030(44)
+            Proc02D(37)
+            TalkMessageSlow(MESSAGE_47)
+            Proc030(48)
+            Proc02D(39)
+            TalkMessageSlow(MESSAGE_35)
+            Proc030(50)
+            Proc02D(40)
+            TalkMessageSlow(MESSAGE_36)
+            Proc030(52)
+            Proc02D(41)
+            TalkMessageSlow(MESSAGE_37)
+            Proc030(54)
+            Proc02D(42)
+            TalkMessageSlow(MESSAGE_38)
+            Proc030(46)
+            Proc02D(38)
+            TalkMessageSlow(MESSAGE_48)
+            Proc030(48)
+            Proc02D(39)
+            TalkMessageSlow(MESSAGE_49)
+        }
+        case 9
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(49)
+            Proc02D(39)
+            TalkMessageSlow(MESSAGE_50)
+            Proc030(42)
+            Proc02D(36)
+            TalkMessageSlow(MESSAGE_46)
+            Proc030(44)
+            Proc02D(37)
+            TalkMessageSlow(MESSAGE_33)
+            Proc030(46)
+            Proc02D(38)
+            TalkMessageSlow(MESSAGE_34)
+            Proc030(50)
+            Proc02D(40)
+            TalkMessageSlow(MESSAGE_36)
+            Proc030(52)
+            Proc02D(41)
+            TalkMessageSlow(MESSAGE_37)
+            Proc030(54)
+            Proc02D(42)
+            TalkMessageSlow(MESSAGE_38)
+            Proc030(48)
+            Proc02D(39)
+            TalkMessageSlow(MESSAGE_51)
+            Proc030(50)
+            Proc02D(40)
+            TalkMessageSlow(MESSAGE_52)
+        }
+        case 10
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(51)
+            Proc02D(40)
+            TalkMessageSlow(MESSAGE_53)
+            Proc030(42)
+            Proc02D(36)
+            TalkMessageSlow(MESSAGE_42)
+            Proc030(44)
+            Proc02D(37)
+            TalkMessageSlow(MESSAGE_54)
+            Proc030(46)
+            Proc02D(38)
+            TalkMessageSlow(MESSAGE_34)
+            Proc030(48)
+            Proc02D(39)
+            TalkMessageSlow(MESSAGE_35)
+            Proc030(52)
+            Proc02D(41)
+            TalkMessageSlow(MESSAGE_37)
+            Proc030(54)
+            Proc02D(42)
+            TalkMessageSlow(MESSAGE_38)
+            Proc030(50)
+            Proc02D(40)
+            TalkMessageSlow(MESSAGE_55)
+            Proc030(52)
+            Proc02D(41)
+            TalkMessageSlow(MESSAGE_56)
+        }
+        case 11
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(53)
+            Proc02D(41)
+            TalkMessageSlow(MESSAGE_57)
+            Proc030(42)
+            Proc02D(36)
+            TalkMessageSlow(MESSAGE_42)
+            Proc030(44)
+            Proc02D(37)
+            TalkMessageSlow(MESSAGE_54)
+            Proc030(46)
+            Proc02D(38)
+            TalkMessageSlow(MESSAGE_34)
+            Proc030(48)
+            Proc02D(39)
+            TalkMessageSlow(MESSAGE_35)
+            Proc030(50)
+            Proc02D(40)
+            TalkMessageSlow(MESSAGE_36)
+            Proc030(54)
+            Proc02D(42)
+            TalkMessageSlow(MESSAGE_38)
+            Proc030(52)
+            Proc02D(41)
+            TalkMessageSlow(MESSAGE_58)
+            Proc030(54)
+            Proc02D(42)
+            TalkMessageSlow(MESSAGE_59)
+        }
+        case 12
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(55)
+            Proc02D(42)
+            TalkMessageSlow(MESSAGE_60)
+            Proc030(42)
+            Proc02D(36)
+            TalkMessageSlow(MESSAGE_42)
+            Proc030(44)
+            Proc02D(37)
+            TalkMessageSlow(MESSAGE_54)
+            Proc030(46)
+            Proc02D(38)
+            TalkMessageSlow(MESSAGE_34)
+            Proc030(48)
+            Proc02D(39)
+            TalkMessageSlow(MESSAGE_35)
+            Proc030(50)
+            Proc02D(40)
+            TalkMessageSlow(MESSAGE_36)
+            Proc030(52)
+            Proc02D(41)
+            TalkMessageSlow(MESSAGE_37)
+            Proc030(54)
+            Proc02D(42)
+            TalkMessageSlow(MESSAGE_61)
+            Proc030(57)
+            Proc02D(31)
+            TalkMessageSlow(MESSAGE_62)
+        }
+        case 13
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(56)
+            Proc02D(31)
+            if Func03E(8) == 0 && Func03E(9) == 8
+            {
+                TalkMessageSlow(MESSAGE_63)
+            }
+            else
+            {
+                TalkMessageSlow(MESSAGE_64)
+            }
+            Proc030(57)
+            Proc02D(31)
+            TalkMessageSlow(MESSAGE_65)
+            Proc030(60)
+            Proc02D(30)
+            TalkMessageSlow(MESSAGE_66)
+        }
+        case 14
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(62)
+            Proc02D(30)
+            TalkMessageSlow(MESSAGE_67)
+            Proc030(60)
+            Proc02D(30)
+            TalkMessageSlow(MESSAGE_68)
+            Proc030(64)
+            Proc02D(15)
+            TalkMessageSlow(MESSAGE_69)
+        }
+        case 15
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(63)
+            Proc02D(15)
+            TalkMessageSlow(MESSAGE_70)
+            Proc030(127)
+            Proc02D(21)
+            TalkMessageSlow(MESSAGE_71)
+            Proc030(131)
+            Proc02D(16)
+            TalkMessageSlow(MESSAGE_72)
+            Proc030(64)
+            Proc02D(15)
+            TalkMessageSlow(MESSAGE_73)
+            Proc030(122)
+            Proc02D(21)
+            TalkMessageSlow(MESSAGE_74)
+        }
+        case 16
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(121)
+            Proc02D(21)
+            if Func03E(8) == 0 && Func03E(9) == 16
+            {
+                TalkMessageSlow(MESSAGE_75)
+            }
+            else
+            {
+                TalkMessageSlow(MESSAGE_76)
+            }
+            Proc030(64)
+            Proc02D(15)
+            TalkMessageSlow(MESSAGE_77)
+            Proc030(131)
+            Proc02D(16)
+            TalkMessageSlow(MESSAGE_78)
+            Proc030(122)
+            Proc02D(21)
+            TalkMessageSlow(MESSAGE_79)
+            Proc030(132)
+            Proc02D(16)
+            TalkMessageSlow(MESSAGE_80)
+        }
+        case 17
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(128)
+            Proc02D(16)
+            TalkMessageSlow(MESSAGE_81)
+            Proc030(127)
+            Proc02D(21)
+            TalkMessageSlow(MESSAGE_82)
+            Proc030(64)
+            Proc02D(15)
+            TalkMessage(MESSAGE_83)
+            Proc030(129)
+            Proc02D(16)
+            TalkMessageSlow(MESSAGE_84)
+            Proc030(68)
+            Proc02D(17)
+            TalkMessageSlow(MESSAGE_85)
+        }
+        case 18
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(67)
+            Proc02D(17)
+            TalkMessageSlow(MESSAGE_86)
+            Proc030(80)
+            Proc02D(18)
+            TalkMessageSlow(MESSAGE_87)
+            Proc030(78)
+            Proc02D(19)
+            TalkMessageSlow(MESSAGE_88)
+            Proc030(68)
+            Proc02D(17)
+            TalkMessageSlow(MESSAGE_89)
+            Proc030(73)
+            Proc02D(19)
+            TalkMessageSlow(MESSAGE_90)
+        }
+        case 19
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(72)
+            Proc02D(19)
+            if Func03E(8) == 2 && Func03E(9) == 15
+            {
+                TalkMessageSlow(MESSAGE_91)
+            }
+            else
+            {
+                TalkMessageSlow(MESSAGE_92)
+            }
+            Proc030(71)
+            Proc02D(17)
+            TalkMessageSlow(MESSAGE_93)
+            Proc030(80)
+            Proc02D(18)
+            TalkMessageSlow(MESSAGE_94)
+            Proc030(73)
+            Proc02D(19)
+            TalkMessageSlow(MESSAGE_95)
+            Proc030(80)
+            Proc02D(18)
+            TalkMessageSlow(MESSAGE_96)
+        }
+        case 20
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(79)
+            Proc02D(18)
+            TalkMessageSlow(MESSAGE_97)
+            Proc030(71)
+            Proc02D(17)
+            TalkMessageSlow(MESSAGE_98)
+            Proc030(78)
+            Proc02D(19)
+            TalkMessage(MESSAGE_99)
+            Proc030(80)
+            Proc02D(18)
+            TalkMessageSlow(MESSAGE_100)
+            Proc030(84)
+            Proc02D(24)
+        }
+        case 21
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(83)
+            Proc02D(24)
+            TalkMessageSlow(MESSAGE_101)
+            Proc030(93)
+            Proc02D(25)
+            Proc030(84)
+            Proc02D(24)
+            TalkMessageSlow(MESSAGE_102)
+            Proc030(88)
+            Proc02D(25)
+            TalkMessageSlow(MESSAGE_103)
+        }
+        case 22
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(87)
+            Proc02D(25)
+            if Func03E(8) == 1 && Func03E(9) == 17
+            {
+                TalkMessageSlow(MESSAGE_104)
+            }
+            else
+            {
+                TalkMessageSlow(MESSAGE_105)
+            }
+            Proc030(84)
+            Proc02D(24)
+            TalkMessageSlow(MESSAGE_106)
+            Proc030(88)
+            Proc02D(25)
+            TalkMessageSlow(MESSAGE_107)
+            Proc030(98)
+            Proc02D(32)
+            TalkMessageSlow(MESSAGE_108)
+        }
+        case 23
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(98)
+            Proc02D(32)
+            TalkMessageSlow(MESSAGE_109)
+            Proc030(100)
+            Proc02D(10)
+            TalkMessageSlow(MESSAGE_110)
+        }
+        case 24
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(99)
+            Proc02D(10)
+            TalkMessageSlow(MESSAGE_111)
+            Proc030(111)
+            Proc02D(11)
+            TalkMessageSlow(MESSAGE_112)
+            Proc030(109)
+            Proc02D(12)
+            TalkMessageSlow(MESSAGE_113)
+            Proc030(100)
+            Proc02D(10)
+            TalkMessageSlow(MESSAGE_114)
+            Proc030(104)
+            Proc02D(12)
+            TalkMessageSlow(MESSAGE_115)
+        }
+        case 25
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(103)
+            Proc02D(12)
+            if Func03E(8) == 3 && Func03E(9) == 20
+            {
+                TalkMessageSlow(MESSAGE_116)
+            }
+            else
+            {
+                TalkMessageSlow(MESSAGE_117)
+            }
+            Proc030(100)
+            Proc02D(10)
+            TalkMessageSlow(MESSAGE_118)
+            Proc030(111)
+            Proc02D(11)
+            TalkMessageSlow(MESSAGE_119)
+            Proc030(104)
+            Proc02D(12)
+            TalkMessageSlow(MESSAGE_120)
+            Proc030(111)
+            Proc02D(11)
+            TalkMessageSlow(MESSAGE_121)
+        }
+        case 26
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(110)
+            Proc02D(11)
+            TalkMessageSlow(MESSAGE_122)
+            Proc030(100)
+            Proc02D(10)
+            TalkMessageSlow(MESSAGE_123)
+            Proc030(109)
+            Proc02D(12)
+            TalkMessageSlow(MESSAGE_124)
+            Proc030(111)
+            Proc02D(11)
+            TalkMessageSlow(MESSAGE_125)
+            Proc030(115)
+            Proc02D(29)
+            TalkMessageSlow(MESSAGE_126)
+        }
+        case 27
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(114)
+            Proc02D(29)
+            TalkMessageSlow(MESSAGE_127)
+            Proc030(33)
+            Proc02D(28)
+            TalkMessageSlow(MESSAGE_128)
+            Proc030(115)
+            Proc02D(29)
+            TalkMessageSlow(MESSAGE_129)
+            Proc030(118)
+            Proc02D(13)
+            TalkMessageSlow(MESSAGE_130)
+        }
+        case 28
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(117)
+            Proc02D(13)
+            TalkMessageSlow(MESSAGE_131)
+            Proc030(146)
+            Proc02D(14)
+            TalkMessageSlow(MESSAGE_132)
+            Proc030(118)
+            Proc02D(13)
+            TalkMessageSlow(MESSAGE_133)
+            Proc030(146)
+            Proc02D(14)
+            TalkMessageSlow(MESSAGE_134)
+        }
+        case 29
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(145)
+            Proc02D(14)
+            TalkMessageSlow(MESSAGE_135)
+            Proc030(118)
+            Proc02D(13)
+            TalkMessageSlow(MESSAGE_136)
+            Proc030(146)
+            Proc02D(14)
+            TalkMessageSlow(MESSAGE_137)
+            Proc030(134)
+            Proc02D(8)
+            TalkMessageSlow(MESSAGE_138)
+        }
+        case 30
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(133)
+            Proc02D(8)
+            TalkMessageSlow(MESSAGE_139)
+            Proc030(138)
+            Proc02D(9)
+            TalkMessageSlow(MESSAGE_140)
+            Proc02F()
+            Proc031()
+            TalkMessageSlow(MESSAGE_141)
+            Proc030(134)
+            Proc02D(8)
+            TalkMessageSlow(MESSAGE_142)
+            Proc030(138)
+            Proc02D(9)
+            TalkMessageSlow(MESSAGE_143)
+        }
+        case 31
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(137)
+            Proc02D(9)
+            TalkMessageSlow(MESSAGE_144)
+            Proc030(134)
+            Proc02D(8)
+            TalkMessageSlow(MESSAGE_145)
+            Proc02F()
+            Proc031()
+            TalkMessageSlow(MESSAGE_146)
+            Proc030(138)
+            Proc02D(9)
+            TalkMessageSlow(MESSAGE_147)
+            Proc030(150)
+            Proc02D(22)
+            TalkMessageSlow(MESSAGE_148)
+        }
+        case 32
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(149)
+            Proc02D(22)
+            TalkMessageSlow(MESSAGE_149)
+            Proc030(150)
+            Proc02D(22)
+            TalkMessageSlow(MESSAGE_150)
+            Proc030(159)
+            Proc02D(26)
+            TalkMessageSlow(MESSAGE_151)
+        }
+        case 33
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(153)
+            Proc02D(26)
+            TalkMessageSlow(MESSAGE_152)
+            Proc030(154)
+            Proc02D(26)
+            TalkMessageSlow(MESSAGE_153)
+            Proc030(161)
+            Proc02D(7)
+            TalkMessageSlow(MESSAGE_154)
+        }
+        case 34
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(160)
+            Proc02D(7)
+            TalkMessageSlow(MESSAGE_155)
+            Proc030(169)
+            Proc02D(6)
+            TalkMessageSlow(MESSAGE_156)
+            Proc030(161)
+            Proc02D(7)
+            TalkMessageSlow(MESSAGE_157)
+            Proc030(169)
+            Proc02D(6)
+            TalkMessageSlow(MESSAGE_158)
+        }
+        case 35
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(168)
+            Proc02D(6)
+            TalkMessageSlow(MESSAGE_159)
+            Proc030(167)
+            Proc02D(7)
+            TalkMessageSlow(MESSAGE_160)
+            Proc030(169)
+            Proc02D(6)
+            TalkMessageSlow(MESSAGE_161)
+            Proc030(173)
+            Proc02D(27)
+            TalkMessageSlow(MESSAGE_162)
+        }
+        case 36
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(172)
+            Proc02D(27)
+            TalkMessageSlow(MESSAGE_163)
+            Proc030(173)
+            Proc02D(27)
+            TalkMessageSlow(MESSAGE_164)
+            Proc030(177)
+            Proc02D(5)
+            TalkMessageSlow(MESSAGE_165)
+        }
+        case 37
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(176)
+            Proc02D(5)
+            TalkMessageSlow(MESSAGE_166)
+            Proc030(181)
+            Proc02D(4)
+            TalkMessageSlow(MESSAGE_167)
+            Proc02F()
+            Proc031()
+            TalkMessageSlow(MESSAGE_168)
+            Proc030(177)
+            Proc02D(5)
+            TalkMessageSlow(MESSAGE_169)
+            Proc030(181)
+            Proc02D(4)
+            TalkMessageSlow(MESSAGE_170)
+        }
+        case 38
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            Proc030(180)
+            Proc02D(4)
+            TalkMessageSlow(MESSAGE_171)
+            Proc030(177)
+            Proc02D(5)
+            TalkMessageSlow(MESSAGE_172)
+            Proc02F()
+            Proc031()
+            TalkMessageSlow(MESSAGE_173)
+            Proc030(181)
+            Proc02D(4)
+            TalkMessageSlow(MESSAGE_174)
+            Proc02F()
+            Proc031()
+            TalkMessageSlow(MESSAGE_175)
+        }
+        case 39
+        {
+            var_0 = Func0FE(MESSAGE_7)
+            TalkClose()
+            switch var_0
+            {
+                case 0, 1, 2, 3
+                {
+                    Proc03F(580, var_0)
+                    Proc038(540)
+                }
+                case 4, 5
+                {
+                }
+                case 
+                {
+                }
+            }
+            TalkOpen()
+            TalkMessageSlow(MESSAGE_176)
+            Proc030(1)
+            Proc02D(2)
+            TalkMessageSlow(MESSAGE_177)
+        }
+    }
+    Proc100()
+    TalkClose()
+}

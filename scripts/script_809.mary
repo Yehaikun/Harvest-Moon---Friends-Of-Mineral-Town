@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 809 EventScript_809
+{
+    const MESSAGE_0 = "Hi there, \xFF!!\r\nI heard that you fished \r\nall kids of fish!\x05\x0CThat's great! I knew you \r\nwere the right person to\r\ngive that Rod to!\x05\x0CKeep it up, now!\r\nMy friend'll be so jealous.\x05"
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(28, 228, 145, 1)
+    SetEntityAnim(28, 792)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(32)
+    Proc02D(28)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(28, 3)
+    SetEntityAnim(28, 796)
+    Proc008(28, 319, 1)
+    Proc00C(28)
+    SetEntityFacing(28, 1)
+    Proc00A(28, 0, 1)
+    Proc00C(28)
+    Proc00F(28)
+    Proc080(28, 10)
+    Proc03F(310, 2)
+    Proc083(28)
+}

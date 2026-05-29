@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 495 EventScript_495
+{
+    const MESSAGE_0 = "\x81uChurch\x81v\r\n\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

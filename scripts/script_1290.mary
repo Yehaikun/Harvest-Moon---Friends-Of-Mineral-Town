@@ -1,0 +1,84 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1290 EventScript_1290
+{
+    const MESSAGE_0 = "Today is the Pumpkin \r\nFestival. \x05\x0CYou have to give treats to\r\nchildren. So, please give\r\nsome to me!\x05"
+    const MESSAGE_1 = "I'm waiting!\x05"
+    const MESSAGE_2 = "Thanks a lot!\r\nBy now. \x05"
+    const MESSAGE_3 = "This isn't a treat!\x05"
+    var var_0, var_1
+    Proc03F(434, 1)
+    switch Func041()
+    {
+        case 0
+        {
+            switch Func043()
+            {
+                case 69, 101, 104, 105, 113, 115, 117, 139, 140, 142, 143, 144, 148, 150, 151, 152, 167, 169
+                {
+                    var_0 = 16
+                }
+            }
+        }
+    }
+    var_1 = GetEntityFacing(5)
+    SetEntityFacing(5, GetOppositeFacing(GetEntityFacing(0)))
+    if Func086(5) == 0
+    {
+        Proc083(5)
+    }
+    if Func085(5) == 0
+    {
+        TalkOpen()
+        Proc02D(5)
+        Proc030(177)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc03F(434, 0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc02D(5)
+        if Func040()
+        {
+            Proc030(176)
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+            Proc03F(434, 0)
+        }
+        else if var_0 == 16
+        {
+            Proc080(5, 20)
+            Proc030(177)
+            TalkMessage(MESSAGE_2)
+            TalkClose()
+            Proc046()
+            if GetEntityX(5) != 340
+            {
+                SetEntityFacing(5, 3)
+                SetEntityAnim(5, 2539)
+                Proc008(5, 340, 1)
+                Proc00C(5)
+                SetEntityAnim(5, 2535)
+            }
+            SetEntityFacing(5, 1)
+            SetEntityAnim(5, 2539)
+            Proc00A(5, 0, 1)
+            Proc00C(5)
+            SetEntityAnim(5, 2535)
+            Proc00F(5)
+            Proc03F(434, 2)
+            Proc101()
+        }
+        else
+        {
+            Proc030(179)
+            TalkMessage(MESSAGE_3)
+            TalkClose()
+            Proc03F(434, 0)
+        }
+    }
+    SetEntityFacing(5, var_1)
+    Proc083(5)
+}

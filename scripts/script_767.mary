@@ -1,0 +1,77 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 767 EventScript_767
+{
+    const MESSAGE_0 = "Hi there.\r\nI look kind of down? \x05\x0CI was just remembering\r\nmy parents, you see. \x05"
+    const MESSAGE_1 = "My family have always been \r\ndoctors. My father was a \r\ndoctor and my mother \x05\r\na nurse. \x05"
+    const MESSAGE_2 = "They were so busy that they \r\ndidn't have much time for\r\nme when I was a child. \x05\x0CI was lonely, and I blamed \r\nthem for not paying \r\nenough attention to me. \x05"
+    const MESSAGE_3 = "But, now that I'm a doctor\r\nmyself, I understand them\r\nmuch better. \x05\x0CIt's a sacred duty, being \r\nresponsible for someone's\r\nlife! \x05\x0CNow I wish I hadn't \r\nrebelled against them so \r\nmuch! What a fool I was!...\x05"
+    Proc016(0, 422, 584)
+    SetEntityPosition(0, 612, 584, 2)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(20, 422, 556, 1)
+    SetEntityAnim(20, 800)
+    if GetEntityLocation(27) == 0
+    {
+        Proc00F(27)
+    }
+    Proc035(2, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+        Proc008(0, 422, 1)
+        Proc00C(0)
+        SetEntityAnim(0, 402)
+        SetEntityFacing(0, 1)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+        Proc008(0, 422, 1)
+        Proc00C(0)
+        SetEntityAnim(0, 338)
+        SetEntityFacing(0, 1)
+    }
+    Proc037(30)
+    Proc011(20, 2, 0)
+    Proc037(60)
+    SetEntityFacing(20, 0)
+    Proc037(30)
+    TalkOpen()
+    Proc030(38)
+    Proc02D(20)
+    TalkMessage(MESSAGE_0)
+    Proc030(35)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(30)
+    TalkOpen()
+    Proc030(38)
+    Proc02D(20)
+    TalkMessage(MESSAGE_2)
+    Proc030(36)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    SetEntityFacing(20, 1)
+    Proc083(20)
+    Proc0F2()
+    Proc03F(284, 1)
+    Proc08C(20, 768)
+}

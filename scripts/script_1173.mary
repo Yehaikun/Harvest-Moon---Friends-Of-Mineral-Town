@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1173 EventScript_1173
+{
+    const MESSAGE_0 = "This Cow is so big and \r\nstrong!!\r\nI bet it would flatten you \r\nif you got stepped on!\x05"
+    const MESSAGE_1 = "Your cow looks like a winner\r\nto me, \xFF!. \x05"
+    if Func086(16) == 0
+    {
+        Proc083(16)
+    }
+    SetEntityFacing(16, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(411) == 0
+    {
+        TalkOpen()
+        Proc030(128)
+        Proc02D(16)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(129)
+        Proc02D(16)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(16) == 0
+    {
+        Proc080(16, 5)
+    }
+    Proc083(16)
+    SetEntityFacing(16, 1)
+}

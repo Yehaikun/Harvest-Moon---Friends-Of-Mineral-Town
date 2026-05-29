@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1240 EventScript_1240
+{
+    const MESSAGE_0 = "It's all the more fun to \r\neat with everybody \r\nwhen you live alone. \x05"
+    if Func086(27) == 0
+    {
+        Proc083(27)
+    }
+    SetEntityFacing(27, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(173)
+    Proc02D(27)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(27) == 0
+    {
+        Proc080(27, 5)
+    }
+    SetEntityFacing(27, 2)
+    Proc083(27)
+}

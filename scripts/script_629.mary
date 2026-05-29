@@ -1,0 +1,228 @@
+================================ PARTIAL DECOMPILATION
+    /* Complete statements */
+    SetEntityFacing(25, GetOppositeFacing(GetEntityFacing(0)))
+    Proc083(25)
+    TalkOpen()
+    Proc02D(25)
+    Proc030(87)
+    Proc032(25)
+    TalkMessage(0)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(1, 2)
+    /* Variable Value */
+    push var_0
+    jmp location_0
+case 1:
+    /* Complete statements */
+    TalkClose()
+    TalkOpen()
+    Proc02D(25)
+    Proc030(87)
+    Proc032(25)
+    TalkMessage(3)
+    TalkClose()
+    TalkOpen()
+    if Func03E(201) == 0
+    {
+        var_0 = TalkChoice3(4, 5, 6)
+        switch var_0
+        {
+            case 1
+            {
+                Proc08A(25, -2000)
+                TalkClose()
+                TalkOpen()
+                Proc02D(25)
+                Proc030(90)
+                Proc032(25)
+                TalkMessage(7)
+                TalkClose()
+                Proc034(2, 1)
+                Proc13E(0)
+                Proc13E(1)
+                TalkOpen()
+                TalkMessage(8)
+                TalkClose()
+                Proc0F3()
+                Proc08D(25)
+                Proc03F(186, 2)
+                Proc038(988)
+            }
+            case 2
+            {
+                Proc08A(25, -2000)
+                TalkClose()
+                TalkOpen()
+                Proc02D(25)
+                Proc030(91)
+                Proc032(25)
+                TalkMessage(9)
+                TalkClose()
+                Proc034(2, 1)
+                Proc13E(0)
+                Proc13E(1)
+                TalkOpen()
+                TalkMessage(8)
+                TalkClose()
+                Proc0F3()
+                Proc08D(25)
+                Proc03F(186, 2)
+                Proc038(988)
+            }
+            case 3
+            {
+                Proc08A(25, 3000)
+                TalkClose()
+                TalkOpen()
+                Proc02D(25)
+                Proc030(88)
+                Proc032(25)
+                TalkMessage(10)
+                TalkClose()
+                SetEntityAnim(0, 510)
+                Proc037(60)
+                if Func040()
+                {
+                    SetEntityAnim(0, 402)
+                }
+                else
+                {
+                    SetEntityAnim(0, 338)
+                }
+                Proc037(60)
+                TalkOpen()
+                Proc02D(25)
+                Proc030(91)
+                Proc032(25)
+                TalkMessage(11)
+                TalkClose()
+                Proc034(2, 1)
+                Proc13E(0)
+                Proc13E(1)
+                TalkOpen()
+                TalkMessage(12)
+                TalkClose()
+                Proc0F3()
+                Proc08D(25)
+                Proc03F(186, 2)
+                Proc038(988)
+            }
+        }
+    }
+    else
+    {
+        var_0 = TalkChoice3(5, 6, 13)
+        switch var_0
+        {
+            case 1
+            {
+                Proc08A(25, -2000)
+                Proc080(35, -10)
+                TalkClose()
+                TalkOpen()
+                Proc02D(25)
+                Proc030(91)
+                Proc032(25)
+                TalkMessage(9)
+                TalkClose()
+                Proc034(2, 1)
+                Proc13E(0)
+                Proc13E(1)
+                TalkOpen()
+                TalkMessage(8)
+                TalkClose()
+                Proc0F3()
+                Proc08D(25)
+                Proc08D(35)
+                Proc03F(186, 2)
+                Proc038(988)
+            }
+            case 2
+            {
+                Proc08A(25, 3000)
+                Proc080(35, 20)
+                TalkClose()
+                TalkOpen()
+                Proc02D(25)
+                Proc030(88)
+                Proc032(25)
+                TalkMessage(10)
+                TalkClose()
+                SetEntityAnim(0, 510)
+                Proc037(60)
+                if Func040()
+                {
+                    SetEntityAnim(0, 402)
+                }
+                else
+                {
+                    SetEntityAnim(0, 338)
+                }
+                Proc037(60)
+                TalkOpen()
+                Proc02D(25)
+                Proc030(91)
+                Proc032(25)
+                TalkMessage(11)
+                TalkClose()
+                Proc034(2, 1)
+                Proc13E(0)
+                Proc13E(1)
+                TalkOpen()
+                TalkMessage(12)
+                TalkClose()
+                Proc0F3()
+                Proc08D(25)
+                Proc08D(35)
+                Proc03F(186, 2)
+                Proc038(988)
+            }
+            case 3
+            {
+                Proc08A(25, -2000)
+                Proc080(35, -10)
+                TalkClose()
+                TalkOpen()
+                Proc02D(25)
+                Proc030(90)
+                Proc032(25)
+                TalkMessage(14)
+                TalkClose()
+                Proc034(2, 1)
+                Proc13E(0)
+                Proc13E(1)
+                TalkOpen()
+                TalkMessage(8)
+                TalkClose()
+                Proc0F3()
+                Proc08D(25)
+                Proc08D(35)
+                Proc03F(186, 2)
+                Proc038(988)
+            }
+        }
+    }
+    /* Case blocks (switch 2) */
+    case 2
+    {
+        TalkClose()
+        TalkOpen()
+        Proc02D(25)
+        Proc030(87)
+        Proc032(25)
+        TalkMessage(15)
+        TalkClose()
+    } // breaks to location_19
+    jmp location_20
+location_0:
+================================ REMAINING INSTRUCTIONS
+>   Switch(SwitchId(2))
+    Label(JumpId(20))
+    Label(JumpId(19))
+    PushInt(25)
+    PushInt(0)
+    Call(CallId(5))
+================================ END OF SCRIPT
+Decompile error: Couldn't reduce
+Error: ()

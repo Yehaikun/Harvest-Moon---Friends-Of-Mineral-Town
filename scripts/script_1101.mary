@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1101 EventScript_1101
+{
+    const MESSAGE_0 = "Don't overdo it, Mom...\x05"
+    if Func086(2) == 0
+    {
+        Proc083(2)
+    }
+    SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(3)
+    Proc02D(2)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(2) == 0
+    {
+        Proc080(2, 5)
+    }
+    SetEntityFacing(2, 3)
+    Proc083(2)
+}

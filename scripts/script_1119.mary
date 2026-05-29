@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1119 EventScript_1119
+{
+    const MESSAGE_0 = "I can tell how much you \r\nall want to win! \x05"
+    if Func086(30) == 0
+    {
+        Proc083(30)
+    }
+    SetEntityFacing(30, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(60)
+    Proc02D(30)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(30) == 0
+    {
+        Proc080(30, 5)
+    }
+    SetEntityFacing(30, 0)
+    Proc083(30)
+}

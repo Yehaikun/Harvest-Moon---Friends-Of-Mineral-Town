@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 501 EventScript_501
+{
+    const MESSAGE_0 = "Doug's Place\r\nBar Hours: 8:00 - 21:00\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

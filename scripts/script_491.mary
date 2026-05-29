@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 491 EventScript_491
+{
+    const MESSAGE_0 = "If you throw an Egg in\r\nfrom here, you can make a\r\nSpa-Boiled Egg!\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

@@ -1,0 +1,84 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 874 EventScript_874
+{
+    const MESSAGE_0 = "We used to play here \r\nall the time. \x05"
+    const MESSAGE_1 = "We played games like tag,\r\nkick the can, hide and \r\nseek...everything.\x05"
+    const MESSAGE_2 = "We also wrestled...\r\nAlthough...I never could \r\nbeat you.\x05"
+    const MESSAGE_3 = "What do you mean?!\r\nI don\x81ft remember any\r\nof it!\x05"
+    const MESSAGE_4 = "Don't you remember how I \r\nused to cry when you threw\r\nme to the ground?\x05"
+    const MESSAGE_5 = "I told you I don't remember,\r\nso I don't remember!\r\nI'm going home now!\x05"
+    const MESSAGE_6 = "What are you mad for?\r\nWait up!\x05"
+    Proc016(3, 412, 156)
+    PlayBGM(1, 16)
+    Proc03F(114, 1)
+    SetEntityPosition(0, 612, 248, 0)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(19, 400, 156, 3)
+    SetEntityAnim(19, 1681)
+    SetEntityPosition(2, 424, 156, 2)
+    SetEntityAnim(2, 531)
+    Proc035(2, 1)
+    Proc011(2, 5, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(0)
+    Proc02D(2)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(72)
+    Proc02D(19)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(1)
+    Proc02D(2)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    Proc011(19, 0, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(74)
+    Proc02D(19)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(0)
+    Proc02D(2)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(74)
+    Proc02D(19)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    Proc011(19, 0, 1)
+    SetEntityFacing(19, 0)
+    SetEntityAnim(19, 1685)
+    SetEntityFacing(2, 0)
+    Proc00A(19, 290, 1)
+    Proc00C(19)
+    Proc012(19)
+    TalkOpen()
+    Proc030(4)
+    Proc02D(2)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    SetEntityAnim(2, 535)
+    Proc00A(2, 268, 1)
+    Proc00C(2)
+    Proc00F(19)
+    Proc00F(2)
+    Proc017(612, 248, 2)
+    Proc018()
+    Proc03F(114, 2)
+    exit
+}

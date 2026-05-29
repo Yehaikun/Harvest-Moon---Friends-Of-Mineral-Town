@@ -1,0 +1,122 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 736 EventScript_736
+{
+    const MESSAGE_0 = "I wonder if this is \r\nthe right grass?...\x05"
+    const MESSAGE_1 = "Oh! Hi, \xFF!. \x05"
+    const MESSAGE_2 = "How do you like your\r\nmarried life? Takes some\r\nadjusting to, I bet!\x05"
+    const MESSAGE_3 = "What was I doing? \r\nI'm looking for a grass for\r\nmy father that he needs \x05\r\nfor his research. \x05"
+    const MESSAGE_4 = "That's nice of you."
+    const MESSAGE_5 = "I see."
+    const MESSAGE_6 = "I try to help out my dad. \r\nBesides, I actually enjoy\r\nit!\x05"
+    const MESSAGE_7 = "Sorry for interrupting you. \r\nI have to get back now. \x05\x0CGood luck on the farm!\x05"
+    const MESSAGE_8 = "Well, Dad's research really\r\nis important, so I like to \r\nhelp out any way I can. \x05"
+    var var_0
+    Proc0F2()
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(12, 648, 128, 2)
+    SetEntityAnim(12, 2067)
+    Proc035(2, 1)
+    Proc017(668, 128, 2)
+    Proc018()
+    Proc011(12, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(107)
+    Proc02D(12)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(0, 0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    Proc00A(0, 128, 1)
+    Proc00C(0)
+    SetEntityFacing(0, 2)
+    Proc008(0, 668, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc011(12, 2, 0)
+    SetEntityFacing(12, 3)
+    Proc008(12, 644, 1)
+    Proc037(60)
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_1)
+    Proc030(104)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(30)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc011(0, 3, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc030(103)
+    Proc02D(12)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice2(MESSAGE_4, MESSAGE_5)
+    switch var_0
+    {
+        case 1
+        {
+            TalkOpen()
+            Proc030(104)
+            Proc02D(12)
+            TalkMessage(MESSAGE_6)
+            Proc030(103)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+            Proc080(12, 20)
+        }
+        case 2
+        {
+            TalkOpen()
+            Proc030(107)
+            Proc02D(12)
+            TalkMessage(MESSAGE_8)
+            Proc030(103)
+            TalkMessage(MESSAGE_7)
+            TalkClose()
+            Proc080(12, -10)
+        }
+    }
+    SetEntityFacing(12, 2)
+    SetEntityAnim(12, 2071)
+    Proc008(12, 464, 1)
+    Proc00C(12)
+    Proc00F(12)
+    Proc083(12)
+    Proc0F3()
+    Proc03F(261, 2)
+    exit
+}

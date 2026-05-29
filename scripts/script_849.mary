@@ -1,0 +1,185 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 849 EventScript_849
+{
+    const MESSAGE_0 = "\xFF!, \r\nDo you know what day it \r\nis today? \x05"
+    const MESSAGE_1 = "Your birthday"
+    const MESSAGE_2 = "Our anniversary"
+    const MESSAGE_3 = "My birthday"
+    const MESSAGE_4 = "My birthday? \r\nHmm...\r\nBye now.\x05"
+    const MESSAGE_5 = "I didn't think you'd forget.\r\nHere's a present for you. \x05"
+    const MESSAGE_6 = "Here you are. \x05"
+    const MESSAGE_7 = "I'm going to give you a \r\npresent now, so get rid \r\nof what you're holding. \x05"
+    const MESSAGE_8 = "Your birthday? \r\nHmm...\r\nBye now.\x05"
+    var var_0
+    Proc016(29, 265, 138)
+    PlayBGM(1, 17)
+    SetEntityPosition(0, 265, 138, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    if Func03E(378) == 2
+    {
+        if Func03E(46) >= 60
+        {
+            SetEntityPosition(35, 292, 84, 0)
+            if Func03E(47) == 1
+            {
+                SetEntityAnim(35, 615)
+            }
+            else
+            {
+                SetEntityAnim(35, 619)
+            }
+        }
+        else
+        {
+            SetEntityPosition(35, 416, -48, 0)
+            SetEntityAnim(35, 12)
+        }
+    }
+    Proc035(2, 1)
+    Proc037(60)
+    PlaySong(0, 190)
+    SetEntityPosition(70, GetEntityX(0), GetEntityY(0) - 24, 0)
+    Proc010(70, 3)
+    SetEntityAnim(70, 1068)
+    Proc036(1, 0)
+    Proc036(1, 0)
+    Proc034(1, 1)
+    Proc00F(70)
+    SetEntityPosition(31, 265, 114, 0)
+    SetEntityAnim(31, 1641)
+    Proc035(1, 1)
+    Proc037(60)
+    Proc011(0, 2, 0)
+    Proc037(60)
+    TalkOpen()
+    Proc02D(31)
+    Proc030(57)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    var_0 = TalkChoice3(MESSAGE_1, MESSAGE_2, MESSAGE_3)
+    switch var_0
+    {
+        case 1
+        {
+            Proc08A(31, -2000)
+            TalkClose()
+            TalkOpen()
+            Proc02D(31)
+            Proc030(58)
+            TalkMessage(MESSAGE_4)
+            TalkClose()
+            Proc03F(372, 2)
+            Proc037(60)
+            PlaySong(0, 190)
+            SetEntityPosition(70, GetEntityX(31), GetEntityY(31) + 4, 0)
+            Proc010(70, 3)
+            SetEntityAnim(70, 1068)
+            Proc036(1, 0)
+            Proc036(1, 0)
+            Proc034(1, 1)
+            Proc00F(70)
+            Proc00F(31)
+            Proc037(30)
+            Proc035(1, 1)
+            Proc037(60)
+            Proc034(2, 1)
+            Proc016(29, 327, 112)
+            SetEntityPosition(0, 327, 112, 2)
+            Proc035(2, 1)
+        }
+        case 2
+        {
+            Proc08A(31, 3000)
+            TalkClose()
+            TalkOpen()
+            Proc02D(31)
+            Proc030(57)
+            TalkMessage(MESSAGE_5)
+            TalkClose()
+            TalkOpen()
+            Proc02D(31)
+            if Func040()
+            {
+                Proc030(57)
+                TalkMessage(MESSAGE_6)
+                TalkClose()
+                SetEntityAnim(31, 1649)
+                Proc037(60)
+                SetEntityAnim(31, 1641)
+                PlaySong(0, 106)
+                SetEntityAnim(0, 326)
+                Proc04B(Func126())
+                SetEntityAnim(0, 338)
+                Proc037(60)
+                PlaySong(0, 190)
+                SetEntityPosition(70, GetEntityX(31), GetEntityY(31) + 4, 0)
+                Proc010(70, 3)
+                SetEntityAnim(70, 1068)
+                Proc036(1, 0)
+                Proc036(1, 0)
+                Proc034(1, 1)
+                Proc00F(70)
+                Proc00F(31)
+                Proc037(30)
+                Proc035(1, 1)
+                Proc037(60)
+                Proc03F(372, 2)
+                Proc034(2, 1)
+                Proc016(29, 327, 112)
+                SetEntityPosition(0, 327, 112, 2)
+                Proc035(2, 1)
+            }
+            else
+            {
+                Proc030(56)
+                TalkMessage(MESSAGE_7)
+                TalkClose()
+                Proc0F2()
+                Proc08C(31, 851)
+                if Func03E(378) == 2
+                {
+                    Proc08C(35, 850)
+                }
+                Proc03F(372, 1)
+            }
+        }
+        case 3
+        {
+            Proc08A(31, -2000)
+            TalkClose()
+            TalkOpen()
+            Proc02D(31)
+            Proc030(58)
+            TalkMessage(MESSAGE_8)
+            TalkClose()
+            Proc03F(372, 2)
+            Proc037(60)
+            PlaySong(0, 190)
+            SetEntityPosition(70, GetEntityX(31), GetEntityY(31) + 4, 0)
+            Proc010(70, 3)
+            SetEntityAnim(70, 1068)
+            Proc036(1, 0)
+            Proc036(1, 0)
+            Proc034(1, 1)
+            Proc00F(70)
+            Proc00F(31)
+            Proc037(30)
+            Proc035(1, 1)
+            Proc037(60)
+            Proc034(2, 1)
+            Proc016(29, 327, 112)
+            SetEntityPosition(0, 327, 112, 2)
+            Proc035(2, 1)
+        }
+    }
+    Proc083(31)
+}

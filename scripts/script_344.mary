@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 344 EventScript_344
+{
+    const MESSAGE_0 = "Book List"
+    const MESSAGE_1 = "Letter List"
+    const MESSAGE_2 = "Exit"
+    const MESSAGE_3 = "No letter inside.\x05"
+    var var_0
+    TalkOpen()
+    var_0 = TalkChoice3(MESSAGE_0, MESSAGE_1, MESSAGE_2)
+    switch var_0
+    {
+        case 1
+        {
+            TalkClose()
+            Proc034(3, 1)
+            Proc09C()
+            Proc035(3, 1)
+        }
+        case 2
+        {
+            if Func0FD() == 0
+            {
+                Proc024(MESSAGE_3)
+                TalkClose()
+            }
+            else
+            {
+                TalkClose()
+                Proc034(3, 1)
+                Proc09D()
+                Proc035(3, 1)
+            }
+        }
+        case 3
+        {
+            TalkClose()
+        }
+    }
+}

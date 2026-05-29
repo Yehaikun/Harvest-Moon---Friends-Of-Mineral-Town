@@ -1,0 +1,126 @@
+================================ PARTIAL DECOMPILATION
+    /* Assignment Expression */
+    push var_1 = 1
+    /* Complete statements */
+    var_1 = 0
+    Proc016(12, 184, 320)
+    PlayBGM(1, 6)
+    SetEntityPosition(19, 200, 152, 0)
+    SetEntityAnim(19, 1717)
+    SetEntityPosition(2, 168, 152, 0)
+    SetEntityAnim(2, 547)
+    SetEntityPosition(22, 144, 152, 3)
+    SetEntityAnim(22, 2284)
+    SetEntityPosition(0, 184, 320, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(1, 104, 155, 3)
+    SetEntityAnim(1, 607)
+    SetEntityPosition(17, 296, 155, 2)
+    SetEntityAnim(17, 1673)
+    SetEntityPosition(18, 264, 155, 2)
+    SetEntityAnim(18, 1733)
+    if GetEntityLocation(23) == 12
+    {
+        Proc00F(23)
+    }
+    if GetEntityLocation(20) == 12
+    {
+        Proc00F(20)
+    }
+    if GetEntityLocation(8) == 12
+    {
+        Proc00F(8)
+    }
+    if GetEntityLocation(9) == 12
+    {
+        Proc00F(9)
+    }
+    if GetEntityLocation(3) == 12
+    {
+        Proc00F(3)
+    }
+    if Func03E(120) == 0
+    {
+        Proc035(2, 1)
+        Proc017(184, 160, 1)
+        Proc018()
+        SetEntityFacing(22, 0)
+        TalkOpen()
+        Proc030(149)
+        Proc02D(22)
+        TalkMessage(0)
+        TalkClose()
+        TalkOpen()
+        var_0 = TalkChoice2(1, 2)
+        switch var_0
+        {
+            case 1
+            {
+                Proc080(19, 20)
+                Proc080(22, 20)
+                Proc080(1, 20)
+                Proc080(17, 20)
+                Proc080(18, 20)
+                Proc081(2, 200)
+                TalkClose()
+                TalkOpen()
+                Proc030(150)
+                Proc02D(22)
+                TalkMessage(3)
+                TalkClose()
+                Proc034(2, 1)
+                TalkOpen()
+                TalkMessage(4)
+                TalkClose()
+                Proc083(22)
+                Proc03F(119, 2)
+                Proc03F(121, 0)
+                Proc03F(581, 0)
+                Proc038(988)
+            }
+            case 2
+            {
+                Proc03F(120, 1)
+                TalkClose()
+                TalkOpen()
+                Proc030(149)
+                Proc02D(22)
+                TalkMessage(5)
+                TalkClose()
+                SetEntityFacing(22, 3)
+                Proc017(184, 320, 1)
+                Proc018()
+                Proc0F2()
+                Proc083(22)
+                Proc08C(22, 885)
+                Proc08C(2, 880)
+                Proc08C(1, 881)
+                Proc08C(17, 882)
+                Proc08C(19, 883)
+                Proc08C(18, 884)
+                Proc03F(119, 1)
+            }
+        }
+    }
+    else
+    {
+        Proc0F2()
+        Proc035(2, 1)
+        Proc08C(22, 885)
+        Proc08C(2, 880)
+        Proc08C(1, 881)
+        Proc08C(17, 882)
+        Proc08C(19, 883)
+        Proc08C(18, 884)
+        Proc03F(119, 1)
+    }
+================================ END OF SCRIPT
+Decompile error: Couldn't reduce at end of input
+Error: ()

@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 120 EventScript_120
+{
+    const MESSAGE_0 = "Sofa\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

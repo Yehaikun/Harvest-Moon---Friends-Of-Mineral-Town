@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1126 EventScript_1126
+{
+    const MESSAGE_0 = "I always eat everybody's\r\ncooking anyway, so it's \r\neasy to tell who made what.\x05"
+    if Func086(22) == 0
+    {
+        Proc083(22)
+    }
+    SetEntityFacing(22, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(149)
+    Proc02D(22)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(22) == 0
+    {
+        Proc080(22, 5)
+    }
+    SetEntityFacing(22, 0)
+    Proc083(22)
+}

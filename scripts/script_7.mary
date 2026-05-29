@@ -1,0 +1,75 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 7 EventScript_7
+{
+    const MESSAGE_0 = "Hi, \xFF!.\r\nHow can you call this a farm\r\nwithout a single horse?\x05"
+    const MESSAGE_1 = "This Foal was born at our\r\nfarm, but you can keep him\r\nhere, if you like.\x05\x0CYou can name him\r\nhowever you like.\x05"
+    const MESSAGE_2 = "I'll put him in the \r\nStable for you.\x05\x0CTreat him well, now.\r\nTalk to him everyday and\r\nbrush him, too. \x05"
+    const MESSAGE_3 = "Take good care of\r\n\xFF\", now.\x05"
+    Proc103(0, 1, 2, 196, 145)
+    SetEntityPosition(0, 228, 120, 0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(4, 228, 145, 1)
+    SetEntityAnim(4, 2543)
+    SetEntityPosition(44, 196, 145, 1)
+    SetEntityAnim(44, 1914)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(180)
+    Proc02D(4)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(4, 2)
+    Proc037(30)
+    SetEntityFacing(4, 1)
+    TalkOpen()
+    Proc030(180)
+    Proc02D(4)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    Proc034(3, 1)
+    Proc0A6(0, 0)
+    Proc035(3, 1)
+    TalkOpen()
+    Proc030(180)
+    Proc02D(4)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    SetEntityFacing(4, 3)
+    SetEntityFacing(0, 3)
+    SetEntityAnim(4, 2547)
+    Proc008(4, 500, 1)
+    SetEntityFacing(44, 3)
+    SetEntityAnim(44, 1918)
+    Proc008(44, 500, 1)
+    Proc00C(4)
+    Proc00C(44)
+    SetEntityAnim(44, 1914)
+    Proc132(44, 9, 84, 124)
+    SetEntityFacing(4, 2)
+    SetEntityAnim(4, 2547)
+    Proc008(4, 335, 1)
+    Proc00C(4)
+    SetEntityAnim(4, 2543)
+    Proc037(30)
+    TalkOpen()
+    Proc030(180)
+    Proc02D(4)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    SetEntityFacing(4, 1)
+    SetEntityAnim(4, 2547)
+    Proc00A(4, 0, 1)
+    Proc00C(4)
+    SetEntityAnim(4, 2543)
+    Proc00F(4)
+    SetEntityFacing(0, 0)
+    Proc03F(223, 2)
+}

@@ -1,0 +1,26 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1207 EventScript_1207
+{
+    const MESSAGE_0 = "La...la...\r\nI think we'll do fine.\x05"
+    if Func086(19) == 0
+    {
+        Proc083(19)
+    }
+    SetEntityFacing(19, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(73)
+    Proc02D(19)
+    if !(Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2)
+    {
+        Proc032(19)
+    }
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(19) == 0
+    {
+        Proc080(19, 5)
+    }
+    SetEntityFacing(19, 1)
+    Proc083(19)
+}

@@ -1,0 +1,28 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1196 EventScript_1196
+{
+    const MESSAGE_0 = "It's cool at night even \r\nduring the Summer. \x05"
+    if Func086(20) == 0
+    {
+        Proc083(20)
+    }
+    SetEntityFacing(20, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(35)
+    Proc02D(20)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func085(20) == 0
+    {
+        Proc080(20, 5)
+    }
+    Proc083(20)
+    if Func085(2) && Func085(7) && Func085(20) && (Func03E(244) == 0 || Func085(23)) && Func085(26) && Func085(19) && Func085(21) && Func085(25) && Func085(3) && Func085(12)
+    {
+        Proc03F(415, 0)
+        Proc034(2, 1)
+        Proc038(1192)
+    }
+    SetEntityFacing(20, 3)
+}

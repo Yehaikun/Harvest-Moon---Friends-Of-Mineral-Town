@@ -1,0 +1,29 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 75 EventScript_75
+{
+    const MESSAGE_0 = "........\x05"
+    const MESSAGE_1 = "Hah... She\x81fs gonna\r\ncook again, and I have\r\nto eat them...\x05"
+    if Func03E(108) == 0
+    {
+        SetEntityFacing(16, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(131)
+        Proc02D(16)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(16, 1)
+        Proc083(16)
+    }
+    else
+    {
+        SetEntityFacing(16, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(130)
+        Proc02D(16)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(16, 1)
+        Proc083(16)
+    }
+}

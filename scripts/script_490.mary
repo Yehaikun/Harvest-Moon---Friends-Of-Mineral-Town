@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 490 EventScript_490
+{
+    const MESSAGE_0 = "Hot Spring\r\nEffects: Recuperate \r\nStamina and Fatigue\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

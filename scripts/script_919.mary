@@ -1,0 +1,122 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 919 EventScript_919
+{
+    const MESSAGE_0 = "Hi there, \xFF!.\r\nToday is Cliff and Ann's \r\nwedding day!! \x05\x0CCome celebrate with us! \x05"
+    const MESSAGE_1 = "OK!"
+    const MESSAGE_2 = "I've got work to do."
+    const MESSAGE_3 = "Let's celebrate, then! \x05"
+    const MESSAGE_4 = "To the young couple! \x05"
+    const MESSAGE_5 = "Well, come by if you get \r\na chance. \x05"
+    var var_0
+    Proc016(12, 184, 320)
+    PlayBGM(1, 6)
+    SetEntityPosition(25, 200, 152, 0)
+    SetEntityAnim(25, 2018)
+    SetEntityPosition(23, 168, 152, 0)
+    SetEntityAnim(23, 647)
+    SetEntityPosition(22, 144, 152, 3)
+    SetEntityAnim(22, 2284)
+    SetEntityPosition(0, 184, 320, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(9, 104, 155, 3)
+    SetEntityAnim(9, 2256)
+    SetEntityPosition(8, 72, 195, 3)
+    SetEntityAnim(8, 2240)
+    SetEntityPosition(24, 264, 155, 2)
+    SetEntityAnim(24, 1970)
+    if GetEntityLocation(17) == 12
+    {
+        Proc00F(17)
+    }
+    if GetEntityLocation(20) == 12
+    {
+        Proc00F(20)
+    }
+    if GetEntityLocation(3) == 12
+    {
+        Proc00F(3)
+    }
+    if Func03E(136) == 0
+    {
+        Proc035(2, 1)
+        Proc017(184, 160, 1)
+        Proc018()
+        SetEntityFacing(22, 0)
+        TalkOpen()
+        Proc030(149)
+        Proc02D(22)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        TalkOpen()
+        var_0 = TalkChoice2(MESSAGE_1, MESSAGE_2)
+        switch var_0
+        {
+            case 1
+            {
+                Proc080(22, 20)
+                Proc080(9, 20)
+                Proc080(8, 20)
+                Proc080(24, 20)
+                Proc081(25, 200)
+                Proc081(23, 200)
+                TalkClose()
+                TalkOpen()
+                Proc030(150)
+                Proc02D(22)
+                TalkMessage(MESSAGE_3)
+                TalkClose()
+                Proc034(2, 1)
+                TalkOpen()
+                TalkMessage(MESSAGE_4)
+                TalkClose()
+                Proc083(22)
+                Proc03F(135, 2)
+                Proc03F(137, 0)
+                Proc03F(585, 0)
+                Proc038(988)
+            }
+            case 2
+            {
+                Proc03F(136, 1)
+                TalkClose()
+                TalkOpen()
+                Proc030(149)
+                Proc02D(22)
+                TalkMessage(MESSAGE_5)
+                TalkClose()
+                SetEntityFacing(22, 3)
+                Proc017(GetEntityX(0), GetEntityY(0), 1)
+                Proc018()
+                Proc0F2()
+                Proc083(22)
+                Proc08C(23, 920)
+                Proc08C(24, 921)
+                Proc08C(25, 922)
+                Proc08C(8, 923)
+                Proc08C(9, 924)
+                Proc08C(22, 925)
+                Proc03F(135, 1)
+            }
+        }
+    }
+    else
+    {
+        Proc0F2()
+        Proc035(2, 1)
+        Proc08C(23, 920)
+        Proc08C(24, 921)
+        Proc08C(25, 922)
+        Proc08C(8, 923)
+        Proc08C(9, 924)
+        Proc08C(22, 925)
+        Proc03F(135, 1)
+    }
+}

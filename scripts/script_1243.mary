@@ -1,0 +1,579 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1243 EventScript_1243
+{
+    const MESSAGE_0 = "It's so beautiful...\x05"
+    const MESSAGE_1 = "I love the moon. \x05"
+    const MESSAGE_2 = "It's so beautiful!\x05"
+    const MESSAGE_3 = "It's wonderful...\x05"
+    const MESSAGE_4 = "The moon is so pretty...\x05"
+    const MESSAGE_5 = "I love gazing at the moon \r\nlike this...\r\nIt makes me so calm. \x05"
+    const MESSAGE_6 = "It looks so BIG \r\ntonight!...\x05"
+    const MESSAGE_7 = "The full moon is so bright!\r\nIt's like a huge \r\nflashlight...\x05"
+    const MESSAGE_8 = "The moon is so mysterious...\r\nI think we all have some \r\ndeep connection to it, but\x05\r\nI can't put it into words. \x05"
+    const MESSAGE_9 = "I've always loved the moon.\r\nEspecially the pale moon \r\nvisible in the morning. \x05\r\nIsn't that lovely? \x05"
+    const MESSAGE_10 = "Is it just me, or does the\r\nmoon look even more \r\nbeautiful tonight than \x05\r\nusual? \x05"
+    const MESSAGE_11 = "It's light makes everything\r\ndifferent. \x05"
+    const MESSAGE_12 = "It looks so close...\r\nLike I could reach out \r\nand touch it. \x05"
+    const MESSAGE_13 = "Dad said he would come with\r\nMom, but maybe they found\r\na better spot. \x05\x0COr, maybe Mom decided not\r\nto come a all. She hates \r\nthe mountain at night. \x05"
+    const MESSAGE_14 = "The moon's so bright, I \r\ncan see everything just \r\nlike during the day! \x05"
+    const MESSAGE_15 = "I love spending all night\r\nmoongazing like this...\x05"
+    const MESSAGE_16 = "Wow! Look at these!\r\nThey look delicious. \r\nThank you so much for \x05\r\nmaking them! \x05"
+    const MESSAGE_17 = "You made these to \r\nshare with me? Thanks!\x05\x0CMmmm...They're really good!\x05"
+    const MESSAGE_18 = "You made Moon Dumplings\r\nfor me? You're so sweet!\x05\x0CMmmm...They're delicious!\x05"
+    const MESSAGE_19 = "Moon Dumplings? For me?\x05\x0CThanks so much! I love\r\neating these while \r\nwatching the moon! \x05\r\nThey're delicious! \x05"
+    const MESSAGE_20 = "Moon Dumplings! \r\nI tried to make some myself\r\ntoday, but they didn't \x05\r\nturn out so well...\x05\x0CYou mean I can have yours?\x05\x0CMmmm...They're delicious! \x05"
+    const MESSAGE_21 = "The moon looks extra \r\nbeautiful tonight, doesn't\r\nit? \x05"
+    const MESSAGE_22 = "The moonlight makes \r\neverything look so pale and\r\nmysterious!...\x05"
+    const MESSAGE_23 = "Dad said he would come with\r\nMom, but maybe they found\r\na better spot. \x05\x0COr, maybe Mom decided not \r\nto come a all. She hates \r\nthe mountain at night. \x05"
+    const MESSAGE_24 = "Moon Dumplings! \r\nI tried to make some myself\r\ntoday, but they didn't \r\nturn out so well...\x05\x0CYou mean I can have yours?\x05\x0CMmmm...They're delicious! \x05"
+    const MESSAGE_25 = "Why can we see the moon\r\nso clearly tonight?\x05\x0CWhy is it just\r\ntonight?\x05"
+    const MESSAGE_26 = "I love spending all night \r\nmoongazing like this...\x05"
+    var unused_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7, var_8, var_9, var_10
+    switch Func03E(425)
+    {
+        case 0
+        {
+            var_1 = 19
+        }
+        case 1
+        {
+            var_1 = 25
+        }
+        case 2
+        {
+            var_1 = 3
+        }
+        case 3
+        {
+            var_1 = 12
+        }
+        case 4
+        {
+            var_1 = 21
+        }
+    }
+    switch var_1
+    {
+        case 19
+        {
+            var_3 = 73
+            var_4 = 74
+            var_5 = 75
+            var_6 = 76
+            var_7 = 77
+            var_8 = 78
+            var_9 = 72
+        }
+        case 3
+        {
+            var_3 = 8
+            var_4 = 9
+            var_5 = 10
+            var_6 = 11
+            var_7 = 12
+            var_8 = 13
+            var_9 = 7
+        }
+        case 12
+        {
+            var_3 = 104
+            var_4 = 105
+            var_5 = 106
+            var_6 = 107
+            var_7 = 108
+            var_8 = 109
+            var_9 = 103
+        }
+        case 25
+        {
+            var_3 = 88
+            var_4 = 89
+            var_5 = 90
+            var_6 = 91
+            var_7 = 92
+            var_8 = 93
+            var_9 = 87
+        }
+        case 21
+        {
+            var_3 = 122
+            var_4 = 123
+            var_5 = 124
+            var_6 = 125
+            var_7 = 126
+            var_8 = 127
+            var_9 = 121
+        }
+    }
+    switch var_1
+    {
+        case 19
+        {
+            var_2 = 1681
+        }
+        case 3
+        {
+            var_2 = 559
+        }
+        case 12
+        {
+            var_2 = 2067
+        }
+        case 25
+        {
+            var_2 = 1982
+        }
+        case 21
+        {
+            var_2 = 2180
+        }
+    }
+    Proc016(8, 238, 244)
+    PlayBGM(1, 14)
+    SetEntityPosition(0, 230, 244, 1)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(var_1, 254, 244, 1)
+    SetEntityAnim(var_1, var_2)
+    Proc035(2, 1)
+    Proc037(60 * 3)
+    SetEntityFacing(0, 3)
+    SetEntityFacing(var_1, 2)
+    Proc037(30)
+    TalkOpen()
+    Proc02D(var_1)
+    Proc032(var_1)
+    Proc030(var_9)
+    switch var_1
+    {
+        case 19
+        {
+            TalkMessage(MESSAGE_0)
+        }
+        case 3
+        {
+            TalkMessage(MESSAGE_1)
+        }
+        case 25
+        {
+            TalkMessage(MESSAGE_2)
+        }
+        case 12
+        {
+            TalkMessage(MESSAGE_3)
+        }
+        case 21
+        {
+            TalkMessage(MESSAGE_4)
+        }
+    }
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc037(30)
+    SetEntityFacing(var_1, 1)
+    SetEntityFacing(0, 1)
+    Proc037(30)
+    Proc017(240, 128, 1)
+    Proc018()
+    Proc037(60)
+    TalkOpen()
+    Proc02D(var_1)
+    Proc032(var_1)
+    switch var_1
+    {
+        case 19
+        {
+            Proc030(73)
+            TalkMessage(MESSAGE_5)
+        }
+        case 3
+        {
+            Proc030(7)
+            TalkMessage(MESSAGE_6)
+        }
+        case 25
+        {
+            Proc030(88)
+            TalkMessage(MESSAGE_7)
+        }
+        case 12
+        {
+            Proc030(103)
+            TalkMessage(MESSAGE_8)
+        }
+        case 21
+        {
+            Proc030(122)
+            TalkMessage(MESSAGE_9)
+        }
+    }
+    TalkClose()
+    Proc037(60)
+    Proc017(238, 244, 1)
+    Proc018()
+    if Func040()
+    {
+        Proc037(30)
+        if Func053(150) == -1
+        {
+            SetEntityFacing(var_1, 1)
+            Proc037(60)
+            TalkOpen()
+            Proc02D(var_1)
+            Proc032(var_1)
+            switch var_1
+            {
+                case 19
+                {
+                    Proc030(73)
+                    TalkMessage(MESSAGE_10)
+                }
+                case 3
+                {
+                    Proc030(12)
+                    TalkMessage(MESSAGE_11)
+                }
+                case 25
+                {
+                    Proc030(88)
+                    TalkMessage(MESSAGE_12)
+                }
+                case 12
+                {
+                    Proc030(103)
+                    TalkMessage(MESSAGE_13)
+                }
+                case 21
+                {
+                    Proc030(122)
+                    TalkMessage(MESSAGE_14)
+                }
+            }
+            TalkClose()
+            SetEntityFacing(0, 1)
+            Proc037(60)
+            Proc017(240, 128, 1)
+            Proc018()
+            Proc037(60 * 3)
+            Proc034(2, 1)
+            TalkOpen()
+            TalkMessage(MESSAGE_15)
+            TalkClose()
+            Proc0F3()
+            Proc08D(var_1)
+            Proc03F(424, 2)
+            Proc038(988)
+        }
+        else
+        {
+            Proc08A(var_1, 1000)
+            SetEntityFacing(0, 3)
+            SetEntityFacing(var_1, 2)
+            Proc037(30)
+            SetEntityAnim(0, 326)
+            PlaySong(0, 106)
+            Proc048(150)
+            SetEntityAnim(0, 338)
+            Proc037(60)
+            PlaySong(0, 108)
+            Proc046()
+            SetEntityAnim(0, 402)
+            var_10 = Func053(150)
+            if var_10 != -1
+            {
+                Proc055(var_10)
+            }
+            Proc037(30)
+            TalkOpen()
+            Proc02D(var_1)
+            Proc032(var_1)
+            switch var_1
+            {
+                case 19
+                {
+                    Proc030(77)
+                    TalkMessage(MESSAGE_16)
+                }
+                case 3
+                {
+                    Proc030(12)
+                    TalkMessage(MESSAGE_17)
+                }
+                case 25
+                {
+                    Proc030(88)
+                    TalkMessage(MESSAGE_18)
+                }
+                case 12
+                {
+                    Proc030(104)
+                    TalkMessage(MESSAGE_19)
+                }
+                case 21
+                {
+                    Proc030(126)
+                    TalkMessage(MESSAGE_20)
+                }
+            }
+            TalkClose()
+            Proc037(60)
+            SetEntityFacing(var_1, 1)
+            Proc037(60)
+            TalkOpen()
+            Proc02D(var_1)
+            Proc032(var_1)
+            switch var_1
+            {
+                case 19
+                {
+                    Proc030(73)
+                    TalkMessage(MESSAGE_21)
+                }
+                case 3
+                {
+                    Proc030(12)
+                    TalkMessage(MESSAGE_22)
+                }
+                case 25
+                {
+                    Proc030(88)
+                    TalkMessage(MESSAGE_12)
+                }
+                case 12
+                {
+                    Proc030(103)
+                    TalkMessage(MESSAGE_23)
+                }
+                case 21
+                {
+                    Proc030(122)
+                    TalkMessage(MESSAGE_14)
+                }
+            }
+            TalkClose()
+            SetEntityFacing(0, 1)
+            Proc037(60)
+            Proc017(240, 128, 1)
+            Proc018()
+            Proc037(60 * 3)
+            Proc034(2, 1)
+            TalkOpen()
+            TalkMessage(MESSAGE_15)
+            TalkClose()
+            Proc0F3()
+            Proc08D(var_1)
+            Proc03F(424, 2)
+            Proc038(988)
+        }
+    }
+    else if Func041() == 0
+    {
+        if Func043() == 150
+        {
+            Proc08A(var_1, 1000)
+            SetEntityFacing(0, 3)
+            SetEntityFacing(var_1, 2)
+            Proc037(60)
+            PlaySong(0, 108)
+            Proc046()
+            SetEntityAnim(0, 402)
+            Proc037(30)
+            TalkOpen()
+            Proc02D(var_1)
+            Proc032(var_1)
+            switch var_1
+            {
+                case 19
+                {
+                    Proc030(77)
+                    TalkMessage(MESSAGE_16)
+                }
+                case 3
+                {
+                    Proc030(12)
+                    TalkMessage(MESSAGE_17)
+                }
+                case 25
+                {
+                    Proc030(88)
+                    TalkMessage(MESSAGE_18)
+                }
+                case 12
+                {
+                    Proc030(104)
+                    TalkMessage(MESSAGE_19)
+                }
+                case 21
+                {
+                    Proc030(126)
+                    TalkMessage(MESSAGE_24)
+                }
+            }
+            TalkClose()
+            Proc037(60)
+            SetEntityFacing(var_1, 1)
+            Proc037(60)
+            TalkOpen()
+            Proc02D(var_1)
+            Proc032(var_1)
+            switch var_1
+            {
+                case 19
+                {
+                    Proc030(73)
+                    TalkMessage(MESSAGE_25)
+                }
+                case 3
+                {
+                    Proc030(12)
+                    TalkMessage(MESSAGE_11)
+                }
+                case 25
+                {
+                    Proc030(88)
+                    TalkMessage(MESSAGE_12)
+                }
+                case 12
+                {
+                    Proc030(103)
+                    TalkMessage(MESSAGE_23)
+                }
+                case 21
+                {
+                    Proc030(122)
+                    TalkMessage(MESSAGE_14)
+                }
+            }
+            TalkClose()
+            SetEntityFacing(0, 1)
+            Proc037(60)
+            Proc017(240, 128, 1)
+            Proc018()
+            Proc037(60 * 3)
+            Proc034(2, 1)
+            TalkOpen()
+            TalkMessage(MESSAGE_15)
+            TalkClose()
+            Proc0F3()
+            Proc08D(var_1)
+            Proc03F(424, 2)
+            Proc038(988)
+        }
+        else
+        {
+            SetEntityFacing(var_1, 1)
+            Proc037(60)
+            TalkOpen()
+            Proc02D(var_1)
+            Proc032(var_1)
+            switch var_1
+            {
+                case 19
+                {
+                    Proc030(73)
+                    TalkMessage(MESSAGE_10)
+                }
+                case 3
+                {
+                    Proc030(12)
+                    TalkMessage(MESSAGE_11)
+                }
+                case 25
+                {
+                    Proc030(88)
+                    TalkMessage(MESSAGE_12)
+                }
+                case 12
+                {
+                    Proc030(103)
+                    TalkMessage(MESSAGE_23)
+                }
+                case 21
+                {
+                    Proc030(122)
+                    TalkMessage(MESSAGE_14)
+                }
+            }
+            TalkClose()
+            SetEntityFacing(0, 1)
+            Proc037(60)
+            Proc017(240, 128, 1)
+            Proc018()
+            Proc037(60 * 3)
+            Proc034(2, 1)
+            TalkOpen()
+            TalkMessage(MESSAGE_15)
+            TalkClose()
+            Proc0F3()
+            Proc08D(var_1)
+            Proc03F(424, 2)
+            Proc038(988)
+        }
+    }
+    else
+    {
+        SetEntityFacing(var_1, 1)
+        Proc037(60)
+        TalkOpen()
+        Proc02D(var_1)
+        Proc032(var_1)
+        switch var_1
+        {
+            case 19
+            {
+                Proc030(73)
+                TalkMessage(MESSAGE_26)
+            }
+            case 3
+            {
+                Proc030(12)
+                TalkMessage(MESSAGE_11)
+            }
+            case 25
+            {
+                Proc030(88)
+                TalkMessage(MESSAGE_12)
+            }
+            case 12
+            {
+                Proc030(103)
+                TalkMessage(MESSAGE_23)
+            }
+            case 21
+            {
+                Proc030(122)
+                TalkMessage(MESSAGE_14)
+            }
+        }
+        TalkClose()
+        SetEntityFacing(0, 1)
+        Proc037(60)
+        Proc017(240, 128, 1)
+        Proc018()
+        Proc037(60 * 3)
+        Proc034(2, 1)
+        TalkOpen()
+        TalkMessage(MESSAGE_15)
+        TalkClose()
+        Proc0F3()
+        Proc08D(var_1)
+        Proc03F(424, 2)
+        Proc038(988)
+    }
+}

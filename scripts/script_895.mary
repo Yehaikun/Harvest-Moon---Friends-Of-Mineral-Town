@@ -1,0 +1,14 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 895 EventScript_895
+{
+    const MESSAGE_0 = "What happened to Mom?!\r\nI'm against it!\x05"
+    SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(2)
+    Proc02D(2)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(2, 2)
+    Proc083(2)
+}

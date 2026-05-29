@@ -1,0 +1,31 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 759 EventScript_759
+{
+    const MESSAGE_0 = "Friends really are \r\nall we have sometimes...\x05"
+    const MESSAGE_1 = "I just hope Aja \r\ncomes home now...\x05"
+    if Func086(9) == 0
+    {
+        Proc083(9)
+    }
+    if Func03E(280) == 1
+    {
+        SetEntityFacing(9, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        if Func085(9) == 0
+        {
+            Proc030(138)
+            Proc02D(9)
+            TalkMessageSlow(MESSAGE_0)
+        }
+        else
+        {
+            Proc030(140)
+            Proc02D(9)
+            TalkMessageSlow(MESSAGE_1)
+        }
+        TalkClose()
+        Proc083(9)
+        SetEntityFacing(9, 1)
+    }
+}

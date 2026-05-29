@@ -1,0 +1,157 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 985 EventScript_985
+{
+    const MESSAGE_0 = "I thought you could\r\ndo a better job than this!\r\nI believed in you...\x05\x0CJust try harder from\r\nnow on, OK!?\x05"
+    const MESSAGE_1 = "The animals' lives\r\ndepend on you!\x05\x0CYou've got to take better\r\ncare of them than this!\x05"
+    const MESSAGE_2 = "I know they have to\r\ndie sometime...\r\nStill...sob...sniffle...\x05\x0CI hate when it happens!\x05"
+    const MESSAGE_3 = "Don't get too upset, now.\r\nYou did a good job of\r\ntaking care of of it.\x05"
+    var var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7, var_8
+    var_0 = Func112(1, 1)
+    var_1 = Func112(2, 1)
+    var_2 = Func112(3, 1)
+    var_3 = var_0 + var_1 + var_2
+    var_4 = Func112(1, 2)
+    var_5 = Func112(2, 2)
+    var_6 = Func112(3, 2)
+    var_7 = var_4 + var_5 + var_6
+    var_8 = var_3 + var_7
+    if var_8 != 0
+    {
+        Proc016(5, 1095, 163)
+        PlayBGM(1, 5)
+        SetEntityPosition(0, 1095, 163, 1)
+        Proc06B()
+        SetEntityAnim(0, 402)
+        SetEntityPosition(22, 1095, 140, 0)
+        SetEntityAnim(22, 2284)
+        if var_2 || var_6
+        {
+            SetEntityPosition(2, 1077, 163, 1)
+            SetEntityAnim(2, 531)
+        }
+        if var_0 || var_4 || var_1 || var_5
+        {
+            SetEntityPosition(4, 1115, 163, 1)
+            SetEntityAnim(4, 2543)
+        }
+        Proc035(2, 1)
+        Proc037(30)
+        if var_7
+        {
+            TalkOpen()
+            Proc030(152)
+            Proc02D(22)
+            Proc113()
+            TalkClose()
+            if var_6
+            {
+                SetEntityFacing(2, 3)
+                SetEntityFacing(0, 2)
+                TalkOpen()
+                Proc030(2)
+                Proc02D(2)
+                TalkMessage(MESSAGE_0)
+                TalkClose()
+                SetEntityFacing(2, 1)
+                SetEntityFacing(0, 1)
+            }
+            Proc037(30)
+            if var_4 || var_5
+            {
+                SetEntityFacing(4, 2)
+                SetEntityFacing(0, 3)
+                TalkOpen()
+                Proc030(183)
+                Proc02D(4)
+                TalkMessage(MESSAGE_1)
+                TalkClose()
+                SetEntityFacing(4, 1)
+                SetEntityFacing(0, 1)
+            }
+            Proc114()
+            Proc080(1, -3 * var_7)
+            Proc080(2, -3 * var_7)
+            Proc080(3, -3 * var_7)
+            Proc080(4, -3 * var_7)
+            Proc080(5, -3 * var_7)
+            Proc080(6, -3 * var_7)
+            Proc080(7, -3 * var_7)
+            Proc080(8, -3 * var_7)
+            Proc080(9, -3 * var_7)
+            Proc080(10, -3 * var_7)
+            Proc080(11, -3 * var_7)
+            Proc080(12, -3 * var_7)
+            Proc080(13, -3 * var_7)
+            Proc080(14, -3 * var_7)
+            Proc080(15, -3 * var_7)
+            Proc080(16, -3 * var_7)
+            Proc080(17, -3 * var_7)
+            Proc080(18, -3 * var_7)
+            Proc080(19, -3 * var_7)
+            Proc080(20, -3 * var_7)
+            Proc080(21, -3 * var_7)
+            Proc080(22, -3 * var_7)
+            Proc080(23, -3 * var_7)
+            Proc080(24, -3 * var_7)
+            Proc080(25, -3 * var_7)
+            Proc080(26, -3 * var_7)
+            Proc080(27, -3 * var_7)
+            Proc080(28, -3 * var_7)
+            Proc080(29, -3 * var_7)
+            Proc080(30, -3 * var_7)
+            Proc080(31, -3 * var_7)
+            if Func03E(315) == 2
+            {
+                Proc080(33, -3 * var_7)
+            }
+            if Func03E(318) == 2
+            {
+                Proc080(34, -3 * var_7)
+            }
+            Proc080(35, -3 * var_7)
+            Proc080(36, -3 * var_7)
+            Proc080(37, -3 * var_7)
+            Proc080(38, -3 * var_7)
+            Proc080(39, -3 * var_7)
+            Proc080(40, -3 * var_7)
+            Proc080(41, -3 * var_7)
+            Proc080(42, -3 * var_7)
+            Proc08A(3, -300 * var_7)
+            Proc08A(12, -300 * var_7)
+            Proc08A(19, -300 * var_7)
+            Proc08A(21, -300 * var_7)
+            Proc08A(25, -300 * var_7)
+            Proc08A(31, -300 * var_7)
+        }
+        if var_3
+        {
+            TalkOpen()
+            Proc030(152)
+            Proc02D(22)
+            Proc115()
+            TalkClose()
+            if var_2
+            {
+                TalkOpen()
+                Proc030(3)
+                Proc02D(2)
+                TalkMessage(MESSAGE_2)
+                TalkClose()
+            }
+            Proc037(30)
+            if var_0 || var_1
+            {
+                TalkOpen()
+                Proc030(183)
+                Proc02D(4)
+                TalkMessage(MESSAGE_3)
+                TalkClose()
+            }
+            Proc116()
+        }
+        Proc037(30)
+        Proc034(2, 1)
+    }
+    Proc038(986)
+}

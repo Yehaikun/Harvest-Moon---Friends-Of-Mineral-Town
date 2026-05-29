@@ -1,0 +1,39 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 789 EventScript_789
+{
+    const MESSAGE_0 = "I'm just glad they're done \r\nfighting. Now I can \r\nenjoy my meal!\x05"
+    const MESSAGE_1 = "Thanks for helping settle \r\nthings, \xFF!. \x05"
+    const MESSAGE_2 = "I wonder what they were \r\nfighting about to begin \r\nwith...?\x05"
+    const MESSAGE_3 = "Now my food doesn't taste\r\ngood any more...\r\nWhat a waste!\x05"
+    SetEntityFacing(13, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(13)
+    if Func03E(297) == 0
+    {
+        if Func085(13) == 0
+        {
+            Proc030(120)
+            TalkMessage(MESSAGE_0)
+        }
+        else
+        {
+            Proc030(117)
+            TalkMessage(MESSAGE_1)
+        }
+    }
+    else if Func085(13) == 0
+    {
+        Proc030(120)
+        TalkMessage(MESSAGE_2)
+    }
+    else
+    {
+        Proc030(120)
+        TalkMessage(MESSAGE_3)
+    }
+    TalkClose()
+    Proc083(13)
+    SetEntityFacing(13, 3)
+    exit
+}

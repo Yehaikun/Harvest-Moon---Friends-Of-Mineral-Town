@@ -1,0 +1,31 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 758 EventScript_758
+{
+    const MESSAGE_0 = "Your daughter is at a \r\ndifficult age too, right?\x05"
+    const MESSAGE_1 = "With a daughter myself, \r\nI know how much you long\r\nfor her to come back. \x05"
+    if Func086(11) == 0
+    {
+        Proc083(11)
+    }
+    if Func03E(280) == 1
+    {
+        SetEntityFacing(11, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        if Func085(11) == 0
+        {
+            Proc030(110)
+            Proc02D(11)
+            TalkMessage(MESSAGE_0)
+        }
+        else
+        {
+            Proc030(113)
+            Proc02D(11)
+            TalkMessage(MESSAGE_1)
+        }
+        TalkClose()
+        Proc083(11)
+        SetEntityFacing(11, 2)
+    }
+}

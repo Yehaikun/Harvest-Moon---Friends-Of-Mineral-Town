@@ -1,0 +1,37 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1226 EventScript_1226
+{
+    const MESSAGE_0 = "What happened to \r\neverybody? I thought it \r\ntasted good...\x05"
+    const MESSAGE_1 = "The fish taste sure \r\nwas strong...\x05"
+    if Func086(21) == 0
+    {
+        Proc083(21)
+    }
+    SetEntityFacing(21, GetOppositeFacing(GetEntityFacing(0)))
+    if Func084(21) == 0
+    {
+        Proc080(21, 5)
+    }
+    TalkOpen()
+    Proc02D(21)
+    if !(Func03E(76) == 2 || Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(371) == 2 || Func03E(150) == 2 || Func03E(151) == 2)
+    {
+        Proc032(21)
+    }
+    if Func03E(421) == 1
+    {
+        Proc030(123)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc083(21)
+    }
+    else
+    {
+        Proc030(122)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        Proc083(21)
+    }
+    SetEntityFacing(21, 0)
+}

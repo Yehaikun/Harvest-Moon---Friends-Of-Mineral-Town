@@ -1,0 +1,48 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 157 EventScript_157
+{
+    const MESSAGE_0 = "No letter inside.\x05"
+    var var_0
+    if Func064()
+    {
+        exit
+    }
+    if Func0FC() == 0
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+    else
+    {
+        for var_0 = 77; var_0 <= 133; ++var_0
+        {
+            if Func0F8(var_0) == 1
+            {
+                Proc034(3, 1)
+                Proc09B(var_0)
+                Proc035(3, 1)
+                Proc0FB(var_0)
+            }
+        }
+        if Func0F8(135) == 1
+        {
+            Proc034(3, 1)
+            Proc09B(135)
+            Proc035(3, 1)
+            Proc0FB(135)
+        }
+        if Func040() == 1
+        {
+            if Func0F8(134) == 1
+            {
+                Proc034(3, 1)
+                Proc09B(134)
+                Proc035(3, 1)
+                Proc0FB(134)
+                Proc049(84)
+            }
+        }
+    }
+}

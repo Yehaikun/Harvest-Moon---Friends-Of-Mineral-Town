@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 47 EventScript_47
+{
+    const MESSAGE_0 = "Come again any time. \r\nI won't treat you all the\r\ntime, though! \x05"
+    if Func03E(87) == 1
+    {
+
+    }
+    SetEntityFacing(24, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(83)
+    Proc02D(24)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(24, 2)
+    Proc083(24)
+}

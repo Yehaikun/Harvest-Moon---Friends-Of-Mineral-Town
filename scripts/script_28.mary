@@ -1,0 +1,18 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 28 EventScript_28
+{
+    const MESSAGE_0 = "Jeff will probably come \r\npick them up, but I doubt \r\nhe'll be able to carry them.\x05\x0CHe asked me to make 3 \r\ncrates, then forgot about \r\nall about 'em!\x05"
+    if Func03E(73) == 1
+    {
+
+    }
+    SetEntityFacing(8, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(133)
+    Proc02D(8)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    SetEntityFacing(8, 2)
+    Proc083(8)
+}

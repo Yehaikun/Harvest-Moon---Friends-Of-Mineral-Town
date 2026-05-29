@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 209 EventScript_209
+{
+    const MESSAGE_0 = "Feed Box\x05"
+    var var_0
+    var_0 = 0
+    if !Func040() && Func041() == 1 && !Func042() && Func044() == 92
+    {
+        var_0 = 1
+    }
+    if var_0 && !Func0BA(0)
+    {
+        Proc046()
+        Proc0BB(0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+}

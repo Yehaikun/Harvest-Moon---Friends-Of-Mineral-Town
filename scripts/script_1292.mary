@@ -1,0 +1,102 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1292 EventScript_1292
+{
+    const MESSAGE_0 = "I think it's unfair that \r\nonly kids get candy on the\r\nPumpkin Festival.\x05\x0CSo, I came for some, too!\x05"
+    const MESSAGE_1 = "Can I have some, please?\x05"
+    const MESSAGE_2 = "Thanks a lot, \r\n\xFF!. \x05"
+    const MESSAGE_3 = "Are you trying to trick me?\x05"
+    var var_0, var_1
+    Proc03F(436, 1)
+    switch Func041()
+    {
+        case 0
+        {
+            switch Func043()
+            {
+                case 69, 101, 104, 105, 113, 115, 117, 139, 140, 142, 143, 144, 148, 150, 151, 152, 167, 169
+                {
+                    var_0 = 16
+                }
+            }
+        }
+    }
+    var_1 = GetEntityFacing(3)
+    SetEntityFacing(3, GetOppositeFacing(GetEntityFacing(0)))
+    if Func086(3) == 0
+    {
+        Proc083(3)
+    }
+    if Func085(3) == 0
+    {
+        TalkOpen()
+        Proc02D(3)
+        Proc030(8)
+        if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+        {
+            Proc032(3)
+        }
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        Proc03F(436, 0)
+    }
+    else
+    {
+        TalkOpen()
+        if Func040()
+        {
+            Proc02D(3)
+            Proc030(7)
+            if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+            {
+                Proc032(3)
+            }
+            TalkMessage(MESSAGE_1)
+            TalkClose()
+            Proc03F(436, 0)
+        }
+        else if var_0 == 16
+        {
+            Proc08A(3, 1000)
+            Proc02D(3)
+            Proc030(8)
+            if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+            {
+                Proc032(3)
+            }
+            TalkMessage(MESSAGE_2)
+            TalkClose()
+            Proc046()
+            if GetEntityX(3) != 340
+            {
+                SetEntityFacing(3, 3)
+                SetEntityAnim(3, 563)
+                Proc008(3, 340, 1)
+                Proc00C(3)
+                SetEntityAnim(3, 559)
+            }
+            SetEntityFacing(3, 1)
+            SetEntityAnim(3, 563)
+            Proc00A(3, 0, 1)
+            Proc00C(3)
+            SetEntityAnim(3, 559)
+            Proc00F(3)
+            Proc03F(436, 2)
+            Proc101()
+        }
+        else
+        {
+            Proc02D(3)
+            Proc030(9)
+            if !(Func03E(76) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(126) == 2 || Func03E(127) == 2)
+            {
+                Proc032(3)
+            }
+            TalkMessage(MESSAGE_3)
+            TalkClose()
+            Proc03F(436, 0)
+        }
+    }
+    SetEntityFacing(3, var_1)
+    Proc083(3)
+}

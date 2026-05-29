@@ -1,0 +1,48 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 349 EventScript_349
+{
+    const MESSAGE_0 = "Cook"
+    const MESSAGE_1 = "View recipies"
+    const MESSAGE_2 = "Exit"
+    const MESSAGE_3 = "You haven't made anything.\x05"
+    const MESSAGE_4 = "Cook here.\r\nYou can't cook while \r\nholding something.\x05"
+    var var_0
+    TalkOpen()
+    if Func040() == 1
+    {
+        var_0 = TalkChoice3(MESSAGE_0, MESSAGE_1, MESSAGE_2)
+        switch var_0
+        {
+            case 1
+            {
+                TalkClose()
+                Proc034(3, 1)
+                Proc0A3()
+                Proc035(3, 1)
+            }
+            case 2
+            {
+                if Func137()
+                {
+                    TalkClose()
+                    Proc034(3, 1)
+                    Proc0A4()
+                    Proc035(3, 1)
+                }
+                else
+                {
+                    TalkMessage(MESSAGE_3)
+                }
+            }
+            case 3
+            {
+            }
+        }
+    }
+    else
+    {
+        TalkMessage(MESSAGE_4)
+    }
+    TalkClose()
+}

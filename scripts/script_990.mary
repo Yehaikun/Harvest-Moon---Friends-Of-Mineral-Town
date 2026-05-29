@@ -1,0 +1,25 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 990 EventScript_990
+{
+    const MESSAGE_0 = "The curse has been\r\nlifted from the Axe!\x05"
+    const MESSAGE_1 = "The curse has been lifted\r\nfrom the Fishing Rod!\x05"
+    var var_0
+    var_0 = Func04F()
+    Proc05B(var_0)
+    PlaySong(0, 182)
+    TalkOpen()
+    switch var_0
+    {
+        case 22
+        {
+            TalkMessage(MESSAGE_0)
+        }
+        case 46
+        {
+            TalkMessage(MESSAGE_1)
+        }
+    }
+    TalkClose()
+    SetEntityAnim(0, 402)
+}

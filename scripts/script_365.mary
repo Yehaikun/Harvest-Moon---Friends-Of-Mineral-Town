@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 365 EventScript_365
+{
+    const MESSAGE_0 = "Grape Vine\x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

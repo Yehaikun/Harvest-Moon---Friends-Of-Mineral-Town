@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 493 EventScript_493
+{
+    const MESSAGE_0 = "Kai's Beach House\r\nOpen Summer Only\r\nClosed Sunday\x05\x0CHours: 11AM-1PM and\r\n5-7PM. \x05"
+    TalkOpen()
+    Proc024(MESSAGE_0)
+    TalkClose()
+}

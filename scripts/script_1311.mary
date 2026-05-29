@@ -1,0 +1,23 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1311 EventScript_1311
+{
+    const MESSAGE_0 = "I just came with Jeff. \r\nI do love New Year Noodles\r\ntoo, though. \x05"
+    if Func086(18) == 0
+    {
+        Proc083(18)
+    }
+    SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(79)
+    Proc02D(18)
+    TalkMessage(MESSAGE_0)
+    Proc031()
+    TalkClose()
+    if Func084(18) == 0
+    {
+        Proc080(18, 5)
+    }
+    Proc083(18)
+    SetEntityFacing(18, 3)
+}

@@ -1,0 +1,87 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 704 EventScript_704
+{
+    const MESSAGE_0 = "Hmmm.....\x05"
+    const MESSAGE_1 = "What's wrong, Rick? \r\nYou seem so down...\x05"
+    const MESSAGE_2 = "I was just wondering when my\r\nfather would come back...\x05"
+    const MESSAGE_3 = "He travels all the time, \r\ndoesn't he? I've only seen \r\nseen him a few times ever.\x05"
+    const MESSAGE_4 = "Popuri's married and doesn't\r\nlive here any more...\x05\x0CI'm worried about the store.\x05"
+    const MESSAGE_5 = "Don't worry! You're \r\nforgetting about me!\x05\x0CI'll work more than Popuri\r\never did!\x05"
+    const MESSAGE_6 = "Gee Karen...Thanks!\x05"
+    const MESSAGE_7 = "You don't need to thank me!\r\nWe're married, aren't we?\r\nThat's what spouses do.\x05"
+    Proc0F2()
+    PlayBGM(1, 16)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 454)
+    }
+    else
+    {
+        SetEntityAnim(0, 342)
+    }
+    SetEntityPosition(19, 120, 80, 3)
+    SetEntityAnim(19, 1681)
+    SetEntityPosition(2, 144, 80, 2)
+    SetEntityAnim(2, 531)
+    Proc035(2, 1)
+    Proc017(120, 112, 2)
+    Proc00A(0, 144, 1)
+    Proc00C(0)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc018()
+    TalkOpen()
+    Proc030(3)
+    Proc02D(2)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    TalkOpen()
+    Proc030(72)
+    Proc02D(19)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    TalkOpen()
+    Proc030(3)
+    Proc02D(2)
+    TalkMessage(MESSAGE_2)
+    TalkClose()
+    TalkOpen()
+    Proc030(76)
+    Proc02D(19)
+    TalkMessage(MESSAGE_3)
+    TalkClose()
+    TalkOpen()
+    Proc030(3)
+    Proc02D(2)
+    TalkMessage(MESSAGE_4)
+    TalkClose()
+    TalkOpen()
+    Proc030(73)
+    Proc02D(19)
+    TalkMessage(MESSAGE_5)
+    TalkClose()
+    TalkOpen()
+    Proc030(1)
+    Proc02D(2)
+    TalkMessage(MESSAGE_6)
+    TalkClose()
+    TalkOpen()
+    Proc030(77)
+    Proc02D(19)
+    TalkMessage(MESSAGE_7)
+    TalkClose()
+    Proc017(120, 144, 2)
+    Proc018()
+    Proc0F2()
+    Proc03F(232, 1)
+    Proc08C(2, 705)
+    Proc08C(19, 706)
+    exit
+}

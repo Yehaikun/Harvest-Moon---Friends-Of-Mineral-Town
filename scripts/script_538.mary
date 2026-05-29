@@ -1,0 +1,9 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 538 EventScript_538
+{
+    const MESSAGE_0 = "Mirror\x05"
+    TalkOpen()
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+}

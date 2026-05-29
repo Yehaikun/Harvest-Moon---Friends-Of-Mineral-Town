@@ -1,0 +1,57 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1289 EventScript_1289
+{
+    const MESSAGE_0 = "And the winning Sheep is...\r\n\xFF% from \r\n\xFF$!\x05\x0CIt had the best coat, and \r\nwas also just the nicest!\x05"
+    var unused_0, var_1
+    var_1 = Func11D(2)
+    GetAnimalName(0, 2, var_1)
+    Proc016(6, 220, 94)
+    StopBGM()
+    SetEntityPosition(4, 220, 76, 0)
+    SetEntityAnim(4, 2543)
+    SetEntityPosition(0, 220, 94, 1)
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    Proc00F(71)
+    Proc00F(72)
+    Proc00F(73)
+    SetEntityPosition(70, 200, 98, 1)
+    Proc010(70, 2)
+    SetEntityAnim(70, 2333)
+    if GetEntityLocation(43) == 6
+    {
+        SetEntityPosition(43, 416, 133, 0)
+    }
+    Proc035(2, 1)
+    Proc037(60)
+    PlaySong(0, 176)
+    Proc037(60 * 4)
+    PlayBGM(1, 9)
+    TalkOpen()
+    Proc030(181)
+    Proc02D(4)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    PlaySong(0, 181)
+    Proc037(60 * 4)
+    Proc034(2, 1)
+    Proc080(2, 20)
+    Proc080(19, 20)
+    Proc080(4, 20)
+    Proc080(5, 20)
+    Proc080(7, 20)
+    Proc080(17, 20)
+    Proc080(13, 20)
+    Proc080(11, 20)
+    Proc080(14, 20)
+    Proc080(27, 20)
+    Proc00F(70)
+    Proc038(1277)
+}

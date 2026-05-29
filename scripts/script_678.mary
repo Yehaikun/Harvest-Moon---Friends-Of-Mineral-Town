@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 678 EventScript_678
+{
+    const MESSAGE_0 = "I've got to tell dad and \r\neveryone else!\x05"
+    SetEntityFacing(12, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(12)
+    Proc030(103)
+    Proc032(12)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(12)
+    SetEntityFacing(12, 2)
+}

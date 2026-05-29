@@ -1,0 +1,77 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 124 EventScript_124
+{
+    var var_0, var_1, var_2, var_3, var_4, var_5
+    if GetEntityFacing(0) == 0
+    {
+        if Func03E(82) == 1
+        {
+            Proc03F(82, 2)
+            Proc08D(2)
+            Proc08D(3)
+            Proc08D(1)
+            Proc0F3()
+        }
+        else if Func03E(125) == 1
+        {
+            Proc03F(125, 2)
+            Proc08D(2)
+            Proc08D(3)
+            Proc08D(1)
+            Proc0F3()
+        }
+        else if Func03E(228) == 1
+        {
+            Proc03F(228, 2)
+            Proc08D(2)
+            Proc08D(3)
+            Proc08D(1)
+            Proc0F3()
+        }
+        else if Func03E(230) == 1
+        {
+            Proc03F(230, 2)
+            Proc08D(2)
+            Proc08D(3)
+            Proc08D(1)
+            Proc0F3()
+        }
+        else if Func03E(232) == 1
+        {
+            Proc03F(232, 2)
+            Proc08D(2)
+            Proc08D(19)
+            Proc0F3()
+        }
+        else if Func03E(308) == 1
+        {
+            Proc03F(308, 2)
+            Proc08D(1)
+            Proc0F3()
+        }
+        else if Func03E(281) == 1
+        {
+            Proc03F(281, 2)
+            Proc08D(18)
+            Proc08D(1)
+            Proc0F3()
+        }
+        var_0 = Func03E(1)
+        var_1 = Func03E(2)
+        var_3 = Func03E(3)
+        var_2 = Func03E(5)
+        var_4 = Func03E(6)
+        var_5 = Func03E(0)
+        Proc034(2, 1)
+        Proc016(7, 572, 232)
+        SetEntityPosition(0, 572, 232, 0)
+        PlaySong(0, 205)
+        if Func03E(115) == 2 && Func03E(116) == 0 && var_5 >= 4 && var_4 == 0 && !(var_2 == 0 || var_2 == 1 || var_2 == 3 || var_2 == 5) && (var_3 >= 13 && var_3 < 16) && (Func03E(85) == 2 || Func03E(126) == 2 || Func03E(127) == 2) && Func03E(76) == 0 && Func03E(117) == 0 && Func03E(118) == 0 && Func03E(119) == 0 && Func03E(75) == 0 && GetEntityLocation(3) != 7 && GetEntityLocation(4) != 7 && GetEntityLocation(7) != 7 && GetEntityLocation(12) != 7 && GetEntityLocation(18) != 7 && Func089(19) < 60000
+        {
+            Proc03F(116, 1)
+            Proc038(876)
+        }
+        Proc035(2, 1)
+    }
+}

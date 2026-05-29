@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1096 EventScript_1096
+{
+    const MESSAGE_0 = "There are so many \r\npretty Horses. \x05"
+    const MESSAGE_1 = "\xFF\" \r\nis going to run, too, \r\nright? \x05"
+    if Func086(5) == 0
+    {
+        Proc083(5)
+    }
+    SetEntityFacing(5, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(392) == 0
+    {
+        TalkOpen()
+        Proc030(177)
+        Proc02D(5)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(176)
+        Proc02D(5)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(5) == 0
+    {
+        Proc080(5, 5)
+    }
+    Proc083(5)
+    SetEntityFacing(5, 3)
+}

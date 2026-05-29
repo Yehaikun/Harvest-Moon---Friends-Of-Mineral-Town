@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 884 EventScript_884
+{
+    const MESSAGE_0 = "How long is Jeff going to\r\nkeep crying like this?\x05\x0CHe's been this way since\r\nyesterday!\x05"
+    const MESSAGE_1 = "Jeff cried when Karen said \r\nshe was going to marry Rick\r\nas a child, too!...\x05\x0CYou'd think he'd be used \r\nto the idea by now...\x05"
+    if Func086(18) == 0
+    {
+        Proc083(18)
+    }
+    if Func085(18) == 0
+    {
+        SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(79)
+        Proc02D(18)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(18, 2)
+        Proc083(18)
+    }
+    else
+    {
+        SetEntityFacing(18, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(80)
+        Proc02D(18)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(18, 2)
+        Proc083(18)
+    }
+}

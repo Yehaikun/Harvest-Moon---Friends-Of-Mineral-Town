@@ -1,0 +1,760 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 316 EventScript_316
+{
+    const MESSAGE_0 = "There are no books here.\r\n\x05"
+    const MESSAGE_1 = "Prev. page"
+    const MESSAGE_2 = "Tak"
+    const MESSAGE_3 = "Manna"
+    const MESSAGE_4 = "Next page"
+    const MESSAGE_5 = "Lumin"
+    const MESSAGE_6 = "Sebastian"
+    const MESSAGE_7 = "Wally"
+    const MESSAGE_8 = "Chris"
+    const MESSAGE_9 = "Hugh"
+    const MESSAGE_10 = "Grant"
+    const MESSAGE_11 = "Sam"
+    const MESSAGE_12 = "Kate"
+    const MESSAGE_13 = "Galen"
+    const MESSAGE_14 = "Nina"
+    const MESSAGE_15 = "Daryl"
+    const MESSAGE_16 = "Gustafa"
+    const MESSAGE_17 = "Cody"
+    const MESSAGE_18 = "Kassey"
+    const MESSAGE_19 = "Patrick"
+    const MESSAGE_20 = "Murray"
+    const MESSAGE_21 = "Tim"
+    const MESSAGE_22 = "Ruby"
+    const MESSAGE_23 = "Nancy"
+    const MESSAGE_24 = "Rock"
+    const MESSAGE_25 = "Garcia"
+    const MESSAGE_26 = "Muffy"
+    const MESSAGE_27 = "Carter"
+    const MESSAGE_28 = "Flora"
+    const MESSAGE_29 = "Vesta"
+    const MESSAGE_30 = "Marlin"
+    const MESSAGE_31 = "Celia"
+    const MESSAGE_32 = "Hardy"
+    const MESSAGE_33 = "Van"
+    const MESSAGE_34 = "Mooky"
+    const MESSAGE_35 = "David"
+    const MESSAGE_36 = "Nic"
+    const MESSAGE_37 = "Brad"
+    const MESSAGE_38 = "Player"
+    const MESSAGE_39 = "You can't find it...\r\n\x05"
+    var var_0, var_1, var_2
+    var_1 = 0
+    TalkOpen()
+    if Func03E(537) == 0 && Func03E(538) == 0 && Func03E(539) == 0 && Func03E(540) == 0 && Func03E(541) == 0 && Func03E(542) == 0 && Func03E(543) == 0 && Func03E(544) == 0 && Func03E(545) == 0 && Func03E(546) == 0 && Func03E(547) == 0 && Func03E(548) == 0 && Func03E(549) == 0 && Func03E(550) == 0 && Func03E(551) == 0 && Func03E(552) == 0 && Func03E(553) == 0 && Func03E(554) == 0 && Func03E(555) == 0 && Func03E(556) == 0 && Func03E(557) == 0 && Func03E(558) == 0 && Func03E(559) == 0 && Func03E(560) == 0 && Func03E(561) == 0 && Func03E(562) == 0 && Func03E(563) == 0 && Func03E(564) == 0 && Func03E(565) == 0 && Func03E(566) == 0 && Func03E(567) == 0 && Func03E(568) == 0 && Func03E(569) == 0 && Func03E(570) == 0 && Func03E(571) == 0 && Func03E(535) == 0
+    {
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        do
+        {
+            switch var_1
+            {
+                case 0
+                {
+                    var_0 = TalkChoice6(MESSAGE_1, MESSAGE_2, MESSAGE_3, MESSAGE_4, MESSAGE_5, MESSAGE_6)
+                    switch var_0
+                    {
+                        case 1
+                        {
+                            var_1 = 8
+                            var_2 = 0
+                        }
+                        case 2
+                        {
+                            if Func03E(537) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(18)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 3
+                        {
+                            if Func03E(538) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(19)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 4
+                        {
+                            var_1 = 1
+                            var_2 = 0
+                        }
+                        case 5
+                        {
+                            if Func03E(539) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(20)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 6
+                        {
+                            if Func03E(540) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(21)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+                case 1
+                {
+                    var_0 = TalkChoice6(MESSAGE_1, MESSAGE_7, MESSAGE_8, MESSAGE_4, MESSAGE_9, MESSAGE_10)
+                    switch var_0
+                    {
+                        case 1
+                        {
+                            var_1 = 0
+                            var_2 = 0
+                        }
+                        case 2
+                        {
+                            if Func03E(541) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(22)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 3
+                        {
+                            if Func03E(542) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(23)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 4
+                        {
+                            var_1 = 2
+                            var_2 = 0
+                        }
+                        case 5
+                        {
+                            if Func03E(543) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(24)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 6
+                        {
+                            if Func03E(544) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(25)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+                case 2
+                {
+                    var_0 = TalkChoice6(MESSAGE_1, MESSAGE_11, MESSAGE_12, MESSAGE_4, MESSAGE_13, MESSAGE_14)
+                    switch var_0
+                    {
+                        case 1
+                        {
+                            var_1 = 1
+                            var_2 = 0
+                        }
+                        case 2
+                        {
+                            if Func03E(545) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(26)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 3
+                        {
+                            if Func03E(546) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(27)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 4
+                        {
+                            var_1 = 3
+                            var_2 = 0
+                        }
+                        case 5
+                        {
+                            if Func03E(547) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(28)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 6
+                        {
+                            if Func03E(548) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(29)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+                case 3
+                {
+                    var_0 = TalkChoice6(MESSAGE_1, MESSAGE_15, MESSAGE_16, MESSAGE_4, MESSAGE_17, MESSAGE_18)
+                    switch var_0
+                    {
+                        case 1
+                        {
+                            var_1 = 2
+                            var_2 = 0
+                        }
+                        case 2
+                        {
+                            if Func03E(549) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(30)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 3
+                        {
+                            if Func03E(550) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(31)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 4
+                        {
+                            var_1 = 4
+                            var_2 = 0
+                        }
+                        case 5
+                        {
+                            if Func03E(551) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(32)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 6
+                        {
+                            if Func03E(552) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(33)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+                case 4
+                {
+                    var_0 = TalkChoice6(MESSAGE_1, MESSAGE_19, MESSAGE_20, MESSAGE_4, MESSAGE_21, MESSAGE_22)
+                    switch var_0
+                    {
+                        case 1
+                        {
+                            var_1 = 3
+                            var_2 = 0
+                        }
+                        case 2
+                        {
+                            if Func03E(553) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(34)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 3
+                        {
+                            if Func03E(554) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(35)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 4
+                        {
+                            var_1 = 5
+                            var_2 = 0
+                        }
+                        case 5
+                        {
+                            if Func03E(555) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(36)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 6
+                        {
+                            if Func03E(556) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(37)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+                case 5
+                {
+                    var_0 = TalkChoice6(MESSAGE_1, MESSAGE_23, MESSAGE_24, MESSAGE_4, MESSAGE_25, MESSAGE_26)
+                    switch var_0
+                    {
+                        case 1
+                        {
+                            var_1 = 4
+                            var_2 = 0
+                        }
+                        case 2
+                        {
+                            if Func03E(557) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(38)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 3
+                        {
+                            if Func03E(558) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(39)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 4
+                        {
+                            var_1 = 6
+                            var_2 = 0
+                        }
+                        case 5
+                        {
+                            if Func03E(559) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(40)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 6
+                        {
+                            if Func03E(560) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(41)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+                case 6
+                {
+                    var_0 = TalkChoice6(MESSAGE_1, MESSAGE_27, MESSAGE_28, MESSAGE_4, MESSAGE_29, MESSAGE_30)
+                    switch var_0
+                    {
+                        case 1
+                        {
+                            var_1 = 5
+                            var_2 = 0
+                        }
+                        case 2
+                        {
+                            if Func03E(561) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(42)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 3
+                        {
+                            if Func03E(562) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(43)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 4
+                        {
+                            var_1 = 7
+                            var_2 = 0
+                        }
+                        case 5
+                        {
+                            if Func03E(563) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(44)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 6
+                        {
+                            if Func03E(564) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(45)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+                case 7
+                {
+                    var_0 = TalkChoice6(MESSAGE_1, MESSAGE_31, MESSAGE_32, MESSAGE_4, MESSAGE_33, MESSAGE_34)
+                    switch var_0
+                    {
+                        case 1
+                        {
+                            var_1 = 6
+                            var_2 = 0
+                        }
+                        case 2
+                        {
+                            if Func03E(565) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(46)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 3
+                        {
+                            if Func03E(566) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(47)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 4
+                        {
+                            var_1 = 8
+                            var_2 = 0
+                        }
+                        case 5
+                        {
+                            if Func03E(567) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(48)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 6
+                        {
+                            if Func03E(568) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(49)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+                case 8
+                {
+                    var_0 = TalkChoice6(MESSAGE_1, MESSAGE_35, MESSAGE_36, MESSAGE_4, MESSAGE_37, MESSAGE_38)
+                    switch var_0
+                    {
+                        case 1
+                        {
+                            var_1 = 7
+                            var_2 = 0
+                        }
+                        case 2
+                        {
+                            if Func03E(569) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(51)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 3
+                        {
+                            if Func03E(570) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(52)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 4
+                        {
+                            var_1 = 0
+                            var_2 = 0
+                        }
+                        case 5
+                        {
+                            if Func03E(571) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(53)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                        case 6
+                        {
+                            if Func03E(535) == 0
+                            {
+                                var_2 = 2
+                            }
+                            else
+                            {
+                                TalkClose()
+                                Proc034(3, 1)
+                                Proc09B(54)
+                                Proc035(3, 1)
+                                var_2 = 1
+                            }
+                        }
+                    }
+                }
+            }
+            if var_2 == 2
+            {
+                TalkMessage(MESSAGE_39)
+                var_2 = 0
+            }
+        } while var_2 == 0
+    }
+    TalkClose()
+}

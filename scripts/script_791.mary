@@ -1,0 +1,39 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 791 EventScript_791
+{
+    const MESSAGE_0 = "I was getting worried \r\nthere!...\x05"
+    const MESSAGE_1 = "When those two start \r\nfighting, even I can't stop\r\nthem by myself. \x05\x0CThanks, \xFF!. \x05"
+    const MESSAGE_2 = "I should put a stop to this. \x05"
+    const MESSAGE_3 = "But, I can't stop both of \r\nthem all by myself...\x05"
+    SetEntityFacing(14, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(14)
+    if Func03E(297) == 0
+    {
+        if Func085(14) == 0
+        {
+            Proc030(146)
+            TalkMessage(MESSAGE_0)
+        }
+        else
+        {
+            Proc030(145)
+            TalkMessage(MESSAGE_1)
+        }
+    }
+    else if Func085(14) == 0
+    {
+        Proc030(147)
+        TalkMessage(MESSAGE_2)
+    }
+    else
+    {
+        Proc030(148)
+        TalkMessage(MESSAGE_3)
+    }
+    TalkClose()
+    Proc083(14)
+    SetEntityFacing(14, 3)
+    exit
+}

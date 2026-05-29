@@ -1,0 +1,32 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1137 EventScript_1137
+{
+    const MESSAGE_0 = "I look forward to Beach Day\r\nall the more since they \r\nbegan the Frisbee \x05\r\nTournament. I know all \r\nthe Dogs because I see them\r\nwhen I\x81fm working. \x05\x0CSo, I'm glad whoever wins!\x05"
+    const MESSAGE_1 = "Good luck to all people \r\nand canines! \x05"
+    if Func086(28) == 0
+    {
+        Proc083(28)
+    }
+    SetEntityFacing(28, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    if Func03E(403) == 0
+    {
+        Proc030(32)
+        Proc02D(28)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        Proc030(32)
+        Proc02D(28)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(28) == 0
+    {
+        Proc080(28, 5)
+    }
+    Proc083(28)
+    SetEntityFacing(28, 0)
+}

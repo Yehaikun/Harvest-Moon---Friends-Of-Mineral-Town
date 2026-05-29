@@ -1,0 +1,22 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1115 EventScript_1115
+{
+    const MESSAGE_0 = "I hope my mom is alright.\r\nI tried to convince her\r\nnot to come, you know. \x05"
+    if Func086(2) == 0
+    {
+        Proc083(2)
+    }
+    SetEntityFacing(2, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc030(3)
+    Proc02D(2)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    if Func084(2) == 0
+    {
+        Proc080(2, 5)
+    }
+    SetEntityFacing(2, 3)
+    Proc083(2)
+}

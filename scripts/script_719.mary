@@ -1,0 +1,15 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 719 EventScript_719
+{
+    const MESSAGE_0 = "Sorry for showing you \r\nsuch an ugly scene...\x05"
+    SetEntityFacing(8, GetOppositeFacing(GetEntityFacing(0)))
+    TalkOpen()
+    Proc02D(8)
+    Proc030(133)
+    TalkMessage(MESSAGE_0)
+    TalkClose()
+    Proc083(8)
+    SetEntityFacing(8, 2)
+    exit
+}

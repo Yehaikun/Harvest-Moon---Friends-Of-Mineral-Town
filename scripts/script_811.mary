@@ -1,0 +1,108 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 811 EventScript_811
+{
+    const MESSAGE_0 = "I brought 3 rare and \r\nvaluable items for you \r\ntoday! These are special\x05\r\nfor you.\x05"
+    const MESSAGE_1 = "These 3 kinds of Apples are\r\nno ordinary Apples, \r\nyou understand? \x05"
+    const MESSAGE_2 = "This is the first kind. \r\nIt's called SUGDW Apple. \x05"
+    const MESSAGE_3 = "It's real name is very long:\r\nSuper Ultra Great Delicious\r\nWonderful Apple!\x05"
+    const MESSAGE_4 = "Sometimes I can't remember\r\nall of it...! \x05"
+    const MESSAGE_5 = "This is the second one: \r\nthe HMSGB Apple! \x05"
+    const MESSAGE_6 = "That's short for Hyper \r\nMiracle Sweet Gorgeous \r\nBeautiful  Apple!\x05"
+    const MESSAGE_7 = "That one is hard to \r\nremember, too!\x05"
+    const MESSAGE_8 = "Finally, I have this. \r\nIt's an AEPFE Apple!\x05"
+    const MESSAGE_9 = "That's short for:\r\nAngel Eternal Pure \r\nFresh Elegant Apple. \x05"
+    const MESSAGE_10 = "See? Even the name \r\nis wonderful!\x05"
+    const MESSAGE_11 = "Of course, you have to eat\r\neach one to see how \r\nwonderful it really is!\x05"
+    const MESSAGE_12 = "Price is 500G. \r\nVery cheap, very cheap. \x05"
+    const MESSAGE_13 = "Which will it be?"
+    const MESSAGE_14 = "SUGDW"
+    const MESSAGE_15 = "HMSGB"
+    const MESSAGE_16 = "AEPFE"
+    const MESSAGE_17 = "No thanks."
+    const MESSAGE_18 = "Thanks very much!\r\nI didn't think anyone would\r\never -- I mean...\x05\r\nYou have a fine eye, sir!\r\nI'll be going now!\x05"
+    const MESSAGE_19 = "You don't even have 500G?\r\nWhat a poor man you are!\x05"
+    var var_0
+    if Func040() == 1
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(29, 228, 145, 1)
+    SetEntityAnim(29, 2135)
+    Proc035(2, 1)
+    TalkOpen()
+    Proc030(114)
+    Proc02D(29)
+    TalkMessage(MESSAGE_0)
+    Proc030(115)
+    TalkMessage(MESSAGE_1)
+    Proc030(115)
+    TalkMessage(MESSAGE_2)
+    Proc030(114)
+    TalkMessage(MESSAGE_3)
+    Proc030(116)
+    TalkMessage(MESSAGE_4)
+    Proc030(115)
+    TalkMessage(MESSAGE_5)
+    Proc030(114)
+    TalkMessage(MESSAGE_6)
+    Proc030(116)
+    TalkMessage(MESSAGE_7)
+    Proc030(115)
+    TalkMessage(MESSAGE_8)
+    Proc030(114)
+    TalkMessage(MESSAGE_9)
+    Proc030(116)
+    TalkMessage(MESSAGE_10)
+    Proc030(114)
+    TalkMessage(MESSAGE_11)
+    Proc030(115)
+    TalkMessage(MESSAGE_12)
+    var_0 = Func027(MESSAGE_13, MESSAGE_14, MESSAGE_15, MESSAGE_16, MESSAGE_17)
+    switch var_0
+    {
+        case 1
+        {
+            TalkMessage(MESSAGE_18)
+            TalkClose()
+            Proc048(71)
+            Proc0F1(500)
+        }
+        case 2
+        {
+            TalkMessage(MESSAGE_18)
+            TalkClose()
+            Proc048(72)
+            Proc0F1(500)
+        }
+        case 3
+        {
+            TalkMessage(MESSAGE_18)
+            TalkClose()
+            Proc048(73)
+            Proc0F1(500)
+        }
+        case 4
+        {
+            Proc030(116)
+            Proc02D(29)
+            TalkMessage(MESSAGE_19)
+            TalkClose()
+        }
+    }
+    SetEntityFacing(29, 3)
+    SetEntityAnim(29, 2139)
+    Proc008(29, 319, 1)
+    Proc00C(29)
+    SetEntityFacing(29, 1)
+    Proc00A(29, 0, 1)
+    Proc00C(29)
+    Proc00F(29)
+    Proc083(29)
+    Proc03F(312, 2)
+    exit
+}

@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 73 EventScript_73
+{
+    const MESSAGE_0 = "I'm so glad Stu is back!\x05"
+    const MESSAGE_1 = "You are very kind, \r\n\xFF!.\x05"
+    if Func03E(107) == 1
+    {
+
+    }
+    if Func03E(108) == 0
+    {
+        SetEntityFacing(15, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(63)
+        Proc02D(15)
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(15, 0)
+        Proc083(15)
+    }
+    else
+    {
+        SetEntityFacing(15, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(64)
+        Proc02D(15)
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(15, 0)
+        Proc083(15)
+    }
+}

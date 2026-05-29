@@ -1,0 +1,56 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 463 EventScript_463
+{
+    const MESSAGE_0 = "Yarn Maker\r\nPlace Wool in here to \r\nmake Yarn.\x05"
+    var var_0, var_1
+    var_0 = 0
+    if !Func040() && Func041() == 1 && !Func042()
+    {
+        var_1 = Func044()
+        switch var_1
+        {
+            case 5, 6, 7, 8, 9, 10
+            {
+                var_0 = 1
+            }
+        }
+    }
+    if var_0
+    {
+        Proc046()
+        switch var_1
+        {
+            case 5
+            {
+                Proc049(11)
+            }
+            case 6
+            {
+                Proc049(12)
+            }
+            case 7
+            {
+                Proc049(13)
+            }
+            case 8
+            {
+                Proc049(14)
+            }
+            case 9
+            {
+                Proc049(15)
+            }
+            case 10
+            {
+                Proc049(16)
+            }
+        }
+    }
+    else
+    {
+        TalkOpen()
+        Proc024(MESSAGE_0)
+        TalkClose()
+    }
+}

@@ -1,0 +1,56 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 583 EventScript_583
+{
+    const MESSAGE_0 = "The Rolling Pin you ordered \r\nis here. \x05\x0CCan't make noodles without\r\nthis baby!\r\nIt's top quality, too!\x05"
+    const MESSAGE_1 = "Delivered safe and sound!\x05"
+    Proc016(2, 228, 120)
+    SetEntityPosition(0, 228, 120, 0)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityPosition(28, 228, 145, 1)
+    SetEntityAnim(28, 792)
+    Proc035(2, 1)
+    Proc03F(164, 1)
+    TalkOpen()
+    Proc030(31)
+    Proc02D(28)
+    TalkMessage(MESSAGE_0)
+    Proc030(32)
+    Proc02D(28)
+    TalkMessage(MESSAGE_1)
+    TalkClose()
+    SetEntityAnim(0, 510)
+    Proc037(60)
+    if Func040()
+    {
+        SetEntityAnim(0, 402)
+    }
+    else
+    {
+        SetEntityAnim(0, 338)
+    }
+    SetEntityFacing(28, 3)
+    SetEntityAnim(28, 796)
+    Proc008(28, 319, 1)
+    Proc00C(28)
+    SetEntityAnim(28, 792)
+    SetEntityFacing(28, 1)
+    SetEntityAnim(28, 796)
+    SetEntityFacing(0, 3)
+    Proc00A(28, 0, 1)
+    Proc00C(28)
+    SetEntityAnim(28, 792)
+    Proc00F(28)
+    Proc083(28)
+    Proc0E5()
+    Proc03F(37, 1)
+    Proc03F(164, 2)
+    exit
+}

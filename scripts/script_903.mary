@@ -1,0 +1,41 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 903 EventScript_903
+{
+    const MESSAGE_0 = "I wouldn't tell Rick, but \r\nPopuri and Kai really are \r\na great couple. \x05"
+    const MESSAGE_1 = "You only live once! \r\nYou gotta follow your heart.\x05"
+    if Func086(19) == 0
+    {
+        Proc083(19)
+    }
+    if Func085(19) == 0
+    {
+        SetEntityFacing(19, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(72)
+        Proc02D(19)
+        if !(Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2)
+        {
+            Proc032(19)
+        }
+        TalkMessage(MESSAGE_0)
+        TalkClose()
+        SetEntityFacing(19, 2)
+        Proc083(19)
+    }
+    else
+    {
+        SetEntityFacing(19, GetOppositeFacing(GetEntityFacing(0)))
+        TalkOpen()
+        Proc030(73)
+        Proc02D(19)
+        if !(Func03E(85) == 2 || Func03E(95) == 2 || Func03E(103) == 2 || Func03E(111) == 2 || Func03E(371) == 2 || Func03E(117) == 2 || Func03E(118) == 2 || Func03E(119) == 2)
+        {
+            Proc032(19)
+        }
+        TalkMessage(MESSAGE_1)
+        TalkClose()
+        SetEntityFacing(19, 2)
+        Proc083(19)
+    }
+}

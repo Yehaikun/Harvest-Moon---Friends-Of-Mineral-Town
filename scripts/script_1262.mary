@@ -1,0 +1,33 @@
+#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+
+script 1262 EventScript_1262
+{
+    const MESSAGE_0 = "You must believe\r\nin yourself. \x05"
+    const MESSAGE_1 = "I'm betting on you, \r\nso don't fail me!\x05"
+    if Func086(27) == 0
+    {
+        Proc083(27)
+    }
+    SetEntityFacing(27, GetOppositeFacing(GetEntityFacing(0)))
+    if Func03E(427) == 0
+    {
+        TalkOpen()
+        Proc030(173)
+        Proc02D(27)
+        TalkMessage(MESSAGE_0)
+    }
+    else
+    {
+        TalkOpen()
+        Proc030(173)
+        Proc02D(27)
+        TalkMessage(MESSAGE_1)
+    }
+    TalkClose()
+    if Func084(27) == 0
+    {
+        Proc080(27, 5)
+    }
+    Proc083(27)
+    SetEntityFacing(27, 0)
+}

@@ -1,0 +1,129 @@
+================================ PARTIAL DECOMPILATION
+    /* Complete statements */
+    TalkOpen()
+    /* Expression */
+    push (Func03E(3) == 4 || Func03E(3) == 16) && Func03E(4) == 44
+    beq location_6
+    /* Complete statements */
+    Proc0FF(16)
+    jmp location_7
+location_6:
+    /* Expression */
+    push Func03E(6) == 3 || Func03E(6) == 4
+    beq location_12
+    /* Complete statements */
+    Proc0FF(16)
+    var_1 = Func0FE(0)
+    jmp location_13
+location_12:
+    /* Expression */
+    push Func03E(3) < 6
+    beq location_16
+    /* Complete statements */
+    Proc0FF(1)
+    var_1 = Func0FE(1)
+    jmp location_17
+location_16:
+    /* Function Call Expression */
+    push Func03E(580)
+    jmp location_18
+    /* Case blocks (switch 1) */
+    case 0
+    {
+        Proc038(1058)
+    } // breaks to location_19
+    case 3
+    {
+        Proc038(1042)
+    } // breaks to location_20
+    case 1
+    {
+        Proc0FF(6)
+        Proc038(1039)
+    } // breaks to location_21
+    case 2
+    {
+        if Func03E(1) == 0 && (Func03E(2) == 1 || Func03E(2) == 2 || Func03E(2) == 3 || Func03E(2) == 4 || Func03E(2) == 5) || Func03E(1) == 3 && (Func03E(2) == 29 || Func03E(2) == 30)
+        {
+            Proc038(1053)
+        }
+        else
+        {
+            switch Func03E(5)
+            {
+                case 0
+                {
+                    Proc0FF(19)
+                    Proc038(1056)
+                }
+                case 1
+                {
+                    Proc0FF(4)
+                    Proc038(1036)
+                }
+                case 2
+                {
+                    Proc0FF(4)
+                    Proc038(1037)
+                }
+                case 3
+                {
+                    Proc0FF(13)
+                    Proc038(1048)
+                }
+                case 4
+                {
+                    Proc0FF(0)
+                    Proc038(1033)
+                }
+                case 5
+                {
+                    Proc0FF(12)
+                    Proc038(1047)
+                }
+                case 6
+                {
+                    Proc0FF(7)
+                    Proc038(1040)
+                }
+            }
+        }
+    } // breaks to location_51
+location_18:
+================================ REMAINING INSTRUCTIONS
+>   Switch(SwitchId(1))
+    Label(JumpId(51))
+    Label(JumpId(21))
+    Label(JumpId(20))
+    Label(JumpId(19))
+    Label(JumpId(17))
+    Label(JumpId(13))
+    Label(JumpId(7))
+    Call(CallId(253))
+    Call(CallId(32))
+    PushVar(VarId(1))
+    Jmp(JumpId(52))
+    Case(SwitchId(2), Val(0))
+    Case(SwitchId(2), Val(1))
+    Case(SwitchId(2), Val(2))
+    Case(SwitchId(2), Val(3))
+    PushInt(580)
+    PushVar(VarId(1))
+    Call(CallId(62))
+    PushInt(540)
+    Call(CallId(55))
+    Jmp(JumpId(53))
+    Case(SwitchId(2), Val(4))
+    Case(SwitchId(2), Val(5))
+    Jmp(JumpId(54))
+    Jmp(JumpId(55))
+    Jmp(JumpId(56))
+    Label(JumpId(52))
+    Switch(SwitchId(2))
+    Label(JumpId(56))
+    Label(JumpId(55))
+    Label(JumpId(54))
+    Label(JumpId(53))
+================================ END OF SCRIPT
+Decompile error: Couldn't reduce
+Error: ()

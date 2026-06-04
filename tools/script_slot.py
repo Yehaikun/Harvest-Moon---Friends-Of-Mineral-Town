@@ -12,6 +12,7 @@ from pathlib import Path
 GBA_ROM_BASE = 0x08000000
 DEFAULT_TABLE_OFFSET = 0x0F89D4
 DEFAULT_SCRIPT_COUNT = 1328
+DEFAULT_SCRIPT_TABLE_SYMBOL = "gUnk_080F89D4"
 
 
 def _read_u32(data: bytes, offset: int) -> int:
@@ -24,6 +25,15 @@ def gba_addr_to_rom_offset(addr: int) -> int:
     if addr < GBA_ROM_BASE:
         raise ValueError(f"not a ROM address: 0x{addr:08X}")
     return addr - GBA_ROM_BASE
+
+
+def read_symbol_rom_offset(map_path: Path, symbol: str = DEFAULT_SCRIPT_TABLE_SYMBOL) -> int:
+    """Read a ROM-offset symbol address from an ld map file."""
+    for line in map_path.read_text(encoding="utf-8", errors="replace").splitlines():
+        parts = line.split()
+        if len(parts) >= 2 and parts[-1] == symbol:
+            return gba_addr_to_rom_offset(int(parts[0], 16))
+    raise ValueError(f"symbol {symbol!r} not found in {map_path}")
 
 
 def inspect_slot(
@@ -103,11 +113,19 @@ def main() -> int:
     parser.add_argument("rom", type=Path, help="ROM image to inspect")
     parser.add_argument("--script-id", type=int, required=True)
     parser.add_argument("--table-offset", type=lambda value: int(value, 0), default=DEFAULT_TABLE_OFFSET)
+    parser.add_argument("--map", type=Path, help="ld map file; overrides --table-offset with gUnk_080F89D4")
     parser.add_argument("--script-count", type=int, default=DEFAULT_SCRIPT_COUNT)
+    parser.add_argument("--field", help="print a single field value")
     parser.add_argument("--json", action="store_true", help="print machine-readable JSON")
     args = parser.parse_args()
 
-    slot = inspect_slot(args.rom, args.script_id, args.table_offset, args.script_count)
+    table_offset = read_symbol_rom_offset(args.map) if args.map else args.table_offset
+    slot = inspect_slot(args.rom, args.script_id, table_offset, args.script_count)
+    if args.field:
+        if args.field not in slot:
+            raise SystemExit(f"unknown field: {args.field}")
+        print(slot[args.field])
+        return 0
     if args.json:
         print(json.dumps(slot, indent=2, sort_keys=True))
         return 0

@@ -106,7 +106,7 @@ SECTIONS
         src/npc_entity.o(.text);
         asm/code_entities_08034CEC.o(.text);
 
-        asm/code_0803A8A4.o(.text);
+        src/code_0803A8A4.o(.text);
         src/script_engine.o(.text);
         asm/code_0803EE94.o(.text);
 

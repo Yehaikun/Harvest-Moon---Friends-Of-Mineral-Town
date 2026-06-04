@@ -2,7 +2,7 @@
 
 script 1011 EventScript_1011
 {
-    const MESSAGE_0 = "Sorry, do I know you?\r\nAh, you're the new guy at\r\nthe farm, huh?\x05\x0CAnd I thought you were \r\na guest!\x05\x0CYour name is \xFF!?\r\nI'm Ann.\x05"
+    const MESSAGE_0 = "\xFF!? Heard you're doing great\r\nwith your farm! Keep it up!\x05\x0CIf you ever need a hand,\r\njust say the word!\x05"
     const MESSAGE_1 = "A birthday present?\r\nfor me? What a surprise!\x05"
     const MESSAGE_2 = "You mean this is a present?\r\nFor me! Awesome!\x05"
     const MESSAGE_3 = "...\xFF)...\r\nThank you so much...!\r\nI'm so happy!\x05"

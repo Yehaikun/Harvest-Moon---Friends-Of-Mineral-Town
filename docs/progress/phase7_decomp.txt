@@ -9,7 +9,7 @@ Phase 7 - 核心引擎反编译进度
 一、已完成 (真C 共11个)
 ------------------------
 intro_scene:
-[V] func_08000F5C (156字节) 开场画面显示初始化
+[V] func_08000F5C (156字节) 开场画面显示初始化 - ⚠️ 已回滚到NAKED, C代码导致开场splash消失
 [V] func_080036F8 (36字节) 构造函数
 [V] func_0800371C (44字节) 析构
 [V] func_0800374C (44字节) 初始化
@@ -24,35 +24,48 @@ new_game:
 [V] func_080059D0 (25行)  析构
 
 
-二、intro_scene.c 剩余反编译计划 (7个NAKED)
+二、实验记录 (基于 MapData 和 terrain 的改动测试)
+-------------------------------------------------
+
+实验1: 扩农场边界
+- 操作: MapData.width 60→240, height 56→240
+- 结果: 画面无变化
+- 结论: 单改 width/height 不够, terrain_map 数据大小不变
+
+实验2: fence 碰撞 bit0 验证
+- 操作: terrain_info[5].bit0 = 1→0 (围栏值=5, 1095块)
+- 结果: 围栏变可走(用户确认)
+- 结论: terrain_info bit0 确实控制碰撞 ✅ 已验证可用
+
+实验3: 农场视觉替换为南镇 packed_img
+- 操作: farm.MapData.packed_img → south_town.packed_img
+- 结果: 农场画面无变化, 反而玫瑰广场异常
+- 结论: packed_img 不是简单视觉tilemap指针, 映射关系更复杂
+
+
+三、已验证的地图碰撞链路
+--------------------------
+GetMapData(map_id) @ 0x080A4698
+  ├── MapData +0x18: terrain_info → terrain属性数组 (bit0=碰撞)
+  ├── MapData +0x1C: terrain_map → 每格terrain索引 (w*h字节)
+  ├── MapData +0x20: width (tile数)
+  ├── MapData +0x22: height (tile数)
+  ├── MapData +0x24: is_interior
+  └── MapData +0x00~0x14: packed_img/pal/tiles (视觉资源, 链路未完全确认)
+
+
+四、intro_scene.c 剩余反编译计划 (7个NAKED)
 ---------------------------------------------
-按推荐顺序:
-
 [ ] #1 func_08000D64 (184B) 🟡 中
-    状态机, 调用 func_08000E1C/00FF8.
-    需确认是否有隐藏尾部代码.
-
 [ ] #2 func_080035C0 (312B) 🟡 中
-    绘制函数.
-
 [ ] #3 func_08000E1C (320B) 🟡 中
-    帧循环, 调用 func_08000F5C.
-
 [ ] #4 func_08000FF8 + sub_080010BE (2330B) 🔴 高
-    主循环, 14路跳转表.
-    sub_080010BE 嵌入在函数体内, 需拆分成两个函数.
-
 [ ] #5 func_08000914 (1104B) 🔴 高
-    开场主体初始化, 使用 R8/SB/SL 高寄存器.
-
 [ ] #6 func_080019D8 (2824B) 🔴 高
-    子循环.
-
 [ ] #7 func_080024E0 (4320B) 🔴 极高
-    渲染更新, 多层跳转表.
 
 
-三、new_game.c 剩余
+五、new_game.c 剩余
 --------------------
 [ ] func_080050C8 (复杂, 待分析)
 [ ] func_08006C28 (复杂, 待分析)
@@ -60,17 +73,17 @@ new_game:
 [ ] 还有约35个
 
 
-四、须知 (踩坑记录)
+六、须知 (踩坑记录)
 --------------------
 1. 函数末尾 .byte 数据可能是被外部调用的 THUMB 代码, 不能直接删
-2. func_08007110 因此回滚 -> 保持NAKED
-3. func_08005A3C 也有此问题 -> 跳过
-4. func_08000F5C 失败原因有两个:
-   - func_08008EB8 参数顺序为 (val,dst,size), 不是 (dst,val,size)
-   - 调色板复制目标必须是 0x05000000. 原汇编为 0xA0 << 19 = 0x05000000; 误写成 0x06005000 会把调色板写到 VRAM, 导致开场 splash 黑屏/白屏.
+2. func_08007110 / func_08005A3C 因此回滚 -> 保持NAKED
+3. func_08000F5C 失败原因: func_08008EB8 参数顺序为 (val,dst,size)
+   且 palette 目标应为 0x05000000 不是 0x06005000
+4. packed_img 不是直接 tielmap 指针, 视觉链路待分析
+5. terrain_info.bit0 已验证是碰撞控制 ✅
 
 
-五、验证标准 (每次提交)
+七、验证标准 (每次提交)
 --------------------------
 1. make clean && make -j2 fomt.gba
 2. 检查 fomt.map 地址不漂移

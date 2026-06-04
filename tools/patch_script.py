@@ -10,7 +10,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-from script_slot import DEFAULT_TABLE_OFFSET, inspect_slot
+from script_slot import DEFAULT_TABLE_OFFSET, inspect_slot, read_symbol_rom_offset
 
 
 def compile_script(source: Path, mary: Path, output: Path) -> None:
@@ -78,7 +78,8 @@ def main() -> int:
     parser.add_argument("--rom-in", type=Path, required=True)
     parser.add_argument("--rom-out", type=Path, required=True)
     parser.add_argument("--mary", type=Path, default=Path("../stanhash_mary/target/release/mary"))
-    parser.add_argument("--table-offset", type=lambda value: int(value, 0), default=DEFAULT_TABLE_OFFSET)
+    parser.add_argument("--table-offset", type=lambda value: int(value, 0))
+    parser.add_argument("--map", type=Path, help="ld map file used to locate gUnk_080F89D4")
     args = parser.parse_args()
 
     if not args.source.exists():
@@ -88,6 +89,19 @@ def main() -> int:
     if not args.mary.exists():
         raise SystemExit(f"missing mary compiler: {args.mary}")
 
+    map_path = args.map
+    if map_path is None:
+        candidate = args.rom_in.with_suffix(".map")
+        if candidate.exists():
+            map_path = candidate
+    table_offset = (
+        args.table_offset
+        if args.table_offset is not None
+        else read_symbol_rom_offset(map_path)
+        if map_path is not None and map_path.exists()
+        else DEFAULT_TABLE_OFFSET
+    )
+
     same_path = args.rom_in.resolve() == args.rom_out.resolve()
     with tempfile.TemporaryDirectory(prefix="fomt_script_patch_") as tmp_dir:
         tmp = Path(tmp_dir)
@@ -95,10 +109,10 @@ def main() -> int:
         compile_script(args.source, args.mary, compiled)
         if same_path:
             tmp_rom = tmp / args.rom_out.name
-            result = patch_rom(args.rom_in, tmp_rom, args.script_id, compiled, args.table_offset)
+            result = patch_rom(args.rom_in, tmp_rom, args.script_id, compiled, table_offset)
             shutil.copyfile(tmp_rom, args.rom_out)
         else:
-            result = patch_rom(args.rom_in, args.rom_out, args.script_id, compiled, args.table_offset)
+            result = patch_rom(args.rom_in, args.rom_out, args.script_id, compiled, table_offset)
 
     print(
         "patched script {script_id}: offset=0x{rom_offset:X} size={compiled_size}/{slot_size} remaining={remaining_bytes}".format(

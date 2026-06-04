@@ -133,14 +133,15 @@ compare: $(ROM)
 # ROM from ELF
 %.gba: %.elf $(SCRIPT_PATCH_SOURCES) tools/patch_script.py tools/script_slot.py
 	$(OBJCOPY) -O binary $< $@
-	@for patch in $(SCRIPT_PATCHES); do \
+	@set -e; for patch in $(SCRIPT_PATCHES); do \
 		id=$${patch%%:*}; \
 		src=$${patch#*:}; \
 		python3 tools/patch_script.py --script-id $$id --source $$src --rom-in $@ --rom-out $@ --mary "$(MARY)"; \
 	done
 
 check-script-patches: $(ROM)
-	@$(MARY) decompile $(ROM) $(MARY_LIB) --script-id 167 -o /tmp/fomt_script_167_check.mary
+	@offset=$$(python3 tools/script_slot.py $(ROM) --map $(MAP) --script-id 167 --field rom_offset); \
+	$(MARY) decompile $(ROM) $(MARY_LIB) --offset $$offset -o /tmp/fomt_script_167_check.mary
 	@grep -q "Proc016(8, 236, 411)" /tmp/fomt_script_167_check.mary
 	@grep -q "SetEntityPosition(0, 236, 411, 1)" /tmp/fomt_script_167_check.mary
 	@echo "script patch OK: script_167 chicken coop -> goddess pond"

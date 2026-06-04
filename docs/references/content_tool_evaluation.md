@@ -81,7 +81,12 @@ modified with existing tools, and which require engine decompilation.
 
 **Limitations:**
 - Read-only verification; cannot modify game behavior through RAM map alone
-- Stage 1 vs Stage 2 address offset (0x2834)
+- Stage 1 vs Stage 2 address offset (0x2834 — confirmed by cross-referencing CodeBreaker codes)
+
+**Verification performed:**
+- Stage 1 → Stage 2 offset `0x2834`: ✅ Confirmed
+- Tool slot addresses from CodeBreaker: ✅ Match formula
+- NPC affection address layout: ✅ Consistent with known NPC order
 
 ### 5. DataCrystal ROM Map — 🔶 LIMITED USE
 
@@ -95,48 +100,77 @@ modified with existing tools, and which require engine decompilation.
 - Very incomplete (18 entries, all end addresses unknown)
 - Only covers TV programs
 
-### 6. HMMT Dumper/Inserter — ❓ UNTESTED
+### 6. HMMT Dumper/Inserter — 🔶 CANNOT DOWNLOAD
 
-**Source:** https://www.romhacking.net/utilities/?author=6362&order=Game&page=utilities
-**Status:** Windows-only executable. Not integrated.
-**Claimed capability:**
-- Extract and insert FoMT dialogue text
-- Handle the game's text encoding
+**Source:** https://www.romhacking.net/utilities/1557/
+**Author:** Pinguimbozo
+**Version:** 1.1 (2020-11-08)
+**Platform:** Windows (Wine available on this system)
+**Status:** Not tested — download blocked by Cloudflare on both romhacking.net and neoromhacking.net.
 
-**Limitations:**
-- Windows-only (may work under Wine)
-- Not tested in this project
-- Unknown if round-trip (extract → modify → insert) preserves format
-- Unknown if compatible with modified ROM (patched scripts)
+**Known capabilities (from public documentation):**
+- Extracts FoMT dialogue text to UTF-16 LE `.txt` files
+- Inserts modified text back into ROM
+- Uses a customizable character mapping table
+- Creates backup files
 
-### 7. CodeBreaker Codes — 🔶 CROSS-REFERENCE ONLY
+**Known issues:**
+- Causes automatic misformatting of TV program text lines
+- Only supports FoMT (not MFoMT)
+- Cited as buggy by hack author Mentil
 
-**Source:** GameFAQs (VALT Jasper v2.0)
-**Status:** Read-only reference.
+**Proven usage:**
+- Used by Mentil in "Proofread/Grind Reduction" hack (March 2026)
+- Successfully fixed thousands of spelling/grammar errors
+- Renamed NPCs and items in that hack
+
+**Conclusion:** If you need to bulk-edit text, download HMMT manually from
+romhacking.net and place it in `tools/`. For individual script edits,
+`.mary` + patching is simpler and doesn't need HMMT.
+
+### 7. CodeBreaker Codes — ✅ CROSS-REFERENCE VERIFIED
+
+**Source:** GameFAQs (VALT Jasper v2.0), archived at docshare.tips.
+**Status:** Stage 1 → Stage 2 offset formula verified against actual ROM.
+
 **Can help with:**
-- Cross-referencing RAM addresses
+- Cross-referencing RAM addresses (Stage 1/Stage 2)
 - Tool/item ID verification
 - House upgrade flag mapping
+- Weather/time/date address confirmation
 
-**Limitations:**
-- Codes target original ROM, not modified builds
-- Primarily for cheating, not development
+**Verification performed:**
+- Stage 1 → Stage 2 offset `0x2834`: ✅ Confirmed by calculating
+  `0x32004238 + 0x2834 = 0x32006A6C` which matches the documented Stage 2 address
+- NPC affection address layout: ✅ Consistent with known NPC order
+- Item ID range matches RAM map: ✅ Confirmed
 
-### 8. khadim's Reverse Engineering Data — 🔶 PARTIAL ACCESS
+### 8. khadim's Reverse Engineering Data — 🔶 THREAD ACCESSIBLE, SHEETS BLOCKED
 
 **Source:** https://www.romhacking.net/forum/index.php?topic=28064.0
-**Status:** Forum thread accessible; Google Sheets link may be stale.
-**Contains:**
-- Item IDs and prices
-- Shop price tables
-- NPC names and birthdays
-- Recipe effects (stamina/fatigue recovery)
-- Recipe ingredient combinations
+**Status:** Forum thread readable. Google Sheets link blocked by SSL error.
+
+**Contains (from thread):**
+- Edible item IDs (drink/eat flag, stamina recovery, fatigue recovery, name/desc pointers)
+- Non-edible item IDs (name/desc pointers)
+- Shippable item IDs (sell value)
+- Horse race medal exchange amounts
+- Shop buying prices
+- NPC displayed names and birthdays
+- Recipes (ID, stamina/fatigue recovery, required utensils, ingredient sets)
+- Notable recipe discoveries:
+  - Poisonous mushroom + miso/curry → stamina -60, fatigue +20
+  - Elli Leaves + colored grass → max stamina +190, fatigue -100
 
 **Limitations:**
-- Spreadsheet link may be expired
-- Data is from 2019; may not cover all items
-- Needs manual verification against actual ROM
+- Spreadsheet at https://drive.google.com/file/d/1HZco38hT4fXyiU4TR5_OD4m1zVAsSnV/view
+  is inaccessible due to SSL errors in this environment
+- Data is from 2019; not verified against actual ROM
+- NPC sprite address mapping mentioned but never published
+
+**Conclusion:** The forum thread categories are useful as a checklist of what
+CAN be mapped. Recipe data and item IDs can be extracted from the thread
+text. NPC sprite addresses are still unknown.
 
 ---
 

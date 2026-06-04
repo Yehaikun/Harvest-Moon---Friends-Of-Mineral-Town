@@ -12,7 +12,7 @@ from pathlib import Path
 
 # ROM free space
 FREE_SPACE_START = 0x75C244
-FREE_SPACE_END = 0x800000
+FREE_SPACE_END = 0x2000000
 
 # MapData table location and farm entry
 MAPDATA_TABLE = 0x105EDC  # file offset

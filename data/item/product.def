@@ -43,7 +43,7 @@
 /* 29 */ o( SUGDW_APPLE, FOOD, 50 )
 /* 2A */ o( HMSGB_APPLE, FOOD, 50 )
 /* 2B */ o( AEPFE_APPLE, FOOD, 50 )
-/* 2C */ o( HONEY, FOOD, 50 )
+/* 2C */ o( HONEY, FOOD, 10000 )
 /* 2D */ o( BAMBOO_SHOOT, FOOD, 50 )
 /* 2E */ o( WILD_GRAPES, FOOD, 50 )
 /* 2F */ o( MUSHROOM, FOOD, 70 )

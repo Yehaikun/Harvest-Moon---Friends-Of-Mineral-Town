@@ -11,7 +11,9 @@
     max_camera_x = MapData.width*8 - 240
     max_camera_y = MapData.height*8 - 160
 [X] 阶段5: 传送点和门 - ✅ warp_index.tsv 485条记录
-[ ] 阶段6: 房屋扩建 - ❌ 待开始 需要组合tilemap+terrain修改
+[ ] 阶段6: 房屋扩建 - 🟡 需要popuri压缩机
+    terrain_map可改(已验证), tilemap需压缩机(参见tilemap_toolchain_roadmap.md)
+    terrain + width/height 补丁已应用到此ROM (围栏全可走, 相机65x60)
 [X] 阶段7: free-space 重定位 - ✅ 655KB可用(0x75C244-0x800000)
 [ ] 阶段8: 可复用地图包 - ❌ 待开始
 [ ] 阶段9: 完整验收 - ❌ 待开始

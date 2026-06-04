@@ -10,11 +10,8 @@
     max_camera_x = MapData.width * 8 - 240
     max_camera_y = MapData.height * 8 - 160
     修改MapData.width/height后相机会允许滚动到新区域
-[ ] 阶段5: 传送点和门
-[ ] 阶段6: 房屋扩建
-[ ] 阶段7: free-space 重定位
-[ ] 阶段8: 可复用地图包
-[ ] 阶段9: 完整验收
+[X] 阶段5: 传送点和门 - ✅ warp_index.tsv 485条记录覆盖全部地图
+[ ] 阶段6-9: 需要进一步分析视觉tilemap、free-space扫描、打包和验收
 
 已验证的关键链路:
 - GetMapData(map_id) @ 0x080A4698 → 返回 MapData 结构体

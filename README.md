@@ -62,10 +62,43 @@
 
 更多外部资料整理见 [docs/references/fomt_reverse_engineering_sources.md](./docs/references/fomt_reverse_engineering_sources.md)。
 
-## 构建方法
+## 构建与验证流程
+
+### 完整构建（日常开发推荐）
 
 ```bash
-make
+make check-all          # 检查工具链 + slot 大小 + 索引完整性
+make -j2 fomt.gba       # 编译 ROM
+make check-script-patches  # 验证补丁已写入
+```
+
+### 快速构建（只改 C/ASM，不改脚本）
+
+```bash
+make -j2 fomt.gba
+```
+
+### 改了对白/事件脚本后
+
+```bash
+make pre-build-check    # 检查脚本是否超出 ROM slot
+make -j2 fomt.gba
+make check-script-patches
+```
+
+### 一键完成
+
+```bash
+make check-all && make -j2 fomt.gba && make check-script-patches
+```
+
+### ROM 位置
+
+构建产物为 `fomt.gba`，用模拟器打开：
+
+```bash
+mgba-qt fomt.gba          # mGBA（推荐）
+visualboyadvance-m fomt.gba  # VBA
 ```
 
 > 注意：因已修改源码，`make compare` 的 SHA1 校验会失败，但 `fomt.gba` 会正常生成。

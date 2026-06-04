@@ -69,7 +69,7 @@ SECTIONS
         src/new.o(.text);
         src/pure_virtual.o(.text);
         src/sram_proxy.o(.text);
-        asm/sram_proxy_2.o(.text);
+        . = . + 0x90;
         src/scene.o(.text);
         asm/scene.o(.text);
         asm/intro_scene.o(.text);

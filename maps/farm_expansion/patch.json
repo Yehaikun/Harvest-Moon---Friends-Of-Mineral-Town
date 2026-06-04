@@ -1,0 +1,67 @@
+{
+  "name": "farm_expansion",
+  "version": "1.0",
+  "description": "Expands farm map from 60x56 to 65x60 tiles",
+  "created": "2026-06-05",
+  "applies_to": "fomt.gba (post-build)",
+
+  "changes": {
+    "map_id": 2,
+    "old_size": {"width": 60, "height": 56},
+    "new_size": {"width": 65, "height": 60},
+
+    "tilemap_layers": {
+      "packed_tiles1": {
+        "old": "0x086FD240",
+        "new": "0x0875C244",
+        "format": "lzss4 pass-through",
+        "description": "Tilemap layer 1 (visual ground)"
+      },
+      "packed_tiles2": {
+        "old": "0x086FD7D0",
+        "new": "0x0875E0C4",
+        "format": "lzss4 pass-through",
+        "description": "Tilemap layer 2 (visual details)"
+      },
+      "packed_tiles3": {
+        "old": "0x086FD9F4",
+        "new": "0x0875FF44",
+        "format": "lzss4 pass-through",
+        "description": "Tilemap layer 3 (visual top)"
+      }
+    },
+
+    "terrain": {
+      "terrain_map": {
+        "old": "0x08131AFC",
+        "new": "0x08761DC4",
+        "size": "3900 bytes (65x60)",
+        "description": "Per-tile terrain index"
+      },
+      "terrain_info": "unchanged (0x08131AD4)"
+    },
+
+    "camera_bounds": {
+      "max_x": "280 pixels (old: 240)",
+      "max_y": "320 pixels (old: 208)"
+    }
+  },
+
+  "free_space_usage": {
+    "start": "0x75C244",
+    "end": "0x761DC4 + 3908 = ~0x762CDC",
+    "total_used": 27332,
+    "remaining": "~640KB"
+  },
+
+  "build_integration": {
+    "script": "tools/patch_farm_expansion.py",
+    "make_target": "fomt.gba (auto-runs post-build)",
+    "dependencies": ["decompress.py"]
+  },
+
+  "rollback": {
+    "method": "git checkout -- Makefile && make clean && make -j2 fomt.gba",
+    "notes": "Or rebuild from main branch without the patch script"
+  }
+}

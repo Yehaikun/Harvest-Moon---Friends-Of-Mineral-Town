@@ -291,3 +291,22 @@ check-all: check-mary pre-build-check check-script-patches check-indexes
 	@echo "All checks passed"
 
 .PHONY: check-all
+
+# -------------------------------------------------------------------
+# Phase 5: Map pack targets
+# -------------------------------------------------------------------
+
+MAP_PACKS := farm_expansion
+
+# Apply a map pack (re-build with the pack's patch)
+map-pack-%:
+	@echo "Map pack '$*' is built into fomt.gba automatically"
+	@test -f maps/$*/patch.json && echo "  Config: maps/$*/patch.json" || true
+	@echo "  To rebuild: make clean && make -j2 fomt.gba"
+
+# Verify map pack metadata
+check-map-pack-%:
+	@python3 -c "import json; d=json.load(open('maps/$*/patch.json')); print(f'  {d[\"name\"]} v{d[\"version\"]}: {d[\"description\"]}')"
+	@echo "  Map pack '$*' OK"
+
+.PHONY: map-pack-% check-map-pack-%

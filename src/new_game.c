@@ -82,9 +82,14 @@ NAKED void func_08004C0C(void)
     asm_unified("\tfunc_08004C0C: @ 0x08004C0C\n\t    push {r4, lr}\n\t    sub sp, #0xc\n\t    adds r4, r0, #0\n\t    ldr r1, [r1, #4]\n\t    mov r0, sp\n\t    bl func_08004570\n\t    ldr r2, [sp]\n\t    mov r0, sp\n\t    str r0, [sp, #4]\n\t    str r2, [sp, #8]\n\t    adds r1, r0, #0\n\t    movs r0, #0\n\t    str r0, [r1]\n\t    str r2, [r4]\n\t    ldr r1, [sp]\n\t    cmp r1, #0\n\t    beq .L08004C3C\n\t    ldr r0, [r1]\n\t    ldr r2, [r0, #8]\n\t    adds r0, r1, #0\n\t    movs r1, #3\n\t    bl _call_via_r2\n\t.L08004C3C:\n\t    adds r0, r4, #0\n\t    add sp, #0xc\n\t    pop {r4}\n\t    pop {r1}\n\t    bx r1\n\t    .align 2, 0");
 }
 
-NAKED void func_08004C48(void)
+extern u32 vtable_unk_080E5A88[];
+
+/*
+ * func_08004C48 - 设置虚表
+ */
+void func_08004C48(void *self)
 {
-    asm_unified("\tfunc_08004C48: @ 0x08004C48\n\t    ldr r1, .L08004C50 @ =vtable_unk_080E5A88\n\t    str r1, [r0]\n\t    bx lr\n\t    .align 2, 0\n\t.L08004C50: .4byte vtable_unk_080E5A88");
+    *(void **)self = (void *)vtable_unk_080E5A88;
 }
 
 NAKED void func_08004C54(void)

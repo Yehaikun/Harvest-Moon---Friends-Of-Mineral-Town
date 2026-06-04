@@ -94,7 +94,8 @@ SECTIONS
         src/rucksack_item.o(.text);
         src/held_item.o(.text);
         src/rucksack.o(.text);
-        asm/more_items.o(.text);
+        src/more_items.o(.text);
+        . = . + 8;
         src/game_scene.o(.text);
         . = . + 0x210;
         asm/game_state.o(.text);

@@ -127,9 +127,13 @@ void func_08005254(void *self)
     func_08008724(self);
 }
 
-NAKED void func_08005260(void)
+/*
+ * func_08005260 - 清除两个标志位
+ */
+void func_08005260(void *self)
 {
-    asm_unified("\tfunc_08005260: @ 0x08005260\n\t    ldr r2, .L08005270 @ =0x00001A75\n\t    adds r1, r0, r2\n\t    movs r2, #0\n\t    strb r2, [r1]\n\t    ldr r1, .L08005274 @ =0x00001A74\n\t    adds r0, r0, r1\n\t    strb r2, [r0]\n\t    bx lr\n\t    .align 2, 0\n\t.L08005270: .4byte 0x00001A75\n\t.L08005274: .4byte 0x00001A74");
+    *(u8*)((u32)self + 0x1A75) = 0;
+    *(u8*)((u32)self + 0x1A74) = 0;
 }
 
 NAKED void func_08005278(void)

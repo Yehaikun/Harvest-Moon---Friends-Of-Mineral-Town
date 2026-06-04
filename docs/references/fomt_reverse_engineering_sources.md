@@ -63,9 +63,11 @@ gUnk_080F89D4:
 
 - The first tracked patch/insertion step now exists:
   - `tools/script_slot.py` inspects a script pointer and available slot size.
-  - `tools/patch_script.py` compiles a `.mary` file and patches the generated ROM.
-  - `make fomt.gba` applies `SCRIPT_PATCHES` after `objcopy`.
-  - `make check-script-patches` verifies the current script 167 regression patch.
+- `tools/patch_script.py` compiles a `.mary` file and patches the generated ROM.
+- `make fomt.gba` applies `SCRIPT_PATCHES` after `objcopy`.
+- `make check-script-patches` verifies the current script 167 regression patch.
+- `make warp-index` generates `docs/generated/warp_index.tsv` from all `Proc016`
+  and nearby `SetEntityPosition` calls.
 - This does not yet replace the whole script table/data with generated objects. It is a safe
   bounded-slot patch layer for scripts whose compiled size fits their original slot.
 
@@ -251,7 +253,8 @@ tool --script-id 167 --table-offset 0x0F89D4 --rom baserom.gba
 
 It should print pointer, ROM offset, next pointer, slot size, and whether the compiled replacement fits.
 
-4. Build a map warp index by scanning scripts for `Proc016(` and `SetEntityPosition(`.
+4. Expand the map warp index with trigger-source information: which door/NPC/event
+   reaches each script.
 5. Build a RAM-watch note file for emulator testing: date/time/weather/money/affection/event flags.
 6. For text mods, test HMMT in a temporary branch before adopting it.
 

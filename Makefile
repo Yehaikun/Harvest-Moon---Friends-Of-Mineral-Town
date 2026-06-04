@@ -50,6 +50,7 @@ MARY_LIB := mary_scripts/lib_fomt.txt
 
 SCRIPT_PATCHES := 167:scripts/script_167.mary
 SCRIPT_PATCH_SOURCES := scripts/script_167.mary
+WARP_INDEX := docs/generated/warp_index.tsv
 
 # ================
 # = BUILD CONFIG =
@@ -123,6 +124,13 @@ check-script-patches: $(ROM)
 	@echo "script patch OK: script_167 chicken coop -> beach"
 
 .PHONY: check-script-patches
+
+$(WARP_INDEX): tools/scan_warps.py include/decomp/entities.hh $(wildcard scripts/script_*.mary)
+	python3 tools/scan_warps.py --output $@
+
+warp-index: $(WARP_INDEX)
+
+.PHONY: warp-index
 
 # ELF
 $(ELF): $(ALL_OBJS) $(LDS)

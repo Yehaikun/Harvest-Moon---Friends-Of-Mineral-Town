@@ -1,0 +1,485 @@
+script_id	script	line	map_id	map_name	proc_x	proc_y	player_line	entity_id	entity_x	entity_y	facing	has_player_position	source
+6	script_6.mary	43	9		68	124	44	0	68	124	1	yes	scripts/script_6.mary
+6	script_6.mary	70	2	MAP_FARM	316	116	71	0	316	116	3	yes	scripts/script_6.mary
+6	script_6.mary	119	2	MAP_FARM	316	116	120	0	316	116	3	yes	scripts/script_6.mary
+16	script_16.mary	25	15	MAP_SHOP_INTERIOR	145	275	27	0	145	274	1	yes	scripts/script_16.mary
+20	script_20.mary	26	15	MAP_SHOP_INTERIOR	184	111	28	0	184	258	1	yes	scripts/script_20.mary
+24	script_24.mary	37	15	MAP_SHOP_INTERIOR	144	255	39	0	144	279	1	yes	scripts/script_24.mary
+24	script_24.mary	129	33		136	164	131	0	103	167	1	yes	scripts/script_24.mary
+24	script_24.mary	231	16		198	252	233	0	160	240	3	yes	scripts/script_24.mary
+24	script_24.mary	315	5	MAP_NORTH_TOWN	688	168	316	0	688	168	0	yes	scripts/script_24.mary
+29	script_29.mary	52	15	MAP_SHOP_INTERIOR	100	95	54	0	88	200	1	yes	scripts/script_29.mary
+29	script_29.mary	292	16		160	196	294	0	134	201	3	yes	scripts/script_29.mary
+29	script_29.mary	339	19		241	306	343	19	311	244	3	no	scripts/script_29.mary
+29	script_29.mary	408	5	MAP_NORTH_TOWN	856	168	409	0	856	168	0	yes	scripts/script_29.mary
+33	script_33.mary	8	29	MAP_PLAYER_HOUSE	331	148	10	0	331	148	2	yes	scripts/script_33.mary
+34	script_34.mary	8	12		184	160	10	0	168	152	0	yes	scripts/script_34.mary
+35	script_35.mary	22	29	MAP_PLAYER_HOUSE	303	148	24	0	303	148	3	yes	scripts/script_35.mary
+36	script_36.mary	23	7	MAP_SOUTH_TOWN	471	171	25	0	320	171	3	yes	scripts/script_36.mary
+37	script_37.mary	14	2	MAP_FARM	228	160	16	0	228	120	0	yes	scripts/script_37.mary
+37	script_37.mary	75	2	MAP_FARM	490	140	77	0	490	140	1	yes	scripts/script_37.mary
+37	script_37.mary	94	2	MAP_FARM	130	540	96	0	130	540	1	yes	scripts/script_37.mary
+37	script_37.mary	117	2	MAP_FARM	228	90	119	0	220	220	1	yes	scripts/script_37.mary
+38	script_38.mary	51	12		184	160	53	0	184	272	1	yes	scripts/script_38.mary
+38	script_38.mary	210	0	MAP_MOTHERS_HILL	1016	432	212	0	1065	432	0	yes	scripts/script_38.mary
+38	script_38.mary	482	5	MAP_NORTH_TOWN	1232	168	483	0	1232	168	0	yes	scripts/script_38.mary
+39	script_39.mary	35	10		140	95	37	0	120	216	1	yes	scripts/script_39.mary
+43	script_43.mary	8	29	MAP_PLAYER_HOUSE	331	148	10	0	331	148	2	yes	scripts/script_43.mary
+44	script_44.mary	8	12		184	160	9	0	168	152	0	yes	scripts/script_44.mary
+45	script_45.mary	23	29	MAP_PLAYER_HOUSE	303	148	25	0	303	148	3	yes	scripts/script_45.mary
+46	script_46.mary	36	21		184	256	38	0	184	280	1	yes	scripts/script_46.mary
+46	script_46.mary	149	21		184	139	151	0	184	139	0	yes	scripts/script_46.mary
+46	script_46.mary	223	21		184	139	225	0	184	139	0	yes	scripts/script_46.mary
+46	script_46.mary	298	5	MAP_NORTH_TOWN	632	496	299	0	632	496	0	yes	scripts/script_46.mary
+49	script_49.mary	14	23		276	116	16	0	276	248	1	yes	scripts/script_49.mary
+51	script_51.mary	38	21		120	128	40	0	136	235	1	yes	scripts/script_51.mary
+51	script_51.mary	149	19		250	260	151	0	304	232	0	yes	scripts/script_51.mary
+51	script_51.mary	246	22		176	111	248	0	176	111	1	yes	scripts/script_51.mary
+51	script_51.mary	327	5	MAP_NORTH_TOWN	632	496	328	0	632	496	0	yes	scripts/script_51.mary
+52	script_52.mary	26	21		248	116	28	0	315	248	1	yes	scripts/script_52.mary
+54	script_54.mary	8	29	MAP_PLAYER_HOUSE	331	148	10	0	331	148	2	yes	scripts/script_54.mary
+55	script_55.mary	8	12		184	160	9	0	168	152	0	yes	scripts/script_55.mary
+56	script_56.mary	22	29	MAP_PLAYER_HOUSE	303	148	24	0	303	148	3	yes	scripts/script_56.mary
+57	script_57.mary	18	24		120	144	20	0	120	208	1	yes	scripts/script_57.mary
+59	script_59.mary	20	24		120	76	22	0	120	144	1	yes	scripts/script_59.mary
+61	script_61.mary	21	8	MAP_MOTHERS_PEAK	152	380	23	0	236	487	1	yes	scripts/script_61.mary
+62	script_62.mary	43	26		120	80	45	0	120	208	1	yes	scripts/script_62.mary
+62	script_62.mary	159	27		120	80	161	0	128	104	2	yes	scripts/script_62.mary
+62	script_62.mary	203	26		120	80	205	0	128	96	1	yes	scripts/script_62.mary
+62	script_62.mary	265	5	MAP_NORTH_TOWN	200	168	266	0	200	168	0	yes	scripts/script_62.mary
+62	script_62.mary	349	5	MAP_NORTH_TOWN	200	168	350	0	200	168	0	yes	scripts/script_62.mary
+62	script_62.mary	392	5	MAP_NORTH_TOWN	200	168	393	0	200	168	0	yes	scripts/script_62.mary
+63	script_63.mary	8	29	MAP_PLAYER_HOUSE	331	148	10	0	331	148	2	yes	scripts/script_63.mary
+64	script_64.mary	8	12		184	160	9	0	168	152	0	yes	scripts/script_64.mary
+65	script_65.mary	19	29	MAP_PLAYER_HOUSE	303	148	21	0	303	148	3	yes	scripts/script_65.mary
+66	script_66.mary	33	19		120	140	35	0	120	272	1	yes	scripts/script_66.mary
+69	script_69.mary	26	19		136	107	28	0	136	256	1	yes	scripts/script_69.mary
+69	script_69.mary	86	19		232	124	88	0	184	128	3	yes	scripts/script_69.mary
+69	script_69.mary	181	19		144	144	183	0	144	144	2	yes	scripts/script_69.mary
+72	script_72.mary	35	14		120	104	37	0	120	104	1	yes	scripts/script_72.mary
+72	script_72.mary	165	5	MAP_NORTH_TOWN	1264	216	167	0	1128	216	3	yes	scripts/script_72.mary
+72	script_72.mary	216	14		120	80	218	0	120	120	1	yes	scripts/script_72.mary
+76	script_76.mary	15	1	MAP_BEACH	385	144	17	0	231	144	3	yes	scripts/script_76.mary
+77	script_77.mary	8	29	MAP_PLAYER_HOUSE	331	148	10	0	331	148	2	yes	scripts/script_77.mary
+78	script_78.mary	8	12		184	160	9	0	168	152	0	yes	scripts/script_78.mary
+79	script_79.mary	18	29	MAP_PLAYER_HOUSE	303	148	20	0	303	148	3	yes	scripts/script_79.mary
+88	script_88.mary	6	3	MAP_FOREST	24	264	7	0	24	264	3	yes	scripts/script_88.mary
+89	script_89.mary	9	52		120	192	10	0	120	192	1	yes	scripts/script_89.mary
+90	script_90.mary	15	3	MAP_FOREST	24	448	16	0	24	448	3	yes	scripts/script_90.mary
+91	script_91.mary	16	18		120	208	17	0	120	208	1	yes	scripts/script_91.mary
+92	script_92.mary	16	308		120	192	17	0	120	192	1	yes	scripts/script_92.mary
+93	script_93.mary	16	8	MAP_MOTHERS_PEAK	236	464	17	0	236	464	1	yes	scripts/script_93.mary
+97	script_97.mary	8	2	MAP_FARM	752	122	9	0	752	122	0	yes	scripts/script_97.mary
+105	script_105.mary	51	13		120	208	52	0	120	208	1	yes	scripts/script_105.mary
+106	script_106.mary	92	6	MAP_ROSE_SQUARE	456	128	93	0	456	128	2	yes	scripts/script_106.mary
+107	script_107.mary	89	35		120	208	90	0	120	208	1	yes	scripts/script_107.mary
+107	script_107.mary	97	35		120	208	98	0	120	208	1	yes	scripts/script_107.mary
+108	script_108.mary	34	36		120	208	35	0	120	208	1	yes	scripts/script_108.mary
+111	script_111.mary	8	29	MAP_PLAYER_HOUSE	120	208	9	0	220	88	0	yes	scripts/script_111.mary
+112	script_112.mary	8	29	MAP_PLAYER_HOUSE	160	24	9	0	160	24	0	yes	scripts/script_112.mary
+113	script_113.mary	8	29	MAP_PLAYER_HOUSE	120	208	9	0	220	104	1	yes	scripts/script_113.mary
+114	script_114.mary	8	29	MAP_PLAYER_HOUSE	120	208	9	0	220	88	0	yes	scripts/script_114.mary
+115	script_115.mary	8	29	MAP_PLAYER_HOUSE	120	208	9	0	220	104	1	yes	scripts/script_115.mary
+123	script_123.mary	33	11		24	96	34	0	24	96	1	yes	scripts/script_123.mary
+124	script_124.mary	67	7	MAP_SOUTH_TOWN	572	232	68	0	572	232	0	yes	scripts/script_124.mary
+134	script_134.mary	8	10		24	152	9	0	24	152	0	yes	scripts/script_134.mary
+136	script_136.mary	47	4	MAP_CHURCH_REAR	252	368	48	0	252	368	1	yes	scripts/script_136.mary
+142	script_142.mary	8	4	MAP_CHURCH_REAR	332	368	9	0	332	368	1	yes	scripts/script_142.mary
+143	script_143.mary	63	5	MAP_NORTH_TOWN	1232	168	64	0	1232	168	0	yes	scripts/script_143.mary
+153	script_153.mary	22	1	MAP_BEACH	212	120	23	0	212	120	0	yes	scripts/script_153.mary
+165	script_165.mary	9	9		120	208	10	0	120	208	1	yes	scripts/script_165.mary
+166	script_166.mary	38	3	MAP_FOREST	168	24	39	0	168	24	0	yes	scripts/script_166.mary
+167	script_167.mary	17	1	MAP_BEACH	24	280	18	0	24	280	3	yes	scripts/script_167.mary
+168	script_168.mary	41	29	MAP_PLAYER_HOUSE	304	208	42	0	304	208	1	yes	scripts/script_168.mary
+169	script_169.mary	18	29	MAP_PLAYER_HOUSE	240	208	19	0	240	208	1	yes	scripts/script_169.mary
+170	script_170.mary	18	29	MAP_PLAYER_HOUSE	120	208	19	0	120	208	1	yes	scripts/script_170.mary
+171	script_171.mary	17	37		184	272	18	0	184	272	1	yes	scripts/script_171.mary
+172	script_172.mary	43	7	MAP_SOUTH_TOWN	104	496	44	0	104	496	1	yes	scripts/script_172.mary
+175	script_175.mary	6	0	MAP_MOTHERS_HILL	1176	510	7	0	1176	510	2	yes	scripts/script_175.mary
+176	script_176.mary	14	0	MAP_MOTHERS_HILL	1175	752	15	0	1175	752	2	yes	scripts/script_176.mary
+177	script_177.mary	8	2	MAP_FARM	264	688	9	0	264	688	1	yes	scripts/script_177.mary
+178	script_178.mary	8	7	MAP_SOUTH_TOWN	812	496	9	0	812	496	1	yes	scripts/script_178.mary
+179	script_179.mary	44	40		120	208	45	0	120	208	1	yes	scripts/script_179.mary
+188	script_188.mary	45	5	MAP_NORTH_TOWN	400	168	46	0	400	168	0	yes	scripts/script_188.mary
+201	script_201.mary	14	15	MAP_SHOP_INTERIOR	100	64	15	0	100	64	0	yes	scripts/script_201.mary
+205	script_205.mary	37	16		92	320	38	0	92	320	1	yes	scripts/script_205.mary
+206	script_206.mary	55	5	MAP_NORTH_TOWN	688	168	56	0	688	168	0	yes	scripts/script_206.mary
+222	script_222.mary	8	2	MAP_FARM	144	520	9	0	144	520	0	yes	scripts/script_222.mary
+228	script_228.mary	46	0	MAP_MOTHERS_HILL	360	144	47	0	360	144	0	yes	scripts/script_228.mary
+237	script_237.mary	25	20		24	64	26	0	24	64	1	yes	scripts/script_237.mary
+238	script_238.mary	51	5	MAP_NORTH_TOWN	856	168	52	0	856	168	0	yes	scripts/script_238.mary
+250	script_250.mary	8	19		24	152	9	0	24	152	0	yes	scripts/script_250.mary
+268	script_268.mary	14	21		92	64	15	0	92	64	0	yes	scripts/script_268.mary
+271	script_271.mary	58	22		92	320	59	0	92	320	1	yes	scripts/script_271.mary
+272	script_272.mary	40	23		40	248	41	0	40	248	1	yes	scripts/script_272.mary
+273	script_273.mary	39	5	MAP_NORTH_TOWN	632	496	40	0	632	496	0	yes	scripts/script_273.mary
+284	script_284.mary	20	21		40	96	21	0	40	96	0	yes	scripts/script_284.mary
+292	script_292.mary	38	27		216	88	39	0	216	88	1	yes	scripts/script_292.mary
+293	script_293.mary	17	5	MAP_NORTH_TOWN	200	168	18	0	200	168	0	yes	scripts/script_293.mary
+300	script_300.mary	14	26		216	144	15	0	216	144	0	yes	scripts/script_300.mary
+305	script_305.mary	25	25		216	96	26	0	216	96	1	yes	scripts/script_305.mary
+306	script_306.mary	34	5	MAP_NORTH_TOWN	276	176	35	0	276	176	0	yes	scripts/script_306.mary
+307	script_307.mary	8	24		216	168	9	0	216	168	0	yes	scripts/script_307.mary
+329	script_329.mary	8	4	MAP_CHURCH_REAR	372	312	9	0	372	312	0	yes	scripts/script_329.mary
+338	script_338.mary	8	5	MAP_NORTH_TOWN	480	168	9	0	480	168	0	yes	scripts/script_338.mary
+358	script_358.mary	203	2	MAP_FARM	228	120	204	0	228	120	0	yes	scripts/script_358.mary
+360	script_360.mary	10	12		308	64	11	0	308	64	0	yes	scripts/script_360.mary
+361	script_361.mary	8	5	MAP_NORTH_TOWN	1292	24	9	0	1292	24	0	yes	scripts/script_361.mary
+362	script_362.mary	23	28		120	208	24	0	120	208	1	yes	scripts/script_362.mary
+370	script_370.mary	52	12		184	320	53	0	184	320	1	yes	scripts/script_370.mary
+371	script_371.mary	66	14		120	208	67	0	120	208	1	yes	scripts/script_371.mary
+372	script_372.mary	69	15	MAP_SHOP_INTERIOR	144	320	70	0	144	320	1	yes	scripts/script_372.mary
+373	script_373.mary	42	19		184	320	43	0	184	320	1	yes	scripts/script_373.mary
+374	script_374.mary	60	21		184	320	61	0	184	320	1	yes	scripts/script_374.mary
+375	script_375.mary	64	26		120	208	65	0	120	208	1	yes	scripts/script_375.mary
+376	script_376.mary	31	24		120	208	32	0	120	208	1	yes	scripts/script_376.mary
+377	script_377.mary	45	30		120	208	46	0	120	208	1	yes	scripts/script_377.mary
+378	script_378.mary	52	31		120	208	53	0	120	208	1	yes	scripts/script_378.mary
+379	script_379.mary	9	6	MAP_ROSE_SQUARE	220	24	10	0	220	24	0	yes	scripts/script_379.mary
+380	script_380.mary	16	33		120	208	17	0	120	208	1	yes	scripts/script_380.mary
+381	script_381.mary	8	7	MAP_SOUTH_TOWN	104	24	9	0	104	24	0	yes	scripts/script_381.mary
+389	script_389.mary	15	5	MAP_NORTH_TOWN	232	488	16	0	232	488	0	yes	scripts/script_389.mary
+390	script_390.mary	37	32		216	64	38	0	216	64	1	yes	scripts/script_390.mary
+399	script_399.mary	8	31		216	136	9	0	216	136	0	yes	scripts/script_399.mary
+401	script_401.mary	8	43		120	144	9	0	120	144	1	yes	scripts/script_401.mary
+409	script_409.mary	335	1	MAP_BEACH	24	280	336	0	24	280	3	yes	scripts/script_409.mary
+410	script_410.mary	334	5	MAP_NORTH_TOWN	1260	680	335	0	1260	680	1	yes	scripts/script_410.mary
+411	script_411.mary	334	7	MAP_SOUTH_TOWN	1272	24	335	0	1272	24	0	yes	scripts/script_411.mary
+415	script_415.mary	15	5	MAP_NORTH_TOWN	316	464	16	0	316	464	0	yes	scripts/script_415.mary
+416	script_416.mary	21	34		120	152	22	0	120	152	0	yes	scripts/script_416.mary
+422	script_422.mary	8	33		120	80	9	0	120	80	1	yes	scripts/script_422.mary
+423	script_423.mary	24	15	MAP_SHOP_INTERIOR	144	320	25	0	144	320	1	yes	scripts/script_423.mary
+423	script_423.mary	67	10		120	208	68	0	120	208	1	yes	scripts/script_423.mary
+430	script_430.mary	50	1	MAP_BEACH	260	504	51	0	260	504	0	yes	scripts/script_430.mary
+440	script_440.mary	24	1	MAP_BEACH	84	120	25	0	84	120	0	yes	scripts/script_440.mary
+462	script_462.mary	8	2	MAP_FARM	504	120	9	0	504	120	0	yes	scripts/script_462.mary
+519	script_519.mary	16	7	MAP_SOUTH_TOWN	296	120	17	0	296	120	0	yes	scripts/script_519.mary
+521	script_521.mary	9	41		40	208	10	0	40	208	1	yes	scripts/script_521.mary
+523	script_523.mary	124	10		120	208	125	0	120	208	1	yes	scripts/script_523.mary
+524	script_524.mary	8	2	MAP_FARM	340	56	9	0	340	56	0	yes	scripts/script_524.mary
+525	script_525.mary	14	3	MAP_FOREST	832	24	15	0	832	24	0	yes	scripts/script_525.mary
+526	script_526.mary	8	5	MAP_NORTH_TOWN	104	680	9	0	104	680	1	yes	scripts/script_526.mary
+527	script_527.mary	9	6	MAP_ROSE_SQUARE	220	432	10	0	220	432	1	yes	scripts/script_527.mary
+528	script_528.mary	83	38		120	208	84	0	120	208	1	yes	scripts/script_528.mary
+529	script_529.mary	9	39		120	208	10	0	120	208	1	yes	scripts/script_529.mary
+530	script_530.mary	45	41		168	208	46	0	168	208	1	yes	scripts/script_530.mary
+532	script_532.mary	61	0	MAP_MOTHERS_HILL	500	20	62	0	500	20	0	yes	scripts/script_532.mary
+541	script_541.mary	46	7	MAP_SOUTH_TOWN	548	106	47	0	548	106	0	yes	scripts/script_541.mary
+550	script_550.mary	21	3	MAP_FOREST	612	248	22	0	612	248	0	yes	scripts/script_550.mary
+559	script_559.mary	8	7	MAP_SOUTH_TOWN	992	240	9	0	992	240	0	yes	scripts/script_559.mary
+560	script_560.mary	18	7	MAP_SOUTH_TOWN	944	232	19	0	944	232	0	yes	scripts/script_560.mary
+561	script_561.mary	28	42		216	96	29	0	216	96	1	yes	scripts/script_561.mary
+568	script_568.mary	8	41		216	168	9	0	216	168	0	yes	scripts/script_568.mary
+573	script_573.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_573.mary
+574	script_574.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_574.mary
+575	script_575.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_575.mary
+576	script_576.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_576.mary
+577	script_577.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_577.mary
+578	script_578.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_578.mary
+579	script_579.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_579.mary
+580	script_580.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_580.mary
+581	script_581.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_581.mary
+582	script_582.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_582.mary
+583	script_583.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_583.mary
+584	script_584.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_584.mary
+585	script_585.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_585.mary
+586	script_586.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_586.mary
+587	script_587.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_587.mary
+588	script_588.mary	7	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_588.mary
+589	script_589.mary	15	29	MAP_PLAYER_HOUSE	265	138	17	0	265	138	1	yes	scripts/script_589.mary
+589	script_589.mary	71	29	MAP_PLAYER_HOUSE	327	112	72	0	327	112	2	yes	scripts/script_589.mary
+589	script_589.mary	103	29	MAP_PLAYER_HOUSE	327	112	104	0	327	112	2	yes	scripts/script_589.mary
+589	script_589.mary	133	29	MAP_PLAYER_HOUSE	327	112	134	0	327	112	2	yes	scripts/script_589.mary
+590	script_590.mary	32	29	MAP_PLAYER_HOUSE	327	112	33	0	327	112	2	yes	scripts/script_590.mary
+592	script_592.mary	7	29	MAP_PLAYER_HOUSE	265	138	9	0	265	138	1	yes	scripts/script_592.mary
+592	script_592.mary	56	29	MAP_PLAYER_HOUSE	327	112	57	0	327	112	2	yes	scripts/script_592.mary
+593	script_593.mary	15	29	MAP_PLAYER_HOUSE	265	138	17	0	265	138	1	yes	scripts/script_593.mary
+593	script_593.mary	71	29	MAP_PLAYER_HOUSE	327	112	72	0	327	112	2	yes	scripts/script_593.mary
+593	script_593.mary	103	29	MAP_PLAYER_HOUSE	327	112	104	0	327	112	2	yes	scripts/script_593.mary
+593	script_593.mary	133	29	MAP_PLAYER_HOUSE	327	112	134	0	327	112	2	yes	scripts/script_593.mary
+595	script_595.mary	32	29	MAP_PLAYER_HOUSE	327	112	33	0	327	112	2	yes	scripts/script_595.mary
+596	script_596.mary	7	29	MAP_PLAYER_HOUSE	265	138	9	0	265	138	1	yes	scripts/script_596.mary
+596	script_596.mary	56	29	MAP_PLAYER_HOUSE	327	112	57	0	327	112	2	yes	scripts/script_596.mary
+597	script_597.mary	15	29	MAP_PLAYER_HOUSE	265	138	17	0	265	138	1	yes	scripts/script_597.mary
+597	script_597.mary	71	29	MAP_PLAYER_HOUSE	327	112	72	0	327	112	2	yes	scripts/script_597.mary
+597	script_597.mary	103	29	MAP_PLAYER_HOUSE	327	112	104	0	327	112	2	yes	scripts/script_597.mary
+597	script_597.mary	133	29	MAP_PLAYER_HOUSE	327	112	134	0	327	112	2	yes	scripts/script_597.mary
+599	script_599.mary	32	29	MAP_PLAYER_HOUSE	327	112	33	0	327	112	2	yes	scripts/script_599.mary
+600	script_600.mary	7	29	MAP_PLAYER_HOUSE	265	138	9	0	265	138	1	yes	scripts/script_600.mary
+600	script_600.mary	56	29	MAP_PLAYER_HOUSE	327	112	57	0	327	112	2	yes	scripts/script_600.mary
+601	script_601.mary	15	29	MAP_PLAYER_HOUSE	265	138	17	0	265	138	1	yes	scripts/script_601.mary
+601	script_601.mary	71	29	MAP_PLAYER_HOUSE	327	112	72	0	327	112	2	yes	scripts/script_601.mary
+601	script_601.mary	103	29	MAP_PLAYER_HOUSE	327	112	104	0	327	112	2	yes	scripts/script_601.mary
+601	script_601.mary	133	29	MAP_PLAYER_HOUSE	327	112	134	0	327	112	2	yes	scripts/script_601.mary
+603	script_603.mary	32	29	MAP_PLAYER_HOUSE	327	112	33	0	327	112	2	yes	scripts/script_603.mary
+604	script_604.mary	7	29	MAP_PLAYER_HOUSE	265	138	9	0	265	138	1	yes	scripts/script_604.mary
+604	script_604.mary	56	29	MAP_PLAYER_HOUSE	327	112	57	0	327	112	2	yes	scripts/script_604.mary
+605	script_605.mary	15	29	MAP_PLAYER_HOUSE	265	138	17	0	265	138	1	yes	scripts/script_605.mary
+605	script_605.mary	71	29	MAP_PLAYER_HOUSE	327	112	72	0	327	112	2	yes	scripts/script_605.mary
+605	script_605.mary	103	29	MAP_PLAYER_HOUSE	327	112	104	0	327	112	2	yes	scripts/script_605.mary
+605	script_605.mary	133	29	MAP_PLAYER_HOUSE	327	112	134	0	327	112	2	yes	scripts/script_605.mary
+607	script_607.mary	32	29	MAP_PLAYER_HOUSE	327	112	33	0	327	112	2	yes	scripts/script_607.mary
+608	script_608.mary	7	29	MAP_PLAYER_HOUSE	265	138	9	0	265	138	1	yes	scripts/script_608.mary
+608	script_608.mary	56	29	MAP_PLAYER_HOUSE	327	112	57	0	327	112	2	yes	scripts/script_608.mary
+609	script_609.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_609.mary
+612	script_612.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_612.mary
+615	script_615.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_615.mary
+618	script_618.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_618.mary
+621	script_621.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_621.mary
+624	script_624.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_624.mary
+627	script_627.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_627.mary
+630	script_630.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_630.mary
+633	script_633.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_633.mary
+636	script_636.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_636.mary
+639	script_639.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_639.mary
+642	script_642.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_642.mary
+645	script_645.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_645.mary
+648	script_648.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_648.mary
+651	script_651.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_651.mary
+654	script_654.mary	14	29	MAP_PLAYER_HOUSE	300	94	16	0	300	94	3	yes	scripts/script_654.mary
+654	script_654.mary	54	19		228	148	56	0	228	124	3	yes	scripts/script_654.mary
+655	script_655.mary	14	29	MAP_PLAYER_HOUSE	300	94	16	0	300	94	3	yes	scripts/script_655.mary
+655	script_655.mary	54	19		228	148	56	0	228	124	3	yes	scripts/script_655.mary
+656	script_656.mary	14	29	MAP_PLAYER_HOUSE	300	94	16	0	300	94	3	yes	scripts/script_656.mary
+656	script_656.mary	54	19		228	148	56	0	228	124	3	yes	scripts/script_656.mary
+657	script_657.mary	14	29	MAP_PLAYER_HOUSE	300	94	16	0	300	94	3	yes	scripts/script_657.mary
+657	script_657.mary	54	19		228	148	56	0	228	124	3	yes	scripts/script_657.mary
+658	script_658.mary	14	29	MAP_PLAYER_HOUSE	300	94	16	0	300	94	3	yes	scripts/script_658.mary
+658	script_658.mary	54	19		228	148	56	0	228	124	3	yes	scripts/script_658.mary
+659	script_659.mary	17	29	MAP_PLAYER_HOUSE	117	148	19	0	117	148	1	yes	scripts/script_659.mary
+659	script_659.mary	198	29	MAP_PLAYER_HOUSE	430	124	200	0	430	124	1	yes	scripts/script_659.mary
+660	script_660.mary	17	29	MAP_PLAYER_HOUSE	117	148	19	0	117	148	1	yes	scripts/script_660.mary
+660	script_660.mary	198	29	MAP_PLAYER_HOUSE	430	124	200	0	430	124	1	yes	scripts/script_660.mary
+661	script_661.mary	16	29	MAP_PLAYER_HOUSE	117	148	18	0	117	148	1	yes	scripts/script_661.mary
+661	script_661.mary	197	29	MAP_PLAYER_HOUSE	430	124	199	0	430	124	1	yes	scripts/script_661.mary
+662	script_662.mary	17	29	MAP_PLAYER_HOUSE	117	148	19	0	117	148	1	yes	scripts/script_662.mary
+662	script_662.mary	198	29	MAP_PLAYER_HOUSE	430	124	200	0	430	124	1	yes	scripts/script_662.mary
+663	script_663.mary	17	29	MAP_PLAYER_HOUSE	117	148	19	0	117	148	1	yes	scripts/script_663.mary
+663	script_663.mary	198	29	MAP_PLAYER_HOUSE	430	124	200	0	430	124	1	yes	scripts/script_663.mary
+664	script_664.mary	11	29	MAP_PLAYER_HOUSE	332	124	13	0	332	124	3	yes	scripts/script_664.mary
+667	script_667.mary	11	29	MAP_PLAYER_HOUSE	332	124	13	0	332	124	3	yes	scripts/script_667.mary
+670	script_670.mary	11	29	MAP_PLAYER_HOUSE	332	124	13	0	332	124	3	yes	scripts/script_670.mary
+673	script_673.mary	11	29	MAP_PLAYER_HOUSE	332	124	13	0	332	124	3	yes	scripts/script_673.mary
+676	script_676.mary	11	29	MAP_PLAYER_HOUSE	332	124	13	0	332	124	3	yes	scripts/script_676.mary
+679	script_679.mary	7	29	MAP_PLAYER_HOUSE	448	100	9	0	448	100	1	yes	scripts/script_679.mary
+680	script_680.mary	7	29	MAP_PLAYER_HOUSE	448	100	9	0	448	100	1	yes	scripts/script_680.mary
+681	script_681.mary	7	29	MAP_PLAYER_HOUSE	448	100	9	0	448	100	1	yes	scripts/script_681.mary
+682	script_682.mary	7	29	MAP_PLAYER_HOUSE	448	100	9	0	448	100	1	yes	scripts/script_682.mary
+683	script_683.mary	7	29	MAP_PLAYER_HOUSE	448	100	9	0	448	100	1	yes	scripts/script_683.mary
+684	script_684.mary	19	29	MAP_PLAYER_HOUSE	400	100	20	0	400	100	3	yes	scripts/script_684.mary
+684	script_684.mary	95	19		228	148	97	0	228	124	3	yes	scripts/script_684.mary
+685	script_685.mary	19	29	MAP_PLAYER_HOUSE	400	100	20	0	400	100	3	yes	scripts/script_685.mary
+685	script_685.mary	95	19		228	148	97	0	228	124	3	yes	scripts/script_685.mary
+686	script_686.mary	19	29	MAP_PLAYER_HOUSE	400	100	20	0	400	100	3	yes	scripts/script_686.mary
+686	script_686.mary	95	19		228	148	97	0	228	124	3	yes	scripts/script_686.mary
+687	script_687.mary	19	29	MAP_PLAYER_HOUSE	400	100	20	0	400	100	3	yes	scripts/script_687.mary
+687	script_687.mary	95	19		228	148	97	0	228	124	3	yes	scripts/script_687.mary
+688	script_688.mary	19	29	MAP_PLAYER_HOUSE	400	100	20	0	400	100	3	yes	scripts/script_688.mary
+688	script_688.mary	95	19		228	148	97	0	228	124	3	yes	scripts/script_688.mary
+689	script_689.mary	15	6	MAP_ROSE_SQUARE	220	24	17	0	220	24	0	yes	scripts/script_689.mary
+689	script_689.mary	42	5	MAP_NORTH_TOWN	1260	688	43	0	1260	688	1	yes	scripts/script_689.mary
+689	script_689.mary	56	5	MAP_NORTH_TOWN	1260	688	57	0	1260	688	1	yes	scripts/script_689.mary
+689	script_689.mary	70	5	MAP_NORTH_TOWN	1260	688	71	0	1260	688	1	yes	scripts/script_689.mary
+689	script_689.mary	84	5	MAP_NORTH_TOWN	1260	688	85	0	1260	688	1	yes	scripts/script_689.mary
+689	script_689.mary	98	5	MAP_NORTH_TOWN	1260	688	99	0	1260	688	1	yes	scripts/script_689.mary
+689	script_689.mary	112	5	MAP_NORTH_TOWN	1260	688	113	0	1260	688	1	yes	scripts/script_689.mary
+689	script_689.mary	126	5	MAP_NORTH_TOWN	1260	688	127	0	1260	688	1	yes	scripts/script_689.mary
+689	script_689.mary	140	5	MAP_NORTH_TOWN	1260	688	141	0	1260	688	1	yes	scripts/script_689.mary
+689	script_689.mary	154	5	MAP_NORTH_TOWN	1260	688	155	0	1260	688	1	yes	scripts/script_689.mary
+690	script_690.mary	15	6	MAP_ROSE_SQUARE	220	432	17	0	220	432	1	yes	scripts/script_690.mary
+690	script_690.mary	42	7	MAP_SOUTH_TOWN	1272	24	43	0	1272	24	0	yes	scripts/script_690.mary
+690	script_690.mary	56	7	MAP_SOUTH_TOWN	1272	24	57	0	1272	24	0	yes	scripts/script_690.mary
+690	script_690.mary	70	7	MAP_SOUTH_TOWN	1272	24	71	0	1272	24	0	yes	scripts/script_690.mary
+690	script_690.mary	84	7	MAP_SOUTH_TOWN	1272	24	85	0	1272	24	0	yes	scripts/script_690.mary
+690	script_690.mary	98	7	MAP_SOUTH_TOWN	1272	24	99	0	1272	24	0	yes	scripts/script_690.mary
+690	script_690.mary	112	7	MAP_SOUTH_TOWN	1272	24	113	0	1272	24	0	yes	scripts/script_690.mary
+690	script_690.mary	126	7	MAP_SOUTH_TOWN	1272	24	127	0	1272	24	0	yes	scripts/script_690.mary
+690	script_690.mary	140	7	MAP_SOUTH_TOWN	1272	24	141	0	1272	24	0	yes	scripts/script_690.mary
+690	script_690.mary	154	7	MAP_SOUTH_TOWN	1272	24	155	0	1272	24	0	yes	scripts/script_690.mary
+691	script_691.mary	15	6	MAP_ROSE_SQUARE	456	128	17	0	456	128	2	yes	scripts/script_691.mary
+691	script_691.mary	42	1	MAP_BEACH	24	280	43	0	24	280	3	yes	scripts/script_691.mary
+691	script_691.mary	56	1	MAP_BEACH	24	280	57	0	24	280	3	yes	scripts/script_691.mary
+691	script_691.mary	70	1	MAP_BEACH	24	280	71	0	24	280	3	yes	scripts/script_691.mary
+691	script_691.mary	84	1	MAP_BEACH	24	280	85	0	24	280	3	yes	scripts/script_691.mary
+691	script_691.mary	98	1	MAP_BEACH	24	280	99	0	24	280	3	yes	scripts/script_691.mary
+691	script_691.mary	112	1	MAP_BEACH	24	280	113	0	24	280	3	yes	scripts/script_691.mary
+691	script_691.mary	126	1	MAP_BEACH	24	280	127	0	24	280	3	yes	scripts/script_691.mary
+691	script_691.mary	140	1	MAP_BEACH	24	280	141	0	24	280	3	yes	scripts/script_691.mary
+691	script_691.mary	154	1	MAP_BEACH	24	280	155	0	24	280	3	yes	scripts/script_691.mary
+692	script_692.mary	7	1	MAP_BEACH	24	280	9	0	24	280	3	yes	scripts/script_692.mary
+692	script_692.mary	34	6	MAP_ROSE_SQUARE	456	128	35	0	456	128	2	yes	scripts/script_692.mary
+693	script_693.mary	7	1	MAP_BEACH	260	492	9	0	260	492	0	yes	scripts/script_693.mary
+693	script_693.mary	34	6	MAP_ROSE_SQUARE	456	128	35	0	456	128	2	yes	scripts/script_693.mary
+694	script_694.mary	13	19		241	306	16	20	219	226	0	no	scripts/script_694.mary
+694	script_694.mary	54	19		241	306	57	20	311	263	3	no	scripts/script_694.mary
+695	script_695.mary	17	10		192	80	20	0	192	80	3	yes	scripts/script_695.mary
+711	script_711.mary	21	21		293	132	30	24	315	81	0	no	scripts/script_711.mary
+712	script_712.mary	13	14		84	156	20	0	84	156	3	yes	scripts/script_712.mary
+713	script_713.mary	20	14		84	156	27	0	84	156	3	yes	scripts/script_713.mary
+714	script_714.mary	20	36		120	124	25	0	120	250	1	yes	scripts/script_714.mary
+717	script_717.mary	26	31		92	153	27	0	92	153	1	yes	scripts/script_717.mary
+717	script_717.mary	59	5	MAP_NORTH_TOWN	232	488	60	0	232	488	0	yes	scripts/script_717.mary
+717	script_717.mary	74	5	MAP_NORTH_TOWN	348	483	80	0	348	483	3	yes	scripts/script_717.mary
+717	script_717.mary	120	5	MAP_NORTH_TOWN	232	508	127	0	232	508	1	yes	scripts/script_717.mary
+717	script_717.mary	196	5	MAP_NORTH_TOWN	232	508	197	0	232	508	0	yes	scripts/script_717.mary
+717	script_717.mary	250	5	MAP_NORTH_TOWN	217	508	251	0	217	508	0	yes	scripts/script_717.mary
+717	script_717.mary	269	5	MAP_NORTH_TOWN	231	484	275	0	231	484	0	yes	scripts/script_717.mary
+721	script_721.mary	20	15	MAP_SHOP_INTERIOR	228	152	21	0	228	152	1	yes	scripts/script_721.mary
+726	script_726.mary	18	26		68	80	19	0	120	152	2	yes	scripts/script_726.mary
+731	script_731.mary	28	26		120	208	29	0	120	208	1	yes	scripts/script_731.mary
+731	script_731.mary	203	5	MAP_NORTH_TOWN	200	168	204	0	200	168	0	yes	scripts/script_731.mary
+732	script_732.mary	25	26		120	208	26	0	120	208	1	yes	scripts/script_732.mary
+732	script_732.mary	230	5	MAP_NORTH_TOWN	200	168	231	0	200	168	0	yes	scripts/script_732.mary
+742	script_742.mary	18	14		128	119	23	0	128	119	1	yes	scripts/script_742.mary
+744	script_744.mary	13	8	MAP_MOTHERS_PEAK	236	291	15	0	236	443	1	yes	scripts/script_744.mary
+744	script_744.mary	70	14		143	114	77	0	128	118	1	yes	scripts/script_744.mary
+745	script_745.mary	26	14		129	120	33	0	129	120	1	yes	scripts/script_745.mary
+750	script_750.mary	32	14		143	114	39	0	128	260	1	yes	scripts/script_750.mary
+750	script_750.mary	230	5	MAP_NORTH_TOWN	400	168	231	0	400	168	0	yes	scripts/script_750.mary
+750	script_750.mary	304	5	MAP_NORTH_TOWN	400	168	305	0	400	168	0	yes	scripts/script_750.mary
+751	script_751.mary	36	16		92	165	43	0	92	330	1	yes	scripts/script_751.mary
+753	script_753.mary	37	15	MAP_SHOP_INTERIOR	193	153	44	0	144	307	1	yes	scripts/script_753.mary
+756	script_756.mary	20	6	MAP_ROSE_SQUARE	341	114	29	18	328	81	0	no	scripts/script_756.mary
+760	script_760.mary	16	10		161	87	21	0	120	208	1	yes	scripts/script_760.mary
+763	script_763.mary	43	21		277	129	50	0	184	320	1	yes	scripts/script_763.mary
+763	script_763.mary	283	31		119	168	288	0	119	168	1	yes	scripts/script_763.mary
+763	script_763.mary	436	5	MAP_NORTH_TOWN	232	488	437	0	232	488	0	yes	scripts/script_763.mary
+764	script_764.mary	28	13		120	141	33	0	120	193	1	yes	scripts/script_764.mary
+767	script_767.mary	9	0	MAP_MOTHERS_HILL	422	584	10	0	612	584	2	yes	scripts/script_767.mary
+769	script_769.mary	16	19		184	320	17	0	184	320	1	yes	scripts/script_769.mary
+769	script_769.mary	54	19		264	137	59	0	220	260	1	yes	scripts/script_769.mary
+773	script_773.mary	21	19		264	137	26	0	220	260	1	yes	scripts/script_773.mary
+776	script_776.mary	23	14		152	120	30	0	121	260	1	yes	scripts/script_776.mary
+776	script_776.mary	154	19		211	85	161	0	200	106	3	yes	scripts/script_776.mary
+776	script_776.mary	233	5	MAP_NORTH_TOWN	400	168	234	0	400	168	0	yes	scripts/script_776.mary
+777	script_777.mary	16	12		183	125	21	0	183	243	1	yes	scripts/script_777.mary
+779	script_779.mary	22	12		236	95	23	0	185	212	1	yes	scripts/script_779.mary
+779	script_779.mary	115	4	MAP_CHURCH_REAR	140	115	116	0	140	267	1	yes	scripts/script_779.mary
+780	script_780.mary	9	5	MAP_NORTH_TOWN	1232	168	10	0	1232	168	0	yes	scripts/script_780.mary
+781	script_781.mary	13	6	MAP_ROSE_SQUARE	220	225	17	0	220	432	1	yes	scripts/script_781.mary
+781	script_781.mary	64	21		184	274	71	0	185	281	1	yes	scripts/script_781.mary
+781	script_781.mary	97	19		245	124	102	0	221	127	1	yes	scripts/script_781.mary
+781	script_781.mary	151	5	MAP_NORTH_TOWN	856	168	152	0	856	168	0	yes	scripts/script_781.mary
+783	script_783.mary	14	1	MAP_BEACH	211	164	15	23	241	138	0	no	scripts/script_783.mary
+783	script_783.mary	94	1	MAP_BEACH	24	280	95	0	24	280	3	yes	scripts/script_783.mary
+784	script_784.mary	6	8	MAP_MOTHERS_PEAK	230	280	7	0	230	420	1	yes	scripts/script_784.mary
+792	script_792.mary	17	22		68	80	18	0	103	224	1	yes	scripts/script_792.mary
+795	script_795.mary	394	36		124	72	398	0	124	72	0	yes	scripts/script_795.mary
+796	script_796.mary	11	7	MAP_SOUTH_TOWN	104	194	12	0	104	316	1	yes	scripts/script_796.mary
+815	script_815.mary	12	28		172	123	13	0	172	123	0	yes	scripts/script_815.mary
+815	script_815.mary	91	28		121	165	92	0	121	165	1	yes	scripts/script_815.mary
+815	script_815.mary	154	4	MAP_CHURCH_REAR	372	312	155	0	372	312	0	yes	scripts/script_815.mary
+848	script_848.mary	25	12		184	160	26	0	168	152	0	yes	scripts/script_848.mary
+848	script_848.mary	181	29	MAP_PLAYER_HOUSE	303	148	183	0	303	148	3	yes	scripts/script_848.mary
+849	script_849.mary	15	29	MAP_PLAYER_HOUSE	265	138	17	0	265	138	1	yes	scripts/script_849.mary
+849	script_849.mary	95	29	MAP_PLAYER_HOUSE	327	112	96	0	327	112	2	yes	scripts/script_849.mary
+849	script_849.mary	137	29	MAP_PLAYER_HOUSE	327	112	138	0	327	112	2	yes	scripts/script_849.mary
+849	script_849.mary	179	29	MAP_PLAYER_HOUSE	327	112	180	0	327	112	2	yes	scripts/script_849.mary
+851	script_851.mary	43	29	MAP_PLAYER_HOUSE	327	112	44	0	327	112	2	yes	scripts/script_851.mary
+852	script_852.mary	7	29	MAP_PLAYER_HOUSE	265	138	9	0	265	138	1	yes	scripts/script_852.mary
+852	script_852.mary	80	29	MAP_PLAYER_HOUSE	327	112	81	0	327	112	2	yes	scripts/script_852.mary
+853	script_853.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_853.mary
+856	script_856.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_856.mary
+859	script_859.mary	5	29	MAP_PLAYER_HOUSE	304	208	7	0	304	208	1	yes	scripts/script_859.mary
+862	script_862.mary	6	29	MAP_PLAYER_HOUSE	260	134	8	0	260	134	1	yes	scripts/script_862.mary
+862	script_862.mary	59	29	MAP_PLAYER_HOUSE	327	112	60	0	327	112	2	yes	scripts/script_862.mary
+863	script_863.mary	11	29	MAP_PLAYER_HOUSE	374	85	13	0	374	85	3	yes	scripts/script_863.mary
+864	script_864.mary	11	29	MAP_PLAYER_HOUSE	332	124	13	0	332	124	3	yes	scripts/script_864.mary
+866	script_866.mary	16	29	MAP_PLAYER_HOUSE	400	100	17	0	400	100	3	yes	scripts/script_866.mary
+867	script_867.mary	15	2	MAP_FARM	330	150	17	0	305	171	2	yes	scripts/script_867.mary
+873	script_873.mary	14	0	MAP_MOTHERS_HILL	900	350	17	0	900	350	0	yes	scripts/script_873.mary
+874	script_874.mary	12	3	MAP_FOREST	412	156	15	0	612	248	0	yes	scripts/script_874.mary
+875	script_875.mary	16	0	MAP_MOTHERS_HILL	900	350	19	0	900	350	0	yes	scripts/script_875.mary
+876	script_876.mary	25	7	MAP_SOUTH_TOWN	572	232	28	0	572	232	0	yes	scripts/script_876.mary
+877	script_877.mary	11	2	MAP_FARM	228	160	12	0	228	120	0	yes	scripts/script_877.mary
+877	script_877.mary	34	12		184	160	41	0	104	195	3	yes	scripts/script_877.mary
+878	script_878.mary	13	29	MAP_PLAYER_HOUSE	210	80	14	0	210	80	0	yes	scripts/script_878.mary
+878	script_878.mary	54	12		184	160	61	0	104	195	3	yes	scripts/script_878.mary
+879	script_879.mary	6	12		184	320	14	0	184	320	1	yes	scripts/script_879.mary
+886	script_886.mary	14	1	MAP_BEACH	160	120	16	0	24	280	3	yes	scripts/script_886.mary
+889	script_889.mary	24	1	MAP_BEACH	240	216	26	0	24	280	3	yes	scripts/script_889.mary
+891	script_891.mary	22	1	MAP_BEACH	385	124	24	0	24	280	3	yes	scripts/script_891.mary
+894	script_894.mary	23	10		120	95	25	0	120	208	1	yes	scripts/script_894.mary
+898	script_898.mary	11	2	MAP_FARM	228	160	12	0	228	120	0	yes	scripts/script_898.mary
+898	script_898.mary	34	12		184	160	41	0	104	195	3	yes	scripts/script_898.mary
+899	script_899.mary	19	12		184	320	27	0	184	320	1	yes	scripts/script_899.mary
+906	script_906.mary	18	23		256	80	20	0	40	248	0	yes	scripts/script_906.mary
+908	script_908.mary	29	12		184	136	31	0	184	320	1	yes	scripts/script_908.mary
+911	script_911.mary	18	21		250	112	20	0	184	320	1	yes	scripts/script_911.mary
+915	script_915.mary	21	33		120	96	23	0	120	216	1	yes	scripts/script_915.mary
+918	script_918.mary	11	2	MAP_FARM	228	160	12	0	228	120	0	yes	scripts/script_918.mary
+918	script_918.mary	34	12		184	160	41	0	104	195	3	yes	scripts/script_918.mary
+919	script_919.mary	12	12		184	320	20	0	184	320	1	yes	scripts/script_919.mary
+926	script_926.mary	25	38		120	80	27	0	120	208	1	yes	scripts/script_926.mary
+929	script_929.mary	16	24		120	80	18	0	120	208	1	yes	scripts/script_929.mary
+932	script_932.mary	23	8	MAP_MOTHERS_PEAK	237	276	25	12	224	406	1	no	scripts/script_932.mary
+932	script_932.mary	151	8	MAP_MOTHERS_PEAK	236	411	152	0	236	500	1	yes	scripts/script_932.mary
+933	script_933.mary	20	24		120	80	22	0	120	208	1	yes	scripts/script_933.mary
+936	script_936.mary	11	2	MAP_FARM	228	160	12	0	228	120	0	yes	scripts/script_936.mary
+936	script_936.mary	34	12		184	160	41	0	104	195	3	yes	scripts/script_936.mary
+937	script_937.mary	12	12		184	320	20	0	184	320	1	yes	scripts/script_937.mary
+944	script_944.mary	15	19		247	128	17	0	184	320	1	yes	scripts/script_944.mary
+947	script_947.mary	20	14		120	96	22	0	120	216	1	yes	scripts/script_947.mary
+950	script_950.mary	17	19		247	128	19	0	184	320	1	yes	scripts/script_950.mary
+953	script_953.mary	17	1	MAP_BEACH	240	334	19	0	24	280	3	yes	scripts/script_953.mary
+956	script_956.mary	11	2	MAP_FARM	228	160	12	0	228	120	0	yes	scripts/script_956.mary
+956	script_956.mary	34	12		184	160	41	0	104	195	3	yes	scripts/script_956.mary
+957	script_957.mary	12	12		184	320	20	0	184	320	1	yes	scripts/script_957.mary
+977	script_977.mary	16	0	MAP_MOTHERS_HILL	900	350	17	0	900	350	0	yes	scripts/script_977.mary
+977	script_977.mary	31	0	MAP_MOTHERS_HILL	424	448	32	0	424	448	0	yes	scripts/script_977.mary
+984	script_984.mary	36	17		59	153						no	scripts/script_984.mary
+985	script_985.mary	21	5	MAP_NORTH_TOWN	1095	163	23	0	1095	163	1	yes	scripts/script_985.mary
+986	script_986.mary	40	39		103	83	41	0	103	83	0	yes	scripts/script_986.mary
+986	script_986.mary	45	18		143	112	46	0	143	112	2	yes	scripts/script_986.mary
+986	script_986.mary	50	35		143	112	51	0	143	112	2	yes	scripts/script_986.mary
+1060	script_1060.mary	26	51		0	0	27	95	35	95	0	no	scripts/script_1060.mary
+1060	script_1060.mary	233	51		0	0	234	95	31	72	3	no	scripts/script_1060.mary
+1060	script_1060.mary	280	49		0	0	281	94	118	46	0	no	scripts/script_1060.mary
+1061	script_1061.mary	24	50		0	0	25	95	35	72	0	no	scripts/script_1061.mary
+1061	script_1061.mary	201	50		0	0	202	95	35	72	0	no	scripts/script_1061.mary
+1061	script_1061.mary	249	49		0	0	250	94	80	80	3	no	scripts/script_1061.mary
+1062	script_1062.mary	26	51		0	0	27	95	35	95	0	no	scripts/script_1062.mary
+1062	script_1062.mary	243	51		0	0	244	95	31	72	3	no	scripts/script_1062.mary
+1062	script_1062.mary	290	49		0	0	291	94	118	46	0	no	scripts/script_1062.mary
+1063	script_1063.mary	25	48		0	0	26	94	104	32	0	no	scripts/script_1063.mary
+1098	script_1098.mary	6	6	MAP_ROSE_SQUARE	220	94	10	0	220	94	1	yes	scripts/script_1098.mary
+1099	script_1099.mary	6	2	MAP_FARM	228	120	7	0	228	120	0	yes	scripts/script_1099.mary
+1128	script_1128.mary	47	6	MAP_ROSE_SQUARE	231	142	49	13	180	102	0	no	scripts/script_1128.mary
+1128	script_1128.mary	501	8	MAP_MOTHERS_PEAK	236	70	503	30	236	70	0	no	scripts/script_1128.mary
+1128	script_1128.mary	520	45		236	326	522	30	236	326	0	no	scripts/script_1128.mary
+1128	script_1128.mary	551	46		236	326	553	30	236	326	0	no	scripts/script_1128.mary
+1128	script_1128.mary	569	47		236	326	571	30	236	326	0	no	scripts/script_1128.mary
+1128	script_1128.mary	602	6	MAP_ROSE_SQUARE	220	142	608	0	287	174	1	yes	scripts/script_1128.mary
+1129	script_1129.mary	13	6	MAP_ROSE_SQUARE	231	142	15	13	180	102	0	no	scripts/script_1129.mary
+1145	script_1145.mary	6	1	MAP_BEACH	156	154	10	0	156	154	1	yes	scripts/script_1145.mary
+1163	script_1163.mary	6	6	MAP_ROSE_SQUARE	220	94	10	0	220	94	1	yes	scripts/script_1163.mary
+1190	script_1190.mary	9	6	MAP_ROSE_SQUARE	220	94	13	0	220	94	1	yes	scripts/script_1190.mary
+1191	script_1191.mary	5	1	MAP_BEACH	24	280	7	0	24	280	3	yes	scripts/script_1191.mary
+1192	script_1192.mary	16	1	MAP_BEACH	385	124	18	0	385	124	3	yes	scripts/script_1192.mary
+1203	script_1203.mary	12	2	MAP_FARM	228	120	14	0	228	120	0	yes	scripts/script_1203.mary
+1205	script_1205.mary	5	12		184	258	7	0	184	320	1	yes	scripts/script_1205.mary
+1215	script_1215.mary	6	12		184	80	8	5	264	195	1	no	scripts/script_1215.mary
+1216	script_1216.mary	6	2	MAP_FARM	228	120	8	0	228	120	0	yes	scripts/script_1216.mary
+1218	script_1218.mary	5	6	MAP_ROSE_SQUARE	198	232	7	0	198	232	0	yes	scripts/script_1218.mary
+1241	script_1241.mary	5	6	MAP_ROSE_SQUARE	222	200	7	0	198	232	0	yes	scripts/script_1241.mary
+1242	script_1242.mary	53	8	MAP_MOTHERS_PEAK	236	255	55	0	236	428	1	yes	scripts/script_1242.mary
+1243	script_1243.mary	132	8	MAP_MOTHERS_PEAK	238	244	134	0	230	244	1	yes	scripts/script_1243.mary
+1264	script_1264.mary	6	6	MAP_ROSE_SQUARE	220	94	10	0	220	94	1	yes	scripts/script_1264.mary
+1289	script_1289.mary	9	6	MAP_ROSE_SQUARE	220	94	13	0	220	94	1	yes	scripts/script_1289.mary
+1293	script_1293.mary	22	29	MAP_PLAYER_HOUSE	288	148	23	0	304	208	1	yes	scripts/script_1293.mary
+1299	script_1299.mary	24	29	MAP_PLAYER_HOUSE	200	48	25	0	200	-46	0	yes	scripts/script_1299.mary
+1299	script_1299.mary	30	29	MAP_PLAYER_HOUSE	320	48	31	0	320	-46	0	yes	scripts/script_1299.mary
+1299	script_1299.mary	36	29	MAP_PLAYER_HOUSE	384	48	37	0	384	-46	0	yes	scripts/script_1299.mary
+1300	script_1300.mary	5	15	MAP_SHOP_INTERIOR	145	275	7	0	145	274	1	yes	scripts/script_1300.mary
+1301	script_1301.mary	10	10		120	168	14	0	120	210	1	yes	scripts/script_1301.mary
+1302	script_1302.mary	9	21		140	272	13	0	184	320	1	yes	scripts/script_1302.mary
+1303	script_1303.mary	10	14		120	160	14	0	120	208	1	yes	scripts/script_1303.mary
+1304	script_1304.mary	12	16		92	272	16	0	92	320	1	yes	scripts/script_1304.mary
+1305	script_1305.mary	11	26		120	160	15	0	120	208	1	yes	scripts/script_1305.mary
+1306	script_1306.mary	34	29	MAP_PLAYER_HOUSE	288	152	38	0	304	208	1	yes	scripts/script_1306.mary
+1306	script_1306.mary	248	8	MAP_MOTHERS_PEAK	224	256	249	0	224	256	3	yes	scripts/script_1306.mary
+1307	script_1307.mary	13	29	MAP_PLAYER_HOUSE	200	48	14	0	200	-46	0	yes	scripts/script_1307.mary
+1307	script_1307.mary	18	29	MAP_PLAYER_HOUSE	320	48	19	0	320	-46	0	yes	scripts/script_1307.mary
+1307	script_1307.mary	23	29	MAP_PLAYER_HOUSE	384	48	24	0	384	-46	0	yes	scripts/script_1307.mary
+1318	script_1318.mary	6	8	MAP_MOTHERS_PEAK	236	398	8	0	236	464	1	yes	scripts/script_1318.mary
+1319	script_1319.mary	7	8	MAP_MOTHERS_PEAK	236	265	8	0	249	285	1	yes	scripts/script_1319.mary

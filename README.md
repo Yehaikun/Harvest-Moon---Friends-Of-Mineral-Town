@@ -135,10 +135,16 @@ make -j2 fomt.gba
 
 # 验证当前脚本补丁是否真的写入 ROM
 make check-script-patches
+
+# 生成全脚本传送索引
+make warp-index
 ```
 
 当前回归补丁是 `script_167.mary`：进入农场鸡屋会传送到海边。这个目标用于证明
 `.mary -> binary -> ROM` 的闭环是可复现的。
+
+传送索引输出到 [docs/generated/warp_index.tsv](./docs/generated/warp_index.tsv)，
+用于快速查找 `Proc016(map, x, y)` 和后续玩家位置设置。
 - **agbcc** — GBA 专用 C++ 编译器，位于 `tools/agbcc/bin/`
 
 ## 致谢

@@ -52,9 +52,25 @@ void *func_080036F8(void *self)
     return self;
 }
 
-NAKED void func_0800371C(void)
+extern void func_080007EC(void *self, void *arg);
+
+typedef void (*DtorFn)(void *, u32);
+
+void func_0800371C(void *self, void *arg)
 {
-    asm_unified("\tfunc_0800371C: @ 0x0800371C\n\t    push {r4, r5, lr}\n\t    adds r4, r0, #0\n\t    adds r5, r1, #0\n\t    ldr r0, .L08003748 @ =vtable_unk_080E5A18\n\t    str r0, [r4]\n\t    ldr r1, [r4, #4]\n\t    cmp r1, #0\n\t    beq .L08003738\n\t    ldr r0, [r1, #4]\n\t    ldr r2, [r0, #8]\n\t    adds r0, r1, #0\n\t    movs r1, #3\n\t    bl _call_via_r2\n\t.L08003738:\n\t    adds r0, r4, #0\n\t    adds r1, r5, #0\n\t    bl func_080007EC\n\t    pop {r4, r5}\n\t    pop {r0}\n\t    bx r0\n\t    .align 2, 0\n\t.L08003748: .4byte vtable_unk_080E5A18");
+    *(void **)self = (void *)vtable_unk_080E5A18;
+
+    {
+        void *obj = *(void **)((u32)self + 4);
+        if (obj != 0)
+        {
+            void *vt = *(void **)((u32)obj + 4);
+            DtorFn dtor = (DtorFn)((void **)vt)[2];
+            dtor(obj, 3);
+        }
+    }
+
+    func_080007EC(self, arg);
 }
 
 NAKED void func_0800374C(void)

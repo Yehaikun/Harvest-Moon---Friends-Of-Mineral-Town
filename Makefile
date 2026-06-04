@@ -51,6 +51,10 @@ MARY_LIB := mary_scripts/lib_fomt.txt
 SCRIPT_PATCHES := 167:scripts/script_167.mary
 SCRIPT_PATCH_SOURCES := scripts/script_167.mary
 WARP_INDEX := docs/generated/warp_index.tsv
+SCRIPT_XREF_INDEX := docs/generated/script_xref_index.tsv
+WARP_TRIGGER_CANDIDATES := docs/generated/warp_trigger_candidates.tsv
+ROM_WARP_REF_INDEX := docs/generated/rom_warp_ref_index.tsv
+SCRIPT_TABLE_080F1FC0 := docs/generated/script_table_080F1FC0.tsv
 
 # ================
 # = BUILD CONFIG =
@@ -131,6 +135,27 @@ $(WARP_INDEX): tools/scan_warps.py include/decomp/entities.hh $(wildcard scripts
 warp-index: $(WARP_INDEX)
 
 .PHONY: warp-index
+
+$(SCRIPT_XREF_INDEX) $(WARP_TRIGGER_CANDIDATES): tools/scan_script_xrefs.py $(WARP_INDEX) $(wildcard scripts/script_*.mary)
+	python3 tools/scan_script_xrefs.py --output $(SCRIPT_XREF_INDEX) --warp-output $(WARP_TRIGGER_CANDIDATES)
+
+script-xref-index: $(SCRIPT_XREF_INDEX) $(WARP_TRIGGER_CANDIDATES)
+
+.PHONY: script-xref-index
+
+$(ROM_WARP_REF_INDEX): tools/scan_rom_script_refs.py tools/script_slot.py $(WARP_INDEX) baserom.gba $(wildcard asm/data/*.s)
+	python3 tools/scan_rom_script_refs.py --output $@
+
+rom-warp-ref-index: $(ROM_WARP_REF_INDEX)
+
+.PHONY: rom-warp-ref-index
+
+$(SCRIPT_TABLE_080F1FC0): tools/decode_script_table.py baserom.gba
+	python3 tools/decode_script_table.py --offset 0xF1FC0 --size 0x84C --output $@
+
+script-table-index: $(SCRIPT_TABLE_080F1FC0)
+
+.PHONY: script-table-index
 
 # ELF
 $(ELF): $(ALL_OBJS) $(LDS)

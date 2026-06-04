@@ -138,6 +138,15 @@ make check-script-patches
 
 # 生成全脚本传送索引
 make warp-index
+
+# 生成 mary 脚本交叉引用候选
+make script-xref-index
+
+# 扫描 ROM 数据区里直接引用传送脚本 ID 的位置
+make rom-warp-ref-index
+
+# 解码当前已发现的 {pointer, script_id} 表
+make script-table-index
 ```
 
 当前回归补丁是 `script_167.mary`：进入农场鸡屋会传送到海边。这个目标用于证明
@@ -145,6 +154,9 @@ make warp-index
 
 传送索引输出到 [docs/generated/warp_index.tsv](./docs/generated/warp_index.tsv)，
 用于快速查找 `Proc016(map, x, y)` 和后续玩家位置设置。
+当前更可信的鸡屋入口触发线索是
+[docs/generated/script_table_080F1FC0.tsv](./docs/generated/script_table_080F1FC0.tsv)
+中的第 `126` 项：它指向 script `167`。
 - **agbcc** — GBA 专用 C++ 编译器，位于 `tools/agbcc/bin/`
 
 ## 致谢

@@ -68,6 +68,10 @@ gUnk_080F89D4:
 - `make check-script-patches` verifies the current script 167 regression patch.
 - `make warp-index` generates `docs/generated/warp_index.tsv` from all `Proc016`
   and nearby `SetEntityPosition` calls.
+- `make script-xref-index` generates mary-level candidate references.
+- `make rom-warp-ref-index` scans pre-script ROM data for direct script ID table references.
+- `make script-table-index` currently decodes `gUnk_080F1FC0` as 8-byte
+  `{ pointer, script_id }` records.
 - This does not yet replace the whole script table/data with generated objects. It is a safe
   bounded-slot patch layer for scripts whose compiled size fits their original slot.
 
@@ -97,6 +101,15 @@ Current tested example:
 | Slot end | `0x2CC564` |
 | Slot size | `216` bytes |
 | Result | User tested in game and confirmed it works |
+
+Current trigger-source lead:
+
+- `script_167.mary` itself is confirmed as the warp behavior.
+- mary-level references like `Proc030(167)` appear to be dialogue/portrait/action metadata and are not reliable door triggers.
+- ROM data reference `0xF016C` is inside `gArticleInfo`, so it is a false lead from item data.
+- ROM data reference `0xF23B4` is inside `gUnk_080F1FC0`.
+- `gUnk_080F1FC0` record `126` decodes to `{ pointer = 0x080F2468, script_id = 167 }`.
+- The pointed data at `0x080F2468` is the next structure to decode before naming the trigger table.
 
 ### Map and teleport clues
 

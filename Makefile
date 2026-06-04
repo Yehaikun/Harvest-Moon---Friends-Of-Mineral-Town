@@ -45,11 +45,16 @@ CC1PLUS  := tools/agbcc/bin/agbcp$(EXE)
 
 OLD_CC1  := tools/agbcc/bin/old_agbcc$(EXE)
 
+BASEROM := baserom.gba
+BASEROM_SHA1 := a2fc3574f0a65a4fcf7682fb274b9d7eebdef963
+
 MARY ?= ../stanhash_mary/target/release/mary
 MARY_LIB := mary_scripts/lib_fomt.txt
 
-SCRIPT_PATCHES := \
-  167:scripts/script_167.mary \
+SCRIPT_PATCHES_STABLE := \
+  167:scripts/script_167.mary
+
+SCRIPT_PATCHES_EXPERIMENTAL := \
   1011:scripts/script_1011.mary \
   1005:scripts/script_1005.mary \
   1018:scripts/script_1018.mary \
@@ -58,16 +63,10 @@ SCRIPT_PATCHES := \
   1014:scripts/script_1014.mary \
   1016:scripts/script_1016.mary \
   1027:scripts/script_1027.mary
+
+SCRIPT_PATCHES := $(SCRIPT_PATCHES_STABLE)
 SCRIPT_PATCH_SOURCES := \
-  scripts/script_167.mary \
-  scripts/script_1011.mary \
-  scripts/script_1005.mary \
-  scripts/script_1018.mary \
-  scripts/script_1002.mary \
-  scripts/script_1003.mary \
-  scripts/script_1014.mary \
-  scripts/script_1016.mary \
-  scripts/script_1027.mary
+  $(foreach p,$(SCRIPT_PATCHES),$(word 2,$(subst :, ,$(p))))
 WARP_INDEX := docs/generated/warp_index.tsv
 SCRIPT_XREF_INDEX := docs/generated/script_xref_index.tsv
 WARP_TRIGGER_CANDIDATES := docs/generated/warp_trigger_candidates.tsv
@@ -124,6 +123,13 @@ check-mary:
 	@echo "mary OK: $(MARY)"
 
 .PHONY: check-mary
+
+check-baserom:
+	@test -f "$(BASEROM)" || { echo "❌ $(BASEROM) not found — place the original ROM in the root directory"; exit 1; }
+	@printf '%s  %s\n' "$(BASEROM_SHA1)" "$(BASEROM)" | sha1sum -c - || { echo "❌ $(BASEROM) SHA1 mismatch — expected $(BASEROM_SHA1)"; exit 1; }
+	@echo "✅ baserom OK: $(BASEROM) ($(BASEROM_SHA1))"
+
+.PHONY: check-baserom
 
 compare: $(ROM)
 	sha1sum -c $(BUILD_NAME).sha1

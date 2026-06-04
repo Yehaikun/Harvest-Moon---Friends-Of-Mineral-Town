@@ -83,6 +83,10 @@ $(shell mkdir -p $(SUBDIRS))
 # = RECIPES =
 # ===========
 
+all: $(ROM)
+
+.PHONY: all
+
 compare: $(ROM)
 	sha1sum -c $(BUILD_NAME).sha1
 

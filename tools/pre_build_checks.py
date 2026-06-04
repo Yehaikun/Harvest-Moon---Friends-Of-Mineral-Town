@@ -32,6 +32,7 @@ MARY_DEFAULT = Path("../stanhash_mary/target/release/mary")
 # Known "bad" scripts: mary outputs PARTIAL DECOMPILATION for these.
 # They use unsupported script engine features and cannot be round-tripped.
 # Tested 2026-06-04: 1296 OK, 32 PARTIAL (out of 1328 total)
+# Tested 2026-06-04: all 32 scripts fail compile with "Fatal syntax error"
 BAD_SCRIPT_BLACKLIST: set[int] = {
     106, 143, 356, 403, 409, 410, 411, 532, 540, 571, 610, 614,
     617, 620, 623, 625, 629, 632, 635, 638, 640, 644, 647, 650,

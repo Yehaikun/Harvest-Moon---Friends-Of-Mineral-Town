@@ -140,7 +140,7 @@ compare: $(ROM)
 .PHONY: compare
 
 # ROM from ELF
-%.gba: %.elf $(SCRIPT_PATCH_SOURCES) tools/patch_script.py tools/script_slot.py tools/patch_farm_expansion.py tools/create_new_map.py
+%.gba: %.elf $(SCRIPT_PATCH_SOURCES) tools/patch_script.py tools/script_slot.py tools/patch_farm_expansion.py tools/create_new_map.py tools/expand_any_map.py
 	$(OBJCOPY) -O binary $< $@
 	@set -e; for patch in $(SCRIPT_PATCHES); do \
 		id=$${patch%%:*}; \
@@ -149,6 +149,8 @@ compare: $(ROM)
 	done
 	python3 tools/patch_farm_expansion.py $@
 	python3 tools/create_new_map.py $@
+	python3 tools/expand_any_map.py $@ 5 --factor 2
+	python3 tools/expand_any_map.py $@ 7 260 96
 
 check-script-patches: $(ROM)
 	@offset=$$(python3 tools/script_slot.py $(ROM) --map $(MAP) --script-id 167 --field rom_offset); \

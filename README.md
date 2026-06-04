@@ -51,7 +51,7 @@ a2fc3574f0a65a4fcf7682fb274b9d7eebdef963  baserom.gba
 | 第 4 阶段 | 校验工具 | slot 检查、指针检查、坏脚本黑名单 | 构建时拦截错误，不白屏 | ✅ |
 | 第 5 阶段 | 地图与场景数据 | 地图 ID 表、传送点、碰撞格式解码、安全修改工作流 | 碰撞值含义已通过游戏内实测验证（可穿墙/河） | ✅ |
 | 第 6 阶段 | 工具评估 | HMMT/CodeBreaker/khadim 可用性评估 | 8 种工具已评估 | 🔶 HMMT insert 未实测 |
-| 第 7 阶段 | 核心引擎反编译 | asm → C/C++ 迁移包 | 每包都能构建、`check-all`、mGBA 不白屏 | 🔶 进行中，`game_scene` 已因白屏回滚 |
+	| 第 7 阶段 | 核心引擎反编译 | asm → C/C++ 迁移包 | 每包都能构建、`check-all`、mGBA 不白屏 | 🔶 进行中：SRAM/lib_sram/more_items 已迁移，`code_libc_string` 暂保留 asm，`game_scene` 已因白屏回滚 |
 | 第 8 阶段 | 内容包与发布包 | 新对话/事件/地图/NPC 的可复用 patch 包 | 可开关、可验证、可回滚 | ❌ 未开始 |
 | 第 9 阶段 | 工具化编辑 | 面向脚本/地图/NPC 的小型命令行或图形编辑器 | 不直接改 ROM，生成可审查补丁 | ❌ 未开始 |
 
@@ -338,7 +338,7 @@ make rom-warp-ref-index
 make script-table-index
 ```
 
-当前回归补丁是 `script_167.mary`：进入农场鸡屋会传送到海边。这个目标用于证明
+当前回归补丁是 `script_167.mary`：进入农场鸡屋会传送到女神泉。这个目标用于证明
 `.mary -> binary -> ROM` 的闭环是可复现的。
 
 脚本补丁工具会优先从 `fomt.map` 读取 `gUnk_080F89D4` 的真实地址。不要在工具里写死

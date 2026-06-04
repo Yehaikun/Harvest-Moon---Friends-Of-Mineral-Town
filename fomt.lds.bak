@@ -96,7 +96,8 @@ SECTIONS
         src/rucksack.o(.text);
         src/more_items.o(.text);
         . = . + 8;
-        asm/game_scene.o(.text);
+        src/game_scene.o(.text);
+        . = . + 0x210;
         asm/game_state.o(.text);
         src/entity.o(.text);
         src/code_entity_08020018.o(.text);
@@ -142,20 +143,7 @@ SECTIONS
         /* *libc.a:strcat.o(.text); */
         /* *libc.a:strcpy.o(.text); */
         /* *libc.a:strlen.o(.text); */
-        src/memcmp_stratum.o(.text);
-        . = . + 0x24;
-        src/memcpy_stratum.o(.text);
-        . = . + 0x44;
-        src/memmove_stratum.o(.text);
-        . = . + 0x48;
-        src/memset_stratum.o(.text);
-        . = . + 0x3C;
-        src/strcat_stratum.o(.text);
-        . = . + 0x28;
-        src/strcpy_stratum.o(.text);
-        . = . + 0x28;
-        src/strlen_stratum.o(.text);
-        . = . + 0x2C;
+        asm/code_libc_string.o(.text);
 
         asm/code_linkonce.o(.text.code_080D3BC0);
         *(.gnu.linkonce.t.__as__6AnimalRC6Animal);

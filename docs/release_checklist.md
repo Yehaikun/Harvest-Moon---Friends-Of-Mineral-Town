@@ -4,6 +4,7 @@ Use this checklist before committing or publishing a ROM-affecting package.
 
 ## Build
 
+- [ ] `sha1sum baserom.gba` matches `a2fc3574f0a65a4fcf7682fb274b9d7eebdef963`
 - [ ] `make clean`
 - [ ] `make -j2 fomt.gba`
 - [ ] `make check-all`
@@ -27,3 +28,4 @@ Use this checklist before committing or publishing a ROM-affecting package.
 - Do not mix content patches and risky decompilation migrations in one commit.
 - If a ROM whitescreens, first revert the latest decompilation package and retest before changing content scripts.
 - Keep `baserom.gba` unchanged. All changes must be applied to the generated `fomt.gba`.
+- Push package branches or PR branches. Do not force-push `main` to solve a non-fast-forward rejection.

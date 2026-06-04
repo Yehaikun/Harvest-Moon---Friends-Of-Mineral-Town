@@ -4,7 +4,21 @@
 
 可编译出以下 ROM：
 
-- **`fomt.gba`** `sha1: a2fc3574f0a65a4fcf7682fb274b9d7eebdef963`
+- **`fomt.gba`**：派生构建产物，已应用源码和脚本补丁。
+- **`baserom.gba`**：本地提供的原版美版 ROM，作为构建输入和数据基准。
+
+`baserom.gba` 必须保留在项目根目录，但不能提交到 git，也不能手动修改。它用于：
+
+- `objcopy` / 链接脚本中的 `.incbin` 原始数据来源。
+- `pre-build-check` 的原始脚本 slot、指针表、坏脚本检查。
+- 生成 `docs/generated/` 索引时作为原版数据参考。
+- 对照 `fomt.gba` 是否因为源码或脚本补丁发生了预期变化。
+
+原版美版 ROM 的 SHA1 应为：
+
+```text
+a2fc3574f0a65a4fcf7682fb274b9d7eebdef963  baserom.gba
+```
 
 ## 当前进度
 
@@ -39,6 +53,7 @@
 | 第 6 阶段 | 工具评估 | HMMT/CodeBreaker/khadim 可用性评估 | 8 种工具已评估 | 🔶 HMMT insert 未实测 |
 | 第 7 阶段 | 核心引擎反编译 | asm → C/C++ 迁移包 | 每包都能构建、`check-all`、mGBA 不白屏 | 🔶 进行中，`game_scene` 已因白屏回滚 |
 | 第 8 阶段 | 内容包与发布包 | 新对话/事件/地图/NPC 的可复用 patch 包 | 可开关、可验证、可回滚 | ❌ 未开始 |
+| 第 9 阶段 | 工具化编辑 | 面向脚本/地图/NPC 的小型命令行或图形编辑器 | 不直接改 ROM，生成可审查补丁 | ❌ 未开始 |
 
 ### 说明
 
@@ -71,10 +86,21 @@
 4. 增加 RAM 观察表：日期、时间、天气、金钱、主要候选对象好感度，用于解释对话分支为什么触发或不触发。
 5. 评估 HMMT Dumper/Inserter：先做“无修改提取再插入”的 round-trip 测试，确认是否会破坏文本格式。
 6. 重新启动第 7 阶段时，从比 `game_scene` 更小、更独立的函数开始；每次只迁移一个函数，不能再一次迁移场景核心路径。
+7. 建立内容包开关：将实验脚本和稳定脚本分组，避免未验证内容默认进入 `make fomt.gba`。
 
 更多外部资料整理见 [docs/references/fomt_reverse_engineering_sources.md](./docs/references/fomt_reverse_engineering_sources.md)。
 
 ## 构建与验证流程
+
+### baserom.gba 使用规则
+
+`baserom.gba` 是必需输入，不是输出：
+
+- 必须放在仓库根目录。
+- 必须保持原版 SHA1，不要手动 hex edit。
+- 不提交到 git；`.gitignore` 已排除 `*.gba`。
+- 需要修改游戏时，只改源码、`.mary`、工具或数据文件，让构建生成新的 `fomt.gba`。
+- 如果怀疑 ROM 被污染，重新放入原版 `baserom.gba`，再跑 `make clean && make -j2 fomt.gba`。
 
 ### 每次打包的最低标准
 
@@ -189,6 +215,72 @@ visualboyadvance-m fomt.gba
 | `docs/release_checklist.md` | 发布/提交前检查清单 | 已添加 |
 
 建议每个重要包都增加一条测试记录：commit、构建命令、ROM 大小、mGBA 是否白屏、人工进入的地图/事件、发现的问题。
+
+## Git 工作流
+
+本项目用 Git 保护开发的基本原则：每个可验证包一个分支、一个主题、一个提交或一组小提交。
+
+推荐流程：
+
+```bash
+# 1. 开始前确认干净
+git status
+
+# 2. 从稳定点开新分支
+git switch main
+git switch -c pkg/<short-name>
+
+# 3. 小步修改，中途随时看差异
+git diff
+git diff --stat
+
+# 4. 每个包至少通过构建和检查
+make clean
+make -j2 fomt.gba
+make check-all
+
+# 5. 图形测试确认不白屏后提交
+git add -A
+git commit -m "Short package description"
+
+# 6. 推远程分支，不强推 main
+git push origin HEAD
+```
+
+高风险操作规则：
+
+- 不在 `main` 上直接做实验性反编译；用 `pkg/...`、`decomp/...`、`content/...` 分支。
+- 不把内容脚本修改和核心反编译放在同一个提交。
+- 不提交 `baserom.gba`、`fomt.gba`、模拟器存档、临时截图等产物。
+- push `main` 被拒绝时，不要 `--force`；改推新分支并开 PR。
+- 如果白屏，优先 `git switch` 回上一个正常提交验证，再用 `git diff` 缩小问题。
+- 遇到临时探索但还不想提交，用 `git stash push -u -m "说明"`；修复完成后及时 `git stash drop` 清理。
+
+建议分支命名：
+
+| 类型 | 命名 | 示例 |
+|------|------|------|
+| 稳定修复 | `fix/...` | `fix/script-table-map-offset` |
+| 内容包 | `content/...` | `content/karen-dialogue-test` |
+| 地图包 | `map/...` | `map/chicken-coop-warp` |
+| 反编译包 | `decomp/...` | `decomp/sram-proxy-small-step` |
+| 文档包 | `docs/...` | `docs/package-roadmap` |
+
+回滚策略：
+
+```bash
+# 查看最近提交
+git log --oneline --decorate -10
+
+# 临时回到某个提交测试，不改分支历史
+git switch --detach <commit>
+
+# 回到分支
+git switch <branch>
+
+# 已提交但要撤销，用 revert，避免改写共享历史
+git revert <bad-commit>
+```
 
 ## 工具
 

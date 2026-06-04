@@ -116,9 +116,13 @@ void func_08004C48(void *self)
     *(void **)self = (void *)vtable_unk_080E5A88;
 }
 
-NAKED void func_08004C54(void)
+/*
+ * func_08004C54 - 设置虚表并调用基类初始化
+ */
+void func_08004C54(void *self, void *arg)
 {
-    asm_unified("\tfunc_08004C54: @ 0x08004C54\n\t    push {lr}\n\t    ldr r2, .L08004C64 @ =vtable_unk_080E5A88\n\t    str r2, [r0]\n\t    bl func_080007EC\n\t    pop {r0}\n\t    bx r0\n\t    .align 2, 0\n\t.L08004C64: .4byte vtable_unk_080E5A88");
+    *(void **)self = (void *)vtable_unk_080E5A88;
+    func_080007EC(self, arg);
 }
 
 NAKED void func_08004C68(void)

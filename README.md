@@ -37,7 +37,7 @@
 | 第 4 阶段 | 校验工具 | slot 检查、指针检查、坏脚本黑名单 | 构建时拦截错误，不白屏 | ✅ |
 | 第 5 阶段 | 地图与场景数据 | 地图 ID 表、传送点、碰撞格式解码、安全修改工作流 | 碰撞值含义已通过游戏内实测验证（可穿墙/河） | ✅ |
 | 第 6 阶段 | 工具评估 | HMMT/CodeBreaker/khadim 可用性评估 | 8 种工具已评估 | 🔶 HMMT insert 未实测 |
-| 第 7 阶段 | 核心引擎反编译 | asm → C/C++ 迁移 | 地址不漂移，ROM 不白屏 | ❌ 未开始 |
+| 第 7 阶段 | 核心引擎反编译 | asm → C/C++ 迁移 | 地址不漂移，ROM 不白屏 | 🔶 进行中：`sram_proxy_2.s` → C ✅ `game_scene.s` → C++ ✅ `sram_proxy_1.s` → C ✅ `code_lib_sram.s` → C(NAKED) ✅ `more_items.s` → C++ ✅ `code_libc_string.s` → ❌ 编译器冲突跳过。累计 ~1300 行 asm 已转 C/C++ |
 | 第 8 阶段 | 自定义内容 | 新对话/事件/地图/NPC | 可增加一段新内容 | ❌ 未开始 |
 
 ### 说明
@@ -182,8 +182,22 @@ make rom-warp-ref-index
 make script-table-index
 ```
 
-当前回归补丁是 `script_167.mary`：进入农场鸡屋会传送到海边。这个目标用于证明
+当前回归补丁是 `script_167.mary`：进入农场鸡屋会传送到女神泉。这个目标用于证明
 `.mary -> binary -> ROM` 的闭环是可复现的。
+
+## 下一步计划
+
+### 近期（Phase 7 继续）
+- `hardware.s`（4325 行）部分反编译 — 已有 `src/hardware.cc`
+- `code_actor_0809BFE8.s`（4337 行）部分反编译 — 已有 `src/code_actor_0809BFE8.cc`
+- `code_entities_080320DC.s`（4437 行）— 实体子系统
+- 待解决：`code_libc_string.s` 的 C 实现导致 "Jumped to invalid address" 崩溃，暂保留 asm
+
+### 后续（Phase 6 收尾）
+- HMMT Insert 实测：需要你在图形界面操作（dump→改文本→insert→验证）
+
+### 长期（Phase 8）
+- 自定义内容支持（新地图、新NPC、新事件）— 依赖引擎反编译进度
 
 传送索引输出到 [docs/generated/warp_index.tsv](./docs/generated/warp_index.tsv)，
 用于快速查找 `Proc016(map, x, y)` 和后续玩家位置设置。

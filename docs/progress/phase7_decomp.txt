@@ -2,117 +2,45 @@ Phase 7 - 核心引擎反编译进度
 ================================
 更新日期: 2026-06-05
 
-
-一、已完成
-----------
-[V] code_lib_syscall.s  -> src/code_lib_syscall.c    (6函数, BIOS包装器)
-    地址: 0x080D3748-0x080D3778  大小: 0x30
-    验证: make check-all OK, mGBA OK
-
-[V] intro_scene.s       -> src/intro_scene.c         (11函数, 开场/标题)
-    地址: 0x08000914-0x08003788  大小: 0x2E74
-    验证: make check-all OK, mGBA OK
-    说明: 当前为NAKED内联汇编包裹, 可后续改为真C
-
-[V] sram_proxy_2.s      -> src/sram_proxy.c          (已验证稳定)
-[V] sram_proxy_1.s      -> src/sram_init.c           (已验证稳定)
-[V] code_lib_sram.s     -> src/lib_sram.c            (已验证稳定, NAKED)
-[V] more_items.s        -> src/more_items.cc         (已验证稳定)
-[V] code_libc_string.s  -> 已拆分为7个C文件          (需重新验证)
-[V] hardware.s          -> 部分src/hardware.cc       (C+asm共存, 121函数仍在asm)
-[V] code_actor_0809BFE8.s -> 部分src/xxx.cc          (2函数已反编译, 57仍在asm)
+策略: 不做NAKED批量包裹, 做真正的C反编译。
+每步: 选一个小函数 -> 理解asm -> 写成真C -> 验证地址 -> 测试。
 
 
-二、待反编译 (按推荐顺序)
--------------------------
-
-优先级1: 低风险, 独立段
-[V] code_0803A8A4.s      -> src/code_0803A8A4.c
-    函数数: 95
-    难度:   [中] 独立段, 含跳转表
-    地址:   0x0803A8A4-0x0803EE50  大小: 0x45F0
-    说明:   主调度函数+子函数, 可分批做
-
-[V] new_game.s           -> src/new_game.c
-    函数数: 50
-    难度:   [中] 新建游戏流程(取名/选角色), 独立, 好测试
-    地址:   0x08003810-?  大小: ~0x1C00
-    说明:   独立流程, 推荐下一个做
-
-[ ] code_809E804.s       -> src/code_809E804.c
-    函数数: 542
-    难度:   [高] 文件大, 需要分批
-    说明:   超大文件, 建议最后处理
-
-优先级2: 显示/硬件控制
-[ ] hardware.s  (剩余部分) -> src/hardware.cc (完整)
-    函数数: 123 (已做2个, 剩121)
-    难度:   [中] 显示控制(精灵/背景/调色板)
-    说明:   部分已有C代码, 剩余可逐个迁移
-
-[ ] game_state.s         -> src/game_state.c
-    函数数: 267
-    难度:   [高] 状态机, 文件大
-    地址:   0x080103B0-?  大小: 0xFA30
-
-优先级3: 高风险 - 需要极小步拆分
-[ ] game_scene.s         -> src/game_scene.c
-    函数数: 2 (但内含辅助函数)
-    难度:   [高] 上次已白屏回滚
-    地址:   0x0801004C-0x080103B0  大小: 0x364
-    说明:   必须拆成极小步, 保留内联函数, 验证vtable
-
-[ ] interrupt.s          -> src/interrupt.c
-    函数数: 5
-    难度:   [高] IRQ中断, 出错直接崩
-
-[ ] main.s               -> src/main.c
-    函数数: 1
-    难度:   [高] 启动流程
-
-[ ] scene.s              -> src/scene.c
-    函数数: 1
-    难度:   [中] 场景基类, 但核心路径
-
-优先级4: 实体系统
-[ ] code_entities_080320DC.s -> src/code_entities_080320DC.c
-    函数数: 31
-    难度:   [中] 实体子系统
-
-[ ] code_entities_08034CEC.s -> src/code_entities_08034CEC.c
-    函数数: 201
-    难度:   [高] 大文件
-
-[ ] code_entities.s      -> src/code_entities.c
-    函数数: 153
-    难度:   [高] 大文件
-
-优先级5: 脚本引擎 (最后)
-[ ] code_0803EE94.s      -> src/code_0803EE94.c
-    函数数: 609
-    难度:   [极高] 179483行, 脚本引擎
+一、已完成 (NAKED占位, 待改真C)
+--------------------------------
+[V] code_lib_syscall.c     (6函数, BIOS包装)
+[V] intro_scene.c          (11函数, 开场)
+[V] code_0803A8A4.c        (95函数)
+[V] new_game.c             (50函数)
+[V] sram_proxy.c, sram_init.c, lib_sram.c, more_items.cc
+[V] code_libc_string (7个C文件, 需重新验证)
 
 
-三、部分完成 (C+asm共存)
+二、真反编译候选 (从已做文件里挑小函数)
+-----------------------------------------
+
+[ ] func_080036F8  (intro_scene.c, 36字节)
+    难度: [低] 构造函数, 设置虚表+创建对象
+
+[ ] func_0800371C  (intro_scene.c, 48字节)
+    难度: [低] 析构函数
+
+[ ] func_0800374C  (intro_scene.c, 44字节)
+    难度: [中] SmartPtr操作
+
+[ ] func_08000D64  (intro_scene.c, 184字节)
+    难度: [中] 状态判断
+
+[ ] func_08000F5C  (intro_scene.c, 156字节)
+    难度: [中]
+
+[ ] 后续: new_game.c, code_0803A8A4.c 里的小函数
+
+
+三、验证标准 (每次提交)
 --------------------------
-[~] hardware.s           -> src/hardware.cc
-    C代码: 2函数    asm剩余: 121函数
-
-[~] code_actor_0809BFE8.s -> src/code_actor_0809BFE8.cc
-    C代码: 2函数    asm剩余: 57函数
-
-
-四、已回滚
-----------
-[X] game_scene.s  (之前拆成C++后白屏, 已回滚到asm)
-
-
-五、验证标准 (每次提交前)
---------------------------
-1. make clean && make -j2 fomt.gba      -> 编译通过
-2. 检查 fomt.map 地址是否漂移           -> 地址不变
-3. make check-all                        -> 全部通过
-4. mGBA 启动不白屏                       -> 正常进游戏
-
-======================================
+1. make clean && make -j2 fomt.gba
+2. 检查 fomt.map 地址
+3. make check-all
+4. mgba-qt fomt.gba
 EOF

@@ -19,8 +19,15 @@
     构建集成: Makefile自动执行patch_farm_expansion.py
     验证: make clean && make check-all ✅, mGBA不白屏 ✅
 [X] 阶段7: free-space 重定位 - ✅ 655KB可用(0x75C244-0x800000)
-[ ] 阶段8: 可复用地图包 - ❌ 待开始
-[ ] 阶段9: 完整验收 - ❌ 待开始
+[X] 阶段8: 可复用地图包 - ✅
+    目录: maps/farm_expansion/
+    patch.json: 元数据、修改记录、回滚方法
+    Makefile: map-pack-% / check-map-pack-% 目标
+[X] 阶段9: 完整验收 - ✅
+    make clean && make -j2 fomt.gba ✅
+    make check-all ✅
+    mGBA截图: 11.3%白色, 1.7%黑色 (画面正常) ✅
+    所有改动在独立分支上，main未动 ✅
 
 已验证的关键链路:
 - GetMapData(map_id) @ 0x080A4698

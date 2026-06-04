@@ -74,7 +74,7 @@ SECTIONS
         src/scene.o(.text);
         asm/scene.o(.text);
         src/intro_scene.o(.text);
-        asm/new_game.o(.text);
+        src/new_game.o(.text);
         src/hardware.o(.text);
         asm/hardware.o(.text);
         src/farm.o(.text);

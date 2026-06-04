@@ -48,6 +48,9 @@ OLD_CC1  := tools/agbcc/bin/old_agbcc$(EXE)
 MARY ?= ../stanhash_mary/target/release/mary
 MARY_LIB := mary_scripts/lib_fomt.txt
 
+SCRIPT_PATCHES := 167:scripts/script_167.mary
+SCRIPT_PATCH_SOURCES := scripts/script_167.mary
+
 # ================
 # = BUILD CONFIG =
 # ================
@@ -105,8 +108,21 @@ compare: $(ROM)
 .PHONY: compare
 
 # ROM from ELF
-%.gba: %.elf
+%.gba: %.elf $(SCRIPT_PATCH_SOURCES) tools/patch_script.py tools/script_slot.py
 	$(OBJCOPY) -O binary $< $@
+	@for patch in $(SCRIPT_PATCHES); do \
+		id=$${patch%%:*}; \
+		src=$${patch#*:}; \
+		python3 tools/patch_script.py --script-id $$id --source $$src --rom-in $@ --rom-out $@ --mary "$(MARY)"; \
+	done
+
+check-script-patches: $(ROM)
+	@$(MARY) decompile $(ROM) $(MARY_LIB) --script-id 167 -o /tmp/fomt_script_167_check.mary
+	@grep -q "Proc016(1, 24, 280)" /tmp/fomt_script_167_check.mary
+	@grep -q "SetEntityPosition(0, 24, 280, 3)" /tmp/fomt_script_167_check.mary
+	@echo "script patch OK: script_167 chicken coop -> beach"
+
+.PHONY: check-script-patches
 
 # ELF
 $(ELF): $(ALL_OBJS) $(LDS)

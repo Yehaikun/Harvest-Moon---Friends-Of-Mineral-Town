@@ -61,10 +61,13 @@ gUnk_080F89D4:
     .incbin "baserom.gba", 0xF89D4, 0x14C4
 ```
 
-- Therefore editing a `.mary` file alone does not yet rebuild the ROM script data.
-- Until the script build pipeline is wired into the Makefile, ROM-changing script edits need either:
-  - a tracked patch/insertion step, or
-  - a manual local `baserom.gba` patch followed by `make fomt.gba`.
+- The first tracked patch/insertion step now exists:
+  - `tools/script_slot.py` inspects a script pointer and available slot size.
+  - `tools/patch_script.py` compiles a `.mary` file and patches the generated ROM.
+  - `make fomt.gba` applies `SCRIPT_PATCHES` after `objcopy`.
+  - `make check-script-patches` verifies the current script 167 regression patch.
+- This does not yet replace the whole script table/data with generated objects. It is a safe
+  bounded-slot patch layer for scripts whose compiled size fits their original slot.
 
 ### Proven script patch workflow
 
@@ -75,7 +78,7 @@ The chicken-coop-to-beach test proved this workflow:
 3. Edit the corresponding `scripts/script_N.mary`.
 4. Compile it to binary with `mary compile --binary`.
 5. Confirm the compiled byte length fits the original script slot.
-6. Patch the local ROM data source.
+6. Patch the generated ROM through `tools/patch_script.py`.
 7. Rebuild `fomt.gba`.
 8. Decompile the rebuilt ROM script and verify the intended calls are present.
 9. Test in emulator/hardware for white screen and in-game behavior.
@@ -238,9 +241,9 @@ Only apply after confirming FoMT's actual map format from its own data.
 
 ## Next Engineering Tasks
 
-1. Add a tracked `tools/patch_script.py` or Makefile rule that compiles selected `.mary` files and inserts them into a derived ROM image.
+1. Extend `SCRIPT_PATCHES` beyond script 167 only after each script passes slot-size and in-game testing.
 2. Stop relying on manual `baserom.gba` patching for script changes.
-3. Build a script pointer-table inspector:
+3. Continue improving the script pointer-table inspector:
 
 ```sh
 tool --script-id 167 --table-offset 0x0F89D4 --rom baserom.gba

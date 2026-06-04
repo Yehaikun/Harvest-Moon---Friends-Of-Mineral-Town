@@ -98,3 +98,25 @@ Current chicken-coop findings:
 
 Next reverse-engineering step: decode the data pointed to by `0x080F2468` and
 name `gUnk_080F1FC0` once enough adjacent records are understood.
+
+## Phase 2 Status
+
+Phase 2 (Script Index & Trigger Chain) was completed with the following scope:
+
+### ✅ Completed
+| Item | Result |
+|------|--------|
+| Script slot indexes | All 1328 scripts mapped with ROM offset, pointer, size |
+| Warp index | `warp_index.tsv` — all `Proc016` calls with destination maps/coordinates |
+| Script cross references | `script_xref_index.tsv` — 70k+ candidate cross-references |
+| ROM data references | `rom_warp_ref_index.tsv` — 1831 pre-script script ID references |
+| Entity script assignment table | `script_table_080F1FC0.tsv` — 266 records of `{pointer, script_id}` |
+| Chicken coop trigger chain | Entity index `126` → `gUnk_080F1FC0[126]` → script `167` → `Proc016(MAP_BEACH, 24, 280)` |
+
+### ❌ Remaining (deferred to Phase 5)
+| Item | Reason |
+|------|--------|
+| Map coordinate → entity type mapping | Requires decoding map tile/tile collision data format, which belongs to Phase 5 "Map & Scene Data Link" |
+| Per-map entity placement table | Entity placement is embedded in each map's tile/event data, not in a centralized script table |
+| "Which map tile triggers which script" | The trigger source is the map tile's event flag, not the entity script table |
+

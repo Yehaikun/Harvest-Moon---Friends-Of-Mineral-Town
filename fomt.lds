@@ -130,7 +130,7 @@ SECTIONS
 
         src/m4a_1.o(.text);
         src/m4a.o(.text);
-        asm/code_lib_syscall.o(.text);
+        src/code_lib_syscall.o(.text);
         src/lib_sram.o(.text);
         . = . + 0x14;
         *libgcc.a:_call_via_rX.o(.text);

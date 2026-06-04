@@ -61,7 +61,10 @@ SECTIONS
     {
         src/crt0.o(.rom_header);
         asm/main.o(.text);
+        src/main_reset.o(.text);
+        . = . + 4;
         asm/sram_proxy_1.o(.text);
+        src/interrupt_init.o(.text);
         asm/interrupt.o(.text);
         src/new.o(.text);
         src/pure_virtual.o(.text);

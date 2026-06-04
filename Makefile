@@ -48,8 +48,26 @@ OLD_CC1  := tools/agbcc/bin/old_agbcc$(EXE)
 MARY ?= ../stanhash_mary/target/release/mary
 MARY_LIB := mary_scripts/lib_fomt.txt
 
-SCRIPT_PATCHES := 167:scripts/script_167.mary 1011:scripts/script_1011.mary
-SCRIPT_PATCH_SOURCES := scripts/script_167.mary scripts/script_1011.mary
+SCRIPT_PATCHES := \
+  167:scripts/script_167.mary \
+  1011:scripts/script_1011.mary \
+  1005:scripts/script_1005.mary \
+  1018:scripts/script_1018.mary \
+  1002:scripts/script_1002.mary \
+  1003:scripts/script_1003.mary \
+  1014:scripts/script_1014.mary \
+  1016:scripts/script_1016.mary \
+  1027:scripts/script_1027.mary
+SCRIPT_PATCH_SOURCES := \
+  scripts/script_167.mary \
+  scripts/script_1011.mary \
+  scripts/script_1005.mary \
+  scripts/script_1018.mary \
+  scripts/script_1002.mary \
+  scripts/script_1003.mary \
+  scripts/script_1014.mary \
+  scripts/script_1016.mary \
+  scripts/script_1027.mary
 WARP_INDEX := docs/generated/warp_index.tsv
 SCRIPT_XREF_INDEX := docs/generated/script_xref_index.tsv
 WARP_TRIGGER_CANDIDATES := docs/generated/warp_trigger_candidates.tsv

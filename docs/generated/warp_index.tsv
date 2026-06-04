@@ -89,7 +89,7 @@ script_id	script	line	map_id	map_name	proc_x	proc_y	player_line	entity_id	entity
 153	script_153.mary	22	1	MAP_BEACH	212	120	23	0	212	120	0	yes	scripts/script_153.mary
 165	script_165.mary	9	9		120	208	10	0	120	208	1	yes	scripts/script_165.mary
 166	script_166.mary	38	3	MAP_FOREST	168	24	39	0	168	24	0	yes	scripts/script_166.mary
-167	script_167.mary	17	8	MAP_MOTHERS_PEAK	236	411	18	0	236	411	1	yes	scripts/script_167.mary
+167	script_167.mary	17	63		240	460	18	0	240	460	1	yes	scripts/script_167.mary
 168	script_168.mary	41	29	MAP_PLAYER_HOUSE	304	208	42	0	304	208	1	yes	scripts/script_168.mary
 169	script_169.mary	18	29	MAP_PLAYER_HOUSE	240	208	19	0	240	208	1	yes	scripts/script_169.mary
 170	script_170.mary	18	29	MAP_PLAYER_HOUSE	120	208	19	0	120	208	1	yes	scripts/script_170.mary

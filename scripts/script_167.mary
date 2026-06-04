@@ -14,8 +14,8 @@ script 167 EventScript_167
         }
         PlaySong(0, 156)
         Proc034(2, 1)
-        Proc016(8, 236, 411)
-        SetEntityPosition(0, 236, 411, 1)
+        Proc016(63, 240, 460)
+        SetEntityPosition(0, 240, 460, 1)
         Proc035(2, 1)
     }
 }

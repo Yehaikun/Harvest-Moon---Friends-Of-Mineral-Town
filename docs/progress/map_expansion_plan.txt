@@ -1,0 +1,343 @@
+FoMT 地图扩展计划
+=================
+更新日期: 2026-06-05
+
+目标
+----
+最终能在现有 FoMT 地图基础上做增改:
+
+1. 扩大牧场可活动范围。
+2. 扩大小镇街道规模。
+3. 扩大房屋/建筑内部空间。
+4. 新增或移动门、出口、传送点。
+5. 调整 NPC、建筑、障碍物、碰撞和边界, 保证不白屏、不卡墙、不乱传送。
+
+重要判断
+--------
+这个目标不是只反编译 new_game.c 就能完成。地图扩展至少同时依赖:
+
+1. 地图视觉 tilemap: 玩家看到的地面、道路、墙、房屋、围栏。
+2. 碰撞 collision: 哪些格子能走、不能走、是门、是建筑、是障碍。
+3. 地图边界/相机边界: 玩家和镜头能否移动到扩展区域。
+4. 传送脚本: Proc016(map,x,y) 和 SetEntityPosition(...).
+5. 实体/建筑/门触发点: 门、NPC、作物、建筑入口等对象位置。
+6. 地图资源表: 地图 ID 如何找到对应 tilemap、碰撞、图块、调色板、对象表。
+
+因此路线必须是“数据定位 + 工具化 + 关键函数反编译 + 游戏内验证”, 不能只靠猜地址。
+
+
+阶段 0: 稳定基线
+----------------
+目的: 每一步改动前后都有可回滚、可验证的基线。
+
+已具备:
+- make clean && make -j2 fomt.gba 可构建。
+- make check-all 可运行。
+- mGBA 能人工确认是否白屏。
+- script_167 鸡屋传送补丁能证明脚本补丁链路可用。
+
+继续要求:
+1. 每个地图实验单独开分支。
+2. 每次只改一个数据层: 只改碰撞、只改传送、只改视觉 tilemap, 不混改。
+3. 每次构建后人工进游戏确认。
+4. 确认不白屏后再提交。
+5. 如果白屏, 优先回滚本次提交, 再分析 fomt.map 地址和数据尺寸。
+
+验收:
+- main 分支始终能构建, 游戏能打开。
+
+
+阶段 1: 地图数据总索引
+----------------------
+目的: 建立“地图 ID -> 视觉资源 -> 碰撞资源 -> 传送脚本 -> 实体触发”的总表。
+
+要做:
+1. 汇总当前已知 map_id:
+   - MAP_MOTHERS_HILL = 0
+   - MAP_BEACH = 1
+   - MAP_FARM = 2
+   - MAP_FOREST = 3
+   - MAP_NORTH_TOWN = 5
+   - MAP_SOUTH_TOWN = 7
+   - MAP_PLAYER_HOUSE = 0x1D
+   - 其他从 docs/generated/warp_index.tsv 继续补全。
+
+2. 生成 docs/generated/map_master_index.tsv:
+   字段建议:
+   - map_id
+   - map_name
+   - known_warp_scripts
+   - known_safe_spawn_points
+   - collision_offset
+   - collision_size
+   - visual_tilemap_candidate
+   - entity_table_candidate
+   - notes
+
+3. 补充 docs/references/map_data_guide.md:
+   - 明确哪些是已验证事实。
+   - 哪些只是候选地址。
+   - 哪些不能直接改。
+
+验收:
+- 能回答“牧场 map_id 是多少, 碰撞块在哪里, 哪些脚本会传送到牧场”。
+- 能回答“北镇/南镇/玩家房屋对应哪些入口脚本”。
+
+
+阶段 2: 碰撞导出/修改/回写工具
+------------------------------
+目的: 先从最容易验证的碰撞层入手, 做出可走区域变化。
+
+当前已知:
+- 碰撞是 LZ77 压缩块。
+- 解压后结构约为 16 字节头 + 64x64 grid。
+- value 0 = 可走。
+- value 1 = 墙/围栏。
+- value 2 = 门/入口。
+- value 3 = 建筑。
+- value 4 = 障碍。
+
+要做工具:
+1. tools/map_collision.py
+   子命令:
+   - export: 从 ROM 导出某 map_id 的碰撞 grid 为 txt/csv/png。
+   - patch-cell: 修改单个 tile。
+   - patch-rect: 修改矩形区域。
+   - import: 把修改后的 grid 重新压缩并写入 ROM 或生成 patch。
+   - diff: 对比修改前后 grid。
+
+2. 输出格式:
+   - docs/generated/collision/map_002_farm.txt
+   - docs/generated/collision/map_002_farm.csv
+   - docs/generated/collision/map_002_farm_legend.md
+
+3. 安全规则:
+   - 默认不覆盖 baserom.gba。
+   - 默认生成 patch 文件或作用于 fomt.gba。
+   - 如果压缩后超过原槽位大小, 不直接写入, 标记为需要 free-space 重定位。
+
+第一批实验:
+1. 牧场边缘墙改成可走。
+2. 牧场某个障碍改成可走。
+3. 保留门 tile 不动。
+
+验收:
+- 进入农场后, 原本不能走的位置变成能走。
+- 不白屏。
+- 不传送错。
+
+
+阶段 3: 视觉 tilemap 定位
+-------------------------
+目的: 只改碰撞会出现“能走到空气/黑边/墙里”的问题。要扩大地图, 必须定位视觉层。
+
+要做:
+1. 在 ROM 里定位农场、北镇、南镇、房屋的视觉 tilemap 候选块。
+2. 用已有 LZ77 扫描结果和 GBA tilemap 常识交叉验证:
+   - 是否压缩。
+   - 是否 32x32/64x64 tilemap。
+   - 是否引用 tile index/palette/attribute。
+3. 写导出工具:
+   - tools/map_tilemap.py export
+   - 先导出原始 tile index grid, 不急着做图形编辑器。
+
+优先地图:
+1. MAP_FARM
+2. MAP_NORTH_TOWN
+3. MAP_SOUTH_TOWN
+4. MAP_PLAYER_HOUSE
+
+验收:
+- 能导出一张地图的视觉 tilemap, 并确认局部结构和游戏画面对应。
+- 修改一个很小的视觉 tile 后, 游戏内可见变化。
+
+
+阶段 4: 地图边界与相机边界
+--------------------------
+目的: 地图扩大后, 玩家和镜头必须能移动到新区域。
+
+要找的数据/代码:
+1. 玩家坐标限制逻辑。
+2. 相机滚动限制逻辑。
+3. 每张地图的宽高/边界表。
+4. 地图切换后设置边界的函数。
+
+高价值反编译方向:
+1. 优先追踪场景/地图加载函数:
+   - func_08050DC8
+   - func_08050E30
+   - func_08050D3C
+   - func_08050D34
+   - func_08050DF0
+
+2. new_game.c 中优先反编译:
+   - func_08003EEC
+     理由: 它根据状态选择 gUnk_080E86C0/gUnk_080E878C/gUnk_080E87A4/gUnk_080E87FC/gUnk_080E8828/gUnk_080E8878, 然后调用 func_08050DC8。
+     这像是“选择场景/地图数据表”的入口。
+
+3. 再分析:
+   - func_08003DF0
+   - func_08003E88
+   - func_08003F9C
+   - func_080040A0
+   这些函数在 new_game 主循环里频繁操作场景状态, 可能和显示/对象切换有关。
+
+验收:
+- 能定位至少一张地图的宽高/边界控制点。
+- 改大边界后, 玩家/镜头可以进入扩展区域。
+- 不出现镜头错位、黑边、卡死。
+
+
+阶段 5: 传送点和门触发扩展
+--------------------------
+目的: 地图变大后, 门和出口也要跟着变。
+
+已知基础:
+- 脚本里 Proc016(map,x,y) 负责传送目标。
+- SetEntityPosition 设置玩家位置和朝向。
+- docs/generated/warp_index.tsv 已可索引传送脚本。
+- gUnk_080F1FC0 映射实体类型到脚本。
+
+要做:
+1. 把所有通往 MAP_FARM/MAP_NORTH_TOWN/MAP_SOUTH_TOWN/MAP_PLAYER_HOUSE 的脚本列出来。
+2. 为每个入口记录:
+   - 来源地图
+   - 目标地图
+   - 目标坐标
+   - facing
+   - 是否紧邻门 tile
+3. 修改扩建后的门坐标。
+4. 增加新门时, 先复用已有脚本槽位或找 free-space 方案。
+
+验收:
+- 玩家从旧入口能进入扩展后的正确位置。
+- 新门/新出口可用。
+- 不传送到墙里。
+
+
+阶段 6: 房屋/建筑扩大
+---------------------
+目的: 街道扩大后, 房屋视觉和内部空间也要扩大。
+
+拆分:
+1. 外部建筑:
+   - 修改城镇视觉 tilemap。
+   - 修改城镇碰撞。
+   - 移动门 tile。
+   - 调整入口脚本。
+
+2. 内部地图:
+   - 定位对应室内 map_id。
+   - 导出/修改室内视觉 tilemap。
+   - 修改室内碰撞。
+   - 修改出口脚本。
+
+3. NPC/家具:
+   - 找 NPC 初始位置/日程/脚本。
+   - 找家具或交互对象实体表。
+   - 先移动已有对象, 再尝试新增对象。
+
+验收:
+- 至少一个建筑外观扩大。
+- 对应内部空间扩大。
+- 门进出位置正确。
+- NPC 不站进墙里。
+
+
+阶段 7: 地图资源扩容/free-space 重定位
+-------------------------------------
+目的: 原槽位不够时, 能把更大的地图数据放到 ROM 空闲区, 再改指针表指向新位置。
+
+要做:
+1. 扫描 ROM free space。
+2. 为压缩后变大的 collision/tilemap 选择新地址。
+3. 找到引用旧地址的指针表。
+4. 生成 relocation patch。
+5. 每次 relocation 都记录:
+   - old_offset
+   - new_offset
+   - old_size
+   - new_size
+   - pointer_locations
+
+验收:
+- 某张地图的碰撞或视觉数据超过原槽位后, 仍可通过重定位正常加载。
+- 游戏不白屏。
+- 地图可正常进入。
+
+
+阶段 8: 可复用地图包
+--------------------
+目的: 把实验变成可开关、可回滚的内容包。
+
+目录建议:
+maps/
+  farm_expansion/
+    README.md
+    collision.patch.json
+    tilemap.patch.json
+    warps.patch.mary
+    entities.patch.json
+    tests.md
+
+Makefile 目标:
+- make map-pack-farm-expansion
+- make check-map-pack-farm-expansion
+
+验收:
+- 一条命令应用地图包。
+- 一条命令检查资源尺寸和脚本槽位。
+- 生成的 fomt.gba 可人工测试。
+
+
+阶段 9: 完整目标验收
+--------------------
+完成以下项目后, 才算达到“能扩地图”的目标:
+
+1. 牧场扩大:
+   - 视觉扩大。
+   - 碰撞扩大。
+   - 玩家/镜头边界扩大。
+   - 建筑入口仍正常。
+
+2. 小镇街道扩大:
+   - 至少一个街道地图扩大。
+   - 建筑外观可移动/扩大。
+   - 通往其他地图的出口仍正常。
+
+3. 房屋扩大:
+   - 至少一个室内地图扩大。
+   - 出入口正确。
+   - 家具/交互点不乱。
+
+4. 工具链:
+   - 地图索引可生成。
+   - 碰撞可导出/修改/回写。
+   - 视觉 tilemap 可导出/修改/回写。
+   - 传送脚本可修改。
+   - free-space relocation 有记录。
+
+5. 验证:
+   - make clean && make -j2 fomt.gba 通过。
+   - make check-all 通过。
+   - 人工 mGBA 测试不白屏。
+   - 新区域可走、不穿帮、不传送错。
+
+
+下一步建议
+----------
+立即做阶段 1 和阶段 2, 同时开始阶段 4 的关键函数命名。
+
+优先任务顺序:
+1. 新建 tools/map_collision.py, 支持导出 MAP_FARM collision。
+2. 生成 docs/generated/map_master_index.tsv。
+3. 做一个最小实验: 把农场边缘 3x3 墙/边界 tile 改成可走。
+4. 人工进游戏确认玩家能走到变化区域。
+5. 再反编译 new_game.c::func_08003EEC, 给地图/场景表选择逻辑命名。
+6. 追踪 func_08050DC8, 逐步确认地图资源结构。
+
+不要先做的事:
+1. 不要一上来改大 tilemap, 因为还没有 free-space relocation 和视觉格式确认。
+2. 不要一上来新增 map_id, 因为地图表结构和加载函数还没完全确认。
+3. 不要继续随机反编译 new_game.c 的析构/菜单函数, 对地图扩展收益低。
+4. 不要把视觉、碰撞、传送、实体一次性混在一个提交里。

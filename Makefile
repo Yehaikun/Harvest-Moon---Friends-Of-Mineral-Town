@@ -72,6 +72,7 @@ SCRIPT_XREF_INDEX := docs/generated/script_xref_index.tsv
 WARP_TRIGGER_CANDIDATES := docs/generated/warp_trigger_candidates.tsv
 ROM_WARP_REF_INDEX := docs/generated/rom_warp_ref_index.tsv
 SCRIPT_TABLE_080F1FC0 := docs/generated/script_table_080F1FC0.tsv
+MAP_DATA_TABLE := docs/generated/map_data_table.tsv
 MAP_MASTER_INDEX := docs/generated/map_master_index.tsv
 COLLISION_CANDIDATE_DIR := docs/generated/collision
 
@@ -184,8 +185,15 @@ script-table-index: $(SCRIPT_TABLE_080F1FC0)
 
 .PHONY: script-table-index
 
-$(MAP_MASTER_INDEX): tools/generate_map_master_index.py $(WARP_INDEX) include/decomp/entities.hh
-	python3 tools/generate_map_master_index.py --output $@
+$(MAP_DATA_TABLE): tools/decode_map_data_table.py baserom.gba include/decomp/entities.hh
+	python3 tools/decode_map_data_table.py --rom baserom.gba --output $@
+
+map-data-table: $(MAP_DATA_TABLE)
+
+.PHONY: map-data-table
+
+$(MAP_MASTER_INDEX): tools/generate_map_master_index.py $(WARP_INDEX) $(MAP_DATA_TABLE) include/decomp/entities.hh
+	python3 tools/generate_map_master_index.py --map-data $(MAP_DATA_TABLE) --output $@
 
 map-master-index: $(MAP_MASTER_INDEX)
 
@@ -272,7 +280,7 @@ pre-build-check: $(SCRIPT_PATCH_SOURCES) baserom.gba $(PRE_BUILD_CHECKS)
 .PHONY: pre-build-check
 
 # Verify all generated index files exist
-check-indexes: $(WARP_INDEX) $(SCRIPT_XREF_INDEX) $(WARP_TRIGGER_CANDIDATES) $(ROM_WARP_REF_INDEX) $(SCRIPT_TABLE_080F1FC0) $(MAP_MASTER_INDEX)
+check-indexes: $(WARP_INDEX) $(SCRIPT_XREF_INDEX) $(WARP_TRIGGER_CANDIDATES) $(ROM_WARP_REF_INDEX) $(SCRIPT_TABLE_080F1FC0) $(MAP_DATA_TABLE) $(MAP_MASTER_INDEX)
 	@echo "All index files OK"
 
 .PHONY: check-indexes

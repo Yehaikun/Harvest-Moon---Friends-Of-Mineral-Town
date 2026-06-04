@@ -333,15 +333,17 @@ Makefile 目标:
 
 下一步建议
 ----------
-立即做阶段 1 和阶段 2, 同时开始阶段 4 的关键函数命名。
+立即围绕已确认的 `GetMapData(map_id)` 表推进。不要再把
+`func_08050DC8` / `func_08050E30` 当作地图加载函数。
 
 优先任务顺序:
-1. 新建 tools/map_collision.py, 支持导出 MAP_FARM collision。
-2. 生成 docs/generated/map_master_index.tsv。
-3. 做一个最小实验: 把农场边缘 3x3 墙/边界 tile 改成可走。
-4. 人工进游戏确认玩家能走到变化区域。
-5. 再反编译 new_game.c::func_08003EEC, 给地图/场景表选择逻辑命名。
-6. 追踪 func_08050DC8, 逐步确认地图资源结构。
+1. 继续完善 `tools/decode_map_data_table.py` 和 `docs/generated/map_data_table.tsv`。
+2. 基于 `MapData.terrain_info` / `MapData.terrain_map` 导出农场的 terrain 数据。
+3. 验证 `terrain_info` bit0 是否真的控制 solid tile。
+4. 做最小实验: 只改农场 1 个 tile 的 terrain/collision 值。
+5. 人工进游戏确认该 tile 是否从不可走变可走, 或反向变化。
+6. 确认 terrain 链路后, 再做矩形区域 patch。
+7. 最后才处理 visual tilemap 和 free-space relocation。
 
 不要先做的事:
 1. 不要一上来改大 tilemap, 因为还没有 free-space relocation 和视觉格式确认。

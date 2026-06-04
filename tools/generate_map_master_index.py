@@ -59,9 +59,23 @@ def minmax(values: list[int]) -> str:
     return f"{min(values)}..{max(values)}"
 
 
+def load_map_data(path: Path) -> dict[int, dict[str, str]]:
+    if not path.exists():
+        return {}
+
+    rows: dict[int, dict[str, str]] = {}
+    with path.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f, delimiter="\t")
+        for row in reader:
+            if row.get("map_id", ""):
+                rows[int(row["map_id"])] = row
+    return rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--warp-index", default="docs/generated/warp_index.tsv")
+    parser.add_argument("--map-data", default="docs/generated/map_data_table.tsv")
     parser.add_argument("--entities", default="include/decomp/entities.hh")
     parser.add_argument("--output", default="docs/generated/map_master_index.tsv")
     args = parser.parse_args()
@@ -71,6 +85,7 @@ def main() -> int:
     output.parent.mkdir(parents=True, exist_ok=True)
 
     known_maps = parse_entities(Path(args.entities))
+    map_data = load_map_data(Path(args.map_data))
     rows_by_map: dict[int, list[dict[str, str]]] = defaultdict(list)
 
     with warp_index.open("r", encoding="utf-8", newline="") as f:
@@ -81,11 +96,12 @@ def main() -> int:
                 continue
             rows_by_map[map_id].append(row)
 
-    all_map_ids = sorted(set(known_maps) | set(rows_by_map))
+    all_map_ids = sorted(set(known_maps) | set(rows_by_map) | set(map_data))
     out_rows: list[dict[str, str]] = []
 
     for map_id in all_map_ids:
         warp_rows = rows_by_map.get(map_id, [])
+        data_row = map_data.get(map_id, {})
         script_ids = sorted({int(r["script_id"]) for r in warp_rows if r.get("script_id")})
         proc_x = [int(r["proc_x"]) for r in warp_rows if r.get("proc_x")]
         proc_y = [int(r["proc_y"]) for r in warp_rows if r.get("proc_y")]
@@ -121,9 +137,18 @@ def main() -> int:
                 "known_safe_spawn_points": ";".join(safe_points),
                 "collision_candidate_offset": collision_candidate,
                 "collision_candidate_size": "0x80" if collision_candidate else "",
-                "visual_tilemap_candidate": "",
+                "map_data_entry": data_row.get("entry_rom_offset", ""),
+                "map_width": data_row.get("width", ""),
+                "map_height": data_row.get("height", ""),
+                "is_interior": data_row.get("is_interior", ""),
+                "terrain_info": data_row.get("terrain_info", ""),
+                "terrain_map": data_row.get("terrain_map", ""),
+                "visual_tilemap_candidate": data_row.get("packed_img", ""),
                 "entity_table_candidate": "",
-                "notes": "collision candidate is not yet the verified full 64x64 grid",
+                "notes": (
+                    "MapData decoded from GetMapData table; collision candidate is not yet "
+                    "the verified full movement grid"
+                ),
             }
         )
 
@@ -141,6 +166,12 @@ def main() -> int:
         "known_safe_spawn_points",
         "collision_candidate_offset",
         "collision_candidate_size",
+        "map_data_entry",
+        "map_width",
+        "map_height",
+        "is_interior",
+        "terrain_info",
+        "terrain_map",
         "visual_tilemap_candidate",
         "entity_table_candidate",
         "notes",

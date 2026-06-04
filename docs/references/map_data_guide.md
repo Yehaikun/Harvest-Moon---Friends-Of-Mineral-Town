@@ -127,7 +127,7 @@ To determine safe coordinates:
 ## 6. Map Data Tables Reference
 
 | Symbol | ROM Offset | Size | Content |
-|--------|-----------|------|---------|
+|--------|------------|------|---------|
 | `init_array` | 0xE8610 | 16 bytes | Constructor init array |
 | `gUnk_080E862C` | 0xE862C | 0x58 | Unknown map-related data |
 | `gUnk_080E8684` | 0xE8684 | 0x3C | Unknown map-related data |
@@ -141,6 +141,59 @@ To determine safe coordinates:
 | `gUnk_080F1FC0` | 0xF1FC0 | 0x84C | Entity schedule/script table |
 | `gProductInfo` | 0xF0348 | — | Item/product prices |
 | `gArticleInfo` | 0xEFED4 | — | Item/article data |
+
+### Confirmed `GetMapData` Table
+
+`GetMapData(map_id)` is at `0x080A4698` and indexes `gUnk_08105EDC`:
+
+```asm
+map_entry = gUnk_08105EDC + map_id * 0x28
+```
+
+The raw table is:
+
+| Symbol | ROM Offset | Size | Entry Size | Entries |
+|--------|------------|------|------------|---------|
+| `gUnk_08105EDC` | 0x105EDC | 0xA50 | 0x28 | 66 |
+
+Generated table:
+
+```sh
+make map-data-table
+```
+
+Output:
+
+```text
+docs/generated/map_data_table.tsv
+```
+
+The current decoded structure matches `include/unknown_types.hh::MapData`:
+
+| Offset | Field | Meaning |
+|--------|-------|---------|
+| +00 | `packed_img` | compressed visual/map image candidate |
+| +04 | `packed_pal1` | compressed palette candidate |
+| +08 | `packed_pal2` | compressed palette candidate |
+| +0C | `packed_tiles1` | compressed tile graphics candidate |
+| +10 | `packed_tiles2` | compressed tile graphics candidate |
+| +14 | `packed_tiles3` | compressed tile graphics candidate |
+| +18 | `terrain_info` | terrain/collision/action info array candidate |
+| +1C | `terrain_map` | per-tile terrain index map candidate |
+| +20 | `width` | map width in tiles |
+| +22 | `height` | map height in tiles |
+| +24 | `is_interior` | 1 for interiors, 0 for outdoor maps |
+
+Key decoded entries:
+
+| Map | Width | Height | Interior | Terrain Info | Terrain Map | Visual Candidate |
+|-----|-------|--------|----------|--------------|-------------|------------------|
+| MAP_FARM | 60 | 56 | 0 | 0x08131AD4 | 0x08131AFC | 0x086FB004 |
+| MAP_NORTH_TOWN | 176 | 88 | 0 | 0x0812B5A0 | 0x0812B624 | 0x086CDFEC |
+| MAP_SOUTH_TOWN | 173 | 64 | 0 | 0x08134FB0 | 0x08134FFC | 0x0870B81C |
+| MAP_PLAYER_HOUSE | 46 | 42 | 1 | 0x08125BC8 | 0x08125C00 | 0x086B3180 |
+
+This table is now the primary route for map expansion work.
 
 ---
 

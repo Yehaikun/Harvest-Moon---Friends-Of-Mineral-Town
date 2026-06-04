@@ -63,7 +63,8 @@ SECTIONS
         asm/main.o(.text);
         src/main_reset.o(.text);
         . = . + 4;
-        asm/sram_proxy_1.o(.text);
+        src/sram_init.o(.text);
+        . = . + 0x28;
         src/interrupt_init.o(.text);
         asm/interrupt.o(.text);
         src/new.o(.text);

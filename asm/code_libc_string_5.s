@@ -1,53 +1,6 @@
 	.INCLUDE "asm/macro.inc"
 	.SYNTAX UNIFIED
 
-	thumb_func_start memcmp
-memcmp: @ 0x080D3948
-	push {r4, lr}
-	adds r4, r2, #0
-	adds r3, r0, #0
-	adds r2, r1, #0
-	cmp r4, #3
-	bls .L080D3984
-	orrs r0, r2
-	movs r1, #3
-	ands r0, r1
-	cmp r0, #0
-	bne .L080D3984
-	b .L080D396A
-.L080D3960:
-	adds r3, #4
-	adds r2, #4
-	subs r4, #4
-	cmp r4, #3
-	bls .L080D3984
-.L080D396A:
-	ldr r1, [r3]
-	ldr r0, [r2]
-	cmp r1, r0
-	beq .L080D3960
-	b .L080D3984
-.L080D3974:
-	ldrb r0, [r3]
-	ldrb r1, [r2]
-	cmp r0, r1
-	beq .L080D3980
-	subs r0, r0, r1
-	b .L080D398E
-.L080D3980:
-	adds r3, #1
-	adds r2, #1
-.L080D3984:
-	adds r0, r4, #0
-	subs r4, #1
-	cmp r0, #0
-	bne .L080D3974
-	movs r0, #0
-.L080D398E:
-	pop {r4}
-	pop {r1}
-	bx r1
-
 	thumb_func_start memcpy
 memcpy: @ 0x080D3994
 	push {r4, r5, lr}

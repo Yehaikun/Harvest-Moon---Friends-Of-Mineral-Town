@@ -20,42 +20,10 @@ NAKED void func_08000E1C(void)
     asm_unified("\tfunc_08000E1C: @ 0x08000E1C\n\t    push {r4, r5, r6, r7, lr}\n\t    sub sp, #8\n\t    adds r7, r0, #0\n\t    bl func_08008724\n\t    adds r0, r7, #0\n\t    bl func_08000F5C\n\t    adds r0, r7, #0\n\t    bl func_08008918\n\t    mov r1, sp\n\t    movs r2, #0x3f\n\t    strh r2, [r1]\n\t    adds r0, #0x50\n\t    strh r2, [r0]\n\t    movs r0, #0x10\n\t    bl __builtin_new\n\t    adds r4, r0, #0\n\t    adds r0, r7, #0\n\t    bl func_08008918\n\t    adds r1, r0, #0\n\t    movs r6, #0\n\t    str r6, [r4]\n\t    str r6, [r4, #4]\n\t    ldr r0, .L08000EB0 @ =vtable_unk_080E5B80\n\t    str r0, [r4, #8]\n\t    adds r5, r4, #0\n\t    adds r5, #0xc\n\t    adds r0, r5, #0\n\t    bl func_08009300\n\t    str r4, [sp, #4]\n\t    ldr r1, .L08000EB4 @ =0x00000889\n\t    adds r0, r5, #0\n\t    movs r2, #1\n\t    movs r3, #0\n\t    bl func_0800934C\n\t    adds r0, r7, #0\n\t    bl func_08008940\n\t    ldr r2, [r0, #8]\n\t    ldr r1, [sp, #4]\n\t    ldr r2, [r2, #0x10]\n\t    bl _call_via_r2\n\t    ldr r1, .L08000EB8 @ =0x00006D32\n\t    adds r0, r7, r1\n\t    strh r6, [r0]\n\t    adds r0, r7, #0\n\t    adds r0, #8\n\t    movs r1, #0\n\t    bl func_08008B6C\n\t    ldr r0, .L08000EB8 @ =0x00006D32\n\t    adds r5, r7, r0\n\t.L08000E92:\n\t    adds r0, r7, #0\n\t    bl func_080087C8\n\t    adds r0, r7, #0\n\t    bl func_080088B8\n\t    movs r1, #0\n\t    ldrsh r0, [r5, r1]\n\t    cmp r0, #1\n\t    beq .L08000EE0\n\t    cmp r0, #1\n\t    bgt .L08000EBC\n\t    cmp r0, #0\n\t    beq .L08000EC2\n\t    b .L08000F3E\n\t    .align 2, 0\n\t.L08000EB0: .4byte vtable_unk_080E5B80\n\t.L08000EB4: .4byte 0x00000889\n\t.L08000EB8: .4byte 0x00006D32\n\t.L08000EBC:\n\t    cmp r0, #2\n\t    beq .L08000F30\n\t    b .L08000F3E\n\t.L08000EC2:\n\t    ldr r0, [sp, #4]\n\t    ldr r1, [r0]\n\t    rsbs r0, r1, #0\n\t    orrs r0, r1\n\t    cmp r0, #0\n\t    blt .L08000F3E\n\t    ldr r1, .L08000EDC @ =0x00006D2C\n\t    adds r0, r7, r1\n\t    movs r1, #0x78\n\t    str r1, [r0]\n\t    movs r0, #1\n\t    strh r0, [r5]\n\t    b .L08000F3E\n\t    .align 2, 0\n\t.L08000EDC: .4byte 0x00006D2C\n\t.L08000EE0:\n\t    ldr r0, .L08000F28 @ =0x00006D2C\n\t    adds r4, r7, r0\n\t    ldr r0, [r4]\n\t    subs r0, #1\n\t    str r0, [r4]\n\t    adds r0, r7, #0\n\t    bl func_080088CC\n\t    movs r1, #8\n\t    ands r0, r1\n\t    cmp r0, #0\n\t    beq .L08000EFC\n\t    movs r0, #0\n\t    str r0, [r4]\n\t.L08000EFC:\n\t    ldr r0, [r4]\n\t    cmp r0, #0\n\t    bgt .L08000F3E\n\t    ldr r0, [sp, #4]\n\t    adds r0, #0xc\n\t    ldr r1, .L08000F2C @ =0x00000889\n\t    movs r2, #1\n\t    movs r3, #0\n\t    bl func_08009378\n\t    adds r0, r7, #0\n\t    bl func_08008940\n\t    ldr r2, [r0, #8]\n\t    ldr r1, [sp, #4]\n\t    ldr r2, [r2, #0x10]\n\t    bl _call_via_r2\n\t    movs r0, #2\n\t    strh r0, [r5]\n\t    b .L08000F3E\n\t    .align 2, 0\n\t.L08000F28: .4byte 0x00006D2C\n\t.L08000F2C: .4byte 0x00000889\n\t.L08000F30:\n\t    ldr r0, [sp, #4]\n\t    ldr r1, [r0]\n\t    rsbs r0, r1, #0\n\t    orrs r0, r1\n\t    cmp r0, #0\n\t    blt .L08000F3E\n\t    movs r6, #1\n\t.L08000F3E:\n\t    cmp r6, #0\n\t    beq .L08000E92\n\t    ldr r1, [sp, #4]\n\t    cmp r1, #0\n\t    beq .L08000F54\n\t    ldr r0, [r1, #8]\n\t    ldr r2, [r0, #0xc]\n\t    adds r0, r1, #0\n\t    movs r1, #3\n\t    bl _call_via_r2\n\t.L08000F54:\n\t    add sp, #8\n\t    pop {r4, r5, r6, r7}\n\t    pop {r0}\n\t    bx r0");
 }
 
-extern void Unpack(const void *src, void *dst);
-extern void func_08008EB8(u32 val, void *dst, u32 size);
-extern void func_08008E64(const void *src, void *dst, u32 size);
-extern void *func_08008918(void *self);
-extern u8 gUnk_0874E648[];
-extern u8 gUnk_0874EB40[];
-extern u8 gUnk_0874EB60[];
-
-/*
- * func_08000F5C - 开场画面显示初始化
- * 填充OBJ显存, 解压BG/OBJ图块, 设置显示参数
- * 注意: func_08008EB8的参数顺序是(value, dst, size)
- */
-void func_08000F5C(void *self)
+NAKED void func_08000F5C(void)
 {
-    void *ctx;
-
-    func_08008EB8(0, (void*)0x06007FE0, 0x20);
-    func_08008EB8(-1, (void*)0x0600F800, 0x800);
-
-    Unpack(gUnk_0874E648, (void*)0x06000000);
-    func_08008E64(gUnk_0874EB40, (void*)0x06005000, 0x20);
-    Unpack(gUnk_0874EB60, (void*)0x0600F800);
-
-    ctx = func_08008918(self);
-    *(u16*)((u32)ctx + 0) = 0x0840;
-    ctx = func_08008918(self);
-    *(u16*)((u32)ctx + 0x0E) = 0x1F43;
-    ctx = func_08008918(self);
-    *(u16*)((u32)ctx + 0x1C) = 0;
-    ctx = func_08008918(self);
-    *(u16*)((u32)ctx + 0x1E) = 0;
+    asm_unified("\tfunc_08000F5C: @ 0x08000F5C\n\t    push {r4, r5, lr}\n\t    sub sp, #4\n\t    adds r5, r0, #0\n\t    ldr r1, .L08000FE0 @ =0x06007FE0\n\t    movs r0, #0\n\t    movs r2, #0x20\n\t    bl func_08008EB8\n\t    movs r0, #1\n\t    rsbs r0, r0, #0\n\t    ldr r4, .L08000FE4 @ =0x0600F800\n\t    movs r2, #0x80\n\t    lsls r2, r2, #4\n\t    adds r1, r4, #0\n\t    bl func_08008EB8\n\t    ldr r0, .L08000FE8 @ =gUnk_0874E648\n\t    movs r1, #0xc0\n\t    lsls r1, r1, #0x13\n\t    bl Unpack\n\t    ldr r0, .L08000FEC @ =gUnk_0874EB40\n\t    movs r1, #0xa0\n\t    lsls r1, r1, #0x13\n\t    movs r2, #0x20\n\t    bl func_08008E64\n\t    ldr r0, .L08000FF0 @ =gUnk_0874EB60\n\t    adds r1, r4, #0\n\t    bl Unpack\n\t    adds r0, r5, #0\n\t    bl func_08008918\n\t    mov r1, sp\n\t    movs r3, #0x84\n\t    lsls r3, r3, #4\n\t    adds r2, r3, #0\n\t    strh r2, [r1]\n\t    movs r4, #0\n\t    strh r2, [r0]\n\t    adds r0, r5, #0\n\t    bl func_08008918\n\t    mov r2, sp\n\t    ldr r3, .L08000FF4 @ =0x00001F43\n\t    adds r1, r3, #0\n\t    strh r1, [r2]\n\t    strh r1, [r0, #0xe]\n\t    adds r0, r5, #0\n\t    bl func_08008918\n\t    mov r1, sp\n\t    strh r4, [r1]\n\t    strh r4, [r0, #0x1c]\n\t    adds r0, r5, #0\n\t    bl func_08008918\n\t    mov r1, sp\n\t    strh r4, [r1]\n\t    strh r4, [r0, #0x1e]\n\t    add sp, #4\n\t    pop {r4, r5}\n\t    pop {r0}\n\t    bx r0\n\t    .align 2, 0\n\t.L08000FE0: .4byte 0x06007FE0\n\t.L08000FE4: .4byte 0x0600F800\n\t.L08000FE8: .4byte gUnk_0874E648\n\t.L08000FEC: .4byte gUnk_0874EB40\n\t.L08000FF0: .4byte gUnk_0874EB60\n\t.L08000FF4: .4byte 0x00001F43");
 }
-
-// 填充到原函数大小
-__asm__(".align 2, 0\n\t.space 0x0C, 0x46");
 
 NAKED void func_08000FF8(void)
 {

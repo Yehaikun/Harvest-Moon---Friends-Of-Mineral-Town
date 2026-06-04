@@ -145,7 +145,11 @@ SECTIONS
         /* *libc.a:strlen.o(.text); */
         src/memcmp_stratum.o(.text);
         . = . + 0x24;
-        asm/code_libc_string_5.o(.text);
+        asm/code_libc_string_3.o(.text);
+        src/strcat_stratum.o(.text);
+        . = . + 0x28;
+        src/strcpy_stratum.o(.text);
+        . = . + 0x28;
         src/strlen_stratum.o(.text);
         . = . + 0x2C;
 

@@ -217,6 +217,8 @@ $(BUILD_DIR)/src/m4a.o: CC1 := $(OLD_CC1)
 $(BUILD_DIR)/src/libc_string.o: CFLAGS += -fno-builtin
 $(BUILD_DIR)/src/strlen_stratum.o: CFLAGS += -fno-builtin
 $(BUILD_DIR)/src/memcmp_stratum.o: CFLAGS += -fno-builtin
+$(BUILD_DIR)/src/strcat_stratum.o: CFLAGS += -fno-builtin
+$(BUILD_DIR)/src/strcpy_stratum.o: CFLAGS += -fno-builtin
 
 clean:
 	@echo "RM $(ROM) $(ELF) $(MAP) $(BUILD_DIR)"

@@ -29,12 +29,13 @@ from script_slot import DEFAULT_TABLE_OFFSET, DEFAULT_SCRIPT_COUNT, inspect_slot
 GBA_ROM_BASE = 0x08000000
 MARY_DEFAULT = Path("../stanhash_mary/target/release/mary")
 
-# Known "bad" scripts: mary cannot round-trip these losslessly.
-# These are excluded from automatic recompilation checks.
+# Known "bad" scripts: mary outputs PARTIAL DECOMPILATION for these.
+# They use unsupported script engine features and cannot be round-tripped.
+# Tested 2026-06-04: 1296 OK, 32 PARTIAL (out of 1328 total)
 BAD_SCRIPT_BLACKLIST: set[int] = {
-    # Scripts that use unsupported mary features or break on recompile
-    # Identified by previous mary test runs.
-    # Add to this list as new problem scripts are discovered.
+    106, 143, 356, 403, 409, 410, 411, 532, 540, 571, 610, 614,
+    617, 620, 623, 625, 629, 632, 635, 638, 640, 644, 647, 650,
+    653, 855, 858, 861, 879, 1008, 1013, 1031,
 }
 
 # Compiled script filename pattern

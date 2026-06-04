@@ -96,8 +96,13 @@ Current chicken-coop findings:
 | `rom_warp_ref_index.tsv` | `0xF23B4` is inside `gUnk_080F1FC0` | strong lead |
 | `script_table_080F1FC0.tsv` | record `126` is `{ pointer=0x080F2468, script_id=167 }` | strong lead, structure still unnamed |
 
-Next reverse-engineering step: decode the data pointed to by `0x080F2468` and
-name `gUnk_080F1FC0` once enough adjacent records are understood.
+Analysis confirmed:
+- 104 valid entries out of 266 (remaining entries are padding/non-script data)
+- NPC interaction scripts (1000-1030 range) are NOT in this table
+- gUnk_080F1FC0 is an **entity behavior schedule table**, not a dialogue script table
+- Entities sharing `data_ptr` (e.g. `0x080f24ec` with scripts 300/840/180) share behavior data but differ in interaction script
+- The chicken coop door (entity index 126, script 167) is one of 4 entities sharing `ptr=0x080f2468`
+- NPC dialogue scripts are assigned through a separate mechanism (not gUnk_080F1FC0)
 
 ## Phase 2 Status
 

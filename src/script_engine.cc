@@ -1,3 +1,5 @@
+// 📜 脚本引擎 - 事件脚本解释器
+
 #include "script_engine.hh"
 
 #include <string.h> // memset, memcpy

@@ -1,3 +1,5 @@
+// 👤 实体基类 - 所有游戏实体的抽象基类
+
 #include "entity.hh"
 
 AEntity::AEntity(GameObject * game_object, Location const & location)

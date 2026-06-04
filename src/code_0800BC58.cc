@@ -1,3 +1,5 @@
+// 🔧 辅助函数 0x0800BC58 - 场景/实体相关
+
 #include "furniture.hh"
 
 Unk_0800BC58::Unk_0800BC58() {}

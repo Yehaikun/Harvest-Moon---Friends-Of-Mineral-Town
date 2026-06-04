@@ -1,3 +1,5 @@
+// 🌱 田地系统 - 田地格子状态管理
+
 #include "field.hh"
 
 #include "rucksack_item.hh"

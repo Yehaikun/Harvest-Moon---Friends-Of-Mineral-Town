@@ -1,3 +1,5 @@
+// 🏠 农舍系统 - 玩家房屋内部逻辑
+
 #include "farm_house.hh"
 
 #include <stdlib.h>

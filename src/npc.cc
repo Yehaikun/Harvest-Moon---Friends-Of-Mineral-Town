@@ -1,3 +1,5 @@
+// 👥 NPC 系统 - NPC 行为与交互逻辑
+
 #include "npc.hh"
 
 Npc::Npc(ActorLocation const & a_location)

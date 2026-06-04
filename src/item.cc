@@ -1,3 +1,5 @@
+// 📦 物品系统 - 物品定义、价格、属性
+
 #include "item.hh"
 
 #include <algorithm>

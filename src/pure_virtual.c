@@ -1,3 +1,4 @@
+// ⚠️ 纯虚函数陷阱 - 纯虚函数被调用时的处理
 /* defintion of the __pure_virtual dummy function
  * I don't know if this is good to put here or we want to make a runtime.cc file for this and new.cc */
 

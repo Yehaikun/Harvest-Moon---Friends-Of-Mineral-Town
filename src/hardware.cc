@@ -1,3 +1,5 @@
+// 🖥️ 硬件抽象 - GBA 硬件寄存器操作封装
+
 #include "prelude.h"
 
 union Unk_hardware_ent_080D6D98

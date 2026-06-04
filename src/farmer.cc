@@ -1,3 +1,5 @@
+// 👨‍🌾 农夫角色 - 玩家农夫角色逻辑
+
 #include "farmer.hh"
 
 Farmer::Farmer(char const * arg_1, GameDate const & arg_2)

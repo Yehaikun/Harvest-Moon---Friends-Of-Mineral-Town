@@ -1,3 +1,5 @@
+// 🐄 畜棚系统 - 畜棚购买、升级管理
+
 #include "barn.hh"
 
 #include "utility/popcnt.hh"

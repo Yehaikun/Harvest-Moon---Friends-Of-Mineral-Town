@@ -1,3 +1,5 @@
+// 🎵 唱片机 - 唱片机功能
+
 #include "furniture.hh"
 
 // are those song ids?

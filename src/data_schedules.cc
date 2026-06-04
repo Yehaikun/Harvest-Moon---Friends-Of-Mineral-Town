@@ -1,3 +1,5 @@
+// 📅 计划表数据 - NPC 日程安排数据
+
 #include "prelude.h"
 
 #include "schedule_info.hh"

@@ -1,3 +1,5 @@
+// 🚀 启动重置 - 游戏启动与复位处理
+
 #include "gbaio.h"
 #include "gbasvc.h"
 

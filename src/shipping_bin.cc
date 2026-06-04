@@ -1,3 +1,5 @@
+// 📦 出货箱 - 出货箱逻辑
+
 #include "shipping_bin.hh"
 
 #include "unknown_inlines.hh"

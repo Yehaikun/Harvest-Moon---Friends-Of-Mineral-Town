@@ -1,3 +1,5 @@
+// 🐴 马 - 马的逻辑
+
 #include "horse.hh"
 
 Horse::Horse(char const * name, ActorLocation const & location, u32 age)

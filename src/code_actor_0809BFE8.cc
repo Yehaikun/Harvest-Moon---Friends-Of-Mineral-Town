@@ -1,3 +1,5 @@
+// 🔧 辅助函数 0x0809BFE8 - 角色/精灵相关
+
 #include "prelude.h"
 
 #include "actor.hh"

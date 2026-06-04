@@ -1,3 +1,5 @@
+// 🎬 场景系统 - 场景生命周期管理（SceneMain 主循环）
+
 #include "scene.hh"
 
 AScene::~AScene() {}

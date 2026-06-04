@@ -1,3 +1,5 @@
+// 🐔 鸡舍系统 - 鸡舍购买、升级管理
+
 #include "coop.hh"
 
 #include "utility/popcnt.hh"

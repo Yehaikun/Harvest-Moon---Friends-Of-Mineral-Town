@@ -1,3 +1,5 @@
+// 👥 NPC 实体 - NPC 实体实现
+
 #include "prelude.h"
 
 #include "entity_actor.hh"

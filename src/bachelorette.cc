@@ -1,3 +1,5 @@
+// 💕 可结婚对象 - 结婚候补角色的特殊逻辑
+
 #include "bachelorette.hh"
 
 #include <stdlib.h> // rand

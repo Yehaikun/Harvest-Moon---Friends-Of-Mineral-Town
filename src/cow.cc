@@ -1,3 +1,5 @@
+// 🐄 牛 - 牛的逻辑
+
 #include "cow.hh"
 
 #include <cstdlib>

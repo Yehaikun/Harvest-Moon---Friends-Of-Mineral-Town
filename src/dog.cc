@@ -1,3 +1,5 @@
+// 🐕 狗 - 狗的逻辑
+
 #include "dog.hh"
 
 Dog::Dog(char const * name)

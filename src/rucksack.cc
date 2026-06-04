@@ -1,3 +1,5 @@
+// 🎒 背包 - 背包存储逻辑
+
 #include "rucksack.hh"
 
 Rucksack::Rucksack()

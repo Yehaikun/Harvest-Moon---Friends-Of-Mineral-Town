@@ -1,3 +1,5 @@
+// ✋ 手持物品 - 玩家手持物品管理
+
 #include "held_item.hh"
 
 HeldItem::HeldItem()

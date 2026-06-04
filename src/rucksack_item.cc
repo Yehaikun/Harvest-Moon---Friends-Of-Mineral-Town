@@ -1,3 +1,5 @@
+// 🎒 背包物品 - 背包中的物品操作
+
 #include "rucksack_item.hh"
 
 RucksackItem::RucksackItem()

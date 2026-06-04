@@ -1,3 +1,5 @@
+// 👤 实体角色 - 实体与角色的桥接
+
 #include "entity_actor.hh"
 
 #include <stdlib.h>

@@ -1,3 +1,5 @@
+// ⚡ 中断初始化 - IRQ 中断系统初始化
+
 #include "types.h"
 
 void func_08000528(u32 mask);

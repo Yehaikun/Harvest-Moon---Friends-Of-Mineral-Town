@@ -1,3 +1,5 @@
+// 🌾 农场系统 - 农场主逻辑（耕地、种植区域）
+
 #include "farm.hh"
 
 #include <algorithm>

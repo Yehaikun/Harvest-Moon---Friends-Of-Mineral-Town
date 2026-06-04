@@ -1,3 +1,5 @@
+// 🔧 工具箱 - 工具存储管理
+
 #include "furniture.hh"
 
 #include <iterator>

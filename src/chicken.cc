@@ -1,3 +1,5 @@
+// 🐔 鸡 - 鸡的逻辑
+
 #include "chicken.hh"
 
 #include <stdlib.h> // rand

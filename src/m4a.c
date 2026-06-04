@@ -1,3 +1,5 @@
+// 🎵 M4A 音频引擎 - GBA 多通道音频混音器
+
 #include "m4a.h"
 
 #include "gbaio.h"

@@ -1,3 +1,5 @@
+// 🧊 冰箱 - 冰箱物品存储逻辑
+
 #include "furniture.hh"
 
 #include <iterator>

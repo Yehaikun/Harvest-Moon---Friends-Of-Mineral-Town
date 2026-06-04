@@ -1,3 +1,5 @@
+// 🔧 辅助函数 0x08020018 - 实体相关
+
 #include "prelude.h"
 
 #include "entity_actor.hh"

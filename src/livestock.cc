@@ -1,3 +1,5 @@
+// 🐑 家畜基类 - 牛/羊/鸡的共同逻辑
+
 #include "livestock.hh"
 
 #include <cstdlib>

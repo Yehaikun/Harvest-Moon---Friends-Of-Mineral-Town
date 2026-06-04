@@ -1,3 +1,5 @@
+// 🔧 辅助函数 0x0800E2E4 - 场景相关
+
 #include "prelude.h"
 
 #include "unknown_types.hh" // for GameDate and Time

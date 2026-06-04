@@ -1,3 +1,5 @@
+// 🐄 畜棚动物 - 畜棚中动物管理
+
 #include "barn_animal.hh"
 
 BarnAnimal::BarnAnimal(char const * name, ActorLocation const & location, u32 age, u32 days_fed)

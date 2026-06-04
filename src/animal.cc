@@ -1,3 +1,5 @@
+// 🐾 动物基类 - 所有动物的基类
+
 #include "animal.hh"
 
 extern "C"

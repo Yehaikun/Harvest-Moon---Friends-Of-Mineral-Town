@@ -1,3 +1,5 @@
+// 🐑 羊 - 羊的逻辑
+
 #include "sheep.hh"
 
 #include <stdlib.h> // rand

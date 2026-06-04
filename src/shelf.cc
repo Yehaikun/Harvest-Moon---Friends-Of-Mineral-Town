@@ -1,3 +1,5 @@
+// 📚 柜子 - 储物柜逻辑
+
 #include "furniture.hh"
 
 #include <iterator>

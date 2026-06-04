@@ -1,3 +1,5 @@
+// 💾 SRAM 代理 - 存档读写代理
+
 #include "types.h"
 
 void func_0800063C(void)

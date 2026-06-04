@@ -1,3 +1,5 @@
+// 🎭 角色基类 - 游戏中可活动角色的基类
+
 #include "actor.hh"
 
 Actor::Actor(ActorLocation const & a_location)

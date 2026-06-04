@@ -1,3 +1,5 @@
+// 🐾 宠物基类 - 狗/马的共同基类
+
 #include "pet.hh"
 
 #include <stdlib.h> // rand

@@ -12,12 +12,13 @@ in-game using known RAM addresses.
 
 ### Script ID Ranges
 
-| Script IDs | Purpose |
-|------------|---------|
-| `1`–`~999` | Game events (cutscenes, festivals, animal interactions, objects) |
-| `1000`–`~1030` | NPC first-introduction and daily dialogue |
-| `1040`–`~1100` | Festival/event dialogue (horse race, cooking festival, new year, etc.) |
-| `1100`–`1328` | Various event/text scripts |
+| Script IDs | Purpose | How to modify |
+|------------|---------|---------------|
+| `1`–`~999` | Game events (cutscenes, festivals, animal interactions) | mary scripts |
+| `1000`–`~1030` | NPC first-introduction / meeting scripts (large, 5-33KB) | mary scripts |
+| `1040`–`~1060` | Festival dialogue (horse race, cooking festival, etc.) | mary scripts |
+| `1100`–`1328` | Various event/schedule text (small, 200-700 bytes) | Mostly HMMT territory |
+| NPC daily dialogue | General interaction text | **HMMT** (extracted to `tools/HMMT/HMMT_v1.1/SCRIPTS/`) |
 
 ### Script File Location
 

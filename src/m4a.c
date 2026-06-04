@@ -1,4 +1,9 @@
 // 🎵 M4A 音频引擎 - GBA 多通道音频混音器
+//
+// 任天堂官方的 M4A 音频引擎（又称 Sappy），用于 GBA 游戏音频播放。
+// 管理 5 个音乐播放器（MusicPlayer A-E），支持多通道音频混音。
+// 提供 PCM 采样回放、MIDI 序列器、音色库、DSP 效果等功能。
+// 参考: https://github.com/pret/pokeemerald/wiki/M4A-Engine
 
 #include "m4a.h"
 

@@ -1,3 +1,8 @@
+// 🧚 小精灵 - Harvest Sprites 逻辑
+// 管理 7 种小精灵（稳重、睡觉、大胆、厨师、潜水、大胃王、胆小）。
+// 小精灵好感度地址: RAM 0x020045F0-0x020046DA
+// 每个小精灵有 3 项工作经验（收获、浇水、畜牧）。
+
 // 🧚 小精灵 -  harvest sprites 逻辑
 
 #include "harvest_sprite.hh"

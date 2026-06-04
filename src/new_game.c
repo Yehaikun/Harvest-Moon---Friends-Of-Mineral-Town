@@ -194,9 +194,28 @@ NAKED void func_0800598C(void)
     asm_unified("\tfunc_0800598C: @ 0x0800598C\n\t    push {r4, r5, r6, lr}\n\t    mov r6, sb\n\t    mov r5, r8\n\t    push {r5, r6}\n\t    sub sp, #4\n\t    adds r4, r0, #0\n\t    adds r6, r1, #0\n\t    mov r8, r2\n\t    mov sb, r3\n\t    ldr r5, [sp, #0x1c]\n\t    ldr r0, .L080059C8 @ =vtable_unk_080E5AA4\n\t    str r0, [r4]\n\t    ldr r0, .L080059CC @ =0x00001A78\n\t    bl __builtin_new\n\t    str r5, [sp]\n\t    adds r1, r6, #0\n\t    mov r2, r8\n\t    mov r3, sb\n\t    bl func_08004EFC\n\t    str r0, [r4, #4]\n\t    adds r0, r4, #0\n\t    add sp, #4\n\t    pop {r3, r4}\n\t    mov r8, r3\n\t    mov sb, r4\n\t    pop {r4, r5, r6}\n\t    pop {r1}\n\t    bx r1\n\t    .align 2, 0\n\t.L080059C8: .4byte vtable_unk_080E5AA4\n\t.L080059CC: .4byte 0x00001A78");
 }
 
-NAKED void func_080059D0(void)
+extern u32 vtable_unk_080E5AA4[];
+
+/*
+ * func_080059D0 - 析构/清理
+ * 设置虚表, 清理子对象, 调用基类初始化
+ */
+void func_080059D0(void *self, void *arg)
 {
-    asm_unified("\tfunc_080059D0: @ 0x080059D0\n\t    push {r4, r5, lr}\n\t    adds r4, r0, #0\n\t    adds r5, r1, #0\n\t    ldr r0, .L080059FC @ =vtable_unk_080E5AA4\n\t    str r0, [r4]\n\t    ldr r1, [r4, #4]\n\t    cmp r1, #0\n\t    beq .L080059EC\n\t    ldr r0, [r1, #4]\n\t    ldr r2, [r0, #8]\n\t    adds r0, r1, #0\n\t    movs r1, #3\n\t    bl _call_via_r2\n\t.L080059EC:\n\t    adds r0, r4, #0\n\t    adds r1, r5, #0\n\t    bl func_080007EC\n\t    pop {r4, r5}\n\t    pop {r0}\n\t    bx r0\n\t    .align 2, 0\n\t.L080059FC: .4byte vtable_unk_080E5AA4");
+    *(void **)self = (void *)vtable_unk_080E5AA4;
+
+    {
+        void *obj = *(void **)((u32)self + 4);
+        if (obj != 0)
+        {
+            DtorFn dtor;
+            void *vt = *(void **)((u32)obj + 4);
+            dtor = (DtorFn)((void **)vt)[2];
+            dtor(obj, 3);
+        }
+    }
+
+    func_080007EC(self, arg);
 }
 
 NAKED void func_08005A00(void)

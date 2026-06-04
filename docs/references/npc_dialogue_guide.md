@@ -132,6 +132,55 @@ else
 }
 ```
 
+### NPC Daily Dialogue Scripts (confirmed via HMMT dump)
+
+| NPC | Daily Script | First Meeting Script |
+|-----|:------------:|:--------------------:|
+| Popuri | script_1094 | script_1002 (46) |
+| Lillia | script_1095 | — |
+| PLAYER_SON | script_1096 | — |
+| Cliff | script_1097 | — |
+| Zack | script_1098 | — |
+| Doctor | script_1099 | — |
+| Staid (sprite) | script_1100 | — |
+| Timid (sprite) | script_1101 | — |
+| Nappy (sprite) | script_1102 | — |
+| Bold (sprite) | script_1103 | — |
+| Chef (sprite) | script_1104 | — |
+| Aqua (sprite) | script_1105 | — |
+| Hoggy (sprite) | script_1106 | — |
+| Ellen | script_1107 | — |
+| Jeff | script_1108 | — |
+| Karen | script_1109 | script_1005 (53) |
+| Sasha | script_1110 | — |
+| Doug | script_1111 | — |
+| Ann (Ran) | script_1112 | script_1011 (87) |
+| Lou | script_1113 | — |
+| Basil | script_1114 | — |
+| Mary | script_1115 | script_1018 (121) |
+| Anna | script_1116 | — |
+| Won | script_1117 | — |
+| Thomas | script_1118 | — |
+| Elli | script_1119 | script_1003 (48) |
+| Stu | script_1120 | — |
+| Duke | script_1121 | — |
+| Manna | script_1122 | — |
+| Van | script_1123 | — |
+| Harris | script_1124 | — |
+| Carter | script_1125 | — |
+| Kai | script_1126 | — |
+| Gray | script_1127 | — |
+| Saibara | script_1128 | script_1027 (168) |
+| Gotz | script_1129 | — |
+| May | script_1130 | — |
+| Barley | script_1131 | — |
+
+**Note:** The daily dialogue scripts (1093-1131) are managed by the game's text
+system, not by mary event scripts. They are editable via **HMMT** (extracted
+to `tools/HMMT/HMMT_v1.1/SCRIPTS/GENERAL DIALOGUES/`). The first meeting
+scripts (1000-1030) are mary event scripts and can be modified via
+`SCRIPT_PATCHES` in the Makefile.
+
 ### Event Flag Range
 
 Event flags are checked with `Func03E(FlagID)`. The flag range is not fully

@@ -45,6 +45,9 @@ CC1PLUS  := tools/agbcc/bin/agbcp$(EXE)
 
 OLD_CC1  := tools/agbcc/bin/old_agbcc$(EXE)
 
+MARY ?= ../stanhash_mary/target/release/mary
+MARY_LIB := mary_scripts/lib_fomt.txt
+
 # ================
 # = BUILD CONFIG =
 # ================
@@ -86,6 +89,15 @@ $(shell mkdir -p $(SUBDIRS))
 all: $(ROM)
 
 .PHONY: all
+
+check-mary:
+	@test -x "$(MARY)" || { echo "missing mary compiler: $(MARY)"; echo "build it with: cd ../stanhash_mary && cargo build --release"; exit 1; }
+	@$(MARY) compile --help >/dev/null
+	@$(CPP) -P scripts/script_1017.mary | $(MARY) compile -o /tmp/fomt_check_mary_script_1017.c
+	@test -s /tmp/fomt_check_mary_script_1017.c
+	@echo "mary OK: $(MARY)"
+
+.PHONY: check-mary
 
 compare: $(ROM)
 	sha1sum -c $(BUILD_NAME).sha1

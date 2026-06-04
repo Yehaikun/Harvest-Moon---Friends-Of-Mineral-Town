@@ -77,7 +77,28 @@ data/             - 游戏数据文件
 
 ## 工具
 
-- **mary** — 事件脚本编译/反编译工具（`/tmp/stanhash_mary/target/release/mary`）
+- **mary** — 事件脚本编译/反编译工具，源码仓库为 [StanHash/mary](https://github.com/StanHash/mary)。建议克隆并编译到稳定目录：
+
+```bash
+cd ..
+git clone https://github.com/StanHash/mary.git stanhash_mary
+cd stanhash_mary
+cargo build --release
+```
+
+本项目默认使用：
+
+```bash
+../stanhash_mary/target/release/mary
+```
+
+可用下面命令验证 mary 工具链：
+
+```bash
+make check-mary
+```
+
+项目内 `.mary` 脚本必须引用仓库内的 `mary_scripts/lib_fomt.txt`，不要依赖 `/tmp/stanhash_mary` 这类临时路径。
 - **agbcc** — GBA C++ 编译器（`tools/agbcc/bin/`）
 
 ## 许可证

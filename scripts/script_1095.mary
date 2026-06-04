@@ -1,4 +1,4 @@
-#include "/tmp/stanhash_mary/goodies/lib_fomt.txt"
+#include "../mary_scripts/lib_fomt.txt"
 
 script 1095 EventScript_1095
 {

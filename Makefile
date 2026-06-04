@@ -208,3 +208,27 @@ ifneq (clean,$(MAKECMDGOALS))
 -include $(ALL_DEPS)
 .PRECIOUS: $(BUILD_DIR)/%.d
 endif
+
+# -------------------------------------------------------------------
+# Phase 4: Pre-build validation & data integrity checks
+# -------------------------------------------------------------------
+
+PRE_BUILD_CHECKS := tools/pre_build_checks.py
+
+# Validate patched script sizes before building
+pre-build-check: $(SCRIPT_PATCH_SOURCES) baserom.gba $(PRE_BUILD_CHECKS)
+	python3 $(PRE_BUILD_CHECKS) --rom baserom.gba --patches "$(SCRIPT_PATCHES)"
+
+.PHONY: pre-build-check
+
+# Verify all generated index files exist
+check-indexes: $(WARP_INDEX) $(SCRIPT_XREF_INDEX) $(WARP_TRIGGER_CANDIDATES) $(ROM_WARP_REF_INDEX) $(SCRIPT_TABLE_080F1FC0)
+	@echo "All index files OK"
+
+.PHONY: check-indexes
+
+# Run all Phase 4 checks
+check-all: check-mary pre-build-check check-script-patches check-indexes
+	@echo "All checks passed"
+
+.PHONY: check-all

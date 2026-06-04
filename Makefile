@@ -72,6 +72,8 @@ SCRIPT_XREF_INDEX := docs/generated/script_xref_index.tsv
 WARP_TRIGGER_CANDIDATES := docs/generated/warp_trigger_candidates.tsv
 ROM_WARP_REF_INDEX := docs/generated/rom_warp_ref_index.tsv
 SCRIPT_TABLE_080F1FC0 := docs/generated/script_table_080F1FC0.tsv
+MAP_MASTER_INDEX := docs/generated/map_master_index.tsv
+COLLISION_CANDIDATE_DIR := docs/generated/collision
 
 # ================
 # = BUILD CONFIG =
@@ -182,6 +184,21 @@ script-table-index: $(SCRIPT_TABLE_080F1FC0)
 
 .PHONY: script-table-index
 
+$(MAP_MASTER_INDEX): tools/generate_map_master_index.py $(WARP_INDEX) include/decomp/entities.hh
+	python3 tools/generate_map_master_index.py --output $@
+
+map-master-index: $(MAP_MASTER_INDEX)
+
+.PHONY: map-master-index
+
+collision-candidate-farm: baserom.gba tools/map_collision.py
+	python3 tools/map_collision.py export-candidate --rom baserom.gba --map-id 2 --out-dir $(COLLISION_CANDIDATE_DIR)
+
+collision-scan-popuri: baserom.gba tools/map_collision.py
+	python3 tools/map_collision.py scan-popuri --rom baserom.gba --start 0x80000 --end 0x300000 --sizes 4096,4112 --output $(COLLISION_CANDIDATE_DIR)/popuri_4096_4112_scan.tsv
+
+.PHONY: collision-candidate-farm collision-scan-popuri
+
 # ELF
 $(ELF): $(ALL_OBJS) $(LDS)
 	@echo "LD $(LDS) $(ALL_OBJS:$(BUILD_DIR)/%=%)"
@@ -255,7 +272,7 @@ pre-build-check: $(SCRIPT_PATCH_SOURCES) baserom.gba $(PRE_BUILD_CHECKS)
 .PHONY: pre-build-check
 
 # Verify all generated index files exist
-check-indexes: $(WARP_INDEX) $(SCRIPT_XREF_INDEX) $(WARP_TRIGGER_CANDIDATES) $(ROM_WARP_REF_INDEX) $(SCRIPT_TABLE_080F1FC0)
+check-indexes: $(WARP_INDEX) $(SCRIPT_XREF_INDEX) $(WARP_TRIGGER_CANDIDATES) $(ROM_WARP_REF_INDEX) $(SCRIPT_TABLE_080F1FC0) $(MAP_MASTER_INDEX)
 	@echo "All index files OK"
 
 .PHONY: check-indexes

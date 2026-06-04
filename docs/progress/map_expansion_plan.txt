@@ -83,22 +83,26 @@ FoMT 地图扩展计划
 - 能回答“牧场 map_id 是多少, 碰撞块在哪里, 哪些脚本会传送到牧场”。
 - 能回答“北镇/南镇/玩家房屋对应哪些入口脚本”。
 
+当前进展:
+- docs/generated/map_master_index.tsv 已生成。
+- 表中 collision_candidate_offset 是 0x80 字节候选记录地址, 不是已验证完整碰撞网格。
+
 
 阶段 2: 碰撞导出/修改/回写工具
 ------------------------------
 目的: 先从最容易验证的碰撞层入手, 做出可走区域变化。
 
 当前已知:
-- 碰撞是 LZ77 压缩块。
-- 解压后结构约为 16 字节头 + 64x64 grid。
-- value 0 = 可走。
-- value 1 = 墙/围栏。
-- value 2 = 门/入口。
-- value 3 = 建筑。
-- value 4 = 障碍。
+- 0x120BBC + map_id * 0x80 是稳定的地图 ID 索引候选记录。
+- 这些记录不能用当前 popuri/LZSS 解码器直接解压。
+- 因此“4112 字节 LZ77 压缩碰撞 grid”暂时降级为未验证假设。
 
 要做工具:
-1. tools/map_collision.py
+0. tools/map_collision.py 先做只读验证:
+   - export-candidate: 导出某 map_id 的 0x80 字节候选记录。
+   - scan-popuri: 扫描 ROM 中可解出 4096/4112 字节的压缩块。
+
+1. 等真实碰撞块确认后, 再扩展 tools/map_collision.py:
    子命令:
    - export: 从 ROM 导出某 map_id 的碰撞 grid 为 txt/csv/png。
    - patch-cell: 修改单个 tile。
@@ -122,6 +126,7 @@ FoMT 地图扩展计划
 3. 保留门 tile 不动。
 
 验收:
+- 能证明某个 ROM 数据块确实控制玩家能否行走。
 - 进入农场后, 原本不能走的位置变成能走。
 - 不白屏。
 - 不传送错。

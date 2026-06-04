@@ -144,49 +144,64 @@ To determine safe coordinates:
 
 ---
 
-## 7. Collision Format ✅ DECODED
+## 7. Collision / Boundary Candidate Records
 
-### Format
+### Current Status
 
-Each map has a 4112-byte LZ77 compressed collision grid stored in ROM.
+The previously documented collision offsets are **not yet verified** as full
+64x64 collision grids. The address pattern is real, but it currently looks like
+a compact 0x80-byte map-indexed record:
+
+```text
+candidate_offset = 0x120BBC + map_id * 0x80
+candidate_size   = 0x80
+```
+
+Directly unpacking these records with the project popuri/LZSS decoder fails
+with `Invalid popuri header`, so they must not be treated as 4112-byte compressed
+collision blocks yet.
 
 | Offset | Size | Description |
 |--------|------|-------------|
-| 0x120BBC | 4112 LZ77 | Map 0 (MAP_MOTHERS_HILL) |
-| 0x120C3C | 4112 LZ77 | Map 1 (MAP_BEACH) |
-| 0x120CBC | 4112 LZ77 | Map 2 (MAP_FARM) |
-| 0x120D3C | 4112 LZ77 | Map 3 (MAP_FOREST) |
-| 0x120DBC | 4112 LZ77 | Map 4 (MAP_CHURCH_REAR) |
-| 0x120E3C | 4112 LZ77 | Map 5 (MAP_NORTH_TOWN) |
+| 0x120BBC | 0x80 candidate | Map 0 (MAP_MOTHERS_HILL) |
+| 0x120C3C | 0x80 candidate | Map 1 (MAP_BEACH) |
+| 0x120CBC | 0x80 candidate | Map 2 (MAP_FARM) |
+| 0x120D3C | 0x80 candidate | Map 3 (MAP_FOREST) |
+| 0x120DBC | 0x80 candidate | Map 4 (MAP_CHURCH_REAR) |
+| 0x120E3C | 0x80 candidate | Map 5 (MAP_NORTH_TOWN) |
 
-**Collision grid structure** (after LZ77 decompression):
-- First 16 bytes: header/padding (skip)
-- Remaining 4096 bytes: 64×64 tile grid, 1 byte per tile
+Use the read-only helper before changing anything:
 
-**Collision values:**
+```sh
+make collision-candidate-farm
+make collision-scan-popuri
+```
 
-| Value | Meaning | Count on Farm |
-|:-----:|---------|:-------------:|
-| 0 | Walkable (floor/ground) | 2655 (65%) |
-| 1 | Wall/fence (impassable) | 519 (13%) |
-| 2 | **Door/entrance** (triggers event) | 20 |
-| 3 | Building | 692 (17%) |
-| 4 | Obstacle (rocks/trees/stumps) | 192 (5%) |
-| 14,16 | Map border markers | 13 |
-| 80,82,84,86 | Specific objects | 5 |
+Generated files go under `docs/generated/collision/`.
 
-### Map 2 (FARM) Door Positions
+### Working Hypotheses
 
-| Tile (x,y) | Game Coordinate ≈ | Likely Location |
-|:----------:|:-----------------:|-----------------|
-| (13,57) | (208,912) | Building entrance |
-| (31,56) | (496,896) | Building entrance |
-| (53-55,56) | (848-880,896) | Building entrance |
-| (13,60) | (208,960) | Building entrance |
-| (29-31,60) | (464-496,960) | Building entrance |
-| (13-15,62) | (208-240,992) | Bottom edge exit |
-| (21-23,62) | (336-368,992) | Bottom edge exit |
-| (31,62) | (496,992) | Bottom edge exit |
+These 0x80-byte records may be one of:
+
+- collision or boundary metadata,
+- map dimension/camera metadata,
+- a pointer/index table into visual or collision resources,
+- compact per-map trigger/object flags.
+
+They are useful because the map ID stride is clear. They are not enough to
+support safe map expansion by themselves.
+
+### Still Needed
+
+To safely enlarge maps, we still need to locate and verify:
+
+- the real walk/block grid used by movement,
+- the visual tilemap,
+- map width/height and camera boundary values,
+- door/object trigger records.
+
+Any old notes that mention a 4112-byte farm collision grid should be treated as
+unconfirmed until matched against game behavior and the loading code.
 
 ### Map Data Table References
 

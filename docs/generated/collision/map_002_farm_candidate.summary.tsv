@@ -1,0 +1,2 @@
+map_id	map_name	offset	size	unique_values	top_counts	note
+2	farm	0x120CBC	0x80	4	0x00:112,0x04:6,0x10:5,0x03:5	candidate 0x80-byte map-indexed record; not verified full 64x64 collision grid

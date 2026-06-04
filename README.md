@@ -32,7 +32,7 @@
 |------|------|--------|----------|
 | 第 0 阶段 | 稳定基础构建 | `make fomt.gba`、`make check-mary` 可重复运行 | ✅ 全量 clean build 通过，ROM 已确认不白屏 |
 | 第 1 阶段 | 脚本补丁可复现 | `tools/patch_script.py` 或 Makefile 规则，完成 `.mary -> binary -> derived ROM` | 不手动改 `baserom.gba`，修改 `script_167.mary` 后重新构建仍能进鸡屋传送到海边 |
-| 第 2 阶段 | 脚本索引与触发链路 | 脚本 ID、ROM 偏移、slot 大小、`Proc016` 传送点、实体脚本表、ROM 数据区引用 | 🔄 部分完成：实体→脚本映射已建立，地图坐标→实体映射延迟到第 5 阶段（见 `docs/generated/README.md`） |
+| 第 2 阶段 | 脚本索引与触发链路 | 脚本 ID、ROM 偏移、slot 大小、`Proc016` 传送点、实体脚本表、ROM 数据区引用 | ✅ 已完成（地图坐标→实体映射在第 5 阶段补充） |
 | 第 3 阶段 | 对白/事件修改规范 | 对话文本、事件脚本、分支条件、RAM 验证地址、脚本 ID 的对应关系文档化（`docs/references/npc_dialogue_guide.md`） | ✅ 已完成：NPC → 脚本映射、对话分支条件、修改流程、RAM 验证地址均已文档化。事件标志（Func03E）到具体条件的映射待后续补充 |
 | 第 4 阶段 | 数据补丁器与校验工具 | 文本长度检查、指针/偏移检查、脚本编译输出大小检查、mary 坏脚本黑名单（`tools/pre_build_checks.py`、`make check-all`） | ✅ 已完成：slot 大小检查、指针表完整性检查、`make check-all` 一键验证。错误在链接前报告，不进游戏白屏 |
 | 第 5 阶段 | 地图与场景数据链路 | 地图 ID、出生点、传送点、地图块/碰撞线索、DataCrystal/论坛资料交叉表（`docs/references/map_data_guide.md`） | ✅ 已完成：地图 ID 表、传送点索引、安全修改工作流均已文档化。地图碰撞数据格式待地图瓦片解码时深入 |

@@ -131,7 +131,8 @@ SECTIONS
         src/m4a_1.o(.text);
         src/m4a.o(.text);
         asm/code_lib_syscall.o(.text);
-        asm/code_lib_sram.o(.text);
+        src/lib_sram.o(.text);
+        . = . + 0x14;
         *libgcc.a:_call_via_rX.o(.text);
         /* these need to be recompiled using -mthumb-interwork */
         /* *libc.a:memcmp.o(.text); */

@@ -144,7 +144,40 @@ To determine safe coordinates:
 
 ---
 
-## 7. External References
+## 7. Collision Format (Remaining Work)
+
+The map collision format is NOT yet decoded. Here is what we know:
+
+### Confirmed
+- Collision detection functions: `func_08050D34` / `func_08050D5C` (in `code_0803EE94.s`)
+- Tile data loading: `func_0804F0E0` loads tile data into entity struct at offset +0xD0
+- Collision data is copied to entity offsets +0x130 and +0x148 via `func_08009940`
+- Map loading function: `func_08050DC8`
+- LZ77 compressed data blocks found in ROM (potential tile map data)
+
+### Unknown
+- Collision value format (which byte = wall, floor, door, event trigger)
+- Map dimensions and tile grid layout
+- How tile coordinates map to collision grid positions
+- Where the collision data is stored for each map
+
+### Approach to decode (future work)
+
+1. Use no$gba or mGBA debugger to set breakpoints on `func_08050D5C`
+2. Log tile coordinates and return values while walking the player
+3. Compare walkable vs non-walkable positions to derive collision values
+4. Create a collision map viewer tool based on the decoded format
+
+### Map Data Table References
+
+| Symbol | ROM Offset | Size | Current Understanding |
+|--------|-----------|------|---------------------|
+| `gUnk_080E86C0` | 0xE86C0 | 0x2C | String data ("Data 1 " etc.), NOT map tile data |
+| `gUnk_080E878C` | 0xE878C | 0x18 | String data ("There is no saved data."), NOT map tile data |
+| Various | 0xE87A4+ | various | Similar text/string tables |
+| LZ77 blocks | 0x80000+ | various | Compressed tile graphics data (candidates) |
+
+## 8. External References
 
 - DataCrystal RAM Map: map/room IDs at various save offsets
 - DataCrystal ROM Map: TV show map data offsets

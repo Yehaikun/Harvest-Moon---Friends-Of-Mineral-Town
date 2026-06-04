@@ -257,7 +257,11 @@ NAKED void func_080070D4(void)
     asm_unified("\tfunc_080070D4: @ 0x080070D4\n\t    push {r4, lr}\n\t    sub sp, #0xc\n\t    adds r4, r0, #0\n\t    ldr r1, [r1, #4]\n\t    mov r0, sp\n\t    bl func_08005B68\n\t    ldr r2, [sp]\n\t    mov r0, sp\n\t    str r0, [sp, #4]\n\t    str r2, [sp, #8]\n\t    adds r1, r0, #0\n\t    movs r0, #0\n\t    str r0, [r1]\n\t    str r2, [r4]\n\t    ldr r1, [sp]\n\t    cmp r1, #0\n\t    beq .L08007104\n\t    ldr r0, [r1]\n\t    ldr r2, [r0, #8]\n\t    adds r0, r1, #0\n\t    movs r1, #3\n\t    bl _call_via_r2\n\t.L08007104:\n\t    adds r0, r4, #0\n\t    add sp, #0xc\n\t    pop {r4}\n\t    pop {r1}\n\t    bx r1\n\t    .align 2, 0");
 }
 
-NAKED void func_08007110(void)
+/*
+ * func_08007110 - 获取内部缓冲区指针
+ * 返回 self->field_4 + 0x461C
+ */
+void *func_08007110(void *self)
 {
-    asm_unified("\tfunc_08007110: @ 0x08007110\n\t    ldr r0, [r0, #4]\n\t    ldr r1, .L08007118 @ =0x0000461C\n\t    adds r0, r0, r1\n\t    bx lr\n\t    .align 2, 0\n\t.L08007118: .4byte 0x0000461C\n\t.L0800711C:\n\t    .byte 0x01, 0x49, 0x40, 0x18\n\t    .byte 0x70, 0x47, 0x00, 0x00, 0x1C, 0x46, 0x00, 0x00");
+    return (void*)(*(u32*)((u32)self + 4) + 0x461C);
 }

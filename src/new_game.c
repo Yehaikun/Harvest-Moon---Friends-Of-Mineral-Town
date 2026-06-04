@@ -4,6 +4,8 @@
 
 extern void func_08008724(void *self);
 extern void *__builtin_new(u32 size);
+extern void func_080007EC(void *self, void *arg);
+typedef void (*DtorFn)(void *, u32);
 
 NAKED void func_08003788(void)
 {
@@ -75,9 +77,28 @@ NAKED void func_08004B94(void)
     asm_unified("\tfunc_08004B94: @ 0x08004B94\n\t    push {r4, r5, r6, lr}\n\t    sub sp, #4\n\t    adds r6, r0, #0\n\t    adds r5, r1, #0\n\t    adds r4, r2, #0\n\t    ldr r0, .L08004BD8 @ =vtable_unk_080E5A68\n\t    str r0, [r6]\n\t    ldr r1, [r4]\n\t    movs r0, #0\n\t    str r0, [r4]\n\t    str r1, [sp]\n\t    movs r0, #0xd0\n\t    lsls r0, r0, #1\n\t    bl __builtin_new\n\t    adds r1, r5, #0\n\t    mov r2, sp\n\t    bl func_080041DC\n\t    str r0, [r6, #4]\n\t    ldr r4, [r4]\n\t    cmp r4, #0\n\t    beq .L08004BCE\n\t    ldr r0, [r4]\n\t    ldr r2, [r0, #8]\n\t    adds r0, r4, #0\n\t    movs r1, #3\n\t    bl _call_via_r2\n\t.L08004BCE:\n\t    adds r0, r6, #0\n\t    add sp, #4\n\t    pop {r4, r5, r6}\n\t    pop {r1}\n\t    bx r1\n\t    .align 2, 0\n\t.L08004BD8: .4byte vtable_unk_080E5A68");
 }
 
-NAKED void func_08004BDC(void)
+extern u32 vtable_unk_080E5A68[];
+
+/*
+ * func_08004BDC - 析构/清理
+ * 设置虚表, 清理子对象, 调用基类初始化
+ */
+void func_08004BDC(void *self, void *arg)
 {
-    asm_unified("\tfunc_08004BDC: @ 0x08004BDC\n\t    push {r4, r5, lr}\n\t    adds r4, r0, #0\n\t    adds r5, r1, #0\n\t    ldr r0, .L08004C08 @ =vtable_unk_080E5A68\n\t    str r0, [r4]\n\t    ldr r1, [r4, #4]\n\t    cmp r1, #0\n\t    beq .L08004BF8\n\t    ldr r0, [r1, #4]\n\t    ldr r2, [r0, #8]\n\t    adds r0, r1, #0\n\t    movs r1, #3\n\t    bl _call_via_r2\n\t.L08004BF8:\n\t    adds r0, r4, #0\n\t    adds r1, r5, #0\n\t    bl func_080007EC\n\t    pop {r4, r5}\n\t    pop {r0}\n\t    bx r0\n\t    .align 2, 0\n\t.L08004C08: .4byte vtable_unk_080E5A68");
+    *(void **)self = (void *)vtable_unk_080E5A68;
+
+    {
+        void *obj = *(void **)((u32)self + 4);
+        if (obj != 0)
+        {
+            DtorFn dtor;
+            void *vt = *(void **)((u32)obj + 4);
+            dtor = (DtorFn)((void **)vt)[2];
+            dtor(obj, 3);
+        }
+    }
+
+    func_080007EC(self, arg);
 }
 
 NAKED void func_08004C0C(void)

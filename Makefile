@@ -178,7 +178,7 @@ script-table-index: $(SCRIPT_TABLE_080F1FC0)
 # ELF
 $(ELF): $(ALL_OBJS) $(LDS)
 	@echo "LD $(LDS) $(ALL_OBJS:$(BUILD_DIR)/%=%)"
-	@cd $(BUILD_DIR) && $(LD) -T ../$(LDS) -Map ../$(MAP) -L../tools/agbcc/lib -lgcc -lc $(ALL_OBJS:$(BUILD_DIR)/%=%) -o ../$@
+	@cd $(BUILD_DIR) && $(LD) -T ../$(LDS) -Map ../$(MAP) -L../tools/agbcc/lib $(ALL_OBJS:$(BUILD_DIR)/%=%) -lgcc -lc -o ../$@
 	@$(STRIP) -N .gcc2_compiled. $(ELF)
 
 # C dependency file
@@ -214,6 +214,7 @@ $(BUILD_DIR)/%.o: %.s
 
 # overrides for matching
 $(BUILD_DIR)/src/m4a.o: CC1 := $(OLD_CC1)
+$(BUILD_DIR)/src/libc_string.o: CFLAGS += -fno-builtin
 
 clean:
 	@echo "RM $(ROM) $(ELF) $(MAP) $(BUILD_DIR)"

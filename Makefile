@@ -123,9 +123,9 @@ compare: $(ROM)
 
 check-script-patches: $(ROM)
 	@$(MARY) decompile $(ROM) $(MARY_LIB) --script-id 167 -o /tmp/fomt_script_167_check.mary
-	@grep -q "Proc016(1, 24, 280)" /tmp/fomt_script_167_check.mary
-	@grep -q "SetEntityPosition(0, 24, 280, 3)" /tmp/fomt_script_167_check.mary
-	@echo "script patch OK: script_167 chicken coop -> beach"
+	@grep -q "Proc016(8, 236, 411)" /tmp/fomt_script_167_check.mary
+	@grep -q "SetEntityPosition(0, 236, 411, 1)" /tmp/fomt_script_167_check.mary
+	@echo "script patch OK: script_167 chicken coop -> goddess pond"
 
 .PHONY: check-script-patches
 

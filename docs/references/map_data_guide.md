@@ -144,29 +144,49 @@ To determine safe coordinates:
 
 ---
 
-## 7. Collision Format (Remaining Work)
+## 7. Collision Format ✅ DECODED
 
-The map collision format is NOT yet decoded. Here is what we know:
+### Format
 
-### Confirmed
-- Collision detection functions: `func_08050D34` / `func_08050D5C` (in `code_0803EE94.s`)
-- Tile data loading: `func_0804F0E0` loads tile data into entity struct at offset +0xD0
-- Collision data is copied to entity offsets +0x130 and +0x148 via `func_08009940`
-- Map loading function: `func_08050DC8`
-- LZ77 compressed data blocks found in ROM (potential tile map data)
+Each map has a 4112-byte LZ77 compressed collision grid stored in ROM.
 
-### Unknown
-- Collision value format (which byte = wall, floor, door, event trigger)
-- Map dimensions and tile grid layout
-- How tile coordinates map to collision grid positions
-- Where the collision data is stored for each map
+| Offset | Size | Description |
+|--------|------|-------------|
+| 0x120BBC | 4112 LZ77 | Map 0 (MAP_MOTHERS_HILL) |
+| 0x120C3C | 4112 LZ77 | Map 1 (MAP_BEACH) |
+| 0x120CBC | 4112 LZ77 | Map 2 (MAP_FARM) |
+| 0x120D3C | 4112 LZ77 | Map 3 (MAP_FOREST) |
+| 0x120DBC | 4112 LZ77 | Map 4 (MAP_CHURCH_REAR) |
+| 0x120E3C | 4112 LZ77 | Map 5 (MAP_NORTH_TOWN) |
 
-### Approach to decode (future work)
+**Collision grid structure** (after LZ77 decompression):
+- First 16 bytes: header/padding (skip)
+- Remaining 4096 bytes: 64×64 tile grid, 1 byte per tile
 
-1. Use no$gba or mGBA debugger to set breakpoints on `func_08050D5C`
-2. Log tile coordinates and return values while walking the player
-3. Compare walkable vs non-walkable positions to derive collision values
-4. Create a collision map viewer tool based on the decoded format
+**Collision values:**
+
+| Value | Meaning | Count on Farm |
+|:-----:|---------|:-------------:|
+| 0 | Walkable (floor/ground) | 2655 (65%) |
+| 1 | Wall/fence (impassable) | 519 (13%) |
+| 2 | **Door/entrance** (triggers event) | 20 |
+| 3 | Building | 692 (17%) |
+| 4 | Obstacle (rocks/trees/stumps) | 192 (5%) |
+| 14,16 | Map border markers | 13 |
+| 80,82,84,86 | Specific objects | 5 |
+
+### Map 2 (FARM) Door Positions
+
+| Tile (x,y) | Game Coordinate ≈ | Likely Location |
+|:----------:|:-----------------:|-----------------|
+| (13,57) | (208,912) | Building entrance |
+| (31,56) | (496,896) | Building entrance |
+| (53-55,56) | (848-880,896) | Building entrance |
+| (13,60) | (208,960) | Building entrance |
+| (29-31,60) | (464-496,960) | Building entrance |
+| (13-15,62) | (208-240,992) | Bottom edge exit |
+| (21-23,62) | (336-368,992) | Bottom edge exit |
+| (31,62) | (496,992) | Bottom edge exit |
 
 ### Map Data Table References
 

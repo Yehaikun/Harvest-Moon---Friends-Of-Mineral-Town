@@ -1,11 +1,11 @@
-// 🎬 游戏场景 - 场景初始化与销毁
+// 🎬 游戏场景 - func_0801004C
 //
-// 管理 GameScene 对象的生命周期：创建、运行场景主循环、销毁。
-// 反编译自 asm/game_scene.s。
+// 创建新场景对象并管理 SmartPtr 生命周期。
+// 反编译自 asm/game_scene.s（分拆第一部分）。
+// func_08010158 在 game_scene_func2.c，中间通过 LDS padding 对齐。
 
 #include "prelude.h"
 
-// 使用 __asm__ 将 C++ 符号映射到汇编中的加点符号
 extern "C" void AScriptEngine_base_dtor(void *self, u32 flag)
     __asm__("_._13AScriptEngine");
 extern "C" void AScene_base_dtor(void *self, void *arg)
@@ -43,13 +43,12 @@ void func_0801004C(void *out, struct GameScene *scene)
 
     func_08008980(ctx);
 
-    smartptr[0] = 0;
-    smartptr[1] = (scene->unk_364 == 1) ? 0 : 1;
+    ctx[1] = 0;
+    smartptr[0] = (scene->unk_364 != 0) ? 0 : 1;
 
     void *scene_obj = __builtin_new(8);
     void *result = func_08011DC4(scene_obj, (void *)scene->field_04, (void *)smartptr);
 
-    // SmartPtr transfer
     void *old = (void *)ctx[1];
     if (result != old && old != 0)
     {
@@ -57,23 +56,21 @@ void func_0801004C(void *out, struct GameScene *scene)
         vtable[2](old, 3);
     }
     ctx[1] = (u32)result;
-
-    void *temp = (void *)ctx[1];
     ctx[1] = 0;
-    smartptr[1] = (u32)temp;
+    smartptr[0] = (u32)result;
 
-    func_0800082C(&smartptr[1]);
+    func_0800082C(&smartptr[0]);
 
-    // Cleanup
-    smartptr[1] = 0;
-    ctx[5] = (u32)&smartptr[1];
+    smartptr[0] = 0;
+    ctx[5] = (u32)&smartptr[0];
     ((u32 *)ctx)[6] = 0;
     smartptr[0] = 0;
+    *(void **)out = 0;
 
-    if (temp != 0)
+    if (smartptr[0] != 0)
     {
-        DtorFn *vtable = *(DtorFn **)temp;
-        vtable[2](temp, 3);
+        DtorFn *vtable = *(DtorFn **)((void *)smartptr[0]);
+        vtable[2]((void *)smartptr[0], 3);
     }
     if (ctx[1] != 0)
     {
@@ -82,19 +79,4 @@ void func_0801004C(void *out, struct GameScene *scene)
     }
 
     func_08008A68(ctx, 2);
-    *(void **)out = 0;
-}
-
-void func_08010158(struct GameScene *self, void *arg)
-{
-    self->vtable = (void *)vtable_unk_080E5BF8;
-    gUnk_0300040C = 0;
-
-    func_080D7E64(&self->field_378, 2);
-    AScriptEngine_base_dtor(&self->script_engine[0], 2);
-
-    if (self->field_04 != 0)
-        func_080D4480(self->field_04, 3);
-
-    func_080007EC(self, arg);
 }

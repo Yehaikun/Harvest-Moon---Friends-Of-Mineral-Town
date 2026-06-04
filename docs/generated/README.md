@@ -99,10 +99,32 @@ Current chicken-coop findings:
 Analysis confirmed:
 - 104 valid entries out of 266 (remaining entries are padding/non-script data)
 - NPC interaction scripts (1000-1030 range) are NOT in this table
-- gUnk_080F1FC0 is an **entity behavior schedule table**, not a dialogue script table
+- gUnk_080F1FC0 is an **entity behavior/script table**, not a dialogue script table
 - Entities sharing `data_ptr` (e.g. `0x080f24ec` with scripts 300/840/180) share behavior data but differ in interaction script
 - The chicken coop door (entity index 126, script 167) is one of 4 entities sharing `ptr=0x080f2468`
 - NPC dialogue scripts are assigned through a separate mechanism (not gUnk_080F1FC0)
+
+### Trigger Chain Summary
+
+The complete trigger chain for map entrances:
+
+```text
+Map Tile Data (per-map baked)
+  → contains entity type index for interactive tiles
+  → e.g. chicken coop door tile → entity type 126
+      ↓
+gUnk_080F1FC0[entity_index]
+  → { data_ptr, script_id }
+  → gUnk_080F1FC0[126] = { ptr=0x080F2468, script_id=167 }
+      ↓
+Event Script
+  → script_167.mary: Proc016(MAP_BEACH/MAP_MOTHERS_PEAK, ...)
+  → runs the actual warp/event
+```
+
+The entity type → map tile mapping is baked into each map's tile data
+(MP format), not stored in a centralized table. This means modifying
+which entity appears on a map requires editing the map's tile data itself.
 
 ## Phase 2 Status
 

@@ -1,0 +1,410 @@
+FoMT tilemap load path findings
+Date: 2026-06-05
+
+Problem
+-------
+MapData terrain fields (terrain_info / terrain_map) are known to take effect
+after ROM edits, while edits to packed_tiles1/2/3 or width/height appeared not
+to take effect in some tests.
+
+Corrected finding
+-----------------
+The statement "no GetMapData caller accesses packed_tiles1/2/3" is false.
+
+Confirmed generic tilemap loader:
+
+  func_080A5CC0 @ 0x080A5CC0
+
+Behavior:
+
+  r7 = map/render object
+  map_id = [r7 + 0x04]
+  map_data = GetMapData(map_id)
+
+  for layer in 0..2:
+      src = *(map_data + 0x0C + layer * 4)
+      dst = *(r7 + 0x10 + layer * 4)
+      if src != NULL:
+          Unpack(src, dst)
+      else:
+          fill dst with 0x03FF03FF for width * height * 2 bytes
+
+  *(u8 *)(r7 + 0x29) = 1
+
+Important disassembly:
+
+  080A5CC0 func_080A5CC0:
+      ldr r0, [r7, #4]
+      bl GetMapData
+      ...
+      adds r0, r5, #0
+      adds r0, #0xc
+      adds r0, r0, r1
+      ldr r0, [r0]
+      ...
+      ldr r1, [r4]
+      bl Unpack
+
+This directly reads:
+
+  MapData + 0x0C = packed_tiles1
+  MapData + 0x10 = packed_tiles2
+  MapData + 0x14 = packed_tiles3
+
+Object buffer layout
+--------------------
+The base constructor allocates the buffers consumed by func_080A5CC0:
+
+  func_080A4A94 @ 0x080A4A94
+
+Relevant fields:
+
+  [obj + 0x10] layer 0 tilemap buffer
+  [obj + 0x14] layer 1 tilemap buffer
+  [obj + 0x18] layer 2 tilemap buffer
+  [obj + 0x1C] palette/graphics related buffers
+  [obj + 0x2C] derived render/cache buffer
+  [obj + 0x90] vtable pointer
+
+The constructor allocates three 0x7900-byte tilemap buffers for +0x10/+0x14/+0x18
+and one 0xF200-byte derived cache buffer for +0x2C.
+
+Virtual dispatch
+----------------
+func_080A5CC0 is a vtable method, so scanning only BL references misses it.
+
+Relevant vtable entries from baserom:
+
+  vtable_unk_080E82E4:
+      +0x1C = 0x080A5EA1
+      +0x20 = 0x080A5CC1
+      +0x24 = 0x080A5DB9
+
+  vtable_unk_080E831C:
+      +0x1C = 0x080A748D
+      +0x20 = 0x080A6661
+      +0x24 = 0x080A95A5
+
+  vtable_unk_080E85E8:
+      +0x1C = 0x080CFC7D
+      +0x20 = 0x080CFBAD
+      +0x24 = 0x080CFB5D
+
+Direct callers still exist for wrappers:
+
+  func_080A6660 @ 0x080A6660:
+      calls func_080A5CC0 first, then applies farm/map-specific dynamic overlays
+
+  func_080CFBAC @ 0x080CFBAC:
+      calls func_080A5CC0 first, then applies FieldPlot-specific logic for map 0x3E
+
+Why edits can still appear not to work
+--------------------------------------
+There are at least three separate explanations, depending on the tested map and
+edited tile:
+
+1. Generic map path
+
+   Most normal map render objects should load base tilemaps from MapData through
+   func_080A5CC0. For those maps, changing packed_tiles1/2/3 in MapData should
+   take effect after the map object is recreated.
+
+2. Post-load dynamic overlays
+
+   After func_080A5CC0, functions such as func_080A6660 and func_080A748C copy
+   furniture/building/season/farm-state patches over the already decompressed
+   layer buffers. If the test edit targets one of those dynamic areas, the base
+   tilemap change can be overwritten.
+
+3. Special hardcoded visual loader
+
+   func_080B55D0 @ 0x080B55D0 is a confirmed hardcoded loader that uses map 2
+   farm visual resources directly:
+
+      gUnk_086FD240 -> temporary tilemap, then copies rows to 0x0600F000
+      gUnk_086FB004 -> 0x06000000
+      gUnk_086FD19C -> 0x05000000
+      plus gUnk_0872C5D0/gUnk_0872C73C/gUnk_0872C84C/gUnk_0872D5AC
+
+   Direct pointer references outside the MapData table were found for map 2:
+
+      0x086FD240 at 0x080B573C  (farm packed_tiles1)
+      0x086FB004 at 0x080B574C  (farm packed_img)
+      0x086FD19C at 0x080B5750  (farm packed_pal1)
+
+   This path bypasses the MapData table for those visual resources.
+
+Practical next tests
+--------------------
+Use two controlled tests instead of one ambiguous farm tile:
+
+1. Generic-path test
+
+   Pick a non-farm map with no known hardcoded pointer refs, e.g. MAP_FOREST
+   (map 3) or MAP_SOUTH_TOWN (map 7). Modify one tile in packed_tiles1 away
+   from any dynamic building/season overlay region. Rebuild/restart and enter
+   that map. Expected result: visual change appears.
+
+2. Farm-hardcoded-path test
+
+   For MAP_FARM (map 2), modify both:
+
+      MapData[2].packed_tiles1 pointer target
+      hardcoded gUnk_086FD240 target
+
+   If only the hardcoded edit appears in the suspected special scene, that scene
+   is using func_080B55D0. If the normal farm map responds to MapData but the
+   special scene does not, both paths coexist.
+
+Patch implications
+------------------
+Do not patch around the false assumption that packed_tiles1 is never read.
+
+For generic maps, the right intervention point is func_080A5CC0 or data changes
+to MapData itself.
+
+For special farm scenes that go through func_080B55D0, patch either the hardcoded
+literal at 0x080B573C or modify the source symbol gUnk_086FD240 itself.
+
+For edits overwritten by dynamic overlays, patch the overlay source tables or
+disable the relevant overlay call, not the base MapData table.
+
+2026-06-05 follow-up: patch script bug
+--------------------------------------
+The current workspace fomt.gba was checked directly and is not patched:
+
+  MapData[2].packed_tiles1 @ 0x08105F38 = 0x086FD240
+  func_080B55D0 literal @ 0x080B573C = 0x086FD240
+  func_080B55D0 literal @ 0x080B574C = 0x086FB004
+  func_080B55D0 literal @ 0x080B5750 = 0x086FD19C
+
+So any test using the current fomt.gba is still testing the original tilemap.
+
+A second issue was found in tools/patch_tilemap.py. Its old make_lzss3_blob()
+used a simplified 5-byte header and wrote format byte 0x30. That is not the
+real Popuri bitstream format used by tools/scripts/decompress.py and the game.
+
+Real Popuri header/format handling:
+
+  header = little-endian u32: 0x70 | (decompressed_size << 8)
+  format byte is read from the bitstream at offset + 4
+  bits[2:0] = lzss_fmt
+  bits[4:3] = atom_fmt
+  bits[7:5] = diff_fmt
+
+Therefore format "030" is byte 0x03 in the bitstream, not 0x30.
+
+The patched tool now emits game-compatible all-literal LZSS3:
+
+  fmt=030
+  ladder=1084
+  6720-byte farm tilemap -> 7148-byte compressed blob
+
+Verification command:
+
+  python3 tools/verify_tilemap_patch.py fomt.gba --map 2 --compare baserom.gba
+
+Temporary fixed probe ROM result:
+
+  /tmp/fomt_patch_probe_fixed.gba:
+    MapData[2].packed_tiles1 = 0x0875C244
+    func_080B55D0 literal @ 0x080B573C = 0x0875C244
+    packed_tiles1 fmt=030 ladder=1084
+
+This means two earlier assumptions were unsafe:
+
+  1. "The current fomt.gba has the patch" - false in this workspace.
+  2. "make_lzss3_blob() generated valid 030 data" - false before this fix.
+
+2026-06-05 follow-up: vtable dispatch and constructor chain
+-----------------------------------------------------------
+Several later handoff notes claimed the constructors and farm hardcoded loader
+had no direct callers. Static checks against fomt.gba / asm disassembly show
+that is also false.
+
+Direct references / callers:
+
+  func_080A4A94:
+    called by func_080A6474
+    called by func_080CFB28
+
+  func_080A4B6C:
+    called by func_080E43B8
+    called by func_080E59C0
+
+  func_080A6474:
+    direct caller at 0x0801FB92 in func_0801FB7C
+
+  func_080B55D0:
+    direct caller at 0x080B47DE in func_080B469C
+
+Object creation chain for the normal map render object:
+
+  func_0801FB7C:
+    __builtin_new(0xBC)
+    func_080A6474(obj, game_state_or_context)
+    __builtin_new(0x10CC)
+    func_080175B4(wrapper, context, previous, &obj)
+    calls vtable+0x08 on wrapper with arg 3
+
+  func_080A6474:
+    func_080A4A94(obj)
+    obj->vtable_at_0x90 = vtable_unk_080E831C
+    obj->field_0x94 = context
+
+Relevant vtables:
+
+  vtable_unk_080E82E4:
+    +0x14 = func_080A5760
+    +0x18 = func_080A6420
+    +0x1C = func_080A5EA0
+    +0x20 = func_080A5CC0
+    +0x24 = func_080A5DB8
+
+  vtable_unk_080E831C:
+    +0x14 = func_080A6640
+    +0x18 = func_080AAF3C
+    +0x1C = func_080A748C
+    +0x20 = func_080A6660
+    +0x24 = func_080A95A4
+
+The real dispatch path for tilemap loading is:
+
+  func_080A6640
+    -> func_080A5760
+       -> calls vtable+0x18 to get/refresh map id
+       -> terrain setup through GetMapData terrain fields
+       -> calls vtable+0x20
+          For vtable_unk_080E831C this is func_080A6660
+            -> func_080A5CC0
+               -> GetMapData
+               -> Unpack MapData+0x0C/+0x10/+0x14 into obj+0x10/+0x14/+0x18
+            -> map-specific dynamic overlays
+
+This means the vtable dispatch path is not missing. If a patched MapData
+tilemap still produces no visible change, the next suspects are:
+
+  1. The edited coordinate is overwritten by dynamic overlays in func_080A6660
+     or func_080A748C.
+
+  2. The visible BG uses a derived/cache buffer at obj+0x2C or another VRAM
+     manager path, so layer buffers changed but the cache or VRAM upload did
+     not use the edited tile.
+
+  3. The current screen is not the normal map render object created by
+     func_0801FB7C, but a special scene such as the func_080B469C path.
+
+Recommended runtime breakpoints:
+
+  b *0x080A5760
+  b *0x080A6660
+  b *0x080A5CC0
+  b *0x080A748C
+  b *0x080B55D0
+
+At 0x080A5CC0, inspect:
+
+  r0                  object pointer
+  *(u32 *)(r0+0x04)   map_id
+  *(u32 *)(r0+0x10)   layer 0 buffer
+  *(u32 *)(r0+0x14)   layer 1 buffer
+  *(u32 *)(r0+0x18)   layer 2 buffer
+  *(u32 *)(r0+0x2C)   derived/cache buffer
+
+Then set a write watchpoint on the edited tile address inside the layer buffer
+and on the corresponding obj+0x2C/cache cell. This will distinguish "not loaded"
+from "loaded then overwritten" and from "loaded but never uploaded/displayed".
+
+2026-06-05 follow-up: current ROM state and render cache
+-------------------------------------------------------
+The current fomt.gba in this workspace has changed between verification runs.
+At one point it had:
+
+  MapData[2].packed_tiles1 = 0x08760000
+  func_080B55D0 literal @ 0x080B573C = 0x08760000
+
+That blob was byte-identical to the original blob at 0x086FD240 for the
+inspected region, and both decompressed to identical 6720-byte tilemaps:
+
+  original 0x086FD240: fmt=134 ladder=61012
+  current  0x08760000: fmt=134 ladder=61012
+  decompressed data equal: yes
+
+Later, fomt.gba read back as:
+
+  MapData[2].packed_tiles1 = 0x087607D0
+  func_080B55D0 literal @ 0x080B573C = 0x087607D0
+  packed_tiles1 fmt=040
+
+So do not rely on a stale assumption about the workspace ROM. Always run:
+
+  python3 tools/verify_tilemap_patch.py fomt.gba --map 2 --compare baserom.gba
+
+before emulator testing.
+
+The render path after loading is also clearer now:
+
+  func_080A5760:
+    builds obj+0x2C from terrain_map/terrain_info first
+    dispatches vtable+0x20, which for normal maps is func_080A6660
+    calls func_080A5D14 and func_080A5DFC afterward
+
+  func_080A6660:
+    calls func_080A5CC0 to unpack MapData+0x0C/+0x10/+0x14
+    applies map/state-specific overlays through many func_080A5BD8 calls
+
+  func_080A5BD8:
+    copies rectangular overlay data into obj+0x10/+0x14/+0x18 layer buffers
+    if an overlay descriptor has terrain/tile translation tables, it also
+    writes 32-bit render cells into obj+0x2C
+
+  func_080A5DFC:
+    uses obj+0x1C/+0x20/+0x24 as source buffers and calls func_03000C2C for
+    repeated 0x20-byte row updates
+
+Practical consequence:
+
+  A MapData tile edit can be loaded correctly and still not be visible if the
+  edited coordinate is later overwritten by func_080A6660/func_080A748C dynamic
+  overlays, or if the visible tile comes from the obj+0x2C derived render cache
+  rather than only the raw 16-bit layer buffer.
+
+For the next test, generate a ROM where the new tilemap's decompressed bytes are
+confirmed different from 0x086FD240 before launching the emulator. Prefer a
+large obvious rectangular edit in an outdoor coordinate unlikely to be covered
+by farm building/crop overlays, not a single top-left tile.
+
+A clean temporary probe generated during this pass:
+
+  /tmp/fomt_farm_rect_probe.gba
+    MapData[2].packed_tiles1 = 0x0875C244
+    func_080B55D0 literal @ 0x080B573C = 0x0875C244
+    packed_tiles1 fmt=030 ladder=1084
+    decompressed diff vs current fomt.gba: 512 bytes
+
+This probe modifies a 16x16 tile rectangle at the top-left of the raw farm
+tilemap. If that still renders unchanged, runtime watchpoints are required to
+prove whether the edit is loaded, overwritten, or not uploaded/displayed.
+
+2026-06-05 follow-up: visual map identification correction
+---------------------------------------------------------
+Rendered map previews and external visual identification corrected a major
+working assumption:
+
+  map_004 / map_005 = North Town / northern town area
+  map_006 / map_007 = player farm
+
+Therefore, do not patch map 006/007 when the goal is to edit Rose Square. The
+current working identification is:
+
+  map 002 = Rose Square event/plaza normal variant
+  map 003 = Rose Square event/plaza winter variant
+  map 004 = North Town normal variant
+  map 005 = North Town winter variant
+
+The visual identification table is persisted at:
+
+  docs/references/map_visual_identification.md
+
+For future tilemap work, first match the in-game screen against
+map_previews/*.png or atlas_all_maps.png, then patch the confirmed map_id.

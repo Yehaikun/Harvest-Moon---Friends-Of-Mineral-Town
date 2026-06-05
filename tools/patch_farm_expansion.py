@@ -26,8 +26,8 @@ OLD_TILEMAP_SIZE = OLD_W * OLD_H * 2  # 6720
 OLD_TERRAIN_SIZE = OLD_W * OLD_H       # 3360
 
 # New dimensions
-NEW_W = 65
-NEW_H = 60
+NEW_W = 120
+NEW_H = 112
 NEW_TILEMAP_SIZE = NEW_W * NEW_H * 2  # 7800
 NEW_TERRAIN_SIZE = NEW_W * NEW_H       # 3900
 
@@ -89,27 +89,20 @@ def expand_tilemap(data: bytes, old_w: int, old_h: int, new_w: int, new_h: int) 
 
 
 def expand_terrain(data: bytes, old_w: int, old_h: int, new_w: int, new_h: int) -> bytes:
-    """Expand a terrain map (1 byte per tile) from old_w×old_h to new_w×new_h."""
+    """Expand a terrain map (1 byte per tile) from old_w×old_h to new_w×new_h.
+    Sets expanded tiles to walkable (type 0) instead of copying edge values."""
     result = bytearray(new_w * new_h)
     for y in range(min(old_h, new_h)):
-        src_start = y * old_w
         dst_start = y * new_w
-        result[dst_start:dst_start + old_w] = data[src_start:src_start + old_w]
-        # Extend with rightmost terrain value
-        rightmost = data[src_start + old_w - 1]
+        result[dst_start:dst_start + old_w] = data[y * old_w:y * old_w + old_w]
+        # Expanded right side: walkable (0)
         for x in range(old_w, new_w):
-            result[dst_start + x] = rightmost
-    # Fill new rows
-    if new_h > old_h:
-        last_row_start = (old_h - 1) * old_w
-        last_tile = data[last_row_start + old_w - 1]
-        for y in range(old_h, new_h):
-            dst_start = y * new_w
-            for x in range(new_w):
-                if x < old_w:
-                    result[dst_start + x] = data[last_row_start + x]
-                else:
-                    result[dst_start + x] = last_tile
+            result[dst_start + x] = 0
+    # New rows: walkable
+    for y in range(old_h, new_h):
+        dst_start = y * new_w
+        for x in range(new_w):
+            result[dst_start + x] = 0
     return bytes(result)
 
 

@@ -351,3 +351,44 @@ bit[15]: 显示模式
 - Screen Base Block: 指定tilemap在VRAM中的位置(每块2KB)
 - 大小: 32x32 / 64x32 / 32x64 / 64x64
 - 调色板模式: 16色/格(默认)或256色/格
+
+## 十三、相机/滚动系统
+
+### 13.1 滚动硬件
+
+GBA通过以下寄存器控制每个BG层的滚动偏移:
+- REG_BG0HOFS/VOFS (0x04000010/0x12): BG0滚动
+- REG_BG1HOFS/VOFS (0x04000014/0x16): BG1滚动
+- REG_BG2HOFS/VOFS (0x04000018/0x1A): BG2滚动(主地图)
+- REG_BG3HOFS/VOFS (0x0400001C/0x1E): BG3滚动
+
+### 13.2 相机计算
+
+```
+camera_x = player_x - screen_width/2
+camera_y = player_y - screen_height/2
+
+// 限制在边界内
+max_x = MapData.width * 8 - 240  // GBA屏幕宽240px
+max_y = MapData.height * 8 - 160 // GBA屏幕高160px
+camera_x = clamp(camera_x, 0, max_x)
+camera_y = clamp(camera_y, 0, max_y)
+
+// 写入硬件寄存器
+REG_BG2HOFS = camera_x
+REG_BG2VOFS = camera_y
+```
+
+### 13.3 多BG层同步
+
+当地图有多个BG层时:
+- BG1(上层细节)与BG2(主地图)同步滚动
+- 某些特效层(BG3)可能以不同速度滚动(视差效果)
+- 对话框(BG0)锁定在屏幕上(不滚动)
+
+### 13.4 边界检查
+
+滚动边界存储在MapData的width/height字段:
+- 代码位于asm/code_0803EE94.s
+- 比较: `cmp r1, #0x80` (0x80 << 1 = 256像素最小滚动阈值)
+- 边界上限: `width*8 - 240` 和 `height*8 - 160`

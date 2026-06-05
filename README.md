@@ -358,3 +358,127 @@ make script-table-index
 ## 许可证
 
 仅供学习研究使用。游戏版权归原版权方所有。
+
+---
+
+## 🛠️ Modding 工具集
+
+本项目附带了一套完整的 modding 工具，位于 `tools/` 目录。`make` 构建的是纯净原版ROM，你可以手动运行工具来修改。
+
+### 快速使用
+
+```bash
+make clean && make -j2 fomt.gba   # 构建纯净原版
+```
+
+### NPC 日程编辑
+
+```bash
+# 查看卡莲的每日行程
+python3 tools/edit_npc_schedule.py fomt.gba --npc Karen
+
+# 修改某个NPC的行程（--entry索引 --set X Y 地图ID）
+python3 tools/edit_npc_schedule.py fomt.gba --npc 玛丽 --entry 0 --set 400 300 2
+```
+
+支持35个NPC的名字或编号查询。
+
+### 对话/文本修改
+
+```bash
+# 提取所有对话到 texts/ 目录
+python3 tools/extract_text.py fomt.gba --output texts/
+
+# 查看某个脚本的对话
+python3 tools/patch_text.py fomt.gba --script 6 --list
+
+# 修改对话（需保持字数相近）
+python3 tools/patch_text.py fomt.gba --script 6 --index 0 --update "你好！\x05"
+
+# 脚本重定位（突破原槽位字数限制）
+python3 tools/relocate_script.py fomt.gba --script 167
+```
+
+### 地形/碰撞编辑
+
+```bash
+# 查看地图地形信息
+python3 tools/edit_terrain.py fomt.gba --map 2 --info
+
+# 导出地形为可编辑文本
+python3 tools/edit_terrain.py fomt.gba --map 2 --export terrain.txt
+
+# 设置矩形区域为可走（value=0）或不可走（value=1）
+python3 tools/edit_terrain.py fomt.gba --map 2 --set-rect 10 10 20 20 --value 0
+
+# 导入修改后的地形
+python3 tools/edit_terrain.py fomt.gba --map 2 --import terrain.txt
+```
+
+### 瓦片地图编辑
+
+```bash
+# 查看地图图层信息
+python3 tools/edit_tilemap.py fomt.gba --map 2 --info
+
+# 导出tilemap为CSV（可用Excel编辑）
+python3 tools/edit_tilemap.py fomt.gba --map 63 --layer 1 --export tiles.csv
+
+# 文字化预览地图
+python3 tools/render_map.py fomt.gba --map 2
+```
+
+### 地图扩大工具
+
+```bash
+# 任意地图扩大（2倍、1.5倍等）
+python3 tools/expand_any_map.py fomt.gba 2 --factor 1.5
+```
+
+### Entity/内部调查
+
+```bash
+# 查看各个地图的Entity处理器
+python3 tools/dump_entities.py fomt.gba
+
+# 列出35个NPC的创建函数
+python3 tools/list_npc_creators.py
+```
+
+### 地图数据索引
+
+```bash
+# 解码MapData表
+python3 tools/decode_map_data_table.py --rom baserom.gba --output MapData.tsv
+
+# 扫描所有传送点
+python3 tools/scan_warps.py --output warps.tsv
+```
+
+### 技术架构详解
+
+详细渲染架构文档见 [docs/render_architecture.md](docs/render_architecture.md)，
+涵盖：
+- GBA硬件图形管线（REG_BGxCNT、DISPCNT、DMA）
+- 地图加载流程（GetMapData → 解压 → VRAM上传）
+- Popuri压缩格式（lzss3 atom/diff）
+- Entity/场景系统
+- NPC日程系统
+- Tile/VRAM管理
+
+### ROM信息
+
+| 项目 | 值 |
+|------|-----|
+| ROM大小 | **16MB**（原版8MB，扩展用于modding） |
+| 地图数量 | 66个MapData槽位 |
+| NPC数量 | 35个命名的NPC日程已映射 |
+| 脚本数量 | 1328个事件脚本 |
+| 工具数量 | **28个**Python modding工具 |
+
+### 注意事项
+
+- `make` 构建的是**纯净原版**ROM，没有地图扩大、新地图等修改
+- 所有工具需要手动运行，`make` 不会自动应用修改
+- 修改前建议备份 `fomt.gba`
+- 32MB ROM会导致玫瑰广场卡死，当前使用16MB

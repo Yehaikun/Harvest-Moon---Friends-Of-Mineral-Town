@@ -423,3 +423,36 @@ REG_BG2VOFS = camera_y
 | func_08050DC8 | Entity交互处理 |
 | func_08050E68 | NPC/实体更新 |
 | func_08050E30 | 地图更新循环 |
+
+## 十五、Tileset图形格式
+
+### 15.1 压缩格式
+
+tileset(packed_img)使用popuri压缩,格式"230":
+- atom_fmt=2(Huff8): 8位Huffman编码
+- lzss_fmt=3: LZSS3解压 
+- diff_fmt=0: 无差值滤波
+
+### 15.2 解压后数据
+
+32KB = 1024个tile,每个tile 32字节
+
+### 15.3 GBA 4bpp tile格式
+
+每个tile 8×8像素,每像素4位(16色):
+```
+Row 0: byte[0-3]  = 4像素×2(高4位/低4位)
+Row 1: byte[4-7]
+...
+Row 7: byte[28-31]
+```
+
+每个半字节(4bit)索引调色板中的颜色(0-15)。
+
+### 15.4 Tilemap引用
+
+tilemap中每格2字节指向tileset:
+- bit[0-9]: tile index(0-1023)
+- bit[10]:  水平翻转
+- bit[11]:  垂直翻转
+- bit[12-15]: 调色板号(0-15)

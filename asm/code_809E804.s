@@ -15755,24 +15755,6 @@ func_080A6524: @ 0x080A6524
 .L080A6638: .4byte gUnk_08107338
 .L080A663C: .4byte gUnk_08107344
 
-	thumb_func_start func_080A6640
-func_080A6640: @ 0x080A6640
-	push {r4, lr}
-	adds r4, r0, #0
-	bl func_080A5760
-	adds r1, r4, #0
-	adds r1, #0xb4
-	movs r0, #0
-	strb r0, [r1]
-	strb r0, [r1, #1]
-	adds r4, #0xb8
-	strb r0, [r4]
-	strb r0, [r4, #1]
-	pop {r4}
-	pop {r0}
-	bx r0
-	.align 2, 0
-
 	thumb_func_start func_080A6660
 func_080A6660: @ 0x080A6660
 	push {r4, r5, r6, r7, lr}

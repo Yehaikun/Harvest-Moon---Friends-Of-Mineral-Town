@@ -53,6 +53,7 @@ MARY_LIB := mary_scripts/lib_fomt.txt
 
 SCRIPT_PATCHES_STABLE := \
   167:scripts/script_167.mary
+  167:scripts/script_167.mary
 
 SCRIPT_PATCHES_EXPERIMENTAL := \
   1011:scripts/script_1011.mary \

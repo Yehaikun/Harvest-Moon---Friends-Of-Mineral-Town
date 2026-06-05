@@ -152,6 +152,7 @@ compare: $(ROM)
 	python3 tools/expand_any_map.py $@ 5 --factor 2
 	python3 tools/expand_any_map.py $@ 7 260 96
 	python3 tools/patch_script_143.py $@
+	python3 tools/patch_entity_test.py $@
 
 check-script-patches: $(ROM)
 	@offset=$$(python3 tools/script_slot.py $(ROM) --map $(MAP) --script-id 167 --field rom_offset); \

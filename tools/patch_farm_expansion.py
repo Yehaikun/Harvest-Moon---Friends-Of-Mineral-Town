@@ -62,29 +62,13 @@ def make_lzss4_blob(raw_data: bytes) -> bytes:
 
 
 def expand_tilemap(data: bytes, old_w: int, old_h: int, new_w: int, new_h: int) -> bytes:
-    """Expand a GBA tilemap (2 bytes per tile) from old_w×old_h to new_w×new_h."""
+    """Expand a GBA tilemap, filling expanded area with tile 0 (grass)."""
     result = bytearray(new_w * new_h * 2)
     for y in range(min(old_h, new_h)):
-        src_start = y * old_w * 2
-        dst_start = y * new_w * 2
-        # Copy original row
-        result[dst_start:dst_start + old_w * 2] = data[src_start:src_start + old_w * 2]
-        # Extend with rightmost tile
-        rightmost = data[src_start + (old_w - 1) * 2:src_start + old_w * 2]
-        for x in range(old_w, new_w):
-            result[dst_start + x * 2:dst_start + (x + 1) * 2] = rightmost
-    # Fill new rows (copy last known row)
-    if new_h > old_h:
-        last_row_start = (old_h - 1) * old_w * 2
-        last_row = data[last_row_start:last_row_start + old_w * 2]
-        last_tile = last_row[-2:]
-        for y in range(old_h, new_h):
-            dst_start = y * new_w * 2
-            for x in range(new_w):
-                if x < old_w:
-                    result[dst_start + x * 2:dst_start + (x + 1) * 2] = last_row[x * 2:(x + 1) * 2]
-                else:
-                    result[dst_start + x * 2:dst_start + (x + 1) * 2] = last_tile
+        dst = y * new_w * 2
+        result[dst:dst + old_w * 2] = data[y * old_w * 2:y * old_w * 2 + old_w * 2]
+        # Expanded right side stays as tile 0 (already zero in bytearray)
+    # New bottom rows stay as tile 0
     return bytes(result)
 
 

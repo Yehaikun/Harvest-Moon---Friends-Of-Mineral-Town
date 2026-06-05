@@ -1,111 +1,181 @@
-# FoMT 渲染架构
+# FoMT 渲染架构深度分析
 
-## 一、场景系统 (Scene System)
-
-- **AScene**: 场景基类，纯虚类，通过 `Run()` 返回下一个场景
-- **SceneMain**: 主循环，不断执行 `Run() → 切换 → Run()` 
-- **GameScene**: 实际游戏场景，处理地图渲染、NPC、交互等
-- 文件: `src/scene.cc`, `include/scene.hh`, `asm/scene.s`
-
-## 二、图形系统 (Graphics System)
-
-### VRAM 管理 (TileVramManager)
-- 管理 GBA VRAM 中 tile 空间的分配/释放
-- 基于二叉树(5层)的分配器
-- 每个分配记录: 位置(10bit) + 大小(4bit) + 计数 + ID
-- 文件: `include/decomp/graphics.hh` (TileVramManager 节)
-
-### 数据传输 (TransferRequest)
-- DMA/VRAM 传输请求 (16字节)
-- 用于将 tile 数据从 ROM/RAM 传输到 VRAM
-- 挂载到 VBlankNode 链表，在 VBlank 期间执行
-
-### 调色板管理 (PaletteSlotHolder)
-- 8字节的调色板插槽持有者
-- 管理 GBA 调色板内存 (0x05000000)
-
-## 三、地图渲染
-
-### MapData 结构
-```
-struct MapData {
-    u32 packed_img;       // +0x00: 压缩的 tileset (32KB 解压 = 1024 tiles)
-    u32 packed_pal1;      // +0x04: 压缩的调色板1 (480B)
-    u32 packed_pal2;      // +0x08: 压缩的调色板2 (480B)
-    u32 packed_tiles1;    // +0x0C: 压缩的 tilemap 层1 (60x56x2B)
-    u32 packed_tiles2;    // +0x10: 压缩的 tilemap 层2
-    u32 packed_tiles3;    // +0x14: 压缩的 tilemap 层3
-    u32 terrain_info;     // +0x18: terrain 属性数组
-    u32 terrain_map;      // +0x1C: 每格 terrain 索引
-    u16 width;            // +0x20: 地图宽度(tiles)
-    u16 height;           // +0x22: 地图高度(tiles)
-    u8  is_interior;      // +0x24: 室内标志
-};
-```
-
-### 渲染流程
-1. 进入地图 → `GetMapData(map_id)` 读取 MapData
-2. 解压 `packed_img` (tileset) → 上传到 VRAM tile 区
-3. 解压 `packed_pal1/2` → 上传到调色板 RAM
-4. 解压 `packed_tiles1/2/3` → 设置 BG tilemap (GBA 硬件渲染)
-5. GBA 的 PPU 自动将 tile 数据 + tilemap + palette 合成画面
-
-### Popuri 压缩格式
-- 魔数 0x70 + 解压后大小 (4字节头)
-- 格式字节: bits[2:0]=lzss_fmt, bits[4:3]=atom_fmt, bits[7:5]=diff_fmt
-- 三层: atom(Huff4/raw) → LZSS(0-4) → diff(0-4)
-- 工具: `tools/scripts/decompress.py`
-
-## 四、GBA 硬件背景层
-
-GBA 有 4 个背景层 (BG0-BG3):
-- **BG0/BG1**: 通常用于文本/UI (text mode)
-- **BG2**: 通常用于主地图 (affine/rotation mode 或 text mode)
-- **BG3**: 通常用于副地图或特效
-
-每个 BG 可以配置:
-- 显示区域 (REG_BGxHOFS, REG_BGxVOFS)
-- Tilemap 在 VRAM 中的位置 (BGxCNT)
-- 调色板选择
-
-Tilemap 格式 (GBA 硬件):
-- 每格 2 字节: tile_index(10bit) + hflip(1) + vflip(1) + palette(4bit)
-- 地图大小: 32x32 / 64x32 / 32x64 / 64x64 tiles
-
-## 五、房屋/建筑数据
-
-建筑数据不在 MapData 中，而是通过以下方式实现:
-1. **Tilemap 直接绘制**: 建筑是 tilemap 中的一组 tile，没有独立的结构体
-2. **Entity 系统**: 门/交互点通过 Entity 系统添加脚本触发器
-3. **Terrain 系统**: 建筑的碰撞通过 terrain_map + terrain_info 控制
-
-建筑 = tilemap 图形 + terrain 碰撞 + entity 触发器
-
-## 六、Entity 系统
-
-- 函数表: 0x080E602C (66 entries, 每个地图一个)
-- 每个 entry 是 entity 初始化函数指针
-- map 2(农场)和 map 5(北镇)有实际的 entity 初始化
-- 其他地图使用空 handler (0x08000639)
-
-## 七、NPC 系统
-
-- 35 个 NPC entity 创建函数
-- 每个 NPC 有自己的日程表 (ScheduleInfo)
-- 日程决定 NPC 在特定时间出现在特定地图位置
-- NPC 通过 ANpcEntity 类实现
-
-## 关键文件
+## 文件导航
 
 | 文件 | 内容 |
 |------|------|
-| `include/decomp/graphics.hh` | 图形系统结构体 (TextBox, VRAM, Tile) |
-| `include/decomp/script_scene.hh` | GameScene 结构体布局 |
-| `include/scene.hh` | 场景基类 |
-| `src/scene.cc` | 场景系统实现 |
-| `asm/game_scene.s` | GameScene 汇编代码 |
-| `asm/game_state.s` | 游戏状态管理 |
-| `src/data_schedules.cc` | NPC 日程数据 |
-| `include/schedule_info.hh` | 日程结构体 |
-| `asm/data/data_080F9EB8.s` | MapData 表 |
-| `tools/scripts/decompress.py` | Popuri 解压 |
+| `include/gbaio.h` | GBA硬件寄存器定义(DISPCNT, BGxCNT, DMA, 调色板等) |
+| `include/decomp/graphics.hh` | 图形系统结构体(TextBox, VRAM管理, Tile分配) |
+| `include/decomp/script_scene.hh` | GameScene结构体 |
+| `include/scene.hh` | 场景系统基类 |
+| `asm/scene.s` | SceneMain循环 |
+| `asm/game_state.s` | 游戏状态、地图加载 |
+| `asm/data/data_080F9EB8.s` | MapData数据表 |
+| `src/crt0.s` | ROM入口和初始化 |
+
+## 一、GBA硬件图形管线
+
+### 1.1 寄存器映射
+
+GBA图形硬件通过以下寄存器配置:
+
+| 地址 | 名称 | 功能 |
+|------|------|------|
+| 0x04000000 | REG_DISPCNT | 显示控制(模式、层开关、HBlank等) |
+| 0x04000004 | REG_DISPSTAT | 显示状态(VBlank/HBlank/VCounter) |
+| 0x04000006 | REG_VCOUNT | 当前扫描线 |
+| 0x04000008 | REG_BG0CNT | 背景层0控制 |
+| 0x0400000A | REG_BG1CNT | 背景层1控制 |
+| 0x0400000C | REG_BG2CNT | 背景层2控制(主地图) |
+| 0x0400000E | REG_BG3CNT | 背景层3控制 |
+| 0x04000010-1E | REG_BGxHOFS/VOFS | 背景层滚动偏移 |
+| 0x04000020-3E | REG_BG2PA-REG_BG3PD | 仿射变换参数 |
+| 0x04000040-4A | REG_WINxH/V/WININ/OUT | 窗口控制 |
+| 0x04000050-54 | REG_BLDCNT/ALPHA/Y | 混合/透明度 |
+
+### 1.2 内存映射
+
+| 地址范围 | 大小 | 功能 |
+|----------|------|------|
+| 0x05000000-0x050003FF | 1KB | BG调色板(256色调色板或16色调色板x16) |
+| 0x05000400-0x050005FF | 512B | OBJ调色板 |
+| 0x06000000-0x06017FFF | 96KB | VRAM(用于tile数据、tilemap、OBJ) |
+| 0x06000000-0x0600FFFF | 64KB | BG tile数据 |
+| 0x06010000-0x06017FFF | 32KB | OBJ tile数据 |
+
+### 1.3 BGCNT(BG控制寄存器)格式
+
+每个BGxCNT是16位寄存器:
+```
+bits [0-1]:  优先级(0最高,3最低)
+bits [2-3]:  tilemap数据所在的charblock(每块16KB)  
+bits [4-5]:  未使用/mosaic
+bit [6]:     256色调色板/16色(每格256色或16色)
+bits [7-12]: tilemap所在的screenblock(每块2KB)
+bits [13]:   外部显示区
+bits [14-15]:地图大小(0=32x32,1=64x32,2=32x64,3=64x64 tiles)
+```
+
+## 二、地图加载流程
+
+### 2.1 GetMapData函数
+
+```
+GetMapData(map_id):
+    return 0x08105EDC + map_id * 40(0x28)
+```
+
+36字节的MapData结构:
+```
++0x00 packed_img     - 压缩的tileset指针(32KB=1024tiles)
++0x04 packed_pal1    - 压缩的调色板1指针(480B)
++0x08 packed_pal2    - 压缩的调色板2指针(480B)
++0x0C packed_tiles1  - 压缩的tilemap层1指针
++0x10 packed_tiles2  - 压缩的tilemap层2指针
++0x14 packed_tiles3  - 压缩的tilemap层3指针
++0x18 terrain_info   - terrain属性数组指针(每项4字节,bit0=碰撞)
++0x1C terrain_map    - 每格terrain索引(w*h字节)
++0x20 width          - 地图宽度(tiles)
++0x22 height         - 地图高度(tiles)
++0x24 is_interior    - 室内标志
+```
+
+### 2.2 地图进入流程
+
+1. **场景切换**: SceneMain调用当前AScene的Run()
+2. **GameScene::Run()**: 处理地图逻辑循环
+3. **地图加载**: 调用GetMapData(map_id)获取MapData
+4. **Tile解压**: 解压packed_img(tileset)→上传到VRAM(0x06000000+)
+5. **调色板上传**: 解压packed_pal→上传到调色板RAM(0x05000000)
+6. **Tilemap设置**: 解压packed_tiles1→写入VRAM tilemap区
+7. **BG配置**: 设置REG_BGxCNT指定tile数据位置、tilemap位置、大小
+8. **相机设置**: 计算相机边界(MapData.width*8-240, height*8-160)
+9. **地形加载**: 处理terrain_info和terrain_map建立碰撞
+
+### 2.3 Popuri压缩格式
+
+格式: 魔数0x70(1B) + 预期解压大小(3B) + 格式字节(1B) + 数据(bitstream)
+
+格式字节分解:
+```
+bits[2:0] = lzss_fmt (0-4: 不同的LZSS变体)
+bits[4:3] = atom_fmt (0=raw, 1=Huff4, 2=Huff8)
+bits[7:5] = diff_fmt (0-4: 不同的差值滤波器)
+```
+
+Farm tilemap各层格式:
+- Layer1: "134" (Huff4 + LZSS3 + diff4)
+- Layer2: "130" (Huff4 + LZSS3 + diff0)
+- Layer3: 非popuri(magic=0x0B, 另一格式)
+
+## 三、场景系统
+
+### 3.1 场景生命周期
+
+```
+AScene基类
+  |-- Run() = 0 (纯虚, 返回下一个场景)
+  |-- ~AScene() (析构, 清理)
+
+场景切换:
+  SceneMain:
+    loop:
+      current_scene->Run() → SmartPtr<AUnk_0800080C>
+        AUnk_0800080C->vfunc_0C() → SmartPtr<AScene>
+      销毁旧场景 → 切换到新场景
+```
+
+### 3.2 GameScene
+
+GameScene是实际游戏场景,处理:
+- 地图渲染
+- NPC更新
+- 玩家控制
+- 脚本执行
+- 实体交互
+
+## 四、房屋/建筑设计
+
+建筑在FoMT中不是独立的数据结构,而是通过组合实现:
+
+1. **视觉**: tilemap中的一组tile拼成建筑图形
+2. **碰撞**: terrain_map中对应区域设为blocked
+3. **交互**: 门/入口通过Entity系统分配脚本ID
+4. **NPC路径**: NPC日程表(WayPoint路径)绕过建筑
+
+所以"建筑"= tilemap图形 + terrain碰撞 + entity门触发器
+
+## 五、Entity系统
+
+- Entity函数表: 0x080E602C (66个地图各一个函数指针)
+- 仅有map 2(农场)和map 5(北镇)有实际entity handler
+- 其他地图使用空handler (0x08000639)
+- Entity在运行时动态创建(C++对象),数据不存储在静态表中
+
+## 六、NPC系统
+
+- 35个NPC entity创建函数(对应entity type 0-34)
+- 每个NPC有ScheduleInfo(日程表)
+- 日程=时间→路径映射
+- 路径PathInfo: 起点坐标+地图ID + 行走路径点
+- NPC的selector函数决定当天使用哪个日程
+
+## 七、调试/工具接口
+
+可以直接读取MapData验证:
+```
+python3 tools/decode_map_data_table.py --rom baserom.gba
+python3 tools/edit_terrain.py fomt.gba --map 2 --info
+```
+
+## 八、渲染数据流总结
+
+```
+MapData
+ ├── packed_img → 解压 → Tile VRAM (0x06000000)
+ ├── packed_pal → 解压 → Palette RAM (0x05000000)
+ ├── packed_tiles1/2/3 → 解压 → BG Tilemap (VRAM screenblock)
+ ├── terrain_info + terrain_map → RAM → Collision system
+ ├── width/height → Camera bounds → REG_BGxHOFS/VOFS limit
+ └── is_interior → 室内/室外 → BG显示配置切换
+```

@@ -126,6 +126,8 @@ SECTIONS
         src/bachelorette.o(.text);
         src/harvest_sprite.o(.text);
 
+        src/map_system.o(.text);
+
         asm/code_809E804.o(.text);
 
         src/m4a_1.o(.text);

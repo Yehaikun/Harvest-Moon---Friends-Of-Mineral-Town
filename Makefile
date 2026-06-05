@@ -142,6 +142,7 @@ compare: $(ROM)
 # ROM from ELF
 %.gba: %.elf $(SCRIPT_PATCH_SOURCES) tools/patch_script.py tools/script_slot.py tools/patch_farm_expansion.py tools/create_new_map.py tools/expand_any_map.py tools/patch_script_143.py
 	$(OBJCOPY) -O binary $< $@
+	python3 tools/relocate_script.py $@ --script 167
 	@set -e; for patch in $(SCRIPT_PATCHES); do \
 		id=$${patch%%:*}; \
 		src=$${patch#*:}; \

@@ -140,28 +140,20 @@ compare: $(ROM)
 .PHONY: compare
 
 # ROM from ELF
-%.gba: %.elf $(SCRIPT_PATCH_SOURCES) tools/patch_script.py tools/script_slot.py tools/patch_farm_expansion.py tools/create_new_map.py tools/expand_any_map.py tools/patch_script_143.py
+%.gba: %.elf $(SCRIPT_PATCH_SOURCES) tools/patch_script.py tools/script_slot.py
 	$(OBJCOPY) -O binary $< $@
-	python3 tools/relocate_script.py $@ --script 167
 	@set -e; for patch in $(SCRIPT_PATCHES); do \
 		id=$${patch%%:*}; \
 		src=$${patch#*:}; \
 		python3 tools/patch_script.py --script-id $$id --source $$src --rom-in $@ --rom-out $@ --mary "$(MARY)"; \
 	done
-	python3 tools/patch_farm_expansion.py $@
-	python3 tools/create_new_map.py $@
-	python3 tools/expand_any_map.py $@ 5 --factor 2
-	python3 tools/expand_any_map.py $@ 7 260 96
-	python3 tools/patch_script_143.py $@
-	python3 tools/patch_entity_test.py $@
 
 check-script-patches: $(ROM)
 	@offset=$$(python3 tools/script_slot.py $(ROM) --map $(MAP) --script-id 167 --field rom_offset); \
 	$(MARY) decompile $(ROM) $(MARY_LIB) --offset $$offset -o /tmp/fomt_script_167_check.mary
-	@grep -q "Proc016(63, 240, 460)" /tmp/fomt_script_167_check.mary
-	@grep -q "SetEntityPosition(0, 240, 460, 1)" /tmp/fomt_script_167_check.mary
-	@echo "script patch OK: script_167 chicken coop -> new map (map 63)"
-	@echo "script_143: binary-patched for return to farm"
+	@grep -q "Proc016(8, 236, 411)" /tmp/fomt_script_167_check.mary
+	@grep -q "SetEntityPosition(0, 236, 411, 1)" /tmp/fomt_script_167_check.mary
+	@echo "script patch OK: script_167 chicken coop -> goddess pond"
 
 .PHONY: check-script-patches
 

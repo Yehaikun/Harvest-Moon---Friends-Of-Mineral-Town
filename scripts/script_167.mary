@@ -2,17 +2,20 @@
 
 script 167 EventScript_167
 {
-    if Func03E(511) == 1
+    const MESSAGE_0 = "You can't go inside\r\nwhile riding a horse!\x05"
+    if GetEntityFacing(0) == 1
     {
-        Proc03F(511, 0)
-        Proc016(2, 300, 400)
-        SetEntityPosition(0, 300, 400, 1)
+        if Func064() == 1
+        {
+            TalkOpen()
+            Proc024(MESSAGE_0)
+            TalkClose()
+            exit
+        }
+        PlaySong(0, 156)
+        Proc034(2, 1)
+        Proc016(8, 236, 411)
+        SetEntityPosition(0, 236, 411, 1)
+        Proc035(2, 1)
     }
-    else
-    {
-        Proc03F(511, 1)
-        Proc016(63, 240, 460)
-        SetEntityPosition(0, 240, 460, 1)
-    }
-    Proc035(2, 1)
 }

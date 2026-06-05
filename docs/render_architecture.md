@@ -302,3 +302,52 @@ DMA控制寄存器格式:
 4. 等待DMA完成
 5. 继续上传调色板和tilemap
 ```
+
+## 十二、视频模式配置
+
+### 12.1 DISPCNT初始化
+
+```c
+// main_reset.c: 复位时关闭显示
+REG_DISPCNT = 0x0080;  // Force Blank (bit 7)
+```
+
+### 12.2 视频模式位定义
+
+REG_DISPCNT (16位):
+```
+bit[0-2]: 视频模式(0-5):
+  模式0: 4个BG层(字符模式)
+  模式1: 2个BG层 + 1个仿射BG
+  模式2: 2个仿射BG层
+bit[3]:  保留/GBFrame
+bit[4]:  HBlank Interval
+bit[5]:  OBJ映射(1=1D映射, 0=2D映射)
+bit[6]:  强制Blank
+bit[7]:  显示BG0
+bit[8]:  显示BG1
+bit[9]:  显示BG2
+bit[10]: 显示BG3
+bit[11]: 显示OBJ
+bit[12]: 显示窗口1
+bit[13]: 显示窗口2
+bit[14]: 显示OBJ窗口
+bit[15]: 显示模式
+```
+
+### 12.3 FoMT的显示配置
+
+游戏使用 **模式0**(字符模式)显示地图:
+- BG0: UI/对话框(优先级最高)
+- BG1: 地图上层细节(树冠、屋顶等)
+- BG2: 主地图地面
+- BG3: 预留/特效
+- OBJ: 角色、NPC、物品精灵
+
+### 12.4 BG控制寄存器配置
+
+每个BG的REG_BGxCNT配置:
+- Char Base Block: 指定tile数据在VRAM中的位置(每块16KB)
+- Screen Base Block: 指定tilemap在VRAM中的位置(每块2KB)
+- 大小: 32x32 / 64x32 / 32x64 / 64x64
+- 调色板模式: 16色/格(默认)或256色/格

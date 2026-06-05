@@ -46,7 +46,7 @@ GBA图形硬件通过以下寄存器配置:
 ### 1.3 BGCNT(BG控制寄存器)格式
 
 每个BGxCNT是16位寄存器:
-```
+````
 bits [0-1]:  优先级(0最高,3最低)
 bits [2-3]:  tilemap数据所在的charblock(每块16KB)  
 bits [4-5]:  未使用/mosaic
@@ -54,19 +54,19 @@ bit [6]:     256色调色板/16色(每格256色或16色)
 bits [7-12]: tilemap所在的screenblock(每块2KB)
 bits [13]:   外部显示区
 bits [14-15]:地图大小(0=32x32,1=64x32,2=32x64,3=64x64 tiles)
-```
+````
 
 ## 二、地图加载流程
 
 ### 2.1 GetMapData函数
 
-```
+````
 GetMapData(map_id):
     return 0x08105EDC + map_id * 40(0x28)
-```
+````
 
 36字节的MapData结构:
-```
+````
 +0x00 packed_img     - 压缩的tileset指针(32KB=1024tiles)
 +0x04 packed_pal1    - 压缩的调色板1指针(480B)
 +0x08 packed_pal2    - 压缩的调色板2指针(480B)
@@ -78,7 +78,7 @@ GetMapData(map_id):
 +0x20 width          - 地图宽度(tiles)
 +0x22 height         - 地图高度(tiles)
 +0x24 is_interior    - 室内标志
-```
+````
 
 ### 2.2 地图进入流程
 
@@ -97,11 +97,11 @@ GetMapData(map_id):
 格式: 魔数0x70(1B) + 预期解压大小(3B) + 格式字节(1B) + 数据(bitstream)
 
 格式字节分解:
-```
+````
 bits[2:0] = lzss_fmt (0-4: 不同的LZSS变体)
 bits[4:3] = atom_fmt (0=raw, 1=Huff4, 2=Huff8)
 bits[7:5] = diff_fmt (0-4: 不同的差值滤波器)
-```
+````
 
 Farm tilemap各层格式:
 - Layer1: "134" (Huff4 + LZSS3 + diff4)
@@ -112,7 +112,7 @@ Farm tilemap各层格式:
 
 ### 3.1 场景生命周期
 
-```
+````
 AScene基类
   |-- Run() = 0 (纯虚, 返回下一个场景)
   |-- ~AScene() (析构, 清理)
@@ -123,7 +123,7 @@ AScene基类
       current_scene->Run() → SmartPtr<AUnk_0800080C>
         AUnk_0800080C->vfunc_0C() → SmartPtr<AScene>
       销毁旧场景 → 切换到新场景
-```
+````
 
 ### 3.2 GameScene
 
@@ -163,14 +163,14 @@ GameScene是实际游戏场景,处理:
 ## 七、调试/工具接口
 
 可以直接读取MapData验证:
-```
+````
 python3 tools/decode_map_data_table.py --rom baserom.gba
 python3 tools/edit_terrain.py fomt.gba --map 2 --info
-```
+````
 
 ## 八、渲染数据流总结
 
-```
+````
 MapData
  ├── packed_img → 解压 → Tile VRAM (0x06000000)
  ├── packed_pal → 解压 → Palette RAM (0x05000000)
@@ -178,7 +178,7 @@ MapData
  ├── terrain_info + terrain_map → RAM → Collision system
  ├── width/height → Camera bounds → REG_BGxHOFS/VOFS limit
  └── is_interior → 室内/室外 → BG显示配置切换
-```
+````
 
 ## 九、房屋/建筑数据结构
 
@@ -218,9 +218,9 @@ PlayerHouse结构体(0x22C字节)，包含:
 
 ### 10.1 角色渲染流程
 
-```
+````
 Entity → AActorEntity → SpriteAnimator → OAM → GBA硬件显示
-```
+````
 
 1. AActorEntity设置了动画ID和朝向
 2. RefreshSprite()调用func_0805E860()更新精灵
@@ -230,14 +230,14 @@ Entity → AActorEntity → SpriteAnimator → OAM → GBA硬件显示
 ### 10.2 OAM(对象属性内存)格式
 
 GBA的OAM位于0x07000000，每个对象占用8字节:
-```
+````
 byte[0]: Y坐标
 byte[1]: X坐标
 byte[2]: tile索引 + 旋转/缩放标志
 byte[3]: 属性0(调色板、翻转、模式、形状)
 byte[4-5]: 属性1(大小、形状)
 byte[6-7]: 属性2(tile索引高位、优先级、调色板)
-```
+````
 
 ### 10.3 SpriteAnimator结构
 
@@ -255,10 +255,50 @@ SpriteAnimator管理精灵的动画状态:
 
 ### 10.5 渲染层顺序
 
-```
+````
 BG0: UI/文本(优先级最高)
 BG1: 地图细节
 BG2: 主地图
 BG3: 辅助地图/特效
 OBJ: 角色/NPC/物品(在BG之上或之间)
+````
+
+## 十一、DMA/VRAM传输系统
+
+### 11.1 GBA BIOS函数
+
+| 函数 | 用途 |
+|------|------|
+| CpuSet | 16位内存拷贝(用于VRAM传输) |
+| CpuFastSet | 32位内存拷贝(高效批量传输) |
+
+### 11.2 DMA寄存器
+
+| 地址 | 名称 | 功能 |
+|------|------|------|
+| 0x040000B0 | REG_DMA0SAD | DMA0源地址 |
+| 0x040000D4 | REG_DMA3SAD | DMA3源地址(用于VRAM传输) |
+| 0x040000D8 | REG_DMA3DAD | DMA3目标地址 |
+| 0x040000DC | REG_DMA3CNT | DMA3控制(大小、模式、使能) |
+
+### 11.3 传输配置
+
+DMA控制寄存器格式:
+- bits[0-1]: 目标地址控制(递增/递减/固定)
+- bits[2-3]: 源地址控制(递增/递减/固定)
+- bit[4]: 重复
+- bit[5]: 16/32位传输
+- bit[6]: DREQ
+- bits[12-13]: 启动时机(立即/VBlank/HBlank/专用)
+- bit[14]: 中断使能
+- bit[15]: 使能
+
+### 11.4 Tile上传流程
+
+````
+1. 解压packed_img → 临时缓冲区
+2. 设置DMA源=临时缓冲区, 目标=0x06000000(VRAM)
+3. 启动DMA传输
+4. 等待DMA完成
+5. 继续上传调色板和tilemap
 ```

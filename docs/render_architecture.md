@@ -213,3 +213,52 @@ PlayerHouse结构体(0x22C字节)，包含:
 门Entity → script(如script_167) → Proc016(内部map_id, x, y)
 
 所以建筑外部门触发脚本，脚本用Proc016传送到内部地图。
+
+## 十、精灵/OAM渲染系统
+
+### 10.1 角色渲染流程
+
+```
+Entity → AActorEntity → SpriteAnimator → OAM → GBA硬件显示
+```
+
+1. AActorEntity设置了动画ID和朝向
+2. RefreshSprite()调用func_0805E860()更新精灵
+3. func_0805E860()配置GBA的OAM(Object Attribute Memory, 0x07000000)
+4. GBA硬件在每个扫描线读取OAM，在指定位置渲染精灵
+
+### 10.2 OAM(对象属性内存)格式
+
+GBA的OAM位于0x07000000，每个对象占用8字节:
+```
+byte[0]: Y坐标
+byte[1]: X坐标
+byte[2]: tile索引 + 旋转/缩放标志
+byte[3]: 属性0(调色板、翻转、模式、形状)
+byte[4-5]: 属性1(大小、形状)
+byte[6-7]: 属性2(tile索引高位、优先级、调色板)
+```
+
+### 10.3 SpriteAnimator结构
+
+SpriteAnimator管理精灵的动画状态:
+- 当前帧
+- 动画速度
+- 循环模式
+- 帧序列指针
+
+### 10.4 精灵数据来源
+
+- 精灵tile数据存储在ROM中(非MapData)
+- 通过DMA传输到OBJ VRAM(0x06010000)
+- OBJ调色板存储在0x05000400
+
+### 10.5 渲染层顺序
+
+```
+BG0: UI/文本(优先级最高)
+BG1: 地图细节
+BG2: 主地图
+BG3: 辅助地图/特效
+OBJ: 角色/NPC/物品(在BG之上或之间)
+```

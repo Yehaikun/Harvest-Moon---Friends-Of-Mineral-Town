@@ -179,3 +179,37 @@ MapData
  ├── width/height → Camera bounds → REG_BGxHOFS/VOFS limit
  └── is_interior → 室内/室外 → BG显示配置切换
 ```
+
+## 九、房屋/建筑数据结构
+
+### 9.1 建筑 = 三层组合
+
+建筑在FoMT中不是独立的数据结构，而是三个系统叠加:
+
+1. **视觉层** — tilemap中的一组tile拼成建筑图形(屋顶、墙壁、门)
+2. **碰撞层** — terrain_map对应区域设为blocked(terrain_info中bit0=1)
+3. **交互层** — Entity系统在门位置放置触发器，关联脚本ID
+
+### 9.2 建筑数据存储
+
+| 系统 | 数据位置 | 格式 |
+|------|----------|------|
+| 建筑图形 | MapData.packed_tiles1/2/3 | 每格2字节(tile index+palette+flip) |
+| 建筑碰撞 | MapData.terrain_info + terrain_map | 属性数组 + 每格索引 |
+| 门触发器 | Entity函数表(0x080E602C) | 运行时创建，不存储在静态表 |
+| 内部空间 | 独立map_id + GameData.PlayerHouse | 另一张地图+房屋物品数据 |
+
+### 9.3 PlayerHouse数据
+
+PlayerHouse结构体(0x22C字节)，包含:
+- house_size (2bit): 房屋大小(小/中/大)
+- 物品格: 64个ItemEx(4字节每个)
+- 工具格: 64个ToolEx(2字节每个)
+- 房屋标志位
+- 额外数据
+
+### 9.4 建筑与内部地图的关联
+
+门Entity → script(如script_167) → Proc016(内部map_id, x, y)
+
+所以建筑外部门触发脚本，脚本用Proc016传送到内部地图。

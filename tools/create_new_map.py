@@ -1,335 +1,211 @@
 #!/usr/bin/env python3
-"""Create a new custom map (3 houses + ground) for the chicken coop warp.
+"""Create a new custom map for chicken coop warp.
 
-Uses map 63 slot (which has tileset but no terrain) and replaces its
-tilemaps/terrain with a new outdoor map featuring 3 starter houses.
+Uses map 63 slot with mine interior tileset (0x086BDE04).
+Map is 80x60 tiles, mine cave style, with 3 buildings.
 """
-
 from __future__ import annotations
 import struct, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from patch_farm_expansion import make_lzss4_blob, find_free_space, patch_mapdata_entry, patch_u16, FREE_SPACE_START, FREE_SPACE_END
+sys.path.insert(0, str(Path(__file__).parent / 'scripts'))
+from patch_farm_expansion import make_lzss4_blob, patch_mapdata_entry, patch_u16, FREE_SPACE_START, FREE_SPACE_END
 
-# Map 63 original data
 MAP_ID = 63
 MAPDATA_TABLE = 0x105EDC
 ENTRY_SIZE = 0x28
+GBA_BASE = 0x08000000
 
-# Read ROM
-rom_path = sys.argv[1] if len(sys.argv) > 1 else 'fomt.gba'
-rom = bytearray(Path(rom_path).read_bytes())
+# Mine interior tileset (used by maps 32-35)
+MINE_IMG = 0x086BDE04
+MINE_PAL1 = 0x086C1950
+MINE_PAL2 = 0x086C1950
 
-# Get map 63 original data
-entry_off = MAPDATA_TABLE + MAP_ID * ENTRY_SIZE
-entry_data = bytes(rom[entry_off:entry_off + ENTRY_SIZE])
-old_img_ptr = struct.unpack_from('<I', entry_data, 0x00)[0]
-old_pal1 = struct.unpack_from('<I', entry_data, 0x04)[0]
-old_pal2 = struct.unpack_from('<I', entry_data, 0x08)[0]
-old_w = struct.unpack_from('<H', entry_data, 0x20)[0]
-old_h = struct.unpack_from('<H', entry_data, 0x22)[0]
+# Tile indices from mine maps (with correct palette numbers)
+# Map 32 analysis: pal=4 for walls, pal=1 for floor, pal=2 for doors
+TILE_FLOOR = 290     # cave floor (pal=1)
+TILE_WALL = 288      # cave wall (pal=4)
+TILE_WALL_TL = 267   # wall top-left (pal=4)
+TILE_WALL_TR = 268   # wall top-right (pal=4)
+TILE_LADDER = 291    # ladder (pal=1)
+TILE_DARK = 303      # dark/empty (pal=4)
+TILE_WALL_L = 317    # wall left edge (pal=4)
+TILE_WALL_R = 318    # wall right edge (pal=4)
+TILE_BUILDING = 320  # building wall (pal=1)
+TILE_DOOR = 332      # door (pal=2)
+TILE_PATH = 344      # path/ground variation (pal=1)
 
-# New map dimensions
-NEW_W = 60
+# Palette per tile type
+PAL = {
+    TILE_FLOOR: 1, TILE_WALL: 4, TILE_WALL_TL: 4, TILE_WALL_TR: 4,
+    TILE_LADDER: 1, TILE_DARK: 4, TILE_WALL_L: 4, TILE_WALL_R: 4,
+    TILE_BUILDING: 1, TILE_DOOR: 2, TILE_PATH: 1,
+}
+
+# Map dimensions
+NEW_W = 80
 NEW_H = 60
-TILEMAP_SIZE = NEW_W * NEW_H * 2  # 7200
-TERRAIN_SIZE = NEW_W * NEW_H       # 3600
+TILEMAP_SIZE = NEW_W * NEW_H * 2
+TERRAIN_SIZE = NEW_W * NEW_H
 
-print(f"=== New Map Generator ===")
-print(f"Map slot: {MAP_ID} (was {old_w}x{old_h})")
-print(f"New size: {NEW_W}x{NEW_H}")
-print(f"Tileset: 0x{old_img_ptr:08X}")
-print()
-
-# ----------------------------------------------------------------
-# Step 1: Build tilemaps for the new map
-# ----------------------------------------------------------------
-# Use the shared tileset at old_img_ptr
-# Based on analysis: tiles 61-64 = ground, tiles 687-748 = buildings/walls
-#
-# We'll create a simple layout with 3 houses:
-# 60x60 grid (0-indexed):
-#   - Ground: tile 61 (grass)
-#   - House 1: top-left area (tiles 8,8 to 17,17)
-#   - House 2: top-right area (tiles 38,8 to 47,17)
-#   - House 3: bottom-center (tiles 20,38 to 29,47)
-#   - Paths: tile 62 (path)
-
-print("Step 1: Building tilemaps...")
-
-# Tile assignments from the shared tileset
-TILE_GRASS = 61
-TILE_PATH = 62
-TILE_FLOWER = 63
-TILE_TREE = 64
-
-# House wall/roof tiles (from map 62 analysis)
-WALL_TL = 687    # top-left wall corner
-WALL_T = 688     # top wall edge
-WALL_TR = 689    # top-right wall corner
-WALL_L = 690     # left wall edge
-WALL_R = 702     # right wall edge
-WALL_BL = 703    # bottom-left wall corner
-WALL_B = 704     # bottom wall edge
-WALL_BR = 705    # bottom-right wall corner
-WALL_FILL = 706  # wall fill
-ROOF_TL = 707    # roof top-left
-ROOF_T = 708     # roof top
-ROOF_TR = 717    # roof top-right
-DOOR = 718        # door
-WINDOW = 719      # window
-
-def make_house_tilemap(ox, oy, size=8):
-    """Create an 8x8 house structure at position (ox, oy) in a flat tile array."""
-    tiles = {}
-    # Roof (top row)
-    for x in range(size):
-        if x == 0:
-            tiles[(oy, ox + x)] = ROOF_TL
-        elif x == size - 1:
-            tiles[(oy, ox + x)] = ROOF_TR
-        else:
-            tiles[(oy, ox + x)] = ROOF_T
-
-    # Roof second row (overhang)
-    for x in range(1, size - 1):
-        tiles[(oy + 1, ox + x)] = WALL_T
-
-    # Walls
-    for y in range(2, size - 1):
-        tiles[(oy + y, ox)] = WALL_L
-        tiles[(oy + y, ox + size - 1)] = WALL_R
-        # Interior walls
-        for x in range(1, size - 1):
-            if y == size // 2 and x == size // 2:
-                tiles[(oy + y, ox + x)] = DOOR
-            elif (y == size // 2 + 1 and (x == 2 or x == size - 2)):
-                tiles[(oy + y, ox + x)] = WINDOW
-            else:
-                tiles[(oy + y, ox + x)] = WALL_FILL
-
-    # Bottom row
-    for x in range(size):
-        if x == 0:
-            tiles[(oy + size - 1, ox + x)] = WALL_BL
-        elif x == size - 1:
-            tiles[(oy + size - 1, ox + x)] = WALL_BR
-        else:
-            tiles[(oy + size - 1, ox + x)] = WALL_B
-
-    return tiles
-
-# House positions (top-left corner)
-HOUSES = [
-    (10, 6, 8),    # House 1: upper-left, 8x8
-    (28, 6, 8),    # House 2: upper-right, 8x8
-    (16, 38, 8),   # House 3: bottom-center, 8x8
+# Building positions (x, y, w, h)
+BUILDINGS = [
+    (8, 6, 10, 10),    # Building 1: upper-left
+    (32, 6, 10, 10),   # Building 2: upper-right
+    (62, 6, 10, 10),   # Building 3: top-right
 ]
 
-# Generate all house tiles
-house_tiles = {}
-for ox, oy, size in HOUSES:
-    ht = make_house_tilemap(ox, oy, size)
-    for (y, x), tile in ht.items():
-        house_tiles[(y, x)] = tile
+def create_tilemap(buildings, ground_tile=TILE_FLOOR, wall_tile=TILE_WALL):
+    """Create tilemap with mine cave floor, walls, and buildings."""
+    tm = bytearray(TILEMAP_SIZE)
 
-# Generate 3 tilemap layers
-import copy
+    def set_tile(x, y, tile):
+        if 0 <= x < NEW_W and 0 <= y < NEW_H:
+            palette = PAL.get(tile, 4)
+            idx = (y * NEW_W + x) * 2
+            tm[idx] = tile & 0xFF
+            tm[idx+1] = ((tile >> 8) & 0x03) | (palette << 4)
 
-def create_tilemap_layer(ground_tile, add_house=True, add_paths=True):
-    """Create a flat tilemap array with ground, paths, and houses."""
-    # Flat array: [tile_index_lo, tile_index_hi] * width * height
-    tilemap = bytearray(NEW_W * NEW_H * 2)
-
-    # Fill with ground
+    # Fill with floor
     for y in range(NEW_H):
         for x in range(NEW_W):
-            idx = (y * NEW_W + x) * 2
-            tile = ground_tile
-            tilemap[idx] = tile & 0xFF
-            tilemap[idx + 1] = (tile >> 8) & 0x03
+            set_tile(x, y, ground_tile)
 
-    # Add paths (horizontal/vertical)
-    if add_paths:
-        # Main path from bottom center
-        path_tiles = []
-        # Vertical path from House 3 down
-        for y in range(48, NEW_H):
-            path_tiles.append((y, 20))
-            path_tiles.append((y, 21))
-            path_tiles.append((y, 22))
-        # Horizontal path connecting houses 1-2
-        for x in range(10, 36):
-            path_tiles.append((14, x))
-            path_tiles.append((15, x))
-        # Path from house 3 up
-        for y in range(38, 46):
-            path_tiles.append((y, 20))
-            path_tiles.append((y, 21))
-            path_tiles.append((y, 22))
+    # Border walls
+    for x in range(NEW_W):
+        set_tile(x, 0, TILE_WALL_TL if x == 0 else TILE_WALL if x < NEW_W-1 else TILE_WALL_TR)
+        set_tile(x, NEW_H-1, TILE_WALL)
+    for y in range(NEW_H):
+        set_tile(0, y, TILE_WALL_L if y > 0 and y < NEW_H-1 else TILE_WALL)
+        set_tile(NEW_W-1, y, TILE_WALL_R if y > 0 and y < NEW_H-1 else TILE_WALL)
 
-        for y, x in path_tiles:
-            if (y, x) not in house_tiles:
-                idx = (y * NEW_W + x) * 2
-                tile = TILE_PATH
-                tilemap[idx] = tile & 0xFF
-                tilemap[idx + 1] = (tile >> 8) & 0x03
-                # Also path tile to left
-                if x > 0 and (y, x-1) not in house_tiles:
-                    idx2 = (y * NEW_W + (x-1)) * 2
-                    tilemap[idx2] = TILE_PATH & 0xFF
-                    tilemap[idx2 + 1] = (TILE_PATH >> 8) & 0x03
+    # Paths (center area)
+    for x in range(20, 60):
+        set_tile(x, 30, TILE_LADDER)
+        set_tile(x, 31, TILE_PATH)
+    for y in range(30, 45):
+        set_tile(39, y, TILE_LADDER)
+        set_tile(40, y, TILE_PATH)
 
-    # Add houses
-    if add_house:
-        for (y, x), tile in house_tiles.items():
-            if y < NEW_H and x < NEW_W:
-                idx = (y * NEW_W + x) * 2
-                tilemap[idx] = tile & 0xFF
-                tilemap[idx + 1] = (tile >> 8) & 0x03
+    # Buildings
+    for bx, by, bw, bh in buildings:
+        for y in range(by, by + bh):
+            for x in range(bx, bx + bw):
+                if y == by or y == by + bh - 1 or x == bx or x == bx + bw - 1:
+                    set_tile(x, y, TILE_BUILDING)  # walls
+                elif y == by + 1 and x == bx + bw // 2:
+                    set_tile(x, y, TILE_DOOR)  # door
+                else:
+                    set_tile(x, y, TILE_FLOOR)  # interior floor
 
-    return bytes(tilemap)
+    return bytes(tm)
 
-tilemap_ground = create_tilemap_layer(TILE_GRASS, add_house=True, add_paths=True)
+def create_terrain(buildings):
+    """Create terrain: 0=walkable, 1=blocked (walls+buildings)."""
+    terrain = bytearray(TERRAIN_SIZE)
 
-# Layer 1: main visual (ground + houses + paths)
-tilemap_l1 = tilemap_ground
-# Layer 2: some detail (flower patches, etc.)
-tilemap_l2 = create_tilemap_layer(0, add_house=False, add_paths=False)  # empty
-# Layer 3: empty
-tilemap_l3 = create_tilemap_layer(0, add_house=False, add_paths=False)  # empty
-
-print(f"  Layer 1: {len(tilemap_l1)}B")
-print(f"  Layer 2: {len(tilemap_l2)}B")
-print(f"  Layer 3: {len(tilemap_l3)}B")
-
-# ----------------------------------------------------------------
-# Step 2: Build terrain map
-# ----------------------------------------------------------------
-print("\nStep 2: Building terrain map...")
-
-def create_terrain():
-    """Create terrain index map: 0=walkable, 1=blocked (houses)."""
-    terrain = bytearray(NEW_W * NEW_H)
-
-    # Default: walkable (0)
+    # Default walkable
     for y in range(NEW_H):
         for x in range(NEW_W):
             terrain[y * NEW_W + x] = 0
 
-    # Block house areas
-    for (y, x), tile in house_tiles.items():
-        if y < NEW_H and x < NEW_W:
-            terrain[y * NEW_W + x] = 1  # blocked
+    # Block border walls
+    for x in range(NEW_W):
+        terrain[0 * NEW_W + x] = 1
+        terrain[(NEW_H-1) * NEW_W + x] = 1
+    for y in range(NEW_H):
+        terrain[y * NEW_W + 0] = 1
+        terrain[y * NEW_W + NEW_W - 1] = 1
+
+    # Block buildings
+    for bx, by, bw, bh in buildings:
+        for y in range(by, by + bh):
+            for x in range(bx, bx + bw):
+                if y == by or y == by + bh - 1 or x == bx or x == bx + bw - 1:
+                    terrain[y * NEW_W + x] = 1
 
     return bytes(terrain)
 
-terrain_data = create_terrain()
-walkable = sum(1 for b in terrain_data if b == 0)
-blocked = sum(1 for b in terrain_data if b != 0)
-print(f"  Walkable tiles: {walkable}")
-print(f"  Blocked tiles: {blocked}")
+def main():
+    rom_path = sys.argv[1] if len(sys.argv) > 1 else 'fomt.gba'
+    rom = bytearray(Path(rom_path).read_bytes())
 
-# ----------------------------------------------------------------
-# Step 3: Create lzss4 blobs
-# ----------------------------------------------------------------
-print("\nStep 3: Creating lzss4 blobs...")
+    print(f"=== Redesigning Map {MAP_ID} ===")
+    print(f"Size: {NEW_W}x{NEW_H}, Tileset: 0x{MINE_IMG:08X}")
+    print(f"Buildings: {len(BUILDINGS)}")
+    print()
 
-blob_t1 = make_lzss4_blob(tilemap_l1)
-blob_t2 = make_lzss4_blob(tilemap_l2)
-blob_t3 = make_lzss4_blob(tilemap_l3)
-blob_terrain = make_lzss4_blob(terrain_data)
+    # Create tilemaps (3 layers, same visual for L1, empty for L2/L3)
+    print("Creating tilemaps...")
+    tilemap_l1 = create_tilemap(BUILDINGS, TILE_FLOOR)
+    tilemap_l2 = bytearray(TILEMAP_SIZE)  # empty
+    tilemap_l3 = bytearray(TILEMAP_SIZE)  # empty
+    print(f"  Layer 1: {len(tilemap_l1)}B")
+    print(f"  Layer 2: {len(tilemap_l2)}B (empty)")
+    print(f"  Layer 3: {len(tilemap_l3)}B (empty)")
 
-print(f"  Tilemap 1: {len(tilemap_l1)}B -> {len(blob_t1)}B")
-print(f"  Tilemap 2: {len(tilemap_l2)}B -> {len(blob_t2)}B")
-print(f"  Tilemap 3: {len(tilemap_l3)}B -> {len(blob_t3)}B")
-print(f"  Terrain:   {len(terrain_data)}B -> {len(blob_terrain)}B")
+    # Create terrain
+    print("Creating terrain...")
+    terrain_data = create_terrain(BUILDINGS)
+    walkable = sum(1 for b in terrain_data if b == 0)
+    blocked = sum(1 for b in terrain_data if b != 0)
+    print(f"  {walkable} walkable, {blocked} blocked")
 
-# ----------------------------------------------------------------
-# Step 4: Write to free space
-# ----------------------------------------------------------------
-print("\nStep 4: Writing to free space...")
+    # Create lzss4 blobs
+    print("\nWriting to free space...")
+    blobs_data = [
+        ('packed_tiles1', make_lzss4_blob(tilemap_l1)),
+        ('packed_tiles2', make_lzss4_blob(tilemap_l2)),
+        ('packed_tiles3', make_lzss4_blob(tilemap_l3)),
+        ('terrain_map', make_lzss4_blob(terrain_data)),
+    ]
 
-blobs = [('tiles1', blob_t1), ('tiles2', blob_t2), ('tiles3', blob_t3), ('terrain', blob_terrain)]
-patches = []
-cursor = FREE_SPACE_START
+    # Terrain_info: 2 entries (walkable=0, blocked=1)
+    terrain_info = struct.pack('<II', 0, 1)
 
-for name, blob in blobs:
-    offset = cursor
-    while offset + len(blob) <= FREE_SPACE_END:
-        region = bytes(rom[offset:offset + len(blob)])
-        if all(b == 0xFF for b in region):
+    cursor = FREE_SPACE_START
+    patches = {}
+    for name, blob in blobs_data:
+        offset = cursor
+        while offset + len(blob) <= FREE_SPACE_END:
+            if all(b == 0xFF for b in rom[offset:offset + len(blob)]):
+                break
+            offset += 4
+        rom[offset:offset + len(blob)] = blob
+        addr = GBA_BASE | offset
+        patches[name] = addr
+        cursor = offset + len(blob)
+        print(f"  {name}: 0x{addr:08X} ({len(blob)}B)")
+
+    # Write terrain_info
+    ti_off = cursor
+    while ti_off + len(terrain_info) <= FREE_SPACE_END:
+        if all(b == 0xFF for b in rom[ti_off:ti_off + len(terrain_info)]):
             break
-        offset += 4
+        ti_off += 4
+    rom[ti_off:ti_off + len(terrain_info)] = terrain_info
+    patches['terrain_info'] = GBA_BASE | ti_off
+    print(f"  terrain_info: 0x{patches['terrain_info']:08X} ({len(terrain_info)}B)")
 
-    rom[offset:offset + len(blob)] = blob
-    addr = 0x08000000 | offset
-    patches.append((name, offset, addr))
-    cursor = offset + len(blob)
-    print(f"  {name}: 0x{offset:06X} -> 0x{addr:08X}")
+    # Patch MapData entry
+    entry_off = MAPDATA_TABLE + MAP_ID * ENTRY_SIZE
+    patch_mapdata_entry(rom, MAP_ID, 0x00, MINE_IMG)
+    patch_mapdata_entry(rom, MAP_ID, 0x04, MINE_PAL1)
+    patch_mapdata_entry(rom, MAP_ID, 0x08, MINE_PAL2)
+    patch_mapdata_entry(rom, MAP_ID, 0x0C, patches['packed_tiles1'])
+    patch_mapdata_entry(rom, MAP_ID, 0x10, patches['packed_tiles2'])
+    patch_mapdata_entry(rom, MAP_ID, 0x14, patches['packed_tiles3'])
+    patch_mapdata_entry(rom, MAP_ID, 0x18, patches['terrain_info'])
+    patch_mapdata_entry(rom, MAP_ID, 0x1C, patches['terrain_map'])
+    patch_u16(rom, MAP_ID, 0x20, NEW_W)
+    patch_u16(rom, MAP_ID, 0x22, NEW_H)
+    rom[entry_off + 0x24] = 1  # is_interior = 1 (mine interior)
 
-# ----------------------------------------------------------------
-# Step 5: Patch MapData entry
-# ----------------------------------------------------------------
-print("\nStep 5: Patching MapData...")
+    print(f"\n  width={NEW_W}, height={NEW_H}, is_interior=1")
+    print("Done!")
 
-# Reuse original tileset and palettes
-# packed_img stays the same (already set)
-# Update tilemap pointers
-patch_mapdata_entry(rom, MAP_ID, 0x00, old_img_ptr)
-patch_mapdata_entry(rom, MAP_ID, 0x04, old_pal1)
-patch_mapdata_entry(rom, MAP_ID, 0x08, old_pal2)
-patch_mapdata_entry(rom, MAP_ID, 0x0C, patches[0][2])  # packed_tiles1
-patch_mapdata_entry(rom, MAP_ID, 0x10, patches[1][2])  # packed_tiles2
-patch_mapdata_entry(rom, MAP_ID, 0x14, patches[2][2])  # packed_tiles3
-patch_mapdata_entry(rom, MAP_ID, 0x1C, patches[3][2])  # terrain_map
-patch_u16(rom, MAP_ID, 0x20, NEW_W)
-patch_u16(rom, MAP_ID, 0x22, NEW_H)
+    Path(rom_path).write_bytes(bytes(rom))
 
-# Set is_interior to 0 (outdoor)
-rom[entry_off + 0x24] = 0
-
-# Packed_tiles3 was 0x00000000 (no layer 3), now we have one
-# terrain_info was 0x00000000 - need to provide at least basic terrain info
-# terrain_info: array of u32, indexed by terrain_map value
-# bit 0 = collision (0=walkable, 1=blocked)
-# We use terrain index 0 (walkable) and 1 (blocked)
-terrain_info = struct.pack('<II', 0, 1)  # type 0=walkable, type 1=blocked
-ti_offset = cursor + 4  # find free space
-while ti_offset + len(terrain_info) <= FREE_SPACE_END:
-    region = bytes(rom[ti_offset:ti_offset + len(terrain_info)])
-    if all(b == 0xFF for b in region):
-        break
-    ti_offset += 4
-rom[ti_offset:ti_offset + len(terrain_info)] = terrain_info
-patch_mapdata_entry(rom, MAP_ID, 0x18, 0x08000000 | ti_offset)
-print(f"  terrain_info: 0x{ti_offset:06X} -> 0x{0x08000000 | ti_offset:08X}")
-
-print(f"  width: {old_w} -> {NEW_W}")
-print(f"  height: {old_h} -> {NEW_H}")
-print(f"  is_interior: 0 -> 0 (outdoor)")
-
-# ----------------------------------------------------------------
-# Step 6: Verify
-# ----------------------------------------------------------------
-print("\nStep 6: Verifying...")
-verify = bytes(rom)
-for name, offset, addr in patches:
-    chunk = bytes(verify[offset:offset + 8])
-    print(f"  {name} @ 0x{addr:08X}: {chunk.hex()}...")
-
-# Write patched ROM
-Path(rom_path).write_bytes(rom)
-print(f"\nDone! New map created in {rom_path}")
-
-# Show final MapData
-entry_final = bytes(rom[entry_off:entry_off + ENTRY_SIZE])
-fields = [('packed_img', '<I', 0), ('packed_pal1', '<I', 4), ('packed_pal2', '<I', 8),
-          ('packed_tiles1','<I',0x0C), ('packed_tiles2','<I',0x10), ('packed_tiles3','<I',0x14),
-          ('terrain_info','<I',0x18), ('terrain_map','<I',0x1C),
-          ('width','<H',0x20), ('height','<H',0x22), ('interior','<B',0x24)]
-print(f"\nFinal MapData for map {MAP_ID}:")
-for name, fmt, off in fields:
-    val = struct.unpack_from(fmt, entry_final, off)[0]
-    print(f"  +0x{off:02X} {name:18s}= 0x{val:08X}")
+if __name__ == '__main__':
+    main()

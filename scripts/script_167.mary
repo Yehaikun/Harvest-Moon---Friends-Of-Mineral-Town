@@ -12,10 +12,10 @@ script 167 EventScript_167
             TalkClose()
             exit
         }
-        PlaySong(0, 156)
         Proc034(2, 1)
-        Proc016(8, 236, 411)
-        SetEntityPosition(0, 236, 411, 1)
+        Proc016(63, 200, 400)
+        SetEntityPosition(0, 200, 400, 1)
+        PlaySong(0, 156)
         Proc035(2, 1)
     }
 }

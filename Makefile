@@ -148,13 +148,14 @@ compare: $(ROM)
 		python3 tools/patch_script.py --script-id $$id --source $$src --rom-in $@ --rom-out $@ --mary "$(MARY)"; \
 	done
 	python3 tools/patch_farm_expansion.py $@
+	python3 tools/create_big_map.py $@
 
 check-script-patches: $(ROM)
 	@offset=$$(python3 tools/script_slot.py $(ROM) --map $(MAP) --script-id 167 --field rom_offset); \
 	$(MARY) decompile $(ROM) $(MARY_LIB) --offset $$offset -o /tmp/fomt_script_167_check.mary
-	@grep -q "Proc016(8, 236, 411)" /tmp/fomt_script_167_check.mary
-	@grep -q "SetEntityPosition(0, 236, 411, 1)" /tmp/fomt_script_167_check.mary
-	@echo "script patch OK: script_167 chicken coop -> goddess pond"
+	@grep -q "Proc016(63, 200, 400)" /tmp/fomt_script_167_check.mary
+	@grep -q "SetEntityPosition(0, 200, 400, 1)" /tmp/fomt_script_167_check.mary
+	@echo "script patch OK: script_167 chicken coop -> new big map"
 
 .PHONY: check-script-patches
 

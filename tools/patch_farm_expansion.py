@@ -46,19 +46,33 @@ OLD_PTR_TERRAIN_MAP = read_u32(0x1C)
 
 
 def make_lzss4_blob(raw_data: bytes) -> bytes:
-    """Wrap raw data in popuri lzss4 format (atom=0, lzss=4, diff=0)."""
+    """Compress raw data in popuri lzss3 format (030) - game-compatible tilemap format."""
     expected_size = len(raw_data)
-    # Format byte (4) + raw data, padded to 4 bytes
-    payload = bytes([4]) + raw_data
-    while len(payload) % 4:
-        payload += b'\x00'
-    # Reverse every 4-byte group (ReadBits reads LE words MSB-first)
-    bitstream = bytearray()
-    for i in range(0, len(payload), 4):
-        bitstream.extend(payload[i:i+4][::-1])
-    # Header: 0x70 | (expected_size << 8)
     header = 0x70 | (expected_size << 8)
-    return struct.pack('<I', header) + bytes(bitstream)
+    # lzss3 ladder: 3 entries, 4 bits each = 12 bits
+    ladder = 0
+    for i, b in enumerate([4, 8, 10]):
+        ladder |= (b - 1) << (i * 4)
+    # payload: format_byte(3 for 030) + ladder(12bits) + literal data
+    payload = bytearray([3])
+    buf = 0; bits = 0
+    def w(val, cnt):
+        nonlocal buf, bits
+        for i in range(cnt-1, -1, -1):
+            buf = (buf << 1) | ((val >> i) & 1); bits += 1
+            if bits == 8:
+                payload.append(buf & 0xFF); buf = 0; bits = 0
+    w(ladder, 12)
+    for i in range(0, len(raw_data), 2):
+        w(0, 1)  # lzss3 literal tag
+        w(raw_data[i], 8)
+        w(raw_data[i+1] if i+1 < len(raw_data) else 0, 8)
+    if bits: payload.append(buf << (8-bits) & 0xFF)
+    while len(payload) % 4: payload.append(0)
+    bs = bytearray()
+    for i in range(0, len(payload), 4):
+        bs.extend(payload[i:i+4][::-1])
+    return struct.pack('<I', header) + bytes(bs)
 
 
 def expand_tilemap(data: bytes, old_w: int, old_h: int, new_w: int, new_h: int) -> bytes:

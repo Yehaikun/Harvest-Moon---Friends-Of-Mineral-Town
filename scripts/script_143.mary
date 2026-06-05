@@ -60,9 +60,9 @@
         if var_0
         {
             Proc034(2, 1)
-            Proc016(5, 1232, 168)
-            SetEntityPosition(0, 1232, 168, 0)
-            PlaySong(0, 205)
+            Proc016(2, 300, 400)
+            SetEntityPosition(0, 300, 400, 1)
+            PlaySong(0, 156)
             Proc035(2, 1)
         }
         else

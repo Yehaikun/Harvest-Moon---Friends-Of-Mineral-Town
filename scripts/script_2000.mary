@@ -1,0 +1,39 @@
+#include "../mary_scripts/lib_fomt.txt"
+
+// Return warp from map 63 to farm
+script 2000 EventScript_ReturnFromNewMap
+{
+    // Warp to farm when triggered
+    if GetEntityFacing(0) == 0
+    {
+        PlaySong(0, 156)
+        Proc034(2, 1)
+        Proc016(2, 300, 400)
+        SetEntityPosition(0, 300, 400, 1)
+        Proc035(2, 1)
+    }
+    else if GetEntityFacing(0) == 1
+    {
+        PlaySong(0, 156)
+        Proc034(2, 1)
+        Proc016(2, 300, 400)
+        SetEntityPosition(0, 300, 400, 1)
+        Proc035(2, 1)
+    }
+    else if GetEntityFacing(0) == 2
+    {
+        PlaySong(0, 156)
+        Proc034(2, 1)
+        Proc016(2, 300, 400)
+        SetEntityPosition(0, 300, 400, 1)
+        Proc035(2, 1)
+    }
+    else
+    {
+        PlaySong(0, 156)
+        Proc034(2, 1)
+        Proc016(2, 300, 400)
+        SetEntityPosition(0, 300, 400, 1)
+        Proc035(2, 1)
+    }
+}

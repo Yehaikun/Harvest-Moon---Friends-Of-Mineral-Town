@@ -85,7 +85,7 @@ script_id	script	line	map_id	map_name	proc_x	proc_y	player_line	entity_id	entity
 134	script_134.mary	8	10		24	152	9	0	24	152	0	yes	scripts/script_134.mary
 136	script_136.mary	47	4	MAP_CHURCH_REAR	252	368	48	0	252	368	1	yes	scripts/script_136.mary
 142	script_142.mary	8	4	MAP_CHURCH_REAR	332	368	9	0	332	368	1	yes	scripts/script_142.mary
-143	script_143.mary	63	5	MAP_NORTH_TOWN	1232	168	64	0	1232	168	0	yes	scripts/script_143.mary
+143	script_143.mary	63	2	MAP_FARM	300	400	64	0	300	400	1	yes	scripts/script_143.mary
 153	script_153.mary	22	1	MAP_BEACH	212	120	23	0	212	120	0	yes	scripts/script_153.mary
 165	script_165.mary	9	9		120	208	10	0	120	208	1	yes	scripts/script_165.mary
 166	script_166.mary	38	3	MAP_FOREST	168	24	39	0	168	24	0	yes	scripts/script_166.mary
@@ -483,3 +483,7 @@ script_id	script	line	map_id	map_name	proc_x	proc_y	player_line	entity_id	entity
 1307	script_1307.mary	23	29	MAP_PLAYER_HOUSE	384	48	24	0	384	-46	0	yes	scripts/script_1307.mary
 1318	script_1318.mary	6	8	MAP_MOTHERS_PEAK	236	398	8	0	236	464	1	yes	scripts/script_1318.mary
 1319	script_1319.mary	7	8	MAP_MOTHERS_PEAK	236	265	8	0	249	285	1	yes	scripts/script_1319.mary
+2000	script_2000.mary	11	2	MAP_FARM	300	400	12	0	300	400	1	yes	scripts/script_2000.mary
+2000	script_2000.mary	19	2	MAP_FARM	300	400	20	0	300	400	1	yes	scripts/script_2000.mary
+2000	script_2000.mary	27	2	MAP_FARM	300	400	28	0	300	400	1	yes	scripts/script_2000.mary
+2000	script_2000.mary	35	2	MAP_FARM	300	400	36	0	300	400	1	yes	scripts/script_2000.mary

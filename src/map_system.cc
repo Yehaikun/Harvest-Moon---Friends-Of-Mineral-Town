@@ -8,11 +8,5 @@ extern "C" void func_080A5760(void *);
 
 // Original: 0x080A6640 - 地图对象初始化
 // 调用主调度函数并清零状态字段
-extern "C" void func_080A6640(void *obj)
-{
-    func_080A5760(obj);
-    ((u8 *)obj)[0xB4] = 0;
-    ((u8 *)obj)[0xB5] = 0;
-    ((u8 *)obj)[0xB8] = 0;
-    ((u8 *)obj)[0xB9] = 0;
-}
+// 当前实现仍在 asm/code_809E804.s
+// 迁移到 C++ 时需要处理链接脚本，将 map_system.o 加入 fomt.lds

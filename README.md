@@ -1,23 +1,66 @@
-# 牧场物语：矿石镇的伙伴们 — 反编译项目
+# 🌾 牧场物语：矿石镇的伙伴们 — GBA 反编译 & 地图修改工具
 
-基于 2003 年 GBA 游戏 **牧场物语：矿石镇的伙伴们**（美版）的反编译工程。
+基于 2003 年 GBA 游戏 **Harvest Moon: Friends of Mineral Town**（美版）的反编译工程 + 地图/tilemap 修改工具集。
 
-可编译出以下 ROM：
+## 项目状态
 
-- **`fomt.gba`**：派生构建产物，已应用源码和脚本补丁。
-- **`baserom.gba`**：本地提供的原版美版 ROM，作为构建输入和数据基准。
+| 模块 | 状态 |
+|------|------|
+| C++ 反编译 | ⏳ 进行中（部分函数已迁移，`make` 尚未产出可运行 ROM） |
+| 地图 tilemap 修改 | ✅ **可用**（直接改 `baserom.gba`，不用 `make`） |
+| NPC 脚本/对话 | ✅ 可用（`mary` 编译器） |
+| 地形碰撞 | ✅ 可用（`tools/edit_terrain.py`） |
+| 物品/NPC 数据 | ✅ 可用 |
 
-`baserom.gba` 必须保留在项目根目录，但不能提交到 git，也不能手动修改。它用于：
+> ⚠️ `make` 编译出的 `fomt.gba` 目前会白屏（反编译未完成）。
+> 要修改地图 tilemap，请直接用 Python 脚本改 `baserom.gba`，方法见下方。
 
-- `objcopy` / 链接脚本中的 `.incbin` 原始数据来源。
-- `pre-build-check` 的原始脚本 slot、指针表、坏脚本检查。
-- 生成 `docs/generated/` 索引时作为原版数据参考。
-- 对照 `fomt.gba` 是否因为源码或脚本补丁发生了预期变化。
+## 快速开始 — 改地图 tilemap
 
-原版美版 ROM 的 SHA1 应为：
+```bash
+# 在 baserom 基础上直接改，不用 make
+cp baserom.gba fomt.gba
+python3 tools/add_house_to_rose_square.py
+```
+
+支持的地图（MapData 路径有效）：
+- 玫瑰广场 (map 2) ✅
+- 南镇 (map 7) ✅
+- 北镇 (map 5) ✅
+- 商店/杂货屋等室内 ✅
+- **农场 (map 6/7)** ❌ 不走 MapData 路径
+
+## 工具列表
+
+| 工具 | 功能 |
+|------|------|
+| `tools/patch_tilemap.py` | 修改地图 tilemap（替换瓦片） |
+| `tools/add_house_to_rose_square.py` | 玫瑰广场加房子示例 |
+| `tools/edit_terrain.py` | 地形碰撞编辑 |
+| `tools/edit_npc_schedule.py` | NPC 日程编辑 |
+| `tools/patch_script.py` | 脚本补丁 |
+| `tools/decode_map_data_table.py` | MapData 表解析 |
+| `tools/extract_text.py` / `patch_text.py` | 对话文本提取/写入 |
+
+## 构建（实验性）
+
+需要 devkitARM + agbcc：
+
+```bash
+make
+```
+
+输出 `fomt.gba`。注意当前构建产物有白屏问题。
+
+## 原版 ROM
+
+`baserom.gba`（美版）的 SHA1 应为：
 
 ```text
 a2fc3574f0a65a4fcf7682fb274b9d7eebdef963  baserom.gba
+```
+
+此文件不能提交到 git，需自行提供。
 ```
 
 ## 当前进度

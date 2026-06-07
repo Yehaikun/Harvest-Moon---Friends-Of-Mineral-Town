@@ -42,15 +42,44 @@ python3 tools/add_house_to_rose_square.py
 | `tools/decode_map_data_table.py` | MapData 表解析 |
 | `tools/extract_text.py` / `patch_text.py` | 对话文本提取/写入 |
 
-## 构建（实验性）
+## 构建
 
-需要 devkitARM + agbcc：
+需要 devkitARM 工具链：
 
 ```bash
 make
 ```
 
-输出 `fomt.gba`。注意当前构建产物有白屏问题。
+输出 `fomt.gba`（16MB ROM，脚本补丁已应用）。
+
+> ⚠️ **注意**：当前 C++ 反编译尚未全部完成，`make` 产出的 ROM 部分函数与原版不匹配，会白屏。
+> 要修改地图 tilemap，请直接用 Python 脚本改 `baserom.gba`（见上方📦）。
+
+### 构建工具链
+
+| 工具 | 来源 | 作用 |
+|------|------|------|
+| `tools/agbcc/bin/agbcc` | pret/agbcc fork（含在项目内） | GBA C 编译器 |
+| `tools/agbcc/bin/agbcp` | 同上 | GBA C++ 编译器 |
+| `arm-none-eabi-as/ld/objcopy` | devkitARM | 汇编/链接/转 ROM |
+| `mary` 编译器 | `../stanhash_mary/` | 事件脚本编译 |
+| `tools/patch_script.py` | 项目工具 | 脚本补丁写入 ROM |
+
+### 构建流程
+
+```
+src/*.cc → agbcp → .s → arm-none-eabi-as → .o ─┐
+asm/*.s → arm-none-eabi-as → .o ─────────────────┤
+                                                  ├──→ arm-none-eabi-ld → fomt.elf
+asm/data/*.s（.incbin引用baserom原始数据）→ .o ────┘          │
+                                                                ↓
+                                                         arm-none-eabi-objcopy
+                                                                ↓
+                                                         fomt.gba
+                                                                ↓
+                                                     mary + patch_script.py
+                                                    （编译脚本并打补丁）
+```
 
 ## 原版 ROM
 
